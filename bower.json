@@ -20,8 +20,5 @@
         "dist/fonts/glyphicons-halflings-regular.woff2"
       ]
     }
-  },
-  "resolutions": {
-    "d3": "~3.4.12"
   }
 }
