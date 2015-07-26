@@ -22,15 +22,20 @@ module.exports = function(gulp, plugins, paths) {
 			// Context data for each page file
 			dataEach: function (context, file) {
 				return extend(context, getPageContext(file));
-			}
+			},
+			// Remove cache every time for 'watch'
+			bustCache: true
 		}))
+
+		// Handle errors
+		.on('error', plugins.util.log)
 
 		// Rename .page.hbs to .html
 		.pipe(plugins.rename(function (path) {
 			path.basename = path.basename.replace("-page", "");
 			path.extname = ".html"
 		}))
-
+		
 		// Flatten structure
 		.pipe(plugins.flatten())
 

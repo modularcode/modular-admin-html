@@ -1,0 +1,40 @@
+.sidebar {
+	background-color: @color-primary-dark;
+	width: @sidebar-width;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+
+
+
+	.brand {
+		color: @color-primary;
+		text-align: center;
+		line-height: @header-height;
+		font-size: 18px;
+	}
+
+
+
+	.nav {
+		& > li > a {
+			line-height: 40px;
+			padding-left: 20px;
+			color: fade(@color-text-inverse, 50%);
+		}
+
+		& > li.active > a,
+		& > li.active:hover > a {
+			background-color: @color-primary;
+			color: @color-text-inverse;
+		}
+
+		& > li:hover > a {
+			color: @color-text-inverse;
+			background-color: @color-primary-darker;
+		}
+	}
+
+
+}

@@ -1,0 +1,39 @@
+<aside class="sidebar">
+	<div class="brand">
+		Modularity
+	</div>
+	<nav class="menu">
+		<ul class="nav">
+			<li {{#is page "===" "dashboard"}}class="active"{{/is}} >
+				<a href="/">
+					Dashboard
+				</a>
+			</li>
+			{{!-- <li>
+				<a href="/">
+					Time Management
+				</a>
+			</li>
+			<li>
+				<a href="/">
+					Inbox	
+				</a>
+			</li>
+			<li>
+				<a href="/">
+					Calendar
+				</a>
+			</li>
+			<li>
+				<a href="/">
+					Analytics
+				</a>
+			</li> --}}
+			<li {{#is page "===" "settings"}}class="active"{{/is}} >
+				<a href="/settings.html">
+					Settings
+				</a>
+			</li>
+		</ul>
+	</nav>
+</aside>

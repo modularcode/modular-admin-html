@@ -65,16 +65,16 @@ var bowerDir 	= config.bowerDir;
 *		Vendor style files
 ************************************************/
 
-	var vendorStyleFiles = mainBowerFiles({
-		filter: [
-			'**/*.css',
-			'!**/*.min.css'
-		],
-		paths: path.resolve(__dirname)
-	});
+	// var vendorStyleFiles = mainBowerFiles({
+	// 	filter: [
+	// 		'**/*.css',
+	// 		'!**/*.min.css'
+	// 	],
+	// 	paths: path.resolve(__dirname)
+	// });
 
 	exports.styles = {
-		src: vendorStyleFiles,
+		src: srcDir + "/_vendor/vendor.less",
 		dest: buildDir + "/css"
 	};
 

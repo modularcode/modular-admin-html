@@ -41,13 +41,24 @@ gulp.task('connect', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	// When template changes recompile .html pages
-	gulp.watch(paths.app.templates.src, ['pages-app']);
+	plugins.watch(paths.app.templates.src, function() {
+	    gulp.start('app-pages');
+	});
+
+	// When context file changes recompile .html pages
+	plugins.watch(config.srcDir + "/**/.context.js", function() {
+	    gulp.start('app-pages');
+	});
 
 	// When script changes recompile scripts
-	gulp.watch(paths.app.scripts.src, ['scripts-app']);
+	plugins.watch(paths.app.scripts.src, function() {
+	    gulp.start('app-scripts');
+	});
 
 	// When style changes recompile styles
-	gulp.watch(paths.app.styles.src, ['styles-app']);
+	plugins.watch(paths.app.styles.src, function() {
+	    gulp.start('app-styles');
+	});
 });
 
 
@@ -82,7 +93,9 @@ function loadTasks() {
 
 		taskNames.push(taskName);
 
-		gulp.task(taskName, require(filePath)(gulp, plugins, paths));
+		gulp.task(taskName, function() {
+			require(filePath)(gulp, plugins, paths)
+		});
 	});
 
 

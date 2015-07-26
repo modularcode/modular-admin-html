@@ -33,7 +33,7 @@ var buildDir = config.buildDir;
 	exports.styles = {
 		src: [
 			srcDir + "/_main/main.less",
-			srcDir + "/**/!(main.less|vendor.less)*.less",
+			srcDir + "/**/!(main|variables|vendor)*.less",
 		],
 		dest: buildDir + "/css/"
 	};

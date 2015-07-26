@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
+
+@import 'bootstrap/less/variables.less';
+@import '_main/variables.less';
+
+@lg: ~"(min-width: @{screen-lg-min})";
+@md: ~"(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@sm: ~"(min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@xs: ~"(max-width: @{screen-xs-max})";
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	min-height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}

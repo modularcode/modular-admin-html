@@ -29,6 +29,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.4",
     "handlebars-layouts": "^3.1.0",
     "main-bower-files": "^2.9.0"
   },
