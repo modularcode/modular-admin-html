@@ -100,5 +100,5 @@ var bowerDir 	= config.bowerDir;
 
 	exports.assets = {
 		src: vendorAssetFiles,
-		dest: buildDir
+		dest: buildDir + "/assets"
 	};

@@ -12,21 +12,25 @@
     "url": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html/issues"
   },
   "homepage": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "assemble": "^0.6.0-beta.5",
     "glob": "^5.0.14",
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-compile-handlebars": "^0.5.0",
+    "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.2.0",
     "gulp-data": "^1.2.0",
     "gulp-flatten": "^0.1.0",
     "gulp-hb": "^2.6.1",
+    "gulp-less": "^3.0.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-rename": "^1.2.2",
-    "main-bower-files": "^2.9.0",
-    "handlebars-layouts": "^3.1.0"
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "handlebars-layouts": "^3.1.0",
+    "main-bower-files": "^2.9.0"
   },
   "scripts": {
     "postinstall": "bower install"
