@@ -1,3 +1,3 @@
-# Modularity: Free Admin Dashboard theme; html version
-Modularity: Free Admin Dashboard theme; html version
+# Modularity: free admin dashboard theme
+html version
 
