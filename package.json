@@ -14,7 +14,6 @@
   "homepage": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html",
   "dependencies": {},
   "devDependencies": {
-    "assemble": "^0.6.0-beta.5",
     "glob": "^5.0.14",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
