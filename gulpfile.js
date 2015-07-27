@@ -28,7 +28,7 @@ gulp.task('build', buildTasks);
 *				 Other Tasks
 **********************************************/
 
-// // Local server pointing on public folder
+// Local server pointing on build folder
 gulp.task('connect', function() {
 	plugins.connect.server({
 		root: config.buildDir,
@@ -61,7 +61,7 @@ gulp.task('watch', function() {
 	});
 });
 
-
+// Deploys to github pages
 gulp.task('deploy', function() {
 	return gulp.src('./public/**/*')
 		.pipe(plugins.ghPages());
