@@ -61,8 +61,8 @@ gulp.task('watch', function() {
 	});
 });
 
-// Deploys to github pages
-gulp.task('deploy', function() {
+// Builds and deploys to github pages
+gulp.task('deploy', ['build'], function() {
 	return gulp.src('./public/**/*')
 		.pipe(plugins.ghPages());
 });
