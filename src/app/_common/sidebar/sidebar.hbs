@@ -6,34 +6,51 @@
 		<ul class="nav">
 			<li {{#is page "===" "dashboard"}}class="active"{{/is}} >
 				<a href="index.html">
-					Dashboard
+					<i class="fa fa-home"></i> Dashboard
 				</a>
 			</li>
-			{{!-- <li>
-				<a href="/">
-					Time Management
+
+			<li {{#is page "===" "charts"}}class="active"{{/is}} >
+				<a href="">
+					<i class="fa fa-bar-chart"></i> Charts
 				</a>
 			</li>
-			<li>
-				<a href="/">
-					Inbox	
+
+			<li {{#is page "===" "tables"}}class="active"{{/is}}>
+				<a href="tables.html">
+					<i class="fa fa-table"></i> Tables
 				</a>
 			</li>
-			<li>
-				<a href="/">
-					Calendar
+
+			<li {{#is page "===" "forms"}}class="active"{{/is}}>
+				<a href="forms.html">
+					<i class="fa fa-pencil-square-o"></i> Forms
 				</a>
 			</li>
-			<li>
-				<a href="/">
-					Analytics
-				</a>
-			</li> --}}
-			<li {{#is page "===" "settings"}}class="active"{{/is}} >
-				<a href="settings.html">
-					Settings
+
+			<li {{#is page "===" "ui-elements"}}class="active"{{/is}}>
+				<a href="ui-elements.html">
+					<i class="fa fa-desktop"></i> UI Elements
 				</a>
 			</li>
+
+			<li {{#is page "===" "pages"}}class="active"{{/is}} >
+				<a href="">
+					<i class="fa fa-file-text-o"></i> Pages
+				</a>
+			</li>
+
+			<li {{#is page "===" "docs"}}class="active"{{/is}} >
+				<a href="docs.html">
+					<i class="fa fa-file-text-o"></i> Usage Docs
+				</a>
+			</li>
+
+
 		</ul>
 	</nav>
+
+	<footer class="sidebar-footer">
+
+	</footer>
 </aside>

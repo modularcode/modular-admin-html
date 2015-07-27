@@ -1,3 +1,3 @@
 module.exports = {
-	page: "settings"
+	page: "docs"
 };

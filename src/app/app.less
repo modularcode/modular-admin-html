@@ -3,8 +3,16 @@
 	position: relative;
 	padding-left: @sidebar-width;
 	min-height: 100vh;
+	background-color: @color-bg;
+	box-shadow: 0 0 3px #ccc;
+	margin: 0 auto;
+
+	.boxed & {
+		max-width: @screen-lg-min;
+	}
 }
 
 .content {
 	padding: @header-height + 50px 70px 50px;
+	min-height: 100vh;	
 }
