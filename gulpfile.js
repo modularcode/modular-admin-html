@@ -62,6 +62,12 @@ gulp.task('watch', function() {
 });
 
 
+gulp.task('deploy', function() {
+	return gulp.src('./public/**/*')
+		.pipe(plugins.ghPages());
+});
+
+
 
 /********************************************
 *				Main Tasks
