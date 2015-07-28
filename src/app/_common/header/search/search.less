@@ -1,0 +1,37 @@
+.header-block-search {
+	@line-height: @header-height - 30px;
+
+	float: left;
+	padding-left: 37px;
+
+
+	.input-container {
+		position: relative;
+		color: @color-text-light;
+
+		i {
+			position: absolute;
+			pointer-events: none;
+			display: block;
+			height: @line-height;
+			line-height: @line-height;
+			left: 10px;
+		}
+
+		input {
+			background-color: inherit;
+			border: none;
+			padding-left: 35px;
+		}
+
+		.underline {
+			&:extend(.underline-animation);
+		}
+
+
+		input:focus + .underline {
+			transform: scaleX(1);
+		}
+
+	}
+}

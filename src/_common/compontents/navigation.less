@@ -1,6 +1,10 @@
 [class^='nav'],
 [class*=' nav'] {
-	a {
+	li > a {
+		// Display these anchors as block
+		display: block;
+
+		// Hide underline in anchors which are inside LI tag
 		&:before {
 			display: none;
 		}
