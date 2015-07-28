@@ -2,6 +2,7 @@
 
 @import 'bootstrap/less/variables.less';
 @import '_main/variables.less';
+@import 'bootstrap/less/mixins.less';
 
 @lg: ~"(min-width: @{screen-lg-min})";
 @md: ~"(min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
@@ -15,4 +16,27 @@ body {
 	height: 100%;
 	min-height: 100%;
 	font-family: 'Open Sans', sans-serif;
+}
+
+a:focus,
+input:focus {
+	outline: none
+}
+
+
+a {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	vertical-align: top;
+	z-index: 0;
+	transition: color 0.2s;
+
+	&:before {
+		&:extend(.underline-animation);
+	}
+
+	&:hover:before {
+		transform: scaleX(1);
+	}
 }
