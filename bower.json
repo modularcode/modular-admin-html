@@ -5,7 +5,8 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.5",
-    "font-awesome": "~4.3.0"
+    "font-awesome": "~4.3.0",
+    "metisMenu": "~2.0.3"
   },
   "overrides": {
     "bootstrap": {

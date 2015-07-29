@@ -19,12 +19,24 @@
 
 	.nav {
 		& > li > a {
-			line-height: 40px;
+			padding-top: 15px;
+			padding-bottom: 15px;
 			padding-left: 20px;
 			color: fade(@color-text-inverse, 50%);
 
 			i {
 				margin-right: 5px;
+
+				&.arrow {
+					float: right;
+					font-size: 20px;
+					line-height: initial;
+					transition: all 0.3s ease;
+
+					&:before {
+						content: "\f105";
+					}
+				}
 			}
 
 			&:focus {
@@ -39,10 +51,48 @@
 			color: @color-text-inverse;
 		}
 
+		&> li.active > a {
+			i.arrow {
+				transform: rotate(90deg);
+
+				&:before {
+					content: "\f105";
+				} 
+			}
+		}
+
 		// Hover item
 		& > li:hover > a {
 			color: @color-text-inverse;
 			background-color: @color-primary-darker;
+		}
+
+		& > li > ul {
+			position: relative;
+			padding: 0;
+
+			& > li > a {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 50px;
+				color: fade(@color-text-inverse, 50%);
+			}
+
+			& > li:hover > a {
+				color: @color-text-inverse;
+				background-color: @color-primary-darker;
+
+				&:focus {
+					background-color: inherit;
+				}
+			}
+
+			// Active item
+			& > li.active > a,
+			& > li.active:hover > a {
+				background-color: @color-primary-darker;
+				color: @color-text-inverse;
+			}
 		}
 	}
 

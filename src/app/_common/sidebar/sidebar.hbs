@@ -3,7 +3,7 @@
 		Modularity
 	</div>
 	<nav class="menu">
-		<ul class="nav">
+		<ul class="nav metismenu" id="sidebar-menu">
 			<li {{#is page "===" "dashboard"}}class="active"{{/is}} >
 				<a href="index.html">
 					<i class="fa fa-home"></i> Dashboard
@@ -11,15 +11,43 @@
 			</li>
 
 			<li {{#is page "===" "items"}}class="active"{{/is}}>
-				<a href="items-list.html">
+				<a href="">
 					<i class="fa fa-th-large"></i> Items CRUD
+					<i class="fa arrow"></i>
 				</a>
+
+				<ul>
+					<li>
+						<a href="items-list.html">
+							Item List
+						</a>
+					</li>
+					<li>
+						<a href="items-list.html">
+							Items Editor
+						</a>
+					</li>
+				</ul>
 			</li>
 
 			<li {{#is page "===" "charts"}}class="active"{{/is}} >
 				<a href="">
-					<i class="fa fa-bar-chart"></i> Charts
+					<i class="fa fa-bar-chart"></i> Charts 
+					<i class="fa arrow"></i>
 				</a>
+
+				<ul>
+					<li>
+						<a href="flot-chart.html">
+							Flot Chart
+						</a>
+					</li>
+					<li>
+						<a href="morris-chart.html">
+							Morris Chart
+						</a>
+					</li>
+				</ul>
 			</li>
 
 			<li {{#is page "===" "tables"}}class="active"{{/is}}>
@@ -43,7 +71,31 @@
 			<li {{#is page "===" "pages"}}class="active"{{/is}} >
 				<a href="">
 					<i class="fa fa-file-text-o"></i> Pages
+					<i class="fa arrow"></i>
 				</a>
+
+				<ul>
+					<li>
+						<a href="login.html">
+							Login
+						</a>
+					</li>
+					<li>
+						<a href="sign-up.html">
+							Sign Up
+						</a>
+					</li>
+					<li>
+						<a href="error-404.html">
+							Error 404
+						</a>
+					</li>
+					<li>
+						<a href="error-500.html">
+							Error 500
+						</a>
+					</li>
+				</ul>
 			</li>
 
 			<li {{#is page "===" "docs"}}class="active"{{/is}} >
