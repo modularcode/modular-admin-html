@@ -1,3 +1,28 @@
+a {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	vertical-align: top;
+	z-index: 0;
+	transition: color 0.2s;
+	text-decoration: none;
+	color: @color-primary;
+
+	&:before {
+		&:extend(.underline-animation);
+	}
+
+	&:hover{
+		text-decoration: none;
+		color: darken(@color-primary, 15%);
+
+		&:before {
+			transform: scaleX(1);
+		}
+	}
+}
+
+
 [class^='nav'],
 [class*=' nav'] {
 	li > a {

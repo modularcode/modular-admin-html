@@ -16,27 +16,10 @@ body {
 	height: 100%;
 	min-height: 100%;
 	font-family: 'Open Sans', sans-serif;
+	color: @color-text;
 }
 
 a:focus,
 input:focus {
 	outline: none
-}
-
-
-a {
-	display: inline-block;
-	position: relative;
-	overflow: hidden;
-	vertical-align: top;
-	z-index: 0;
-	transition: color 0.2s;
-
-	&:before {
-		&:extend(.underline-animation);
-	}
-
-	&:hover:before {
-		transform: scaleX(1);
-	}
 }

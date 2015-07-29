@@ -65,16 +65,16 @@ var bowerDir 	= config.bowerDir;
 *		Vendor style files
 ************************************************/
 
-	// var vendorStyleFiles = mainBowerFiles({
-	// 	filter: [
-	// 		'**/*.css',
-	// 		'!**/*.min.css'
-	// 	],
-	// 	paths: path.resolve(__dirname)
-	// });
+	var vendorStyleFiles = mainBowerFiles({
+		filter: [
+			'**/*.css',
+			'!**/*.min.css'
+		],
+		paths: path.resolve(__dirname)
+	});
 
 	exports.styles = {
-		src: srcDir + "/_vendor/vendor.less",
+		src: vendorStyleFiles,
 		dest: buildDir + "/css"
 	};
 
@@ -84,8 +84,7 @@ var bowerDir 	= config.bowerDir;
 ************************************************/
 
 	/*
-		All files which are not .js, .css, .less
-		are assets (e.g. images, fonts)
+		All files which are not .js, .css, .less and fonts
 	*/
 
 	var vendorAssetFiles = mainBowerFiles({
@@ -93,7 +92,15 @@ var bowerDir 	= config.bowerDir;
 			'**/*',
 			'!**/*.js',
 			'!**/*.css',
-			'!**/*.less'
+			'!**/*.less',
+
+			// Ingore fonts
+			
+			'!**/*.otf',
+			'!**/*.eot',
+			'!**/*.ttf',
+			'!**/*.woff',
+			'!**/*.woff2'
 		],
 		paths: path.resolve(__dirname)
 	});
@@ -101,4 +108,23 @@ var bowerDir 	= config.bowerDir;
 	exports.assets = {
 		src: vendorAssetFiles,
 		dest: buildDir + "/assets"
+	};
+
+
+	var vendorFontFiles = mainBowerFiles({
+		filter: [
+			'**/*.otf',
+			'**/*.eot',
+			'**/*.ttf',
+			'**/*.woff',
+			'**/*.woff2',
+			'**/*.svg'
+		],
+		paths: path.resolve(__dirname)
+	});
+
+
+	exports.fonts = {
+		src: vendorFontFiles,
+		dest: buildDir + "/fonts"
 	};

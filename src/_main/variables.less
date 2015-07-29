@@ -1,10 +1,10 @@
 /*************************************************************
-*					App variables
+*					App Variables
 **************************************************************/
 
 @color-primary: #59c2e6;
 @color-primary-dark: darken(#4f5f6f, 10%);
-@color-primary-darker: darken(@color-primary-dark, 5%);				//#40505f;
+@color-primary-darker: darken(@color-primary-dark, 5%);
 
 @color-divider: #d7dde4;
 @color-bg: #f0f3f6;
@@ -21,75 +21,3 @@
 
 @header-height: 70px;
 @sidebar-width: 230px;
-
-
-
-/**************************************************************
-*				Bootstrap variables overwrite
-**************************************************************/
-
-//== Colors
-//
-//## Gray and brand colors for use across Bootstrap.
-
-@gray-base:              #000;
-@gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
-@gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             lighten(@gray-base, 46.7%); // #777
-@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
-
-@brand-primary:         @color-primary;
-@brand-success:         @color-success;
-@brand-info:            @color-info;
-@brand-warning:         @color-warning;
-@brand-danger:          @color-danger;
-
-
-//== Scaffolding
-//
-//## Settings for some of the most global styles.
-
-//** Global text color on `<body>`.
-@text-color:            @color-text;
-
-//** Global textual link color.
-@link-color:            @brand-primary;
-
-//** Link hover decoration.
-@link-hover-decoration: none;
-
-
-//** Load fonts from this directory.
-@icon-font-path:          "../assets/";
-
-
-//== Grid system
-//
-//## Define your custom responsive grid.
-
-//** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width:         20px;
-
-
-//== Dropdowns
-//
-//## Dropdown menu container and contents.
-
-//** Background for the dropdown menu.
-@dropdown-bg:                    #fff;
-
-//** Dropdown menu `border-color`.
-@dropdown-border:                fade(@color-text-light, 15%);
-
-//** Dropdown link text color.
-@dropdown-link-color:            @color-text;
-
-//** Hover color for dropdown links.
-@dropdown-link-hover-color:      @color-primary;
-
-//** Disabled dropdown menu item background color.
-@dropdown-link-disabled-color:   lighten(@color-text-light, 15%);
-
-//** Text color for headers within dropdown menus.
-@dropdown-header-color:          @color-text;
