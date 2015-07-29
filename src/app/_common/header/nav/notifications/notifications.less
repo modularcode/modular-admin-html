@@ -45,11 +45,44 @@
 
 
 		.notifications-container {
-
-
-
 			.notification-item {
-				
+				border-bottom: 1px solid @color-dropbown-border;
+				padding: 0;
+			}
+
+
+			.img-col {
+				display: table-cell;
+				padding: 5px;
+			}
+
+			.body-col {
+				padding: 5px;
+				display: table-cell;
+			}
+
+			.img {
+				width: 40px;
+				height: 40px;
+				border-radius: 3px;
+				vertical-align: top;
+				display: inline-block;
+
+				.bg-cover();
+			}
+
+
+			p {
+				color: @color-text;
+				display: inline-block;
+				line-height: 18px;
+				font-size: 13px;
+				margin: 0;
+				vertical-align: top;
+
+				.accent {
+					font-weight: bold;
+				}
 			}
 
 		}
@@ -61,10 +94,11 @@
 
 			a {
 				color: @dropdown-link-color;
+				transition: none;
 
 				&:hover {
-					background-color: @dropdown-link-hover-bg;
-					color: @dropdown-link-hover-color;
+					background-color: @color-dropdown-link-hover-bg;
+					color: @color-primary;
 				}
 			}
 		}
