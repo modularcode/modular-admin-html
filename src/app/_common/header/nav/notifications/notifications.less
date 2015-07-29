@@ -1,0 +1,72 @@
+.header .header-block-nav {
+
+	.notifications {
+		font-size: 16px;
+
+
+		a {
+			padding-right: 10px;
+		}
+
+		.counter {
+			font-weight: bold;
+			font-size: 14px;
+			position: relative;
+			top: -3px;
+			left: -2px;
+		}
+
+		&.new .counter {
+			color: @color-primary;
+			font-weight: bold;
+		}
+	}
+
+
+	.notifications-dropdown-menu {
+		left: auto;
+		right: 0;
+		min-width: 350px;
+
+		&:before {
+			position: absolute;
+			right: 20px;
+			bottom: 100%;
+			margin-right: -1px;
+			.triangle(up, 10px, @dropdown-border);
+		}
+
+		&:after {
+			position: absolute;
+			right: 20px;
+			bottom: 100%;
+			.triangle(up, 9px, @dropdown-bg);
+		}
+
+
+		.notifications-container {
+
+
+
+			.notification-item {
+				
+			}
+
+		}
+
+
+
+		footer {
+			text-align: center;
+
+			a {
+				color: @dropdown-link-color;
+
+				&:hover {
+					background-color: @dropdown-link-hover-bg;
+					color: @dropdown-link-hover-color;
+				}
+			}
+		}
+	}
+}

@@ -50,25 +50,18 @@
 //
 //## Settings for some of the most global styles.
 
-//** Background color for `<body>`.
-@body-bg:               #fff;
 //** Global text color on `<body>`.
 @text-color:            @color-text;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
-//** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
+
 //** Link hover decoration.
 @link-hover-decoration: none;
 
 
 //** Load fonts from this directory.
 @icon-font-path:          "../assets/";
-//** File name for all font files.
-@icon-font-name:          "glyphicons-halflings-regular";
-//** Element ID within SVG icon file.
-@icon-font-svg-id:        "glyphicons_halflingsregular";
 
 
 //== Grid system
@@ -77,3 +70,26 @@
 
 //** Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:         20px;
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+@dropdown-bg:                    #fff;
+
+//** Dropdown menu `border-color`.
+@dropdown-border:                fade(@color-text-light, 15%);
+
+//** Dropdown link text color.
+@dropdown-link-color:            @color-text;
+
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:      @color-primary;
+
+//** Disabled dropdown menu item background color.
+@dropdown-link-disabled-color:   lighten(@color-text-light, 15%);
+
+//** Text color for headers within dropdown menus.
+@dropdown-header-color:          @color-text;

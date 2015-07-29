@@ -1,16 +1,7 @@
-.header-block-nav {
+.header .header-block-nav {
 	float: right;
 
 	.clearfix();
-
-	a {
-		color: @color-text;
-		// display: block;
-		&:hover {
-			color: @color-primary;
-			// color: darken(@color-text, 30%)
-		}
-	}
 
 	// All lists
 	ul {
@@ -44,62 +35,17 @@
 
 	// First leve items links
 	& > ul > li > a {
-		
 		padding: 0 15px;
-	}
+		color: @color-text;
 
-
-	.notifications {
-		font-size: 16px;
-
-
-		a {
-			padding-right: 10px;
-		}
-
-		.counter {
-			font-weight: bold;
-			font-size: 14px;
-			position: relative;
-			top: -3px;
-			left: -2px;
-		}
-
-		&.new .counter {
-			color: @color-primary;
-			font-weight: bold;
-		}
-	}
-
-
-
-	.profile {
-		.img {
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			line-height: 30px;
-			border-radius: 4px;
-			background-color: darken(@color-divider, 25%);
-			color: @color-text-inverse;
-			text-align: center;
-			margin-right: 10px;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: cover;
-			vertical-align: middle;
-		}
-
-		.name {
-			display: inline-block;	
-			margin-right: 9px;
-			font-weight: bold;
-		}
-
-		.arrow {
+		&:hover {
 			color: @color-primary;
 		}
 	}
 
+	// Dropdown menus
+	.dropdown-menu {
+		margin-top: 18px;
+	}
 
 }

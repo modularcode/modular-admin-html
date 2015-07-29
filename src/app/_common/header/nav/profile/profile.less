@@ -1,0 +1,55 @@
+.header .header-block-nav {
+	.profile {
+		.img {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 4px;
+			background-color: darken(@color-divider, 25%);
+			color: @color-text-inverse;
+			text-align: center;
+			margin-right: 10px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			vertical-align: middle;
+		}
+
+		.name {
+			display: inline-block;	
+			margin-right: 9px;
+			font-weight: bold;
+		}
+
+		.arrow {
+			color: @color-primary;
+		}
+	}
+
+	.profile-dropdown-menu {
+		left: auto;
+		right: 0;
+		min-width: 200px;
+
+		&:before {
+			position: absolute;
+			right: 10px;
+			bottom: 100%;
+			margin-right: -1px;
+			.triangle(up, 10px, @dropdown-border);
+		}
+
+		&:after {
+			position: absolute;
+			right: 10px;
+			bottom: 100%;
+			.triangle(up, 9px, @dropdown-bg);
+		}
+
+		.logout {
+			text-align: center;
+		}
+
+	}
+}
