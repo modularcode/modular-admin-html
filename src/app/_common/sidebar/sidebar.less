@@ -18,79 +18,100 @@
 
 
 	.nav {
-		& > li > a {
-			padding-top: 15px;
-			padding-bottom: 15px;
-			padding-left: 20px;
-			color: fade(@color-text-inverse, 50%);
 
-			i {
-				margin-right: 5px;
-
-				&.arrow {
-					float: right;
-					font-size: 20px;
-					line-height: initial;
-					transition: all 0.3s ease;
-
-					&:before {
-						content: "\f105";
-					}
-				}
-			}
-
-			&:focus {
+		// Common styles
+		li {
+			a:focus,
+			.open & a:focus {
 				background-color: inherit;
 			}
 		}
 
-		// Active item
-		& > li.active > a,
-		& > li.active:hover > a {
-			background-color: @color-primary;
-			color: @color-text-inverse;
+		ul {
+			padding: 0;
 		}
 
-		&> li.active > a {
-			i.arrow {
-				transform: rotate(90deg);
-
-				&:before {
-					content: "\f105";
-				} 
-			}
+		// All links which are not active
+		// have subdued color
+		li a {
+			color: fade(@color-text-inverse, 50%);
 		}
 
-		// Hover item
-		& > li:hover > a {
+		// All links which are not active
+		// On hover bg become darker
+		// Their color become lighter
+		li a:hover,
+		li.open a:hover {
 			color: @color-text-inverse;
 			background-color: @color-primary-darker;
 		}
 
-		& > li > ul {
-			position: relative;
-			padding: 0;
 
-			& > li > a {
-				padding-top: 10px;
-				padding-bottom: 10px;
-				padding-left: 50px;
-				color: fade(@color-text-inverse, 50%);
+		// First level items
+		&> li {
+
+			// First level items links
+			& > a {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				padding-left: 20px;
 			}
 
-			& > li:hover > a {
-				color: @color-text-inverse;
-				background-color: @color-primary-darker;
+			// First level active links have primary background
+			&.active > a,
+			&.active > a:hover {
+				background-color: @color-primary !important;
+				color: @color-text-inverse !important;
+			}
 
-				&:focus {
-					background-color: inherit;
+			// First level active links have bit darker background
+			&.open > a {
+				background-color: darken(@color-primary-dark, 3%);
+			}
+
+			// Open items links
+			&.open > a {
+				i.arrow {
+					transform: rotate(90deg);
 				}
 			}
 
-			// Active item
-			& > li.active > a,
-			& > li.active:hover > a {
-				background-color: @color-primary-darker;
+			// First level item links arrow 
+			& > a {
+				i {
+					margin-right: 5px;
+
+					&.arrow {
+						float: right;
+						font-size: 20px;
+						line-height: initial;
+						transition: all 0.3s ease;
+
+						&:before {
+							content: "\f105" !important;
+						}
+					}
+				}
+			}
+
+		}
+
+		// Second level items
+		& > li > ul > li {
+
+			// Second level and deeper items links
+			// Have bit darker background and more padding 
+			// from left side
+			a {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 50px;
+				background-color: darken(@color-primary-dark, 3%);
+			}
+
+			// Second level active items links
+			// Have brighter color
+			&.active a {
 				color: @color-text-inverse;
 			}
 		}
