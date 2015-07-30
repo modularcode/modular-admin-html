@@ -1,3 +1,7 @@
 $(function () {
-    $('#sidebar-menu').metisMenu();
-  });
+
+	$('#sidebar-menu').metisMenu({
+		activeClass: 'open'
+	});
+	
+});
