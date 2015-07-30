@@ -1,3 +1,3 @@
 module.exports = {
-	page: "items"
+	page: "items-list"
 };

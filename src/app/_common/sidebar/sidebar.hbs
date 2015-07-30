@@ -4,93 +4,104 @@
 	</div>
 	<nav class="menu">
 		<ul class="nav metismenu" id="sidebar-menu">
+
 			<li {{#is page "===" "dashboard"}}class="active"{{/is}} >
 				<a href="index.html">
 					<i class="fa fa-home"></i> Dashboard
 				</a>
 			</li>
 
-			<li {{#is page "===" "items"}}class="active"{{/is}}>
+
+			<li {{#is page "in" "items-list,items-editor"}}class="active open"{{/is}} >
+
 				<a href="">
 					<i class="fa fa-th-large"></i> Items CRUD
 					<i class="fa arrow"></i>
 				</a>
 
 				<ul>
-					<li>
+					<li {{#is page "===" "items-list"}}class="active"{{/is}} >
 						<a href="items-list.html">
 							Item List
 						</a>
 					</li>
-					<li>
-						<a href="items-list.html">
+
+					<li {{#is page "===" "items-editor"}}class="active"{{/is}} >
+						<a href="items-editor.html">
 							Items Editor
 						</a>
 					</li>
 				</ul>
 			</li>
 
-			<li {{#is page "===" "charts"}}class="active"{{/is}} >
+			<li {{#is page "in" "charts-flot,charts-morris"}}class="active open"{{/is}} >
 				<a href="">
 					<i class="fa fa-bar-chart"></i> Charts 
 					<i class="fa arrow"></i>
 				</a>
 
 				<ul>
-					<li>
-						<a href="flot-chart.html">
+					<li {{#is page "===" "charts-flot"}}class="active"{{/is}} >
+						<a href="charts-flot.html">
 							Flot Chart
 						</a>
 					</li>
-					<li>
-						<a href="morris-chart.html">
+
+					<li {{#is page "===" "charts-morris"}}class="active"{{/is}} >
+						<a href="charts-morris.html">
 							Morris Chart
 						</a>
 					</li>
 				</ul>
 			</li>
 
-			<li {{#is page "===" "tables"}}class="active"{{/is}}>
+			<li {{#is page "===" "tables"}}class="active"{{/is}} >
 				<a href="tables.html">
 					<i class="fa fa-table"></i> Tables
 				</a>
 			</li>
 
-			<li {{#is page "===" "forms"}}class="active"{{/is}}>
+			<li {{#is page "===" "forms"}}class="active"{{/is}} >
 				<a href="forms.html">
 					<i class="fa fa-pencil-square-o"></i> Forms
 				</a>
 			</li>
 
-			<li {{#is page "===" "ui-elements"}}class="active"{{/is}}>
+			<li {{#is page "===" "ui-elements"}}class="active"{{/is}} >
 				<a href="ui-elements.html">
 					<i class="fa fa-desktop"></i> UI Elements
 				</a>
 			</li>
 
-			<li {{#is page "===" "pages"}}class="active"{{/is}} >
+			<li {{#is page "in" "login,sign-up,error-404,error-500"}}
+					class="active open"
+				{{/is}} >
+
 				<a href="">
 					<i class="fa fa-file-text-o"></i> Pages
 					<i class="fa arrow"></i>
 				</a>
 
 				<ul>
-					<li>
+					<li {{#is page "===" "login"}}class="active"{{/is}}>
 						<a href="login.html">
 							Login
 						</a>
 					</li>
-					<li>
+					
+					<li {{#is page "===" "sign-up"}}class="active"{{/is}}>
 						<a href="sign-up.html">
 							Sign Up
 						</a>
 					</li>
-					<li>
+
+					<li {{#is page "===" "error-404"}}class="active"{{/is}}>
 						<a href="error-404.html">
 							Error 404
 						</a>
 					</li>
-					<li>
+
+					<li {{#is page "===" "error-500"}}class="active"{{/is}}>
 						<a href="error-500.html">
 							Error 500
 						</a>
