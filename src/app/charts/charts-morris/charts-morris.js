@@ -66,7 +66,7 @@ $(function() {
         labels: ['Series A', 'Series B'],
         hideHover: 'auto',
         resize: true,
-        barColors: ['#59c2e6', '#cacaca'],
+        barColors: ['#59c2e6', '#50aecf'],
     });
 
     Morris.Line({
