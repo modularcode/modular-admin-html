@@ -6,7 +6,9 @@
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.5",
     "font-awesome": "~4.3.0",
-    "metisMenu": "~2.0.3"
+    "metisMenu": "~2.0.3",
+    "morrisjs": "~0.5.1",
+    "flot-charts": "*"
   },
   "overrides": {
     "bootstrap": {
