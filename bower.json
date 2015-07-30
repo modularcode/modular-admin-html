@@ -8,7 +8,8 @@
     "font-awesome": "~4.3.0",
     "metisMenu": "~2.0.3",
     "morrisjs": "~0.5.1",
-    "flot-charts": "*"
+    "jquery-flot": "~0.8.3",
+    "flot.tooltip": "~0.8.5"    
   },
   "overrides": {
     "bootstrap": {
@@ -21,6 +22,14 @@
         "dist/fonts/glyphicons-halflings-regular.ttf",
         "dist/fonts/glyphicons-halflings-regular.woff",
         "dist/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "jquery-flot": {
+      "main": [
+        "jquery.flot.js",
+        "jquery.flot.resize.js",
+        "jquery.flot.pie.js",
+        "jquery.flot.time.js"
       ]
     }
   }

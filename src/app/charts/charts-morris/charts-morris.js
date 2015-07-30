@@ -1,5 +1,9 @@
 $(function() {
-
+    
+    if (!$('#morris-one-line-chart').length) {
+        return false;
+    }
+        
     Morris.Line({
         element: 'morris-one-line-chart',
             data: [
