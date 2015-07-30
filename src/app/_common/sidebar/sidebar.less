@@ -5,6 +5,18 @@
 	top: 0;
 	left: 0;
 	bottom: 0;
+	transition: left 0.3s ease;
+
+	.accelerate();
+
+
+	@media @xs {
+		left: -@sidebar-width;
+	}
+
+	@media @sm {
+		left: -@sidebar-width;
+	}
 
 
 

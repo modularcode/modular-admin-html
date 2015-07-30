@@ -1,8 +1,8 @@
 {{#extend "app/app-layout"}}
 	{{#content "body"}}
 
+		{{!-- Analytics --}}
 		<section class="section">
-
 			<div class="title-block">
 				<h3 class="title">
 					Hi User
@@ -12,41 +12,18 @@
 				</p>	
 			</div>
 
-			<div class="row">
-				<div class="col-sm-5">
-
-					<div class="panel">
-						<h4 class="title">
-							Stats
-						</h4>
-						<p class="subtitle">
-							Website metrics for
-							<a href="http://modularteam.github.io/modularity-free-admin-dashboard-theme-html/">
-								your awesome project
-							</a>
-						</p>
-
-
-						<br><br><br><br><br><br>
-					</div>
+			<div class="row sameheight">
+				<div class="col-sm-5 col-md-6 col-lg-5">
+					{{> app/dashboard/stats/stats}}
 				</div>
-				<div class="col-sm-7">
-					<div class="panel">
-						<h4 class="title">
-							Visits
-						</h4>
-						<p class="subtitle">
-							Number of unique visits last 30 days
-						</p>
-
-						<br><br><br><br><br><br>
-					</div>
+				<div class="col-sm-7 col-md-6 col-lg-7">
+					{{> app/dashboard/visits/visits}}
 				</div>
 			</div>
 		</section>
 
+		{{!-- Projects --}}
 		<section class="section dashboard-projects">
-
 			<div class="title-block">
 				<h3 class="title">
 					Projects
@@ -56,30 +33,7 @@
 				</p>	
 			</div>
 
-			<div class="item">
-				<div class="panel">
-					<br><br>
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="panel">
-					<br><br>
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="panel">
-					<br><br>
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="panel">
-					<br><br>
-				</div>
-			</div>
-
+			{{> app/dashboard/projects/projects}}
 		</section>
 
 	{{/content}}
