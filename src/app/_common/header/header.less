@@ -7,13 +7,24 @@
 	position: absolute;
 	left: @sidebar-width;
 	right: 0;
+	transition: left 0.3s ease;
+	z-index: 10;
 
 	.clearfix();
+	.accelerate();
 
 
 	.header-block {
 		padding: 15px;
 		line-height: @line-height;
+	}
+
+	@media @xs {
+		left: 0;
+	}
+
+	@media @sm {
+		left: 0;
 	}
 	
 }

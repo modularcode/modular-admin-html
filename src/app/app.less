@@ -6,8 +6,19 @@
 	background-color: @color-bg;
 	box-shadow: 0 0 3px #ccc;
 	margin: 0 auto;
+	transition: padding-left 0.3s ease;
+
+	.accelerate();
 
 	.boxed & {
 		max-width: @screen-lg-min;
+	}
+
+	@media @xs {
+		padding-left: 0;
+	}
+
+	@media @sm {
+		padding-left: 0;
 	}
 }
