@@ -1,0 +1,42 @@
+.error-panel {
+	box-shadow: 1px 1px 5px fade(@color-text-light, 10%);
+	padding: 20px;
+	margin-bottom: 10px;
+	border-radius: 0;
+	color: #fff;
+	font-size: 32px;
+
+	&.error-404 {
+		background-color: #59c2e6;
+	}
+
+	&.error-500 {
+		background-color: #fb6e52;
+	}
+
+	.error-container {
+		text-align: center;
+
+		.error-title {
+			font-size: 150px;
+		}
+	}
+
+	@media @sm {
+   		.error-container {
+
+			.error-title {
+				font-size: 100px;
+			}
+		}	
+   	}
+
+   	@media @xs {
+   		.error-container {
+
+			.error-title {
+				font-size: 75px;
+			}
+		}
+   	}
+}
