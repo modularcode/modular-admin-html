@@ -26,5 +26,30 @@
 	@media @sm {
 		left: 0;
 	}
+
+	.sidebar-collapsed > & {
+		left: 0;
+
+		@media @xs {
+			left: @sidebar-width;
+		}
+
+		@media @sm {
+			left: @sidebar-width;
+		}
+	}
+
+	.sidebar-opened > & {
+		left: @sidebar-width;
+
+		@media @xs {
+			left: 0;
+		}
+
+		@media @sm {
+			left: 0;
+		}
+	}
+
 	
 }

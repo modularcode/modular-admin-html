@@ -21,4 +21,29 @@
 	@media @sm {
 		padding-left: 0;
 	}
+
+	&.sidebar-collapsed {
+		padding-left: 0;
+
+		@media @xs {
+			padding-left: @sidebar-width;
+		}
+
+		@media @sm {
+			padding-left: @sidebar-width;
+		}
+	}
+
+	&.sidebar-opened {
+		padding-left: @sidebar-width;
+
+		@media @xs {
+			padding-left: 0;
+		}
+
+		@media @sm {
+			padding-left: 0;
+		}
+
+	}
 }

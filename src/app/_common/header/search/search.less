@@ -2,12 +2,24 @@
 	@line-height: @header-height - 30px;
 
 	float: left;
-	padding-left: 37px;
+	padding-left: 25px;
 
 	@media @xs {
 		padding-left: @content-padding-x-xs;
 	}
 
+	.collapse-btn {
+		background-color: @color-primary;
+    	border-color: @color-primary;
+    	background-image: none;
+    	color: @color-primary-dark;
+    	font-weight: normal;
+	}
+
+	& > form {
+		float: right;
+		padding-left: 10px;
+	} 
 
 	.input-container {
 		position: relative;

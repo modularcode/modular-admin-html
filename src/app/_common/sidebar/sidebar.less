@@ -18,7 +18,30 @@
 		left: -@sidebar-width;
 	}
 
+	.sidebar-collapsed > &{
+		left: -@sidebar-width;
 
+		@media @xs {
+			left: 0;
+		}
+
+		@media @sm {
+			left: 0;
+		}
+	}
+
+	.sidebar-opened > & {
+		left: 0;
+
+
+		@media @xs {
+			left: -@sidebar-width;
+		}
+
+		@media @sm {
+			left: -@sidebar-width;
+		}
+	}
 
 	.brand {
 		color: @color-primary;
@@ -129,6 +152,5 @@
 			}
 		}
 	}
-
 
 }
