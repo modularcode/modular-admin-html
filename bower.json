@@ -9,7 +9,8 @@
     "metisMenu": "~2.0.3",
     "morrisjs": "~0.5.1",
     "jquery-flot": "~0.8.3",
-    "flot.tooltip": "~0.8.5"    
+    "flot.tooltip": "~0.8.5",
+    "datatables": "~1.10.8"
   },
   "overrides": {
     "bootstrap": {
@@ -30,6 +31,13 @@
         "jquery.flot.resize.js",
         "jquery.flot.pie.js",
         "jquery.flot.time.js"
+      ]
+    },
+    "datatables": {
+      "main": [
+        "media/js/jquery.dataTables.js",
+        "media/js/dataTables.bootstrap.js",
+        "media/css/dataTables.bootstrap.css"
       ]
     }
   }

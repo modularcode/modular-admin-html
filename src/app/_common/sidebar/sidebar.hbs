@@ -55,10 +55,31 @@
 				</ul>
 			</li>
 
-			<li {{#is page "===" "tables"}}class="active"{{/is}} >
-				<a href="tables.html">
+			<li {{#is page "in" "static-tables,responsive-tables,dynamic-tables"}}class="active open"{{/is}} >
+				<a href="">
 					<i class="fa fa-table"></i> Tables
+					<i class="fa arrow"></i>
 				</a>
+
+				<ul>
+					<li {{#is page "===" "static-tables"}}class="active"{{/is}} >
+						<a href="static-tables.html">
+							Static Tables
+						</a>
+					</li>
+
+					<li {{#is page "===" "responsive-tables"}}class="active"{{/is}} >
+						<a href="responsive-tables.html">
+							Responsive Tables
+						</a>
+					</li>
+
+					<li {{#is page "===" "dynamic-tables"}}class="active"{{/is}} >
+						<a href="dynamic-tables.html">
+							Dynamic Tables
+						</a>
+					</li>
+				</ul>
 			</li>
 
 			<li {{#is page "===" "forms"}}class="active"{{/is}} >
