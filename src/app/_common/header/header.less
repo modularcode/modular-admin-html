@@ -11,7 +11,11 @@
 	z-index: 10;
 
 	.clearfix();
-	.accelerate();
+	// .accelerate();
+
+	@media @xs {
+		height: @header-height-xs;
+	}
 
 
 	.header-block {
@@ -25,29 +29,13 @@
 		}
 	}
 
+	.header-block-collapse { 
+		padding-left: @content-padding-x-xs
+	}
+
+
 	.collapse-btn {
 		vertical-align: initial;
-	}
-
-	@media @xs {
-		height: @header-height-xs;
-		left: @sidebar-width;
-		width: 100%;
-	}
-
-	@media @sm {
-		left: @sidebar-width;
-		width: 100%;
-	}
-
-	.sidebar-collapsed > & {
-		@media @xs {
-			left: 0;
-		}
-
-		@media @sm {
-			left: 0;
-		}
 	}
 	
 }

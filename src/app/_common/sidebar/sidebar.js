@@ -8,7 +8,7 @@ $(function () {
 	$('#sidebar-collapse-btn').on('click', function(event){
 		event.preventDefault();
 		
-		$(".main-app").toggleClass("sidebar-collapsed");
+		$("#app").toggleClass("sidebar-collapsed");
 	});
 	
 });
