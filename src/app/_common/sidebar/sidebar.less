@@ -7,6 +7,11 @@
 	bottom: 0;
 	transition: left 0.3s ease;
 
+	.sidebar-open & {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
 	.brand {
 		color: @color-primary;
 		text-align: center;
@@ -116,4 +121,32 @@
 		}
 	}
 
+}
+
+.sidebar-overlay {
+	position: absolute;
+	display: none;
+	left: 200vw;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 5;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+
+	@media @xs-sm {
+		display: block;
+	}
+
+	@media @xs {
+		background-color: fade(#000, 30%);
+	}
+
+
+	.sidebar-open & {
+		@media @xs-sm {
+			left: @sidebar-width;
+			opacity: 1;
+		}
+	}
 }
