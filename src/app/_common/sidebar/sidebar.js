@@ -5,10 +5,10 @@ $(function () {
 	});
 
 
-	$('.collapse-btn').on('click', function(event){
+	$('#sidebar-collapse-btn').on('click', function(event){
 		event.preventDefault();
 		
-		$(".main-app").toggleClass("sidebar-collapsed sidebar-opened");
+		$(".main-app").toggleClass("sidebar-collapsed");
 	});
 	
 });

@@ -17,31 +17,30 @@
 	.header-block {
 		padding: 15px;
 		line-height: @line-height;
+		float: left;
+
+		@media @xs {
+			padding: 5px;
+			line-height: @header-height-xs - 10px;
+		}
+	}
+
+	.collapse-btn {
+		vertical-align: initial;
 	}
 
 	@media @xs {
-		left: 0;
+		height: @header-height-xs;
+		left: @sidebar-width;
+		width: 100%;
 	}
 
 	@media @sm {
-		left: 0;
+		left: @sidebar-width;
+		width: 100%;
 	}
 
 	.sidebar-collapsed > & {
-		left: 0;
-
-		@media @xs {
-			left: @sidebar-width;
-		}
-
-		@media @sm {
-			left: @sidebar-width;
-		}
-	}
-
-	.sidebar-opened > & {
-		left: @sidebar-width;
-
 		@media @xs {
 			left: 0;
 		}
@@ -50,6 +49,5 @@
 			left: 0;
 		}
 	}
-
 	
 }

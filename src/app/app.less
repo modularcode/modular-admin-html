@@ -7,6 +7,8 @@
 	box-shadow: 0 0 3px #ccc;
 	margin: 0 auto;
 	transition: padding-left 0.3s ease;
+	overflow-x: hidden;
+	overflow-y: auto;
 
 	.accelerate();
 
@@ -14,29 +16,8 @@
 		max-width: @screen-lg-min;
 	}
 
-	@media @xs {
-		padding-left: 0;
-	}
-
-	@media @sm {
-		padding-left: 0;
-	}
 
 	&.sidebar-collapsed {
-		padding-left: 0;
-
-		@media @xs {
-			padding-left: @sidebar-width;
-		}
-
-		@media @sm {
-			padding-left: @sidebar-width;
-		}
-	}
-
-	&.sidebar-opened {
-		padding-left: @sidebar-width;
-
 		@media @xs {
 			padding-left: 0;
 		}
@@ -44,6 +25,5 @@
 		@media @sm {
 			padding-left: 0;
 		}
-
 	}
 }
