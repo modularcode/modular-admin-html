@@ -29,4 +29,26 @@
 			font-size: 13px;
 		}
 	}
+
+	.form-checkbox {
+		display:none;
+
+		& + label {
+			padding: 0;
+		}
+
+		& + label:before {
+			font-family: FontAwesome;
+			font-size: 21px;
+			display: inline-block;
+			vertical-align: middle;
+			letter-spacing: 10px; 
+			color: @color-primary;
+			content: "\f0c8";
+		}
+
+		&:checked + label:before {
+			content: "\f14a";
+		}
+	}
 }
