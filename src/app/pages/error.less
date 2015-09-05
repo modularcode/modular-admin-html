@@ -1,42 +1,54 @@
 .error-panel {
-	box-shadow: 1px 1px 5px fade(@color-text-light, 10%);
-	padding: 20px;
-	margin-bottom: 10px;
-	border-radius: 0;
-	color: #fff;
-	font-size: 32px;
+	width: 410px;
+    min-height: 330px;
+    margin: 60px auto;
 
-	&.error-404 {
-		background-color: #59c2e6;
-	}
-
-	&.error-500 {
-		background-color: #fb6e52;
-	}
+    &.center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		margin: 0;
+    }
 
 	.error-container {
 		text-align: center;
 
 		.error-title {
 			font-size: 150px;
+			line-height: 150px;
+			font-weight: 700;
+			color: #252932;
+			text-shadow: rgba(61, 61, 61, 0.3) 1px 1px, rgba(61, 61, 61, 0.2) 2px 2px, rgba(61, 61, 61, 0.3) 3px 3px;
+		}
+
+		.error-sub-title {
+			font-weight: 100;
+		}
+
+	}
+}
+
+@media @sm {
+	.error-panel {
+		&.center {
+			width: 50%;
+			position: relative;
+			left: 0;
+			transform: inherit;
+			margin: 40px auto;
 		}
 	}
+}
 
-	@media @sm {
-   		.error-container {
-
-			.error-title {
-				font-size: 100px;
-			}
-		}	
-   	}
-
-   	@media @xs {
-   		.error-container {
-
-			.error-title {
-				font-size: 75px;
-			}
+@media @xs {
+	.error-panel {
+		&.center {
+			width: 90%;
+			position: relative;
+			left: 0;
+			transform: inherit;
+			margin: 40px auto;
 		}
-   	}
+	}
 }

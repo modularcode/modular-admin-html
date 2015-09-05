@@ -1,3 +1,24 @@
 .btn {
+	background-image: none;
 	border-radius: 0;
+
+	&.btn-primary {
+		.button-variant( @color-text-inverse, @color-primary, @color-primary);
+	}
+
+	&.btn-success {
+		.button-variant( @color-text-inverse, @color-success, @color-success);
+	}
+
+	&.btn-info {
+		.button-variant( @color-text-inverse, @color-info, @color-info);
+	}
+
+	&.btn-warning {
+		.button-variant( @color-text-inverse, @color-warning, @color-warning);
+	}
+
+	&.btn-danger {
+		.button-variant( @color-text-inverse, @color-danger, @color-danger);
+	}
 }
