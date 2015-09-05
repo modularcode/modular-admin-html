@@ -1,0 +1,37 @@
+.auth-container {
+	width: 450px;
+    min-height: 330px;
+    position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	background-color:  @color-primary;
+	
+	.auth-title {
+		color: #FFFFFF;
+	    text-align: center;
+	    line-height: 70px;
+	    font-size: 30px;
+	    margin: 0;
+	}
+
+	.auth-content {
+		background-color: #FFFFFF;
+		padding: 30px 50px;
+	}
+
+}
+
+@media @xs {
+	.auth-container {
+		width: 100%;
+		position: relative;
+		left: 0;
+		transform: inherit;
+		margin: 40px auto;
+
+		.auth-content {
+		    padding: 30px 25px;
+		}
+	}
+}

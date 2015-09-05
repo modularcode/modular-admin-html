@@ -1,0 +1,36 @@
+{{#extend "auth/auth-layout"}}
+	{{#content "body"}}
+	
+		<div class="auth-container">
+			<h1 class="auth-title">Modularity</h1>
+
+			<div class="auth-content">
+				<form id="login-form">
+					<div class="form-group">
+						<label for="inputEmail" class="control-label">Username</label>
+						<input type="email" class="form-control" id="inputEmail" placeholder="Your email address" required>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword" class="control-label">Password</label>
+						<input type="password" class="form-control" id="inputPassword" placeholder="Your Password" required>
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Remember me
+							</label>
+							<a href="/reset.html" class="pull-right">Forgot password?</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-block btn-primary">Sign in</button>
+					</div>
+					<div class="form-group">
+						<p class="text-muted text-center"><small>Do not have an account?</small> <a href="/signup.html">Sign Up!</a></p>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	{{/content}}
+{{/extend}}
