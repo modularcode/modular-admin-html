@@ -7,11 +7,12 @@
     "datatables": "~1.10.8",
     "font-awesome": "~4.3.0",
     "jquery": "~2.1.4",
-    "jquery-validation": "~1.14.0",
     "jquery-flot": "~0.8.3",
     "flot.tooltip": "~0.8.5",
+    "jquery-validation": "~1.14.0",
     "metisMenu": "~2.0.3",
-    "morrisjs": "~0.5.1"
+    "morrisjs": "~0.5.1",
+    "nprogress": "~0.2.0"
   },
   "overrides": {
     "bootstrap": {
@@ -33,6 +34,9 @@
         "jquery.flot.pie.js",
         "jquery.flot.time.js"
       ]
+    },
+    "flot.tooltip": {
+      "main": "js/jquery.flot.tooltip.js"
     },
     "datatables": {
       "main": [

@@ -77,3 +77,20 @@ function addValidClass(element, errorClass, validClass) {
 	.removeClass(errorClass)
 	.addClass(validClass); 
 }
+
+/***********************************************
+*        NProgress Settings
+***********************************************/
+var npSettings = { 
+	easing: 'ease', 
+	speed: 500 
+}
+
+NProgress.configure(npSettings);
+
+// start load bar
+NProgress.start();
+
+// end loading bar 
+NProgress.done();
+
