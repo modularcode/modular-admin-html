@@ -20,6 +20,10 @@
 			color: @color-primary;
 			font-weight: bold;
 		}
+
+		@media @xs {
+			position: static;
+		}
 	}
 
 
@@ -104,6 +108,17 @@
 					background-color: @color-dropdown-link-hover-bg;
 					color: @color-primary;
 				}
+			}
+		}
+
+		@media @xs {
+			min-width: 100px;
+			width: 100%;
+			margin-top: 5px;
+
+			&:before,
+			&:after {
+				right: 107px;
 			}
 		}
 	}
