@@ -1,4 +1,17 @@
 .form-group {
+
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+
+		[class^='col'] {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+
+
 	label.control-label {
 		font-weight: 600;
 		color:  @color-primary;
@@ -6,7 +19,7 @@
 
 	.form-control {
 		border: none;
-		border-bottom: 1px solid @color-primary;
+		border-bottom: 1px solid @color-divider;
 	    border-radius: 0;
 		box-shadow: none;
 		padding: 0;
@@ -18,29 +31,8 @@
 		}
 	}
 
-	&.inline-block {
-
-		label.control-label {
-			width: 100%;
-		}
-
-		.form-control {
-			width: 47%;
-			display: inline-block;
-		}
-
-		.form-control:nth-of-type(1) {
-			margin-right: 10px;
-		}
-
-		.form-control:nth-of-type(2) {
-			margin-left: 10px;
-		}
-
-	}
 
 	&.has-error {
-
 		.form-control {
 			border-color: @color-danger;
 		}
@@ -77,14 +69,27 @@
 }
 
 
-@media @xs {
-	.form-group {
-		&.inline-block {
-			.form-control {
-				width: 100%;
-				display: block;
-				margin: 0 !important;
-			}
-		}
+// Placeholders
+.form-control {
+	&::-webkit-input-placeholder {
+		font-style: italic;
+		color: darken(@color-divider, 5%);
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+		font-style: italic;
+		color: @color-divider;
+	}
+
+	&::-moz-placeholder {  /* Firefox 19+ */
+		font-style: italic;
+		color: @color-divider;
+	}
+
+	&:-ms-input-placeholder {  
+		font-style: italic;
+		color: @color-divider;
 	}
 }
+
+
