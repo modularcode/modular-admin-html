@@ -15,11 +15,12 @@
 .panel {
 	background-color: #fff;
 	box-shadow: 1px 1px 5px fade(@color-text-light, 10%);
-	padding: 20px;
+	
 	margin-bottom: 10px;
 	border-radius: 0;
 
-	.title-block {
+	.title-block,
+	.panel-title-block {
 		padding-bottom: 0;
 		margin-bottom: 20px;
 		border: none;
@@ -33,11 +34,16 @@
 	.section.demo {
 		margin-bottom: 40px;
 	}
+}
+
+.panel-body {
+	padding: 20px;
 
 	@media @xs {
 		padding: 10px;
 	}
 }
+
 
 pre {
 	padding: 0;

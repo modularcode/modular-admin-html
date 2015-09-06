@@ -1,11 +1,12 @@
 {{#extend "auth/auth-layout"}}
 	{{#content "body"}}
 	
-		<div class="auth-container">
-			<h1 class="auth-title">Modularity</h1>
-
+		<div class="panel auth-container">
+			<header class="auth-header">
+				<h1 class="auth-title">Modularity</h1>
+			</header>
 			<div class="auth-content">
-				<p class="text-primary text-center">SIGN IN TO CONTINUE</p>
+				<p class="text-center">LOGIN TO CONTINUE</p>
 				<form id="login-form"  action="/index.html" method="GET" novalidate="">
 					<div class="form-group">
 						<label for="username" class="control-label">Username</label>
