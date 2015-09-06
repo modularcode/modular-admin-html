@@ -9,7 +9,7 @@
 				<p class="text-center">SIGNUP TO GET INSTANT ACCESS</p>
 				<form id="signup-form"  action="/index.html" method="GET" novalidate="">
 					<div class="form-group">
-						<label for="firstname" class="control-label">Name</label>
+						<label for="firstname" >Name</label>
 
 						<div class="row">
 							<div class="col-sm-6">
@@ -22,11 +22,11 @@
 
 					</div>
 					<div class="form-group">
-						<label for="email" class="control-label">Email</label>
-						<input type="email" class="form-control" name="email" id="email" placeholder="Enter email address" required>
+						<label for="email" >Email</label>
+						<input type="email" class="form-control" name="email" id="email" placeholder="Enter email address" required="">
 					</div>
 					<div class="form-group">
-						<label for="password" class="control-label">Password</label>
+						<label for="password" >Password</label>
 
 						<div class="row">
 							<div class="col-sm-6">
@@ -41,12 +41,10 @@
 
 					</div>
 					<div class="form-group">
-						<div class="checkbox">
-							<label for="agree">
-								<input class="form-checkbox" name="agree" id="agree" type="checkbox" required> 
-								<span id="agree-text">Agree the terms and <a href="#">policy</a></span>
-							</label>
-						</div>
+						<label for="agree">
+							<input class="checkbox" name="agree" id="agree" type="checkbox" required=""> 
+							<span>Agree the terms and <a href="#">policy</a></span>
+						</label>
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-block btn-primary">Sign in</button>

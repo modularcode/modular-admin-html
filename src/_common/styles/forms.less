@@ -1,5 +1,4 @@
 .form-group {
-
 	.row {
 		margin-left: -10px;
 		margin-right: -10px;
@@ -10,61 +9,60 @@
 		}
 	}
 
-
-
-	label.control-label {
-		font-weight: 600;
-		// color:  @color-primary;
-	}	
-
-	.form-control {
-		border: none;
-		border-bottom: 1px solid @color-divider;
-	    border-radius: 0;
-		box-shadow: none;
-		padding: 0;
-
-		&:focus {
-			border: none;
-			box-shadow: none;
-			border-bottom: 1px solid @color-primary;
-		}
-	}
-
-
 	&.has-error {
-		.form-control {
-			border-color: @color-danger;
-		}
-
 		span.has-error {
 			color: @color-danger;
 			font-size: 13px;
 			display: block !important;
 		}
 	}
+}
 
-	.form-checkbox {
-		visibility: hidden;
-		color: inherit;
+label, 
+.control-label {
+	font-weight: 600;
+}	
 
-		& + span {
-			padding: 0;
-		}
+.form-control {
+	border: none;
+	border-bottom: 1px solid @color-divider;
+    border-radius: 0;
+	box-shadow: none;
+	padding: 0;
 
-		& + span:before {
-			font-family: FontAwesome;
-			font-size: 21px;
-			display: inline-block;
-			vertical-align: middle;
-			letter-spacing: 10px; 
-			color: @color-primary;
-			content: "\f0c8";
-		}
+	.has-error &:focus,
+	&:focus {
+		border: none;
+		box-shadow: none;
+		border-bottom: 1px solid @color-primary;
+	}
 
-		&:checked + span:before {
-			content: "\f14a";
-		}
+	.has-error & {
+		box-shadow: none;
+		border-color: @color-danger;
+	}
+}
+
+.checkbox {
+	display: none;
+
+	& + span {
+		padding: 0;
+	}
+
+	& + span:before {
+		font-family: FontAwesome;
+		font-size: 21px;
+		display: inline-block;
+		vertical-align: middle;
+		letter-spacing: 10px; 
+		color: darken(@color-divider, 5%);
+		content: "\f0c8";
+	}
+
+	&:checked + span:before {
+		content: "\f14a";
+		color: @color-primary;
 	}
 }
 
