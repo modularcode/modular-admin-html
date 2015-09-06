@@ -23,7 +23,7 @@ $(function() {
         xaxis: {
             tickDecimals: 0
         },
-        colors: ["#59c2e6"],
+        colors: [config.colorPrimary],
         grid: {
             color: "#999999",
             hoverable: true,
@@ -72,7 +72,7 @@ $(function() {
         xaxis: {
             tickDecimals: 0
         },
-        colors: ["#59c2e6"],
+        colors: [config.colorPrimary],
         grid: {
             color: "#999999",
             hoverable: true,
@@ -105,19 +105,19 @@ $(function() {
     var data = [{
         label: "Sales 1",
         data: 21,
-        color: "#8ad4ed",
+        color: tinycolor(config.colorPrimary.toString()).lighten(20),
     }, {
         label: "Sales 2",
         data: 15,
-        color: "#59c2e6",
+        color: tinycolor(config.colorPrimary.toString()).lighten(10),
     }, {
         label: "Sales 3",
         data: 7,
-        color: "#3e87a1",
+        color: tinycolor(config.colorPrimary.toString()),
     }, {
         label: "Sales 4",
         data: 52,
-        color: "#2c6173",
+        color: tinycolor(config.colorPrimary.toString()).darken(10),
     }];
 
     var plotObj = $.plot($("#flot-pie-chart"), data, {
@@ -214,7 +214,7 @@ $(function() {
                 return markings;
             }
         },
-        colors: ["#59c2e6"],
+        colors: [config.colorPrimary.toString()],
         xaxis: {
             tickFormatter: function() {
                 return "";
@@ -288,7 +288,7 @@ $(function() {
             legend: {
                 position: 'sw'
             },
-            colors: ["#59c2e6"],
+            colors: [config.colorPrimary.toString()],
             grid: {
                 color: "#999999",
                 hoverable: true,

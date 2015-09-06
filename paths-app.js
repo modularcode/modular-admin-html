@@ -19,7 +19,8 @@ var buildDir = config.buildDir;
 
 	exports.scripts = {
 		src: [
-			srcDir + "/**/!(main|context|*-helper)*.js",
+			srcDir + "/_main/config.js",
+			srcDir + "/**/!(main|context|config|*-helper)*.js",
 			srcDir + "/_main/main.js",
 			"!" + srcDir + "/_vendor/**"
 		],

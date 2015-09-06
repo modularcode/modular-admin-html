@@ -20,7 +20,7 @@ $(function() {
         resize: true,
         lineWidth:4,
         labels: ['Value'],
-        lineColors: ['#59c2e6'],
+        lineColors: [config.colorPrimary.toString()],
         pointSize:5,
     });
 
@@ -42,7 +42,11 @@ $(function() {
         pointSize: 2,
         hideHover: 'auto',
         resize: true,
-        lineColors: ['#7aceeb', '#50aecf','#59c2e6'],
+        lineColors: [
+            tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
+            tinycolor(config.colorPrimary.toString()).darken(10).toString(),
+            config.colorPrimary.toString()
+        ],
         lineWidth:2,
         pointSize:1,
     });
@@ -53,7 +57,11 @@ $(function() {
             { label: "In-Store Sales", value: 30 },
             { label: "Mail-Order Sales", value: 20 } ],
         resize: true,
-        colors: ['#7aceeb', '#50aecf','#59c2e6'],
+        colors: [
+            tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
+            tinycolor(config.colorPrimary.toString()).darken(10).toString(),
+            config.colorPrimary.toString()
+        ],
     });
 
     Morris.Bar({
@@ -70,7 +78,10 @@ $(function() {
         labels: ['Series A', 'Series B'],
         hideHover: 'auto',
         resize: true,
-        barColors: ['#59c2e6', '#50aecf'],
+        barColors: [
+            config.colorPrimary.toString(),
+            tinycolor(config.colorPrimary.toString()).darken(10).toString()
+        ],
     });
 
     Morris.Line({
@@ -87,7 +98,10 @@ $(function() {
         labels: ['Series A', 'Series B'],
         hideHover: 'auto',
         resize: true,
-        lineColors: ['#50aecf','#59c2e6'],
+        lineColors: [
+            config.colorPrimary.toString(),
+            tinycolor(config.colorPrimary.toString()).darken(10).toString()
+        ],
     });
 
 });
