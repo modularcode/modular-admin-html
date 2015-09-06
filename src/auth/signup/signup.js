@@ -38,7 +38,7 @@ $(function() {
 				element.attr("name") == "firstname" || 
 				element.attr("name") == "lastname" 
 			) {
-				error.insertAfter("#lastname");
+				error.insertAfter($("#lastname").closest('.row'));
 				element.parents("div.form-group")
 				.addClass('has-error');
 			} 
@@ -46,7 +46,7 @@ $(function() {
 				element.attr("name") == "password" || 
 				element.attr("name") == "retype_password" 
 			) {
-				error.insertAfter("#retype_password");
+				error.insertAfter($("#retype_password").closest('.row'));
 				element.parents("div.form-group")
 				.addClass('has-error');
 			}
