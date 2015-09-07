@@ -15,6 +15,58 @@
 			font-size: 13px;
 			display: block !important;
 		}
+
+		.form-control-feedback {
+			color: @color-danger;
+		}
+	}
+
+	&.has-warning {
+		span.has-warning {
+			color: @color-warning;
+			font-size: 13px;
+			display: block !important;
+		}
+
+		.form-control-feedback {
+			color: @color-warning;
+		}
+	}
+
+	&.has-success {
+		span.has-success {
+			color: @color-success;
+			font-size: 13px;
+			display: block !important;
+		}
+
+		.form-control-feedback {
+			color: @color-success;
+		}
+	}
+
+
+	/* Input groups */
+	.input-group {
+		margin-bottom: 10px;
+
+		.form-control {
+			padding-left: 5px;
+		}
+
+		span.input-group-addon { 
+			font-style: italic;
+			border: none;
+			border-radius: 0;
+			border-bottom: 1px solid @color-divider;
+			background-color: #FFFFFF;
+
+			&.focus {
+				border: 1px solid @color-primary;
+				background-color: @color-primary;
+				color: #ffffff;
+			}
+		}
 	}
 }
 
@@ -31,6 +83,8 @@ label,
 	padding: 0;
 
 	.has-error &:focus,
+	.has-warning &:focus,
+	.has-success &:focus,
 	&:focus {
 		border: none;
 		box-shadow: none;
@@ -41,13 +95,25 @@ label,
 		box-shadow: none;
 		border-color: @color-danger;
 	}
+
+	.has-warning & {
+		box-shadow: none;
+		border-color: @color-warning;
+	}
+
+	.has-success & {
+		box-shadow: none;
+		border-color: @color-success;
+	}
 }
 
+.radio,
 .checkbox {
 	display: none;
 
 	& + span {
 		padding: 0;
+		padding-right: 10px;
 	}
 
 	& + span:before {
@@ -57,13 +123,63 @@ label,
 		vertical-align: middle;
 		letter-spacing: 10px; 
 		color: darken(@color-divider, 5%);
+	}
+
+	&:checked + span:before {
+		color: @color-primary;
+	}
+
+	&:disabled + span:before {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&:checked:disabled  + span:before {
+		color: darken(@color-divider, 5%);
+	}
+}
+
+.checkbox {
+
+	& + span:before {
 		content: "\f0c8";
 	}
 
 	&:checked + span:before {
 		content: "\f14a";
-		color: @color-primary;
 	}
+
+	&.rounded {
+		& + span:before {
+			content: "\f111";
+		}
+
+		&:checked + span:before {
+			content: "\f058";
+		}
+	}
+}
+
+.radio {
+
+	& + span:before {
+		content: "\f111";
+	}
+
+	&:checked + span:before {
+		content: "\f10c";
+	}
+
+	&.squared {
+		& + span:before {
+			content: "\f0c8";
+		}
+
+		&:checked + span:before {
+			content: "\f096";
+		}
+	}
+
 }
 
 
