@@ -1,3 +1,3 @@
 module.exports = {
-	page: "ui-elements"
+	page: "panels"
 };

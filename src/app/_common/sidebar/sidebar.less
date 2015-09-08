@@ -30,9 +30,21 @@
 			}
 		}
 
+		// Second + menu items
 		ul {
 			padding: 0;
+			height: 0px;
+			overflow: hidden;
+
+			.loaded & {
+				height: auto;
+			}
 		}
+
+		li.active ul {
+			height: auto;
+		}
+
 
 		// All links which are not active
 		// have subdued color

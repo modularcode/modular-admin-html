@@ -88,10 +88,45 @@
 				</a>
 			</li>
 
-			<li {{#is page "===" "ui-elements"}}class="active"{{/is}} >
-				<a href="ui-elements.html">
+			<li {{#is page "in" "buttons,grid,icons,panels,typography"}}
+					class="active open"
+				{{/is}} >
+				<a href="">
 					<i class="fa fa-desktop"></i> UI Elements
+					<i class="fa arrow"></i>
 				</a>
+
+				<ul>
+					<li {{#is page "===" "buttons"}}class="active"{{/is}}>
+						<a href="buttons.html">
+							Buttons
+						</a>
+					</li>
+					
+					<li {{#is page "===" "panels"}}class="active"{{/is}}>
+						<a href="panels.html">
+							Panels
+						</a>
+					</li>
+
+					<li {{#is page "===" "typography"}}class="active"{{/is}}>
+						<a href="typography.html">
+							Typography
+						</a>
+					</li>
+
+					<li {{#is page "===" "icons"}}class="active"{{/is}}>
+						<a href="icons.html">
+							Icons
+						</a>
+					</li>
+
+					<li {{#is page "===" "grid"}}class="active"{{/is}}>
+						<a href="grid.html">
+							Grid
+						</a>
+					</li>
+				</ul>
 			</li>
 
 			<li {{#is page "in" "login,signup,reset,error-404,error-500"}}
