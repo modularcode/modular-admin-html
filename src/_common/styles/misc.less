@@ -16,6 +16,48 @@
 	background-color: @color-primary !important;
 }
 
+.stat {
+	margin-bottom: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	.value {
+		font-size: 26px;
+		line-height: 32px;
+		font-weight: 300;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		@media @sm {
+			font-size: 20px;
+			line-height: 26px
+		}
+
+		@media (min-width: @screen-lg-min) and (max-width: 1500px) {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+
+	.name {
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		@media @sm {
+			font-size: 12px;
+		}
+
+		@media (min-width: @screen-lg-min) and (max-width: 1500px) {
+			font-size: 12px;
+		}
+	}
+
+	@media @lg {
+		margin-bottom: 30px;
+	}
+}
+
 .spinner {
 	top: 25px !important;
     right: 23px !important;
@@ -50,4 +92,16 @@
 			}
 		}
 	}
+}
+
+
+.well {
+	background-image: none;
+	background-color: #fff;
+}
+
+.jumbotron {
+	background-image: none;
+	background-color: #fff;
+	padding: 15px 30px;
 }
