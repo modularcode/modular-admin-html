@@ -22,8 +22,53 @@
 			</div>
 		</section>
 
-		{{!-- Projects --}}
+		{{!-- Activity --}}
 		<section class="section dashboard-projects">
+			<div class="title-block">
+				<h3 class="title">
+					Recent Activity
+				</h3>
+			</div>
+
+			<div class="row sameheight">
+				<div class="col-sm-4">
+					<div class="panel sameheight-item" data-exclude="xs">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Support tickets
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel sameheight-item" data-exclude="xs">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Comments
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel sameheight-item" data-exclude="xs">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Newsfeed
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
 			<div class="title-block">
 				<h3 class="title">
 					Projects
@@ -33,8 +78,28 @@
 				</p>	
 			</div>
 
-			{{> app/dashboard/projects/projects}}
-		</section>
+			{{!-- Projects --}}
+			<div class="row sameheight">
+				<div class="col-md-8">
+					<div class="sameheight-item" data-exclude="xs">
+						{{> app/dashboard/projects/projects}}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel sameheight-item" data-exclude="xs">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Support tickets
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
 
 	{{/content}}
 {{/extend}}
