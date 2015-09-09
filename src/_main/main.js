@@ -30,6 +30,9 @@ $(function() {
 var numCalls = 0;
 
 function setSameHeights() {
+
+	var viewport = ResponsiveBootstrapToolkit.current();
+
 	$('.sameheight').each(function() {
 
 		var $items = $(this).find(".sameheight-item");
@@ -42,9 +45,17 @@ function setSameHeights() {
 			maxHeight = Math.max(maxHeight, $(this).innerHeight());
 		});
 
+
 		// Set heights of items
 		$items.each(function() {
-			$(this).innerHeight(maxHeight);
+			// Ignored viewports for item
+			var excludedStr = $(this).data('exclude') || '';
+			var excluded = excludedStr.split(',');
+
+			// Set height of element if it's not excluded on 
+			if (excluded.indexOf(viewport) === -1) {
+				$(this).innerHeight(maxHeight);
+			}
 		});
 	});
 }

@@ -13,7 +13,8 @@
     "metisMenu": "~2.0.3",
     "morrisjs": "~0.5.1",
     "nprogress": "~0.2.0",
-    "tinycolor": "~1.2.1"
+    "tinycolor": "~1.2.1",
+    "responsive-bootstrap-toolkit": "~2.5.0"
   },
   "overrides": {
     "bootstrap": {
