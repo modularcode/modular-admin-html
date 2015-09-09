@@ -39,10 +39,7 @@ For assembling the application, you need to have [NodeJs](https://nodejs.org/en/
   ```
   gulp
   ```
-
-
-npm install                   # Install dependencies
-gulp                          # Build the project and start local web server
+1. Open the project [http://localhost:4000](http://localhost:4000)
 
 
 ### Folder Structure
