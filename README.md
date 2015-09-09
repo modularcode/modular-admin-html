@@ -42,6 +42,40 @@ Open the project [http://localhost:4000](http://localhost:4000)
 
 ## Folder Structure
 
-## Template Engine
+```
+├── bower_components/       
+├── node_modules/                   
+├── public/                  
+├── src/    
+│   ├── _assets/   
+│   ├── _common/   
+│   ├── _helpers/   
+│   ├── _main/   
+│   ├── _vendor/   
+│   ├── app/   
+│   ├── auth/   
+│   └── context.js
+├── tasks/    
+│── bowere.json
+│── config.js
+│── gulpfile.js
+│── package.json
+│── paths-app.js
+└── paths-vendor.js
+```
 
-## Build Process
+## File Types
+
+#### Styles (*.less)
+
+#### Scripts (*.js)
+
+#### Layouts (*-layout.hbs)
+
+#### Pages (*-page.hbs)
+
+#### Templates (*.hbs)
+
+#### Contexts (context.js)
+
+## Build Tasks
