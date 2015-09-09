@@ -1,0 +1,27 @@
+.alert {
+	background-image: none;
+	
+	&.alert-primary {
+		.alert-variant(@color-primary; @color-primary; #ffffff);
+	}
+
+	&.alert-success {
+		.alert-variant(@color-success; @color-success; #ffffff);
+	}
+
+	&.alert-info {
+		.alert-variant(@color-info; @color-info; #ffffff);
+	}
+
+	&.alert-warning {
+		.alert-variant(@color-warning; @color-warning; #ffffff);
+	}
+
+	&.alert-danger {
+		.alert-variant(@color-danger; @color-danger; #ffffff);
+	}
+
+	&.alert-inverse {
+		.alert-variant(@color-inverse; @color-inverse; #ffffff);
+	}
+}
