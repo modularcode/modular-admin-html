@@ -8,7 +8,8 @@ var config 	= require('../config');
 module.exports = function(gulp, plugins, paths) {
 	
 	gulp.src(paths.app.pages.src)
-
+		// Frontmatter
+		.pipe(plugins.frontMatter())
 		// handlebars compilation
 		.pipe(plugins.hb({
 			// Register all templates as partials
@@ -21,7 +22,11 @@ module.exports = function(gulp, plugins, paths) {
 			helpers:  paths.app.helpers.src,
 			// Context data for each page file
 			dataEach: function (context, file) {
-				return extend(context, getPageContext(file));
+
+				var contextExtended = extend(context, getPageContext(file));
+					contextExtended = extend(contextExtended, file.frontMatter);
+
+				return contextExtended;
 			},
 			// Remove cache every time for 'watch'
 			bustCache: true
