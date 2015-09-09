@@ -27,22 +27,27 @@
 }
 
 .list-icon {
-	em {
-		font-size: 14px;
-		width: 40px;
-		vertical-align: middle;
-		margin: 0;
-		display: inline-block;
-		text-align: center;
-		-webkit-transition: all .2s;
-		-o-transition: all .2s;
-		transition: all .2s;
-		line-height: 30px;
-	}
 
-	[class^='col']:hover {
+	[class^='col'] {
+		cursor: pointer;
+		
 		em {
-			transform: scale(2,2);
+			font-size: 14px;
+			width: 40px;
+			vertical-align: middle;
+			margin: 0;
+			display: inline-block;
+			text-align: center;
+			-webkit-transition: all .2s;
+			-o-transition: all .2s;
+			transition: all .2s;
+			line-height: 30px;
+		}
+
+		&:hover {
+			em {
+				transform: scale(2,2);
+			}
 		}
 	}
 }
