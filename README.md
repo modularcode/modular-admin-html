@@ -12,33 +12,32 @@ Demo: http://modularcode.github.io/modularity-free-admin-dashboard-theme-html/
 
 For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm.
 
-1. Clone repository to local `modularity` folder
+Clone repository to local `modularity` folder
+```
+git clone https://github.com/ModularCode/modularity-free-admin-dashboard-theme-html.git modularity -b master --single-branch 
+```
 
-  ```
-  git clone https://github.com/ModularCode/modularity-free-admin-dashboard-theme-html.git modularity -b master --single-branch 
-  ```
-    
-1. Change to new folder
+Change to new folder
+```
+cd modularity
+```
 
-  ```
-  cd modularity
-  ```
-1. Install [Gulp](http://gulpjs.com/) and [Bower](http://bower.io/) globally
+Install [Gulp](http://gulpjs.com/) and [Bower](http://bower.io/) globally
+```
+npm install -g gulp bower
+```
 
-  ```
-  npm install -g gulp bower
-  ```
-1. Install dependencies 
+Install dependencies 
+```
+npm install
+```
 
-  ```
-  npm install
-  ```
-1. Build the project and start local web server
+Build the project and start local web server
+```
+gulp
+```
 
-  ```
-  gulp
-  ```
-1. Open the project [http://localhost:4000](http://localhost:4000)
+Open the project [http://localhost:4000](http://localhost:4000)
 
 
 ## Folder Structure
