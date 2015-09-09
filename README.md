@@ -9,7 +9,7 @@ html version
 
 Demo: http://modularcode.github.io/modularity-free-admin-dashboard-theme-html/
 
-### Getting Started
+## Getting Started
 
 For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm.
 
@@ -42,8 +42,8 @@ For assembling the application, you need to have [NodeJs](https://nodejs.org/en/
 1. Open the project [http://localhost:4000](http://localhost:4000)
 
 
-### Folder Structure
+## Folder Structure
 
-### Template Engine
+## Template Engine
 
-### Build Process
+## Build Process
