@@ -48,12 +48,27 @@ Open the project [http://localhost:4000](http://localhost:4000)
 ├── public/                  
 ├── src/    
 │   ├── _assets/   
+│   │   └── {application assets}
 │   ├── _common/   
+│   |   └── styles/
 │   ├── _helpers/   
+│   │   └── {handlebars helper files}
 │   ├── _main/   
+│   │   ├── config.js
+│   │   ├── main.js
+│   │   ├── main.less
+│   │   └── variables.less
 │   ├── _vendor/   
+│   │   └── {manually downloaded vendor libs}
 │   ├── app/   
+│   │   ├── _common/
+│   │   ├── {different modules}
+│   │   ├── app-layout.hbs
+│   │   └── app.less
 │   ├── auth/   
+│   │   ├── {different modules}
+│   │   ├── app-layout.hbs
+│   │   └── app.less
 │   └── context.js
 ├── tasks/    
 │── bowere.json
