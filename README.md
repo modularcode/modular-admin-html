@@ -62,6 +62,12 @@ Open the project [http://localhost:4000](http://localhost:4000)
 │   │   └── {manually downloaded vendor libs}
 │   ├── app/   
 │   │   ├── _common/
+│   │   |   ├── header/
+│   │   |   |   └── {header files}
+│   │   |   ├── footer/
+│   │   |   |   └── {footer files}
+│   │   |   └── sidebar/
+│   │   |       └── {sidebar files}
 │   │   ├── {different modules}
 │   │   ├── app-layout.hbs
 │   │   └── app.less
