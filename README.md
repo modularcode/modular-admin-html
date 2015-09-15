@@ -73,8 +73,8 @@ Open the project [http://localhost:4000](http://localhost:4000)
 │   │   └── app.less
 │   ├── auth/   
 │   │   ├── {different modules}
-│   │   ├── app-layout.hbs
-│   │   └── app.less
+│   │   ├── auth-layout.hbs
+│   │   └── auth.less
 │   └── context.js
 ├── tasks/    
 │── bowere.json
