@@ -82,10 +82,17 @@ label,
 	// Old version
 	border-bottom: 1px solid @color-divider;
 	padding: 0;
+
+	&.boxed {
+		padding-left: 10px;
+	    border: 1px solid @color-divider;
+	    
+	    &:focus {
+	    	border: 1px solid @color-primary;
+	    }
+	}
 	
 	// New version
-    // border-bottom: 1px solid transparent;
-    // background-color: lighten(@color-divider, 11%);
 
 	.has-error &:focus,
 	.has-warning &:focus,
