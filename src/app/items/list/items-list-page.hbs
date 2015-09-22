@@ -42,7 +42,7 @@ items:
 				<div class="col-sm-6">
 					<h3 class="title">
 						Items
-						<a class="btn btn-primary btn-sm rounded-s">
+						<a href="/items-editor.html" class="btn btn-primary btn-sm rounded-s">
 							Add New
 						</a>
 					</h3>
@@ -52,7 +52,7 @@ items:
 				</div>
 
 				{{!-- Search --}}
-				<div class="col-sm-6">
+				<div class="col-sm-6 hidden-xs">
 					<div class="items-search">
 						<form class="form-inline">
 							<div class="form-group">
@@ -72,39 +72,48 @@ items:
 			<ul class="panel items-list">
 				<li class="items-list-header">
 					<div class="col col-check">
-						<label class="item-check">
+						<label class="item-check" id="select-all-items">
 							<input type="checkbox" class="checkbox">
 							<span></span>
 						</label>
 					</div>
-					<div class="col col-img">
+					<div class="col col-img hidden-xs">
 						Media
 					</div>
 					<div class="col col-title">
 						Title
 					</div>
-					<div class="col col-stats">
+					<div class="col col-stats hidden-xs">
 						Stats
 					</div>
 					<div class="col col-author">
 						Author
 					</div>
-					<div class="col col-category">
+					<div class="col col-category hidden-xs">
 						Category
 					</div>
-					<div class="col col-date">
+					<div class="col col-date hidden-xs">
 						Date
 					</div>
 				</li>
 				{{#each items}}
 					<li>
+						<div class="action-row">
+							<div class="action-title">
+								Actions
+							</div>
+							<div class="action-buttons">
+								<a class="action-edit" href="/items-editor.html">Edit</a>
+								<a class="action-delete" href="#">Delete</a>
+							</div>
+						</div>
 						<div class="col col-check">
 							<label class="item-check">
 								<input type="checkbox" class="checkbox">
 								<span></span>
 							</label>
 						</div>
-						<div class="col col-img">
+						<div class="col col-img hidden-xs">
 							<a href="">
 								<div class="img rounded" style="background-image: url({{this.img}})"></div>
 							</a>
@@ -116,7 +125,7 @@ items:
 								</strong>
 							</a>
 						</div>
-						<div class="col col-stats">
+						<div class="col col-stats hidden-xs">
 							Stats
 						</div>
 						<div class="col col-author">
@@ -124,12 +133,12 @@ items:
 								{{this.author}}
 							</a>
 						</div>
-						<div class="col col-category">
+						<div class="col col-category hidden-xs">
 							<a href="">
 								{{this.category}}
 							</a>
 						</div>
-						<div class="col col-date">
+						<div class="col col-date hidden-xs">
 							{{this.date}}
 						</div>
 					</li>

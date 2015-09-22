@@ -1,0 +1,25 @@
+.item {
+
+	.item-row {
+		display: table;
+	}
+
+	.item-col {
+		display: table-cell;
+		vertical-align: top;
+		padding: 10px;
+		float: none;
+	}
+
+	@media @xs {
+		.item-row {
+			display: block;
+		}
+
+		
+		.item-col {
+			display: block;
+			float: left;
+		}
+	}
+}
