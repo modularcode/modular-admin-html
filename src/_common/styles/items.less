@@ -6,6 +6,13 @@
 	display: flex;
 	flex-flow: column nowrap;
 
+
+	@media @xs {
+		
+	}
+
+	// flex-flow: column nowrap;
+
 	// display: flex;
 	// flex-flow: column nowrap;
 	// box-pack: justify;
@@ -44,21 +51,18 @@
 	.item-row,
 	li {
 		display: flex;
-		justify-content: space-between;
-		flex-flow: row nowrap;
+		align-items: flex-start;
+		// justify-content: space-between;
+		// flex-flow: row nowrap;
 
 		width: 100%;
 		position: relative;
-		// flex-flow: row nowrap;
-
-		@media @xs {
-			display: block;
-		}
 	}
 
 	.item-col {
 		display: flex;
-		flex-flow: row nowrap;
+		// flex-wrap: wrap;
+		// flex-flow: row nowrap;
 		flex-grow: 1;
 		flex-basis: 0;
 		vertical-align: top;
