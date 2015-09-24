@@ -34,65 +34,71 @@ items:
 ---
 {{#extend "app/app-layout"}}
 	{{#content "body"}}
-	
-		<div class="title-block">
-			<div class="row">
+		
+		<div class="title-search-block">
 
-				{{!-- Title --}}
-				<div class="col-sm-6">
-					<h3 class="title">
-						Items
-						<a href="/items-editor.html" class="btn btn-primary btn-sm rounded-s">
-							Add New
-						</a>
-					</h3>
-					<p class="subtitle">
-						List of sample items - e.g. books, movies, events, etc...
-					</p>
+			<div class="title-block">
+				<div class="row">
+
+					{{!-- Title --}}
+					<div class="col-sm-6">
+						<h3 class="title">
+							Items
+							<a href="/items-editor.html" class="btn btn-primary btn-sm rounded-s">
+								Add New
+							</a>
+						</h3>
+						<p class="subtitle">
+							List of sample items - e.g. books, movies, events, etc...
+						</p>
+					</div>
+
+					{{!-- Search --}}
+					{{!-- <div class="col-sm-6 hidden-xs">
+					</div> --}}
+
 				</div>
+			</div>
 
-				{{!-- Search --}}
-				<div class="col-sm-6 hidden-xs">
-					<div class="items-search">
-						<form class="form-inline">
-							<div class="form-group">
-								<input type="search" class="form-control boxed rounded-s">
-							</div>
-							<button type="submit" class="btn btn-default rounded-s search-button">
+			<div class="items-search">
+				<form class="form-inline">
+					<div class="input-group">
+						<input type="text" class="form-control boxed rounded-s" placeholder="Search for...">
+						<span class="input-group-btn">
+							<button class="btn btn-default rounded-s" type="button">
 								<i class="fa fa-search"></i> Search
 							</button>
-						</form>
+						</span>
 					</div>
-				</div>
-
+				</form>
 			</div>
 		</div>
 
 		<section class="section">
-			<ul class="panel items-list">
+			<ul class="panel items-list striped">
 				<li class="items-list-header">
-					<div class="col col-check">
+					<div class="item-col  col-check">
 						<label class="item-check" id="select-all-items">
 							<input type="checkbox" class="checkbox">
 							<span></span>
 						</label>
 					</div>
-					<div class="col col-img hidden-xs">
+					<div class="item-col  col-img hidden-xs">
 						Media
 					</div>
-					<div class="col col-title">
+					<div class="item-col  col-title">
 						Title
 					</div>
-					<div class="col col-stats hidden-xs">
+					<div class="item-col  col-stats hidden-xs">
 						Stats
 					</div>
-					<div class="col col-author">
+					<div class="item-col  col-author">
 						Author
 					</div>
-					<div class="col col-category hidden-xs">
+					<div class="item-col  col-category hidden-xs">
 						Category
 					</div>
-					<div class="col col-date hidden-xs">
+					<div class="item-col  col-date">
 						Date
 					</div>
 				</li>
@@ -107,38 +113,38 @@ items:
 								<a class="action-delete" href="#">Delete</a>
 							</div>
 						</div> --}}
-						<div class="col col-check">
+						<div class="item-col col-check">
 							<label class="item-check">
 								<input type="checkbox" class="checkbox">
 								<span></span>
 							</label>
 						</div>
-						<div class="col col-img hidden-xs">
+						<div class="item-col col-img hidden-xs">
 							<a href="">
 								<div class="img rounded" style="background-image: url({{this.img}})"></div>
 							</a>
 						</div>
-						<div class="col col-title">
+						<div class="item-col col-title">
 							<a href="">
 								<strong>
 									{{this.title}}
 								</strong>
 							</a>
 						</div>
-						<div class="col col-stats hidden-xs">
+						<div class="item-col col-stats hidden-xs">
 							Stats
 						</div>
-						<div class="col col-author">
+						<div class="item-col col-author">
 							<a href="">
 								{{this.author}}
 							</a>
 						</div>
-						<div class="col col-category hidden-xs">
+						<div class="item-col col-category hidden-xs">
 							<a href="">
 								{{this.category}}
 							</a>
 						</div>
-						<div class="col col-date hidden-xs">
+						<div class="item-col col-date">
 							{{this.date}}
 						</div>
 					</li>
