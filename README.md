@@ -22,23 +22,19 @@ Change to new folder
 cd modularity
 ```
 
-Install [Gulp](http://gulpjs.com/) and [Bower](http://bower.io/) globally
-```
-npm install -g gulp bower
-```
-
-Install dependencies 
+Install project dependencies 
 ```
 npm install
 ```
 
 Build the project and start local web server
 ```
-gulp
+npm start
 ```
 
-Open the project [http://localhost:4000](http://localhost:4000)
+Open the project [http://localhost:4000](http://localhost:4000).
 
+> The project is built by Gulp. You can read more info in [#build-tasks](**Build Tasks**) section
 
 ## Folder Structure
 

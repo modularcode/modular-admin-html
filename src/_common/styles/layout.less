@@ -1,9 +1,34 @@
+.row {
+	.col {
+		padding-left: @grid-gutter-width/2;
+		padding-right: @grid-gutter-width/2;
+		float: left;
+	}
+}
+
+
+.row-sm {
+	margin-left: -10px;
+	margin-right: -10px;
+
+	[class^='col'] {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+
+
 .title-block {
 	padding-bottom: 15px;
 	margin-bottom: 30px;
 	border-bottom: 1px solid @color-divider;
 
 	.clearfix();
+
+	@media @xs {
+		margin-bottom: 20px;
+	}
 }
 
 .section {
@@ -17,14 +42,4 @@
     border: 1px dashed #ddd;
     background: #fafafa;
     color: #444;
-}
-
-.row-sm {
-	margin-left: -10px;
-	margin-right: -10px;
-
-	[class^='col'] {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
 }

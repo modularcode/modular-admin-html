@@ -1,0 +1,39 @@
+<div class="panel sameheight-item items" data-exclude="xs">
+	<div class="panel-body">
+		<div class="title-block">
+			<h3 class="title">
+				Items
+			</h3>
+		</div>
+	</div>
+
+
+	<ul class="items-list striped">
+		{{#each items}}
+			<li>
+				<div class="item-col col-img">
+					<a href="">
+						<div class="img rounded" style="background-image: url({{this.img}})"></div>
+					</a>
+				</div>
+				<div class="item-col  col-title">
+					<a href="">
+						<strong>
+							{{this.title}}
+						</strong>
+					</a>
+				</div>
+				{{!-- <div class="item-col  col-date hidden-md">
+					{{this.date}}
+				</div> --}}
+			</li>
+		{{/each}}
+		<li class="items-list-footer text-center">
+			<div class="item-col">
+				<a href="items-list.html">
+					View All
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>

@@ -35,6 +35,8 @@
     "main-bower-files": "^2.9.0"
   },
   "scripts": {
-    "postinstall": "bower install"
+    "gulp": "gulp",
+    "start": "gulp",
+    "postinstall": "npm run start"
   }
 }
