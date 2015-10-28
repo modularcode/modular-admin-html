@@ -1,5 +1,5 @@
 module.exports = {
-	title: "Modularity - Free Admin Dashboard Theme | HTML Version",
+	title: "ModularAdmin - Free Dashboard Theme | HTML Version",
 	page: "",
 	img: {
 		faces: [
