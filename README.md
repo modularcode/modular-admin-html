@@ -1,6 +1,6 @@
 # ModularAdmin: Free Dashboard Theme <br/>  HTML version
 
-> [Modularity](http://modularcode.github.io/ModularAdmin-free-dashboard-theme-html/) is an open source admin theme
+> [ModularAdmin](http://modularcode.github.io/ModularAdmin-free-dashboard-theme-html/) is an open source dashboard theme
 > built in modular way. That makes it awesomely easy to scale, modify and maintain.
 
 > This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
