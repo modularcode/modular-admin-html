@@ -1,0 +1,890 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>
+			ModularAdmin - Free Dashboard Theme | HTML Version
+		</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="app" id="app">
+					<header class="header">
+					
+						<div class="header-block header-block-collapse visible-xs visible-sm" >
+							<button class="collapse-btn" id="sidebar-collapse-btn">
+								<i class="fa fa-bars"></i>
+							</button>
+						</div>
+						
+						<div class="header-block header-block-search hidden-xs">
+							<form role="search">
+								<div class="input-container">
+									<i class="fa fa-search"></i>
+									<input type="search" placeholder="Search">
+									<div class="underline"></div>
+								</div>
+							</form>
+						</div>
+						<div class="header-block header-block-nav">
+							<ul class="nav-profile">
+						
+								
+								<li class="notifications new">
+									<a href="" data-toggle="dropdown">
+										<i class="fa fa-bell-o"></i>
+										<sup>
+											<span class="counter">8</span>
+										</sup>
+									</a>
+								
+									<div class="dropdown-menu notifications-dropdown-menu">
+								
+										<ul class="notifications-container">
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/3.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Zack Alien</span> pushed new commit: 
+															<span class="accent">Fix page load performance issue</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/5.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Amaya Hatsumi</span> started new task: 
+															<span class="accent">Dashboard UI design.</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/8.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Andy Nouman</span> deployed new version of 
+															<span class="accent">NodeJS REST Api V3</span>
+														</p>
+													</div>
+												</a>
+											</li>
+										</ul>
+								
+										<footer>
+											<ul>
+												<li>
+													<a href="">
+														View All
+													</a>
+												</li>
+											</ul>
+										</footer>
+									</div>
+								</li>
+						
+								
+								<li class="profile dropdown">
+									<a href="" data-toggle="dropdown">
+										<div class="img" style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
+											 
+										</div>
+								
+										<span class="name">
+											John Doe
+										</span>
+								
+										<span class="arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+									</a>
+								
+									<ul class="dropdown-menu profile-dropdown-menu">
+										<li>
+											<a href="">
+												<i class="fa fa-user"></i>
+												Profile
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="fa fa-bell"></i>
+												Notifications
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="fa fa-gear"></i>
+												Settings
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li class="logout">
+											<a href="login.html">
+												<i class="fa fa-power-off"></i>
+												Logout
+											</a>
+										</li>
+									</ul>
+								
+								</li>		
+							</ul>
+						</div>
+					</header>
+					<aside class="sidebar">
+						<div class="brand">
+							<div class="logo">
+								<span class="l l1"></span>
+								<span class="l l2"></span>
+								<span class="l l3"></span>
+								<span class="l l4"></span>
+								<span class="l l5"></span>
+							</div>
+							ModularAdmin
+						</div>
+						<nav class="menu">
+							<ul class="nav metismenu" id="sidebar-menu">
+					
+								<li  >
+									<a href="index.html">
+										<i class="fa fa-home"></i> Dashboard
+									</a>
+								</li>
+					
+					
+								<li  >
+					
+									<a href="">
+										<i class="fa fa-th-large"></i> Items Manager
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="items-list.html">
+												Items List
+											</a>
+										</li>
+					
+										<li  >
+											<a href="item-editor.html">
+												Item Editor
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="">
+										<i class="fa fa-bar-chart"></i> Charts 
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="charts-flot.html">
+												Flot Chart
+											</a>
+										</li>
+					
+										<li  >
+											<a href="charts-morris.html">
+												Morris Chart
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="">
+										<i class="fa fa-table"></i> Tables
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="static-tables.html">
+												Static Tables
+											</a>
+										</li>
+					
+										<li  >
+											<a href="responsive-tables.html">
+												Responsive Tables
+											</a>
+										</li>
+					
+										<li  >
+											<a href="dynamic-tables.html">
+												Dynamic Tables
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li class="active" >
+									<a href="forms.html">
+										<i class="fa fa-pencil-square-o"></i> Forms
+									</a>
+								</li>
+					
+								<li  >
+									<a href="">
+										<i class="fa fa-desktop"></i> UI Elements
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li >
+											<a href="buttons.html">
+												Buttons
+											</a>
+										</li>
+										
+										<li >
+											<a href="panels.html">
+												Panels
+											</a>
+										</li>
+					
+										<li >
+											<a href="typography.html">
+												Typography
+											</a>
+										</li>
+					
+										<li >
+											<a href="icons.html">
+												Icons
+											</a>
+										</li>
+					
+										<li >
+											<a href="grid.html">
+												Grid
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+					
+									<a href="">
+										<i class="fa fa-file-text-o"></i> Pages
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li >
+											<a href="login.html">
+												Login
+											</a>
+										</li>
+										
+										<li >
+											<a href="signup.html">
+												Sign Up
+											</a>
+										</li>
+					
+										<li >
+											<a href="reset.html">
+												Reset
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-404.html">
+												Error 404 App
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-404-alt.html">
+												Error 404 Global
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-500.html">
+												Error 500 App
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-500-alt.html">
+												Error 500 Global
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="docs.html">
+										<i class="fa fa-file-text-o"></i> Theme Docs
+									</a>
+								</li>
+					
+					
+							</ul>
+						</nav>
+					
+						<footer class="sidebar-footer">
+					
+						</footer>
+					</aside>
+					<div class="sidebar-overlay" id="sidebar-overlay"></div>
+				<article class="content forms-page">
+		<div class="title-block">
+			<h3 class="title">
+				Forms
+			</h3>
+			<p class="subtitle">
+				Sample form elements
+			</p>
+		</div>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Basic Form
+								</h3>
+							</div>
+							<section class="section">
+								<form role="form">
+									<div class="form-group">
+										<label  for="exampleInputEmail1">Email address</label>
+										<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+									</div>
+									<div class="form-group">
+										<label  for="exampleInputPassword1">Password</label>
+										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
+								</form>
+							</section>
+					
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Horizontal Form
+								</h3>
+							</div>
+							<section class="section">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+										<div class="col-sm-10">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+										<div class="col-sm-10">
+											<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-2 col-sm-10">
+											
+											<label>
+												<input class="checkbox" type="checkbox">
+												<span>Remember me</span>
+											</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-2 col-sm-10">
+											<button type="submit" class="btn btn-success">Sign in</button>
+											<button type="submit" class="btn btn-default">Cancel</button>
+										</div>
+									</div>
+								</form>
+							</section>
+							
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Input Types
+								</h3>	
+							</div>
+							<section class="section">
+								<form >
+								    <div class="form-group">
+								        <label class="control-label">Input Text</label>			        
+											<input type="text" class="form-control">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Input Password</label>
+								        <input type="password" class="form-control">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Placeholder Input</label>
+								        <input type="text" class="form-control" placeholder="Placeholder text">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Disabled Input</label>
+										<input type="text" disabled="disabled" class="form-control" placeholder="Disabled input text">
+								    </div>
+								    <div class="form-group">
+								    	<label class="control-label">Static control</label>
+								    	<p class="form-control-static">email@example.com</p>
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Readonly Input</label>
+										<input type="text" readonly="readonly" class="form-control" value="Readonly input text">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Textarea</label>
+										<textarea rows="3" class="form-control"></textarea>
+								    </div>
+								</form>
+							</section>
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Form Validations
+								</h3>
+							</div>
+							<section class="section">
+								<form>
+									<div class="form-group has-success">
+									    <label class="control-label" for="inputSuccess1">Input with success</label>
+									    <input type="text" class="form-control" id="inputSuccess1">
+									    <span class="has-success">Success message.</span>
+									</div>
+									<div class="form-group has-warning">
+									    <label class="control-label" for="inputWarning1">Input with warning</label>
+									    <input type="text" class="form-control" id="inputWarning1">
+									    <span class="has-warning">Warning message.</span>
+									</div>
+									<div class="form-group has-error">
+									    <label class="control-label" for="inputError1">Input with error</label>
+									    <input type="text" class="form-control" id="inputError1">
+									     <span class="has-error">Error message.</span>
+									</div>
+									<div class="form-group has-success  has-feedback">
+									    <label class="control-label" for="inputSuccess2">Input with success icon</label>
+									    <input type="text" class="form-control" id="inputSuccess2">
+										<span class="fa fa-check form-control-feedback"></span>
+									</div>
+									<div class="form-group has-warning  has-feedback">
+									    <label class="control-label" for="inputWarning2">Input with warning icon</label>
+									    <input type="text" class="form-control" id="inputWarning2">
+										<span class="fa fa-exclamation form-control-feedback"></span>
+									</div>
+									<div class="form-group has-error  has-feedback">
+									    <label class="control-label" for="inputError2">Input with error icon</label>
+									    <input type="text" class="form-control" id="inputError2">
+									    <span class="fa fa-times form-control-feedback"></span>
+									</div>
+								</form>
+							</section>
+					
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Boxed Inputs
+								</h3>	
+							</div>
+							<section class="section">
+								<form >
+								    <div class="form-group">
+								        <label class="control-label">Input Text</label>			        
+											<input type="text" class="form-control boxed">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Input Password</label>
+								        <input type="password" class="form-control boxed">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Placeholder Input</label>
+								        <input type="text" class="form-control boxed" placeholder="Placeholder text">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Disabled Input</label>
+										<input type="text" disabled="disabled" class="form-control boxed" placeholder="Disabled input text">
+								    </div>
+								    <div class="form-group">
+								    	<label class="control-label">Static control</label>
+								    	<p class="form-control-static boxed">email@example.com</p>
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Readonly Input</label>
+										<input type="text" readonly="readonly" class="form-control boxed" value="Readonly input text">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Textarea</label>
+										<textarea rows="3" class="form-control boxed"></textarea>
+								    </div>
+								</form>
+							</section>
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+							<div class="title-block">
+								<h3 class="title">
+									Rounded Inputs
+								</h3>	
+							</div>
+							<section class="section">
+								<form >
+								    <div class="form-group">
+								        <label class="control-label">Input Text</label>			        
+											<input type="text" class="form-control boxed rounded">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Input Password</label>
+								        <input type="password" class="form-control boxed rounded">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Placeholder Input</label>
+								        <input type="text" class="form-control boxed rounded" placeholder="Placeholder text">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Disabled Input</label>
+										<input type="text" disabled="disabled" class="form-control boxed rounded" placeholder="Disabled input text">
+								    </div>
+								    <div class="form-group">
+								    	<label class="control-label">Static control</label>
+								    	<p class="form-control-static boxed rounded">email@example.com</p>
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Readonly Input</label>
+										<input type="text" readonly="readonly" class="form-control boxed rounded" value="Readonly input text">
+								    </div>
+								    <div class="form-group">
+								        <label class="control-label">Textarea</label>
+										<textarea rows="3" class="form-control boxed rounded"></textarea>
+								    </div>
+								</form>
+							</section>
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Radio Types
+								</h3>
+							</div>
+							<section class="section">
+								<form role="form">
+									<div class="form-group">
+					                    <label class="control-label">Radios</label>
+					                    <div>
+					                        <label>
+					                            <input class="radio" name="radios" type="radio">
+					                            <span>Option one</span>
+					                        </label>
+					                    </div>
+					                    <div>
+					                        <label>
+					                            <input class="radio" type="radio" name="radios" checked="checked">
+					                            <span>Option two checked</span>
+					                        </label>
+					                    </div>
+					                    <div>
+					                        <label>
+					                            <input class="radio" type="radio" name="disabled-radios" disabled="disabled" checked="checked">
+					                            <span>Option three checked and disabled</span>
+					                        </label>
+					                    </div>
+					                    <div>
+					                        <label>
+					                            <input class="radio" type="radio" name="disabled-radios" disabled="disabled" >
+					                            <span>Option four disabled</span>
+					                        </label>
+					                    </div>
+					                </div>
+					                <div class="form-group">
+					                     <label class="control-label">Inline Radios</label>
+					                     <div>
+					                         <label>
+					                            <input class="radio" name="inline-radios" type="radio">
+					                            <span>a</span>
+					                        </label>
+					                        <label>
+					                            <input class="radio" name="inline-radios" type="radio">
+					                            <span>b</span>
+					                        </label>
+					                        <label>
+					                            <input class="radio" name="inline-radios" type="radio">
+					                            <span>c</span>
+					                        </label>
+					                     </div>
+					                </div>
+					                <div class="form-group">
+					                     <label class="control-label">Squared Radios</label>
+					                     <div>
+					                         <label>
+					                            <input class="radio squared"  name="squared-radios" checked="checked" type="radio">
+					                            <span>Checked</span>
+					                        </label>
+					                        <label>
+					                            <input class="radio squared"  name="squared-radios" type="radio">
+					                            <span>Unchecked</span>
+					                        </label>
+					                     </div>
+					                </div>
+								</form>
+							</section>
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Checkboxe Types
+								</h3>
+							</div>
+							<section class="section">
+								<form role="form">
+									<div class="form-group">
+					                    <label class="control-label">Checkboxes</label>
+					                    <div>
+					                        <label>
+					                            <input class="checkbox" type="checkbox">
+					                            <span>Option one</span>
+					                        </label>
+					                    </div>
+					                    <div>
+					                        <label>
+					                            <input class="checkbox" type="checkbox" checked="checked">
+					                            <span>Option two checked</span>
+					                        </label>
+					                    </div>
+					                    <div>
+					                        <label>
+					                            <input class="checkbox" type="checkbox" disabled="disabled" checked="checked">
+					                            <span>Option three checked and disabled</span>
+					                        </label>
+					                    </div>
+					                    <div>
+					                        <label>
+					                            <input class="checkbox" type="checkbox" disabled="disabled" >
+					                            <span>Option four disabled</span>
+					                        </label>
+					                    </div>
+					                </div>
+					                <div class="form-group">
+					                     <label class="control-label">Inline Checkboxes</label>
+					                     <div>
+					                         <label>
+					                            <input class="checkbox" type="checkbox">
+					                            <span>a</span>
+					                        </label>
+					                        <label>
+					                            <input class="checkbox" type="checkbox">
+					                            <span>b</span>
+					                        </label>
+					                        <label>
+					                            <input class="checkbox" type="checkbox">
+					                            <span>c</span>
+					                        </label>
+					                     </div>
+					                </div>
+					                <div class="form-group">
+					                     <label class="control-label">Rounded Checkboxes</label>
+					                     <div>
+					                         <label>
+					                            <input class="checkbox rounded" checked="checked" type="checkbox">
+					                            <span>Checked</span>
+					                        </label>
+					                        <label>
+					                            <input class="checkbox rounded" type="checkbox">
+					                            <span>Unchecked</span>
+					                        </label>
+					                     </div>
+					                </div>
+								</form>
+							</section>
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Select Types
+								</h3>
+							</div>
+							<section class="section">
+								<form role="form">
+									<div class="form-group">
+					                    <select class="form-control input-lg">
+					                        <option value="">.input-lg</option>
+					                    </select>
+					                </div>
+					                <div class="form-group">
+					                    <select class="form-control">
+					                        <option value="">Default select</option>
+					                    </select>
+					                </div>
+					                <div class="form-group">
+					                    <select class="form-control input-sm">
+					                        <option value="">.input-sm</option>
+					                    </select>
+					                </div>
+					                <div class="form-group">
+					
+					                    <select multiple="" class="form-control">
+					                        <option>1</option>
+					                        <option>2</option>
+					                        <option>3</option>
+					                        <option>4</option>
+					                        <option>5</option>
+					                    </select>
+					                </div>
+								</form>
+							</section>
+					
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Input Groups
+								</h3>
+							</div>
+							<section class="section">
+								<form>
+					                <div class="form-group">
+					                    <label class="control-label">Input Text</label>
+					                    <div class="input-group">
+					                        <span class="input-group-addon">@</span>
+					                        <input type="text" class="form-control" placeholder="Some text here">
+					                    </div>
+					                    <div class="input-group">
+					                        <input type="text" class="form-control" placeholder="Some text here">
+					                        <span class="input-group-addon">.00</span>
+					                    </div>
+					
+					                    <div class="input-group">
+					                        <span class="input-group-addon">$</span>
+					                        <input type="text" class="form-control" placeholder="Some text here">
+					                        <span class="input-group-addon">.00</span>
+					                    </div>
+					                </div>
+					                <div class="form-group">
+					                    <label class="control-label">Input Sizing</label>
+					                    <div class="input-group input-group-lg">
+					                        <span class="input-group-addon">@</span>
+					                        <input type="text" class="form-control" placeholder="Username">
+					                    </div>
+					
+					                    <div class="input-group">
+					                        <span class="input-group-addon">@</span>
+					                        <input type="text" class="form-control" placeholder="Username">
+					                    </div>
+					
+					                    <div class="input-group input-group-sm">
+					                        <span class="input-group-addon">@</span>
+					                        <input type="text" class="form-control" placeholder="Username">
+					                    </div>
+					                </div>
+					            </form>
+					        </section>
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+				</article>
+
+			</div>
+		</div>	
+		<!-- Primary color ref div -->
+		<div class="ref" id="ref"></div>
+		<script src="js/vendor.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

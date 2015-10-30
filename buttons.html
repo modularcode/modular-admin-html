@@ -1,0 +1,883 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>
+			ModularAdmin - Free Dashboard Theme | HTML Version
+		</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="app" id="app">
+					<header class="header">
+					
+						<div class="header-block header-block-collapse visible-xs visible-sm" >
+							<button class="collapse-btn" id="sidebar-collapse-btn">
+								<i class="fa fa-bars"></i>
+							</button>
+						</div>
+						
+						<div class="header-block header-block-search hidden-xs">
+							<form role="search">
+								<div class="input-container">
+									<i class="fa fa-search"></i>
+									<input type="search" placeholder="Search">
+									<div class="underline"></div>
+								</div>
+							</form>
+						</div>
+						<div class="header-block header-block-nav">
+							<ul class="nav-profile">
+						
+								
+								<li class="notifications new">
+									<a href="" data-toggle="dropdown">
+										<i class="fa fa-bell-o"></i>
+										<sup>
+											<span class="counter">8</span>
+										</sup>
+									</a>
+								
+									<div class="dropdown-menu notifications-dropdown-menu">
+								
+										<ul class="notifications-container">
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/3.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Zack Alien</span> pushed new commit: 
+															<span class="accent">Fix page load performance issue</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/5.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Amaya Hatsumi</span> started new task: 
+															<span class="accent">Dashboard UI design.</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/8.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Andy Nouman</span> deployed new version of 
+															<span class="accent">NodeJS REST Api V3</span>
+														</p>
+													</div>
+												</a>
+											</li>
+										</ul>
+								
+										<footer>
+											<ul>
+												<li>
+													<a href="">
+														View All
+													</a>
+												</li>
+											</ul>
+										</footer>
+									</div>
+								</li>
+						
+								
+								<li class="profile dropdown">
+									<a href="" data-toggle="dropdown">
+										<div class="img" style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
+											 
+										</div>
+								
+										<span class="name">
+											John Doe
+										</span>
+								
+										<span class="arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+									</a>
+								
+									<ul class="dropdown-menu profile-dropdown-menu">
+										<li>
+											<a href="">
+												<i class="fa fa-user"></i>
+												Profile
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="fa fa-bell"></i>
+												Notifications
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="fa fa-gear"></i>
+												Settings
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li class="logout">
+											<a href="login.html">
+												<i class="fa fa-power-off"></i>
+												Logout
+											</a>
+										</li>
+									</ul>
+								
+								</li>		
+							</ul>
+						</div>
+					</header>
+					<aside class="sidebar">
+						<div class="brand">
+							<div class="logo">
+								<span class="l l1"></span>
+								<span class="l l2"></span>
+								<span class="l l3"></span>
+								<span class="l l4"></span>
+								<span class="l l5"></span>
+							</div>
+							ModularAdmin
+						</div>
+						<nav class="menu">
+							<ul class="nav metismenu" id="sidebar-menu">
+					
+								<li  >
+									<a href="index.html">
+										<i class="fa fa-home"></i> Dashboard
+									</a>
+								</li>
+					
+					
+								<li  >
+					
+									<a href="">
+										<i class="fa fa-th-large"></i> Items Manager
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="items-list.html">
+												Items List
+											</a>
+										</li>
+					
+										<li  >
+											<a href="item-editor.html">
+												Item Editor
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="">
+										<i class="fa fa-bar-chart"></i> Charts 
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="charts-flot.html">
+												Flot Chart
+											</a>
+										</li>
+					
+										<li  >
+											<a href="charts-morris.html">
+												Morris Chart
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="">
+										<i class="fa fa-table"></i> Tables
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="static-tables.html">
+												Static Tables
+											</a>
+										</li>
+					
+										<li  >
+											<a href="responsive-tables.html">
+												Responsive Tables
+											</a>
+										</li>
+					
+										<li  >
+											<a href="dynamic-tables.html">
+												Dynamic Tables
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="forms.html">
+										<i class="fa fa-pencil-square-o"></i> Forms
+									</a>
+								</li>
+					
+								<li 
+										class="active open"
+									 >
+									<a href="">
+										<i class="fa fa-desktop"></i> UI Elements
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li class="active">
+											<a href="buttons.html">
+												Buttons
+											</a>
+										</li>
+										
+										<li >
+											<a href="panels.html">
+												Panels
+											</a>
+										</li>
+					
+										<li >
+											<a href="typography.html">
+												Typography
+											</a>
+										</li>
+					
+										<li >
+											<a href="icons.html">
+												Icons
+											</a>
+										</li>
+					
+										<li >
+											<a href="grid.html">
+												Grid
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+					
+									<a href="">
+										<i class="fa fa-file-text-o"></i> Pages
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li >
+											<a href="login.html">
+												Login
+											</a>
+										</li>
+										
+										<li >
+											<a href="signup.html">
+												Sign Up
+											</a>
+										</li>
+					
+										<li >
+											<a href="reset.html">
+												Reset
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-404.html">
+												Error 404 App
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-404-alt.html">
+												Error 404 Global
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-500.html">
+												Error 500 App
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-500-alt.html">
+												Error 500 Global
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="docs.html">
+										<i class="fa fa-file-text-o"></i> Theme Docs
+									</a>
+								</li>
+					
+					
+							</ul>
+						</nav>
+					
+						<footer class="sidebar-footer">
+					
+						</footer>
+					</aside>
+					<div class="sidebar-overlay" id="sidebar-overlay"></div>
+				<article class="content buttons-page">
+		<div class="title-block">
+			<h3 class="title">
+				Buttons
+			</h3>
+			<p class="subtitle">
+				Sample button elements
+			</p>
+		</div>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Button colors
+								</h3>
+							</div>
+							<section class="section">
+					            <button type="button" class="btn btn-default">Default</button>
+					
+					            <button type="button" class="btn btn-primary">Primary</button>
+					
+					            <button type="button" class="btn btn-success">Success</button>
+					
+					            <button type="button" class="btn btn-info">Info</button>
+					
+					            <button type="button" class="btn btn-warning">Warning</button>
+					
+					            <button type="button" class="btn btn-danger">Danger</button>
+					
+					            <button type="button" class="btn btn-inverse">Inverse</button>
+					
+					            <br>
+					            <br>
+					            
+					            <a href="javascript:void(0);" class="btn btn-link">Button Link</a>
+					
+					            <button type="button" class="btn btn-default">
+					               <strong>button tag</strong>
+					            </button>
+					            
+					            <a href="javascript:void(0);" class="btn btn-default">
+					               <strong>anchor tag</strong>
+					            </a>
+					
+							</section>
+					
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Button labeled
+								</h3>
+							</div>
+							<section class="section">
+					        
+					            <!-- Success button with label -->
+					            <button type="button" class="btn btn-labeled btn-success">
+					                <span class="btn-label"><i class="fa fa-check"></i></span> Success
+					            </button>
+					
+					            <!-- Danger button with label -->
+					            <button type="button" class="btn btn-labeled btn-danger">
+					                <span class="btn-label"><i class="fa fa-times"></i></span> Danger
+					            </button>
+					
+					            <!-- Info button with label -->
+					            <button type="button" class="btn btn-labeled btn-info">
+					                <span class="btn-label"><i class="fa fa-exclamation"></i></span> Info
+					            </button>
+					
+					            <!-- Warning button with label -->
+					            <button type="button" class="btn btn-labeled btn-warning">
+					                <span class="btn-label"><i class="fa fa-warning"></i></span> Warning
+					            </button>
+					
+					            <br>
+					            <br>
+					
+					            <!-- Standard button with label -->
+					            <button type="button" class="btn btn-labeled btn-default">
+					                <span class="btn-label"><i class="fa fa-arrow-left"></i></span> Left
+					            </button>
+					            <!-- Standard button with label on the right side -->
+					            <button type="button" class="btn btn-labeled btn-default">
+					                Right <span class="btn-label btn-label-right"><i class="fa fa-arrow-right"></i></span>
+					            </button>
+							</section>
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Button sizing
+								</h3>
+							</div>
+							<section class="section">
+					        
+					            <div class="row">
+					               <div class="col-lg-6">
+					                  <p>
+					                     <button type="button" class="btn btn-primary btn-lg">Large button</button>
+					                     <button type="button" class="btn btn-default btn-lg">Large button</button>
+					                  </p>
+					                  <p>
+					                     <button type="button" class="btn btn-primary">Default button</button>
+					                     <button type="button" class="btn btn-default">Default button</button>
+					                  </p>
+					               </div>
+					               <div class="col-lg-6">
+					                  <p>
+					                     <button type="button" class="btn btn-primary btn-sm">Small button</button>
+					                     <button type="button" class="btn btn-default btn-sm">Small button</button>
+					                  </p>
+					                  <p>
+					                     <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+					                     <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+					                  </p>
+					               </div>
+					            </div>
+					            
+							</section>
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Button group
+								</h3>
+							</div>
+							<section class="section">
+					        
+					         <p></p>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-default">Left</button>
+					            <button type="button" class="btn btn-default">Middle</button>
+					            <button type="button" class="btn btn-default">Right</button>
+					         </div>
+					         <p></p>
+					         <p></p>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-default">1</button>
+					            <button type="button" class="btn btn-default">2</button>
+					            <button type="button" class="btn btn-default">3</button>
+					         <button type="button" class="btn btn-default">4</button>
+					         </div>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-default">5</button>
+					            <button type="button" class="btn btn-default">6</button>
+					            <button type="button" class="btn btn-default">7</button>
+					         </div>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-default">8</button>
+					         </div>
+					            
+							</section>
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight">
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+						<div class="panel-body">
+					
+							<div class="panel-title-block">
+								<h3 class="title">
+									Button types
+								</h3>
+							</div>
+							<section class="section">
+					        
+					         <p>Pill left</p>
+					         <p>
+					            <button type="button" class="btn btn-pill-left btn-default">Default</button>
+					            <button type="button" class="btn btn-pill-left btn-primary">Primary</button>
+					            <button type="button" class="btn btn-pill-left btn-success">Success</button>
+					            <button type="button" class="btn btn-pill-left btn-info">Info</button>
+					            <button type="button" class="btn btn-pill-left btn-warning">Warning</button>
+					            <button type="button" class="btn btn-pill-left btn-danger">Danger</button>
+					            <button type="button" class="btn btn-pill-left btn-inverse">Inverse</button>
+					         </p>
+					         <p>Pill right</p>
+					         <p>
+					            <button type="button" class="btn btn-pill-right btn-default">Default</button>
+					            <button type="button" class="btn btn-pill-right btn-primary">Primary</button>
+					            <button type="button" class="btn btn-pill-right btn-success">Success</button>
+					            <button type="button" class="btn btn-pill-right btn-info">Info</button>
+					            <button type="button" class="btn btn-pill-right btn-warning">Warning</button>
+					            <button type="button" class="btn btn-pill-right btn-danger">Danger</button>
+					            <button type="button" class="btn btn-pill-right btn-inverse">Inverse</button>
+					         </p>
+					         <p>Oval</p>
+					         <p>
+					            <button type="button" class="btn btn-oval btn-default">Default</button>
+					            <button type="button" class="btn btn-oval btn-primary">Primary</button>
+					            <button type="button" class="btn btn-oval btn-success">Success</button>
+					            <button type="button" class="btn btn-oval btn-info">Info</button>
+					            <button type="button" class="btn btn-oval btn-warning">Warning</button>
+					            <button type="button" class="btn btn-oval btn-danger">Danger</button>
+					            <button type="button" class="btn btn-oval btn-inverse">Inverse</button>
+					         </p> 
+							</section>
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="panel sameheight-item">
+					   <div class="panel-body">
+					
+					      <div class="panel-title-block">
+					         <h3 class="title">
+					            Button dropdowns
+					         </h3>
+					      </div>
+					      <section class="section">
+					        
+					          <p>Dropdowns</p>
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" aria-expanded="false">Default
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Primary
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" data-toggle="dropdown" class="btn btn-success dropdown-toggle">Success
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">Info
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Warning
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Danger
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">Inverse
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					
+					         <br>
+					         <br>
+					         <p>Split Dropdowns</p>
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-default">Default</button>
+					            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-primary">Primary</button>
+					            <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-success">Success</button>
+					            <button type="button" data-toggle="dropdown" class="btn btn-success dropdown-toggle" aria-expanded="true">
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-info">Info</button>
+					            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-warning">Warning</button>
+					            <button type="button" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-danger">Danger</button>
+					            <button type="button" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-inverse">Inverse</button>
+					            <button type="button" data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">
+					               <span class="caret"></span>
+					            </button>
+					            <ul role="menu" class="dropdown-menu">
+					               <li><a href="javascript:void(0);">Action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Another action</a>
+					               </li>
+					               <li><a href="javascript:void(0);">Something else here</a>
+					               </li>
+					               <li class="divider"></li>
+					               <li><a href="javascript:void(0);">Separated link</a>
+					               </li>
+					            </ul>
+					         </div>
+					         <!-- END button group-->
+					      </section>
+					   </div>
+					</div>				</div>
+
+			</div>
+		</section>
+				</article>
+
+			</div>
+		</div>	
+		<!-- Primary color ref div -->
+		<div class="ref" id="ref"></div>
+		<script src="js/vendor.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

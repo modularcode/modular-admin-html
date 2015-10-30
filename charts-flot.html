@@ -1,0 +1,491 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>
+			ModularAdmin - Free Dashboard Theme | HTML Version
+		</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/vendor.css">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="app" id="app">
+					<header class="header">
+					
+						<div class="header-block header-block-collapse visible-xs visible-sm" >
+							<button class="collapse-btn" id="sidebar-collapse-btn">
+								<i class="fa fa-bars"></i>
+							</button>
+						</div>
+						
+						<div class="header-block header-block-search hidden-xs">
+							<form role="search">
+								<div class="input-container">
+									<i class="fa fa-search"></i>
+									<input type="search" placeholder="Search">
+									<div class="underline"></div>
+								</div>
+							</form>
+						</div>
+						<div class="header-block header-block-nav">
+							<ul class="nav-profile">
+						
+								
+								<li class="notifications new">
+									<a href="" data-toggle="dropdown">
+										<i class="fa fa-bell-o"></i>
+										<sup>
+											<span class="counter">8</span>
+										</sup>
+									</a>
+								
+									<div class="dropdown-menu notifications-dropdown-menu">
+								
+										<ul class="notifications-container">
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/3.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Zack Alien</span> pushed new commit: 
+															<span class="accent">Fix page load performance issue</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/5.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Amaya Hatsumi</span> started new task: 
+															<span class="accent">Dashboard UI design.</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/8.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Andy Nouman</span> deployed new version of 
+															<span class="accent">NodeJS REST Api V3</span>
+														</p>
+													</div>
+												</a>
+											</li>
+										</ul>
+								
+										<footer>
+											<ul>
+												<li>
+													<a href="">
+														View All
+													</a>
+												</li>
+											</ul>
+										</footer>
+									</div>
+								</li>
+						
+								
+								<li class="profile dropdown">
+									<a href="" data-toggle="dropdown">
+										<div class="img" style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
+											 
+										</div>
+								
+										<span class="name">
+											John Doe
+										</span>
+								
+										<span class="arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+									</a>
+								
+									<ul class="dropdown-menu profile-dropdown-menu">
+										<li>
+											<a href="">
+												<i class="fa fa-user"></i>
+												Profile
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="fa fa-bell"></i>
+												Notifications
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="fa fa-gear"></i>
+												Settings
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li class="logout">
+											<a href="login.html">
+												<i class="fa fa-power-off"></i>
+												Logout
+											</a>
+										</li>
+									</ul>
+								
+								</li>		
+							</ul>
+						</div>
+					</header>
+					<aside class="sidebar">
+						<div class="brand">
+							<div class="logo">
+								<span class="l l1"></span>
+								<span class="l l2"></span>
+								<span class="l l3"></span>
+								<span class="l l4"></span>
+								<span class="l l5"></span>
+							</div>
+							ModularAdmin
+						</div>
+						<nav class="menu">
+							<ul class="nav metismenu" id="sidebar-menu">
+					
+								<li  >
+									<a href="index.html">
+										<i class="fa fa-home"></i> Dashboard
+									</a>
+								</li>
+					
+					
+								<li  >
+					
+									<a href="">
+										<i class="fa fa-th-large"></i> Items Manager
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="items-list.html">
+												Items List
+											</a>
+										</li>
+					
+										<li  >
+											<a href="item-editor.html">
+												Item Editor
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li class="active open" >
+									<a href="">
+										<i class="fa fa-bar-chart"></i> Charts 
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li class="active" >
+											<a href="charts-flot.html">
+												Flot Chart
+											</a>
+										</li>
+					
+										<li  >
+											<a href="charts-morris.html">
+												Morris Chart
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="">
+										<i class="fa fa-table"></i> Tables
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li  >
+											<a href="static-tables.html">
+												Static Tables
+											</a>
+										</li>
+					
+										<li  >
+											<a href="responsive-tables.html">
+												Responsive Tables
+											</a>
+										</li>
+					
+										<li  >
+											<a href="dynamic-tables.html">
+												Dynamic Tables
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="forms.html">
+										<i class="fa fa-pencil-square-o"></i> Forms
+									</a>
+								</li>
+					
+								<li  >
+									<a href="">
+										<i class="fa fa-desktop"></i> UI Elements
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li >
+											<a href="buttons.html">
+												Buttons
+											</a>
+										</li>
+										
+										<li >
+											<a href="panels.html">
+												Panels
+											</a>
+										</li>
+					
+										<li >
+											<a href="typography.html">
+												Typography
+											</a>
+										</li>
+					
+										<li >
+											<a href="icons.html">
+												Icons
+											</a>
+										</li>
+					
+										<li >
+											<a href="grid.html">
+												Grid
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+					
+									<a href="">
+										<i class="fa fa-file-text-o"></i> Pages
+										<i class="fa arrow"></i>
+									</a>
+					
+									<ul>
+										<li >
+											<a href="login.html">
+												Login
+											</a>
+										</li>
+										
+										<li >
+											<a href="signup.html">
+												Sign Up
+											</a>
+										</li>
+					
+										<li >
+											<a href="reset.html">
+												Reset
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-404.html">
+												Error 404 App
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-404-alt.html">
+												Error 404 Global
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-500.html">
+												Error 500 App
+											</a>
+										</li>
+					
+										<li >
+											<a href="error-500-alt.html">
+												Error 500 Global
+											</a>
+										</li>
+									</ul>
+								</li>
+					
+								<li  >
+									<a href="docs.html">
+										<i class="fa fa-file-text-o"></i> Theme Docs
+									</a>
+								</li>
+					
+					
+							</ul>
+						</nav>
+					
+						<footer class="sidebar-footer">
+					
+						</footer>
+					</aside>
+					<div class="sidebar-overlay" id="sidebar-overlay"></div>
+				<article class="content charts-flot-page">
+	
+		<div class="title-block">
+			<h3 class="title">
+				Charts Flot 
+			</h3>
+			<p class="subtitle">
+				List of sample charts with custom colors
+			</p>
+		</div>
+
+		<section class="section">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="panel-title-block">
+								<h3 class="title">
+									Bar Chart Example
+								</h3>
+							</div>
+
+							<section class="example">
+								<div class="flot-chart">
+									<div class="flot-chart-content" id="flot-bar-chart"></div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="panel-title-block">
+								<h3 class="title">
+									Line Cahrt Example
+								</h3>
+							</div>
+
+							<section class="example">
+								<div class="flot-chart">
+									<div class="flot-chart-content" id="flot-line-chart"></div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="panel-title-block">
+								<h3 class="title">
+									Pie Chart Example
+								</h3>
+							</div>
+
+							<section class="example">
+
+								<div class="flot-chart">
+									<div class="flot-chart-pie-content" id="flot-pie-chart"></div>
+								</div>
+
+							</section>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="panel-title-block">
+								<h3 class="title">
+									Live Chart Example
+								</h3>
+							</div>
+
+							<section class="example">
+
+								<div class="flot-chart">
+									<div class="flot-chart-content" id="flot-line-chart-moving"></div>
+								</div>
+
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="panel">
+						<div class="panel-body">
+
+							<div class="panel-title-block">
+								<h3 class="title">
+									Multiple Axes Line Chart Example
+								</h3>
+							</div>
+
+							<section class="example">
+
+								<div class="flot-chart">
+									<div class="flot-chart-content" id="flot-line-chart-multi"></div>
+								</div>
+
+							</section>
+
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+				</article>
+
+			</div>
+		</div>	
+		<!-- Primary color ref div -->
+		<div class="ref" id="ref"></div>
+		<script src="js/vendor.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
