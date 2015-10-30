@@ -1817,50 +1817,6 @@ pre {
   padding-right: 10px;
   vertical-align: initial;
 }
-.header .header-block-nav {
-  float: right;
-}
-.header .header-block-nav:before,
-.header .header-block-nav:after {
-  content: " ";
-  display: table;
-}
-.header .header-block-nav:after {
-  clear: both;
-}
-.header .header-block-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.header .header-block-nav > ul > li {
-  float: left;
-  position: relative;
-}
-.header .header-block-nav > ul > li:before {
-  display: block;
-  content: " ";
-  width: 1px;
-  height: 24px;
-  top: 50%;
-  margin-top: -12px;
-  background-color: #8b9cb1;
-  position: absolute;
-  left: 0;
-}
-.header .header-block-nav > ul > li:first-child:before {
-  display: none;
-}
-.header .header-block-nav > ul > li > a {
-  padding: 0 15px;
-  color: #4f5f6f;
-}
-.header .header-block-nav > ul > li > a:hover {
-  color: #59c2e6;
-}
-.header .header-block-nav .dropdown-menu {
-  margin-top: 18px;
-}
 .header .header-block-search {
   float: left;
   padding-left: 30px;
@@ -1919,6 +1875,50 @@ pre {
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
           transform: scaleX(1);
+}
+.header .header-block-nav {
+  float: right;
+}
+.header .header-block-nav:before,
+.header .header-block-nav:after {
+  content: " ";
+  display: table;
+}
+.header .header-block-nav:after {
+  clear: both;
+}
+.header .header-block-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.header .header-block-nav > ul > li {
+  float: left;
+  position: relative;
+}
+.header .header-block-nav > ul > li:before {
+  display: block;
+  content: " ";
+  width: 1px;
+  height: 24px;
+  top: 50%;
+  margin-top: -12px;
+  background-color: #8b9cb1;
+  position: absolute;
+  left: 0;
+}
+.header .header-block-nav > ul > li:first-child:before {
+  display: none;
+}
+.header .header-block-nav > ul > li > a {
+  padding: 0 15px;
+  color: #4f5f6f;
+}
+.header .header-block-nav > ul > li > a:hover {
+  color: #59c2e6;
+}
+.header .header-block-nav .dropdown-menu {
+  margin-top: 18px;
 }
 .header .header-block-nav .notifications {
   font-size: 16px;
