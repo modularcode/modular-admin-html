@@ -1,17 +1,17 @@
 {
-  "name": "modularity-free-admin-dashboard-theme-html",
-  "version": "0.0.2",
-  "description": "Modularity: Free Admin Dashboard Theme; html version",
+  "name": "modular-admin-free-dashboard-theme-html",
+  "version": "0.0.3",
+  "description": "ModularAdmin: Free Dashboard Theme; html version",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html.git"
+    "url": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html/issues"
+    "url": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html/issues"
   },
-  "homepage": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html",
+  "homepage": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html",
   "dependencies": {},
   "devDependencies": {
     "glob": "^5.0.14",
