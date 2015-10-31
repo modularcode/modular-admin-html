@@ -1,0 +1,89 @@
+.items-list-page {
+
+	.title-search-block {
+		position: relative;
+	}
+
+	.title-block {
+		@media $xs {
+			padding-bottom: 10px;
+			margin-bottom: 13px;
+		}
+	}
+
+	
+	.items-search {
+		position: absolute;
+		margin-bottom: 15px;
+		right: 0;
+		top: 0;
+
+		@media $xs {
+			position: static;
+		}
+		
+		.search-button {
+			margin: 0;
+		}
+	}
+
+	.item-check {
+		margin-bottom: 0;
+	}
+
+	// For common items-list class see /src/_common/styles/items.less
+
+	.items-list {
+		li {
+			width: 100%;
+		}
+
+		.col-check {
+			padding-left: 15px;
+			flex: 0 0 45px;
+			width: 45px;
+			text-align: center;
+
+			.checkbox + span {
+				padding-right: 0;
+
+				&:before {
+					width: 20px;
+				}
+			}
+		}
+
+		.col-img {
+			flex: 0 0 54px;
+			width: 54px;
+		}
+
+		.img {
+			@media $xs {
+				border-radius: 50%;
+			}
+		}
+
+		.col-title {
+			flex-grow: 3;
+		}
+
+		.col-stats {
+			
+		}
+
+		.col-author {
+			
+		}
+
+		.col-category {
+			
+		}
+
+		.col-date {
+			
+		}
+	}
+	
+}
+

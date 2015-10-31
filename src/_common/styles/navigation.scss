@@ -1,0 +1,106 @@
+a:not(.btn) {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	vertical-align: top;
+	z-index: 0;
+	transition: color 0.2s;
+	text-decoration: none;
+	color: $color-primary;
+
+	// &:before {
+	// 	&:extend(.underline-animation);
+	// }
+
+	&:hover{
+		text-decoration: none;
+		color: darken($color-primary, 15%);
+
+		&:before {
+			transform: scaleX(1);
+		}
+	}
+
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+span a {
+	vertical-align: text-bottom;   		
+} 
+
+
+[class^='nav'],
+[class*=' nav'] {
+	li > a {
+		// Display these anchors as block
+		display: block;
+
+		// Hide underline in anchors which are inside LI tag
+		&:before {
+			display: none;
+		}
+	}
+}
+
+
+.nav {
+	&.nav-tabs {
+		border-color: $color-primary;
+
+		li {
+
+			& > a:hover {
+				color: #ffffff;	
+				background-color: $color-primary;
+				//border: 1px solid $color-info;
+			}
+
+			&.active > a{
+				border-color: $color-primary;
+				border-bottom-color: transparent;
+
+				&:hover {
+					background-color: #ffffff;
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	&.nav-pills {
+
+		& + .tab-content {
+			border: 0;
+			padding: 5px;
+		}
+
+		li {
+
+			& > a:hover {
+				color: $color-text;	
+				background-color: transparent;
+				border: 0;
+			}
+
+			&.active > a {
+				border-color: $color-primary;
+				border-bottom-color: transparent;
+				background-color: $color-primary;
+
+				&:hover {
+					background-color: $color-primary;
+					color: #ffffff;	
+				}
+			}
+		}
+	}
+}
+
+.tab-content {
+	padding: 10px 20px 0;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    border-color: $color-primary;
+}
