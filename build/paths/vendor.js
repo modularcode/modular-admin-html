@@ -1,11 +1,12 @@
 var mainBowerFiles 	= require('main-bower-files');
 var path 			= require('path');
 
-var config = require('./config');
+var config = require('../config');
 
-var srcDir 		= config.srcDir;
-var buildDir 	= config.buildDir;
-var bowerDir 	= config.bowerDir;
+var rootDir 		= config.rootDir;
+var srcDir 			= config.srcDir;
+var destDir 		= config.destDir;
+var bowerDir 		= config.bowerDir;
 
 
 
@@ -53,14 +54,14 @@ var bowerDir 	= config.bowerDir;
 			'**/*.js',
 			'!**/*.min.js'
 		],
-		paths: path.resolve(__dirname)
+		paths: rootDir
 	});
 
 	vendorSrciptFiles.push(srcDir + "/_vendor/**/*.js");
 
 	exports.scripts = {
 		src: vendorSrciptFiles,
-		dest: buildDir + "/js"
+		dest: destDir + "/js"
 	};
 
 /***********************************************
@@ -72,14 +73,14 @@ var bowerDir 	= config.bowerDir;
 			'**/*.css',
 			'!**/*.min.css'
 		],
-		paths: path.resolve(__dirname)
+		paths: rootDir
 	});
 
 	vendorStyleFiles.push(srcDir + "/_vendor/**/*.css");
 
 	exports.styles = {
 		src: vendorStyleFiles,
-		dest: buildDir + "/css"
+		dest: destDir + "/css"
 	};
 
 
@@ -106,13 +107,17 @@ var bowerDir 	= config.bowerDir;
 			'!**/*.woff',
 			'!**/*.woff2'
 		],
-		paths: path.resolve(__dirname)
+		paths: rootDir
 	});
 
 	exports.assets = {
 		src: vendorAssetFiles,
-		dest: buildDir + "/assets"
+		dest: destDir + "/assets"
 	};
+
+/***********************************************
+*		Vendor font files
+************************************************/
 
 
 	var vendorFontFiles = mainBowerFiles({
@@ -124,11 +129,11 @@ var bowerDir 	= config.bowerDir;
 			'**/*.woff2',
 			'**/*.svg'
 		],
-		paths: path.resolve(__dirname)
+		paths: rootDir
 	});
 
 
 	exports.fonts = {
 		src: vendorFontFiles,
-		dest: buildDir + "/fonts"
+		dest: destDir + "/fonts"
 	};
