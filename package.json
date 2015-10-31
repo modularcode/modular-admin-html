@@ -35,7 +35,9 @@
     "main-bower-files": "^2.9.0"
   },
   "scripts": {
-    "start": "gulp --gulpfile build/gulpfile.js",
+    "gulp": "gulp --gulpfile build/gulpfile.js",
+    "start": "npm run gulp",
+    "deploy": "npm run gulp deploy",
     "postinstall": "npm run start"
   }
 }
