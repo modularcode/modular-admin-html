@@ -1,18 +1,31 @@
 {
-  "name": "modularity-free-admin-dashboard-theme-html",
-  "version": "0.0.2",
-  "description": "Modularity: Free Admin Dashboard Theme; html version",
+  "name": "modular-admin-free-dashboard-theme-html",
+  "version": "0.0.3",
+  "description": "ModularAdmin: Free Dashboard Theme; html version",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html.git"
+    "url": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html/issues"
+    "url": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html/issues"
   },
-  "homepage": "https://github.com/ModularTeam/modularity-free-admin-dashboard-theme-html",
-  "dependencies": {},
+  "homepage": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html",
+  "dependencies": {
+    "animate.css": "^3.4.0",
+    "bootstrap": "^3.3.5",
+    "datatables": "^1.10.9",
+    "flot": "^0.8.0-alpha",
+    "font-awesome": "^4.4.0",
+    "install": "^0.2.3",
+    "jquery": "^2.1.4",
+    "jquery-validation": "^1.14.0",
+    "metismenu": "^2.2.0",
+    "morris.js": "^0.5.0",
+    "npm": "^3.3.10",
+    "tinycolor2": "^1.1.2"
+  },
   "devDependencies": {
     "glob": "^5.0.14",
     "gulp": "^3.9.0",
@@ -28,6 +41,7 @@
     "gulp-less": "^3.0.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4",
@@ -35,8 +49,9 @@
     "main-bower-files": "^2.9.0"
   },
   "scripts": {
-    "gulp": "gulp",
-    "start": "gulp",
+    "gulp": "gulp --gulpfile build/gulpfile.js",
+    "start": "npm run gulp",
+    "deploy": "npm run gulp deploy",
     "postinstall": "npm run start"
   }
 }

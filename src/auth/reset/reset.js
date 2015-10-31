@@ -16,7 +16,13 @@ $(function() {
 	            required: "Please enter email address",
 	            email: "Please enter a valid email address"
 	        }
-	    }
+	    },
+	    invalidHandler: function() {
+			setAnimation({
+				name: 'shake',
+				selector: '.auth-container > .panel'
+			});
+		}
 	}
 
 	$.extend(resetValidationSettings, validationDefaultSettings);

@@ -20,7 +20,13 @@ $(function() {
 	        },
 	        password:  "Please enter password",
 	        agree: "Please accept our policy"
-	    }
+	    },
+	    invalidHandler: function() {
+			setAnimation({
+				name: 'shake',
+				selector: '.auth-container > .panel'
+			});
+		}
 	}
 
 	$.extend(loginValidationSettings, validationDefaultSettings);

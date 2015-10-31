@@ -73,7 +73,13 @@ $(function() {
 	        	minlength: "Passwords should be at least 8 characters."
 	        },
 	        agree: "Please accept our policy"
-	    }
+	    },
+	    invalidHandler: function() {
+			setAnimation({
+				name: 'shake',
+				selector: '.auth-container > .panel'
+			});
+		}
 	}
 
 	$.extend(signupValidationSettings, validationDefaultSettings);

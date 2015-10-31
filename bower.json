@@ -3,18 +3,19 @@
   "version": "0.0.1",
   "devDependencies": {},
   "dependencies": {
+    "animate.css": "~3.4.0",
     "bootstrap": "~3.3.5",
     "datatables": "~1.10.8",
     "font-awesome": "~4.3.0",
     "jquery": "~2.1.4",
     "jquery-flot": "~0.8.3",
-    "flot.tooltip": "~0.8.5",
     "jquery-validation": "~1.14.0",
+    "flot.tooltip": "~0.8.5",
     "metisMenu": "~2.0.3",
     "morrisjs": "~0.5.1",
     "nprogress": "~0.2.0",
-    "tinycolor": "~1.2.1",
-    "responsive-bootstrap-toolkit": "~2.5.0"
+    "responsive-bootstrap-toolkit": "~2.5.0",
+    "tinycolor": "~1.2.1"
   },
   "overrides": {
     "bootstrap": {
@@ -41,6 +42,9 @@
         "media/js/dataTables.bootstrap.js",
         "media/css/dataTables.bootstrap.css"
       ]
+    },
+    "animate.css": {
+      "main": "animate.css"
     }
   }
 }

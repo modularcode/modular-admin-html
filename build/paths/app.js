@@ -1,7 +1,8 @@
-var config = require('./config');
+var config = require('../config');
 
-var srcDir = config.srcDir;
-var buildDir = config.buildDir;
+var rootDir 	= config.rootDir;
+var srcDir 		= config.srcDir;
+var destDir 	= config.destDir;
 
 /***********************************************
 *		Application script files
@@ -24,7 +25,7 @@ var buildDir = config.buildDir;
 			srcDir + "/_main/main.js",
 			"!" + srcDir + "/_vendor/**"
 		],
-		dest: buildDir + "/js"
+		dest: destDir + "/js"
 	};
 
 /***********************************************
@@ -34,9 +35,20 @@ var buildDir = config.buildDir;
 	exports.styles = {
 		src: [
 			srcDir + "/_main/main.less",
-			srcDir + "/**/!(main|variables|vendor)*.less",
+			srcDir + "/**/!(main|variables|vendor|*-theme)*.less",
 		],
-		dest: buildDir + "/css/"
+		dest: destDir + "/css/"
+	};
+
+/***********************************************
+*		Application theme files
+************************************************/
+
+	exports.themes = {
+		src: [
+			srcDir + "/**/*-theme.less",
+		],
+		dest: destDir + "/css/"
 	};
 
 
@@ -52,7 +64,7 @@ var buildDir = config.buildDir;
 
 	exports.pages = {
 		src: srcDir + "/**/*-page.hbs",
-		dest: buildDir + "/"
+		dest: destDir + "/"
 	};
 
 
@@ -68,7 +80,7 @@ var buildDir = config.buildDir;
 
 	exports.templates = {
 		src: srcDir + "/**/*.hbs",
-		dest: buildDir + "/templates"
+		dest: destDir + "/templates"
 	};
 
 /***********************************************
@@ -83,9 +95,9 @@ var buildDir = config.buildDir;
 	exports.helpers = {
 		src: [
 			srcDir + "/**/*-helper.js",
-			'./node_modules/handlebars-layouts/index.js',
+			rootDir + '/node_modules/handlebars-layouts/index.js',
 		],
-		dest: buildDir + "/templates"
+		dest: destDir + "/templates"
 	};
 
 
@@ -101,7 +113,7 @@ var buildDir = config.buildDir;
 
 	exports.layouts = {
 		src: srcDir + "/**/*-layout.hbs",
-		dest: buildDir + "/templates"
+		dest: destDir + "/templates"
 	};
 
 /***********************************************
@@ -110,5 +122,5 @@ var buildDir = config.buildDir;
 
 	exports.assets = {
 		src: srcDir + "/_assets/**/*",
-		dest: buildDir + "/assets"
+		dest: destDir + "/assets"
 	};

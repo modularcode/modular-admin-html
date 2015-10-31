@@ -4,6 +4,8 @@ var path = require('path');
 var gulp 	= require('gulp');
 var plugins = require('gulp-load-plugins')();
 
+var utils = require('./utils/utils');
+
 /********************************************
 *			Configs And Paths
 *********************************************/
@@ -11,8 +13,8 @@ var plugins = require('gulp-load-plugins')();
 var config = require('./config');
 
 var paths = {
-	app: 	require('./paths-app'),
-	vendor: require('./paths-vendor')
+	app: 	require('./paths/app'),
+	vendor: require('./paths/vendor')
 };
 
 
@@ -20,7 +22,7 @@ var paths = {
 *   		Load Build Tasks
 *********************************************/
 
-var buildTasks = loadTasks();
+var buildTasks = utils.loadTasks(gulp, plugins, paths);
 
 gulp.task('build', buildTasks);
 
@@ -31,7 +33,7 @@ gulp.task('build', buildTasks);
 // Local server pointing on build folder
 gulp.task('connect', function() {
 	plugins.connect.server({
-		root: config.buildDir,
+		root: config.destDir,
 		port: config.port || 3333,
 		livereload: true
 	});
@@ -82,28 +84,3 @@ gulp.task('develop', [
 ]);
 
 gulp.task('default', ['develop']);
-
-
-
-/**************************************
-*				Utils
-***************************************/
-
-
-function loadTasks() {
-	var taskNames = [];
-
-	// Load all tasks from tasks folder
-	glob.sync('./tasks/*.js').forEach(function(filePath) {
-		var taskName = path.basename(filePath, '.js');
-
-		taskNames.push(taskName);
-
-		gulp.task(taskName, function() {
-			require(filePath)(gulp, plugins, paths)
-		});
-	});
-
-
-	return taskNames;
-}

@@ -1,6 +1,13 @@
 <aside class="sidebar">
 	<div class="brand">
-		Modularity
+		<div class="logo">
+			<span class="l l1"></span>
+			<span class="l l2"></span>
+			<span class="l l3"></span>
+			<span class="l l4"></span>
+			<span class="l l5"></span>
+		</div>
+		{{themeTitle}}
 	</div>
 	<nav class="menu">
 		<ul class="nav metismenu" id="sidebar-menu">
@@ -88,7 +95,7 @@
 				</a>
 			</li>
 
-			<li {{#is page "in" "buttons,grid,icons,panels,typography"}}
+			<li {{#is page "in" "buttons,grid,icons,panels,typography,animations"}}
 					class="active open"
 				{{/is}} >
 				<a href="">
@@ -118,6 +125,12 @@
 					<li {{#is page "===" "icons"}}class="active"{{/is}}>
 						<a href="icons.html">
 							Icons
+						</a>
+					</li>
+
+					<li {{#is page "===" "animations"}}class="active"{{/is}}>
+						<a href="animations.html">
+							Animations
 						</a>
 					</li>
 
