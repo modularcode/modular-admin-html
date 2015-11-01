@@ -4,7 +4,7 @@
   "devDependencies": {},
   "dependencies": {
     "animate.css": "~3.4.0",
-    "bootstrap": "~3.3.5",
+    "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
     "datatables": "~1.10.8",
     "font-awesome": "~4.3.0",
     "jquery": "~2.1.4",

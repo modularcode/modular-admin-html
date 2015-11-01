@@ -84,13 +84,13 @@
 .panel-body {
 	padding: 15px;
 
-	// @media $lg {
-	// 	padding: 20px;
-	// }
+	@include mq(xl) {
+		padding: 20px;
+	}
 
-	// @media $xs {
-	// 	padding: 10px;
-	// }
+	@include mq(sm) {
+		padding: 10px;
+	}
 }
 
 .panel-footer {

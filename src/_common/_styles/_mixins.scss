@@ -38,14 +38,39 @@
 // }
 
 
-// /*****************************************
-// *       Background-image: cover mixin
-// ******************************************/
+/*****************************************
+*       Background-image: cover mixin
+******************************************/
 
 @mixin bg-cover() {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/*****************************************
+*       Media Query Mixins
+******************************************/
+
+// Specified breakpoint
+@mixin mq($name) {
+	@include media-breakpoint-only($name) {
+		@content;
+	};
+}
+
+// Larger than specified breakpoint
+@mixin mq-up($name) {
+	@include media-breakpoint-up($name) {
+		@content;
+	};
+}
+
+// smaller than specified breakpoint
+@mixin mq-down($name) {
+	@include media-breakpoint-down($name) {
+		@content;
+	};
 }
 
 // /******************************************
