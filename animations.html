@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>
-			Modularity - Free Admin Dashboard Theme | HTML Version
+			ModularAdmin - Free Dashboard Theme | HTML Version
 		</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,13 +20,13 @@
 			<div class="app" id="app">
 					<header class="header">
 					
-						<div class="header-block header-block-collapse visible-xs visible-sm" >
+						<div class="header-block header-block-collapse hidden-lg-up" >
 							<button class="collapse-btn" id="sidebar-collapse-btn">
 								<i class="fa fa-bars"></i>
 							</button>
 						</div>
 						
-						<div class="header-block header-block-search hidden-xs">
+						<div class="header-block header-block-search hidden-sm-down">
 							<form role="search">
 								<div class="input-container">
 									<i class="fa fa-search"></i>
@@ -153,7 +153,14 @@
 					</header>
 					<aside class="sidebar">
 						<div class="brand">
-							Modularity
+							<div class="logo">
+								<span class="l l1"></span>
+								<span class="l l2"></span>
+								<span class="l l3"></span>
+								<span class="l l4"></span>
+								<span class="l l5"></span>
+							</div>
+							ModularAdmin
 						</div>
 						<nav class="menu">
 							<ul class="nav metismenu" id="sidebar-menu">
@@ -165,7 +172,7 @@
 								</li>
 					
 					
-								<li class="active open" >
+								<li  >
 					
 									<a href="">
 										<i class="fa fa-th-large"></i> Items Manager
@@ -175,13 +182,13 @@
 									<ul>
 										<li  >
 											<a href="items-list.html">
-												Item List
+												Items List
 											</a>
 										</li>
 					
-										<li class="active" >
-											<a href="items-editor.html">
-												Items Editor
+										<li  >
+											<a href="item-editor.html">
+												Item Editor
 											</a>
 										</li>
 									</ul>
@@ -241,7 +248,9 @@
 									</a>
 								</li>
 					
-								<li  >
+								<li 
+										class="active open"
+									 >
 									<a href="">
 										<i class="fa fa-desktop"></i> UI Elements
 										<i class="fa arrow"></i>
@@ -269,6 +278,12 @@
 										<li >
 											<a href="icons.html">
 												Icons
+											</a>
+										</li>
+					
+										<li class="active">
+											<a href="animations.html">
+												Animations
 											</a>
 										</li>
 					
@@ -347,22 +362,177 @@
 						</footer>
 					</aside>
 					<div class="sidebar-overlay" id="sidebar-overlay"></div>
-				<article class="content">
-	
+				<article class="content animations-page">
 		<div class="title-block">
 			<h3 class="title">
-				Item Name
+				Animations
 			</h3>
-			<p class="subtitle">
-				Sample item editor mode
-			</p>
+			<p class="subtitle">Animate.css is a bunch of cool, fun, and cross-browser animations</p>
 		</div>
 
 		<section class="section">
-			<div class="panel">
-				<div class="panel-body">
+			<div class="row">
+				
 
-				</div>
+					<div class="col-sm-6 col-md-6">
+						<div class="panel">
+							<div class="panel-body">
+
+								<div class="panel-title-block">
+									<h3 class="title">
+										Attention Seeker
+									</h3>
+								</div>
+								<section class="section">
+									<div class="row">
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounce">
+													Bounce
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated flash">
+													Flash
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated pulse">
+													Pulse
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated rubberBand">
+													RubberBand
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated shake">
+													Shake
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated swing">
+													Swing
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated tada">
+													Tada
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated wobble">
+													Wobble
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated jello">
+													Jello
+												</div>
+											</div>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<div class="panel">
+							<div class="panel-body">
+
+								<div class="panel-title-block">
+									<h3 class="title">
+										Bouncing Entrances
+									</h3>
+								</div>
+								<section class="section">
+									<div class="row">
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceIn">
+													BounceIn
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceInDown">
+													BounceInDown
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceInLeft">
+													BounceInLeft
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceInRight">
+													BounceInRight
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceInUp">
+													BounceInUp
+												</div>
+											</div>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<div class="panel">
+							<div class="panel-body">
+
+								<div class="panel-title-block">
+									<h3 class="title">
+										Bouncing Exits
+									</h3>
+								</div>
+								<section class="section">
+									<div class="row">
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceOut">
+													BounceOut
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceOutDown">
+													BounceOutDown
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceOutLeft">
+													BounceOutLeft
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceOutRight">
+													BounceOutRight
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-4">
+												<div class="box-placeholder text-center"
+													data-effect="animated bounceOutUp">
+													BounceOutUp
+												</div>
+											</div>
+								</section>
+							</div>
+						</div>
+					</div>
 			</div>
 		</section>
 
