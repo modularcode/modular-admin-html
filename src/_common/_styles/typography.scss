@@ -35,7 +35,7 @@
 }
 
 .subtitle {
-	@include mq(sm) {
+	@include media-down(sm) {
 		display: none;
 	}
 }

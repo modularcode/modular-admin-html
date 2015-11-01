@@ -55,21 +55,21 @@
 ******************************************/
 
 // Specified breakpoint
-@mixin mq($name) {
+@mixin media($name) {
 	@include media-breakpoint-only($name) {
 		@content;
 	};
 }
 
 // Larger than specified breakpoint
-@mixin mq-up($name) {
+@mixin media-up($name) {
 	@include media-breakpoint-up($name) {
 		@content;
 	};
 }
 
 // smaller than specified breakpoint
-@mixin mq-down($name) {
+@mixin media-down($name) {
 	@include media-breakpoint-down($name) {
 		@content;
 	};

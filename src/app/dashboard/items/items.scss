@@ -13,11 +13,11 @@
 			width: 70px;
 			padding-left: 10px;
 
-			@include mq(xl) {
+			@include media(xl) {
 				padding-left: 20px;
 			}
 
-			@include mq(sm) {
+			@include media-down(sm) {
 				padding-left: 10px;
 			}
 		}

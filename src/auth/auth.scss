@@ -46,7 +46,7 @@
 	}
 }
 
-@include mq(sm) {
+@include media-down(sm) {
 	.auth-container {
 		width: 100%;
 		position: relative;

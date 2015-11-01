@@ -25,7 +25,7 @@
 			font-weight: bold;
 		}
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			position: static;
 		}
 	}
@@ -117,7 +117,7 @@
 			}
 		}
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			min-width: 100px;
 			width: 100%;
 			margin-top: 5px;

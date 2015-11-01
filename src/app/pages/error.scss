@@ -35,7 +35,7 @@
 	}
 }
 
-@include mq(md) {
+@include media(md) {
 	.error-panel {
 		width: 50%;
 		
@@ -48,7 +48,7 @@
 	}
 }
 
-@include mq(sm) {
+@include media-down(sm) {
 	.error-panel {
 		width: 90%;
 

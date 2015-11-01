@@ -8,26 +8,26 @@
 	float: left;
 	padding-left: $content-padding-x-md;
 
-	@include mq(sm) {
+	@include media-down(sm) {
 		padding-left: $content-padding-x-xs;
 	}
 
-	@include mq(md) {
+	@include media(md) {
 		padding-left: $content-padding-x-sm;
 	}
 
-	@include mq(lg) {
+	@include media(lg) {
 		padding-left: $content-padding-x-md;
 	}
 
-	@include mq(xl) {
+	@include media(xl) {
 		padding-left:  $content-padding-x-lg;
 	}
 
 	& > form {
 		float: right;
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			padding-left: 0;
 		}
 	} 
@@ -50,7 +50,7 @@
 			border: none;
 			padding-left: 25px;
 
-			@include mq(sm) {
+			@include media-down(sm) {
 				max-width: 140px;
 			}
 		}

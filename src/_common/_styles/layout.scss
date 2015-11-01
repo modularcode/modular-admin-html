@@ -30,7 +30,7 @@
 
 	@include clearfix();
 
-	@include mq(sm) {
+	@include media-down(sm) {
 		margin-bottom: 20px;
 	}
 }

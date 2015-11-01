@@ -5,7 +5,7 @@
 	}
 
 	.title-block {
-		@include mq(sm) {
+		@include media-down(sm) {
 			padding-bottom: 10px;
 			margin-bottom: 13px;
 		}
@@ -18,7 +18,7 @@
 		right: 0;
 		top: 0;
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			position: static;
 		}
 		
@@ -59,7 +59,7 @@
 		}
 
 		.img {
-			@include mq(sm) {
+			@include media-down(sm) {
 				border-radius: 50%;
 			}
 		}

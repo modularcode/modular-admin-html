@@ -13,7 +13,7 @@
 		width: percentage(1/2);
 		overflow: hidden;
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			width: 100%;
 		}
 	}
@@ -22,7 +22,7 @@
 	.stat-chart {
 		margin-right: 5px;
 
-		@include mq(xl) {
+		@include media(xl) {
 			margin-right: 0.6vw;
 			// margin-right: 10px;
 			// width: 3vw;
@@ -36,12 +36,12 @@
 		vertical-align: middle;
 		.value {
 
-			@include mq(xl) {
+			@include media(xl) {
 				font-size: 1.3vw;
 			}
 		}
 		.name {
-			@include mq(xl) {
+			@include media(xl) {
 				font-size: 0.9vw;
 			}
 		}

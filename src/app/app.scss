@@ -26,28 +26,28 @@
 		padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
 		min-height: 100vh;	
 
-		@include mq(xl) {
+		@include media(xl) {
 			$padding-x: $content-padding-x-lg;
 			$padding-y: $content-padding-y-lg;
 
 			padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
 		}
 
-		@include mq(lg) {
+		@include media(lg) {
 			$padding-x: $content-padding-x-md;
 			$padding-y: $content-padding-y-md;
 
 			padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
 		}
 
-		@include mq(md) {
+		@include media(md) {
 			$padding-x: $content-padding-x-sm;
 			$padding-y: $content-padding-y-sm;
 
 			padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
 		}
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			$padding-x: $content-padding-x-xs;
 			$padding-y: $content-padding-y-xs;
 
@@ -56,7 +56,7 @@
 	}
 
 
-	@include mq-down(md) {
+	@include media-down(md) {
 		// background-color: #ccc;
 		left: -$sidebar-width;
 		width: calc(100% + #{$sidebar-width});
@@ -64,7 +64,7 @@
 	
 	&.sidebar-open {
 		// Disable content scrolling when sidebar is open
-		@include mq-down(md) {
+		@include media-down(md) {
 			left: 0;
 			position: absolute;
 			height: 100%;

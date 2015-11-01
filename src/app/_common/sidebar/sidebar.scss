@@ -70,7 +70,7 @@
 			}
 		}
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			line-height: $header-height-xs;
 			font-size: 16px;
 		}
@@ -206,17 +206,17 @@
 	opacity: 0;
 	transition: opacity 0.3s ease;
 
-	@include mq-down(md) {
+	@include media-down(md) {
 		display: block;
 	}
 
-	@include mq(sm) {
+	@include media-down(sm) {
 		background-color: fade(#000, 30%);
 	}
 
 
 	.sidebar-open & {
-		@include mq-down(md) {
+		@include media-down(md) {
 			left: $sidebar-width;
 			opacity: 1;
 		}

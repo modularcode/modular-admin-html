@@ -17,7 +17,7 @@
 	@include clearfix();
 	// @include accelerate();
 
-	@include mq(sm) {
+	@include media-down(sm) {
 		height: $header-height-xs;
 	}
 
@@ -27,7 +27,7 @@
 		line-height: $line-height;
 		float: left;
 
-		@include mq(sm) {
+		@include media-down(sm) {
 			padding: 5px;
 			line-height: $header-height-xs - 10px;
 		}

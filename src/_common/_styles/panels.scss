@@ -84,11 +84,11 @@
 .panel-body {
 	padding: 15px;
 
-	@include mq(xl) {
+	@include media(xl) {
 		padding: 20px;
 	}
 
-	@include mq(sm) {
+	@include media-down(sm) {
 		padding: 10px;
 	}
 }
