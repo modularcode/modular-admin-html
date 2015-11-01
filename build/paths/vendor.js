@@ -61,7 +61,7 @@ var bowerDir 		= config.bowerDir;
 
 	exports.scripts = {
 		src: vendorSrciptFiles,
-		dest: destDir + "/js"
+		dest: path.resolve(destDir + "/js")
 	};
 
 /***********************************************
