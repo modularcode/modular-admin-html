@@ -4,7 +4,7 @@
 
 .panel {
 	background-color: #fff;
-	box-shadow: 1px 1px 5px fade($color-text-light, 10%);
+	box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
 	
 	margin-bottom: 10px;
 	border-radius: 0;

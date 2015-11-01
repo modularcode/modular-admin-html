@@ -1,0 +1,57 @@
+// /*****************************************
+// *		Triangle Creation Mixin
+// ******************************************/
+
+// @mixin triangle-base() {
+//     content: '';
+//     display: block;
+//     width: 0;
+//     height: 0;
+//     -moz-transform: scale(.9999);
+// }
+// @mixin triangle($direction, $size, $color) {
+//     @include triangle($direction, $size * 2, $size, $color);
+// }
+// @mixin triangle($direction, $width, $height, $color) when ($direction = up) {
+//     @include triangle-base();
+//     border-left: ($width / 2) solid transparent;
+//     border-right: ($width / 2) solid transparent;
+//     border-bottom: $height solid $color;
+// }
+// @mixin triangle($direction, $width, $height, $color) when ($direction = down) {
+//     @include triangle-base();
+//     border-left: ($width / 2) solid transparent;
+//     border-right: ($width / 2) solid transparent;
+//     border-top: $height solid $color;
+// }
+// @mixin triangle($direction, $width, $height, $color) when ($direction = left) {
+//     @include triangle-base();
+//     border-top: ($width / 2) solid transparent;
+//     border-bottom: ($width / 2) solid transparent;
+//     border-right: $height solid $color;
+// }
+// @mixin triangle($direction, $width, $height, $color) when ($direction = right) {
+//     @include triangle-base();
+//     border-top: ($width / 2) solid transparent;
+//     border-bottom: ($width / 2) solid transparent;
+//     border-left: $height solid $color;
+// }
+
+
+// /*****************************************
+// *       Background-image: cover mixin
+// ******************************************/
+
+@mixin bg-cover() {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// /******************************************
+// *           Hardware Acceleration
+// *******************************************/
+
+// @mixin accelerate() {
+//     transform: translate3d(0, 0, 0);
+// }
