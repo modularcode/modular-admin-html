@@ -17,7 +17,7 @@ module.exports.task = function(gulp, plugins, paths) {
 
 	gulp.src(paths.app.styles.src)
 		.pipe(plugins.concat('app.scss'))
-		.pipe(gulp.dest(paths.app.styles.dest))
+		// .pipe(gulp.dest(paths.app.styles.dest))
 		.pipe(
 			plugins.sass({
 				includePaths: [

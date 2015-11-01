@@ -8,7 +8,7 @@ module.exports.task = function(gulp, plugins, paths) {
 	glob.sync(paths.app.themes.src).forEach(function(filePath) {
 
 		// Prepend file to styles glob
-		var src = paths.app.styles.src;
+		var src = [].concat(paths.app.styles.src);
 			src.unshift(filePath);
 
 		// Theme name 
