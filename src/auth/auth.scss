@@ -1,0 +1,61 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+
+.auth-container {
+	width: 450px;
+	min-height: 330px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	
+	.auth-header {
+		background-color: $color-primary;
+		text-align: center;
+	}
+
+	.auth-title {
+		color: $color-text-inverse;
+		padding: 20px;
+		line-height: 30px;
+		font-size: 30px;
+		margin: 0;
+	}
+
+	.auth-content {
+		padding: 30px 50px;
+		min-height: 260px;
+	}
+
+	.forgot-btn {
+		line-height: 28px;
+	}
+
+	.checkbox {
+		label {
+			padding: 0;
+		}
+
+		a {
+			vertical-align: text-top;
+		}
+
+		span {
+			color: #4f5f6f;
+		}
+	}
+}
+
+@include media-down(sm) {
+	.auth-container {
+		width: 100%;
+		position: relative;
+		left: 0;
+		transform: inherit;
+		margin: 40px auto;
+
+		.auth-content {
+			padding: 30px 25px;
+		}
+	}
+}

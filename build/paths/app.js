@@ -1,3 +1,5 @@
+var path = require('path');
+
 var config = require('../config');
 
 var rootDir 	= config.rootDir;
@@ -32,10 +34,18 @@ var destDir 	= config.destDir;
 *		Application style files
 ************************************************/
 
+	// exports.styles = {
+	// 	src: [
+	// 		srcDir + "/_main/main.less",
+	// 		srcDir + "/**/!(main|variables|vendor|*-theme)*.less",
+	// 	],
+	// 	dest: destDir + "/css/"
+	// };
+
 	exports.styles = {
 		src: [
-			srcDir + "/_main/main.less",
-			srcDir + "/**/!(main|variables|vendor|*-theme)*.less",
+			srcDir + "/_main/main.scss",
+			srcDir + "/**/!(main|variables|vendor|*-theme)*.scss",
 		],
 		dest: destDir + "/css/"
 	};
@@ -45,9 +55,7 @@ var destDir 	= config.destDir;
 ************************************************/
 
 	exports.themes = {
-		src: [
-			srcDir + "/**/*-theme.less",
-		],
+		src: srcDir + "/**/*-theme.scss",
 		dest: destDir + "/css/"
 	};
 

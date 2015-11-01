@@ -7,8 +7,7 @@ function loadTasks(gulp, plugins, paths) {
 	// Load all tasks from tasks folder
 	glob.sync(path.resolve(__dirname, '../tasks/*.js')).forEach(function(filePath) {
 		var taskName = path.basename(filePath, '.js');
-
-		taskNames.push(taskName);
+			taskNames.push(taskName);
 
 		var task = require(filePath).task;
 		var deps = require(filePath).deps || [];

@@ -1,0 +1,49 @@
+// Dashboard stats
+
+.dashboard-page .stats {
+
+	.panel-body {
+		padding-bottom: 0;
+	}
+
+	.stat-col {
+		margin-bottom: 20px;
+		float: left;
+		white-space: nowrap;
+		width: percentage(1/2);
+		overflow: hidden;
+
+		@include media-down(sm) {
+			width: 100%;
+		}
+	}
+
+
+	.stat-chart {
+		margin-right: 5px;
+
+		@include media(xl) {
+			margin-right: 0.6vw;
+			// margin-right: 10px;
+			// width: 3vw;
+			// height: 3vw;
+		}
+
+		vertical-align: middle;
+	}
+
+	.stat {
+		vertical-align: middle;
+		.value {
+
+			@include media(xl) {
+				font-size: 1.3vw;
+			}
+		}
+		.name {
+			@include media(xl) {
+				font-size: 0.9vw;
+			}
+		}
+	}
+}

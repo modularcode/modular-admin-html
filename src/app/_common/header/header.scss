@@ -1,0 +1,38 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
+.header {
+
+	$line-height: $header-height - 30px;
+
+	background-color: $color-divider;
+	height: $header-height;
+	position: absolute;
+	left: $sidebar-width;
+	right: 0;
+	transition: left 0.3s ease;
+	z-index: 10;
+
+	@include clearfix();
+	// @include accelerate();
+
+	@include media-down(sm) {
+		height: $header-height-xs;
+	}
+
+
+	.header-block {
+		padding: 15px;
+		line-height: $line-height;
+		float: left;
+
+		@include media-down(sm) {
+			padding: 5px;
+			line-height: $header-height-xs - 10px;
+		}
+	}
+
+	
+	
+}

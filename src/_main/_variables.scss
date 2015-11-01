@@ -1,0 +1,45 @@
+/*************************************************************
+*					App Variables
+**************************************************************/
+
+$color-primary: #59c2e6 !default;
+$color-primary-dark: darken(#4f5f6f, 10%) !default;
+$color-primary-darker: darken($color-primary-dark, 6%) !default;
+
+$color-divider: #d7dde4 !default;
+$color-bg: #f0f3f6 !default;
+
+$color-text: #4f5f6f !default;
+$color-text-light: #7e8e9f !default;
+$color-text-inverse: #ffffff !default;
+
+$color-dropbown-border: fade-out($color-text-light, 0.9) !default;
+$color-dropdown-link-hover-bg: #f5f5f5 !default;
+
+$color-success: #4bcf99 !default;
+$color-info: #76D4F5 !default;
+$color-warning: #fe974b !default;
+$color-danger: #fc4c7a !default;
+$color-inverse: #131e26 !default;
+
+$color-btn-primary: $color-primary !default;
+$color-btn-primary-text: $color-text-inverse !default;
+
+
+$header-height: 70px !default;
+$header-height-xs: 50px !default;
+
+$content-padding-x-lg: 50px !default;
+$content-padding-y-lg: 50px !default;
+
+$content-padding-x-md: 30px !default;
+$content-padding-y-md: 40px !default;
+
+$content-padding-x-sm: 20px !default;
+$content-padding-y-sm: 25px !default;
+
+$content-padding-x-xs: 10px !default;
+$content-padding-y-xs: 15px !default;
+
+$sidebar-width: 230px !default;
+$btn-radius: 25px !default;

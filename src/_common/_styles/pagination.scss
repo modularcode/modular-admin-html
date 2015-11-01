@@ -1,0 +1,14 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
+.pagination {
+	margin-top: 0;
+
+	.active > a,
+	.active > a:focus, 
+	.active > a:hover {
+		border-color: $color-primary;
+		background-color: $color-primary;
+	}
+}

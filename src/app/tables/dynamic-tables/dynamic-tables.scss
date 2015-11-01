@@ -1,0 +1,29 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
+.dataTable_wrapper {
+
+	.dataTables_info,
+	.dataTables_length,
+	.dataTables_filter {
+		color: $color-primary;
+	}
+
+	.pagination {
+	 	& > .active {
+
+	 		& > a,
+	 		& > a:hover,
+	 		& > a:focus,
+	 		& > span,
+	 		& > span:hover,
+	 		& > span:focus {
+				background-color: $color-primary;
+				border-color: $color-primary;
+	 		}
+	 	}
+ 	}	
+}
+
+

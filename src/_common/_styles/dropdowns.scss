@@ -1,0 +1,31 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
+.dropdown-menu {
+	float: left;
+	box-shadow: 2px 3px 6px $color-dropbown-border;
+	border: 1px solid $color-dropbown-border;
+	border-radius: 0;
+
+
+	& > li > a {
+		display: block;
+		padding: 10px 20px;
+		clear: both;
+		font-weight: normal;
+		color: $color-text;
+		white-space: nowrap;
+		transition: none;
+
+		i {
+			margin-right: 2px;
+		}
+
+		&:hover {
+			color: $color-primary;
+			background: none;
+			background-color: darken(#fff, 4%);
+		}
+	}
+}
