@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .header .header-block-nav {
 
 	.notifications {
@@ -21,9 +25,9 @@
 			font-weight: bold;
 		}
 
-		@media $xs {
-			position: static;
-		}
+		// @media $xs {
+		// 	position: static;
+		// }
 	}
 
 

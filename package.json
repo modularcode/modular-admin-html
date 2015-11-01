@@ -13,8 +13,8 @@
   },
   "homepage": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html",
   "dependencies": {
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
     "animate.css": "^3.4.0",
-    "bootstrap": "^3.3.5",
     "datatables": "^1.10.9",
     "flot": "^0.8.0-alpha",
     "font-awesome": "^4.4.0",

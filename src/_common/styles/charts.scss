@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .easy-pie-chart {
 	width: 50px;
 	height: 50px;

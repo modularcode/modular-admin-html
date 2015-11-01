@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .header {
 
 	$line-height: $header-height - 30px;
@@ -13,9 +17,9 @@
 	@include clearfix();
 	// @include accelerate();
 
-	@media $xs {
-		height: $header-height-xs;
-	}
+	// @media $xs {
+	// 	height: $header-height-xs;
+	// }
 
 
 	.header-block {
@@ -23,10 +27,10 @@
 		line-height: $line-height;
 		float: left;
 
-		@media $xs {
-			padding: 5px;
-			line-height: $header-height-xs - 10px;
-		}
+		// @media $xs {
+		// 	padding: 5px;
+		// 	line-height: $header-height-xs - 10px;
+		// }
 	}
 
 	

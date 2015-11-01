@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .form-group {
 	.row {
 		margin-left: -10px;
@@ -60,7 +64,7 @@
 		border-radius: 0;
 		border: none;
 		background-color: $color-divider;
-		transition: background-color ease-in-out @include 15s, color ease-in-out .15s;
+		transition: background-color ease-in-out 15s, color ease-in-out .15s;
 
 		&.focus {
 			background-color: $color-primary;

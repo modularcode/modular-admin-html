@@ -3,5 +3,6 @@ module.exports = {
 	srcDir: "../src",					// Source files 
 	destDir: "../public",				// Build destination
 	bowerDir: "../bower_components",  	// Bower dir
+	npmDir:   "../node_modules",		// Npm dir
 	port: 4000
 };

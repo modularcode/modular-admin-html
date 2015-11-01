@@ -1,3 +1,8 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
+
 .btn {
 	background-image: none;
 	border-radius: 0;

@@ -5,10 +5,10 @@
 	}
 
 	.title-block {
-		@media $xs {
-			padding-bottom: 10px;
-			margin-bottom: 13px;
-		}
+		// @media $xs {
+		// 	padding-bottom: 10px;
+		// 	margin-bottom: 13px;
+		// }
 	}
 
 	
@@ -18,9 +18,9 @@
 		right: 0;
 		top: 0;
 
-		@media $xs {
-			position: static;
-		}
+		// @media $xs {
+		// 	position: static;
+		// }
 		
 		.search-button {
 			margin: 0;
@@ -59,9 +59,9 @@
 		}
 
 		.img {
-			@media $xs {
-				border-radius: 50%;
-			}
+			// @media $xs {
+			// 	border-radius: 50%;
+			// }
 		}
 
 		.col-title {

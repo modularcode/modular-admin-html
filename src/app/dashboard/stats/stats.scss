@@ -13,21 +13,21 @@
 		width: percentage(1/2);
 		overflow: hidden;
 
-		@media (max-width: 400px) {
-			width: 100%;
-		}
+		// @media (max-width: 400px) {
+		// 	width: 100%;
+		// }
 	}
 
 
 	.stat-chart {
 		margin-right: 5px;
 
-		@media $lg {
-			margin-right: 0.6vw;
-			// margin-right: 10px;
-			// width: 3vw;
-			// height: 3vw;
-		}
+		// @media $lg {
+		// 	margin-right: 0.6vw;
+		// 	// margin-right: 10px;
+		// 	// width: 3vw;
+		// 	// height: 3vw;
+		// }
 
 		vertical-align: middle;
 	}
@@ -36,14 +36,14 @@
 		vertical-align: middle;
 		.value {
 
-			@media $lg {
-				font-size: 1.3vw;
-			}
+			// @media $lg {
+			// 	font-size: 1.3vw;
+			// }
 		}
 		.name {
-			@media $lg {
-				font-size: 0.9vw;
-			}
+			// @media $lg {
+			// 	font-size: 0.9vw;
+			// }
 		}
 	}
 }

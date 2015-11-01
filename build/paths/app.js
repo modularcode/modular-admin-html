@@ -32,10 +32,18 @@ var destDir 	= config.destDir;
 *		Application style files
 ************************************************/
 
+	// exports.styles = {
+	// 	src: [
+	// 		srcDir + "/_main/main.less",
+	// 		srcDir + "/**/!(main|variables|vendor|*-theme)*.less",
+	// 	],
+	// 	dest: destDir + "/css/"
+	// };
+
 	exports.styles = {
 		src: [
-			srcDir + "/_main/main.less",
-			srcDir + "/**/!(main|variables|vendor|*-theme)*.less",
+			srcDir + "/_main/main.scss",
+			srcDir + "/**/!(main|variables|vendor|*-theme)*.scss",
 		],
 		dest: destDir + "/css/"
 	};

@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .panel {
 	background-color: #fff;
 	box-shadow: 1px 1px 5px fade($color-text-light, 10%);
@@ -80,13 +84,13 @@
 .panel-body {
 	padding: 15px;
 
-	@media $lg {
-		padding: 20px;
-	}
+	// @media $lg {
+	// 	padding: 20px;
+	// }
 
-	@media $xs {
-		padding: 10px;
-	}
+	// @media $xs {
+	// 	padding: 10px;
+	// }
 }
 
 .panel-footer {

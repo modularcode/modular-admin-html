@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .items-list {
 	list-style: none;
 	padding: 0;
@@ -5,17 +9,6 @@
 
 	display: flex;
 	flex-flow: column nowrap;
-
-
-	@media $xs {
-		
-	}
-
-	// flex-flow: column nowrap;
-
-	// display: flex;
-	// flex-flow: column nowrap;
-	// box-pack: justify;
 
 	.items-list-header {
 		font-weight: bold;
@@ -52,8 +45,6 @@
 	li {
 		display: flex;
 		align-items: flex-start;
-		// justify-content: space-between;
-		// flex-flow: row nowrap;
 
 		width: 100%;
 		position: relative;
@@ -61,8 +52,6 @@
 
 	.item-col {
 		display: flex;
-		// flex-wrap: wrap;
-		// flex-flow: row nowrap;
 		flex-grow: 1;
 		flex-basis: 0;
 		vertical-align: top;
@@ -73,6 +62,6 @@
 		width: 40px; 
 		height: 40px; 
 		background-color: #efefef;
-		@include bg-cover();
+		// @include bg-cover();
 	}
 }

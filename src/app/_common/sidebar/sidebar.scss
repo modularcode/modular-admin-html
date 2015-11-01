@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .sidebar {
 	background-color: $color-primary-dark;
 	width: $sidebar-width;
@@ -66,10 +70,10 @@
 			}
 		}
 
-		@media $xs {
-			line-height: $header-height-xs;
-			font-size: 16px;
-		}
+		// @media $xs {
+		// 	line-height: $header-height-xs;
+		// 	font-size: 16px;
+		// }
 	}
 
 
@@ -200,19 +204,19 @@
 	opacity: 0;
 	transition: opacity 0.3s ease;
 
-	@media $xs-sm {
-		display: block;
-	}
+	// @media $xs-sm {
+	// 	display: block;
+	// }
 
-	@media $xs {
-		background-color: fade(#000, 30%);
-	}
+	// @media $xs {
+	// 	background-color: fade(#000, 30%);
+	// }
 
 
-	.sidebar-open & {
-		@media $xs-sm {
-			left: $sidebar-width;
-			opacity: 1;
-		}
-	}
+	// .sidebar-open & {
+	// 	@media $xs-sm {
+	// 		left: $sidebar-width;
+	// 		opacity: 1;
+	// 	}
+	// }
 }

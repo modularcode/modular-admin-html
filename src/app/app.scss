@@ -1,3 +1,6 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+
 .app {
 	position: relative;
 	width: 100%;
@@ -11,7 +14,7 @@
 	overflow: hidden;
 
 	.boxed & {
-		max-width: $screen-lg-min;
+		// max-width: $screen-lg-min;
 	}
 
 	.content {
@@ -22,49 +25,49 @@
 		padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
 		min-height: 100vh;	
 
-		@media $lg {
-			$padding-x: $content-padding-x-lg;
-			$padding-y: $content-padding-y-lg;
+		// @media $lg {
+		// 	$padding-x: $content-padding-x-lg;
+		// 	$padding-y: $content-padding-y-lg;
 
-			padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
-		}
+		// 	padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
+		// }
 
-		@media $md {
-			$padding-x: $content-padding-x-md;
-			$padding-y: $content-padding-y-md;
+		// @media $md {
+		// 	$padding-x: $content-padding-x-md;
+		// 	$padding-y: $content-padding-y-md;
 
-			padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
-		}
+		// 	padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
+		// }
 
-		@media $sm {
-			$padding-x: $content-padding-x-sm;
-			$padding-y: $content-padding-y-sm;
+		// @media $sm {
+		// 	$padding-x: $content-padding-x-sm;
+		// 	$padding-y: $content-padding-y-sm;
 
-			padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
-		}
+		// 	padding: $header-height + $padding-y $padding-x $padding-y $padding-x;
+		// }
 
-		@media $xs {
-			$padding-x: $content-padding-x-xs;
-			$padding-y: $content-padding-y-xs;
+		// @media $xs {
+		// 	$padding-x: $content-padding-x-xs;
+		// 	$padding-y: $content-padding-y-xs;
 
-			padding: $header-height-xs + $padding-y $padding-x $padding-y $padding-x;
-		}
+		// 	padding: $header-height-xs + $padding-y $padding-x $padding-y $padding-x;
+		// }
 	}
 
 
-	@media $xs-sm {
-		left: -$sidebar-width;
-		width: ~"calc(100% + ${sidebar-width})";
-	}
+	// @media $xs-sm {
+	// 	left: -$sidebar-width;
+	// 	width: ~"calc(100% + ${sidebar-width})";
+	// }
 	
 	&.sidebar-open {
 		// Disable content scrolling when sidebar is open
-		@media $xs-sm {
-			left: 0;
-			position: absolute;
-			height: 100%;
-			overflow: hidden;
-		}
+		// @media $xs-sm {
+		// 	left: 0;
+		// 	position: absolute;
+		// 	height: 100%;
+		// 	overflow: hidden;
+		// }
 	}
 
 }

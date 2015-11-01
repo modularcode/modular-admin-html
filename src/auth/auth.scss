@@ -1,3 +1,6 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+
 .auth-container {
 	width: 450px;
 	min-height: 330px;
@@ -43,16 +46,16 @@
 	}
 }
 
-@media $xs {
-	.auth-container {
-		width: 100%;
-		position: relative;
-		left: 0;
-		transform: inherit;
-		margin: 40px auto;
+// @media $xs {
+// 	.auth-container {
+// 		width: 100%;
+// 		position: relative;
+// 		left: 0;
+// 		transform: inherit;
+// 		margin: 40px auto;
 
-		.auth-content {
-			padding: 30px 25px;
-		}
-	}
-}
+// 		.auth-content {
+// 			padding: 30px 25px;
+// 		}
+// 	}
+// }

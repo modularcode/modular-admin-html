@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .underline-animation {
 	position: absolute;
 	top: auto;
@@ -75,9 +79,9 @@
 			margin: 0;
 			display: inline-block;
 			text-align: center;
-			-webkit-transition: all @include 2s;
-			-o-transition: all @include 2s;
-			transition: all @include 2s;
+			-webkit-transition: all 2s;
+			-o-transition: all 2s;
+			transition: all 2s;
 			line-height: 30px;
 		}
 
@@ -102,13 +106,13 @@
 }
 
 .rounded {
-	border-radius: $border-radius-base;
+	border-radius: $border-radius;
 }
 
 .rounded-l {
-	border-radius: $border-radius-large;
+	border-radius: $border-radius-lg;
 }
 
 .rounded-s {
-	border-radius: $border-radius-small;
+	border-radius: $border-radius-sm;
 }

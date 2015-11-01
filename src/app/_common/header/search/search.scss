@@ -1,31 +1,35 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .header .header-block-search {
 	$line-height: $header-height - 30px;
 
 	float: left;
 	padding-left: $content-padding-x-md;
 
-	@media $xs {
-		padding-left: $content-padding-x-xs;
-	}
+	// @media $xs {
+	// 	padding-left: $content-padding-x-xs;
+	// }
 
-	@media $sm {
-		padding-left: $content-padding-x-sm;
-	}
+	// @media $sm {
+	// 	padding-left: $content-padding-x-sm;
+	// }
 
-	@media $md {
-		padding-left: $content-padding-x-md;
-	}
+	// @media $md {
+	// 	padding-left: $content-padding-x-md;
+	// }
 
-	@media $lg {
-		padding-left:  $content-padding-x-lg;
-	}
+	// @media $lg {
+	// 	padding-left:  $content-padding-x-lg;
+	// }
 
 	& > form {
 		float: right;
 
-		$media$xs {
-			padding-left: 0;
-		}
+		// $media $xs {
+		// 	padding-left: 0;
+		// }
 	} 
 
 	.input-container {
@@ -46,14 +50,14 @@
 			border: none;
 			padding-left: 25px;
 
-			@media $xs {
-				max-width: 140px;
-			}
+			// @media $xs {
+			// 	max-width: 140px;
+			// }
 		}
 
-		.underline {
-			&:extend(.underline-animation);
-		}
+		// .underline {
+		// 	&:extend(.underline-animation);
+		// }
 
 
 		input:focus + .underline {

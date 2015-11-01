@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/variables';
+@import '_main/variables.scss';
+@import 'bootstrap/scss/mixins.scss';
+
 .row {
 	.col {
 		padding-left: $grid-gutter-width/2;
@@ -26,9 +30,9 @@
 
 	@include clearfix();
 
-	@media $xs {
-		margin-bottom: 20px;
-	}
+	// @media $xs {
+	// 	margin-bottom: 20px;
+	// }
 }
 
 .section {
