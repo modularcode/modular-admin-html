@@ -1,11 +1,34 @@
 var path = require('path');
 var config = require('../config');
+var glob = require('glob');
 
 module.exports.task = function(gulp, plugins, paths) {
 
-	// ToDo
+	// For each theme file
+	glob.sync(paths.app.themes.src).forEach(function(filePath) {
 
-	// Iterate over all -theme files
-	// compile each theme into css
+		// Prepend file to styles glob
+		var src = paths.app.styles.src;
+			src.unshift(filePath);
+
+		// Theme name 
+		var name = "app-" + path.basename(filePath, '.js').replace("-theme", "");
+
+		gulp.src(src)
+			.pipe(plugins.concat(name))
+			.pipe(
+				plugins.sass({
+					includePaths: [
+						path.resolve( config.srcDir ),
+						path.resolve( config.npmDir ),
+						path.resolve( config.bowerDir ),
+					]
+				})
+				.on('error', plugins.sass.logError)
+			)
+			.pipe(plugins.autoprefixer())
+			.pipe(gulp.dest(paths.app.themes.dest));
+
+	});
 
 };

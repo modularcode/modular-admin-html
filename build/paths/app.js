@@ -1,3 +1,5 @@
+var path = require('path');
+
 var config = require('../config');
 
 var rootDir 	= config.rootDir;
@@ -53,9 +55,7 @@ var destDir 	= config.destDir;
 ************************************************/
 
 	exports.themes = {
-		src: [
-			srcDir + "/**/*-theme.less",
-		],
+		src: srcDir + "/**/*-theme.scss",
 		dest: destDir + "/css/"
 	};
 
