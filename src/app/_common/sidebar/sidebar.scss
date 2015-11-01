@@ -70,14 +70,16 @@
 			}
 		}
 
-		// @media $xs {
-		// 	line-height: $header-height-xs;
-		// 	font-size: 16px;
-		// }
+		@include mq(sm) {
+			line-height: $header-height-xs;
+			font-size: 16px;
+		}
 	}
 
 
 	.nav {
+
+		font-size: 14px;
 
 		// Common styles
 		li {
@@ -204,19 +206,19 @@
 	opacity: 0;
 	transition: opacity 0.3s ease;
 
-	// @media $xs-sm {
-	// 	display: block;
-	// }
+	@include mq-down(md) {
+		display: block;
+	}
 
-	// @media $xs {
-	// 	background-color: fade(#000, 30%);
-	// }
+	@include mq(sm) {
+		background-color: fade(#000, 30%);
+	}
 
 
-	// .sidebar-open & {
-	// 	@media $xs-sm {
-	// 		left: $sidebar-width;
-	// 		opacity: 1;
-	// 	}
-	// }
+	.sidebar-open & {
+		@include mq-down(md) {
+			left: $sidebar-width;
+			opacity: 1;
+		}
+	}
 }

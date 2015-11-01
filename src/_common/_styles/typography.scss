@@ -35,9 +35,9 @@
 }
 
 .subtitle {
-	// @media $xs {
-	// 	display: none;
-	// }
+	@include mq(sm) {
+		display: none;
+	}
 }
 
 .text-primary {

@@ -32,3 +32,5 @@ module.exports.task = function(gulp, plugins, paths) {
 	});
 
 };
+
+module.exports.deps = ['app-styles'];

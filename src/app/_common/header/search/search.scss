@@ -8,28 +8,28 @@
 	float: left;
 	padding-left: $content-padding-x-md;
 
-	// @media $xs {
-	// 	padding-left: $content-padding-x-xs;
-	// }
+	@include mq(sm) {
+		padding-left: $content-padding-x-xs;
+	}
 
-	// @media $sm {
-	// 	padding-left: $content-padding-x-sm;
-	// }
+	@include mq(md) {
+		padding-left: $content-padding-x-sm;
+	}
 
-	// @media $md {
-	// 	padding-left: $content-padding-x-md;
-	// }
+	@include mq(lg) {
+		padding-left: $content-padding-x-md;
+	}
 
-	// @media $lg {
-	// 	padding-left:  $content-padding-x-lg;
-	// }
+	@include mq(xl) {
+		padding-left:  $content-padding-x-lg;
+	}
 
 	& > form {
 		float: right;
 
-		// $media $xs {
-		// 	padding-left: 0;
-		// }
+		@include mq(sm) {
+			padding-left: 0;
+		}
 	} 
 
 	.input-container {
@@ -50,9 +50,9 @@
 			border: none;
 			padding-left: 25px;
 
-			// @media $xs {
-			// 	max-width: 140px;
-			// }
+			@include mq(sm) {
+				max-width: 140px;
+			}
 		}
 
 		// .underline {

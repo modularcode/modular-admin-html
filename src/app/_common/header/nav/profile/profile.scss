@@ -26,9 +26,9 @@
 			margin-right: 9px;
 			font-weight: bold;
 
-			// @media $xs {
-			// 	display: none;
-			// }
+			@include mq(sm) {
+				display: none;
+			}
 		}
 
 		.arrow {
@@ -61,8 +61,8 @@
 		}
 
 
-		// @media $xs {
-		// 	margin-top: 8px;
-		// }
+		@include mq(sm) {
+			margin-top: 8px;
+		}
 	}
 }

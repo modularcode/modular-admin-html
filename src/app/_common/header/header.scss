@@ -17,9 +17,9 @@
 	@include clearfix();
 	// @include accelerate();
 
-	// @media $xs {
-	// 	height: $header-height-xs;
-	// }
+	@include mq(sm) {
+		height: $header-height-xs;
+	}
 
 
 	.header-block {
@@ -27,10 +27,10 @@
 		line-height: $line-height;
 		float: left;
 
-		// @media $xs {
-		// 	padding: 5px;
-		// 	line-height: $header-height-xs - 10px;
-		// }
+		@include mq(sm) {
+			padding: 5px;
+			line-height: $header-height-xs - 10px;
+		}
 	}
 
 	

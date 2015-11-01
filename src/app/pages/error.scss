@@ -35,28 +35,28 @@
 	}
 }
 
-// @media $sm {
-// 	.error-panel {
-// 		width: 50%;
+@include mq(md) {
+	.error-panel {
+		width: 50%;
 		
-// 		&.center {
-// 			position: relative;
-// 			left: 0;
-// 			transform: inherit;
-// 			margin: 40px auto;
-// 		}
-// 	}
-// }
+		&.center {
+			position: relative;
+			left: 0;
+			transform: inherit;
+			margin: 40px auto;
+		}
+	}
+}
 
-// @media $xs {
-// 	.error-panel {
-// 		width: 90%;
+@include mq(sm) {
+	.error-panel {
+		width: 90%;
 
-// 		&.center {
-// 			position: relative;
-// 			left: 0;
-// 			transform: inherit;
-// 			margin: 40px auto;
-// 		}
-// 	}
-// }
+		&.center {
+			position: relative;
+			left: 0;
+			transform: inherit;
+			margin: 40px auto;
+		}
+	}
+}

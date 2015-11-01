@@ -13,13 +13,13 @@
 			width: 70px;
 			padding-left: 10px;
 
-			// @media $lg {
-			// 	padding-left: 20px;
-			// }
+			@include mq(xl) {
+				padding-left: 20px;
+			}
 
-			// @media $xs {
-			// 	padding-left: 10px;
-			// }
+			@include mq(sm) {
+				padding-left: 10px;
+			}
 		}
 
 		.col-date {

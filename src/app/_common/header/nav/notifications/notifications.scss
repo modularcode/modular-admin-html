@@ -25,9 +25,9 @@
 			font-weight: bold;
 		}
 
-		// @media $xs {
-		// 	position: static;
-		// }
+		@include mq(sm) {
+			position: static;
+		}
 	}
 
 
@@ -117,15 +117,15 @@
 			}
 		}
 
-		// @media $xs {
-		// 	min-width: 100px;
-		// 	width: 100%;
-		// 	margin-top: 5px;
+		@include mq(sm) {
+			min-width: 100px;
+			width: 100%;
+			margin-top: 5px;
 
-		// 	&:before,
-		// 	&:after {
-		// 		right: 107px;
-		// 	}
-		// }
+			&:before,
+			&:after {
+				right: 107px;
+			}
+		}
 	}
 }
