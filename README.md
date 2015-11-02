@@ -10,16 +10,20 @@ Demo: http://modularcode.github.io/ModularAdmin-free-dashboard-theme-html/
 
 ## Getting Started
 
-For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm.
+For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have Bower installed globally.
 
-Clone repository to local `modularity` folder
 ```
-git clone https://github.com/ModularCode/ModularAdmin-free-dashboard-theme-html.git modularity -b master --single-branch 
+npm install -g bower
+```
+
+Clone repository to local `modular-admin` folder
+```
+git clone git@github.com:modularcode/modular-admin-free-dashboard-theme-html.git modular-admin -b master --single-branch 
 ```
 
 Change to new folder
 ```
-cd modularity
+cd modular-admin
 ```
 
 Install project dependencies 
@@ -40,20 +44,21 @@ Open the project [http://localhost:4000](http://localhost:4000).
 
 ```
 ├── bower_components/       
+├── build/    
 ├── node_modules/                   
 ├── public/                  
 ├── src/    
 │   ├── _assets/   
 │   │   └── {application assets}
 │   ├── _common/   
+│   |   ├── helpers/
+│   |   ├── themes/
 │   |   └── styles/
-│   ├── _helpers/   
-│   │   └── {handlebars helper files}
 │   ├── _main/   
 │   │   ├── config.js
 │   │   ├── main.js
-│   │   ├── main.less
-│   │   └── variables.less
+│   │   ├── _main.scss
+│   │   └── _variables.scss
 │   ├── _vendor/   
 │   │   └── {manually downloaded vendor libs}
 │   ├── app/   
@@ -66,24 +71,19 @@ Open the project [http://localhost:4000](http://localhost:4000).
 │   │   |       └── {sidebar files}
 │   │   ├── {different modules}
 │   │   ├── app-layout.hbs
-│   │   └── app.less
+│   │   └── app.scss
 │   ├── auth/   
 │   │   ├── {different modules}
 │   │   ├── auth-layout.hbs
-│   │   └── auth.less
-│   └── context.js
-├── tasks/    
+│   │   └── auth.scss
+│   └── context.js 
 │── bowere.json
-│── config.js
-│── gulpfile.js
-│── package.json
-│── paths-app.js
-└── paths-vendor.js
+└── package.json
 ```
 
 ## File Types
 
-#### Styles (*.less)
+#### Styles (*.scss)
 
 #### Scripts (*.js)
 
