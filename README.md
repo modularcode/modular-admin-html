@@ -43,43 +43,54 @@ Open the project [http://localhost:4000](http://localhost:4000).
 ## Folder Structure
 
 ```
-├── bower_components/       
-├── build/    
-├── node_modules/                   
-├── public/                  
-├── src/    
-│   ├── _assets/   
-│   │   └── {application assets}
-│   ├── _common/   
-│   |   ├── helpers/
-│   |   ├── themes/
-│   |   └── styles/
-│   ├── _main/   
-│   │   ├── config.js
-│   │   ├── main.js
-│   │   ├── _main.scss
-│   │   └── _variables.scss
-│   ├── _vendor/   
-│   │   └── {manually downloaded vendor libs}
-│   ├── app/   
-│   │   ├── _common/
-│   │   |   ├── header/
-│   │   |   |   └── {header files}
-│   │   |   ├── footer/
-│   │   |   |   └── {footer files}
-│   │   |   └── sidebar/
-│   │   |       └── {sidebar files}
-│   │   ├── {different modules}
-│   │   ├── app-layout.hbs
-│   │   └── app.scss
-│   ├── auth/   
-│   │   ├── {different modules}
-│   │   ├── auth-layout.hbs
-│   │   └── auth.scss
-│   └── context.js 
-│── bowere.json
-└── package.json
+├── bower_components/       # vendor libraries installed by bower
+├── build/                  # app build tasks and tools
+├── node_modules/           # node dependencies        
+├── public/                 # compiled result
+├── src/                    # source files
+│── bowere.json             # bower configuration file
+└── package.json            # npm configuration file
 ```
+
+```src/``` folder
+
+```
+├── _assets/   
+│   └── {application assets}
+├── _common/   
+|   ├── helpers/
+|   ├── themes/
+|   └── styles/
+├── _main/   
+│   ├── config.js
+│   ├── main.js
+│   ├── _main.scss
+│   └── _variables.scss
+├── _vendor/   
+│   └── {manually downloaded vendor libs}
+├── app/   
+│   ├── _common/
+│   |   ├── header/
+│   |   |   └── {header files}
+│   |   ├── footer/
+│   |   |   └── {footer files}
+│   |   └── sidebar/
+│   |       └── {sidebar files}
+│   ├── {different modules}
+│   ├── app-layout.hbs
+│   └── app.scss
+├── auth/   
+│   ├── {different modules}
+│   ├── auth-layout.hbs
+│   └── auth.scss
+└── context.js 
+
+```
+
+```build/``` folder
+
+@ToDo
+
 
 ## File Types
 
