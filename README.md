@@ -55,8 +55,7 @@ Open the project [http://localhost:4000](http://localhost:4000).
 ```src/``` folder
 
 ```
-├── _assets/   
-│   └── {application assets}
+├── _assets/                           # application assets
 ├── _common/   
 |   ├── helpers/
 |   ├── themes/
@@ -66,16 +65,12 @@ Open the project [http://localhost:4000](http://localhost:4000).
 │   ├── main.js
 │   ├── _main.scss
 │   └── _variables.scss
-├── _vendor/   
-│   └── {manually downloaded vendor libs}
+├── _vendor/                           # manually downloaded vendor libs
 ├── app/   
 │   ├── _common/
-│   |   ├── header/
-│   |   |   └── {header files}
-│   |   ├── footer/
-│   |   |   └── {footer files}
-│   |   └── sidebar/
-│   |       └── {sidebar files}
+│   |   ├── header/                    # header files
+│   |   ├── footer/                    # footer files
+│   |   └── sidebar/                   # sidebar files
 │   ├── {different modules}
 │   ├── app-layout.hbs
 │   └── app.scss
