@@ -6,6 +6,10 @@
 > This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
 > AngularJS, React and Meteor versions are coming soon.
 
+<a href="http://modularcode.github.io/modular-admin-free-dashboard-theme-html/" target="_blank">
+ ![demo](http://modularcode.github.io/modular-admin-free-dashboard-theme-html/assets/demo.png)
+</a>
+
 Demo: http://modularcode.github.io/modular-admin-free-dashboard-theme-html/
 
 ## Getting Started
