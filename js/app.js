@@ -9,6 +9,24 @@ $(function() {
 		selector: '.auth-container > .panel'
 	});
 })
+$(function() {
+	setAnimation({
+		name: 'flipInY',
+		selector: '.error-panel > .error-title-block'
+	});
+
+
+	setTimeout(function(){
+		var $el = $('.error-panel > .error-container');
+
+		setAnimation({
+			name: 'fadeInUp',
+			selector: $el 
+		});
+
+		$el.addClass('visible');
+	}, 1000);
+})
 //LoginForm validation
 $(function() {
 	if (!$('#login-form').length) {
@@ -162,24 +180,6 @@ $(function() {
 	$.extend(signupValidationSettings, validationDefaultSettings);
 
     $('#signup-form').validate(signupValidationSettings);
-})
-$(function() {
-	setAnimation({
-		name: 'flipInY',
-		selector: '.error-panel > .error-title-block'
-	});
-
-
-	setTimeout(function(){
-		var $el = $('.error-panel > .error-container');
-
-		setAnimation({
-			name: 'fadeInUp',
-			selector: $el 
-		});
-
-		$el.addClass('visible');
-	}, 1000);
 })
 //Flot Bar Chart
 $(function() {
@@ -685,17 +685,6 @@ $(function() {
 
 });
 $(function() {
-    var $el = $('#dataTables-example');
-
-    if (!$el.length) {
-        return false;
-    }
-
-	$el.DataTable({
-	    responsive: true
-	});
-});
-$(function() {
 
 	$('.box-placeholder').on('click', function() {
 
@@ -708,6 +697,17 @@ $(function() {
 	})
 
 })
+$(function() {
+    var $el = $('#dataTables-example');
+
+    if (!$el.length) {
+        return false;
+    }
+
+	$el.DataTable({
+	    responsive: true
+	});
+});
 $(function () {
 
 	$('#sidebar-menu').metisMenu({
