@@ -1246,34 +1246,6 @@ pre {
 /*************************************************************
 *					App Variables
 **************************************************************/
-.header {
-  background-color: #d7dde4;
-  height: 70px;
-  position: absolute;
-  left: 230px;
-  right: 0;
-  -webkit-transition: left 0.3s ease;
-          transition: left 0.3s ease;
-  z-index: 10; }
-  .header::after {
-    content: "";
-    display: table;
-    clear: both; }
-  @media (max-width: 767px) {
-    .header {
-      height: 50px; } }
-  .header .header-block {
-    padding: 15px;
-    line-height: 40px;
-    float: left; }
-    @media (max-width: 767px) {
-      .header .header-block {
-        padding: 5px;
-        line-height: 40px; } }
-
-/*************************************************************
-*					App Variables
-**************************************************************/
 .sidebar {
   background-color: #3a4651;
   width: 230px;
@@ -1402,6 +1374,34 @@ pre {
     .sidebar-open .sidebar-overlay {
       left: 230px;
       opacity: 1; } }
+
+/*************************************************************
+*					App Variables
+**************************************************************/
+.header {
+  background-color: #d7dde4;
+  height: 70px;
+  position: absolute;
+  left: 230px;
+  right: 0;
+  -webkit-transition: left 0.3s ease;
+          transition: left 0.3s ease;
+  z-index: 10; }
+  .header::after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (max-width: 767px) {
+    .header {
+      height: 50px; } }
+  .header .header-block {
+    padding: 15px;
+    line-height: 40px;
+    float: left; }
+    @media (max-width: 767px) {
+      .header .header-block {
+        padding: 5px;
+        line-height: 40px; } }
 
 /*************************************************************
 *					App Variables
