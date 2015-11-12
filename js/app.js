@@ -685,19 +685,6 @@ $(function() {
 
 });
 $(function() {
-
-	$('.box-placeholder').on('click', function() {
-
-		var $el = $(this);
-
-		setAnimation({
-			name: $el.data('effect'),
-			selector: $el 
-		});
-	})
-
-})
-$(function() {
     var $el = $('#dataTables-example');
 
     if (!$el.length) {
@@ -726,6 +713,19 @@ $(function () {
 	});
 	
 });
+$(function() {
+
+	$('.box-placeholder').on('click', function() {
+
+		var $el = $(this);
+
+		setAnimation({
+			name: $el.data('effect'),
+			selector: $el 
+		});
+	})
+
+})
 $(function() {
 	$('.nav-profile > li > a').on('click', function() {
 
