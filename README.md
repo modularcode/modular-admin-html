@@ -1,16 +1,16 @@
 # ModularAdmin: Free Dashboard Theme <br/>  HTML version
 
-> [ModularAdmin](http://modularcode.github.io/modular-admin-free-dashboard-theme-html/) is an open source dashboard theme
+> [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme
 > built in modular way. That makes it awesomely easy to scale, modify and maintain.
 
 > This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
 > AngularJS, React and Meteor versions are coming soon.
 
-<a href="http://modularcode.github.io/modular-admin-free-dashboard-theme-html/" target="_blank">
- ![demo](http://modularcode.github.io/modular-admin-free-dashboard-theme-html/assets/demo.png)
+<a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
+ ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
 
-Demo: http://modularcode.github.io/modular-admin-free-dashboard-theme-html/
+Demo: http://modularcode.github.io/modular-admin-html/
 
 ## Getting Started
 
@@ -22,7 +22,7 @@ npm install -g bower
 
 Clone repository to local `modular-admin` folder
 ```
-git clone git@github.com:modularcode/modular-admin-free-dashboard-theme-html.git modular-admin -b master --single-branch 
+git clone git@github.com:modularcode/modular-admin-html.git modular-admin -b master --single-branch 
 ```
 
 Change to new folder
