@@ -1,10 +1,9 @@
 var mainBowerFiles 	= require('main-bower-files');
-var path 			= require('path');
 
 var config = require('../config');
 
 var rootDir 		= config.rootDir;
-var srcDir 			= config.srcDir;
+var srcDir 		= config.srcDir;
 var destDir 		= config.destDir;
 var bowerDir 		= config.bowerDir;
 
@@ -61,7 +60,7 @@ var bowerDir 		= config.bowerDir;
 
 	exports.scripts = {
 		src: vendorSrciptFiles,
-		dest: path.resolve(destDir + "/js")
+		dest: destDir + "/js"
 	};
 
 /***********************************************
