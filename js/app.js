@@ -1,8 +1,6 @@
 var config = window.config = {};
 
-$(function() {
-	config.colorPrimary = tinycolor($("#ref").css("color"));
-});
+config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));
 $(function() {
 	setAnimation({
 		name: 'pulse',
@@ -695,6 +693,19 @@ $(function() {
 	    responsive: true
 	});
 });
+$(function() {
+
+	$('.box-placeholder').on('click', function() {
+
+		var $el = $(this);
+
+		setAnimation({
+			name: $el.data('effect'),
+			selector: $el 
+		});
+	})
+
+})
 $(function () {
 
 	$('#sidebar-menu').metisMenu({
@@ -714,19 +725,6 @@ $(function () {
 	
 });
 $(function() {
-
-	$('.box-placeholder').on('click', function() {
-
-		var $el = $(this);
-
-		setAnimation({
-			name: $el.data('effect'),
-			selector: $el 
-		});
-	})
-
-})
-$(function() {
 	$('.nav-profile > li > a').on('click', function() {
 
 		var $el = $(this).next();
@@ -739,16 +737,6 @@ $(function() {
 $(function() {
 
 	$("body").addClass("loaded");
-
-	/***********************************************
-	*            Example Code Highlight
-	***********************************************/
-
-	hljs.configure({
-		tabReplace: '    ', // 4 spaces
-	});
-
-	hljs.initHighlighting();
 
 	/***********************************************
 	*            Same height columns

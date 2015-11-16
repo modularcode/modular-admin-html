@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
 /*************************************************************
 *					App Variables
 **************************************************************/
@@ -7,7 +8,23 @@
 /*****************************************
 *       Media Query Mixins
 ******************************************/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: #4f5f6f;
+  overflow-x: hidden; }
+
+.main-wrapper {
+  width: 100%;
+  overflow-x: hidden; }
+
+#ref .color-primary {
+  color: #59c2e6; }
+
 .app {
   position: relative;
   width: 100%;
@@ -48,9 +65,6 @@
       height: 100%;
       overflow: hidden; } }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .auth-container {
   width: 450px;
   min-height: 330px;
@@ -93,39 +107,6 @@
     .auth-container .auth-content {
       padding: 30px 25px; } }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
-/*****************************************
-*       Background-image: cover mixin
-******************************************/
-/*****************************************
-*       Media Query Mixins
-******************************************/
-html,
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  min-height: 100%;
-  font-family: 'Open Sans', sans-serif;
-  color: #4f5f6f;
-  overflow-x: hidden; }
-
-.main-wrapper {
-  width: 100%;
-  overflow-x: hidden; }
-
-a:focus,
-input:focus {
-  outline: none; }
-
-#ref {
-  color: #59c2e6; }
-
-/*************************************************************
-*					App Variables
-**************************************************************/
 .dashboard-page .items {
   margin-bottom: 30px; }
 
@@ -232,13 +213,10 @@ input:focus {
     border-color: #131e26;
     color: #ffffff; }
     .alert.alert-inverse hr {
-      border-top-color: #0a1115; }
+      border-top-color: #0b1115; }
     .alert.alert-inverse .alert-link {
       color: #e6e6e6; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .btn {
   background-image: none;
   border-radius: 0;
@@ -482,9 +460,6 @@ input:focus {
       -ms-transform: scaleX(0);
           transform: scaleX(0); }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .easy-pie-chart {
   width: 50px;
   height: 50px;
@@ -492,9 +467,6 @@ input:focus {
   background-color: #d7dde4;
   border-radius: 5px; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .dropdown-menu {
   float: left;
   box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
@@ -516,9 +488,6 @@ input:focus {
       background: none;
       background-color: whitesmoke; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .form-group .row {
   margin-left: -10px;
   margin-right: -10px; }
@@ -666,9 +635,6 @@ label,
   font-style: italic;
   color: #d7dde4; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .items-list {
   list-style: none;
   padding: 0;
@@ -726,9 +692,6 @@ label,
     background-position: center;
     background-repeat: no-repeat; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .row .col {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
@@ -765,9 +728,6 @@ label,
   color: #444;
   cursor: pointer; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .underline-animation {
   position: absolute;
   top: auto;
@@ -854,9 +814,6 @@ label,
 .rounded-s {
   border-radius: 0.2rem; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 a:not(.btn) {
   display: inline-block;
   position: relative;
@@ -922,9 +879,6 @@ span a {
   border-width: 0 1px 1px 1px;
   border-color: #59c2e6; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .pagination {
   margin-top: 0; }
   .pagination .active > a,
@@ -933,9 +887,6 @@ span a {
     border-color: #59c2e6;
     background-color: #59c2e6; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .panel {
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
@@ -999,9 +950,6 @@ span a {
   .table .checkbox + span:before {
     line-height: 20px; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .title {
   font-size: 21px;
   font-weight: bold;
@@ -1164,9 +1112,6 @@ pre {
       -ms-flex-positive: 3;
           flex-grow: 3; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .dataTable_wrapper .dataTables_info,
 .dataTable_wrapper .dataTables_length,
 .dataTable_wrapper .dataTables_filter {
@@ -1243,9 +1188,6 @@ pre {
   .table-flip-scroll td:last-child {
     border-bottom: 1px solid #babcbf; } }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .header {
   background-color: #d7dde4;
   height: 70px;
@@ -1271,9 +1213,6 @@ pre {
         padding: 5px;
         line-height: 40px; } }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .sidebar {
   background-color: #3a4651;
   width: 230px;
@@ -1403,9 +1342,6 @@ pre {
       left: 230px;
       opacity: 1; } }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .header .header-block-collapse {
   padding-right: 5px; }
   .header .header-block-collapse .collapse-btn {
@@ -1422,9 +1358,39 @@ pre {
     padding-right: 10px;
     vertical-align: initial; }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
+.header .header-block-nav {
+  float: right; }
+  .header .header-block-nav::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .header .header-block-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .header .header-block-nav > ul > li {
+    float: left;
+    position: relative; }
+    .header .header-block-nav > ul > li:before {
+      display: block;
+      content: " ";
+      width: 1px;
+      height: 24px;
+      top: 50%;
+      margin-top: -12px;
+      background-color: #8b9cb1;
+      position: absolute;
+      left: 0; }
+    .header .header-block-nav > ul > li:first-child:before {
+      display: none; }
+  .header .header-block-nav > ul > li > a {
+    padding: 0 15px;
+    color: #4f5f6f; }
+    .header .header-block-nav > ul > li > a:hover {
+      color: #59c2e6; }
+  .header .header-block-nav .dropdown-menu {
+    margin-top: 18px; }
+
 .header .header-block-search {
   float: left;
   padding-left: 30px; }
@@ -1469,45 +1435,6 @@ pre {
           -ms-transform: scaleX(1);
               transform: scaleX(1); }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
-.header .header-block-nav {
-  float: right; }
-  .header .header-block-nav::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .header .header-block-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .header .header-block-nav > ul > li {
-    float: left;
-    position: relative; }
-    .header .header-block-nav > ul > li:before {
-      display: block;
-      content: " ";
-      width: 1px;
-      height: 24px;
-      top: 50%;
-      margin-top: -12px;
-      background-color: #8b9cb1;
-      position: absolute;
-      left: 0; }
-    .header .header-block-nav > ul > li:first-child:before {
-      display: none; }
-  .header .header-block-nav > ul > li > a {
-    padding: 0 15px;
-    color: #4f5f6f; }
-    .header .header-block-nav > ul > li > a:hover {
-      color: #59c2e6; }
-  .header .header-block-nav .dropdown-menu {
-    margin-top: 18px; }
-
-/*************************************************************
-*					App Variables
-**************************************************************/
 .header .header-block-nav .notifications {
   font-size: 16px; }
   .header .header-block-nav .notifications a {
@@ -1586,9 +1513,6 @@ pre {
       .header .header-block-nav .notifications-dropdown-menu:before, .header .header-block-nav .notifications-dropdown-menu:after {
         right: 107px; } }
 
-/*************************************************************
-*					App Variables
-**************************************************************/
 .header .header-block-nav .profile .img {
   display: inline-block;
   width: 30px;
