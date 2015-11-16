@@ -56,8 +56,6 @@ var bowerDir 		= config.bowerDir;
 		paths: rootDir
 	});
 
-	vendorSrciptFiles.push(srcDir + "/_vendor/**/*.js");
-
 	exports.scripts = {
 		src: vendorSrciptFiles,
 		dest: destDir + "/js"
@@ -74,8 +72,6 @@ var bowerDir 		= config.bowerDir;
 		],
 		paths: rootDir
 	});
-
-	vendorStyleFiles.push(srcDir + "/_vendor/**/*.css");
 
 	exports.styles = {
 		src: vendorStyleFiles,
