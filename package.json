@@ -1,5 +1,5 @@
 {
-  "name": "modular-admin-free-dashboard-theme-html",
+  "name": "modular-admin-html",
   "version": "0.0.3",
   "description": "ModularAdmin: Free Dashboard Theme; html version",
   "repository": {
@@ -9,22 +9,10 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html/issues"
+    "url": "https://github.com/modularcode/modular-admin-html/issues"
   },
-  "homepage": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html",
+  "homepage": "https://github.com/modularcode/modular-admin-html",
   "dependencies": {
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
-    "animate.css": "^3.4.0",
-    "datatables": "^1.10.9",
-    "flot": "^0.8.0-alpha",
-    "font-awesome": "^4.4.0",
-    "install": "^0.2.3",
-    "jquery": "^2.1.4",
-    "jquery-validation": "^1.14.0",
-    "metismenu": "^2.2.0",
-    "morris.js": "^0.5.0",
-    "npm": "^3.3.10",
-    "tinycolor2": "^1.1.2"
   },
   "devDependencies": {
     "glob": "^5.0.14",

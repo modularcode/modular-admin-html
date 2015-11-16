@@ -22,9 +22,9 @@ var destDir 	= config.destDir;
 
 	exports.scripts = {
 		src: [
-			srcDir + "/_main/config.js",
-			srcDir + "/**/!(main|context|config|*-helper)*.js",
-			srcDir + "/_main/main.js",
+			srcDir + "/config.js",
+			srcDir + "/**/!(_context|config|main|*-helper)*.js",
+			srcDir + "/main.js",
 			"!" + srcDir + "/_vendor/**"
 		],
 		dest: destDir + "/js"
@@ -34,18 +34,10 @@ var destDir 	= config.destDir;
 *		Application style files
 ************************************************/
 
-	// exports.styles = {
-	// 	src: [
-	// 		srcDir + "/_main/main.less",
-	// 		srcDir + "/**/!(main|variables|vendor|*-theme)*.less",
-	// 	],
-	// 	dest: destDir + "/css/"
-	// };
-
 	exports.styles = {
 		src: [
-			srcDir + "/_main/main.scss",
-			srcDir + "/**/!(main|variables|vendor|*-theme)*.scss",
+			srcDir + "/_main.scss",
+			srcDir + "/**/!(_main|_variables|*-theme)*.scss",
 		],
 		dest: destDir + "/css/"
 	};
