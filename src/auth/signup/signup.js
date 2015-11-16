@@ -77,7 +77,7 @@ $(function() {
 	    invalidHandler: function() {
 			setAnimation({
 				name: 'shake',
-				selector: '.auth-container > .panel'
+				selector: '.auth-container > .card'
 			});
 		}
 	}

@@ -1,64 +1,64 @@
-.panel {
+.card {
 	background-color: #fff;
 	box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
 	
 	margin-bottom: 10px;
 	border-radius: 0;
 
-	.panel-heading {
+	.card-header {
 		background-image: none;
 		color: #fff;
 		border-radius: 0;
 	}
 
-	&.panel-default {
+	&.card-default {
 
-		& > .panel-heading {
+		& > .card-header {
 			background-color: #fff;
 			color: inherit;
 		}
 	}
 
-	&.panel-primary {
+	&.card-primary {
 		border-color: $color-primary;
-		& > .panel-heading {
+		& > .card-header {
 			background-color: $color-primary;
 			border-color: $color-primary;
 		}
 	}
 
-	&.panel-success {
-		& > .panel-heading {
+	&.card-success {
+		& > .card-header {
 			background-color: $color-success;
 		}
 	}
 
-	&.panel-info {
-		& > .panel-heading {
+	&.card-info {
+		& > .card-header {
 			background-color: $color-info;
 		}
 	}
 
-	&.panel-warning {
-		& > .panel-heading {
+	&.card-warning {
+		& > .card-header {
 			background-color: $color-warning;
 		}
 	}
 
-	&.panel-danger {
-		& > .panel-heading {
+	&.card-danger {
+		& > .card-header {
 			background-color: $color-danger;
 		}
 	}
 
-	&.panel-inverse {
-		& > .panel-heading {
+	&.card-inverse {
+		& > .card-header {
 			background-color: $color-inverse;
 		}
 	}
 
 	.title-block,
-	.panel-title-block {
+	.card-title-block {
 		padding-bottom: 0;
 		margin-bottom: 20px;
 		border: none;
@@ -77,7 +77,7 @@
 }
 
 
-.panel-body {
+.card-block {
 	padding: 15px;
 
 	@include media(xl) {
@@ -89,6 +89,6 @@
 	}
 }
 
-.panel-footer {
+.card-footer {
 	background-color: #fafafa;
 }

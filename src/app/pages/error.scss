@@ -1,4 +1,4 @@
-.error-panel {
+.error-card {
 	width: 410px;
     min-height: 330px;
     margin: 60px auto;
@@ -36,7 +36,7 @@
 }
 
 @include media(md) {
-	.error-panel {
+	.error-card {
 		width: 50%;
 		
 		&.center {
@@ -49,7 +49,7 @@
 }
 
 @include media-down(sm) {
-	.error-panel {
+	.error-card {
 		width: 90%;
 
 		&.center {

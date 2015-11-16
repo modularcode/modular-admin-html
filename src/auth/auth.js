@@ -1,6 +1,6 @@
 $(function() {
 	setAnimation({
 		name: 'pulse',
-		selector: '.auth-container > .panel'
+		selector: '.auth-container > .card'
 	});
 })

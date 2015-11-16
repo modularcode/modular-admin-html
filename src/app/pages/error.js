@@ -1,12 +1,12 @@
 $(function() {
 	setAnimation({
 		name: 'flipInY',
-		selector: '.error-panel > .error-title-block'
+		selector: '.error-card > .error-title-block'
 	});
 
 
 	setTimeout(function(){
-		var $el = $('.error-panel > .error-container');
+		var $el = $('.error-card > .error-container');
 
 		setAnimation({
 			name: 'fadeInUp',
