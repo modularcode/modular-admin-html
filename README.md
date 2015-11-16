@@ -65,29 +65,27 @@ Open the project [http://localhost:4000](http://localhost:4000).
 
 ```
 ├── _assets/                           # application assets
-├── _common/   
-|   ├── helpers/
-|   ├── themes/
-|   └── styles/
-├── _main/   
-│   ├── config.js
-│   ├── main.js
-│   ├── _main.scss
-│   └── _variables.scss
-├── _vendor/                           # manually downloaded vendor libs
-├── app/   
-│   ├── _common/
+├── _common/                           # common components
+|   ├── helpers/                       # handlebars helpers
+|   └── styles/                        # application common styles
+├── _themes/                           # different theming versions
+├── app/                               # app module (dashboard view)
+│   ├── _common/                       # app common components
 │   |   ├── header/                    # header files
 │   |   ├── footer/                    # footer files
 │   |   └── sidebar/                   # sidebar files
 │   ├── {different modules}
-│   ├── app-layout.hbs
-│   └── app.scss
-├── auth/   
+│   ├── app-layout.hbs                 # app view layout
+│   └── app.scss                       # main app view styles
+├── auth/                              # auth module (login/signup/recover)
 │   ├── {different modules}
-│   ├── auth-layout.hbs
-│   └── auth.scss
-└── context.js 
+│   ├── auth-layout.hbs                # auth view layout
+│   └── auth.scss                      # main auth view styles
+├── _context.js                        # main handlebars variables
+├── _main.scss                         # main styles
+├── _variables.scss                    # variables
+├── config.js                          # javascript configs
+└── main.js                            # main script file
 
 ```
 
@@ -108,7 +106,7 @@ Open the project [http://localhost:4000](http://localhost:4000).
 
 #### Templates (*.hbs)
 
-#### Contexts (context.js)
+#### Contexts (_context.js)
 
 ## Build Tasks
  
