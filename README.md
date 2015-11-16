@@ -30,9 +30,14 @@ Change to new folder
 cd modular-admin
 ```
 
-Install project dependencies 
+Install npm dependencies 
 ```
 npm install
+```
+
+Install front-end bower dependencies 
+```
+bower install
 ```
 
 Build the project and start local web server
