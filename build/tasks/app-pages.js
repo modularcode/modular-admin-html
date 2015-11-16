@@ -72,7 +72,7 @@ function getPageContext(file) {
 	// Start going up from page directory until root directory
 	for (var activeDir = pageDir; activeDir.length >= rootDir.length; activeDir = path.resolve(activeDir, '../') ) {
 		contextPaths.push(
-			path.resolve(activeDir, 'context.js')
+			path.resolve(activeDir, '_context.js')
 		);
 	}
 
