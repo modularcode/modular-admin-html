@@ -4,18 +4,18 @@ config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));
 $(function() {
 	setAnimation({
 		name: 'pulse',
-		selector: '.auth-container > .panel'
+		selector: '.auth-container > .card'
 	});
 })
 $(function() {
 	setAnimation({
 		name: 'flipInY',
-		selector: '.error-panel > .error-title-block'
+		selector: '.error-card > .error-title-block'
 	});
 
 
 	setTimeout(function(){
-		var $el = $('.error-panel > .error-container');
+		var $el = $('.error-card > .error-container');
 
 		setAnimation({
 			name: 'fadeInUp',
@@ -51,7 +51,7 @@ $(function() {
 	    invalidHandler: function() {
 			setAnimation({
 				name: 'shake',
-				selector: '.auth-container > .panel'
+				selector: '.auth-container > .card'
 			});
 		}
 	}
@@ -82,7 +82,7 @@ $(function() {
 	    invalidHandler: function() {
 			setAnimation({
 				name: 'shake',
-				selector: '.auth-container > .panel'
+				selector: '.auth-container > .card'
 			});
 		}
 	}
@@ -170,7 +170,7 @@ $(function() {
 	    invalidHandler: function() {
 			setAnimation({
 				name: 'shake',
-				selector: '.auth-container > .panel'
+				selector: '.auth-container > .card'
 			});
 		}
 	}
@@ -663,6 +663,7 @@ $(function() {
 		$(this).siblings('.input-group-addon').removeClass('focus');
 	});
 });
+
 $(function() {
 
     if (!$('#select-all-items').length) {
@@ -706,6 +707,27 @@ $(function() {
 	})
 
 })
+$(function() {
+
+	$(".wyswyg").each(function() {
+
+		var $toolbar = $(this).find(".toolbar");
+		var $editor = $(this).find(".editor");
+
+
+		var editor = new Quill($editor.get(0), {
+			theme: 'snow'
+		});
+
+		editor.addModule('toolbar', {
+			container: $toolbar.get(0)     // Selector for toolbar container
+		});
+
+
+
+	});
+	
+});
 $(function () {
 
 	$('#sidebar-menu').metisMenu({
@@ -759,7 +781,7 @@ function setSameHeights() {
 
 	var viewport = ResponsiveBootstrapToolkit.current();
 
-	$('.sameheight').each(function() {
+	$('.sameheight-container').each(function() {
 
 		var $items = $(this).find(".sameheight-item");
 
