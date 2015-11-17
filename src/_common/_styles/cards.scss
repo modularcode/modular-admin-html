@@ -7,12 +7,56 @@
 
 	.card-header {
 		background-image: none;
+		background-color: #ffffff;
 		color: #fff;
 		border-radius: 0;
+		padding: 0;
+		min-height: 35px;
+
+		.title {
+			float: left;
+			color: #4f5f6f;
+			padding: 10px 18px;
+		}
+
+		.nav-tabs {
+			border-color: transparent;
+
+            .nav-item {
+            	margin-left: 0;
+
+                .nav-link {
+                	color: #4f5f6f;
+                	opacity: 0.7;
+                    padding: 6px 10px;
+                    border-radius: 0;
+                    font-size: 14px;
+
+                    &.active {
+	                	border-top-color: #59c2e6 ;
+	                	opacity: 1;
+
+	                	&:hover,
+	                	&:focus {
+	                		opacity: 1;
+	                		background-color: #fff;
+	                		border-color: #ddd #ddd transparent;
+	                		border-top-color: #59c2e6 ;
+	                	}
+	                }
+
+	                &:hover,
+	                &:focus {
+	                	opacity: 1;
+	                	background-color: transparent;
+	                	border-color: transparent;
+	                }
+                }
+            }
+        }
 	}
 
 	&.card-default {
-
 		& > .card-header {
 			background-color: #fff;
 			color: inherit;
@@ -79,6 +123,11 @@
 
 .card-block {
 	padding: 15px;
+
+	.tab-content {
+		padding: 0;
+		border-color: transparent;
+	}
 
 	@include media(xl) {
 		padding: 20px;
