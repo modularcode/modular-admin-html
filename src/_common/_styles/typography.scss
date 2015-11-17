@@ -1,7 +1,7 @@
 .title {
 	// font-size: 21px;
-	font-size: 1.5rem;
-	font-weight: bold;
+	font-size: 1.45rem;
+	font-weight: 600;
 	margin: 0;
 
 	// Title large
@@ -17,6 +17,7 @@
 
 	.card & {
 		font-size: 1.1rem;
+		color: $color-text;
 	}
 }
 
