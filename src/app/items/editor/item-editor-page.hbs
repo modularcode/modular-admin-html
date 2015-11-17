@@ -3,23 +3,159 @@ page: item-editor
 ---
 {{#extend "app/app-layout"}}
 	{{#content "body"}}
-	
+		
 		<div class="title-block">
 			<h3 class="title">
-				Item Name
+				Add new item
 			</h3>
-			<p class="title-description">
-				Sample item editor mode
-			</p>
 		</div>
 
-		<section class="section">
-			<div class="card">
-				<div class="card-block">
 
+		<form name="item">
+			<div class="card card-block">
+
+				<div class="form-group row">
+					<label class="col-sm-2 form-control-label text-right">
+						Name:
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control boxed" placeholder="Product name">
+					</div>
 				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 form-control-label text-right">
+						Content:
+					</label>
+					<div class="col-sm-10">
+
+						{{!-- {{> app/items/editor/wyswyg/wyswyg}} --}}
+
+						{{#editor}}
+							<h3>Hello World</h3>
+						{{/editor}}
+						
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 form-control-label text-right">
+						Images:
+					</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" placeholder="Product name">
+					</div>
+				</div>
+
+
+
+
 			</div>
-		</section>
+		</form>
+
+
+
+
+		{{!-- <form name="item">
+			<section class="section">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<input class="form-control underlined indented" 
+								placeholder="Item title">
+						</div>
+
+						<div class="card">
+							<div class="card-block">
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br><br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-header">
+								Publish
+							</div>
+							<div class="card-block">
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+							</div>
+							<div class="card-footer text-right">
+								<button type="submit" class="btn btn-primary">
+									Publish
+								</button>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header">
+								Image
+							</div>
+							<div class="card-block">
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+							</div>
+							<div class="card-footer text-right">
+								<label class="file text-left">
+									<input type="file" id="file">
+									<span class="file-custom"></span>
+								</label>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header">
+								Category
+							</div>
+							<div class="card-block">
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+			</section>
+		</form> --}}
 
 	{{/content}}
 {{/extend}}

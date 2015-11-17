@@ -75,12 +75,17 @@ label,
 }	
 
 .form-control.underlined {
-	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
 	border-radius: 0;
 	border: none;
  	border-radius: 0;
 	box-shadow: none;
 	border-bottom: 1px solid $color-divider;
+
+	&.indented {
+		padding: .375rem .75rem;
+	}
 
 	.has-error &:focus,
 	.has-warning &:focus,
