@@ -53,7 +53,7 @@
 											<li>
 												<a href="" class="notification-item">
 													<div class="img-col">
-														<div class="img" style="background-image: url('assets/faces/3.jpg')"></div>
+														<div class="img" style="background-image: url('')"></div>
 													</div>
 													<div class="body-col">
 														<p>
@@ -66,7 +66,7 @@
 											<li>
 												<a href="" class="notification-item">
 													<div class="img-col">
-														<div class="img" style="background-image: url('assets/faces/5.jpg')"></div>
+														<div class="img" style="background-image: url('')"></div>
 													</div>
 													<div class="body-col">
 														<p>
@@ -79,7 +79,7 @@
 											<li>
 												<a href="" class="notification-item">
 													<div class="img-col">
-														<div class="img" style="background-image: url('assets/faces/8.jpg')"></div>
+														<div class="img" style="background-image: url('')"></div>
 													</div>
 													<div class="body-col">
 														<p>
@@ -377,7 +377,7 @@
 						Name:
 					</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control boxed" placeholder="Product name">
+						<input type="text" class="form-control boxed" placeholder="Item name">
 					</div>
 				</div>
 
@@ -518,10 +518,71 @@
 
 				<div class="form-group row">
 					<label class="col-sm-2 form-control-label text-right">
+						Category:
+					</label>
+					<div class="col-sm-10">
+						<select class="c-select form-control boxed">
+							<option selected>Select Category</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 form-control-label text-right">
 						Images:
 					</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" placeholder="Product name">
+						<div class="images-container">
+								<div class="image-container">
+									<div class="controls">
+										<div class="control-btn move pull-right">
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+
+
+									<div class="image" style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')"></div>
+								</div>
+								<div class="image-container">
+									<div class="controls">
+										<div class="control-btn move pull-right">
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+
+
+									<div class="image" style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')"></div>
+								</div>
+								<div class="image-container">
+									<div class="controls">
+										<div class="control-btn move pull-right">
+											<i class="fa fa-arrows"></i>
+										</div>
+									</div>
+
+
+									<div class="image" style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')"></div>
+								</div>
+							<a href="">
+								<div class="image-container new">
+									<div class="image" >
+										add new
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<div class="col-sm-10 col-sm-offset-2">
+						<button type="submit" class="btn btn-primary">
+							Submit
+						</button>
 					</div>
 				</div>
 
@@ -530,9 +591,6 @@
 
 			</div>
 		</form>
-
-
-
 
 
 				</article>
