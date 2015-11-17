@@ -4,7 +4,11 @@
 	.toolbar,
 	.ql-picker-label,
 	.ql-picker-options {
-		background-color: lighten($color-divider, 10%) !important;
+		// background-color: lighten($color-divider, 10%) !important;
+	}
+
+	.ql-container {
+		border-top: 1px solid $color-divider;
 	}
 
 	.toolbar {
