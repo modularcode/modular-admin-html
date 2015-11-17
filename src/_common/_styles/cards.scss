@@ -1,6 +1,10 @@
 .card {
 	background-color: #fff;
 	box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+
+	.card {
+		box-shadow: none;
+	}
 	
 	margin-bottom: 10px;
 	border-radius: 0;
