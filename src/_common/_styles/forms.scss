@@ -74,25 +74,18 @@ label,
 	font-weight: 600;
 }	
 
-.form-control {
+.form-control.underlined {
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 0;
 	border: none;
  	border-radius: 0;
 	box-shadow: none;
-
-	// Old version
 	border-bottom: 1px solid $color-divider;
-	padding: 0;
 
-	&.boxed {
-		padding-left: 10px;
-	    border: 1px solid $color-divider;
-	    
-	    &:focus {
-	    	border: 1px solid $color-primary;
-	    }
+	&.indented {
+		padding: .375rem .75rem;
 	}
-	
-	// New version
 
 	.has-error &:focus,
 	.has-warning &:focus,
@@ -117,6 +110,15 @@ label,
 		box-shadow: none;
 		border-color: $color-success;
 	}
+}
+
+.form-control.boxed {
+    border-radius: 0;
+    box-shadow: none;
+    
+    &:focus {
+    	border: 1px solid $color-primary;
+    }
 }
 
 .radio,

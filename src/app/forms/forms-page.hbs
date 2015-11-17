@@ -3,17 +3,247 @@ page: forms
 ---
 {{#extend "app/app-layout"}}
 	{{#content "body"}}
+
 		<div class="title-block">
 			<h3 class="title">
 				Forms
 			</h3>
-			<p class="subtitle">
+			<p class="title-description">
 				Sample form elements
 			</p>
 		</div>
 
+		<div class="subtitle-block">
+			<h3 class="subtitle">
+				Modular Admin Inputs
+			</h3>
+		</div>
+
 		<section class="section">
-			<div class="row sameheight">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Underlined Inputs
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Underlined Inputs Validation
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Boxed Inputs
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Boxed Inputs Validation
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Interactive Inputs
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Interactive Inputs Validation
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Radio Types
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Checkbox Types
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="subtitle-block">
+			<h3 class="subtitle">
+				Bootstrap Inputs
+			</h3>
+		</div>
+
+
+		<section class="section">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Default Bootstrap Inputs
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Default Bootstrap Inputs Validation
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Custom Bootstrap Checkboxes/Radios
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Custom Bootstrap Select/File
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<div class="subtitle-block">
+			<h3 class="subtitle">
+				Input Sizing
+			</h3>
+		</div>
+
+		<section class="section">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Control Sizing
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Column sizing
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="subtitle-block">
+			<h3 class="subtitle">
+				Form Layouts
+			</h3>
+		</div>
+
+		<section class="section">
+			<div class="row sameheight-container">
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Basic Forms
+							</h3>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card card-block">
+						<div class="panel-title-block">
+							<h3 class="title">
+								Inline Forms
+							</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{{!-- <section class="section">
+			<div class="row sameheight-container">
 
 				<div class="col-md-6">
 					{{> app/forms/basic-form/basic-form}}
@@ -27,7 +257,7 @@ page: forms
 		</section>
 
 		<section class="section">
-			<div class="row sameheight">
+			<div class="row sameheight-container">
 
 				<div class="col-md-6">
 					{{> app/forms/input-types/input-types}}
@@ -41,7 +271,7 @@ page: forms
 		</section>
 
 		<section class="section">
-			<div class="row sameheight">
+			<div class="row sameheight-container">
 
 				<div class="col-md-6">
 					{{> app/forms/boxed/boxed}}
@@ -55,7 +285,7 @@ page: forms
 		</section>
 
 		<section class="section">
-			<div class="row sameheight">
+			<div class="row sameheight-container">
 
 				<div class="col-md-6">
 					{{> app/forms/radios/radios}}
@@ -69,7 +299,7 @@ page: forms
 		</section>
 
 		<section class="section">
-			<div class="row sameheight">
+			<div class="row sameheight-container">
 
 				<div class="col-md-6">
 					{{> app/forms/selects/selects}}
@@ -80,6 +310,6 @@ page: forms
 				</div>
 
 			</div>
-		</section>
+		</section> --}}
 	{{/content}}
 {{/extend}}

@@ -1,22 +1,30 @@
 .card {
 	background-color: #fff;
 	box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+
+	.card {
+		box-shadow: none;
+	}
 	
 	margin-bottom: 10px;
 	border-radius: 0;
+	border: none;
 
 	.card-header {
 		background-image: none;
 		background-color: #ffffff;
 		color: #fff;
 		border-radius: 0;
-		padding: 0;
 		min-height: 35px;
 
 		.title {
 			float: left;
 			color: #4f5f6f;
 			padding: 10px 18px;
+		}
+
+		&.with-nav-tabs {
+			padding: 0;
 		}
 
 		.nav-tabs {
@@ -57,6 +65,7 @@
 	}
 
 	&.card-default {
+
 		& > .card-header {
 			background-color: #fff;
 			color: inherit;
