@@ -23,7 +23,7 @@ function setSameHeights() {
 
 	var viewport = ResponsiveBootstrapToolkit.current();
 
-	$('.sameheight').each(function() {
+	$('.sameheight-container').each(function() {
 
 		var $items = $(this).find(".sameheight-item");
 
