@@ -219,3 +219,15 @@
 		}
 	}
 }
+
+.customize {
+	height: 200px;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.5);
+	padding: 5px 15px;
+	text-align: center;
+
+	.customize-header{
+		margin-bottom: 10px;
+	}
+}
