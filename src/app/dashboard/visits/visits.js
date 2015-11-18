@@ -15,7 +15,7 @@ $(function() {
        var chartSelector = "#dashboard-" + item + "-chart";
 
        if ($(chartSelector).has('svg').length) {
-            return false;
+            $(chartSelector).empty();
        }
 
        switch(item){
