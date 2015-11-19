@@ -356,7 +356,80 @@
 						</nav>
 					
 						<footer class="sidebar-footer">
-					
+							<ul class="nav metismenu" id="customize">
+								<li>
+									<ul>
+										<li>
+											<div class="customize">
+												<div class="row customize-header">
+													<div class="col-xs-4">
+													</div>
+													<div class="col-xs-4">
+														fixed
+													</div>
+													<div class="col-xs-4">
+														static
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-4">
+														Sidebar:
+													</div>
+													<div class="col-xs-4">
+														<label>
+								                            <input class="radio" type="radio" name="sidebar" checked="checked">
+								                            <span></span>
+								                        </label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+								                            <input class="radio" type="radio" name="sidebar">
+								                            <span></span>
+								                        </label>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-4">
+														Header:
+													</div>
+													<div class="col-xs-4">
+														<label>
+								                            <input class="radio" type="radio" name="Header" checked="checked">
+								                            <span></span>
+								                        </label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+								                            <input class="radio" type="radio" name="Header">
+								                            <span></span>
+								                        </label>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-4">
+														Footer:
+													</div>
+													<div class="col-xs-4">
+														<label>
+								                            <input class="radio" type="radio" name="footer" checked="checked">
+								                            <span></span>
+								                        </label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+								                            <input class="radio" type="radio" name="footer">
+								                            <span></span>
+								                        </label>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<a href="">
+										<i class="fa fa-cog"></i> Customize
+									</a>
+								</li>
+							</ul>
 						</footer>
 					</aside>
 					<div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -484,15 +557,35 @@
 					</div>				</div>
 				<div class="col col-xs-12 col-sm-6 col-md-6 col-xl-7 visits-col">
 					<div class="card sameheight-item" data-exclude="xs">
+						<div class="card-header with-nav-tabs">
+							<h3 class="title">Visits</h3>
+					        <ul class="nav nav-tabs pull-right" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" href="#visits" role="tab" data-toggle="tab">Visits</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#downloads" role="tab" data-toggle="tab">Downloads</a>
+								</li>
+							</ul>
+					    </div>
 						<div class="card-block">
-							<h4 class="title">
-								Visits
-							</h4>
-							<p class="title-description">
-								Number of unique visits last 30 days
-							</p>
+							
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active fade in" id="visits">
+									<p class="subtitle">
+										Number of unique visits last 30 days
+									</p>
 					
-							<div id="dashboard-visits-chart"></div>
+									<div id="dashboard-visits-chart"></div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="downloads">
+									<p class="subtitle">
+										Number of downloads last 30 days
+									</p>
+					
+									<div id="dashboard-downloads-chart"></div>
+								</div>
+							</div>
 						</div>
 					</div>				</div>
 			</div>
@@ -658,7 +751,27 @@
 
 				</article>
 
-			</div>
+
+				<div class="modal fade" id="modal-media">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									<span class="sr-only">Close</span>
+								</button>
+								<h4 class="modal-title">Media Library</h4>
+							</div>
+							<div class="modal-body">
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Insert Selected</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->			</div>
 		</div>	
 		<!-- Reference block for JS -->
 		<div class="ref" id="ref">
