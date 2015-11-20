@@ -1,15 +1,27 @@
 .sidebar {
 	background-color: $color-primary-dark;
 	width: $sidebar-width;
+	padding-bottom: 60px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	transition: left 0.3s ease;
+	z-index: 20;
+
+
+	@include media-down(md) {
+		left: -$sidebar-width;
+	}
 
 	.sidebar-open & {
+		left: 0;
 		overflow-y: auto;
 		overflow-x: hidden;
+	}
+
+	.sidebar-fixed & {
+		position: fixed;
 	}
 
 	.brand {
@@ -202,19 +214,20 @@
 	z-index: 5;
 	opacity: 0;
 	transition: opacity 0.3s ease;
+	z-index: 15;
 
 	@include media-down(md) {
 		display: block;
 	}
 
 	@include media-down(sm) {
-		background-color: fade(#000, 30%);
+		background-color: fade-out(#000, 0.3);
 	}
 
 
 	.sidebar-open & {
 		@include media-down(md) {
-			left: $sidebar-width;
+			left: 0;
 			opacity: 1;
 		}
 	}
