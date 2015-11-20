@@ -99,6 +99,11 @@
 	background-image: none;
 	background-color: #fff;
 	padding: 15px 30px;
+
+	&.jumbotron-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .rounded {
