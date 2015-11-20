@@ -89,7 +89,6 @@
 						&.active {
 							position: relative;
 							font-family: FontAwesome;
-							font-style: italic;
 							font-size: 17px;
 							line-height: 17px;
 
@@ -97,7 +96,7 @@
 								content: "\f00c";
 								position: absolute;
 								top: 0;
-								left: -1px;
+								left: 0;
 								color: #fff;
 							}
 						}
