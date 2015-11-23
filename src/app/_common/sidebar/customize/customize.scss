@@ -4,13 +4,13 @@
 	left: 0;
 	width: $sidebar-width;
 
-	.customize {
-		
+	.customize {	
 		width: $sidebar-width;
 		color: fade-out($color-text-inverse, 0.5);
-		background-color: $color-primary-dark;
+		background-color: $color-primary-darker;
 		text-align: center;
-		padding: 5px 15px;
+		padding: 10px 15px;
+		border-top: 3px solid $color-primary;
 
 		.customize-item {
 			margin-bottom: 15px;
