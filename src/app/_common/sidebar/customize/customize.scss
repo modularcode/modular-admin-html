@@ -10,7 +10,7 @@
 		background-color: $color-primary-darker;
 		text-align: center;
 		padding: 10px 15px;
-		border-top: 3px solid $color-primary;
+		border-top: 2px solid $color-primary;
 
 		.customize-item {
 			margin-bottom: 15px;
@@ -105,6 +105,7 @@
 			}
 		}
 	}
+
 
 
 	.sidebar-open & {
