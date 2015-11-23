@@ -1,33 +1,20 @@
 <div class="sameheight-item projects" data-exclude="xs">
-	<div class="item">
-		<div class="card">
-			<div class="card-block">
-				<br><br>
+	<div class="card item">
+		{{#each projects}}
+			<div class="card-block item-block">
+				<div class="item-col logo-block">
+					<img class="logo" src="{{this.image}}">
+				</div>
+				<div class="item-col title-block">
+					<h4 class="title">{{this.title}}</h4>
+					<p class="description">{{this.description}}</p>
+				</div>
+				<div class="item-col time-block hidden-xs-down">
+					<p>Last change</p>
+					<small>{{this.date}}</small>
+				</div>
 			</div>
-		</div>
+		{{/each}}
 	</div>
 
-	<div class="item">
-		<div class="card">
-			<div class="card-block">
-				<br><br>
-			</div>
-		</div>
-	</div>
-
-	<div class="item">
-		<div class="card">
-			<div class="card-block">
-				<br><br>
-			</div>
-		</div>
-	</div>
-
-	<div class="item">
-		<div class="card">
-			<div class="card-block">
-				<br><br>
-			</div>
-		</div>
-	</div>
 </div>
