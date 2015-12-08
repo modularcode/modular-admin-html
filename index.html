@@ -356,79 +356,126 @@
 						</nav>
 					
 						<footer class="sidebar-footer">
-							<ul class="nav metismenu" id="customize">
+							<ul class="nav metismenu" id="customize-menu">
 								<li>
 									<ul>
-										<li>
-											<div class="customize">
+										<li class="customize">
+											<div class="customize-item">
 												<div class="row customize-header">
 													<div class="col-xs-4">
 													</div>
 													<div class="col-xs-4">
-														fixed
+														<label class="title">fixed</label>
 													</div>
 													<div class="col-xs-4">
-														static
+														<label class="title">static</label>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-xs-4">
-														Sidebar:
+														<label class="title">Sidebar:</label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-								                            <input class="radio" type="radio" name="sidebar" checked="checked">
-								                            <span></span>
-								                        </label>
+									                        <input class="radio" type="radio" name="sidebar" checked="checked">
+									                        <span></span>
+									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-								                            <input class="radio" type="radio" name="sidebar">
-								                            <span></span>
-								                        </label>
+									                        <input class="radio" type="radio" name="sidebar">
+									                        <span></span>
+									                    </label>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-xs-4">
-														Header:
+														<label class="title">Header:</label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-								                            <input class="radio" type="radio" name="Header" checked="checked">
-								                            <span></span>
-								                        </label>
+									                        <input class="radio" type="radio" name="Header" checked="checked">
+									                        <span></span>
+									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-								                            <input class="radio" type="radio" name="Header">
-								                            <span></span>
-								                        </label>
+									                        <input class="radio" type="radio" name="Header">
+									                        <span></span>
+									                    </label>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-xs-4">
-														Footer:
+														<label class="title">Footer:</label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-								                            <input class="radio" type="radio" name="footer" checked="checked">
-								                            <span></span>
-								                        </label>
+									                        <input class="radio" type="radio" name="footer" checked="checked">
+									                        <span></span>
+									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-								                            <input class="radio" type="radio" name="footer">
-								                            <span></span>
-								                        </label>
+									                        <input class="radio" type="radio" name="footer">
+									                        <span></span>
+									                    </label>
 													</div>
 												</div>
+											</div>
+											<div class="customize-item">
+												<div class="row customize-header">
+													<div class="col-xs-4">
+													</div>
+													<div class="col-xs-4">
+														<label class="title">boxed</label>
+													</div>
+													<div class="col-xs-4">
+														<label class="title">full</label>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-4">
+														<label class="title">Container:</label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="container" checked="checked">
+									                        <span></span>
+									                    </label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="container">
+									                        <span></span>
+									                    </label>
+													</div>
+												</div>
+											</div>
+											<div class="customize-item">
+												<ul class="customize-colors">
+													<li>
+														<span class="color-item color-red"></span>
+													</li>
+													<li>
+														<span class="color-item color-orange"></span>
+													</li>
+													<li>
+														<span class="color-item color-green"></span>
+													</li>
+													<li>
+														<span class="color-item color-blue active"></span>
+													</li>
+													<li>
+														<span class="color-item color-purple"></span>
+													</li>
+												</ul>
 											</div>
 										</li>
 									</ul>
 									<a href="">
 										<i class="fa fa-cog"></i> Customize
-									</a>
-								</li>
+									</a>			</li>
 							</ul>
 						</footer>
 					</aside>
@@ -572,14 +619,14 @@
 							
 							<div class="tab-content">
 								<div role="tabpanel" class="tab-pane active fade in" id="visits">
-									<p class="subtitle">
+									<p class="title-description">
 										Number of unique visits last 30 days
 									</p>
 					
 									<div id="dashboard-visits-chart"></div>
 								</div>
 								<div role="tabpanel" class="tab-pane fade" id="downloads">
-									<p class="subtitle">
+									<p class="title-description">
 										Number of downloads last 30 days
 									</p>
 					
@@ -701,37 +748,87 @@
 			<div class="row sameheight-container">
 				<div class="col-md-8">
 					<div class="sameheight-item projects" data-exclude="xs">
-						<div class="item">
-							<div class="card">
-								<div class="card-block">
-									<br><br>
+						<div class="card item">
+								<div class="card-block item-block">
+									<div class="item-col logo-block">
+										<img class="logo" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg">
+									</div>
+									<div class="item-col title-block">
+										<h4 class="title">Project A</h4>
+										<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
+									</div>
+									<div class="item-col time-block hidden-xs-down">
+										<p>Last change</p>
+										<small>Yesterday at 11:20 am</small>
+									</div>
 								</div>
-							</div>
+								<div class="card-block item-block">
+									<div class="item-col logo-block">
+										<img class="logo" src="https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg">
+									</div>
+									<div class="item-col title-block">
+										<h4 class="title">Project C</h4>
+										<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
+									</div>
+									<div class="item-col time-block hidden-xs-down">
+										<p>Last change</p>
+										<small>2 days ago</small>
+									</div>
+								</div>
+								<div class="card-block item-block">
+									<div class="item-col logo-block">
+										<img class="logo" src="https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg">
+									</div>
+									<div class="item-col title-block">
+										<h4 class="title">Project D</h4>
+										<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
+									</div>
+									<div class="item-col time-block hidden-xs-down">
+										<p>Last change</p>
+										<small>few minutes ago</small>
+									</div>
+								</div>
+								<div class="card-block item-block">
+									<div class="item-col logo-block">
+										<img class="logo" src="https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg">
+									</div>
+									<div class="item-col title-block">
+										<h4 class="title">Project K</h4>
+										<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
+									</div>
+									<div class="item-col time-block hidden-xs-down">
+										<p>Last change</p>
+										<small>Monday at 08:20 pm</small>
+									</div>
+								</div>
+								<div class="card-block item-block">
+									<div class="item-col logo-block">
+										<img class="logo" src="https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg">
+									</div>
+									<div class="item-col title-block">
+										<h4 class="title">Project W</h4>
+										<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
+									</div>
+									<div class="item-col time-block hidden-xs-down">
+										<p>Last change</p>
+										<small>1 week ago</small>
+									</div>
+								</div>
+								<div class="card-block item-block">
+									<div class="item-col logo-block">
+										<img class="logo" src="https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg">
+									</div>
+									<div class="item-col title-block">
+										<h4 class="title">Project Z</h4>
+										<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
+									</div>
+									<div class="item-col time-block hidden-xs-down">
+										<p>Last change</p>
+										<small>a month ago</small>
+									</div>
+								</div>
 						</div>
 					
-						<div class="item">
-							<div class="card">
-								<div class="card-block">
-									<br><br>
-								</div>
-							</div>
-						</div>
-					
-						<div class="item">
-							<div class="card">
-								<div class="card-block">
-									<br><br>
-								</div>
-							</div>
-						</div>
-					
-						<div class="item">
-							<div class="card">
-								<div class="card-block">
-									<br><br>
-								</div>
-							</div>
-						</div>
 					</div>				</div>
 				<div class="col-md-4">
 					<div class="card sameheight-item" data-exclude="xs">

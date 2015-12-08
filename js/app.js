@@ -818,7 +818,7 @@ $(function() {
 });
 $(function () {
 
-	$('#sidebar-menu, #customize').metisMenu({
+	$('#sidebar-menu, #customize-menu').metisMenu({
 		activeClass: 'open'
 	});
 
@@ -834,16 +834,6 @@ $(function () {
 	});
 	
 });
-$(function() {
-	$('.nav-profile > li > a').on('click', function() {
-
-		var $el = $(this).next();
-		setAnimation({
-			name: 'flipInX',
-			selector: $el
-		});
-	});
-})
 var modalMedia = {
 	$el: $("#modal-media"),
 	result: {},
@@ -867,6 +857,24 @@ var modalMedia = {
 		}
 	}
 };
+$(function() {
+	$('.nav-profile > li > a').on('click', function() {
+
+		var $el = $(this).next();
+		setAnimation({
+			name: 'flipInX',
+			selector: $el
+		});
+	});
+})
+$(function () {
+
+	$('.color-item').on('click', function(){
+		$('.color-item').removeClass('active');
+		$(this).addClass('active');
+	});
+	
+});
 $(function() {
 
 	$("body").addClass("loaded");
