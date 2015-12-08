@@ -7,11 +7,11 @@
 	left: 0;
 	background-color: $color-bg;
 	box-shadow: 0 0 3px #ccc;
-	transition: left 0.3s ease; 
+	transition: left 0.3s ease, padding-left 0.3s ease; 
 	overflow: hidden;
 
 	.boxed & {
-		// max-width: $screen-lg-min;
+		max-width: 1200px;
 	}
 
 	.content {
@@ -53,18 +53,19 @@
 
 
 	@include media-down(md) {
+		padding-left: 0;
 		// background-color: #ccc;
-		left: -$sidebar-width;
-		width: calc(100% + #{$sidebar-width});
+		// left: -$sidebar-width;
+		// width: calc(100% + #{$sidebar-width});
 	}
 	
 	&.sidebar-open {
 		// Disable content scrolling when sidebar is open
 		@include media-down(md) {
 			left: 0;
-			position: absolute;
-			height: 100%;
-			overflow: hidden;
+			// position: absolute;
+			// height: 100%;
+			// overflow: hidden;
 		}
 	}
 

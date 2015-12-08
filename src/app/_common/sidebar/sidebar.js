@@ -1,6 +1,6 @@
 $(function () {
 
-	$('#sidebar-menu, #customize').metisMenu({
+	$('#sidebar-menu,#customize-menu').metisMenu({
 		activeClass: 'open'
 	});
 

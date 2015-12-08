@@ -11,12 +11,19 @@
 	z-index: 10;
 
 	@include clearfix();
-	// @include accelerate();
+
+	@include media-down(md) {
+		left: 0;
+	}
 
 	@include media-down(sm) {
+		left: 0;
 		height: $header-height-xs;
 	}
 
+	.header-fixed & {
+		position: fixed;
+	}
 
 	.header-block {
 		padding: 15px;
@@ -28,7 +35,4 @@
 			line-height: $header-height-xs - 10px;
 		}
 	}
-
-	
-	
 }
