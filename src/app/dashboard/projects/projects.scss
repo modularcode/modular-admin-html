@@ -1,55 +1,10 @@
-.dashboard-page {
-	.projects {
-		.item {
-			.item-block {
-				display: table;
-				width: 100%;
-				padding: 0;
-
-				p {
-					padding: 0;
-					margin:0;
-				}
-
-				.item-col {
-					display: table-cell;
-					vertical-align: top;
-					padding: 10px 15px;
-					cursor: pointer;
-
-					&.logo-block {
-						width: 15%;
-
-						.logo {
-							height: 60px;
-							width: 60px;
-							border-radius: 5px;
-						}
-					}
-
-					&.title-block {
-						width: 50%;
-
-						.title {
-							font-size: 16px;
-						}
-
-						.description {
-							font-size: 14px;
-						}	
-					}
-
-					&.time-block {
-						width: 35%;
-					}
-					
-
-					small {
-						font-size: 12px;
-					}
-				}
-
-			}
+.dashboard-page .projects {
+	.item-description {
+		margin-bottom: 0;
+		
+		@include media-down(sm) {
+			margin-bottom: 1rem;
 		}
 	}
+
 }
