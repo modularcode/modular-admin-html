@@ -8,7 +8,59 @@
 	</div>
 
 
+
 	<ul class="items-list striped">
+		{{#each items}}
+			<li class="item">
+				<div class="item-row">
+					<div class="item-col fixed item-col-img">
+						<a href="">
+							<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
+						</a>
+					</div>
+					<div class="item-col">
+						<div class="item-title-block">
+							<a href="">
+								<h4 class="item-title">
+									{{this.title}}
+								</h4>
+							</a>
+						</div>
+						<div class="item-footer item-date-block text-xs-right small">
+							<a href="#">
+								<i class="fa fa-comment"></i> 13
+							</a> | 
+							{{this.date}}
+						</div>
+					</div>
+				</div>
+			</li>
+		{{/each}}
+	</ul>
+
+
+
+	{{!-- {{#each items}}
+		<div class="item">
+			<div class="item-row">
+				<div class="item-col">
+					<a href="">
+						<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
+					</a>
+				</div>
+				<div class="item-col">
+					<div class="item-title">
+						{{this.title}}
+					</div>
+					<div class="item-date">
+						{{this.date}}
+					</div>
+				</div>
+			</div>
+		</div>
+	{{/each}} --}}
+
+	{{!-- <ul class="items-list striped">
 		{{#each items}}
 			<li>
 				<div class="item-col col-img">
@@ -16,16 +68,18 @@
 						<div class="img rounded" style="background-image: url({{this.img}})"></div>
 					</a>
 				</div>
-				<div class="item-col  col-title">
-					<a href="">
-						<strong>
-							{{this.title}}
-						</strong>
-					</a>
+				<div class="item-col  col-body">
+					<div>
+						<a href="">
+							<strong>
+								{{this.title}}
+							</strong>
+						</a>
+					</div>
+					<div>
+						{{this.date}}
+					</div>
 				</div>
-				{{!-- <div class="item-col  col-date hidden-md">
-					{{this.date}}
-				</div> --}}
 			</li>
 		{{/each}}
 		<li class="items-list-footer text-center">
@@ -35,5 +89,6 @@
 				</a>
 			</div>
 		</li>
-	</ul>
+	</ul> --}}
+
 </div>

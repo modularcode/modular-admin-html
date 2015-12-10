@@ -1,10 +1,19 @@
 .pagination {
 	margin-top: 0;
 
-	.active > a,
-	.active > a:focus, 
-	.active > a:hover {
-		border-color: $color-primary;
-		background-color: $color-primary;
+	.page-item {
+		.page-link {
+			color: $color-primary;
+		}
+
+		&.active {
+			.page-link,
+			.page-link:focus,
+			.page-link:hover {
+				color: #fff;
+				border-color: $color-primary;
+				background-color: $color-primary;
+			}
+		}
 	}
 }

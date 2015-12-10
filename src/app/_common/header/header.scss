@@ -1,7 +1,4 @@
 .header {
-
-	$line-height: $header-height - 30px;
-
 	background-color: $color-divider;
 	height: $header-height;
 	position: absolute;
@@ -10,7 +7,10 @@
 	transition: left 0.3s ease;
 	z-index: 10;
 
-	@include clearfix();
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 
 	@include media-down(md) {
 		left: 0;
@@ -26,13 +26,10 @@
 	}
 
 	.header-block {
-		padding: 15px;
-		line-height: $line-height;
-		float: left;
-
+		margin-right: 15px;
+		
 		@include media-down(sm) {
 			padding: 5px;
-			line-height: $header-height-xs - 10px;
 		}
 	}
 }

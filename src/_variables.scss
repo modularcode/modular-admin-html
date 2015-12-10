@@ -1,5 +1,10 @@
 /*************************************************************
-*					App Variables
+*						App Variables
+**************************************************************/
+
+
+/*************************************************************
+*							Colors
 **************************************************************/
 
 $color-primary: #59c2e6 !default;
@@ -26,8 +31,14 @@ $color-btn-primary: $color-primary !default;
 $color-btn-primary-text: $color-text-inverse !default;
 
 
+/*************************************************************
+*					      Layouts
+**************************************************************/
+
+
 $header-height: 70px !default;
 $header-height-xs: 50px !default;
+
 
 $content-padding-x-lg: 50px !default;
 $content-padding-y-lg: 50px !default;
@@ -40,6 +51,13 @@ $content-padding-y-sm: 25px !default;
 
 $content-padding-x-xs: 10px !default;
 $content-padding-y-xs: 15px !default;
+
+
+$card-padding-x: 15px !default;
+$card-padding-x-xl: 20px !default;
+$card-padding-x-sm: 10px !default;
+
+
 
 $sidebar-width: 230px !default;
 $btn-radius: 25px !default;

@@ -51,9 +51,7 @@
 		.notifications-container {
 			.notification-item {
 				border-bottom: 1px solid $color-dropbown-border;
-				padding: 0;
-				padding-top: 5px;
-				padding-bottom: 5px;
+				padding: 5px;
 
 				&:hover {
 					background-color: $color-dropdown-link-hover-bg;

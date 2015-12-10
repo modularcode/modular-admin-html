@@ -131,7 +131,7 @@
 
 
 .card-block {
-	padding: 15px;
+	padding: $card-padding-x;
 
 	.tab-content {
 		padding: 0;
@@ -139,11 +139,11 @@
 	}
 
 	@include media(xl) {
-		padding: 20px;
+		padding: $card-padding-x-xl;
 	}
 
 	@include media-down(sm) {
-		padding: 10px;
+		padding: $card-padding-x-sm;
 	}
 }
 

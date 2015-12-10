@@ -1,7 +1,7 @@
 .header .header-block-search {
 	$line-height: $header-height - 30px;
 
-	float: left;
+	// float: left;
 	padding-left: $content-padding-x-md;
 
 	@include media-down(sm) {
@@ -45,6 +45,7 @@
 			background-color: inherit;
 			border: none;
 			padding-left: 25px;
+			height: 40px;
 
 			@include media-down(sm) {
 				max-width: 140px;

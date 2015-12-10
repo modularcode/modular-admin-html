@@ -1,0 +1,112 @@
+/* *******************************************
+*			Item general styles
+********************************************** */
+
+.item {
+	display: flex;
+	flex-direction: column;
+
+	.item-row {
+		display: flex;
+		align-items: stretch;
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
+
+	.item-col {
+		display: flex;
+		padding: 10px;
+		flex-grow: 1;
+		flex-shrink: 1;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		&.fixed {
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: auto;
+		}
+
+		& > div {
+			width: 100%;
+		}
+	}
+
+	.item-col+.item-col {
+		padding-left: 0;
+	}
+
+	.item-footer {
+		align-self: flex-end;
+	}
+}
+
+/* *******************************************
+*				Item components
+********************************************** */
+
+.item {
+	.item-col-img {
+		width: 90px;
+
+		&.sm {
+			width: 70px;
+		}
+
+		&.lg {
+			width: 110px;
+		}
+
+		&.xl {
+			width: 130px;
+		}
+	}
+
+	.item-img {
+		width: 60px;
+	    height: 60px;
+	    background-color: #efefef;
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+
+	    .sm &,
+	    &.sm {
+	    	width: 40px;
+	    	height: 40px;
+	    }
+
+	    .lg &,
+	    &.lg {
+	    	width: 80px;
+	    	height: 80px;
+	    }
+	}
+}
+
+.item-title {
+	font-size: 1.1rem;
+}
+
+
+/* *******************************************
+*				Adjustments
+********************************************** */
+
+// Item which is located inside card inside items-list
+.card > .items-list .item-col-img {
+
+	padding-left: $card-padding-x;
+
+	@include media(xl) {
+		padding-left: $card-padding-x-xl;
+	}
+
+	@include media-down(sm) {
+		padding-left: $card-padding-x-sm;
+	}
+}
+
+
+
+

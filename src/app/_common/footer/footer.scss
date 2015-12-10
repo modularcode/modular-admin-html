@@ -1,0 +1,28 @@
+.footer {
+	background-color: #fff;
+	position: absolute;
+	left: $sidebar-width;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.footer-fixed & {
+		position: fixed;
+	}
+
+
+	.footer-block {
+		vertical-align: middle;
+		margin-left: 20px;
+		margin-right: 20px;
+		// line-height: 30px;
+	}
+
+	.footer-github-btn {
+		vertical-align: middle;
+	}
+
+}
