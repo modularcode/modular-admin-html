@@ -61,6 +61,11 @@ gulp.task('watch', function() {
 	plugins.watch(paths.app.styles.src, function() {
 	    gulp.start('app-styles');
 	});
+
+	// When theme changes recompile themes
+	plugins.watch(paths.app.themes.src, function() {
+	    gulp.start('app-themes');
+	});
 });
 
 // Builds and deploys to github pages
