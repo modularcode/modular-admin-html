@@ -109,4 +109,15 @@ Open the project [http://localhost:4000](http://localhost:4000).
 #### Contexts (_context.js)
 
 ## Build Tasks
- 
+
+
+## Get in touch
+
+Usually we're discussing stuff [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/).
+Feel free to reach us for any questions, sugestions, remarks and potential feature requests.
+
+Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | [gevharut@gmail.com](mailto:gevharut@gmail.com)
+
+Aram Manukyan [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
+
+David Tigranyan [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
