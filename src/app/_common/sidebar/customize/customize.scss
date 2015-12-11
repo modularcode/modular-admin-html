@@ -4,6 +4,17 @@
 	left: 0;
 	width: $sidebar-width;
 
+	& > li {
+		& > a {
+			background-color: $color-primary-dark;
+		}
+
+		& > a:hover,
+		&.open > a {
+			background-color: $color-primary-darker;
+		}
+	}
+
 	.customize {	
 		width: $sidebar-width;
 		color: fade-out($color-text-inverse, 0.5);
