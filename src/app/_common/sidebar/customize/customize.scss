@@ -121,11 +121,12 @@
 
 	.sidebar-open & {
 		@include media-down(md) {
-			position: fixed;
+			left: 0;
 		}
 	}
 
 	@include media-down(md) {
-		position: inherit;
+		transition: left 0.3s ease;
+		left: -$sidebar-width;
 	}
 }
