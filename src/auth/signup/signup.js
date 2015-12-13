@@ -85,4 +85,4 @@ $(function() {
 	$.extend(signupValidationSettings, validationDefaultSettings);
 
     $('#signup-form').validate(signupValidationSettings);
-})
+});
