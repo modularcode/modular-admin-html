@@ -21,7 +21,7 @@
 	.stat-icon {
 		color: $color-primary;
 		display: inline-block;
-		font-size: 36px;
+		font-size: 26px;
 		text-align: center;
 		vertical-align: middle;
 		width: 50px;
@@ -56,12 +56,13 @@
 	}
 
 	.stat-progress {
-		height: 5px;
-		margin-bottom: 5px;
+		height: 2px;
+		margin: 5px 0;
 		color: $color-primary;
 
 		&[value]::-webkit-progress-bar {
 			//progress bar color
+			background-color: #dddddd;
 		}
 
 		&[value]::-webkit-progress-value {
@@ -71,6 +72,7 @@
 
 		&[value]::-moz-progress-bar {
 		    //progress bar color
+		    background-color: #dddddd;
 		}
 	}
 }

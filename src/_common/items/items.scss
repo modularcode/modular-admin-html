@@ -14,8 +14,10 @@
 	}
 
 	.item-col {
+		background-position: center center;
+		background-size: cover;
 		display: flex;
-		padding: 10px;
+		padding: 20px;
 		flex-grow: 1;
 		flex-shrink: 1;
 		align-items: flex-start;
