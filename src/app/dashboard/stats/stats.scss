@@ -55,7 +55,22 @@
 		}
 	}
 
-	stat-progress-bar {
-		width: 60%;
+	.stat-progress {
+		height: 5px;
+		margin-bottom: 5px;
+		color: $color-primary;
+
+		&[value]::-webkit-progress-bar {
+			//progress bar color
+		}
+
+		&[value]::-webkit-progress-value {
+			//progress bar value color
+  			background-color: $color-primary;
+		}
+
+		&[value]::-moz-progress-bar {
+		    //progress bar color
+		}
 	}
 }
