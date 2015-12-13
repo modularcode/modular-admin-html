@@ -4,10 +4,10 @@ $(function () {
 	var theme = localStorage.getItem('theme') || null;
 
 	// remove css link
-	//removeCssLink(theme);
+	removeCssLink(theme);
 
 	// load css link
-	//loadCssLink(theme);
+	loadCssLink(theme);
 	
 
 	$('.color-item').each(function() {
