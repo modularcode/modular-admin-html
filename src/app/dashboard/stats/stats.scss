@@ -18,6 +18,14 @@
 		}
 	}
 
+	.stat-icon {
+		color: $color-primary;
+		display: inline-block;
+		font-size: 36px;
+		text-align: center;
+		vertical-align: middle;
+		width: 50px;
+	}
 
 	.stat-chart {
 		margin-right: 5px;
@@ -45,5 +53,9 @@
 				font-size: 0.9vw;
 			}
 		}
+	}
+
+	stat-progress-bar {
+		width: 60%;
 	}
 }
