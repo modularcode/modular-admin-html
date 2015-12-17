@@ -16,6 +16,15 @@ items:
     author: Angela Blaine
     category: Software
     date: 21 SEP 10:45
+tasks:
+  - title: Meeting with embassador
+  - title: Cheating with neighbours wifey
+  - title: Confession
+  - title: Time to start building an ark
+  - title: Beer time with dudes
+  - title: Meeting new girls
+  - title: Remember damned home address
+  - title: Get home before you got sleep
 ---
 {{#extend "app/app-layout"}}
     {{#content "body"}}
@@ -65,24 +74,24 @@ items:
                         <div class="card-block tasks">
                             <div class="title-block">
                                 <h3 class="title">
-                                    Tasks
+                                    <span>Tasks</span>
+                                    <a href="" class="btn btn-primary btn-sm">
+                                        Add new
+                                    </a>
                                 </h3>
-                                <a href="" class="btn btn-primary btn-sm">
-                                    Add new
-                                </a>
                             </div>
                             <ul>
-                                {{#times 5}}
+                                {{#each tasks}}
                                     <li>
                                         <label>
                                             <input class="checkbox" type="checkbox"> 
-                                            <span>Meeting with embassador</span>
+                                            <span>{{title}}</span>
                                         </label>
                                         <a href="" class="setting">
                                             <i class="fa fa-cog"></i>
                                         </a>
                                     </li>
-                                {{/times}}
+                                {{/each}}
                             </ul>
                         </div>
                     </div>
