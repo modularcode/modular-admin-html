@@ -558,6 +558,13 @@ body {
 .card-footer {
   background-color: #fafafa; }
 
+.easy-pie-chart {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #d7dde4;
+  border-radius: 5px; }
+
 .dropdown-menu {
   float: left;
   box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
@@ -578,13 +585,6 @@ body {
       color: #52BCD3;
       background: none;
       background-color: whitesmoke; }
-
-.easy-pie-chart {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  background-color: #d7dde4;
-  border-radius: 5px; }
 
 input,
 textarea {
