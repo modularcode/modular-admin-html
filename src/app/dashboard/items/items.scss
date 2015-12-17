@@ -1,0 +1,25 @@
+.dashboard-page .items {
+	.search {
+		color: $color-text-light;
+
+		.search-input {
+			border: none;
+			background-color: inherit;
+		}
+
+	}
+
+	.pagination {
+		display: inline-block;
+		margin: 0;
+	}
+	
+	.item-description {
+		margin-bottom: 0;
+
+		@include media-down(sm) {
+			margin-bottom: 1rem;
+		}
+	}
+
+}

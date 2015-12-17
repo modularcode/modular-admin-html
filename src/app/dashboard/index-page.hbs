@@ -16,68 +16,81 @@ items:
     author: Angela Blaine
     category: Software
     date: 21 SEP 10:45
-projects: 
-  - title: Project A
-    image: https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.
-    date: Yesterday at 11:20 am
-  - title: Project C
-    image: https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.
-    date: 2 days ago
-  - title: Project D
-    image: https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.
-    date: few minutes ago
-  - title: Project K
-    image: https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.
-    date: Monday at 08:20 pm
-  - title: Project W
-    image: https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.
-    date: 1 week ago
-  - title: Project Z
-    image: https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.
-    date: a month ago
 ---
 {{#extend "app/app-layout"}}
-	{{#content "body"}}
+    {{#content "body"}}
 
-		{{!-- Analytics --}}
-		<section class="section">
-			<div class="row sameheight-container">
-				<div class="col col-xs-12 col-sm-6 col-md-6 col-xl-5 stats-col">
-					{{> app/dashboard/stats/stats}}
-				</div>
-				<div class="col col-xs-12 col-sm-6 col-md-6 col-xl-7 visits-col">
-					{{> app/dashboard/visits/visits}}
-				</div>
-			</div>
-		</section>
+        {{!-- Analytics --}}
+        <section class="section">
+            <div class="row sameheight-container">
+                <div class="col col-xs-12 col-sm-6 col-md-6 col-xl-5 stats-col">
+                    {{> app/dashboard/stats/stats}}
+                </div>
+                <div class="col col-xs-12 col-sm-6 col-md-6 col-xl-7 visits-col">
+                    {{> app/dashboard/visits/visits}}
+                </div>
+            </div>
+        </section>
 
-		<section class="section">
-			{{!-- Projects --}}
-			<div class="row sameheight-container">
-				<div class="col-md-8">
-					{{> app/dashboard/projects/projects}}
-				</div>
-				<div class="col-md-4">
-					<div class="card sameheight-item" data-exclude="xs">
-						<div class="card-block">
-							<div class="title-block">
-								<h3 class="title">
-									Support tickets
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
+        <section class="section">
+            {{!-- Projects --}}
+            <div class="row sameheight-container">
+                <div class="col-md-8">
+                    {{> app/dashboard/items/items}}
+                </div>
+                <div class="col-md-4">
+                    <div class="card sameheight-item" data-exclude="xs">
+                        <div class="card-block">
+                            <div class="title-block">
+                                <h3 class="title">
+                                    Sales by months
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card sameheight-item" data-exclude="xs">
+                        <div class="card-block">
+                            <div class="title-block">
+                                <h3 class="title">
+                                    Sales by countries
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card sameheight-item" data-exclude="xs">
+                        <div class="card-block tasks">
+                            <div class="title-block">
+                                <h3 class="title">
+                                    Tasks
+                                </h3>
+                                <a href="" class="btn btn-primary btn-sm">
+                                    Add new
+                                </a>
+                            </div>
+                            <ul>
+                                {{#times 5}}
+                                    <li>
+                                        <label>
+                                            <input class="checkbox" type="checkbox"> 
+                                            <span>Meeting with embassador</span>
+                                        </label>
+                                        <a href="" class="setting">
+                                            <i class="fa fa-cog"></i>
+                                        </a>
+                                    </li>
+                                {{/times}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
 
-	{{/content}}
+    {{/content}}
 {{/extend}}
