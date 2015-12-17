@@ -27,37 +27,6 @@ $(function() {
 })
 //LoginForm validation
 $(function() {
-	if (!$('#reset-form').length) {
-        return false;
-    }
-
-    var resetValidationSettings = {
-	    rules: {
-	        email1: {
-	            required: true,
-	            email: true
-	        }
-	    },
-	    messages: {
-	        email1: {
-	            required: "Please enter email address",
-	            email: "Please enter a valid email address"
-	        }
-	    },
-	    invalidHandler: function() {
-			setAnimation({
-				name: 'shake',
-				selector: '.auth-container > .card'
-			});
-		}
-	}
-
-	$.extend(resetValidationSettings, validationDefaultSettings);
-
-    $('#reset-form').validate(resetValidationSettings);
-})
-//LoginForm validation
-$(function() {
 	if (!$('#login-form').length) {
         return false;
     }
@@ -90,6 +59,37 @@ $(function() {
 	$.extend(loginValidationSettings, validationDefaultSettings);
 
     $('#login-form').validate(loginValidationSettings);
+})
+//LoginForm validation
+$(function() {
+	if (!$('#reset-form').length) {
+        return false;
+    }
+
+    var resetValidationSettings = {
+	    rules: {
+	        email1: {
+	            required: true,
+	            email: true
+	        }
+	    },
+	    messages: {
+	        email1: {
+	            required: "Please enter email address",
+	            email: "Please enter a valid email address"
+	        }
+	    },
+	    invalidHandler: function() {
+			setAnimation({
+				name: 'shake',
+				selector: '.auth-container > .card'
+			});
+		}
+	}
+
+	$.extend(resetValidationSettings, validationDefaultSettings);
+
+    $('#reset-form').validate(resetValidationSettings);
 })
 //LoginForm validation
 $(function() {
@@ -178,7 +178,54 @@ $(function() {
 	$.extend(signupValidationSettings, validationDefaultSettings);
 
     $('#signup-form').validate(signupValidationSettings);
-})
+});
+/*
+ * jQuery getCSS Plugin
+ * Copyright 2013, intesso
+ * MIT license.
+ *
+ * cross browser function to dynamically load an external css file.
+ * see: [github page](http://intesso.github.com/jquery-getCSS/)
+ *
+ */
+
+(function() {
+	/*
+		arguments: attributes
+		attributes can be a string: then it goes directly inside the href attribute.
+		e.g.: $.getCSS("fresh.css")
+		attributes can also be an objcet.
+		e.g.: $.getCSS({href:"cool.css", media:"print"})
+		or:	$.getCSS({href:"/styles/forest.css", media:"screen"})
+	*/
+	var getCSS = function(attributes) {
+			// setting default attributes
+			if(typeof attributes === "string") {
+				var href = attributes;
+				attributes = {
+					href: href
+				};
+			}
+			if(!attributes.rel) {
+				attributes.rel = "stylesheet"
+			}
+			// appending the stylesheet
+			// no jQuery stuff here, just plain dom manipulations
+			var styleSheet = document.createElement("link");
+			for(var key in attributes) {
+				styleSheet.setAttribute(key, attributes[key]);
+			}
+			var head = document.getElementsByTagName("head")[0];
+			head.appendChild(styleSheet);
+		};
+
+	if(typeof jQuery === "undefined") {
+		window.getCSS = getCSS;
+	} else {
+		jQuery.getCSS = getCSS;
+	}
+
+})();
 $(function() {
 	setSameHeights();
 
@@ -649,6 +696,20 @@ $(function() {
     });
 
 });
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
+
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
+});
 $(function() {
 
     if (!$('#dashboard-visits-chart').length) {
@@ -780,20 +841,6 @@ function drawDownloadsChart(){
         ],
     });
 }
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
-
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
-});
 
 $(function() {
 
@@ -912,16 +959,18 @@ var modalMedia = {
 };
 $(function () {
 
-
+	// set theme type
 	var theme = localStorage.getItem('theme') || null;
-	var themeName = "";
 
-	if (theme) {
-		themeName = "-" + theme;
-	}
+	// remove css link
+	removeCssLink(theme);
+
+	// load css link
+	loadCssLink(theme);
+	
 
 	$('.color-item').each(function() {
-		if (themeName === $(this).data('theme')) {
+		if (theme === $(this).data('theme')) {
 			$(this).addClass("active");
 		}
 	});
@@ -930,10 +979,47 @@ $(function () {
 	$('.color-item').on('click', function() {
 		$('.color-item').removeClass('active');
 		$(this).addClass('active');
+		
+		// set previous version of theme type
+		var prevTheme = theme;
 
-		var theme = $(this).data('theme');
+		// set theme type
+		theme = $(this).data('theme');
 		localStorage.setItem('theme', theme);
+
+		// load css link
+		//loadCssLink(theme);
+
+		// remove css link
+		//removeCssLink(prevTheme);
 	});
+
+
+	function loadCssLink(theme){
+		var themeName = "app";
+
+		if (theme) {
+			themeName += "-" + theme;
+		}
+
+		$.getCSS("/css/" + themeName + ".css");
+	}
+
+	function removeCssLink(theme){
+		var themeName = "app";
+
+		if (theme) {
+			themeName += "-" + theme;
+		}
+
+		themeName += ".css";
+
+		$("head").find("link[rel=stylesheet]").attr("href", function (i, src) {
+			if (src.search(themeName) >= 0) {
+				$(this).remove();
+			}
+		});
+	}
 	
 });
 $(function() {

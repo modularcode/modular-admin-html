@@ -14,6 +14,7 @@
 
 		<link rel="stylesheet" href="css/vendor.css">
 		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" id="theme-style" href="">
 	</head>
 	<body>
 		<div class="main-wrapper">
@@ -502,8 +503,8 @@
 					
 							<div class="row row-sm stats-container">
 								<div class="col-xs-6 stat-col">
-									<div class="easy-pie-chart stat-chart">
-					
+									<div class="stat-icon">
+										<i class="fa fa-rocket"></i>
 									</div>
 									<div class="stat">
 										<div class="value">
@@ -513,11 +514,16 @@
 											Active items
 										</div>
 									</div>
+									<progress class="progress stat-progress" value="75" max="100">
+										<div class="progress">
+											<span class="progress-bar" style="width: 75%;"></span>
+										</div>
+									</progress>
 								</div>
 					
 								<div class="col stat-col">
-									<div class="easy-pie-chart stat-chart">
-					
+									<div class="stat-icon">
+										<i class="fa fa-shopping-cart"></i>
 									</div>
 									<div class="stat">
 										<div class="value">
@@ -527,11 +533,16 @@
 											Items sold
 										</div>
 									</div>
+									<progress class="progress stat-progress" value="25" max="100">
+										<div class="progress">
+											<span class="progress-bar" style="width: 25%;"></span>
+										</div>
+									</progress>
 								</div>
 					
 								<div class="col-xs-6  stat-col">
-									<div class="easy-pie-chart stat-chart">
-					
+									<div class="stat-icon">
+										<i class="fa fa-line-chart"></i>
 									</div>
 									<div class="stat">
 										<div class="value">
@@ -541,13 +552,18 @@
 											Monthly income
 										</div>
 									</div>
+									<progress class="progress stat-progress" value="60" max="100">
+										<div class="progress">
+											<span class="progress-bar" style="width: 60%;"></span>
+										</div>
+									</progress>
 								</div>
 					
 								
 					
 								<div class="col-xs-6  stat-col">
-									<div class="easy-pie-chart stat-chart">
-					
+									<div class="stat-icon">
+										<i class="fa fa-users"></i>
 									</div>
 									<div class="stat">
 										<div class="value">
@@ -557,12 +573,17 @@
 											Total users
 										</div>
 									</div>
+									<progress class="progress stat-progress" value="34" max="100">
+										<div class="progress">
+											<span class="progress-bar" style="width: 34%;"></span>
+										</div>
+									</progress>
 								</div>
 					
 					
 								<div class="col-xs-6  stat-col">
-									<div class="easy-pie-chart stat-chart">
-					
+									<div class="stat-icon">
+										<i class="fa fa-list-alt"></i>
 									</div>
 									<div class="stat">
 										<div class="value">
@@ -572,11 +593,16 @@
 											Tickets closed
 										</div>
 									</div>
+									<progress class="progress stat-progress" value="49" max="100">
+										<div class="progress">
+											<span class="progress-bar" style="width: 49%;"></span>
+										</div>
+									</progress>
 								</div>
 					
-								<div class="col-xs-6  stat-col">
-									<div class="easy-pie-chart stat-chart">
-					
+								<div class="col-xs-6 stat-col">
+									<div class="stat-icon">
+										<i class="fa fa-dollar"></i>
 									</div>
 									<div class="stat">
 										<div class="value">
@@ -586,6 +612,11 @@
 											Total income
 										</div>
 									</div>
+									<progress class="progress stat-progress" value="15" max="100">
+										<div class="progress">
+											<span class="progress-bar" style="width: 15%;"></span>
+										</div>
+									</progress>
 								</div>
 					
 					
@@ -853,9 +884,15 @@
 								frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
 						</div>
 						<div class="footer-block author">
-							created by 
-							<a href="https://github.com/modularcode">ModularCode</a> | 
-							<a href="https://github.com/modularcode/modular-admin-html#get-in-touch">get in touch</a>
+							<ul>
+								<li>
+									created by 
+									<a href="https://github.com/modularcode">ModularCode</a>
+								</li>
+								<li>
+									<a href="https://github.com/modularcode/modular-admin-html#get-in-touch">get in touch</a>
+								</li>
+							</ul>
 						</div>
 					</footer>
 			</div>
