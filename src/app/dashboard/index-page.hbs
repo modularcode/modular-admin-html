@@ -44,31 +44,19 @@ tasks:
         <section class="section">
             {{!-- Projects --}}
             <div class="row sameheight-container">
+
                 <div class="col-md-8">
                     {{> app/dashboard/items/items}}
                 </div>
+
                 <div class="col-md-4">
-                    <div class="card sameheight-item" data-exclude="xs">
-                        <div class="card-block">
-                            <div class="title-block">
-                                <h3 class="title">
-                                    Sales by months
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
+                     {{> app/dashboard/sales-by-months/sales-by-months}}
                 </div>
+
                 <div class="col-md-8">
-                    <div class="card sameheight-item" data-exclude="xs">
-                        <div class="card-block">
-                            <div class="title-block">
-                                <h3 class="title">
-                                    Sales by countries
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
+                    {{> app/dashboard/sales-by-countries/sales-by-countries}}
                 </div>
+                
                 <div class="col-md-4">
                     <div class="card sameheight-item" data-exclude="xs">
                         <div class="card-block tasks">

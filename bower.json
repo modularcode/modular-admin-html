@@ -4,20 +4,21 @@
   "devDependencies": {},
   "dependencies": {
     "animate.css": "~3.4.0",
-    "tether": "~1.1.1",
     "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
-    "responsive-bootstrap-toolkit": "~2.5.0",
     "datatables": "~1.10.8",
     "font-awesome": "~4.3.0",
     "jquery": "~2.1.4",
     "jquery-flot": "~0.8.3",
-    "jquery-validation": "~1.14.0",
     "flot.tooltip": "~0.8.5",
+    "jquery-validation": "~1.14.0",
+    "jqvmap": "~1.4.0",
     "metisMenu": "~2.0.3",
     "morrisjs": "~0.5.1",
     "nprogress": "~0.2.0",
-    "tinycolor": "~1.2.1",
-    "quill": "~0.20.1"
+    "quill": "~0.20.1",
+    "responsive-bootstrap-toolkit": "~2.5.0",
+    "tether": "~1.1.1",
+    "tinycolor": "~1.2.1"
   },
   "overrides": {
     "bootstrap": {
@@ -43,6 +44,13 @@
         "media/js/jquery.dataTables.js",
         "media/js/dataTables.bootstrap.js",
         "media/css/dataTables.bootstrap.css"
+      ]
+    },
+    "jqvmap": {
+      "main": [
+        "dist/jqvmap.css",
+        "dist/jquery.vmap.js",
+        "dist/maps/jquery.vmap.world.js"
       ]
     },
     "animate.css": {
