@@ -75,6 +75,48 @@
 					position: absolute;
 					right: 0;
 					top: 0;
+
+					.actions-list {
+						display: none;
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 65px;
+						background-color: #C9D0DB;
+						border: 1px solid #C9D0DB;
+						border-radius: 3px;
+
+						ul {
+							list-style: none;
+
+							li{
+								display: inline-block;
+								padding: 0;
+
+								a {
+									padding: 0px 2px;
+
+									&.edit {
+										color: #38424C;
+									}
+
+									&.check {
+										color: #40B726;
+									}
+
+									&.remove {
+										color: #DB0E1E;
+									}
+								}
+							}
+						}
+					}
+
+					&.active {
+						.actions-list {
+							display: block;
+						}
+					}
 				}
 
 			}

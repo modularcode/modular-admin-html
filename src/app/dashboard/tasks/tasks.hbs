@@ -1,0 +1,45 @@
+<div class="card sameheight-item" data-exclude="xs">
+    <div class="card-block tasks">
+        <div class="title-block">
+            <h3 class="title">
+                <span>Tasks</span>
+                <a href="" class="btn btn-primary btn-sm rounded">
+                    Add new
+                </a>
+            </h3>
+        </div>
+        <ul>
+            {{#each tasks}}
+                <li>
+                    <label>
+                        <input class="checkbox" type="checkbox"
+                        {{#if done}}checked="checked"{{/if}}> 
+                        <span>{{title}}</span>
+                    </label>
+                    <div class="item-actions">
+                        <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                        <div class="actions-list">
+                            <ul>
+                                <li>
+                                    <a class="check" href="#">
+                                        <i class="fa fa-check"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="edit" href="#">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="remove" href="#">
+                                        <i class="fa fa-trash-o "></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

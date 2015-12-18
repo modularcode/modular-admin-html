@@ -18,13 +18,21 @@ items:
     date: 21 SEP 10:45
 tasks:
   - title: Meeting with embassador
+    done: true
   - title: Cheating with neighbours wifey
+    done: true
   - title: Confession
+    done: true
   - title: Time to start building an ark
+    done: false
   - title: Beer time with dudes
+    done: false  
   - title: Meeting new girls
+    done: true
   - title: Remember damned home address
+    done: false
   - title: Get home before you got sleep
+    done: false
 ---
 {{#extend "app/app-layout"}}
     {{#content "body"}}
@@ -58,36 +66,7 @@ tasks:
                 </div>
                 
                 <div class="col-md-4">
-                    <div class="card sameheight-item" data-exclude="xs">
-                        <div class="card-block tasks">
-                            <div class="title-block">
-                                <h3 class="title">
-                                    <span>Tasks</span>
-                                    <a href="" class="btn btn-primary btn-sm rounded">
-                                        Add new
-                                    </a>
-                                </h3>
-                            </div>
-                            <ul>
-                                {{#each tasks}}
-                                    <li>
-                                        <label>
-                                            <input class="checkbox" type="checkbox"> 
-                                            <span>{{title}}</span>
-                                        </label>
-                                        <div class="item-actions">
-                                            <a href="" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
-                                            <div class="item-actions">
-                                                {{BTN}}
-                                                {{BTN}}
-                                                {{BTN}}
-                                            </div>
-                                        </div>
-                                    </li>
-                                {{/each}}
-                            </ul>
-                        </div>
-                    </div>
+                    {{> app/dashboard/tasks/tasks}}
                 </div>
             </div>
         </section>
