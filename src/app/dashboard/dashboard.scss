@@ -43,24 +43,38 @@
 
 			li {
 
+				padding-right: 20px;
+				position: relative;
+
 				label {
+
+					width: 100%;
 
 					.checkbox:checked+span {
 						text-decoration: line-through;
 					}
 
 					span {
+						display: inline-block;
 						overflow: hidden;
-    					text-overflow: ellipsis;
-    					white-space: nowrap;
+		    			text-overflow: ellipsis;
+    					white-space: nowrap; 
+    					width: 100%;   					
 					}
 
 				}
 
 				.setting {
 					color: $color-text-passive;
-					float: right;
+					
 					font-size: 1.25rem;
+
+				}
+
+				.item-actions {
+					position: absolute;
+					right: 0;
+					top: 0;
 				}
 
 			}

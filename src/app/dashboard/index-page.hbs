@@ -75,7 +75,7 @@ tasks:
                             <div class="title-block">
                                 <h3 class="title">
                                     <span>Tasks</span>
-                                    <a href="" class="btn btn-primary btn-sm">
+                                    <a href="" class="btn btn-primary btn-sm rounded">
                                         Add new
                                     </a>
                                 </h3>
@@ -87,9 +87,14 @@ tasks:
                                             <input class="checkbox" type="checkbox"> 
                                             <span>{{title}}</span>
                                         </label>
-                                        <a href="" class="setting">
-                                            <i class="fa fa-cog"></i>
-                                        </a>
+                                        <div class="item-actions">
+                                            <a href="" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="item-actions">
+                                                {{BTN}}
+                                                {{BTN}}
+                                                {{BTN}}
+                                            </div>
+                                        </div>
                                     </li>
                                 {{/each}}
                             </ul>
