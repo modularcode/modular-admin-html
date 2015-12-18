@@ -77,14 +77,15 @@
 					top: 0;
 
 					.actions-list {
-						display: none;
+						opacity: 0;
 						position: absolute;
 						top: 0;
-						right: 0;
+						right: -65px;
 						width: 65px;
 						background-color: #C9D0DB;
 						border: 1px solid #C9D0DB;
 						border-radius: 3px;
+						transition: all 0.15s ease-in-out;
 
 						ul {
 							list-style: none;
@@ -114,7 +115,8 @@
 
 					&.active {
 						.actions-list {
-							display: block;
+							opacity: 1;
+							right: 0;
 						}
 					}
 				}
