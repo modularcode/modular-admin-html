@@ -36,12 +36,11 @@
 
 		}
 
-		ul {
-
+		.tasks-list {
 			list-style-type: none;
 			padding: 0;
 
-			li {
+			.tasks-item {
 
 				padding-right: 20px;
 				position: relative;
@@ -76,7 +75,7 @@
 					right: 0;
 					top: 0;
 
-					.actions-list {
+					.actions-block {
 						opacity: 0;
 						position: absolute;
 						top: 0;
@@ -87,7 +86,8 @@
 						border-radius: 3px;
 						transition: all 0.15s ease-in-out;
 
-						ul {
+						.actions-list {
+							padding: 0;
 							list-style: none;
 
 							li{
@@ -114,7 +114,7 @@
 					}
 
 					&.active {
-						.actions-list {
+						.actions-block  {
 							opacity: 1;
 							right: 0;
 						}

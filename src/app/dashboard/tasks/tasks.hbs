@@ -8,9 +8,9 @@
                 </a>
             </h3>
         </div>
-        <ul>
+        <ul class="tasks-list">
             {{#each tasks}}
-                <li>
+                <li class="tasks-item">
                     <label>
                         <input class="checkbox" type="checkbox"
                         {{#if done}}checked="checked"{{/if}}> 
@@ -18,8 +18,8 @@
                     </label>
                     <div class="item-actions">
                         <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
-                        <div class="actions-list">
-                            <ul>
+                        <div class="actions-block">
+                            <ul class="actions-list">
                                 <li>
                                     <a class="remove" href="#">
                                         <i class="fa fa-trash-o "></i>
