@@ -483,396 +483,568 @@
 					<div class="sidebar-overlay" id="sidebar-overlay"></div>
 				<article class="content dashboard-page">
 
-		<section class="section">
-			<div class="row sameheight-container">
-				<div class="col col-xs-12 col-sm-6 col-md-6 col-xl-5 stats-col">
-					<div class="card sameheight-item stats" data-exclude="xs">
-						<div class="card-block">
-					
-							<div class="title-block">
-								<h4 class="title">
-									Stats
-								</h4>
-								<p class="title-description">
-									Website metrics for
-									<a href="http://modularteam.github.io/modularity-free-admin-dashboard-theme-html/">
-										your awesome project
-									</a>
-								</p>
-							</div>
-					
-							<div class="row row-sm stats-container">
-								<div class="col-xs-6 stat-col">
-									<div class="stat-icon">
-										<i class="fa fa-rocket"></i>
-									</div>
-									<div class="stat">
-										<div class="value">
-											5407
-										</div>
-										<div class="name">
-											Active items
-										</div>
-									</div>
-									<progress class="progress stat-progress" value="75" max="100">
-										<div class="progress">
-											<span class="progress-bar" style="width: 75%;"></span>
-										</div>
-									</progress>
-								</div>
-					
-								<div class="col stat-col">
-									<div class="stat-icon">
-										<i class="fa fa-shopping-cart"></i>
-									</div>
-									<div class="stat">
-										<div class="value">
-											78464
-										</div>
-										<div class="name">
-											Items sold
-										</div>
-									</div>
-									<progress class="progress stat-progress" value="25" max="100">
-										<div class="progress">
-											<span class="progress-bar" style="width: 25%;"></span>
-										</div>
-									</progress>
-								</div>
-					
-								<div class="col-xs-6  stat-col">
-									<div class="stat-icon">
-										<i class="fa fa-line-chart"></i>
-									</div>
-									<div class="stat">
-										<div class="value">
-											$80.560
-										</div>
-										<div class="name">
-											Monthly income
-										</div>
-									</div>
-									<progress class="progress stat-progress" value="60" max="100">
-										<div class="progress">
-											<span class="progress-bar" style="width: 60%;"></span>
-										</div>
-									</progress>
-								</div>
-					
-								
-					
-								<div class="col-xs-6  stat-col">
-									<div class="stat-icon">
-										<i class="fa fa-users"></i>
-									</div>
-									<div class="stat">
-										<div class="value">
-											359
-										</div>
-										<div class="name">
-											Total users
-										</div>
-									</div>
-									<progress class="progress stat-progress" value="34" max="100">
-										<div class="progress">
-											<span class="progress-bar" style="width: 34%;"></span>
-										</div>
-									</progress>
-								</div>
-					
-					
-								<div class="col-xs-6  stat-col">
-									<div class="stat-icon">
-										<i class="fa fa-list-alt"></i>
-									</div>
-									<div class="stat">
-										<div class="value">
-											59
-										</div>
-										<div class="name">
-											Tickets closed
-										</div>
-									</div>
-									<progress class="progress stat-progress" value="49" max="100">
-										<div class="progress">
-											<span class="progress-bar" style="width: 49%;"></span>
-										</div>
-									</progress>
-								</div>
-					
-								<div class="col-xs-6 stat-col">
-									<div class="stat-icon">
-										<i class="fa fa-dollar"></i>
-									</div>
-									<div class="stat">
-										<div class="value">
-											$780.064
-										</div>
-										<div class="name">
-											Total income
-										</div>
-									</div>
-									<progress class="progress stat-progress" value="15" max="100">
-										<div class="progress">
-											<span class="progress-bar" style="width: 15%;"></span>
-										</div>
-									</progress>
-								</div>
-					
-					
-							</div>
-					
-						</div>
-					</div>				</div>
-				<div class="col col-xs-12 col-sm-6 col-md-6 col-xl-7 visits-col">
-					<div class="card sameheight-item" data-exclude="xs">
-						<div class="card-header with-nav-tabs">
-							<h3 class="title">Visits</h3>
-					        <ul class="nav nav-tabs pull-right" role="tablist">
-								<li class="nav-item">
-									<a class="nav-link active" href="#visits" role="tab" data-toggle="tab">Visits</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#downloads" role="tab" data-toggle="tab">Downloads</a>
-								</li>
-							</ul>
-					    </div>
-						<div class="card-block">
-							
-							<div class="tab-content">
-								<div role="tabpanel" class="tab-pane active fade in" id="visits">
-									<p class="title-description">
-										Number of unique visits last 30 days
-									</p>
-					
-									<div id="dashboard-visits-chart"></div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="downloads">
-									<p class="title-description">
-										Number of downloads last 30 days
-									</p>
-					
-									<div id="dashboard-downloads-chart"></div>
-								</div>
-							</div>
-						</div>
-					</div>				</div>
-			</div>
-		</section>
+        <section class="section">
+            <div class="row sameheight-container">
+                <div class="col col-xs-12 col-sm-6 col-md-6 col-xl-5 stats-col">
+                    <div class="card sameheight-item stats" data-exclude="xs">
+                    	<div class="card-block">
+                    
+                    		<div class="title-block">
+                    			<h4 class="title">
+                    				Stats
+                    			</h4>
+                    			<p class="title-description">
+                    				Website metrics for
+                    				<a href="http://modularteam.github.io/modularity-free-admin-dashboard-theme-html/">
+                    					your awesome project
+                    				</a>
+                    			</p>
+                    		</div>
+                    
+                    		<div class="row row-sm stats-container">
+                    			<div class="col-xs-6 stat-col">
+                    				<div class="stat-icon">
+                    					<i class="fa fa-rocket"></i>
+                    				</div>
+                    				<div class="stat">
+                    					<div class="value">
+                    						5407
+                    					</div>
+                    					<div class="name">
+                    						Active items
+                    					</div>
+                    				</div>
+                    				<progress class="progress stat-progress" value="75" max="100">
+                    					<div class="progress">
+                    						<span class="progress-bar" style="width: 75%;"></span>
+                    					</div>
+                    				</progress>
+                    			</div>
+                    
+                    			<div class="col stat-col">
+                    				<div class="stat-icon">
+                    					<i class="fa fa-shopping-cart"></i>
+                    				</div>
+                    				<div class="stat">
+                    					<div class="value">
+                    						78464
+                    					</div>
+                    					<div class="name">
+                    						Items sold
+                    					</div>
+                    				</div>
+                    				<progress class="progress stat-progress" value="25" max="100">
+                    					<div class="progress">
+                    						<span class="progress-bar" style="width: 25%;"></span>
+                    					</div>
+                    				</progress>
+                    			</div>
+                    
+                    			<div class="col-xs-6  stat-col">
+                    				<div class="stat-icon">
+                    					<i class="fa fa-line-chart"></i>
+                    				</div>
+                    				<div class="stat">
+                    					<div class="value">
+                    						$80.560
+                    					</div>
+                    					<div class="name">
+                    						Monthly income
+                    					</div>
+                    				</div>
+                    				<progress class="progress stat-progress" value="60" max="100">
+                    					<div class="progress">
+                    						<span class="progress-bar" style="width: 60%;"></span>
+                    					</div>
+                    				</progress>
+                    			</div>
+                    
+                    			
+                    
+                    			<div class="col-xs-6  stat-col">
+                    				<div class="stat-icon">
+                    					<i class="fa fa-users"></i>
+                    				</div>
+                    				<div class="stat">
+                    					<div class="value">
+                    						359
+                    					</div>
+                    					<div class="name">
+                    						Total users
+                    					</div>
+                    				</div>
+                    				<progress class="progress stat-progress" value="34" max="100">
+                    					<div class="progress">
+                    						<span class="progress-bar" style="width: 34%;"></span>
+                    					</div>
+                    				</progress>
+                    			</div>
+                    
+                    
+                    			<div class="col-xs-6  stat-col">
+                    				<div class="stat-icon">
+                    					<i class="fa fa-list-alt"></i>
+                    				</div>
+                    				<div class="stat">
+                    					<div class="value">
+                    						59
+                    					</div>
+                    					<div class="name">
+                    						Tickets closed
+                    					</div>
+                    				</div>
+                    				<progress class="progress stat-progress" value="49" max="100">
+                    					<div class="progress">
+                    						<span class="progress-bar" style="width: 49%;"></span>
+                    					</div>
+                    				</progress>
+                    			</div>
+                    
+                    			<div class="col-xs-6 stat-col">
+                    				<div class="stat-icon">
+                    					<i class="fa fa-dollar"></i>
+                    				</div>
+                    				<div class="stat">
+                    					<div class="value">
+                    						$780.064
+                    					</div>
+                    					<div class="name">
+                    						Total income
+                    					</div>
+                    				</div>
+                    				<progress class="progress stat-progress" value="15" max="100">
+                    					<div class="progress">
+                    						<span class="progress-bar" style="width: 15%;"></span>
+                    					</div>
+                    				</progress>
+                    			</div>
+                    
+                    
+                    		</div>
+                    
+                    	</div>
+                    </div>                </div>
+                <div class="col col-xs-12 col-sm-6 col-md-6 col-xl-7 visits-col">
+                    <div class="card sameheight-item" data-exclude="xs">
+                    	<div class="card-header with-nav-tabs">
+                    		<h3 class="title">Visits</h3>
+                            <ul class="nav nav-tabs pull-right" role="tablist">
+                    			<li class="nav-item">
+                    				<a class="nav-link active" href="#visits" role="tab" data-toggle="tab">Visits</a>
+                    			</li>
+                    			<li class="nav-item">
+                    				<a class="nav-link" href="#downloads" role="tab" data-toggle="tab">Downloads</a>
+                    			</li>
+                    		</ul>
+                        </div>
+                    	<div class="card-block">
+                    		
+                    		<div class="tab-content">
+                    			<div role="tabpanel" class="tab-pane active fade in" id="visits">
+                    				<p class="title-description">
+                    					Number of unique visits last 30 days
+                    				</p>
+                    
+                    				<div id="dashboard-visits-chart"></div>
+                    			</div>
+                    			<div role="tabpanel" class="tab-pane fade" id="downloads">
+                    				<p class="title-description">
+                    					Number of downloads last 30 days
+                    				</p>
+                    
+                    				<div id="dashboard-downloads-chart"></div>
+                    			</div>
+                    		</div>
+                    	</div>
+                    </div>                </div>
+            </div>
+        </section>
 
-		<section class="section">
-			<div class="row sameheight-container">
-				<div class="col-md-8">
-					<div class="sameheight-item projects" data-exclude="xs">
-						<div class="card projects">
-					
-					
-							<ul class="items-list striped">
-									<li class="item">
-										<div class="item-row">
-											<div class="item-col fixed item-col-img lg">
-												<a href="">
-													<div class="item-img lg rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
-												</a>
-											</div>
-											<div class="item-col">
-					
-												<div class="row">
-													<div class="col-sm-8">
-														<div class="item-title-block">
-															<a href="">
-																<h4 class="item-title">
-																	Project A
-																</h4>
-															</a>
-														</div>
-														<div class="item-content small">
-															<p class="item-description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<p>Last change</p>
-														Yesterday at 11:20 am
-													</div>
-					
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="item">
-										<div class="item-row">
-											<div class="item-col fixed item-col-img lg">
-												<a href="">
-													<div class="item-img lg rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg)"></div>
-												</a>
-											</div>
-											<div class="item-col">
-					
-												<div class="row">
-													<div class="col-sm-8">
-														<div class="item-title-block">
-															<a href="">
-																<h4 class="item-title">
-																	Project C
-																</h4>
-															</a>
-														</div>
-														<div class="item-content small">
-															<p class="item-description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<p>Last change</p>
-														2 days ago
-													</div>
-					
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="item">
-										<div class="item-row">
-											<div class="item-col fixed item-col-img lg">
-												<a href="">
-													<div class="item-img lg rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg)"></div>
-												</a>
-											</div>
-											<div class="item-col">
-					
-												<div class="row">
-													<div class="col-sm-8">
-														<div class="item-title-block">
-															<a href="">
-																<h4 class="item-title">
-																	Project D
-																</h4>
-															</a>
-														</div>
-														<div class="item-content small">
-															<p class="item-description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<p>Last change</p>
-														few minutes ago
-													</div>
-					
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="item">
-										<div class="item-row">
-											<div class="item-col fixed item-col-img lg">
-												<a href="">
-													<div class="item-img lg rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg)"></div>
-												</a>
-											</div>
-											<div class="item-col">
-					
-												<div class="row">
-													<div class="col-sm-8">
-														<div class="item-title-block">
-															<a href="">
-																<h4 class="item-title">
-																	Project K
-																</h4>
-															</a>
-														</div>
-														<div class="item-content small">
-															<p class="item-description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<p>Last change</p>
-														Monday at 08:20 pm
-													</div>
-					
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="item">
-										<div class="item-row">
-											<div class="item-col fixed item-col-img lg">
-												<a href="">
-													<div class="item-img lg rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg)"></div>
-												</a>
-											</div>
-											<div class="item-col">
-					
-												<div class="row">
-													<div class="col-sm-8">
-														<div class="item-title-block">
-															<a href="">
-																<h4 class="item-title">
-																	Project W
-																</h4>
-															</a>
-														</div>
-														<div class="item-content small">
-															<p class="item-description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<p>Last change</p>
-														1 week ago
-													</div>
-					
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="item">
-										<div class="item-row">
-											<div class="item-col fixed item-col-img lg">
-												<a href="">
-													<div class="item-img lg rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg)"></div>
-												</a>
-											</div>
-											<div class="item-col">
-					
-												<div class="row">
-													<div class="col-sm-8">
-														<div class="item-title-block">
-															<a href="">
-																<h4 class="item-title">
-																	Project Z
-																</h4>
-															</a>
-														</div>
-														<div class="item-content small">
-															<p class="item-description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum fermentum maximus. Integer molestie at sem sit amet rutrum.</p>
-														</div>
-													</div>
-													<div class="col-sm-4">
-														<p>Last change</p>
-														a month ago
-													</div>
-					
-												</div>
-											</div>
-										</div>
-									</li>
-							</ul>
-					
-					
-						</div>
-					</div>				</div>
-				<div class="col-md-4">
-					<div class="card sameheight-item" data-exclude="xs">
-						<div class="card-block">
-							<div class="title-block">
-								<h3 class="title">
-									Support tickets
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
+        <section class="section">
+            <div class="row sameheight-container">
+
+                <div class="col-md-8">
+                    <div class="card sameheight-item items" data-exclude="xs">
+                    	<div class="card-header items-header">
+                    		<h3 class="title items-title">
+                    			<span>Items</span>
+                    			<a href="" class="btn btn-primary btn-sm rounded items-btn">Add new</a>
+                    		</h3>
+                    		<div>
+                    			<label class="search">
+                    				<i class="fa fa-search"></i>
+                    				<input class="search-input" placeholder="search...">
+                    			</label>
+                    			<div class="pagination">
+                    				<a href="" class="btn btn-primary btn-sm items-btn">
+                    					<i class="fa fa-angle-up"></i>
+                    				</a>
+                    				<a href="" class="btn btn-primary btn-sm items-btn">
+                    					<i class="fa fa-angle-down"></i>
+                    				</a>
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<ul class="items-list striped">
+                    			<li class="item">
+                    				<div class="item-row">
+                    					<div class="item-col fixed item-col-img lg">
+                    						<a href="">
+                    							<div class="item-img lg rounded" style="background-image: url()"></div>
+                    						</a>
+                    					</div>
+                    					<div class="item-col">
+                    						<div class="row">
+                    							<div class="col-sm-8">
+                    								<div class="item-title-block">
+                    									<a href="">
+                    										<h4 class="item-title">
+                    											12 Myths Uncovered About IT &amp; Software
+                    										</h4>
+                    									</a>
+                    								</div>
+                    								<div class="item-content small">
+                    									<p class="item-description "></p>
+                    								</div>
+                    							</div>
+                    							<div class="col-sm-4">
+                    								<p>Last change</p>
+                    								21 SEP 10:45
+                    							</div>
+                    						</div>
+                    					</div>
+                    				</div>
+                    			</li>
+                    			<li class="item">
+                    				<div class="item-row">
+                    					<div class="item-col fixed item-col-img lg">
+                    						<a href="">
+                    							<div class="item-img lg rounded" style="background-image: url()"></div>
+                    						</a>
+                    					</div>
+                    					<div class="item-col">
+                    						<div class="row">
+                    							<div class="col-sm-8">
+                    								<div class="item-title-block">
+                    									<a href="">
+                    										<h4 class="item-title">
+                    											50% of things doesn&#x27;t really belongs to you
+                    										</h4>
+                    									</a>
+                    								</div>
+                    								<div class="item-content small">
+                    									<p class="item-description "></p>
+                    								</div>
+                    							</div>
+                    							<div class="col-sm-4">
+                    								<p>Last change</p>
+                    								21 SEP 10:45
+                    							</div>
+                    						</div>
+                    					</div>
+                    				</div>
+                    			</li>
+                    			<li class="item">
+                    				<div class="item-row">
+                    					<div class="item-col fixed item-col-img lg">
+                    						<a href="">
+                    							<div class="item-img lg rounded" style="background-image: url()"></div>
+                    						</a>
+                    					</div>
+                    					<div class="item-col">
+                    						<div class="row">
+                    							<div class="col-sm-8">
+                    								<div class="item-title-block">
+                    									<a href="">
+                    										<h4 class="item-title">
+                    											Vestibulum tincidunt amet laoreet mauris sit sem aliquam cras maecenas vel aliquam.
+                    										</h4>
+                    									</a>
+                    								</div>
+                    								<div class="item-content small">
+                    									<p class="item-description "></p>
+                    								</div>
+                    							</div>
+                    							<div class="col-sm-4">
+                    								<p>Last change</p>
+                    								21 SEP 10:45
+                    							</div>
+                    						</div>
+                    					</div>
+                    				</div>
+                    			</li>
+                    	</ul>
+                    </div>                </div>
+
+                <div class="col-md-4">
+                     <div class="card sameheight-item" data-exclude="xs">
+                         <div class="card-block">
+                             <div id="sales-chart"></div>
+                         </div>
+                     </div>                </div>
+
+                <div class="col-md-8">
+                    <div class="card sameheight-item" data-exclude="xs">
+                        <div class="card-block">
+                            <div class="title-block">
+                                <h3 class="title">
+                                    Sales by countries
+                                </h3>
+                            </div>
+                            <div id="sales-map" style="width: 100%; height: 400px;"></div>
+                        </div>
+                    </div>                </div>
+                
+                <div class="col-md-4">
+                    <div class="card sameheight-item" data-exclude="xs">
+                        <div class="card-block tasks">
+                            <div class="title-block">
+                                <h3 class="title">
+                                    <span>Tasks</span>
+                                    <a href="" class="btn btn-primary btn-sm rounded">
+                                        Add new
+                                    </a>
+                                </h3>
+                            </div>
+                            <ul class="tasks-list">
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            checked="checked"> 
+                                            <span>Meeting with embassador</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            checked="checked"> 
+                                            <span>Cheating with neighbours wifey</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            checked="checked"> 
+                                            <span>Confession</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            > 
+                                            <span>Time to start building an ark</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            > 
+                                            <span>Beer time with dudes</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            checked="checked"> 
+                                            <span>Meeting new girls</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            > 
+                                            <span>Remember damned home address</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="tasks-item">
+                                        <label>
+                                            <input class="checkbox" type="checkbox"
+                                            > 
+                                            <span>Get home before you got sleep</span>
+                                        </label>
+                                        <div class="item-actions">
+                                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                                            <div class="actions-block">
+                                                <ul class="actions-list">
+                                                    <li>
+                                                        <a class="remove" href="#">
+                                                            <i class="fa fa-trash-o "></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="check" href="#">
+                                                            <i class="fa fa-check"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="edit" href="#">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>                </div>
+            </div>
+        </section>
+        
 
 
 				</article>

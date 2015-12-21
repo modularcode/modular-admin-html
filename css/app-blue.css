@@ -123,6 +123,73 @@ body {
 .dashboard-page .projects {
   margin-bottom: 30px; }
 
+.dashboard-page .tasks .title-block .title {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.dashboard-page .tasks .tasks-list {
+  list-style-type: none;
+  padding: 0; }
+  .dashboard-page .tasks .tasks-list .tasks-item {
+    padding-right: 20px;
+    position: relative; }
+    .dashboard-page .tasks .tasks-list .tasks-item label {
+      width: 100%; }
+      .dashboard-page .tasks .tasks-list .tasks-item label .checkbox:checked + span {
+        text-decoration: line-through; }
+      .dashboard-page .tasks .tasks-list .tasks-item label span {
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%; }
+    .dashboard-page .tasks .tasks-list .tasks-item .setting {
+      color: #c5c5c5;
+      font-size: 1.25rem; }
+    .dashboard-page .tasks .tasks-list .tasks-item .item-actions {
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .dashboard-page .tasks .tasks-list .tasks-item .item-actions .actions-block {
+        height: 30px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: -66px;
+        width: 66px;
+        background-color: #C9D0DB;
+        border: 1px solid #C9D0DB;
+        border-radius: 3px;
+        -webkit-transition: all 0.15s ease-in-out;
+                transition: all 0.15s ease-in-out; }
+        .dashboard-page .tasks .tasks-list .tasks-item .item-actions .actions-block .actions-list {
+          padding: 0;
+          list-style: none; }
+          .dashboard-page .tasks .tasks-list .tasks-item .item-actions .actions-block .actions-list li {
+            display: inline-block;
+            padding: 0; }
+            .dashboard-page .tasks .tasks-list .tasks-item .item-actions .actions-block .actions-list li a {
+              padding: 0px 2px; }
+              .dashboard-page .tasks .tasks-list .tasks-item .item-actions .actions-block .actions-list li a.edit {
+                color: #38424C; }
+              .dashboard-page .tasks .tasks-list .tasks-item .item-actions .actions-block .actions-list li a.check {
+                color: #40B726; }
+              .dashboard-page .tasks .tasks-list .tasks-item .item-actions .actions-block .actions-list li a.remove {
+                color: #DB0E1E; }
+      .dashboard-page .tasks .tasks-list .tasks-item .item-actions.active .actions-block {
+        opacity: 1;
+        right: 0; }
+
 .error-card {
   width: 410px;
   min-height: 330px;
@@ -1187,11 +1254,49 @@ pre {
     height: 225px;
     margin: auto; }
 
-.dashboard-page .projects .item-description {
+.dashboard-page .items .items-header {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .dashboard-page .items .items-header .items-title {
+    padding: 0; }
+  .dashboard-page .items .items-header .items-btn {
+    margin: 0; }
+  .dashboard-page .items .items-header .search {
+    color: #7e8e9f;
+    margin: 0; }
+  .dashboard-page .items .items-header .search-input {
+    border: none;
+    background-color: inherit;
+    width: 100px; }
+  .dashboard-page .items .items-header .pagination {
+    display: inline-block;
+    margin: 0; }
+
+.dashboard-page .items .item-description {
   margin-bottom: 0; }
   @media (max-width: 767px) {
-    .dashboard-page .projects .item-description {
+    .dashboard-page .items .item-description {
       margin-bottom: 1rem; } }
+
+#sales-map .jqvmap-zoomin,
+#sales-map .jqvmap-zoomout {
+  background-color: #52BCD3;
+  height: 20px;
+  width: 20px;
+  line-height: 14px; }
+
+#sales-map .jqvmap-zoomout {
+  top: 32px; }
 
 .dashboard-page .stats .card-block {
   padding-bottom: 0; }
