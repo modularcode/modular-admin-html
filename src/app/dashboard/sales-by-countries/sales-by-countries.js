@@ -4,7 +4,9 @@ $(function() {
         return false;
     }
 
-    var color = config.colorPrimary.toString();
+    var color = config.colorPrimary.toHexString();
+    var darkColor = tinycolor(config.colorPrimary.toString()).darken(40).toHexString();
+    var selectedColor = tinycolor(config.colorPrimary.toString()).darken(10).toHexString();
 
     var sales_data = {
         us: 2000,
@@ -25,11 +27,11 @@ $(function() {
         backgroundColor: 'transparent',
         color: '#E5E3E5',
         hoverOpacity: 0.7,
-        selectedColor: '#45ADD7',
+        selectedColor: selectedColor,
         enableZoom: true,
         showTooltip: true,
         values: sales_data,
-        scaleColors: [ '#45ADD7', '#39607A'],
+        scaleColors: [ color, darkColor],
         normalizeFunction: 'linear'
     });
 });
