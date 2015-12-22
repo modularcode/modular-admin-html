@@ -1,0 +1,14 @@
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.centralize-y {
+	display: flex;
+	align-items: center;
+}

@@ -1,13 +1,17 @@
 <div class="card sameheight-item" data-exclude="xs">
-    <div class="card-block tasks">
-        <div class="title-block">
+    <div class="card-header bordered">
+        <div class="header-block">
             <h3 class="title">
-                <span>Tasks</span>
-                <a href="" class="btn btn-primary btn-sm rounded">
-                    Add new
-                </a>
+               Tasks
             </h3>
         </div>
+        <div class="header-block pull-right">
+            <a href="" class="btn btn-primary btn-sm rounded pull-right">
+                Add new
+            </a>
+        </div>
+    </div>
+    <div class="card-block tasks">
         <ul class="tasks-list">
             {{#each tasks}}
                 <li class="tasks-item">

@@ -1,23 +1,12 @@
 .dashboard-page .items {
 
-	.items-header {
-		
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
+	.card-header {
 
-		.items-title {
-			
-			padding: 0;
-
+		.title {
+			padding-right: 0px;
+			margin-right: 5px;
 		}
 
-		.items-btn {
-		
-			margin: 0;
-
-		}
-		
 		.search {
 			color: $color-text-light;
 			margin: 0;
@@ -33,7 +22,6 @@
 			display: inline-block;
 			margin: 0;
 		}
-		
 	}
 
 	.item-description {

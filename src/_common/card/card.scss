@@ -13,43 +13,90 @@
 	.card-header {
 		background-image: none;
 		background-color: #ffffff;
-		color: #fff;
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		padding: 0;
 		border-radius: 0;
-		min-height: 35px;
+		min-height: 50px;
+		border: none;
 
-		.title {
-			float: left;
-			color: #4f5f6f;
-			padding: 10px 18px;
+		@include clearfix();
+
+		&.bordered {
+			border-bottom: 1px solid $color-divider;
 		}
 
-		&.with-nav-tabs {
-			padding: 0;
+		&.card-header-sm {
+			min-height: 40px;
+		}
+
+		&>span {
+			vertical-align: middle;
+		}
+
+		.pull-right {
+			margin-left: auto;
+		}
+
+		.header-block {
+			padding: 0.5rem $card-padding-x;;
+
+
+			@include media(xl) {
+				padding: 0.5rem $card-padding-x-xl;
+			}
+
+			@include media-down(sm) {
+				padding: 0.5rem $card-padding-x-sm;
+			}
+		}
+
+		.title {
+			color: $color-text;
+			display: inline-flex;
+		}
+
+		.btn {
+			margin: 0;
 		}
 
 		.nav-tabs {
 			border-color: transparent;
+			align-self: stretch;
+			display: flex;
+			position: relative;
+			top: 1px;
 
             .nav-item {
             	margin-left: 0;
+            	display: flex;
+            	align-self: stretch;
 
                 .nav-link {
-                	color: #4f5f6f;
+                	display: flex;
+                	align-self: stretch;
+                	align-items: center;
+                	color: $color-text;
                 	opacity: 0.7;
-                    padding: 6px 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
                     border-radius: 0;
                     font-size: 14px;
+                    border-top-width: 2px;
+                    border-bottom: 1px solid $color-divider;
 
                     &.active {
-	                	border-top-color: #59c2e6 ;
+	                	border-top-color: $color-primary;
+	                	border-bottom-color: transparent;
 	                	opacity: 1;
 
 	                	&:hover,
 	                	&:focus {
 	                		opacity: 1;
-	                		background-color: #fff;
-	                		border-color: #ddd #ddd transparent;
-	                		border-top-color: #59c2e6 ;
+	                		background-color: $color-text-inverse;
+	                		border-color: $color-divider $color-divider transparent;
+	                		border-top-color: $color-primary;;
 	                	}
 	                }
 
