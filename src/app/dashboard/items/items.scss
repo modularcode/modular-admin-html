@@ -8,16 +8,73 @@
 		}
 
 		.search {
-			color: $color-text-light;
 			margin: 0;
+			vertical-align: middle;
+			display: inline-flex;
+			flex-direction: row;
+			align-items: center;
+
+			$color-inactive: $color-text-muted;
+			$color-active: $color-text-light;
+
+
+
+			.search-input {
+				border: none;
+				background-color: inherit;
+				color: $color-inactive;
+				width: 100px;
+
+				&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+					transition: color 0.3s ease;
+					color: $color-inactive;
+				}
+				&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+					transition: color 0.3s ease;
+					color:  $color-inactive;
+					opacity:  1;
+				}
+				&::-moz-placeholder { /* Mozilla Firefox 19+ */
+					transition: color 0.3s ease;
+					color: $color-inactive;
+					opacity:  1;
+				}
+				&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+					transition: color 0.3s ease;
+					color: $color-inactive;
+				}
+
+				&:focus {
+
+					&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+						color: $color-active;
+					}
+					&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+					   color:  $color-active;
+					}
+					&::-moz-placeholder { /* Mozilla Firefox 19+ */
+					   color: $color-active;
+					}
+					&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+					   color: $color-active;
+					}
+
+					&+.search-icon {
+						color: $color-active;
+					}
+				}
+			}
+
+			.search-icon {
+				color: $color-text-muted;
+				transition: color 0.3s ease;
+				order: -1;
+				padding-right: 6px;
+			}
+
 		}
 
-		.search-input {
-			border: none;
-			background-color: inherit;
-			width: 100px;
-		}
-
+		
 		.pagination {
 			display: inline-block;
 			margin: 0;
