@@ -8,7 +8,9 @@
 **************************************************************/
 
 $color-primary: #59c2e6 !default;
-$color-primary-dark: darken(#4f5f6f, 10%) !default;
+$color-primary-light: lighten($color-primary, 10%) !default; 
+$color-primary-lighter: lighten($color-primary-light, 6%) !default; 
+$color-primary-dark: darken($color-primary, 10%) !default;
 $color-primary-darker: darken($color-primary-dark, 6%) !default;
 
 $color-divider: #d7dde4 !default;
@@ -20,17 +22,31 @@ $color-text-muted: #C2CCD6;
 $color-text-inverse: #ffffff !default;
 $color-text-passive: #c5c5c5 !default;
 
-$color-dropbown-border: fade-out($color-text-light, 0.9) !default;
-$color-dropdown-link-hover-bg: #f5f5f5 !default;
-
 $color-success: #4bcf99 !default;
 $color-info: #76D4F5 !default;
 $color-warning: #fe974b !default;
 $color-danger: #fc4c7a !default;
 $color-inverse: #131e26 !default;
 
+
+/*************************************************************
+*						Element Colors
+**************************************************************/
+
 $color-btn-primary: $color-primary !default;
 $color-btn-primary-text: $color-text-inverse !default;
+
+
+$color-link: $color-primary !default;
+$color-link-hover: darken($color-primary, 15%) !default;
+$color-sidebar-primary: darken(#4f5f6f, 10%) !default;
+$color-sidebar-secondary: darken($color-sidebar-primary, 6%) !default;
+$color-sidebar-text: fade-out($color-text-inverse, 0.5) !default;
+$color-sidebar-text-active: $color-text-inverse;
+
+$color-dropbown-border: fade-out($color-text-light, 0.9) !default;
+$color-dropdown-link-hover-bg: #f5f5f5 !default;
+
 
 
 /*************************************************************
