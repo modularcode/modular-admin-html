@@ -1,43 +1,57 @@
 $(function () {
 
-	// set theme type
-	var theme = localStorage.getItem('theme') || null;
+	// Local storage settings
+	var themeSettings = getThemeSettings();
+	var themeName = themeSettings.themeName || null;
+	var sidebarFixed = themeSettings.sidebarFixed || false;
+	var headerFixed = themeSettings.headerFixed || false;
+	var footerFixed = themeSettings.footerFixed || false;
 
-	// remove css link
-	replaceCssLink(theme);
-	
+	// Init active color
+	var $colorItems = $('#customize-menu .color-item');
 
-	$('.color-item').each(function() {
-		if (theme === $(this).data('theme')) {
+	$colorItems.each(function() {
+		if (themeName === $(this).data('theme')) {
+			$colorItems.not($(this)).removeClass("active");
 			$(this).addClass("active");
 		}
 	});
 
-
-	$('.color-item').on('click', function() {
-		$('.color-item').removeClass('active');
+	// Toggle theme color
+	$colorItems.on('click', function() {
+		$colorItems.removeClass('active');
 		$(this).addClass('active');
 		
 		// set theme type
-		theme = $(this).data('theme');
-		localStorage.setItem('theme', theme);
+		themeSettings.themeName = $(this).data('theme');
 
-		// remove css link
-		replaceCssLink(theme);
+		// replace css link
+		replaceCssLink(themeSettings.themeName);
+
+		$(document).trigger("themechange");
+
+		// save theme settings
+		saveThemeSettings();
 	});
 
-	function replaceCssLink(theme){
-		var themeName = "app";
+	function replaceCssLink(themeName) {
+		var $link = $('#theme-style');
 
-		if (theme) {
-			themeName += "-" + theme;
+		if (themeName) {
+			$link.attr('href', 'css/app-' + themeName + '.css');
 		}
-
-		themeName += ".css";
-
-		$('#theme-style').attr('href', 'css/' + themeName);
-
-		config.colorPrimary = tinycolor($("#ref .color-primary").css("color")).toHexString();
+		else {
+			$link.attr('href', 'css/app.css');
+		}
 	}
-	
+
+
+	function getThemeSettings() {
+		return (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+	}
+
+	function saveThemeSettings() {
+		localStorage.setItem('themeSettings', JSON.stringify(themeSettings));
+	}
+
 });
