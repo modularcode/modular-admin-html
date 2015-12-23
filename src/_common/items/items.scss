@@ -17,7 +17,7 @@
 		background-position: center center;
 		background-size: cover;
 		display: flex;
-		padding: 20px;
+		padding: 10px;
 		flex-grow: 1;
 		flex-shrink: 1;
 		align-items: flex-start;
@@ -49,7 +49,11 @@
 
 .item {
 	.item-col-img {
-		width: 90px;
+		//width: 60px;
+
+		&.xs{
+			width: 60px;
+		}
 
 		&.sm {
 			width: 70px;
@@ -65,12 +69,18 @@
 	}
 
 	.item-img {
-		width: 60px;
-	    height: 60px;
+		/*width: 60px;
+	    height: 60px;*/
 	    background-color: #efefef;
 	    background-size: cover;
 	    background-position: center;
 	    background-repeat: no-repeat;
+
+	    .xs &,
+	    &.xs {
+	    	height: 30px;
+	    	width: 30px;
+	    }
 
 	    .sm &,
 	    &.sm {
@@ -86,14 +96,27 @@
 	}
 }
 
-.item-title {
-	font-size: 1.1rem;
-	font-weight: 600;
-}
+.item-title-a {
+	width: 100%;
 
-.item-description {
-	font-size: 0.9rem;
-	margin-bottom: 0.5rem;
+	.item-title {
+		font-size: 1.1rem;
+		font-weight: 600;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    width: 100%;
+	}
+
+	.item-description {
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.item-canvas {
+		height: 20px;
+		width: 50px;
+	}
 }
 
 
