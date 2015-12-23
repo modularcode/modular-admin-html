@@ -23,7 +23,7 @@ images:
 						Name:
 					</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control boxed" placeholder="Item name">
+						<input type="text" class="form-control boxed" placeholder="">
 					</div>
 				</div>
 
@@ -63,9 +63,15 @@ images:
 							{{#each images}}
 								<div class="image-container">
 									<div class="controls">
-										<div class="control-btn move pull-right">
+										<a href="" class="control-btn move">
 											<i class="fa fa-arrows"></i>
-										</div>
+										</a><!--
+										--><a href="" class="control-btn star">
+											<i class="fa fa-star-o"></i>
+										</a><!--
+										--><a href="" class="control-btn remove">
+											<i class="fa fa-trash-o"></i>
+										</a>
 									</div>
 
 									{{!-- {{this}} --}}
@@ -77,7 +83,7 @@ images:
 							<a href="" data-toggle="modal" data-target="#modal-media">
 								<div class="image-container new">
 									<div class="image" >
-										add new
+										<i class="fa fa-plus"></i>
 									</div>
 								</div>
 							</a>
