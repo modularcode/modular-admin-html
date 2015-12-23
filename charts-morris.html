@@ -13,8 +13,19 @@
 		<!-- Place favicon.ico in the root directory -->
 
 		<link rel="stylesheet" href="css/vendor.css">
-		<link rel="stylesheet" href="css/app.css">
-		<link rel="stylesheet" id="theme-style" href="">
+
+		<!-- Theme initialization -->
+		<script>
+			var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+			var themeName = themeSettings.themeName || '';
+
+			if (themeName) {
+				document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+			}
+			else {
+				document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
+			}
+		</script>
 	</head>
 	<body>
 		<div class="main-wrapper">
@@ -465,7 +476,7 @@
 														<span class="color-item color-green" data-theme="green"></span>
 													</li>
 													<li>
-														<span class="color-item color-blue" data-theme=""></span>
+														<span class="color-item color-blue active" data-theme=""></span>
 													</li>
 													<li>
 														<span class="color-item color-purple" data-theme="purple"></span>
@@ -609,8 +620,8 @@
 					<footer class="footer">
 						<div class="footer-block buttons">
 							<iframe class="footer-github-btn"
-								src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true&size=large" 
-								frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+								src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" 
+								frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
 						</div>
 						<div class="footer-block author">
 							<ul>

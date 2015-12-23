@@ -13,8 +13,19 @@
 		<!-- Place favicon.ico in the root directory -->
 
 		<link rel="stylesheet" href="css/vendor.css">
-		<link rel="stylesheet" href="css/app.css">
-		<link rel="stylesheet" id="theme-style" href="">
+
+		<!-- Theme initialization -->
+		<script>
+			var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+			var themeName = themeSettings.themeName || '';
+
+			if (themeName) {
+				document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+			}
+			else {
+				document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
+			}
+		</script>
 	</head>
 	<body>
 		<div class="main-wrapper">
@@ -465,7 +476,7 @@
 														<span class="color-item color-green" data-theme="green"></span>
 													</li>
 													<li>
-														<span class="color-item color-blue" data-theme=""></span>
+														<span class="color-item color-blue active" data-theme=""></span>
 													</li>
 													<li>
 														<span class="color-item color-purple" data-theme="purple"></span>
@@ -624,10 +635,12 @@
                     
                     	</div>
                     </div>                </div>
-                <div class="col col-xs-12 col-sm-6 col-md-6 col-xl-7 visits-col">
+                <div class="col col-xs-12 col-sm-6 col-md-6 col-xl-7 history-col">
                     <div class="card sameheight-item" data-exclude="xs">
-                    	<div class="card-header with-nav-tabs">
-                    		<h3 class="title">Visits</h3>
+                    	<div class="card-header card-header-sm bordered">
+                    		<div class="header-block">
+                    			<h3 class="title">History</h3>
+                    		</div>
                             <ul class="nav nav-tabs pull-right" role="tablist">
                     			<li class="nav-item">
                     				<a class="nav-link active" href="#visits" role="tab" data-toggle="tab">Visits</a>
@@ -665,21 +678,25 @@
 
                 <div class="col-md-8">
                     <div class="card sameheight-item items" data-exclude="xs">
-                    	<div class="card-header items-header">
-                    		<h3 class="title items-title">
-                    			<span>Items</span>
-                    			<a href="" class="btn btn-primary btn-sm rounded items-btn">Add new</a>
-                    		</h3>
-                    		<div>
+                    	<div class="card-header bordered">
+                    		<div class="header-block">
+                    			<h3 class="title">
+                    				Items
+                    			</h3>
+                    			<a href="" class="btn btn-primary btn-sm rounded items-btn">
+                    				Add new
+                    			</a>
+                    		</div>
+                    		<div class="header-block pull-right">
                     			<label class="search">
-                    				<i class="fa fa-search"></i>
                     				<input class="search-input" placeholder="search...">
+                    				<i class="fa fa-search search-icon"></i>
                     			</label>
                     			<div class="pagination">
-                    				<a href="" class="btn btn-primary btn-sm items-btn">
+                    				<a href="" class="btn btn-primary btn-sm items-btn rounded">
                     					<i class="fa fa-angle-up"></i>
                     				</a>
-                    				<a href="" class="btn btn-primary btn-sm items-btn">
+                    				<a href="" class="btn btn-primary btn-sm items-btn rounded">
                     					<i class="fa fa-angle-down"></i>
                     				</a>
                     			</div>
@@ -778,34 +795,50 @@
 
                 <div class="col-md-4">
                      <div class="card sameheight-item" data-exclude="xs">
+                     	<div class="card-header">
+                     		<div class="header-block">
+                     			<h3 class="title">
+                     				Sales breakdown
+                     			</h3>
+                     		</div>
+                     	</div>
                          <div class="card-block">
                              <div id="sales-chart"></div>
                          </div>
                      </div>                </div>
-
+            </div>
+        </section>
+        <section class="section">
+           <div class="row sameheight-container">
                 <div class="col-md-8">
                     <div class="card sameheight-item" data-exclude="xs">
+                    	<div class="card-header">
+                    		<div class="header-block">
+                    	        <h3 class="title">
+                    	            Sales by countries
+                    	        </h3>
+                    	    </div>
+                    	</div>
                         <div class="card-block">
-                            <div class="title-block">
-                                <h3 class="title">
-                                    Sales by countries
-                                </h3>
-                            </div>
                             <div id="sales-map" style="width: 100%; height: 400px;"></div>
                         </div>
                     </div>                </div>
                 
                 <div class="col-md-4">
-                    <div class="card sameheight-item" data-exclude="xs">
-                        <div class="card-block tasks">
-                            <div class="title-block">
+                    <div class="card tasks sameheight-item" data-exclude="xs">
+                        <div class="card-header bordered">
+                            <div class="header-block">
                                 <h3 class="title">
-                                    <span>Tasks</span>
-                                    <a href="" class="btn btn-primary btn-sm rounded">
-                                        Add new
-                                    </a>
+                                   Tasks
                                 </h3>
                             </div>
+                            <div class="header-block pull-right">
+                                <a href="" class="btn btn-primary btn-sm rounded pull-right">
+                                    Add new
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
                             <ul class="tasks-list">
                                     <li class="tasks-item">
                                         <label>
@@ -1052,8 +1085,8 @@
 					<footer class="footer">
 						<div class="footer-block buttons">
 							<iframe class="footer-github-btn"
-								src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true&size=large" 
-								frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+								src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" 
+								frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
 						</div>
 						<div class="footer-block author">
 							<ul>

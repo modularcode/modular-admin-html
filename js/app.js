@@ -1,6 +1,7 @@
 var config = window.config = {};
 
 config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));
+console.log(config.colorPrimary);
 $(function() {
 	setAnimation({
 		name: 'pulse',
@@ -179,53 +180,6 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
-/*
- * jQuery getCSS Plugin
- * Copyright 2013, intesso
- * MIT license.
- *
- * cross browser function to dynamically load an external css file.
- * see: [github page](http://intesso.github.com/jquery-getCSS/)
- *
- */
-
-(function() {
-	/*
-		arguments: attributes
-		attributes can be a string: then it goes directly inside the href attribute.
-		e.g.: $.getCSS("fresh.css")
-		attributes can also be an objcet.
-		e.g.: $.getCSS({href:"cool.css", media:"print"})
-		or:	$.getCSS({href:"/styles/forest.css", media:"screen"})
-	*/
-	var getCSS = function(attributes) {
-			// setting default attributes
-			if(typeof attributes === "string") {
-				var href = attributes;
-				attributes = {
-					href: href
-				};
-			}
-			if(!attributes.rel) {
-				attributes.rel = "stylesheet"
-			}
-			// appending the stylesheet
-			// no jQuery stuff here, just plain dom manipulations
-			var styleSheet = document.createElement("link");
-			for(var key in attributes) {
-				styleSheet.setAttribute(key, attributes[key]);
-			}
-			var head = document.getElementsByTagName("head")[0];
-			head.appendChild(styleSheet);
-		};
-
-	if(typeof jQuery === "undefined") {
-		window.getCSS = getCSS;
-	} else {
-		jQuery.getCSS = getCSS;
-	}
-
-})();
 $(function() {
 	setSameHeights();
 
@@ -698,94 +652,6 @@ $(function() {
 });
 $(function() {
 
-    if (!$('#sales-map').length) {
-        return false;
-    }
-
-    var color = config.colorPrimary.toString();
-
-    var sales_data = {
-        us: 2000,
-        ru: 2000, 
-        gb: 10000,
-        fr: 10000,
-        de: 10000,
-        cn: 10000,
-        in: 10000,
-        sa: 10000,
-        ca: 10000,
-        br: 5000,
-        au: 5000
-    };
-
-    $('#sales-map').vectorMap({
-        map: 'world_en',
-        backgroundColor: 'transparent',
-        color: '#E5E3E5',
-        hoverOpacity: 0.7,
-        selectedColor: '#45ADD7',
-        enableZoom: true,
-        showTooltip: true,
-        values: sales_data,
-        scaleColors: [ '#45ADD7', '#39607A'],
-        normalizeFunction: 'linear'
-    });
-});
-$(function() {
-
-    if (!$('#sales-chart').length) {
-        return false;
-    }
-
-    Morris.Donut({
-        element: 'sales-chart',
-        data: [{ label: "Download Sales", value: 12 },
-            { label: "In-Store Sales", value: 30 },
-            { label: "Mail-Order Sales", value: 20 } ],
-        resize: true,
-        colors: [
-            tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-            tinycolor(config.colorPrimary.toString()).darken(10).toString(),
-            config.colorPrimary.toString()
-        ],
-    });
-})
-$(function(){
-
-	$(document).on('click',function(e) {
-
-		if (
-			!$(e.target).closest('.item-actions').length
-    	) {
-			removeActionList();
-		}
-	});
-	
-	$('.item-actions-toggle-btn').on('click',function(e){
-		e.preventDefault();
-		removeActionList();
-
-		$(this).parent().toggleClass('active');	
-	});
-
-
-	$('.actions-list > li').on('click', '.check', function(e){
-		e.preventDefault();
-
-		$(this).parents('.tasks-item')
-		.find('.checkbox')
-		.prop("checked",  true);
-
-		removeActionList();
-	});
-
-});
-
-function removeActionList(){
-	$('.item-actions').removeClass('active');
-}
-$(function() {
-
     if (!$('#dashboard-visits-chart').length) {
         return false;
     }
@@ -915,20 +781,96 @@ function drawDownloadsChart(){
         ],
     });
 }
-//LoginForm validation
 $(function() {
-	if (!$('.form-control').length) {
+
+    if (!$('#sales-chart').length) {
         return false;
     }
 
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
+    Morris.Donut({
+        element: 'sales-chart',
+        data: [{ label: "Download Sales", value: 12 },
+            { label: "In-Store Sales", value: 30 },
+            { label: "Mail-Order Sales", value: 20 } ],
+        resize: true,
+        colors: [
+            tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
+            tinycolor(config.colorPrimary.toString()).darken(10).toString(),
+            config.colorPrimary.toString()
+        ],
+    });
+})
+$(function() {
+
+    if (!$('#sales-map').length) {
+        return false;
+    }
+
+    var color = config.colorPrimary.toHexString();
+    var darkColor = tinycolor(config.colorPrimary.toString()).darken(40).toHexString();
+    var selectedColor = tinycolor(config.colorPrimary.toString()).darken(10).toHexString();
+
+    var sales_data = {
+        us: 2000,
+        ru: 2000, 
+        gb: 10000,
+        fr: 10000,
+        de: 10000,
+        cn: 10000,
+        in: 10000,
+        sa: 10000,
+        ca: 10000,
+        br: 5000,
+        au: 5000
+    };
+
+    $('#sales-map').vectorMap({
+        map: 'world_en',
+        backgroundColor: 'transparent',
+        color: '#E5E3E5',
+        hoverOpacity: 0.7,
+        selectedColor: selectedColor,
+        enableZoom: true,
+        showTooltip: true,
+        values: sales_data,
+        scaleColors: [ color, darkColor],
+        normalizeFunction: 'linear'
+    });
+});
+$(function(){
+
+	$(document).on('click',function(e) {
+
+		if (
+			!$(e.target).closest('.item-actions').length
+    	) {
+			removeActionList();
+		}
+	});
+	
+	$('.item-actions-toggle-btn').on('click',function(e){
+		e.preventDefault();
+		removeActionList();
+
+		$(this).parent().toggleClass('active');	
 	});
 
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
+
+	$('.actions-list > li').on('click', '.check', function(e){
+		e.preventDefault();
+
+		$(this).parents('.tasks-item')
+		.find('.checkbox')
+		.prop("checked",  true);
+
+		removeActionList();
 	});
+
 });
+
+function removeActionList(){
+	$('.item-actions').removeClass('active');
+}
 
 $(function() {
 
@@ -948,6 +890,20 @@ $(function() {
             .change();
     });
 
+});
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
+
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
 });
 $(function() {
     var $el = $('#dataTables-example');
@@ -1047,68 +1003,60 @@ var modalMedia = {
 };
 $(function () {
 
-	// // set theme type
-	// var theme = localStorage.getItem('theme') || null;
+	// Local storage settings
+	var themeSettings = getThemeSettings();
+	var themeName = themeSettings.themeName || null;
+	var sidebarFixed = themeSettings.sidebarFixed || false;
+	var headerFixed = themeSettings.headerFixed || false;
+	var footerFixed = themeSettings.footerFixed || false;
 
-	// // remove css link
-	// // removeCssLink(theme);
+	// Init active color
+	var $colorItems = $('#customize-menu .color-item');
 
-	// // load css link
-	// loadCssLink(theme);
-	
+	$colorItems.each(function() {
+		if (themeName === $(this).data('theme')) {
+			$colorItems.not($(this)).removeClass("active");
+			$(this).addClass("active");
+		}
+	});
 
-	// $('.color-item').each(function() {
-	// 	if (theme === $(this).data('theme')) {
-	// 		$(this).addClass("active");
-	// 	}
-	// });
-
-
-	// $('.color-item').on('click', function() {
-	// 	$('.color-item').removeClass('active');
-	// 	$(this).addClass('active');
+	// Toggle theme color
+	$colorItems.on('click', function() {
+		$colorItems.removeClass('active');
+		$(this).addClass('active');
 		
-	// 	// set previous version of theme type
-	// 	var prevTheme = theme;
+		// set theme type
+		themeSettings.themeName = $(this).data('theme');
 
-	// 	// set theme type
-	// 	theme = $(this).data('theme');
-	// 	localStorage.setItem('theme', theme);
+		// replace css link
+		replaceCssLink(themeSettings.themeName);
 
-	// 	// load css link
-	// 	//loadCssLink(theme);
+		$(document).trigger("themechange");
 
-	// 	// remove css link
-	// 	//removeCssLink(prevTheme);
-	// });
+		// save theme settings
+		saveThemeSettings();
+	});
+
+	function replaceCssLink(themeName) {
+		var $link = $('#theme-style');
+
+		if (themeName) {
+			$link.attr('href', 'css/app-' + themeName + '.css');
+		}
+		else {
+			$link.attr('href', 'css/app.css');
+		}
+	}
 
 
-	// function loadCssLink(theme){
-	// 	var themeName = "app";
+	function getThemeSettings() {
+		return (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+	}
 
-	// 	if (theme) {
-	// 		themeName += "-" + theme;
-	// 	}
+	function saveThemeSettings() {
+		localStorage.setItem('themeSettings', JSON.stringify(themeSettings));
+	}
 
-	// 	$.getCSS("/css/" + themeName + ".css");
-	// }
-
-	// function removeCssLink(theme){
-	// 	var themeName = "app";
-
-	// 	if (theme) {
-	// 		themeName += "-" + theme;
-	// 	}
-
-	// 	themeName += ".css";
-
-	// 	$("head").find("link[rel=stylesheet]").attr("href", function (i, src) {
-	// 		if (src.search(themeName) >= 0) {
-	// 			$(this).remove();
-	// 		}
-	// 	});
-	// }
-	
 });
 $(function() {
 
