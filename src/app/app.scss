@@ -10,10 +10,6 @@
 	transition: left 0.3s ease, padding-left 0.3s ease; 
 	overflow: hidden;
 
-	.boxed & {
-		max-width: 1200px;
-	}
-
 	.content {
 
 		$padding-x: $content-padding-x-md;

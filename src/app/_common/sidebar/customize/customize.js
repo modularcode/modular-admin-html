@@ -3,8 +3,9 @@ $(function () {
 	// Local storage settings
 	var themeSettings = getThemeSettings();
 	var themeName = themeSettings.themeName || null;
-	var sidebarFixed = themeSettings.sidebarFixed || false;
 	var headerFixed = themeSettings.headerFixed || false;
+	var sidebarFixed = themeSettings.sidebarFixed || false;
+	var containerBoxed = themeSettings.containerBoxed || false;
 	var footerFixed = themeSettings.footerFixed || false;
 
 	/********************************************
@@ -55,6 +56,12 @@ $(function () {
 	changeTheme({
 		sector: 'sidebar',
 		isFixed: sidebarFixed
+	});
+
+	//change footer
+	changeTheme({
+		sector: 'footer',
+		isFixed: footerFixed
 	});
 
 	//change footer
@@ -126,7 +133,7 @@ $(function () {
 	function changeTheme(options){
 		var container = $('#app');
 
-		var sectorClass = options.sector + "-fixed";
+		var sectorClass = options.sector + "-fixed";;
 
 		if (options.isFixed) {
 			container.addClass(sectorClass);
@@ -135,12 +142,13 @@ $(function () {
 			container.removeClass(sectorClass);
 		}
 
+		// check customize buttons
 		checkCustomizeButtons(options)
 	}
 
 	function checkCustomizeButtons(options){
 		$('#customize-menu .radio[name=' + options.sector + ']')
-		.prop('checked', false)
+		
 		.each(function() {
 			if (
 				(options.isFixed && $(this).val() == 'fixed') ||
