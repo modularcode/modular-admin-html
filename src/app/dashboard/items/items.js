@@ -16,7 +16,7 @@ $(function() {
 		// Generate random data
 		else {
 			var data = [];
-			for (var i = 0; i < 12; i++) {
+			for (var i = 0; i < 17; i++) {
 				data.push(Math.round(100 * Math.random()));
 			}
 		}
