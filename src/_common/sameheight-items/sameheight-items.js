@@ -10,11 +10,13 @@ $(function() {
 });
 
 
-function setSameHeights() {
+function setSameHeights($container) {
+
+	$container = $container || $('.sameheight-container');
 
 	var viewport = ResponsiveBootstrapToolkit.current();
 
-	$('.sameheight-container').each(function() {
+	$container.each(function() {
 
 		var $items = $(this).find(".sameheight-item");
 

@@ -1,5 +1,5 @@
 .sidebar {
-	background-color: $color-sidebar-primary;
+	background-color: $sidebar-color-primary;
 	width: $sidebar-width;
 	padding-bottom: 60px;
 	position: absolute;
@@ -120,7 +120,7 @@
 		// All links which are not active
 		// have subdued color
 		li a {
-			color: $color-sidebar-text;
+			color: $sidebar-color-text;
 		}
 
 		// All links which are not active
@@ -129,8 +129,8 @@
 		li a:hover,
 		li.open > a,
 		li.open a:hover {
-			color: $color-sidebar-text-active;
-			background-color: $color-sidebar-secondary;
+			color: $sidebar-color-text-active;
+			background-color: $sidebar-color-secondary;
 		}
 
 
@@ -154,7 +154,7 @@
 
 			// First level active links have bit darker background
 			&.open > a {
-				background-color: darken($color-sidebar-primary, 3%);
+				background-color: darken($sidebar-color-primary, 3%);
 			}
 
 			// Open items links
@@ -195,13 +195,13 @@
 				padding-top: 10px;
 				padding-bottom: 10px;
 				padding-left: 50px;
-				background-color: darken($color-sidebar-primary, 3%);
+				background-color: darken($sidebar-color-primary, 3%);
 			}
 
 			// Second level active items links
 			// Have brighter color
 			&.active a {
-				color: $color-sidebar-text-active;
+				color: $sidebar-color-text-active;
 			}
 		}
 	}

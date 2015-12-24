@@ -1,5 +1,7 @@
 // Dashboard stats
 
+
+
 .dashboard-page .stats {
 
 	.card-block {
@@ -19,7 +21,7 @@
 	}
 
 	.stat-icon {
-		color: $color-primary;
+		color: $dashboard-stat-icon-color;
 		display: inline-block;
 		font-size: 26px;
 		text-align: center;
