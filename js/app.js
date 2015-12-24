@@ -1,7 +1,18 @@
 var config = window.config = {};
+	config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));
 
-config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));
-console.log(config.colorPrimary);
+
+
+// Configure responsive bootstrap toolkit
+config.ResponsiveBootstrapToolkitVisibilityDivs = {
+    'xs': $('<div class="device-xs 				  hidden-sm-up"></div>'),
+    'sm': $('<div class="device-sm hidden-xs-down hidden-md-up"></div>'),
+    'md': $('<div class="device-md hidden-sm-down hidden-lg-up"></div>'),
+    'lg': $('<div class="device-lg hidden-md-down hidden-xl-up"></div>'),
+    'xl': $('<div class="device-xl hidden-lg-down			  "></div>'),
+};
+
+ResponsiveBootstrapToolkit.use('Custom', config.ResponsiveBootstrapToolkitVisibilityDivs);
 $(function() {
 	setAnimation({
 		name: 'pulse',
@@ -180,6 +191,44 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
+/***********************************************
+*         Default Validation Settings
+***********************************************/
+
+var validationDefaultSettings = {
+	debug: true,
+	errorClass:'has-error',
+	validClass:'success',
+	errorElement:"span",
+	highlight: addErrorClass, 
+	unhighlight: addValidClass,
+    submitHandler: function(form) {
+        form.submit();
+    }
+};
+
+// add error class
+function addErrorClass(element, errorClass, validClass) {
+	$(element).parents("div.form-group")
+	.addClass(errorClass)
+	.removeClass(validClass); 
+}
+
+// add valid class
+function addValidClass(element, errorClass, validClass) {
+	$(element).parents(".has-error")
+	.removeClass(errorClass)
+	.addClass(validClass); 
+}
+/***********************************************
+*        NProgress Settings
+***********************************************/
+var npSettings = { 
+	easing: 'ease', 
+	speed: 500 
+}
+
+NProgress.configure(npSettings);
 $(function() {
 	setSameHeights();
 
@@ -192,11 +241,13 @@ $(function() {
 });
 
 
-function setSameHeights() {
+function setSameHeights($container) {
+
+	$container = $container || $('.sameheight-container');
 
 	var viewport = ResponsiveBootstrapToolkit.current();
 
-	$('.sameheight-container').each(function() {
+	$container.each(function() {
 
 		var $items = $(this).find(".sameheight-item");
 
@@ -782,23 +833,59 @@ function drawDownloadsChart(){
     });
 }
 $(function() {
+	$(".dashboard-page .items .sparkline").each(function() {
+		var type = $(this).data('type');
 
-    if (!$('#sales-chart').length) {
+		// There is predefined data
+		if ($(this).data('data')) {
+			var data = $(this).data('data').split(',').map(function(item) {
+				if (item.indexOf(":") > 0) {
+					return item.split(":");
+				}
+				else {
+					return item;
+				}
+			});
+		}
+		// Generate random data
+		else {
+			var data = [];
+			for (var i = 0; i < 17; i++) {
+				data.push(Math.round(100 * Math.random()));
+			}
+		}
+
+
+		$(this).sparkline(data, {
+			barColor: config.colorPrimary.toString(),
+			type: type
+		});
+	});
+});
+$(function() {
+
+    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
+
+    if (!$dashboardSalesBreakdownChart.length) {
         return false;
     }
 
     Morris.Donut({
-        element: 'sales-chart',
+        element: 'dashboard-sales-breakdown-chart',
         data: [{ label: "Download Sales", value: 12 },
             { label: "In-Store Sales", value: 30 },
             { label: "Mail-Order Sales", value: 20 } ],
         resize: true,
         colors: [
             tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-            tinycolor(config.colorPrimary.toString()).darken(10).toString(),
+            tinycolor(config.colorPrimary.toString()).darken(8).toString(),
             config.colorPrimary.toString()
         ],
     });
+
+    var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
+
+    setSameHeights($sameheightContainer);
 })
 $(function() {
 
@@ -871,7 +958,20 @@ $(function(){
 function removeActionList(){
 	$('.item-actions').removeClass('active');
 }
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
 
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
+});
 $(function() {
 
     if (!$('#select-all-items').length) {
@@ -891,20 +991,7 @@ $(function() {
     });
 
 });
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
 
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
-});
 $(function() {
     var $el = $('#dataTables-example');
 
@@ -1065,46 +1152,9 @@ $(function() {
 });
 
 
-
-/***********************************************
-*         Default Validation Settings
-***********************************************/
-
-var validationDefaultSettings = {
-	debug: true,
-	errorClass:'has-error',
-	validClass:'success',
-	errorElement:"span",
-	highlight: addErrorClass, 
-	unhighlight: addValidClass,
-    submitHandler: function(form) {
-        form.submit();
-    }
-};
-
-// add error class
-function addErrorClass(element, errorClass, validClass) {
-	$(element).parents("div.form-group")
-	.addClass(errorClass)
-	.removeClass(validClass); 
-}
-
-// add valid class
-function addValidClass(element, errorClass, validClass) {
-	$(element).parents(".has-error")
-	.removeClass(errorClass)
-	.addClass(validClass); 
-}
-
 /***********************************************
 *        NProgress Settings
 ***********************************************/
-var npSettings = { 
-	easing: 'ease', 
-	speed: 500 
-}
-
-NProgress.configure(npSettings);
 
 // start load bar
 NProgress.start();
