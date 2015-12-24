@@ -24,6 +24,27 @@
 		</div>
 	</div>
 	<ul class="items-list striped">
+		<li class="item item-header">
+			<div class="item-row">
+				<div class="item-col fixed item-col-img xs"></div>
+				<div class="item-col">
+					<div class="row">
+						<div class="col-sm-5">
+							<span>Name</span>
+						</div>
+						<div class="col-sm-2">
+							<span>Sales</span>
+						</div>
+						<div class="col-sm-2">
+							<span>Stats</span>
+						</div>
+						<div class="col-sm-3">
+							<span>Published</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
 		{{#each items}}
 			<li class="item">
 				<div class="item-row">
@@ -50,7 +71,9 @@
 								{{this.sales}}
 							</div>
 							<div class="col-sm-2">
-								
+								<span class="sparkline" data-type="bar">
+									
+								</span>	
 							</div>
 							<div class="col-sm-3">
 								{{this.date}}
