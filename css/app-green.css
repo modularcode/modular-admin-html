@@ -461,6 +461,13 @@ body {
       -ms-transform: scaleX(0);
           transform: scaleX(0); }
 
+.easy-pie-chart {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #d7dde4;
+  border-radius: 5px; }
+
 .card {
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
@@ -619,34 +626,6 @@ body {
 .card-footer {
   background-color: #fafafa; }
 
-.easy-pie-chart {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  background-color: #d7dde4;
-  border-radius: 5px; }
-
-.dropdown-menu {
-  float: left;
-  box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
-  border: 1px solid rgba(126, 142, 159, 0.1);
-  border-radius: 0; }
-  .dropdown-menu > li > a {
-    display: block;
-    padding: 0px 15px;
-    clear: both;
-    font-weight: normal;
-    color: #4f5f6f;
-    white-space: nowrap;
-    -webkit-transition: none;
-            transition: none; }
-    .dropdown-menu > li > a i {
-      margin-right: 2px; }
-    .dropdown-menu > li > a:hover {
-      color: #4bcf99;
-      background: none;
-      background-color: whitesmoke; }
-
 .flex-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -678,6 +657,27 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.dropdown-menu {
+  float: left;
+  box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
+  border: 1px solid rgba(126, 142, 159, 0.1);
+  border-radius: 0; }
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 0px 15px;
+    clear: both;
+    font-weight: normal;
+    color: #4f5f6f;
+    white-space: nowrap;
+    -webkit-transition: none;
+            transition: none; }
+    .dropdown-menu > li > a i {
+      margin-right: 2px; }
+    .dropdown-menu > li > a:hover {
+      color: #4bcf99;
+      background: none;
+      background-color: whitesmoke; }
 
 input,
 textarea {
@@ -1392,16 +1392,6 @@ pre {
   max-width: 250px;
   max-height: 250px; }
 
-.dashboard-page #sales-map .jqvmap-zoomin,
-.dashboard-page #sales-map .jqvmap-zoomout {
-  background-color: #4bcf99;
-  height: 20px;
-  width: 20px;
-  line-height: 14px; }
-
-.dashboard-page #sales-map .jqvmap-zoomout {
-  top: 32px; }
-
 .dashboard-page .stats .card-block {
   padding-bottom: 0; }
 
@@ -1449,6 +1439,16 @@ pre {
     background-color: #4bcf99; }
   .dashboard-page .stats .stat-progress[value]::-moz-progress-bar {
     background-color: #dddddd; }
+
+.dashboard-page #sales-map .jqvmap-zoomin,
+.dashboard-page #sales-map .jqvmap-zoomout {
+  background-color: #4bcf99;
+  height: 20px;
+  width: 20px;
+  line-height: 14px; }
+
+.dashboard-page #sales-map .jqvmap-zoomout {
+  top: 32px; }
 
 .dashboard-page .tasks {
   display: -webkit-box;
