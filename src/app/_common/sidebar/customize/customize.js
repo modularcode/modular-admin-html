@@ -2,163 +2,144 @@ $(function () {
 
 	// Local storage settings
 	var themeSettings = getThemeSettings();
-	var themeName = themeSettings.themeName || null;
-	var headerFixed = themeSettings.headerFixed || false;
-	var sidebarFixed = themeSettings.sidebarFixed || false;
-	var footerFixed = themeSettings.footerFixed || false;
 
-	/********************************************
-	*											
-	*		    Customize Theme Colors
-	*
-	*********************************************/
+	// Elements
 
-	// Init active color
-	var $colorItems = $('#customize-menu .color-item');
+	var $app = $('#app');
+	var $styleLink = $('#theme-style');
+	var $customizeMenu = $('#customize-menu');
 
-	$colorItems.each(function() {
-		if (themeName === $(this).data('theme')) {
-			$colorItems.not($(this)).removeClass("active");
-			$(this).addClass("active");
-		}
-	});
+	// Color switcher
+	var $customizeMenuColorBtns = $customizeMenu.find('.color-item');
 
-	// Toggle theme color
-	$colorItems.on('click', function() {
-		$colorItems.removeClass('active');
-		$(this).addClass('active');
-		
-		// set theme type
+	// Position switchers
+	var $customizeMenuRadioBtns = $customizeMenu.find('.radio');
+
+
+	// /////////////////////////////////////////////////
+
+	// Initial state
+
+	// On setting event, set corresponding options
+
+	// Update customize view based on options
+
+	// Update theme based on options
+
+	/************************************************
+	*				Initial State
+	*************************************************/
+
+	setThemeSettings();
+
+	/************************************************
+	*					Events
+	*************************************************/
+
+	// set theme type
+	$customizeMenuColorBtns.on('click', function() {
 		themeSettings.themeName = $(this).data('theme');
 
-		// replace css link
-		replaceCssLink(themeSettings.themeName);
-
-		$(document).trigger("themechange");
-
-		// save theme settings
-		saveThemeSettings();
+		setThemeSettings();
 	});
 
-	/********************************************
-	*											
-	*		  Customize Container Settings
-	*
-	*********************************************/
-	//change header
-	changeTheme({
-		sector: 'header',
-		isFixed: headerFixed
-	});
+	$customizeMenuRadioBtns.on('click', function(e) {
+		e.preventDefault();
 
-	//change sidebar
-	changeTheme({
-		sector: 'sidebar',
-		isFixed: sidebarFixed
-	});
-
-	//change footer
-	changeTheme({
-		sector: 'footer',
-		isFixed: footerFixed
-	});
-
-
-	// Init radio button element
-	var $radioButtons = $('#customize-menu .radio');
-
-	$radioButtons.on('click', function(){
-		// customise sector	and settings values
-		var sector = $(this).attr('name');
+		var optionName = $(this).prop('name');
 		var value = $(this).val();
 
-		// header customize settings
-		if (sector === 'header') {
-			themeSettings.headerFixed = isFixed(value);
+		themeSettings[optionName] = value;
 
-			changeTheme({
-				sector: sector,
-				isFixed: themeSettings.headerFixed
-			});
-		}
+		console.log("RADIO CLICKED", optionName, value);
 
-		// sidebar customize settings
-		else if(sector === 'sidebar') {
-			themeSettings.sidebarFixed = isFixed(value);
-
-			changeTheme({
-				sector: sector,
-				isFixed: themeSettings.sidebarFixed
-			});
-		}
-
-		// footer customize settings
-		else if(sector === 'footer') {
-			themeSettings.footerFixed = isFixed(value);
-
-			changeTheme({
-				sector: sector,
-				isFixed: themeSettings.footerFixed
-			});
-		}
-
-		// save theme settings
-		saveThemeSettings();
+		setThemeSettings();
 	});
 
-	/********************************************
-	*											
-	*		  Customize Custom Functions
-	*
-	*********************************************/
+	function setThemeSettings() {
+		setThemeState();
+		setThemeControlsState();
 
-	function replaceCssLink(themeName) {
-		var $link = $('#theme-style');
+		console.log("***********************************");
 
-		if (themeName) {
-			$link.attr('href', 'css/app-' + themeName + '.css');
-		}
-		else {
-			$link.attr('href', 'css/app.css');
-		}
+		saveThemeSettings();
+
+		$(document).trigger("themechange");
 	}
 
+	/************************************************
+	*			Update theme based on options
+	*************************************************/
 
-	function changeTheme(options){
-		var container = $('#app');
-
-		var sectorClass = options.sector + "-fixed";;
-
-		if (options.isFixed) {
-			container.addClass(sectorClass);
+	function setThemeState() {
+		// set theme type
+		if (themeSettings.themeName) {
+			$styleLink.attr('href', 'css/app-' + themeSettings.themeName + '.css');
 		}
 		else {
-			container.removeClass(sectorClass);
+			$styleLink.attr('href', 'css/app.css');
 		}
 
-		// check customize buttons
-		checkCustomizeButtons(options)
+		// App classes
+		$app.removeClass('header-fixed header-static footer-fixed footer-static sidebar-fixed sidebar-static');
+
+		// set header
+		$app.addClass(themeSettings.headerPosition);
+
+		// set footer
+		$app.addClass(themeSettings.footerPosition);
+
+		// set footer
+		$app.addClass(themeSettings.sidebarPosition);
 	}
 
-	function checkCustomizeButtons(options){
-		$('#customize-menu .radio[name=' + options.sector + ']')
-		
-		.each(function() {
-			if (
-				(options.isFixed && $(this).val() == 'fixed') ||
-				(!options.isFixed && $(this).val() == 'static')
-			) {
-				$(this).prop('checked', true);
+	/************************************************
+	*			Update theme controls based on options
+	*************************************************/
+
+	function setThemeControlsState() {
+		// set color switcher
+		$customizeMenuColorBtns.each(function() {
+			if($(this).data('theme') === themeSettings.themeName) {
+				$(this).addClass('active');
+			}
+			else {
+				$(this).removeClass('active');
+			}
+		});
+
+		// set radio buttons
+		$customizeMenuRadioBtns.each(function() {
+			var name = $(this).prop('name');
+			var value = $(this).val();
+
+			console.log("Name ", name);
+			console.log("Value ", value);
+			console.log("themeSetting ", themeSettings[name]);
+			console.log("-----------");
+
+
+			if (themeSettings[name] === value) {
+				$(this).prop( "checked", true );
+			}
+			else {
+				$(this).prop( "checked", false );
 			}
 		});
 	}
 
-	function isFixed(param) {
-		return (param === 'fixed');
-	}
+	/************************************************
+	*				Storage Functions
+	*************************************************/
 
 	function getThemeSettings() {
-		return (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+		var settings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+
+		settings.headerPosition = settings.headerPosition || '';
+		settings.sidebarPosition = settings.sidebarPosition || '';
+		settings.footerPosition = settings.footerPosition || '';
+
+		return settings;
 	}
 
 	function saveThemeSettings() {
