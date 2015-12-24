@@ -4,7 +4,7 @@
 	margin-bottom: 5px;
 
 	&.btn-primary {
-		@include button-variant( $color-btn-primary-text, $color-primary, $color-primary);
+		@include button-variant( $btn-primary-color-text, $color-primary, $color-primary);
 	}
 
 	&.btn-default {

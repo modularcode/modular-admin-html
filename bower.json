@@ -18,7 +18,8 @@
     "quill": "~0.20.1",
     "responsive-bootstrap-toolkit": "~2.5.0",
     "tether": "~1.1.1",
-    "tinycolor": "~1.2.1"
+    "tinycolor": "~1.2.1",
+    "jquery.sparkline": "http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js"
   },
   "overrides": {
     "bootstrap": {

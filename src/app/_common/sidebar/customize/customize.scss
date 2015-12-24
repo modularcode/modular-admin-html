@@ -6,19 +6,19 @@
 
 	& > li {
 		& > a {
-			background-color: $color-sidebar-primary;
+			background-color: $sidebar-color-primary;
 		}
 
 		& > a:hover,
 		&.open > a {
-			background-color: $color-sidebar-secondary;
+			background-color: $sidebar-color-secondary;
 		}
 	}
 
 	.customize {	
 		width: $sidebar-width;
 		color: fade-out($color-text-inverse, 0.5);
-		background-color: $color-sidebar-secondary;
+		background-color: $sidebar-color-secondary;
 		text-align: center;
 		padding: 10px 15px;
 		border-top: 2px solid $color-primary;

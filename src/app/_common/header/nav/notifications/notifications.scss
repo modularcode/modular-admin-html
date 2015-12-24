@@ -50,11 +50,11 @@
 
 		.notifications-container {
 			.notification-item {
-				border-bottom: 1px solid $color-dropbown-border;
+				border-bottom: 1px solid $dropbown-color-border;
 				padding: 5px;
 
 				&:hover {
-					background-color: $color-dropdown-link-hover-bg;
+					background-color: $dropdown-link-hover-color-bg;
 				}
 			}
 
@@ -105,7 +105,7 @@
 				transition: none;
 
 				&:hover {
-					background-color: $color-dropdown-link-hover-bg;
+					background-color: $dropdown-link-hover-color-bg;
 					color: $color-primary;
 				}
 			}
