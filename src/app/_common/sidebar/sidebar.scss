@@ -11,6 +11,7 @@
 
 
 	@include media-down(md) {
+		position: fixed;
 		left: -$sidebar-width;
 	}
 

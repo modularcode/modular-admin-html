@@ -4,6 +4,22 @@
 	left: 0;
 	width: $sidebar-width;
 
+	@include media-down(sm) {
+		
+	}
+
+	.sidebar-open & {
+		@include media-down(md) {
+			left: 0;
+		}
+	}
+
+	@include media-down(md) {
+		// position: absolute;
+		transition: left 0.3s ease;
+		left: -$sidebar-width;
+	}
+
 	& > li {
 		& > a {
 			background-color: $sidebar-color-primary;
@@ -119,14 +135,5 @@
 
 
 
-	.sidebar-open & {
-		@include media-down(md) {
-			left: 0;
-		}
-	}
-
-	@include media-down(md) {
-		transition: left 0.3s ease;
-		left: -$sidebar-width;
-	}
+	
 }
