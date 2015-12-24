@@ -100,12 +100,19 @@
 	width: 100%;
 
 	.item-title {
+		display: inline-block;
 		font-size: 1.1rem;
 		font-weight: 600;
+		line-height: 30px;
 		overflow: hidden;
 	    text-overflow: ellipsis;
+	    vertical-align: bottom;
 	    white-space: nowrap;
 	    width: 100%;
+	}
+
+	h4 {
+		margin: 0;
 	}
 
 	.item-description {
