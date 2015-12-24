@@ -7,6 +7,12 @@ $(function () {
 	var headerFixed = themeSettings.headerFixed || false;
 	var footerFixed = themeSettings.footerFixed || false;
 
+	/********************************************
+	*											
+	*		    Customize Theme Colors
+	*
+	*********************************************/
+
 	// Init active color
 	var $colorItems = $('#customize-menu .color-item');
 
@@ -34,6 +40,77 @@ $(function () {
 		saveThemeSettings();
 	});
 
+	/********************************************
+	*											
+	*		  Customize Container Settings
+	*
+	*********************************************/
+	//change header
+	changeTheme({
+		sector: 'header',
+		isFixed: headerFixed
+	});
+
+	//change sidebar
+	changeTheme({
+		sector: 'sidebar',
+		isFixed: sidebarFixed
+	});
+
+	//change footer
+	changeTheme({
+		sector: 'footer',
+		isFixed: footerFixed
+	});
+
+	// Init radio button element
+	var $radioButtons = $('#customize-menu .radio');
+
+	$radioButtons.on('click', function(){
+		// customise sector	and settings values
+		var sector = $(this).attr('name');
+		var value = $(this).val();
+
+		// header customize settings
+		if (sector === 'header') {
+			themeSettings.headerFixed = isFixed(value);
+
+			changeTheme({
+				sector: sector,
+				isFixed: themeSettings.headerFixed
+			});
+		}
+
+		// sidebar customize settings
+		else if(sector === 'sidebar') {
+			themeSettings.sidebarFixed = isFixed(value);
+
+			changeTheme({
+				sector: sector,
+				isFixed: themeSettings.sidebarFixed
+			});
+		}
+
+		// footer customize settings
+		else if(sector === 'footer') {
+			themeSettings.footerFixed = isFixed(value);
+
+			changeTheme({
+				sector: sector,
+				isFixed: themeSettings.footerFixed
+			});
+		}
+
+		// save theme settings
+		saveThemeSettings();
+	});
+
+	/********************************************
+	*											
+	*		  Customize Custom Functions
+	*
+	*********************************************/
+
 	function replaceCssLink(themeName) {
 		var $link = $('#theme-style');
 
@@ -45,6 +122,38 @@ $(function () {
 		}
 	}
 
+
+	function changeTheme(options){
+		var container = $('#app');
+
+		var sectorClass = options.sector + "-fixed";
+
+		if (options.isFixed) {
+			container.addClass(sectorClass);
+		}
+		else {
+			container.removeClass(sectorClass);
+		}
+
+		checkCustomizeButtons(options)
+	}
+
+	function checkCustomizeButtons(options){
+		$('#customize-menu .radio[name=' + options.sector + ']')
+		.prop('checked', false)
+		.each(function() {
+			if (
+				(options.isFixed && $(this).val() == 'fixed') ||
+				(!options.isFixed && $(this).val() == 'static')
+			) {
+				$(this).prop('checked', true);
+			}
+		});
+	}
+
+	function isFixed(param) {
+		return (param === 'fixed');
+	}
 
 	function getThemeSettings() {
 		return (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
