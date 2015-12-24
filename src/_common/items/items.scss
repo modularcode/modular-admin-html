@@ -2,6 +2,16 @@
 *			Item general styles
 ********************************************** */
 
+.item-header {
+	font-size: 1rem;
+	font-weight: 700;
+	
+	p {
+		line-height: 40px;
+		margin: 0;
+	}
+}
+
 .item {
 	display: flex;
 	flex-direction: column;
