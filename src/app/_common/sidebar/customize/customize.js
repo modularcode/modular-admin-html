@@ -5,7 +5,6 @@ $(function () {
 	var themeName = themeSettings.themeName || null;
 	var headerFixed = themeSettings.headerFixed || false;
 	var sidebarFixed = themeSettings.sidebarFixed || false;
-	var containerBoxed = themeSettings.containerBoxed || false;
 	var footerFixed = themeSettings.footerFixed || false;
 
 	/********************************************
@@ -64,11 +63,6 @@ $(function () {
 		isFixed: footerFixed
 	});
 
-	//change footer
-	changeTheme({
-		sector: 'footer',
-		isFixed: footerFixed
-	});
 
 	// Init radio button element
 	var $radioButtons = $('#customize-menu .radio');
