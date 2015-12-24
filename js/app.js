@@ -972,6 +972,7 @@ $(function() {
 		$(this).siblings('.input-group-addon').removeClass('focus');
 	});
 });
+
 $(function() {
 
     if (!$('#select-all-items').length) {
@@ -991,7 +992,6 @@ $(function() {
     });
 
 });
-
 $(function() {
     var $el = $('#dataTables-example');
 
