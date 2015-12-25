@@ -7,7 +7,7 @@
 		@include button-variant( $btn-primary-color-text, $color-primary, $color-primary);
 	}
 
-	&.btn-default {
+	&.btn-secondary {
 		@include button-variant( $color-text, #fff, $color-divider );	
 	}
 
@@ -27,8 +27,29 @@
 		@include button-variant( $color-text-inverse, $color-danger, $color-danger);
 	}
 
-	&.btn-inverse {
-		@include button-variant( $color-text-inverse, $color-primary-darker,$color-primary-darker);
+	// Remove all backgrounds
+	&.btn-primary-outline {
+		@include button-outline-variant($color-primary);
+	}
+
+	&.btn-secondary-outline {
+		@include button-outline-variant($color-divider);
+	}
+
+	&.btn-info-outline {
+		@include button-outline-variant($color-info);
+	}
+
+	&.btn-success-outline {
+		@include button-outline-variant($color-success);
+	}
+
+	&.btn-warning-outline {
+		@include button-outline-variant($color-warning);
+	}
+
+	&.btn-danger-outline {
+		@include button-outline-variant($color-danger);
 	}
 
 	&.btn-pill-left,
