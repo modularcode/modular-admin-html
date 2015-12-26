@@ -20,7 +20,7 @@
 
 	&.striped {
 		li {
-			border-bottom: 1px solid $color-divider;
+			border-bottom: 1px solid lighten($color-divider, 6%);
 		}
 
 		li:nth-child(2n + 1) {

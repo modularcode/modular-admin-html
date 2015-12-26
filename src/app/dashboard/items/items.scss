@@ -2,6 +2,19 @@
 
 	.card-header {
 
+		@include media-down(xs) {
+			border: none;
+			flex-wrap: wrap;
+
+			.header-block {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				justify-content: space-between;
+				border-bottom: 1px solid lighten($color-divider, 6%);
+			}
+		}
+
 		.title {
 			padding-right: 0px;
 			margin-right: 5px;
@@ -17,7 +30,9 @@
 			$color-inactive: $color-text-muted;
 			$color-active: $color-text-light;
 
-
+			@include media-down(xs) {
+				min-width: 50%;
+			}
 
 			.search-input {
 				border: none;
@@ -28,6 +43,10 @@
 				@include placeholder() {
 					transition: color 0.3s ease;
 					color:  $color-inactive;
+				}
+
+				@include media-down(xs) {
+					min-width: 130px;
 				}
 
 				&:focus {
