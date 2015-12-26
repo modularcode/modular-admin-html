@@ -37,22 +37,34 @@
 		}
 
 		.item-col.fluid {
-			min-width: 9%;
+			flex-basis: 0;
+			flex-grow: 1;
+			flex-shrink: 0;
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
 		}
 
 		.item-col {
+
+			&.item-col-check {
+				width: auto;
+				flex-basis: 30px;
+			}
+
 			&.item-col-img {
+				width: auto;
 				text-align: center;
+				flex-basis: 70px;
 			}
 
 			&.item-col-title {
 				text-align: left;
 				margin-left: 0 !important;
 				margin-right: auto;
-				width: calc(40% - 100px);
+				flex-basis: calc(40% - 100px);
+				background-color: antiquewhite;
+				// width: calc(40% - 100px);
 
 				& > div {
 					align-self: flex-start;
@@ -64,10 +76,15 @@
 				text-align: right;
 			}
 
+			&.item-col-author {
+				background-color: gray;
+			}
+
 			&.item-col-date {
 				text-align: right;
 				white-space: nowrap;
-				width: 100px;
+				background-color: beige;
+				flex-basis: 100px;
 			}			
 		}
 
