@@ -30,11 +30,9 @@
 
 	// For common item-list class see /src/_common/styles/items.less
 
-	.item-list {
+	// Desktop view
 
-		.item-col.fixed {
-			text-align: left;
-		}
+	.item-list .item {
 
 		.item-col.fluid {
 			flex-basis: 0;
@@ -42,17 +40,17 @@
 			flex-shrink: 0;
 			margin-left: auto;
 			margin-right: auto;
-			text-align: center;
 		}
 
 		.item-col {
-
 			&.item-col-check {
+				text-align: left;
 				width: auto;
 				flex-basis: 30px;
 			}
 
 			&.item-col-img {
+				text-align: left;
 				width: auto;
 				text-align: center;
 				flex-basis: 70px;
@@ -63,31 +61,118 @@
 				margin-left: 0 !important;
 				margin-right: auto;
 				flex-basis: calc(40% - 100px);
-				background-color: antiquewhite;
-				// width: calc(40% - 100px);
 
 				& > div {
 					align-self: flex-start;
 				}
 			}
 
-
 			&.item-col-sales {
 				text-align: right;
 			}
 
+			&.item-col-stats {
+				text-align: center;
+			}
+
+			&.item-col-category {
+				text-align: left;
+			}
+
 			&.item-col-author {
-				background-color: gray;
+				text-align: center;
 			}
 
 			&.item-col-date {
 				text-align: right;
 				white-space: nowrap;
-				background-color: beige;
 				flex-basis: 100px;
 			}			
 		}
-
-
 	}
+
+	// Mobile view
+
+	@include media-down(xs) {
+		.item-list .item {
+
+			font-size: 0.9rem;
+
+			.item-row {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.item-col {
+				text-align: right;
+				flex-basis: 100% !important;
+				border-bottom: 1px solid $color-divider;
+				padding-left: $item-list-padding-x;
+
+				&:before {
+					padding-right: $item-list-padding-x;
+					text-align: left;
+					content: attr(data-header);
+					width: 50%;
+					font-weight: 700;
+				}
+
+				&.item-col-check {
+					display: none;
+				}
+
+				&.item-col-img {
+					
+
+					&:before {
+						display: none;
+					}
+
+					.item-img {
+						padding-bottom: 65%;
+					}
+				}
+
+				&.item-col-title {
+					text-align: left;
+					padding-bottom: 0;
+					border: none;
+					order: -1;
+
+					&:before {
+						display: none;
+					}
+
+					.item-title {
+						font-size: 1rem;
+						line-height: 1.4rem;
+					}
+				}
+
+				&.item-col-sales {
+					text-align: left;
+				}
+
+				&.item-col-stats {
+					text-align: left;
+				}
+
+				&.item-col-category {
+					text-align: left;
+				}
+
+				&.item-col-author {
+					text-align: left;
+				}
+
+				&.item-col-date {
+					text-align: left;
+				}
+			}
+
+
+		}
+	}
+
+
 }

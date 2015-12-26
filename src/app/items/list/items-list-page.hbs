@@ -130,19 +130,19 @@ items:
 				{{#each items}}
 					<li class="item">	
 						<div class="item-row">
-							<div class="item-col fixed item-col-check">
+							<div class="item-col fixed item-col-check" data-header="">
 								<label class="item-check" id="select-all-items">
 									<input type="checkbox" class="checkbox">
 									<span></span>
 								</label>
 							</div>
 
-							<div class="item-col fixed item-col-img md">
+							<div class="item-col fixed item-col-img md" data-header="Media">
 								<a href="">
 									<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
 								</a>
 							</div>
-							<div class="item-col fixed pull-left item-col-title">
+							<div class="item-col fixed pull-left item-col-title" data-header="Name">
 								<div>
 									<a href="" class="">
 										<h4 class="item-title">
@@ -151,27 +151,27 @@ items:
 									</a>
 								</div>
 							</div>
-							<div class="item-col fluid item-col-sales">
+							<div class="item-col fluid item-col-sales" data-header="Sales">
 								<div>
 									{{this.sales}}
 								</div>
 							</div>
-							<div class="item-col fluid item-col-stats">
+							<div class="item-col fluid item-col-stats" data-header="Stats">
 								<div>
 									<div class="item-stats sparkline" data-type="bar"></div>	
 								</div>
 							</div>
-							<div class="item-col fluid item-col-category">
+							<div class="item-col fluid item-col-category" data-header="Category">
 								<div class="no-overflow">
 									<span>{{this.category}}</span>
 								</div>
 							</div>
-							<div class="item-col fluid item-col-author">
+							<div class="item-col fluid item-col-author" data-header="Author">
 								<div class="no-overflow">
 									<span>{{this.author}}</span>
 								</div>
 							</div>
-							<div class="item-col fixed item-col-date">
+							<div class="item-col fixed item-col-date" data-header="Published">
 								<div>
 									{{this.date}}
 								<div>
