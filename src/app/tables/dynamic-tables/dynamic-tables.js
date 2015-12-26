@@ -6,6 +6,8 @@ $(function() {
     }
 
 	$el.DataTable({
-	    responsive: true
+	    responsive: true,
+	    paging: true,
+    	scrollX: true
 	});
 });
