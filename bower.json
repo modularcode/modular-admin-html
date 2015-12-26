@@ -5,7 +5,6 @@
   "dependencies": {
     "animate.css": "~3.4.0",
     "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
-    "datatables": "~1.10.8",
     "font-awesome": "~4.3.0",
     "jquery": "~2.1.4",
     "jquery-flot": "~0.8.3",
@@ -39,13 +38,6 @@
     },
     "flot.tooltip": {
       "main": "js/jquery.flot.tooltip.js"
-    },
-    "datatables": {
-      "main": [
-        "media/js/jquery.dataTables.js",
-        "media/js/dataTables.bootstrap.js",
-        "media/css/dataTables.bootstrap.css"
-      ]
     },
     "jqvmap": {
       "main": [
