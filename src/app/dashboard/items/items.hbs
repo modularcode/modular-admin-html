@@ -23,21 +23,29 @@
 			</div>
 		</div>
 	</div>
-	<ul class="items-list striped">
-		<li class="item item-header hidden-sm-down">
+	<ul class="item-list striped">
+		<li class="item item-list-header hidden-sm-down">
 			<div class="item-row">
 				<div class="item-col fixed item-col-img xs"></div>
 				<div class="item-col item-col-title">
-					<span>Name</span>
+					<div>
+						<span>Name</span>
+					</div>
 				</div>
 				<div class="item-col fixed item-col-sales">
-					<span>Sales</span>
+					<div>
+						<span>Sales</span>
+					</div>
 				</div>
 				<div class="item-col fixed item-col-stats">
-					<span>Stats</span>
+					<div class="no-overflow">
+						<span>Stats</span>
+					</div>
 				</div>
 				<div class="item-col fixed item-col-date">
-					<span>Published</span>
+					<div>
+						<span>Published</span>
+					</div>
 				</div>
 			</div>
 		</li>
@@ -46,7 +54,7 @@
 				<div class="item-row">
 
 					{{!-- Mobile image column --}}
-					<div class="item-col item-col-img fixed md mobile">
+					<div class="item-col fixed item-col-img md mobile">
 						<a href="">
 							<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
 						</a>
@@ -64,7 +72,7 @@
 							<div class="item-col item-col-title">
 								<div>
 									<a href="" class="">
-										<h4 class="item-title">
+										<h4 class="item-title no-wrap">
 											{{this.title}}
 										</h4>
 									</a>
@@ -76,8 +84,8 @@
 								</div>
 							</div>
 							<div class="item-col fixed item-col-stats">
-								<div>
-									<div class="sparkline" data-type="bar"></div>	
+								<div class="no-overflow">
+									<div class="item-stats sparkline" data-type="bar"></div>	
 								</div>
 							</div>
 							<div class="item-col fixed item-col-date">

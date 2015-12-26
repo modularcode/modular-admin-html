@@ -1,0 +1,108 @@
+.dashboard-page .items {
+	.item-list {
+
+		$mobile-img-col-size: 70px + $item-list-padding-x/2;
+
+		.item-col.mobile {
+			display: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: $mobile-img-col-size;
+
+
+			@include media-down(sm) {
+				display: flex;
+			}
+		}
+
+
+		.item-col.desktop {
+			padding: 0;
+			width: 100%;
+
+			@include media-down(sm) {
+				width: calc(100% - #{$mobile-img-col-size});
+
+				.item-col-img {
+					display: none;
+				}
+			}
+
+			& > div {
+				overflow: hidden;
+			}
+		}
+
+		
+
+		.item-col-title {
+
+			width: calc(50% - 40px);
+
+			@include media-down(sm) {
+				width: 100%;
+				// width: calc(100% - 40px);
+			}
+		}
+
+		.item-col-sales {
+			width: 100px;
+			text-align: right;
+
+			@include media(xs) {
+				text-align: left;
+				width: 50%;
+			}
+
+			@include media(sm) {
+				text-align: left;
+				width: percentage(1/3);
+			}
+
+			@include media-down(sm) {
+				padding-top: 0;
+			}
+		}
+
+		.item-col-stats {
+			text-align: center;
+			width: calc(50% - 200px);
+
+			@include media-down(xs) {
+				text-align: right;
+				width: 50%;
+			}
+
+			@include media(sm) {
+				text-align: center;
+				width: percentage(1/3);
+			}
+
+			@include media-down(sm) {
+				padding-top: 0;
+			}
+		}
+
+		.item-col-date {
+			text-align: right;
+			white-space: nowrap;
+			width: 100px;
+
+			@include media(xs) {
+				display: none;
+			}
+
+			@include media(sm) {
+				width: percentage(1/3);
+			}
+
+			@include media-down(sm) {
+				padding-top: 0;
+			}
+		}
+
+
+	}
+
+
+}

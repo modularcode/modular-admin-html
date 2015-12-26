@@ -24,6 +24,7 @@ $(function() {
 
 		$(this).sparkline(data, {
 			barColor: config.colorPrimary.toString(),
+			height: $(this).height(),
 			type: type
 		});
 	});
