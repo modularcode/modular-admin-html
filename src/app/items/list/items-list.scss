@@ -139,7 +139,7 @@
 					width: 100%;
 					left: 0;
 					line-height: 40px;
-					padding-left: $item-list-padding-x;
+					// padding-left: $item-list-padding-x;
 					padding-right: $item-list-padding-x;
 					// text-align: center;
 				}
@@ -183,6 +183,10 @@
 				&.item-col-sales {
 					padding-left: $item-list-padding-x;
 					text-align: left;
+
+					&:before {
+						padding-left: $item-list-padding-x;;
+					}
 				}
 
 				&.item-col-stats {
