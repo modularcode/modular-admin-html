@@ -94,9 +94,19 @@
 	// Mobile view
 
 	@include media-down(xs) {
+		.card.items {
+			background: none;
+			box-shadow: none;
+		}
+
+
 		.item-list .item {
 
+			border: none;
 			font-size: 0.9rem;
+			margin-bottom: 10px;
+
+			@extend .card;
 
 			.item-row {
 				padding-left: 0;
