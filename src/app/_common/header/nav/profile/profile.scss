@@ -51,12 +51,23 @@
 			// @include triangle(up, 9px, $dropdown-bg);
 		}
 
+		.profile-dropdown-menu-icon {
+			padding: 0;
+		}
+
+		.profile-dropdown-menu-topic {
+			color: #7e8e9f;
+			padding: 0;
+		}
+
+
 		li a {
 			padding: 10px 15px;
 		}
 
 		.logout {
-			text-align: center;
+			border-top: 1px solid $dropbown-color-border;
+			//text-align: center;
 		}
 
 
