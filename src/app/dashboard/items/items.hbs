@@ -42,39 +42,51 @@
 			</div>
 		</li>
 		{{#each items}}
-			<li class="item">
+			<li class="item">	
 				<div class="item-row">
 
-					<div class="item-col fixed item-col-img xs">
+					{{!-- Mobile image column --}}
+					<div class="item-col item-col-img fixed md mobile">
 						<a href="">
-							<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
+							<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
 						</a>
 					</div>
-					<div class="item-col item-col-title">
-						<div>
-							<a href="" class="">
-								<h4 class="item-title">
-									{{this.title}}
-								</h4>
-							</a>
-						</div>
-					</div>
-					<div class="item-col fixed item-col-sales">
-						<div>
-							{{this.sales}}
-						</div>
-					</div>
-					<div class="item-col fixed item-col-stats">
-						<div>
-							<div class="sparkline" data-type="bar"></div>	
-						</div>
-					</div>
-					<div class="item-col fixed item-col-date">
-						<div>
-							{{this.date}}
-						<div>
-					</div>
 
+					{{!-- Desktop view row --}}
+					<div class="item-col desktop">
+						<div class="item-row">
+
+							<div class="item-col fixed item-col-img xs">
+								<a href="">
+									<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
+								</a>
+							</div>
+							<div class="item-col item-col-title">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title">
+											{{this.title}}
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-sales">
+								<div>
+									{{this.sales}}
+								</div>
+							</div>
+							<div class="item-col fixed item-col-stats">
+								<div>
+									<div class="sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date">
+								<div>
+									{{this.date}}
+								<div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</li>
 		{{/each}}

@@ -23,13 +23,14 @@
 		// flex-wrap: nowrap;
 		flex-direction: row;
 		flex-wrap: wrap;
+		min-width: 100%;
 
 		&.nowrap {
 			flex-wrap: nowrap;
 		}
 	}
 
-	.item-col {
+	.item-row > .item-col {
 		background-position: center center;
 		background-size: cover;
 		// display: flex;
@@ -38,7 +39,7 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 
-		flex: 0 0 auto;
+		// flex: 0 0 auto;
 		// flex-grow: 1;
 		// flex-shrink: 1;
 
@@ -80,21 +81,22 @@
 .item {
 	.item-col-img {
 		display: flex;
+		width: 60px;
 
 		&.xs{
-			width: 40px;
+			width: 35px;
 		}
 
 		&.sm {
-			width: 50px;
+			width: 45px;
 		}
 
 		&.lg {
-			width: 100px;
+			width: 95px;
 		}
 
 		&.xl {
-			width: 120px;
+			width: 115px;
 		}
 
 		a {
