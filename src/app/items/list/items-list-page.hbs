@@ -90,20 +90,34 @@ items:
 								<span></span>
 							</label>
 						</div>
-						<div class="item-col fixed item-col-img xs"></div>
-						<div class="item-col item-col-title">
+						<div class="item-col fixed item-col-img md">
+							<div>
+								<span>Media</span>
+							</div>
+						</div>
+						<div class="item-col fluid item-col-title">
 							<div>
 								<span>Name</span>
 							</div>
 						</div>
-						<div class="item-col fixed item-col-sales">
+						<div class="item-col fluid item-col-sales">
 							<div>
 								<span>Sales</span>
 							</div>
 						</div>
-						<div class="item-col fixed item-col-stats">
+						<div class="item-col fluid item-col-stats">
 							<div class="no-overflow">
 								<span>Stats</span>
+							</div>
+						</div>
+						<div class="item-col fluid item-col-category">
+							<div class="no-overflow">
+								<span>Category</span>
+							</div>
+						</div>
+						<div class="item-col fluid item-col-author">
+							<div class="no-overflow">
+								<span>Author</span>
 							</div>
 						</div>
 						<div class="item-col fixed item-col-date">
@@ -123,28 +137,38 @@ items:
 								</label>
 							</div>
 
-							<div class="item-col fixed item-col-img xs">
+							<div class="item-col fixed item-col-img md">
 								<a href="">
-									<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
+									<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
 								</a>
 							</div>
-							<div class="item-col item-col-title">
+							<div class="item-col pull-left item-col-title">
 								<div>
 									<a href="" class="">
-										<h4 class="item-title no-wrap">
+										<h4 class="item-title">
 											{{this.title}}
 										</h4>
 									</a>
 								</div>
 							</div>
-							<div class="item-col fixed item-col-sales">
+							<div class="item-col fluid item-col-sales">
 								<div>
 									{{this.sales}}
 								</div>
 							</div>
-							<div class="item-col fixed item-col-stats">
+							<div class="item-col fluid item-col-stats">
 								<div>
 									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fluid item-col-category">
+								<div class="no-overflow">
+									<span>Category</span>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-author">
+								<div class="no-overflow">
+									<span>Author</span>
 								</div>
 							</div>
 							<div class="item-col fixed item-col-date">
