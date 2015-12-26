@@ -246,11 +246,6 @@
 											</a>
 										</li>
 					
-										<li  >
-											<a href="dynamic-tables.html">
-												Dynamic Tables
-											</a>
-										</li>
 									</ul>
 								</li>
 					
@@ -290,12 +285,6 @@
 										<li >
 											<a href="icons.html">
 												Icons
-											</a>
-										</li>
-					
-										<li >
-											<a href="animations.html">
-												Animations
 											</a>
 										</li>
 					
@@ -391,13 +380,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="sidebar" value="fixed" >
+									                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="sidebar" value="static">
+									                        <input class="radio" type="radio" name="sidebarPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -408,13 +397,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="Header" value="fixed">
+									                        <input class="radio" type="radio" name="headerPosition" value="header-fixed">
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="Header" value="static">
+									                        <input class="radio" type="radio" name="headerPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -425,42 +414,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="footer" value="fixed" checked="checked">
+									                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="footer" value="static">
-									                        <span></span>
-									                    </label>
-													</div>
-												</div>
-											</div>
-											<div class="customize-item">
-												<div class="row customize-header">
-													<div class="col-xs-4">
-													</div>
-													<div class="col-xs-4">
-														<label class="title">boxed</label>
-													</div>
-													<div class="col-xs-4">
-														<label class="title">full</label>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-4">
-														<label class="title">Container:</label>
-													</div>
-													<div class="col-xs-4">
-														<label>
-									                        <input class="radio" type="radio" name="container" value="boxed">
-									                        <span></span>
-									                    </label>
-													</div>
-													<div class="col-xs-4">
-														<label>
-									                        <input class="radio" type="radio" name="container" value="full">
+									                        <input class="radio" type="radio" name="footerPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -517,9 +477,9 @@
 								</h3>
 							</div>
 							<section class="section">
-					            <button type="button" class="btn btn-default">Default</button>
-					
 					            <button type="button" class="btn btn-primary">Primary</button>
+					
+					            <button type="button" class="btn btn-secondary">Secondary</button>
 					
 					            <button type="button" class="btn btn-success">Success</button>
 					
@@ -529,20 +489,7 @@
 					
 					            <button type="button" class="btn btn-danger">Danger</button>
 					
-					            <button type="button" class="btn btn-inverse">Inverse</button>
-					
-					            <br>
-					            <br>
-					            
 					            <a href="javascript:void(0);" class="btn btn-link">Button Link</a>
-					
-					            <button type="button" class="btn btn-default">
-					               <strong>button tag</strong>
-					            </button>
-					            
-					            <a href="javascript:void(0);" class="btn btn-default">
-					               <strong>anchor tag</strong>
-					            </a>
 					
 							</section>
 					
@@ -555,42 +502,23 @@
 					
 							<div class="card-title-block">
 								<h3 class="title">
-									Button labeled
+									Outline buttons
 								</h3>
 							</div>
 							<section class="section">
 					        
-					            <!-- Success button with label -->
-					            <button type="button" class="btn btn-labeled btn-success">
-					                <span class="btn-label"><i class="fa fa-check"></i></span> Success
-					            </button>
+					            <button type="button" class="btn btn-primary-outline">Primary</button>
 					
-					            <!-- Danger button with label -->
-					            <button type="button" class="btn btn-labeled btn-danger">
-					                <span class="btn-label"><i class="fa fa-times"></i></span> Danger
-					            </button>
+					            <button type="button" class="btn btn-secondary-outline">Secondary</button>
 					
-					            <!-- Info button with label -->
-					            <button type="button" class="btn btn-labeled btn-info">
-					                <span class="btn-label"><i class="fa fa-exclamation"></i></span> Info
-					            </button>
+					            <button type="button" class="btn btn-success-outline">Success</button>
 					
-					            <!-- Warning button with label -->
-					            <button type="button" class="btn btn-labeled btn-warning">
-					                <span class="btn-label"><i class="fa fa-warning"></i></span> Warning
-					            </button>
+					            <button type="button" class="btn btn-info-outline">Info</button>
 					
-					            <br>
-					            <br>
+					            <button type="button" class="btn btn-warning-outline">Warning</button>
 					
-					            <!-- Standard button with label -->
-					            <button type="button" class="btn btn-labeled btn-default">
-					                <span class="btn-label"><i class="fa fa-arrow-left"></i></span> Left
-					            </button>
-					            <!-- Standard button with label on the right side -->
-					            <button type="button" class="btn btn-labeled btn-default">
-					                Right <span class="btn-label btn-label-right"><i class="fa fa-arrow-right"></i></span>
-					            </button>
+					            <button type="button" class="btn btn-danger-outline">Danger</button>
+					            
 							</section>
 						</div>
 					</div>				</div>
@@ -611,29 +539,38 @@
 								</h3>
 							</div>
 							<section class="section">
-					        
-					            <div class="row">
-					               <div class="col-xl-6">
-					                  <p>
-					                     <button type="button" class="btn btn-primary btn-lg">Large button</button>
-					                     <button type="button" class="btn btn-default btn-lg">Large button</button>
-					                  </p>
-					                  <p>
-					                     <button type="button" class="btn btn-primary">Default button</button>
-					                     <button type="button" class="btn btn-default">Default button</button>
-					                  </p>
-					               </div>
-					               <div class="col-xl-6">
-					                  <p>
-					                     <button type="button" class="btn btn-primary btn-sm">Small button</button>
-					                     <button type="button" class="btn btn-default btn-sm">Small button</button>
-					                  </p>
-					                  <p>
-					                     <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-					                     <button type="button" class="btn btn-default btn-xs">Extra small button</button>
-					                  </p>
-					               </div>
-					            </div>
+					
+					            <p>Large buttons</p>
+					            <button type="button" class="btn btn-primary btn-lg">Primary</button>
+					
+					            <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
+					
+					            <button type="button" class="btn btn-success btn-lg">Success</button>
+					
+					            <button type="button" class="btn btn-info btn-lg">Info</button>
+					
+					            <button type="button" class="btn btn-warning btn-lg">Warning</button>
+					
+					            <button type="button" class="btn btn-danger btn-lg">Danger</button>
+					            <p></p>
+					
+					            <p>Small buttons</p>
+					            <button type="button" class="btn btn-primary btn-sm">Primary</button>
+					
+					            <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
+					
+					            <button type="button" class="btn btn-success btn-sm">Success</button>
+					
+					            <button type="button" class="btn btn-info btn-sm">Info</button>
+					
+					            <button type="button" class="btn btn-warning btn-sm">Warning</button>
+					
+					            <button type="button" class="btn btn-danger btn-sm">Danger</button>
+					            <p></p>
+					            
+					            <p>Block buttons</p>
+					            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+					            <button type="button" class="btn btn-secondary btn-sm btn-block">Block level button</button>
 					            
 							</section>
 						</div>
@@ -645,34 +582,38 @@
 					
 							<div class="card-title-block">
 								<h3 class="title">
-									Button group
+									Button types
 								</h3>
 							</div>
 							<section class="section">
 					        
-					         <p></p>
-					         <div class="btn-group">
-					            <button type="button" class="btn btn-default">Left</button>
-					            <button type="button" class="btn btn-default">Middle</button>
-					            <button type="button" class="btn btn-default">Right</button>
-					         </div>
-					         <p></p>
-					         <p></p>
-					         <div class="btn-group">
-					            <button type="button" class="btn btn-default">1</button>
-					            <button type="button" class="btn btn-default">2</button>
-					            <button type="button" class="btn btn-default">3</button>
-					         <button type="button" class="btn btn-default">4</button>
-					         </div>
-					         <div class="btn-group">
-					            <button type="button" class="btn btn-default">5</button>
-					            <button type="button" class="btn btn-default">6</button>
-					            <button type="button" class="btn btn-default">7</button>
-					         </div>
-					         <div class="btn-group">
-					            <button type="button" class="btn btn-default">8</button>
-					         </div>
-					            
+					         <p>Pill left</p>
+					         <p>
+					            <button type="button" class="btn btn-pill-left btn-primary">Primary</button>
+					            <button type="button" class="btn btn-pill-left btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-pill-left btn-success">Success</button>
+					            <button type="button" class="btn btn-pill-left btn-info">Info</button>
+					            <button type="button" class="btn btn-pill-left btn-warning">Warning</button>
+					            <button type="button" class="btn btn-pill-left btn-danger">Danger</button>
+					         </p>
+					         <p>Pill right</p>
+					         <p>
+					            <button type="button" class="btn btn-pill-right btn-primary">Primary</button>
+					            <button type="button" class="btn btn-pill-right btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-pill-right btn-success">Success</button>
+					            <button type="button" class="btn btn-pill-right btn-info">Info</button>
+					            <button type="button" class="btn btn-pill-right btn-warning">Warning</button>
+					            <button type="button" class="btn btn-pill-right btn-danger">Danger</button>
+					         </p>
+					         <p>Oval</p>
+					         <p>
+					            <button type="button" class="btn btn-oval btn-primary">Primary</button>
+					            <button type="button" class="btn btn-oval btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-oval btn-success">Success</button>
+					            <button type="button" class="btn btn-oval btn-info">Info</button>
+					            <button type="button" class="btn btn-oval btn-warning">Warning</button>
+					            <button type="button" class="btn btn-oval btn-danger">Danger</button>
+					         </p> 
 							</section>
 						</div>
 					</div>				</div>
@@ -689,41 +630,94 @@
 					
 							<div class="card-title-block">
 								<h3 class="title">
-									Button types
+									Button group
 								</h3>
 							</div>
 							<section class="section">
 					        
-					         <p>Pill left</p>
-					         <p>
-					            <button type="button" class="btn btn-pill-left btn-default">Default</button>
-					            <button type="button" class="btn btn-pill-left btn-primary">Primary</button>
-					            <button type="button" class="btn btn-pill-left btn-success">Success</button>
-					            <button type="button" class="btn btn-pill-left btn-info">Info</button>
-					            <button type="button" class="btn btn-pill-left btn-warning">Warning</button>
-					            <button type="button" class="btn btn-pill-left btn-danger">Danger</button>
-					            <button type="button" class="btn btn-pill-left btn-inverse">Inverse</button>
-					         </p>
-					         <p>Pill right</p>
-					         <p>
-					            <button type="button" class="btn btn-pill-right btn-default">Default</button>
-					            <button type="button" class="btn btn-pill-right btn-primary">Primary</button>
-					            <button type="button" class="btn btn-pill-right btn-success">Success</button>
-					            <button type="button" class="btn btn-pill-right btn-info">Info</button>
-					            <button type="button" class="btn btn-pill-right btn-warning">Warning</button>
-					            <button type="button" class="btn btn-pill-right btn-danger">Danger</button>
-					            <button type="button" class="btn btn-pill-right btn-inverse">Inverse</button>
-					         </p>
-					         <p>Oval</p>
-					         <p>
-					            <button type="button" class="btn btn-oval btn-default">Default</button>
-					            <button type="button" class="btn btn-oval btn-primary">Primary</button>
-					            <button type="button" class="btn btn-oval btn-success">Success</button>
-					            <button type="button" class="btn btn-oval btn-info">Info</button>
-					            <button type="button" class="btn btn-oval btn-warning">Warning</button>
-					            <button type="button" class="btn btn-oval btn-danger">Danger</button>
-					            <button type="button" class="btn btn-oval btn-inverse">Inverse</button>
-					         </p> 
+					         <p>Basic Example</p>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-secondary">Left</button>
+					            <button type="button" class="btn btn-secondary">Middle</button>
+					            <button type="button" class="btn btn-secondary">Right</button>
+					         </div>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-primary">Left</button>
+					            <button type="button" class="btn btn-primary">Middle</button>
+					            <button type="button" class="btn btn-primary">Right</button>
+					         </div>
+					         <p></p>
+					
+					         <p>Button Group Sizing</p>
+					         <div class="btn-group btn-group-lg">
+					            <button type="button" class="btn btn-secondary">1</button>
+					            <button type="button" class="btn btn-secondary">2</button>
+					            <button type="button" class="btn btn-secondary">3</button>
+					            <button type="button" class="btn btn-secondary">4</button>
+					         </div>
+					         <div class="btn-group btn-group-lg">
+					            <button type="button" class="btn btn-secondary">5</button>
+					            <button type="button" class="btn btn-secondary">6</button>
+					            <button type="button" class="btn btn-secondary">7</button>
+					         </div>
+					         <div class="btn-group btn-group-lg">
+					            <button type="button" class="btn btn-secondary btn-lg">8</button>
+					         </div>
+					
+					         <p></p>
+					
+					         <div class="btn-group btn-group-sm">
+					            <button type="button" class="btn btn-primary">1</button>
+					            <button type="button" class="btn btn-primary">2</button>
+					            <button type="button" class="btn btn-primary">3</button>
+					            <button type="button" class="btn btn-primary">4</button>
+					         </div>
+					         <div class="btn-group btn-group-sm">
+					            <button type="button" class="btn btn-primary">5</button>
+					            <button type="button" class="btn btn-primary">6</button>
+					            <button type="button" class="btn btn-primary">7</button>
+					         </div>
+					         <div class="btn-group btn-group-sm">
+					            <button type="button" class="btn btn-primary">8</button>
+					         </div>
+					         <p></p>
+					
+					         <p>Nesting</p>
+					         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+					            <button type="button" class="btn btn-secondary">1</button>
+					            <button type="button" class="btn btn-secondary">2</button>
+					
+					            <div class="btn-group" role="group">
+					               <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					                  Dropdown
+					               </button>
+					               <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					                  <a class="dropdown-item" href="#">Action</a>
+					                  <a class="dropdown-item" href="#">Another action</a>
+					                  <a class="dropdown-item" href="#">Something else here</a>
+					                  <div class="dropdown-divider"></div>
+					                  <a class="dropdown-item" href="#">Separated link</a>
+					               </div>
+					            </div>
+					         </div>  
+					         <p></p>
+					         <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
+					            <button type="button" class="btn btn-primary">1</button>
+					            <button type="button" class="btn btn-primary">2</button>
+					
+					            <div class="btn-group" role="group">
+					               <button id="btnGroupDrop1" type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					                  Dropdown
+					               </button>
+					               <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					                  <a class="dropdown-item" href="#">Action</a>
+					                  <a class="dropdown-item" href="#">Another action</a>
+					                  <a class="dropdown-item" href="#">Something else here</a>
+					                  <div class="dropdown-divider"></div>
+					                  <a class="dropdown-item" href="#">Separated link</a>
+					               </div>
+					            </div>
+					         </div>  
 							</section>
 						</div>
 					</div>				</div>
@@ -739,131 +733,89 @@
 					      </div>
 					      <section class="section">
 					        
-					          <p>Dropdowns</p>
+					         <p>Dropdowns</p>
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle" aria-expanded="false">Default
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Primary
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">Primary
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Secondary
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" data-toggle="dropdown" class="btn btn-success dropdown-toggle">Success
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Success
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">Info
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Info
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Warning
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Warning
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Danger
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Danger
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
-					         </div>
-					         <!-- END button group-->
-					         <!-- START button group-->
-					         <div class="btn-group">
-					            <button type="button" data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">Inverse
-					               <span class="caret"></span>
-					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					
@@ -872,135 +824,186 @@
 					         <p>Split Dropdowns</p>
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" class="btn btn-default">Default</button>
-					            <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle">
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-primary">Primary</button>
+					            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
-					            <button type="button" class="btn btn-primary">Primary</button>
-					            <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
 					            <button type="button" class="btn btn-success">Success</button>
-					            <button type="button" data-toggle="dropdown" class="btn btn-success dropdown-toggle" aria-expanded="true">
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
 					            <button type="button" class="btn btn-info">Info</button>
-					            <button type="button" data-toggle="dropdown" class="btn btn-info dropdown-toggle">
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
 					            <button type="button" class="btn btn-warning">Warning</button>
-					            <button type="button" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
 					         <div class="btn-group">
 					            <button type="button" class="btn btn-danger">Danger</button>
-					            <button type="button" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">
-					               <span class="caret"></span>
+					            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					
+					         <br>
+					         <br>
+					         <p>Dropup Dropdowns</p>
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-primary">Primary</button>
+					            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					         <!-- START button group-->
-					         <div class="btn-group">
-					            <button type="button" class="btn btn-inverse">Inverse</button>
-					            <button type="button" data-toggle="dropdown" class="btn btn-inverse dropdown-toggle">
-					               <span class="caret"></span>
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
 					            </button>
-					            <ul role="menu" class="dropdown-menu">
-					               <li><a href="javascript:void(0);">Action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Another action</a>
-					               </li>
-					               <li><a href="javascript:void(0);">Something else here</a>
-					               </li>
-					               <li class="divider"></li>
-					               <li><a href="javascript:void(0);">Separated link</a>
-					               </li>
-					            </ul>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-success">Success</button>
+					            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-info">Info</button>
+					            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-warning">Warning</button>
+					            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-danger">Danger</button>
+					            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
 					         </div>
 					         <!-- END button group-->
 					      </section>

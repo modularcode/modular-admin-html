@@ -39,6 +39,37 @@ $(function() {
 })
 //LoginForm validation
 $(function() {
+	if (!$('#reset-form').length) {
+        return false;
+    }
+
+    var resetValidationSettings = {
+	    rules: {
+	        email1: {
+	            required: true,
+	            email: true
+	        }
+	    },
+	    messages: {
+	        email1: {
+	            required: "Please enter email address",
+	            email: "Please enter a valid email address"
+	        }
+	    },
+	    invalidHandler: function() {
+			setAnimation({
+				name: 'shake',
+				selector: '.auth-container > .card'
+			});
+		}
+	}
+
+	$.extend(resetValidationSettings, validationDefaultSettings);
+
+    $('#reset-form').validate(resetValidationSettings);
+})
+//LoginForm validation
+$(function() {
 	if (!$('#login-form').length) {
         return false;
     }
@@ -71,37 +102,6 @@ $(function() {
 	$.extend(loginValidationSettings, validationDefaultSettings);
 
     $('#login-form').validate(loginValidationSettings);
-})
-//LoginForm validation
-$(function() {
-	if (!$('#reset-form').length) {
-        return false;
-    }
-
-    var resetValidationSettings = {
-	    rules: {
-	        email1: {
-	            required: true,
-	            email: true
-	        }
-	    },
-	    messages: {
-	        email1: {
-	            required: "Please enter email address",
-	            email: "Please enter a valid email address"
-	        }
-	    },
-	    invalidHandler: function() {
-			setAnimation({
-				name: 'shake',
-				selector: '.auth-container > .card'
-			});
-		}
-	}
-
-	$.extend(resetValidationSettings, validationDefaultSettings);
-
-    $('#reset-form').validate(resetValidationSettings);
 })
 //LoginForm validation
 $(function() {
@@ -858,6 +858,7 @@ $(function() {
 
 		$(this).sparkline(data, {
 			barColor: config.colorPrimary.toString(),
+			height: $(this).height(),
 			type: type
 		});
 	});
@@ -991,31 +992,25 @@ $(function() {
             .change();
     });
 
+
+
+    $(".items-list-page .sparkline").each(function() {
+        var type = $(this).data('type');
+
+        // Generate random data
+        var data = [];
+        for (var i = 0; i < 17; i++) {
+            data.push(Math.round(100 * Math.random()));
+        }
+
+        $(this).sparkline(data, {
+            barColor: config.colorPrimary.toString(),
+            height: $(this).height(),
+            type: type
+        });
+    });
+
 });
-$(function() {
-    var $el = $('#dataTables-example');
-
-    if (!$el.length) {
-        return false;
-    }
-
-	$el.DataTable({
-	    responsive: true
-	});
-});
-$(function() {
-
-	$('.box-placeholder').on('click', function() {
-
-		var $el = $(this);
-
-		setAnimation({
-			name: $el.data('effect'),
-			selector: $el 
-		});
-	})
-
-})
 $(function() {
 
 	$(".wyswyg").each(function() {
@@ -1092,52 +1087,144 @@ $(function () {
 
 	// Local storage settings
 	var themeSettings = getThemeSettings();
-	var themeName = themeSettings.themeName || null;
-	var sidebarFixed = themeSettings.sidebarFixed || false;
-	var headerFixed = themeSettings.headerFixed || false;
-	var footerFixed = themeSettings.footerFixed || false;
 
-	// Init active color
-	var $colorItems = $('#customize-menu .color-item');
+	// Elements
 
-	$colorItems.each(function() {
-		if (themeName === $(this).data('theme')) {
-			$colorItems.not($(this)).removeClass("active");
-			$(this).addClass("active");
-		}
-	});
+	var $app = $('#app');
+	var $styleLink = $('#theme-style');
+	var $customizeMenu = $('#customize-menu');
 
-	// Toggle theme color
-	$colorItems.on('click', function() {
-		$colorItems.removeClass('active');
-		$(this).addClass('active');
-		
-		// set theme type
+	// Color switcher
+	var $customizeMenuColorBtns = $customizeMenu.find('.color-item');
+
+	// Position switchers
+	var $customizeMenuRadioBtns = $customizeMenu.find('.radio');
+
+
+	// /////////////////////////////////////////////////
+
+	// Initial state
+
+	// On setting event, set corresponding options
+
+	// Update customize view based on options
+
+	// Update theme based on options
+
+	/************************************************
+	*				Initial State
+	*************************************************/
+
+	setThemeSettings();
+
+	/************************************************
+	*					Events
+	*************************************************/
+
+	// set theme type
+	$customizeMenuColorBtns.on('click', function() {
 		themeSettings.themeName = $(this).data('theme');
 
-		// replace css link
-		replaceCssLink(themeSettings.themeName);
-
-		$(document).trigger("themechange");
-
-		// save theme settings
-		saveThemeSettings();
+		setThemeSettings();
 	});
 
-	function replaceCssLink(themeName) {
-		var $link = $('#theme-style');
+	$customizeMenuRadioBtns.on('click', function(e) {
+		e.preventDefault();
 
-		if (themeName) {
-			$link.attr('href', 'css/app-' + themeName + '.css');
-		}
-		else {
-			$link.attr('href', 'css/app.css');
-		}
+		var optionName = $(this).prop('name');
+		var value = $(this).val();
+
+		themeSettings[optionName] = value;
+
+		console.log("RADIO CLICKED", optionName, value);
+
+		setThemeSettings();
+	});
+
+	function setThemeSettings() {
+		setThemeState();
+		setThemeControlsState();
+
+		console.log("***********************************");
+
+		saveThemeSettings();
+
+		$(document).trigger("themechange");
 	}
 
+	/************************************************
+	*			Update theme based on options
+	*************************************************/
+
+	function setThemeState() {
+		// set theme type
+		if (themeSettings.themeName) {
+			$styleLink.attr('href', 'css/app-' + themeSettings.themeName + '.css');
+		}
+		else {
+			$styleLink.attr('href', 'css/app.css');
+		}
+
+		// App classes
+		$app.removeClass('header-fixed header-static footer-fixed footer-static sidebar-fixed sidebar-static');
+
+		// set header
+		$app.addClass(themeSettings.headerPosition);
+
+		// set footer
+		$app.addClass(themeSettings.footerPosition);
+
+		// set footer
+		$app.addClass(themeSettings.sidebarPosition);
+	}
+
+	/************************************************
+	*			Update theme controls based on options
+	*************************************************/
+
+	function setThemeControlsState() {
+		// set color switcher
+		$customizeMenuColorBtns.each(function() {
+			if($(this).data('theme') === themeSettings.themeName) {
+				$(this).addClass('active');
+			}
+			else {
+				$(this).removeClass('active');
+			}
+		});
+
+		// set radio buttons
+		$customizeMenuRadioBtns.each(function() {
+			var name = $(this).prop('name');
+			var value = $(this).val();
+
+			console.log("Name ", name);
+			console.log("Value ", value);
+			console.log("themeSetting ", themeSettings[name]);
+			console.log("-----------");
+
+
+			if (themeSettings[name] === value) {
+				$(this).prop( "checked", true );
+			}
+			else {
+				$(this).prop( "checked", false );
+			}
+		});
+	}
+
+	/************************************************
+	*				Storage Functions
+	*************************************************/
 
 	function getThemeSettings() {
-		return (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+		var settings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+
+		settings.headerPosition = settings.headerPosition || '';
+		settings.sidebarPosition = settings.sidebarPosition || '';
+		settings.footerPosition = settings.footerPosition || '';
+
+		return settings;
 	}
 
 	function saveThemeSettings() {

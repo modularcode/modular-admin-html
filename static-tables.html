@@ -246,11 +246,6 @@
 											</a>
 										</li>
 					
-										<li  >
-											<a href="dynamic-tables.html">
-												Dynamic Tables
-											</a>
-										</li>
 									</ul>
 								</li>
 					
@@ -288,12 +283,6 @@
 										<li >
 											<a href="icons.html">
 												Icons
-											</a>
-										</li>
-					
-										<li >
-											<a href="animations.html">
-												Animations
 											</a>
 										</li>
 					
@@ -389,13 +378,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="sidebar" value="fixed" >
+									                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="sidebar" value="static">
+									                        <input class="radio" type="radio" name="sidebarPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -406,13 +395,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="Header" value="fixed">
+									                        <input class="radio" type="radio" name="headerPosition" value="header-fixed">
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="Header" value="static">
+									                        <input class="radio" type="radio" name="headerPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -423,42 +412,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="footer" value="fixed" checked="checked">
+									                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="footer" value="static">
-									                        <span></span>
-									                    </label>
-													</div>
-												</div>
-											</div>
-											<div class="customize-item">
-												<div class="row customize-header">
-													<div class="col-xs-4">
-													</div>
-													<div class="col-xs-4">
-														<label class="title">boxed</label>
-													</div>
-													<div class="col-xs-4">
-														<label class="title">full</label>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-4">
-														<label class="title">Container:</label>
-													</div>
-													<div class="col-xs-4">
-														<label>
-									                        <input class="radio" type="radio" name="container" value="boxed">
-									                        <span></span>
-									                    </label>
-													</div>
-													<div class="col-xs-4">
-														<label>
-									                        <input class="radio" type="radio" name="container" value="full">
+									                        <input class="radio" type="radio" name="footerPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -704,6 +664,127 @@
 									</tbody>
 								</table>
 
+							</section>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row">
+
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-block">
+
+							<div class="card-title-block">
+								<h3 class="title">
+									Inverse table
+								</h3>
+							</div>
+
+							<section class="example">
+
+								<table class="table table-inverse">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>Username</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+										<tr>
+											<th scope="row">2</th>
+											<td>Jacob</td>
+											<td>Thornton</td>
+											<td>@fat</td>
+										</tr>
+										<tr>
+											<th scope="row">3</th>
+											<td>Larry</td>
+											<td>the Bird</td>
+											<td>@twitter</td>
+										</tr>
+										<tr>
+											<th scope="row">4</th>
+											<td>Larry</td>
+											<td>the Bird</td>
+											<td>@twitter</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</section>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-block">
+
+							<div class="card-title-block">
+								<h3 class="title">
+									Small tables & Thead options
+								</h3>
+							</div>
+
+							<section class="example">
+								<p>Default thead</p>
+								<table class="table table-sm">
+									<thead class="thead-default">
+										<tr>
+											<th>#</th>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>Username</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+									</tbody>
+								</table>
+								
+								<p></p>
+								<p></p>
+
+								<p>Inverse thead</p>
+								<table class="table table-sm">
+									<thead class="thead-inverse">
+										<tr>
+											<th>#</th>
+											<th>First Name</th>
+											<th>Last Name</th>
+											<th>Username</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1</th>
+											<td>Mark</td>
+											<td>Otto</td>
+											<td>@mdo</td>
+										</tr>
+									</tbody>
+								</table>
 							</section>
 
 						</div>

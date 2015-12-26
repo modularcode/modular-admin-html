@@ -246,11 +246,6 @@
 											</a>
 										</li>
 					
-										<li  >
-											<a href="dynamic-tables.html">
-												Dynamic Tables
-											</a>
-										</li>
 									</ul>
 								</li>
 					
@@ -288,12 +283,6 @@
 										<li >
 											<a href="icons.html">
 												Icons
-											</a>
-										</li>
-					
-										<li >
-											<a href="animations.html">
-												Animations
 											</a>
 										</li>
 					
@@ -389,13 +378,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="sidebar" value="fixed" >
+									                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="sidebar" value="static">
+									                        <input class="radio" type="radio" name="sidebarPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -406,13 +395,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="Header" value="fixed">
+									                        <input class="radio" type="radio" name="headerPosition" value="header-fixed">
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="Header" value="static">
+									                        <input class="radio" type="radio" name="headerPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -423,42 +412,13 @@
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="footer" value="fixed" checked="checked">
+									                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
 									                        <span></span>
 									                    </label>
 													</div>
 													<div class="col-xs-4">
 														<label>
-									                        <input class="radio" type="radio" name="footer" value="static">
-									                        <span></span>
-									                    </label>
-													</div>
-												</div>
-											</div>
-											<div class="customize-item">
-												<div class="row customize-header">
-													<div class="col-xs-4">
-													</div>
-													<div class="col-xs-4">
-														<label class="title">boxed</label>
-													</div>
-													<div class="col-xs-4">
-														<label class="title">full</label>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-xs-4">
-														<label class="title">Container:</label>
-													</div>
-													<div class="col-xs-4">
-														<label>
-									                        <input class="radio" type="radio" name="container" value="boxed">
-									                        <span></span>
-									                    </label>
-													</div>
-													<div class="col-xs-4">
-														<label>
-									                        <input class="radio" type="radio" name="container" value="full">
+									                        <input class="radio" type="radio" name="footerPosition" value="">
 									                        <span></span>
 									                    </label>
 													</div>
@@ -520,7 +480,7 @@
 					<div class="input-group">
 						<input type="text" class="form-control boxed rounded-s" placeholder="Search for...">
 						<span class="input-group-btn">
-							<button class="btn btn-default rounded-s" type="button">
+							<button class="btn btn-secondary rounded-s" type="button">
 								<i class="fa fa-search"></i> Search
 							</button>
 						</span>
@@ -529,292 +489,397 @@
 			</div>
 		</div>
 
-		<section class="section">
-			<ul class="card items-list striped">
-				<li class="items-list-header">
-					<div class="item-col col-check hidden-xs-down">
-						<label class="item-check" id="select-all-items">
-							<input type="checkbox" class="checkbox">
-							<span></span>
-						</label>
-					</div>
-					<div class="item-col col-img">
-						Media
-					</div>
-					<div class="item-col col-title">
-						Title
-					</div>
-					<div class="item-col col-stats hidden-xs-down">
-						Stats
-					</div>
-					<div class="item-col col-author">
-						Author
-					</div>
-					<div class="item-col col-category">
-						Category
-					</div>
-					<div class="item-col col-date">
-						Date
+		<div class="card items">
+			<ul class="item-list striped">
+				<li class="item item-list-header hidden-sm-down">
+					<div class="item-row">
+						<div class="item-col fixed item-col-check">
+							<label class="item-check" id="select-all-items">
+								<input type="checkbox" class="checkbox">
+								<span></span>
+							</label>
+						</div>
+						<div class="item-col fixed item-col-img md">
+							<div>
+								<span>Media</span>
+							</div>
+						</div>
+						<div class="item-col fixed item-col-title">
+							<div>
+								<span>Name</span>
+							</div>
+						</div>
+						<div class="item-col fluid item-col-sales">
+							<div>
+								<span>Sales</span>
+							</div>
+						</div>
+						<div class="item-col fluid item-col-stats">
+							<div class="no-overflow">
+								<span>Stats</span>
+							</div>
+						</div>
+						<div class="item-col fluid item-col-category">
+							<div class="no-overflow">
+								<span>Category</span>
+							</div>
+						</div>
+						<div class="item-col fluid item-col-author">
+							<div class="no-overflow">
+								<span>Author</span>
+							</div>
+						</div>
+						<div class="item-col fixed item-col-date">
+							<div>
+								<span>Published</span>
+							</div>
+						</div>
 					</div>
 				</li>
-					<li>
-						<div class="item-col col-check hidden-xs-down">
-							<label class="item-check">
-								<input type="checkbox" class="checkbox">
-								<span></span>
-							</label>
-						</div>
-						<div class="item-col col-img">
-							<a href="">
-								<div class="img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
-							</a>
-						</div>
-						<div class="item-col col-title">
-							<a href="">
-								<strong>
-									12 Myths Uncovered About IT &amp; Software
-								</strong>
-							</a>
-						</div>
-						<div class="item-col col-stats hidden-xs-down">
-							Stats
-						</div>
-						<div class="item-col col-author">
-							<a href="">
-								Meadow Katheryne
-							</a>
-						</div>
-						<div class="item-col col-category">
-							<a href="">
-								Software
-							</a>
-						</div>
-						<div class="item-col col-date">
-							21 SEP 10:45
-						</div>
-					</li>
-					<li>
-						<div class="item-col col-check hidden-xs-down">
-							<label class="item-check">
-								<input type="checkbox" class="checkbox">
-								<span></span>
-							</label>
-						</div>
-						<div class="item-col col-img">
-							<a href="">
-								<div class="img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg)"></div>
-							</a>
-						</div>
-						<div class="item-col col-title">
-							<a href="">
-								<strong>
-									50% of things doesn&#x27;t really belongs to you
-								</strong>
-							</a>
-						</div>
-						<div class="item-col col-stats hidden-xs-down">
-							Stats
-						</div>
-						<div class="item-col col-author">
-							<a href="">
-								Alexander Sargssyan
-							</a>
-						</div>
-						<div class="item-col col-category">
-							<a href="">
-								Software
-							</a>
-						</div>
-						<div class="item-col col-date">
-							21 SEP 10:45
+					<li class="item">	
+						<div class="item-row">
+							<div class="item-col fixed item-col-check" data-header="">
+								<label class="item-check" id="select-all-items">
+									<input type="checkbox" class="checkbox">
+									<span></span>
+								</label>
+							</div>
+
+							<div class="item-col fixed item-col-img md" data-header="Media">
+								<a href="">
+									<div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
+								</a>
+							</div>
+							<div class="item-col fixed pull-left item-col-title" data-header="Name">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title">
+											12 Myths Uncovered About IT &amp; Software
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-sales" data-header="Sales">
+								<div>
+									46323
+								</div>
+							</div>
+							<div class="item-col fluid item-col-stats" data-header="Stats">
+								<div>
+									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fluid item-col-category" data-header="Category">
+								<div class="no-overflow">
+									<span>Software</span>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-author" data-header="Author">
+								<div class="no-overflow">
+									<span>Meadow Katheryne</span>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date" data-header="Published">
+								<div>
+									21 SEP 10:45
+								<div>
+							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item-col col-check hidden-xs-down">
-							<label class="item-check">
-								<input type="checkbox" class="checkbox">
-								<span></span>
-							</label>
-						</div>
-						<div class="item-col col-img">
-							<a href="">
-								<div class="img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg)"></div>
-							</a>
-						</div>
-						<div class="item-col col-title">
-							<a href="">
-								<strong>
-									Vestibulum tincidunt amet laoreet mauris sit sem aliquam cras maecenas vel aliquam.
-								</strong>
-							</a>
-						</div>
-						<div class="item-col col-stats hidden-xs-down">
-							Stats
-						</div>
-						<div class="item-col col-author">
-							<a href="">
-								Angela Blaine
-							</a>
-						</div>
-						<div class="item-col col-category">
-							<a href="">
-								Software
-							</a>
-						</div>
-						<div class="item-col col-date">
-							21 SEP 10:45
-						</div>
-					</li>
-					<li>
-						<div class="item-col col-check hidden-xs-down">
-							<label class="item-check">
-								<input type="checkbox" class="checkbox">
-								<span></span>
-							</label>
-						</div>
-						<div class="item-col col-img">
-							<a href="">
-								<div class="img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg)"></div>
-							</a>
-						</div>
-						<div class="item-col col-title">
-							<a href="">
-								<strong>
-									Lorem Ipsum is not simply random text
-								</strong>
-							</a>
-						</div>
-						<div class="item-col col-stats hidden-xs-down">
-							Stats
-						</div>
-						<div class="item-col col-author">
-							<a href="">
-								Willard Bennett
-							</a>
-						</div>
-						<div class="item-col col-category">
-							<a href="">
-								Software
-							</a>
-						</div>
-						<div class="item-col col-date">
-							21 SEP 10:45
+					<li class="item">	
+						<div class="item-row">
+							<div class="item-col fixed item-col-check" data-header="">
+								<label class="item-check" id="select-all-items">
+									<input type="checkbox" class="checkbox">
+									<span></span>
+								</label>
+							</div>
+
+							<div class="item-col fixed item-col-img md" data-header="Media">
+								<a href="">
+									<div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg)"></div>
+								</a>
+							</div>
+							<div class="item-col fixed pull-left item-col-title" data-header="Name">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title">
+											50% of things doesn&#x27;t really belongs to you
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-sales" data-header="Sales">
+								<div>
+									4567
+								</div>
+							</div>
+							<div class="item-col fluid item-col-stats" data-header="Stats">
+								<div>
+									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fluid item-col-category" data-header="Category">
+								<div class="no-overflow">
+									<span>Software</span>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-author" data-header="Author">
+								<div class="no-overflow">
+									<span>Alexander Sargssyan</span>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date" data-header="Published">
+								<div>
+									21 SEP 10:45
+								<div>
+							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item-col col-check hidden-xs-down">
-							<label class="item-check">
-								<input type="checkbox" class="checkbox">
-								<span></span>
-							</label>
-						</div>
-						<div class="item-col col-img">
-							<a href="">
-								<div class="img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg)"></div>
-							</a>
-						</div>
-						<div class="item-col col-title">
-							<a href="">
-								<strong>
-									Ut dui quis amet curabitur vestibulum
-								</strong>
-							</a>
-						</div>
-						<div class="item-col col-stats hidden-xs-down">
-							Stats
-						</div>
-						<div class="item-col col-author">
-							<a href="">
-								Ivy Lorrie
-							</a>
-						</div>
-						<div class="item-col col-category">
-							<a href="">
-								Software
-							</a>
-						</div>
-						<div class="item-col col-date">
-							21 SEP 10:45
+					<li class="item">	
+						<div class="item-row">
+							<div class="item-col fixed item-col-check" data-header="">
+								<label class="item-check" id="select-all-items">
+									<input type="checkbox" class="checkbox">
+									<span></span>
+								</label>
+							</div>
+
+							<div class="item-col fixed item-col-img md" data-header="Media">
+								<a href="">
+									<div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg)"></div>
+								</a>
+							</div>
+							<div class="item-col fixed pull-left item-col-title" data-header="Name">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title">
+											Vestibulum tincidunt amet laoreet mauris sit sem aliquam cras maecenas vel aliquam.
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-sales" data-header="Sales">
+								<div>
+									854
+								</div>
+							</div>
+							<div class="item-col fluid item-col-stats" data-header="Stats">
+								<div>
+									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fluid item-col-category" data-header="Category">
+								<div class="no-overflow">
+									<span>Software</span>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-author" data-header="Author">
+								<div class="no-overflow">
+									<span>Some Long Author Name</span>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date" data-header="Published">
+								<div>
+									21 SEP 10:45
+								<div>
+							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item-col col-check hidden-xs-down">
-							<label class="item-check">
-								<input type="checkbox" class="checkbox">
-								<span></span>
-							</label>
+					<li class="item">	
+						<div class="item-row">
+							<div class="item-col fixed item-col-check" data-header="">
+								<label class="item-check" id="select-all-items">
+									<input type="checkbox" class="checkbox">
+									<span></span>
+								</label>
+							</div>
+
+							<div class="item-col fixed item-col-img md" data-header="Media">
+								<a href="">
+									<div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg)"></div>
+								</a>
+							</div>
+							<div class="item-col fixed pull-left item-col-title" data-header="Name">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title">
+											Lorem Ipsum is not simply random text
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-sales" data-header="Sales">
+								<div>
+									1861
+								</div>
+							</div>
+							<div class="item-col fluid item-col-stats" data-header="Stats">
+								<div>
+									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fluid item-col-category" data-header="Category">
+								<div class="no-overflow">
+									<span>Software</span>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-author" data-header="Author">
+								<div class="no-overflow">
+									<span>Willard Bennett</span>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date" data-header="Published">
+								<div>
+									21 SEP 10:45
+								<div>
+							</div>
 						</div>
-						<div class="item-col col-img">
-							<a href="">
-								<div class="img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg)"></div>
-							</a>
+					</li>
+					<li class="item">	
+						<div class="item-row">
+							<div class="item-col fixed item-col-check" data-header="">
+								<label class="item-check" id="select-all-items">
+									<input type="checkbox" class="checkbox">
+									<span></span>
+								</label>
+							</div>
+
+							<div class="item-col fixed item-col-img md" data-header="Media">
+								<a href="">
+									<div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg)"></div>
+								</a>
+							</div>
+							<div class="item-col fixed pull-left item-col-title" data-header="Name">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title">
+											Ut dui quis amet curabitur vestibulum
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-sales" data-header="Sales">
+								<div>
+									7891
+								</div>
+							</div>
+							<div class="item-col fluid item-col-stats" data-header="Stats">
+								<div>
+									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fluid item-col-category" data-header="Category">
+								<div class="no-overflow">
+									<span>Software</span>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-author" data-header="Author">
+								<div class="no-overflow">
+									<span>Ivy Lorrie</span>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date" data-header="Published">
+								<div>
+									21 SEP 10:45
+								<div>
+							</div>
 						</div>
-						<div class="item-col col-title">
-							<a href="">
-								<strong>
-									Mus sociosqu etiam autem rutrum at molestie elit pulvinar
-								</strong>
-							</a>
-						</div>
-						<div class="item-col col-stats hidden-xs-down">
-							Stats
-						</div>
-						<div class="item-col col-author">
-							<a href="">
-								Evander Archie
-							</a>
-						</div>
-						<div class="item-col col-category">
-							<a href="">
-								Software
-							</a>
-						</div>
-						<div class="item-col col-date">
-							21 SEP 10:45
+					</li>
+					<li class="item">	
+						<div class="item-row">
+							<div class="item-col fixed item-col-check" data-header="">
+								<label class="item-check" id="select-all-items">
+									<input type="checkbox" class="checkbox">
+									<span></span>
+								</label>
+							</div>
+
+							<div class="item-col fixed item-col-img md" data-header="Media">
+								<a href="">
+									<div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg)"></div>
+								</a>
+							</div>
+							<div class="item-col fixed pull-left item-col-title" data-header="Name">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title">
+											Mus sociosqu etiam autem rutrum at molestie elit pulvinar
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-sales" data-header="Sales">
+								<div>
+									95150
+								</div>
+							</div>
+							<div class="item-col fluid item-col-stats" data-header="Stats">
+								<div>
+									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fluid item-col-category" data-header="Category">
+								<div class="no-overflow">
+									<span>Software</span>
+								</div>
+							</div>
+							<div class="item-col fluid item-col-author" data-header="Author">
+								<div class="no-overflow">
+									<span>Evander Archie</span>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date" data-header="Published">
+								<div>
+									21 SEP 10:45
+								<div>
+							</div>
 						</div>
 					</li>
 			</ul>
+
 			
-			<nav class="text-xs-right">
-				<ul class="pagination">
-					<li class="page-item">
-						<a class="page-link" href="">
-							Prev
-						</a>
-					</li>
-					<li class="page-item active">
-						<a class="page-link" href="">
-							1
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							2
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							3
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							4
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							5
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							Next
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</section>
+		</div>
+
+		<nav class="text-xs-right">
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="">
+						Prev
+					</a>
+				</li>
+				<li class="page-item active">
+					<a class="page-link" href="">
+						1
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						2
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						3
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						4
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						5
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						Next
+					</a>
+				</li>
+			</ul>
+		</nav>
 
 
 				</article>
