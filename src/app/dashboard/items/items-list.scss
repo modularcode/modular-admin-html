@@ -1,9 +1,9 @@
 .dashboard-page .items {
 	.item-list {
 
-		$mobile-img-col-size: 70px + $item-list-padding-x/2;
+		$mobile-img-col-size: 70px + $item-list-padding-x;
 
-		.item-col.mobile {
+		.item-col-img-mobile {
 			display: none;
 			padding-top: 10px;
 			padding-bottom: 10px;
@@ -16,7 +16,7 @@
 		}
 
 
-		.item-col.desktop {
+		.item-col-desktop-description {
 			padding: 0;
 			width: 100%;
 

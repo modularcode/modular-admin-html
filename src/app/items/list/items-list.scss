@@ -27,63 +27,10 @@
 		}
 	}
 
-	.item-check {
-		margin-bottom: 0;
+
+	// For common item-list class see /src/_common/styles/items.less
+
+	.item-list {
+
 	}
-
-	// For common items-list class see /src/_common/styles/items.less
-
-	.items-list {
-		li {
-			width: 100%;
-		}
-
-		.col-check {
-			padding-left: 15px;
-			flex: 0 0 45px;
-			width: 45px;
-			text-align: center;
-
-			.checkbox + span {
-				padding-right: 0;
-
-				&:before {
-					width: 20px;
-				}
-			}
-		}
-
-		.col-img {
-			flex: 0 0 54px;
-			width: 54px;
-		}
-
-		.img {
-			@include media-down(sm) {
-				border-radius: 50%;
-			}
-		}
-
-		.col-title {
-			flex-grow: 3;
-		}
-
-		.col-stats {
-			
-		}
-
-		.col-author {
-			
-		}
-
-		.col-category {
-			
-		}
-
-		.col-date {
-			
-		}
-	}
-	
 }
-

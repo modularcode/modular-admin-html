@@ -3,31 +3,37 @@ page: items-list
 items: 
   - title: 12 Myths Uncovered About IT & Software
     img: https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg
+    sales: 46323
     author: Meadow Katheryne
     category: Software
     date: 21 SEP 10:45
   - title: 50% of things doesn't really belongs to you
     img: https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg
+    sales: 4567
     author: Alexander Sargssyan
     category: Software
     date: 21 SEP 10:45
   - title: Vestibulum tincidunt amet laoreet mauris sit sem aliquam cras maecenas vel aliquam.
     img: https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg
+    sales: 854
     author: Angela Blaine
     category: Software
     date: 21 SEP 10:45
   - title:  Lorem Ipsum is not simply random text
     img: https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg
+    sales: 1861
     author: Willard Bennett
     category: Software
     date: 21 SEP 10:45
   - title: Ut dui quis amet curabitur vestibulum
     img: https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg
+    sales: 7891
     author: Ivy Lorrie
     category: Software
     date: 21 SEP 10:45
   - title: Mus sociosqu etiam autem rutrum at molestie elit pulvinar
     img: https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg
+    sales: 95150
     author: Evander Archie
     category: Software
     date: 21 SEP 10:45
@@ -74,8 +80,84 @@ items:
 			</div>
 		</div>
 
-		<section class="section">
-			<ul class="card items-list striped">
+		<div class="card">
+			<ul class="item-list striped">
+				<li class="item item-list-header hidden-sm-down">
+					<div class="item-row">
+						<div class="item-col fixed item-col-check">
+							<label class="item-check" id="select-all-items">
+								<input type="checkbox" class="checkbox">
+								<span></span>
+							</label>
+						</div>
+						<div class="item-col fixed item-col-img xs"></div>
+						<div class="item-col item-col-title">
+							<div>
+								<span>Name</span>
+							</div>
+						</div>
+						<div class="item-col fixed item-col-sales">
+							<div>
+								<span>Sales</span>
+							</div>
+						</div>
+						<div class="item-col fixed item-col-stats">
+							<div class="no-overflow">
+								<span>Stats</span>
+							</div>
+						</div>
+						<div class="item-col fixed item-col-date">
+							<div>
+								<span>Published</span>
+							</div>
+						</div>
+					</div>
+				</li>
+				{{#each items}}
+					<li class="item">	
+						<div class="item-row">
+							<div class="item-col fixed item-col-check">
+								<label class="item-check" id="select-all-items">
+									<input type="checkbox" class="checkbox">
+									<span></span>
+								</label>
+							</div>
+
+							<div class="item-col fixed item-col-img xs">
+								<a href="">
+									<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
+								</a>
+							</div>
+							<div class="item-col item-col-title">
+								<div>
+									<a href="" class="">
+										<h4 class="item-title no-wrap">
+											{{this.title}}
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="item-col fixed item-col-sales">
+								<div>
+									{{this.sales}}
+								</div>
+							</div>
+							<div class="item-col fixed item-col-stats">
+								<div>
+									<div class="item-stats sparkline" data-type="bar"></div>	
+								</div>
+							</div>
+							<div class="item-col fixed item-col-date">
+								<div>
+									{{this.date}}
+								<div>
+							</div>
+						</div>
+					</li>
+				{{/each}}
+			</ul>
+
+			{{!-- <ul class="card items-list striped">
 				<li class="items-list-header">
 					<div class="item-col col-check hidden-xs-down">
 						<label class="item-check" id="select-all-items">
@@ -104,7 +186,7 @@ items:
 				</li>
 				{{#each items}}
 					<li>
-						{{!-- <div class="action-row">
+						<div class="action-row">
 							<div class="action-title">
 								Actions
 							</div>
@@ -112,7 +194,7 @@ items:
 								<a class="action-edit" href="/items-editor.html">Edit</a>
 								<a class="action-delete" href="#">Delete</a>
 							</div>
-						</div> --}}
+						</div>
 						<div class="item-col col-check hidden-xs-down">
 							<label class="item-check">
 								<input type="checkbox" class="checkbox">
@@ -149,48 +231,49 @@ items:
 						</div>
 					</li>
 				{{/each}}
-			</ul>
+			</ul> --}}
 			
-			<nav class="text-xs-right">
-				<ul class="pagination">
-					<li class="page-item">
-						<a class="page-link" href="">
-							Prev
-						</a>
-					</li>
-					<li class="page-item active">
-						<a class="page-link" href="">
-							1
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							2
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							3
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							4
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							5
-						</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="">
-							Next
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</section>
+		</div>
+
+		<nav class="text-xs-right">
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="">
+						Prev
+					</a>
+				</li>
+				<li class="page-item active">
+					<a class="page-link" href="">
+						1
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						2
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						3
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						4
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						5
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="">
+						Next
+					</a>
+				</li>
+			</ul>
+		</nav>
 
 
 	{{/content}}

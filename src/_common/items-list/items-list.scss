@@ -62,7 +62,7 @@ $item-list-line-height: 30px !default;
 	.item-col {
 		align-items: center;
 		display: flex;
-		padding: $item-list-padding-y $item-list-padding-x/2;
+		padding: $item-list-padding-y $item-list-padding-x $item-list-padding-y 0;
 
 		&.fixed {
 			flex-grow: 0;
@@ -72,10 +72,6 @@ $item-list-line-height: 30px !default;
 
 		& > div {
 			width: 100%;
-		}
-
-		&:first-child {
-			padding-left: 0;
 		}
 
 		&:last-child {
@@ -102,26 +98,47 @@ $item-list-line-height: 30px !default;
 
 .item-list .item {
 
+	.item-col-desktop-description {
+		padding: 0;
+	}
+
+	// Check
+	.item-col-check {
+		width: 20px + $item-list-padding-x;
+	}
+
+	.item-check {
+		margin-bottom: 0;
+
+		.checkbox + span {
+			padding-right: 0;
+
+			&:before {
+				width: 20px;
+			}
+		}
+	}
+
 	// Image
 
 	.item-col-img {
 		display: flex;
-		width: 60px + $item-list-padding-x/2;
+		width: 60px + $item-list-padding-x;
 
 		&.xs{
-			width: 30px + $item-list-padding-x/2;
+			width: 30px + $item-list-padding-x;
 		}
 
 		&.sm {
-			width: 40px + $item-list-padding-x/2;
+			width: 40px + $item-list-padding-x;
 		}
 
 		&.lg {
-			width: 90px + $item-list-padding-x/2;
+			width: 90px + $item-list-padding-x;
 		}
 
 		&.xl {
-			width: 110px + $item-list-padding-x/2;
+			width: 110px + $item-list-padding-x;
 		}
 
 		a {
