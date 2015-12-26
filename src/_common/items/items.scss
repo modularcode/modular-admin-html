@@ -110,6 +110,9 @@
 		flex-grow: 1;
 		align-self: stretch;
 	    background-color: #efefef;
+	    padding-bottom: 100%;
+		width: 100%;
+		height: 0;
 
 	   	@include bg-cover();
 	}
