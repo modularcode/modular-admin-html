@@ -18,8 +18,11 @@ $item-list-line-height: 30px !default;
 
 	.item-list-header {
 		font-size: 0.8rem;
-		font-weight: 700;
 		color: #999;
+
+		.item-col {
+			font-weight: 700 !important;
+		}
 	}
 
 	&.striped {
