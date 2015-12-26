@@ -61,10 +61,6 @@
 				margin-left: 0 !important;
 				margin-right: auto;
 				flex-basis: calc(40% - 100px);
-
-				& > div {
-					align-self: flex-start;
-				}
 			}
 
 			&.item-col-sales {
@@ -105,8 +101,8 @@
 			border: none;
 			font-size: 0.9rem;
 			margin-bottom: 10px;
-
-			@extend .card;
+			background-color: #fff;
+			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
 
 			.item-row {
 				padding-left: 0;
