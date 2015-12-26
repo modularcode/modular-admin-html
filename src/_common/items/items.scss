@@ -20,19 +20,30 @@
 	.item-row {
 		display: flex;
 		align-items: stretch;
-		flex-wrap: nowrap;
+		// flex-wrap: nowrap;
 		flex-direction: row;
+		flex-wrap: wrap;
+
+		&.nowrap {
+			flex-wrap: nowrap;
+		}
 	}
 
 	.item-col {
 		background-position: center center;
 		background-size: cover;
-		display: flex;
-		padding: 10px;
-		flex-grow: 1;
-		flex-shrink: 1;
-		align-items: flex-start;
-		flex-wrap: wrap;
+		// display: flex;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		flex: 0 0 auto;
+		// flex-grow: 1;
+		// flex-shrink: 1;
+
+		// align-items: flex-start;
+		// flex-wrap: wrap;
 
 		&.fixed {
 			flex-grow: 0;
@@ -43,11 +54,19 @@
 		& > div {
 			width: 100%;
 		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
 	}
 
-	.item-col+.item-col {
-		padding-left: 0;
-	}
+	// .item-col+.item-col {
+	// 	padding-left: 0;
+	// }
 
 	.item-footer {
 		align-self: flex-end;
@@ -60,80 +79,56 @@
 
 .item {
 	.item-col-img {
-		//width: 60px;
+		display: flex;
 
 		&.xs{
-			width: 60px;
+			width: 40px;
 		}
 
 		&.sm {
-			width: 70px;
+			width: 50px;
 		}
 
 		&.lg {
-			width: 120px;
+			width: 100px;
 		}
 
 		&.xl {
-			width: 140px;
+			width: 120px;
+		}
+
+		a {
+			flex-grow: 1;
+			display: flex;
+			align-self: stretch;
 		}
 	}
 
 	.item-img {
-		/*width: 60px;
-	    height: 60px;*/
+		flex-grow: 1;
+		align-self: stretch;
 	    background-color: #efefef;
-	    background-size: cover;
-	    background-position: center;
-	    background-repeat: no-repeat;
 
-	    .xs &,
-	    &.xs {
-	    	height: 30px;
-	    	width: 30px;
-	    }
-
-	    .sm &,
-	    &.sm {
-	    	width: 40px;
-	    	height: 40px;
-	    }
-
-	    .lg &,
-	    &.lg {
-	    	width: 80px;
-	    	height: 80px;
-	    }
+	   	@include bg-cover();
 	}
-}
 
-.item-title-a {
-	width: 100%;
+	.item-col-title {
+		a {
+			display: block;
+		}
+	}
 
 	.item-title {
-		display: inline-block;
+		margin: 0;
 		font-size: 1.1rem;
 		font-weight: 600;
 		line-height: 30px;
-		overflow: hidden;
-	    text-overflow: ellipsis;
-	    vertical-align: bottom;
-	    white-space: nowrap;
-	    width: 100%;
-	}
 
-	h4 {
-		margin: 0;
-	}
-
-	.item-description {
-		font-size: 0.9rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.item-canvas {
-		height: 20px;
-		width: 50px;
+	    &.nowrap {
+			overflow: hidden;
+	    	text-overflow: ellipsis;
+	    	white-space: nowrap;
+	    }
 	}
 }
 
@@ -143,16 +138,15 @@
 ********************************************** */
 
 // Item which is located inside card inside items-list
-.card > .items-list .item-col-img {
-
-	padding-left: $card-padding-x;
+.card .items-list .item > .item-row {
+	padding: 0 $card-padding-x;
 
 	@include media(xl) {
-		padding-left: $card-padding-x-xl;
+		padding: 0 $card-padding-x-xl;
 	}
 
 	@include media-down(sm) {
-		padding-left: $card-padding-x-sm;
+		padding: 0 $card-padding-x-sm;
 	}
 }
 

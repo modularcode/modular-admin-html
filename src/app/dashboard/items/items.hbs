@@ -1,4 +1,4 @@
-<div class="card sameheight-item items" data-exclude="xs,sm">
+<div class="card sameheight-item items" data-exclude="xs,sm,lg">
 	<div class="card-header bordered">
 		<div class="header-block">
 			<h3 class="title">
@@ -24,60 +24,57 @@
 		</div>
 	</div>
 	<ul class="items-list striped">
-		<li class="item item-header hidden-sm-down">
+		<li class="item item-header hidden-lg-down">
 			<div class="item-row">
 				<div class="item-col fixed item-col-img xs"></div>
-				<div class="item-col">
-					<div class="row">
-						<div class="col-md-6">
-							<span>Name</span>
-						</div>
-						<div class="col-md-2 text-xs-right">
-							<span>Sales</span>
-						</div>
-						<div class="col-md-2 text-xs-center">
-							<span>Stats</span>
-						</div>
-						<div class="col-md-2 text-xs-right">
-							<span>Published</span>
-						</div>
-					</div>
+				<div class="item-col item-col-title">
+					<span>Name</span>
+				</div>
+				<div class="item-col fixed item-col-sales">
+					<span>Sales</span>
+				</div>
+				<div class="item-col fixed item-col-stats">
+					<span>Stats</span>
+				</div>
+				<div class="item-col fixed item-col-date">
+					<span>Published</span>
 				</div>
 			</div>
 		</li>
 		{{#each items}}
 			<li class="item">
 				<div class="item-row">
+
 					<div class="item-col fixed item-col-img xs">
 						<a href="">
 							<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
 						</a>
 					</div>
-					<div class="item-col">
-						<div class="row">
-							<div class="col-xs-12 col-md-6">
-								<div class="item-title-block">
-									<a href="" class="item-title-a">
-										<h4 class="item-title">
-											{{this.title}}
-										</h4>
-									</a>
-								</div>
-								<div class="item-content small">
-									<p class="item-description ">{{this.description}}</p>
-								</div>
-							</div>
-							<div class="col-xs-4 col-md-2 text-xs-right">
-								{{this.sales}}
-							</div>
-							<div class="col-xs-4 col-md-2 text-xs-center">
-								<div class="sparkline" data-type="bar"></div>	
-							</div>
-							<div class="col-xs-4 col-md-2 text-xs-right">
-								{{this.date}}
-							</div>
+					<div class="item-col item-col-title">
+						<div>
+							<a href="" class="">
+								<h4 class="item-title">
+									{{this.title}}
+								</h4>
+							</a>
 						</div>
 					</div>
+					<div class="item-col fixed item-col-sales">
+						<div>
+							{{this.sales}}
+						</div>
+					</div>
+					<div class="item-col fixed item-col-stats">
+						<div>
+							<div class="sparkline" data-type="bar"></div>	
+						</div>
+					</div>
+					<div class="item-col fixed item-col-date">
+						<div>
+							{{this.date}}
+						<div>
+					</div>
+
 				</div>
 			</li>
 		{{/each}}

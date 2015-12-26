@@ -38,27 +38,27 @@
 		}
 	}
 
-	.item-row,
-	li {
-		display: flex;
-		align-items: flex-start;
+	// .item-row,
+	// li {
+	// 	display: flex;
+	// 	align-items: flex-start;
 
-		width: 100%;
-		position: relative;
-	}
+	// 	width: 100%;
+	// 	position: relative;
+	// }
 
-	.item-col {
-		display: flex;
-		flex-grow: 1;
-		flex-basis: 0;
-		vertical-align: top;
-		padding: 10px 7px;
-	}
+	// .item-col {
+	// 	display: flex;
+	// 	flex-grow: 1;
+	// 	flex-basis: 0;
+	// 	vertical-align: top;
+	// 	padding: 10px 7px;
+	// }
 
-	.img {
-		width: 40px; 
-		height: 40px; 
-		background-color: #efefef;
-		@include bg-cover();
-	}
+	// .img {
+	// 	width: 40px; 
+	// 	height: 40px; 
+	// 	background-color: #efefef;
+	// 	@include bg-cover();
+	// }
 }

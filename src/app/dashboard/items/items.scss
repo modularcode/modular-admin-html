@@ -25,38 +25,14 @@
 				color: $color-inactive;
 				width: 100px;
 
-				&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-					transition: color 0.3s ease;
-					color: $color-inactive;
-				}
-				&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+				@include placeholder() {
 					transition: color 0.3s ease;
 					color:  $color-inactive;
-					opacity:  1;
-				}
-				&::-moz-placeholder { /* Mozilla Firefox 19+ */
-					transition: color 0.3s ease;
-					color: $color-inactive;
-					opacity:  1;
-				}
-				&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-					transition: color 0.3s ease;
-					color: $color-inactive;
 				}
 
 				&:focus {
-
-					&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-						color: $color-active;
-					}
-					&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-					   color:  $color-active;
-					}
-					&::-moz-placeholder { /* Mozilla Firefox 19+ */
-					   color: $color-active;
-					}
-					&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-					   color: $color-active;
+					@include placeholder() {
+						color:  $color-active;
 					}
 
 					&+.search-icon {
@@ -81,12 +57,72 @@
 		}
 	}
 
-	.item-description {
-		margin-bottom: 0;
 
-		@include media-down(sm) {
-			margin-bottom: 1rem;
+	.items-list {
+
+		.item-col {
+			div {
+				overflow: hidden;
+			}
 		}
+
+		.item-col-img {
+			@include media-down(sm) {
+				order: 0;
+			}
+		}
+
+		.item-col-title {
+			width: calc(50% - 40px);
+
+			@include media-down(sm) {
+				order: 1;
+				width: calc(100% - 40px);
+			}
+
+			div {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+
+		.item-col-sales {
+			width: 100px;
+			text-align: right;
+
+			@include media-down(sm) {
+				order: 3;
+				text-align: center;
+				width: percentage(1/3);
+			}
+		}
+
+		.item-col-stats {
+			text-align: center;
+			width: calc(50% - 200px);
+
+			@include media-down(sm) {
+				text-align: right;
+				order: 4;
+				width: percentage(1/3);
+			}
+		}
+
+		.item-col-date {
+			text-align: right;
+			white-space: nowrap;
+			width: 100px;
+
+			@include media-down(sm) {
+				text-align: left;
+				order: 2;
+				width: percentage(1/3);
+			}
+		}
+
+
 	}
+
 
 }

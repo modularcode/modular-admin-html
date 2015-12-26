@@ -76,9 +76,28 @@
 }
 
 // /******************************************
+// *           Placeholder
+// *******************************************/
+@mixin placeholder() {
+	&::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		@content;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		@content;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		@content;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		@content;
+	}
+}
+
+
+// /******************************************
 // *           Hardware Acceleration
 // *******************************************/
 
-// @mixin accelerate() {
-//     transform: translate3d(0, 0, 0);
-// }
+@mixin accelerate() {
+    transform: translate3d(0, 0, 0);
+}

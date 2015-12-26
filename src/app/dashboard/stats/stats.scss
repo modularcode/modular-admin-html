@@ -12,12 +12,12 @@
 		margin-bottom: 20px;
 		float: left;
 		white-space: nowrap;
-		width: percentage(1/2);
+		// width: percentage(1/2);
 		overflow: hidden;
 
-		@include media-down(sm) {
-			width: 100%;
-		}
+		// @include media-down(sm) {
+		// 	width: 100%;
+		// }
 	}
 
 	.stat-icon {
