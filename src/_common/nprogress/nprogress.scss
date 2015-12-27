@@ -1,0 +1,22 @@
+#nprogress {
+	.bar {
+		background: $color-primary !important;
+		
+		.peg {
+			box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary;
+		}
+	}
+
+	.spinner {
+		top: 25px !important;
+	    right: 23px !important;
+
+		.spinner-icon {
+			border-top-color: $color-primary !important;
+		    border-left-color: $color-primary !important;
+	    }
+	}
+}
+
+
+
