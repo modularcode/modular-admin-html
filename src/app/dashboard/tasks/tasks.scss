@@ -61,59 +61,6 @@
 				font-size: 1.25rem;
 
 			}
-
-			.item-actions {
-				position: absolute;
-				right: 0;
-				top: 0;
-
-				.actions-block {
-					height: 30px;
-					width: 0px;
-					overflow: hidden;
-					position: absolute;
-					top: 0;
-					right: -10px;
-					background-color: #C9D0DB;
-					border: 1px solid #C9D0DB;
-					border-radius: 3px;
-					transition: all 0.15s ease-in-out;
-
-					.actions-list {
-						padding: 0;
-						list-style: none;
-
-						li{
-							display: inline-block;
-							padding: 0;
-
-							a {
-								padding: 0px 2px;
-
-								&.edit {
-									color: #38424C;
-								}
-
-								&.check {
-									color: #40B726;
-								}
-
-								&.remove {
-									color: #DB0E1E;
-								}
-							}
-						}
-					}
-				}
-
-				&.active {
-					.actions-block  {
-						right: 0px;
-						width: 66px;
-					}
-				}
-			}
-
 		}
 
 	}

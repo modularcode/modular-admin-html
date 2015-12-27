@@ -1,6 +1,8 @@
 $item-list-padding-x: 10px !default;
 $item-list-padding-y: 10px !default;
 $item-list-line-height: 30px !default;
+$item-list-col-grow: 3 !default;
+$item-list-col-shrink: 3 !default;
 
 /* *******************************************
 *		  Item List general styles
@@ -26,11 +28,11 @@ $item-list-line-height: 30px !default;
 	}
 
 	&.striped {
-		li {
+		& > li {
 			border-bottom: 1px solid lighten($color-divider, 6%);
 		}
 
-		li:nth-child(2n + 1) {
+		& > li:nth-child(2n + 1) {
 			background-color: lighten($color-divider, 12%);
 		}
 
@@ -46,9 +48,11 @@ $item-list-line-height: 30px !default;
 ********************************************** */
 
 
-.item-list .item {
-	display: flex;
-	flex-direction: column;
+.item-list {
+	.item {
+		display: flex;
+		flex-direction: column;
+	}
 
 	.item-row {
 		display: flex;
@@ -67,6 +71,11 @@ $item-list-line-height: 30px !default;
 		align-items: center;
 		display: flex;
 		padding: $item-list-padding-y $item-list-padding-x $item-list-padding-y 0;
+		flex-basis: 0;
+		flex-grow: $item-list-col-grow;
+		flex-shrink: $item-list-col-shrink;
+		margin-left: auto;
+		margin-right: auto;
 
 		&.fixed {
 			flex-grow: 0;
@@ -108,15 +117,42 @@ $item-list-line-height: 30px !default;
 ********************************************** */
 
 
-.item-list .item {
+.item-list {
 
-	.item-col-desktop-description {
-		padding: 0;
+	/********************************************
+	*					Heading
+	*********************************************/
+
+	.item-heading {
+		display: none;
+		color: #666;
+		font-weight: 700;	
+		padding-right: $item-list-padding-x;
+		padding-left: $item-list-padding-x;
+
+		@include media-down(sm) {
+			display: block;
+		}
+
+		@include media(sm) {
+			width: 100%;
+		}
+
+		@include media(xs) {
+			width: 40%;
+		}
 	}
 
-	// Check
-	.item-col-check {
-		width: 20px + $item-list-padding-x;
+	/********************************************
+	*					Checkbox
+	*********************************************/
+
+	.item-col.item-col-check {
+		flex-basis: 20px + $item-list-padding-x;
+
+		@include media-down(sm) {
+			order: -8;
+		}
 	}
 
 	.item-check {
@@ -131,26 +167,28 @@ $item-list-line-height: 30px !default;
 		}
 	}
 
-	// Image
+	/********************************************
+	*					Image
+	*********************************************/
 
-	.item-col-img {
+	.item-col.item-col-img {
 		display: flex;
-		width: 60px + $item-list-padding-x;
+		flex-basis: 60px + $item-list-padding-x;
 
 		&.xs{
-			width: 30px + $item-list-padding-x;
+			flex-basis: 30px + $item-list-padding-x;
 		}
 
 		&.sm {
-			width: 40px + $item-list-padding-x;
+			flex-basis: 40px + $item-list-padding-x;
 		}
 
 		&.lg {
-			width: 90px + $item-list-padding-x;
+			flex-basis: 90px + $item-list-padding-x;
 		}
 
 		&.xl {
-			width: 110px + $item-list-padding-x;
+			flex-basis: 110px + $item-list-padding-x;
 		}
 
 		a {
@@ -171,9 +209,16 @@ $item-list-line-height: 30px !default;
 	   	@include bg-cover();
 	}
 
-	// 1le
+	/********************************************
+	*					Title
+	*********************************************/
 
-	.item-col-title {
+	.item-col.item-col-title {
+
+		@include media-down(sm) {
+			order: -4;
+		}
+
 		a {
 			display: block;
 		}
@@ -183,14 +228,122 @@ $item-list-line-height: 30px !default;
 		margin: 0;
 		font-size: 1.1rem;
 		font-weight: 600;
-		// line-height: $item-list-line-height;
 	}
 
-	// Stats
+	/********************************************
+	*					Stats
+	*********************************************/
 
 	.item-stats {
 		height: $item-list-line-height;
 	}
+
+	/********************************************
+	*				     Actions
+	*********************************************/
+
+	.item-col.item-col-actions {
+		flex-basis: 30px + $item-list-padding-x;
+		text-align: center;
+		padding-left: 0 !important;
+
+		@include media-down(sm) {
+			order: -3;
+
+			flex-basis: 30px + $item-list-padding-x !important;
+			padding-right: $item-list-padding-x;
+		}
+	}
+
+	.item-actions {
+		position: relative;
+		font-size: 1.1rem;
+
+		&.active {
+			.item-actions-block  {
+				max-width: 120px;
+			}
+
+			.item-actions-toggle-btn {
+				color: $color-primary;
+
+				.active {
+					display: block;
+				}
+
+				.inactive {
+					display: none;
+				}
+			}
+		}
+
+		.item-actions-toggle-btn {
+			color: lighten($color-text-light, 10);
+			font-size: 1.2rem;
+			cursor: pointer;
+			width: 30px;
+			line-height: 30px;
+			text-align: center;
+
+			.active {
+				display: none;
+			}
+		}
+
+		.item-actions-block {
+			height: 30px;
+			max-width: 0px;
+			line-height: 30px;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			right: 100%;
+			background-color: $color-divider;
+			border-radius: 3px;
+			transition: all 0.2s ease-in-out;
+
+			&.direction-right {
+				right: auto;
+				left: 100%;
+			}
+
+
+			.item-actions-list {
+				padding: 0;
+				list-style: none;
+				white-space: nowrap;
+				padding: 0 5px;
+
+				li{
+					display: inline-block;
+					padding: 0;
+				}
+
+				a {
+					display: block;
+					padding: 0 5px;
+
+					&.edit {
+						color: #38424C;
+					}
+
+					&.check {
+						color: #40B726;
+					}
+
+					&.remove {
+						color: #DB0E1E;
+					}
+				}
+			}
+		}
+
+	}
+
+	/********************************************
+	*			   Something else?
+	*********************************************/
+
 }
 
 

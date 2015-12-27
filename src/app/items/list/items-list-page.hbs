@@ -95,27 +95,27 @@ items:
 								<span>Media</span>
 							</div>
 						</div>
-						<div class="item-col fluid item-col-title">
+						<div class="item-col item-col-title">
 							<div>
 								<span>Name</span>
 							</div>
 						</div>
-						<div class="item-col fluid item-col-sales">
+						<div class="item-col item-col-sales">
 							<div>
 								<span>Sales</span>
 							</div>
 						</div>
-						<div class="item-col fluid item-col-stats">
+						<div class="item-col item-col-stats">
 							<div class="no-overflow">
 								<span>Stats</span>
 							</div>
 						</div>
-						<div class="item-col fluid item-col-category">
+						<div class="item-col item-col-category">
 							<div class="no-overflow">
 								<span>Category</span>
 							</div>
 						</div>
-						<div class="item-col fluid item-col-author">
+						<div class="item-col item-col-author">
 							<div class="no-overflow">
 								<span>Author</span>
 							</div>
@@ -125,24 +125,31 @@ items:
 								<span>Published</span>
 							</div>
 						</div>
+						<div class="item-col fixed item-col-actions">
+
+						</div>
 					</div>
 				</li>
 				{{#each items}}
 					<li class="item">	
+
 						<div class="item-row">
-							<div class="item-col fixed item-col-check" data-header="">
+
+							<div class="item-col fixed item-col-check">
+
 								<label class="item-check" id="select-all-items">
 									<input type="checkbox" class="checkbox">
 									<span></span>
 								</label>
 							</div>
 
-							<div class="item-col fixed item-col-img md" data-header="Media">
+							<div class="item-col fixed item-col-img md">
 								<a href="">
 									<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
 								</a>
 							</div>
-							<div class="item-col fixed pull-left item-col-title" data-header="Name">
+							<div class="item-col fixed pull-left item-col-title">
+								<div class="item-heading">Name</div>
 								<div>
 									<a href="" class="">
 										<h4 class="item-title">
@@ -151,31 +158,63 @@ items:
 									</a>
 								</div>
 							</div>
-							<div class="item-col fluid item-col-sales" data-header="Sales">
+							<div class="item-col item-col-sales">
+								<div class="item-heading">Sales</div>
 								<div>
 									{{this.sales}}
 								</div>
 							</div>
-							<div class="item-col fluid item-col-stats" data-header="Stats">
+							<div class="item-col item-col-stats">
+								<div class="item-heading">Stats</div>
 								<div class="no-overflow">
 									<div class="item-stats sparkline" data-type="bar"></div>	
 								</div>
 							</div>
-							<div class="item-col fluid item-col-category" data-header="Category">
+							<div class="item-col item-col-category">
+								<div class="item-heading">Category</div>
 								<div class="no-overflow">
 									<a href="">{{this.category}}</a>
 								</div>
 							</div>
-							<div class="item-col fluid item-col-author" data-header="Author">
+							<div class="item-col item-col-author">
+								<div class="item-heading">Author</div>
 								<div class="no-overflow">
 									<a href="">{{this.author}}</a>
 								</div>
 							</div>
-							<div class="item-col fixed item-col-date" data-header="Published">
+							<div class="item-col fixed item-col-date">
+								<div class="item-heading">Published</div>
 								<div>
 									{{this.date}}
-								<div>
+								</div>
 							</div>
+							<div class="item-col fixed item-col-actions">
+								<div class="item-actions">
+									<a class="item-actions-toggle-btn">
+										<span class="inactive">
+											<i class="fa fa-cog"></i>
+										</span>
+										<span class="active">
+										<i class="fa fa-chevron-circle-right"></i>
+										</span>
+									</a>
+									<div class="item-actions-block">
+		                                <ul class="item-actions-list">
+		                                    <li>
+		                                        <a class="remove" href="#">
+		                                            <i class="fa fa-trash-o "></i>
+		                                        </a>
+		                                    </li>
+		                                    <li>
+		                                        <a class="edit" href="#">
+		                                            <i class="fa fa-pencil"></i>
+		                                        </a>
+		                                    </li>
+		                                </ul>
+		                            </div>
+								</div>
+							</div>
+
 						</div>
 					</li>
 				{{/each}}
