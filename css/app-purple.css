@@ -701,6 +701,28 @@ body {
   background-color: #d7dde4;
   border-radius: 5px; }
 
+.dropdown-menu {
+  float: left;
+  box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
+  border: 1px solid rgba(126, 142, 159, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+  .dropdown-menu .dropdown-item {
+    display: block;
+    padding: 0px 15px;
+    clear: both;
+    font-weight: normal;
+    color: #4f5f6f;
+    white-space: nowrap;
+    -webkit-transition: none;
+            transition: none; }
+    .dropdown-menu .dropdown-item i {
+      margin-right: 2px; }
+    .dropdown-menu .dropdown-item:hover {
+      color: #7867A7 !important;
+      background: none;
+      background-color: whitesmoke; }
+
 .flex-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -732,28 +754,6 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-
-.dropdown-menu {
-  float: left;
-  box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
-  border: 1px solid rgba(126, 142, 159, 0.1);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
-  .dropdown-menu .dropdown-item {
-    display: block;
-    padding: 0px 15px;
-    clear: both;
-    font-weight: normal;
-    color: #4f5f6f;
-    white-space: nowrap;
-    -webkit-transition: none;
-            transition: none; }
-    .dropdown-menu .dropdown-item i {
-      margin-right: 2px; }
-    .dropdown-menu .dropdown-item:hover {
-      color: #7867A7 !important;
-      background: none;
-      background-color: whitesmoke; }
 
 input,
 textarea {
@@ -1339,6 +1339,14 @@ span a {
     border-color: #7867A7;
     background-color: #7867A7; }
 
+.table label {
+  margin-bottom: 0; }
+
+.table .checkbox + span {
+  margin-bottom: 0; }
+  .table .checkbox + span:before {
+    line-height: 20px; }
+
 /* Let's get this party started */
 ::-webkit-scrollbar {
   width: 6px;
@@ -1357,14 +1365,6 @@ span a {
 
 ::-webkit-scrollbar-thumb:window-inactive {
   background: #7867A7; }
-
-.table label {
-  margin-bottom: 0; }
-
-.table .checkbox + span {
-  margin-bottom: 0; }
-  .table .checkbox + span:before {
-    line-height: 20px; }
 
 .row .col {
   padding-left: 0.9375rem;
