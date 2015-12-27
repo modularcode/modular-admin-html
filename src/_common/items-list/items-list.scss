@@ -12,7 +12,7 @@ $item-list-col-shrink: 3 !default;
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	margin-bottom: 15px;
+	margin-bottom: 0;
 	line-height: $item-list-line-height;
 	
 	@include media(lg) {
@@ -323,7 +323,7 @@ $item-list-col-shrink: 3 !default;
 			right: 100%;
 			background-color: $color-divider;
 			border-radius: 3px;
-			transition: all 0.2s ease-in-out;
+			transition: all 0.15s ease-in-out;
 
 			&.direction-right {
 				right: auto;
@@ -375,7 +375,7 @@ $item-list-col-shrink: 3 !default;
 ********************************************** */
 
 // Item which is located inside card inside item-list
-.card .item-list .item > .item-row {
+.card > .item-list .item > .item-row {
 	padding: 0 $card-padding-x;
 
 	@include media(xl) {
