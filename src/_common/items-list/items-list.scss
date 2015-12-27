@@ -131,7 +131,6 @@ $item-list-col-shrink: 3 !default;
 		color: #666;
 		font-weight: 700;	
 		padding-right: $item-list-padding-x;
-		padding-left: $item-list-padding-x;
 
 		@include media-down(sm) {
 			display: block;
