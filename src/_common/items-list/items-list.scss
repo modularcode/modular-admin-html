@@ -1,6 +1,6 @@
 $item-list-padding-x: 10px !default;
 $item-list-padding-y: 10px !default;
-$item-list-line-height: 30px !default;
+$item-list-line-height: 1.4rem !default;
 $item-list-col-grow: 3 !default;
 $item-list-col-shrink: 3 !default;
 
@@ -13,29 +13,34 @@ $item-list-col-shrink: 3 !default;
 	padding: 0;
 	margin: 0;
 	margin-bottom: 15px;
-	// line-height: $item-list-line-height;
+	line-height: $item-list-line-height;
+	
+	@include media(lg) {
+		font-size: 1rem;
+	}
+
+	@include media(md) {
+		font-size: 0.95rem;
+	}
+
+	@include media-down(sm) {
+		font-size: 1.05rem;
+	}
 
 	display: flex;
 	flex-flow: column nowrap;
 
-	.item-list-header {
-
-		.item-col.item-col-header {
-			span {
-				color: #999;
-				font-size: 0.8rem;
-				font-weight: 700 !important;
-			}
-		}
-	}
-
 	&.striped {
 		& > li {
-			border-bottom: 1px solid lighten($color-divider, 6%);
+			border-bottom: 1px solid $item-list-color-border;
 		}
 
 		& > li:nth-child(2n + 1) {
 			background-color: lighten($color-divider, 12%);
+
+			@include media-down(sm) {
+				background-color: lighten($color-divider, 11%);
+			}
 		}
 
 		.item-list-footer {
@@ -123,10 +128,25 @@ $item-list-col-shrink: 3 !default;
 .item-list {
 
 	/********************************************
+	*					Header
+	*********************************************/
+
+	.item-list-header {
+		.item-col.item-col-header {
+			span {
+				color: #999;
+				font-size: 0.8rem;
+				font-weight: 700 !important;
+			}
+		}
+	}
+
+	/********************************************
 	*					Heading
 	*********************************************/
 
 	.item-heading {
+		font-size: 0.9rem;
 		display: none;
 		color: #666;
 		font-weight: 700;	
@@ -228,22 +248,9 @@ $item-list-col-shrink: 3 !default;
 
 	.item-title {
 		margin: 0;
-		font-size: 1.1rem;
-		line-height: 1.4rem;
+		font-size: inherit;
+		line-height: inherit;
 		font-weight: 600;
-
-		@include media(lg) {
-			font-size: 1rem;
-			line-height: 1.4rem;
-		}
-
-		@include media(md) {
-			font-size: 0.95rem;
-		}
-
-		@include media-down(sm) {
-			font-size: 1.05rem;
-		}
 	}
 
 	/********************************************

@@ -55,7 +55,6 @@
 			}
 
 			&.item-col-title {
-				line-height: 1.5rem;
 				text-align: left;
 				margin-left: 0 !important;
 				margin-right: auto;
@@ -85,17 +84,7 @@
 
 			&.item-col-date {
 				text-align: right;
-				white-space: nowrap;
-				flex-basis: 100px;
 			}			
-		}
-	}
-
-	@include media-down(lg) {
-		.item-list {
-			.item-col.item-col-title {
-				font-size: 1rem;
-			}
 		}
 	}
 
@@ -110,7 +99,6 @@
 		.item-list {
 			.item {
 				border: none;
-				font-size: 0.9rem;
 				margin-bottom: 10px;
 				background-color: #fff;
 				box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
