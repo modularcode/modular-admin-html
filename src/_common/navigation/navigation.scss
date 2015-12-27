@@ -4,7 +4,7 @@ a:not(.btn) {
 	overflow: hidden;
 	vertical-align: top;
 	z-index: 0;
-	transition: color 0.2s;
+	transition: $link-transition;
 	text-decoration: none;
 	color: $link-color;
 
