@@ -1031,6 +1031,7 @@ $(function() {
 	});
 
 });
+
 $(function() {
 
     if (!$('#select-all-items').length) {
@@ -1075,7 +1076,6 @@ $(function() {
     });
 
 });
-
 //LoginForm validation
 $(function() {
 	if (!$('.form-control').length) {
@@ -1129,6 +1129,16 @@ $(function () {
 	});
 	
 });
+$(function() {
+	$('.nav-profile > li > a').on('click', function() {
+
+		var $el = $(this).next();
+		setAnimation({
+			name: 'flipInX',
+			selector: $el
+		});
+	});
+})
 var modalMedia = {
 	$el: $("#modal-media"),
 	result: {},
@@ -1152,16 +1162,6 @@ var modalMedia = {
 		}
 	}
 };
-$(function() {
-	$('.nav-profile > li > a').on('click', function() {
-
-		var $el = $(this).next();
-		setAnimation({
-			name: 'flipInX',
-			selector: $el
-		});
-	});
-})
 $(function () {
 
 	// Local storage settings
