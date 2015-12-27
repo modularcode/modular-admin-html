@@ -1,7 +1,7 @@
 var config = window.config = {};
-	config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));
 
-
+// set primary color	
+config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));	
 
 // Configure responsive bootstrap toolkit
 config.ResponsiveBootstrapToolkitVisibilityDivs = {

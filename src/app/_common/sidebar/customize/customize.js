@@ -55,6 +55,7 @@ $(function () {
 	});
 
 	function setThemeSettings() {
+		setThemeColor();
 		setThemeState();
 		setThemeControlsState();
 
@@ -116,6 +117,15 @@ $(function () {
 				$(this).prop("checked", false );
 			}
 		});
+	}
+
+	/************************************************
+	*			Update theme color
+	*************************************************/
+	function setThemeColor(){
+		setTimeout(function(){ 
+			config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));	
+		}, 100);
 	}
 
 	/************************************************

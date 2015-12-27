@@ -7,29 +7,39 @@ $(function() {
     // drawing visits chart
     drawVisitsChart();
 
+    var el = null;
+    var item = 'visits';
+
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
        
-       var el = e.target;
-       var item = $(el).attr('href').replace('#', '');
+       el = e.target;
+       item = $(el).attr('href').replace('#', '');
+       switchHistoryCharts(item);
+       
+    });
 
-       var chartSelector = "#dashboard-" + item + "-chart";
-
-       if ($(chartSelector).has('svg').length) {
-            $(chartSelector).empty();
-       }
-
-       switch(item){
-            case 'visits':
-                drawVisitsChart();
-                break;
-             case 'downloads':
-                drawDownloadsChart();
-                break;
-       }
-    })
+    watch(config, "colorPrimary", function(){
+        switchHistoryCharts(item);
+    });
 
 });
 
+function switchHistoryCharts(item){
+    var chartSelector = "#dashboard-" + item + "-chart";
+
+    if ($(chartSelector).has('svg').length) {
+        $(chartSelector).empty();
+    }
+
+    switch(item){
+        case 'visits':
+            drawVisitsChart();
+            break;
+         case 'downloads':
+            drawDownloadsChart();
+            break;
+    }
+}
 
 function drawVisitsChart(){
     var dataVisits = [
