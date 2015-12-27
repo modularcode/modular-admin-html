@@ -701,28 +701,6 @@ body {
   background-color: #d7dde4;
   border-radius: 5px; }
 
-.dropdown-menu {
-  float: left;
-  box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
-  border: 1px solid rgba(126, 142, 159, 0.1);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
-  .dropdown-menu .dropdown-item {
-    display: block;
-    padding: 0px 15px;
-    clear: both;
-    font-weight: normal;
-    color: #4f5f6f;
-    white-space: nowrap;
-    -webkit-transition: none;
-            transition: none; }
-    .dropdown-menu .dropdown-item i {
-      margin-right: 2px; }
-    .dropdown-menu .dropdown-item:hover {
-      color: #4bcf99 !important;
-      background: none;
-      background-color: whitesmoke; }
-
 .flex-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -754,6 +732,28 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+
+.dropdown-menu {
+  float: left;
+  box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
+  border: 1px solid rgba(126, 142, 159, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }
+  .dropdown-menu .dropdown-item {
+    display: block;
+    padding: 0px 15px;
+    clear: both;
+    font-weight: normal;
+    color: #4f5f6f;
+    white-space: nowrap;
+    -webkit-transition: none;
+            transition: none; }
+    .dropdown-menu .dropdown-item i {
+      margin-right: 2px; }
+    .dropdown-menu .dropdown-item:hover {
+      color: #4bcf99 !important;
+      background: none;
+      background-color: whitesmoke; }
 
 input,
 textarea {
@@ -1691,7 +1691,7 @@ pre {
 
 @media (max-width: 543px) {
   .dashboard-page .items .item-list .item-col {
-    border-bottom: #e9edf0; }
+    border-bottom: 1px solid #e9edf0; }
   .dashboard-page .items .item-list .item-col-img {
     -webkit-flex-basis: 50px;
         -ms-flex-preferred-size: 50px;
@@ -1701,7 +1701,6 @@ pre {
         -ms-flex-order: -5;
             order: -5; }
   .dashboard-page .items .item-list .item-col-title {
-    border: none;
     -webkit-flex-basis: calc(100% - 50px);
         -ms-flex-preferred-size: calc(100% - 50px);
             flex-basis: calc(100% - 50px); }
