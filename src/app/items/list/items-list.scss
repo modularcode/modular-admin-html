@@ -30,7 +30,275 @@
 
 	// For common item-list class see /src/_common/styles/items.less
 
-	.item-list {
+	// Desktop view
 
+	.item-list .item {
+
+		.item-col.fluid {
+			flex-basis: 0;
+			flex-grow: 2;
+			flex-shrink: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.item-col {
+			&.item-col-check {
+				text-align: left;
+				width: auto;
+				flex-basis: 30px;
+			}
+
+			&.item-col-img {
+				text-align: left;
+				width: auto;
+				text-align: center;
+				flex-basis: 70px;
+			}
+
+			&.item-col-title {
+				line-height: 1.5rem;
+				text-align: left;
+				margin-left: 0 !important;
+				margin-right: auto;
+				flex-basis: calc(40% - 100px);
+			}
+
+			&.item-col-sales {
+				text-align: right;
+				font-weight: 600;
+			}
+
+			&.item-col-stats {
+				text-align: center;
+			}
+
+			&.item-col-category {
+				text-align: left;
+				font-weight: 600;
+			}
+
+			&.item-col-author {
+				text-align: left;
+				flex-grow: 3;
+			}
+
+			&.item-col-date {
+				text-align: right;
+				white-space: nowrap;
+				flex-basis: 100px;
+			}			
+		}
 	}
+
+
+	// All mobile views
+	@include media-down(sm) {
+		.card.items {
+			background: none;
+			box-shadow: none;
+		}
+
+		.item-list .item {
+			border: none;
+			font-size: 0.9rem;
+			margin-bottom: 10px;
+			background-color: #fff;
+			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+
+			.item-col {
+				&:before { 
+					color: #666;
+					content: attr(data-header);
+					font-weight: 700;
+				}
+
+			}
+		}
+	}
+
+
+	// Large Mobile view
+
+	@include media(sm) {
+		.item-list .item {
+
+			background-color: #fff;
+			margin-bottom: 10px;
+			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+
+			.item-row {
+				padding: 0;
+			}
+
+			.item-col {
+				&:before {
+					width: 100%;
+					display: block;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					left: 0;
+					line-height: 40px;
+					// padding-left: $item-list-padding-x;
+					padding-right: $item-list-padding-x;
+					// text-align: center;
+				}
+
+				&.item-col-check,
+				&.item-col-img,
+				&.item-col-title {
+					border-bottom: 1px solid $color-divider;
+
+					&:before {
+						display: none;
+					}
+				}
+
+				&.item-col-sales,
+				&.item-col-stats,
+				&.item-col-category,
+				&.item-col-author,
+				&.item-col-date {
+					padding-top: 40px;
+					position: relative;
+				}
+
+
+				&.item-col-check {
+					padding-left: $item-list-padding-x;
+					flex-basis: 40px;
+				}
+
+				&.item-col-img {
+					flex-basis: 50px;
+				}
+
+				&.item-col-title {
+					text-align: left;
+					margin-left: 0 !important;
+					margin-right: auto;
+					flex-basis: calc(100% - 90px);
+				}
+
+				&.item-col-sales {
+					padding-left: $item-list-padding-x;
+					text-align: left;
+
+					&:before {
+						padding-left: $item-list-padding-x;;
+					}
+				}
+
+				&.item-col-stats {
+					text-align: center;
+				}
+
+				&.item-col-category {
+					text-align: center;
+				}
+
+				&.item-col-author {
+					text-align: center;
+				}
+
+				&.item-col-date {
+					padding-right: $item-list-padding-x;
+					text-align: right;
+					white-space: nowrap;
+					flex-basis: 100px;
+				}		
+			}
+
+		}
+	}
+
+	// Small Mobile view
+
+	@include media-down(xs) {
+
+
+		.item-list .item {
+
+			border: none;
+			font-size: 0.9rem;
+			margin-bottom: 10px;
+			background-color: #fff;
+			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+
+			.item-row {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.item-col {
+				text-align: right;
+				flex-basis: 100% !important;
+				border-bottom: 1px solid $color-divider;
+				padding-left: $item-list-padding-x;
+
+				&:before {
+					padding-right: $item-list-padding-x;
+					text-align: left;
+					width: 50%;
+				}
+
+				&.item-col-check {
+					display: none;
+				}
+
+				&.item-col-img {
+					
+
+					&:before {
+						display: none;
+					}
+
+					.item-img {
+						padding-bottom: 65%;
+					}
+				}
+
+				&.item-col-title {
+					text-align: left;
+					padding-bottom: 0;
+					border: none;
+					order: -1;
+
+					&:before {
+						display: none;
+					}
+
+					.item-title {
+						font-size: 1rem;
+						line-height: 1.4rem;
+					}
+				}
+
+				&.item-col-sales {
+					text-align: left;
+				}
+
+				&.item-col-stats {
+					text-align: left;
+				}
+
+				&.item-col-category {
+					text-align: left;
+				}
+
+				&.item-col-author {
+					text-align: left;
+				}
+
+				&.item-col-date {
+					text-align: left;
+				}
+			}
+
+
+		}
+	}
+
+
 }

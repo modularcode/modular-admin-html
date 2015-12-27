@@ -11,7 +11,7 @@ $item-list-line-height: 30px !default;
 	padding: 0;
 	margin: 0;
 	margin-bottom: 15px;
-	line-height: $item-list-line-height;
+	// line-height: $item-list-line-height;
 
 	display: flex;
 	flex-flow: column nowrap;
@@ -51,6 +51,7 @@ $item-list-line-height: 30px !default;
 		display: flex;
 		align-items: stretch;
 		flex-direction: row;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		min-width: 100%;
 
@@ -68,6 +69,14 @@ $item-list-line-height: 30px !default;
 			flex-grow: 0;
 			flex-shrink: 0;
 			flex-basis: auto;
+		}
+
+		&.pull-left {
+			margin-right: auto;
+		}
+
+		&.pull-right {
+			margin-left: auto;
 		}
 
 		& > div {
@@ -159,7 +168,7 @@ $item-list-line-height: 30px !default;
 	   	@include bg-cover();
 	}
 
-	// Title
+	// 1le
 
 	.item-col-title {
 		a {
@@ -171,7 +180,7 @@ $item-list-line-height: 30px !default;
 		margin: 0;
 		font-size: 1.1rem;
 		font-weight: 600;
-		line-height: $item-list-line-height;
+		// line-height: $item-list-line-height;
 	}
 
 	// Stats
