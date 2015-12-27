@@ -43,6 +43,7 @@ $btn-primary-color-text: $color-text-inverse !default;
 // Links
 $link-color: $color-primary !default;
 $link-color-hover: darken($color-primary, 15%) !default;
+$link-transition: color 0.2s !default;
 
 // Header
 $header-height: 70px !default;
