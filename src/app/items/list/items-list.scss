@@ -32,7 +32,7 @@
 
 	// Desktop view
 
-	.item-list .item {
+	.item-list {
 
 		.item-col {
 			&.item-col-check {
@@ -85,6 +85,14 @@
 		}
 	}
 
+	@include media-down(lg) {
+		.item-list {
+			.item-col.item-col-title {
+				font-size: 1rem;
+			}
+		}
+	}
+
 
 	// All mobile views
 	@include media-down(sm) {
@@ -93,12 +101,14 @@
 			box-shadow: none;
 		}
 
-		.item-list .item {
-			border: none;
-			font-size: 0.9rem;
-			margin-bottom: 10px;
-			background-color: #fff;
-			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+		.item-list {
+			.item {
+				border: none;
+				font-size: 0.9rem;
+				margin-bottom: 10px;
+				background-color: #fff;
+				box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+			}
 
 			.item-row {
 				padding: 0;
@@ -110,11 +120,13 @@
 	// Large Mobile view
 
 	@include media(sm) {
-		.item-list .item {
+		.item-list {
 
-			background-color: #fff;
-			margin-bottom: 10px;
-			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+			.item {
+				background-color: #fff;
+				margin-bottom: 10px;
+				box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+			}
 
 			.item-heading {
 				width: 100%;
@@ -167,7 +179,7 @@
 
 				&.item-col-img {
 					padding-left: $item-list-padding-x;
-					flex-basis: 70px + $item-list-padding-x;
+					flex-basis: 69px + $item-list-padding-x;
 				}
 
 

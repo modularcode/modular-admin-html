@@ -227,7 +227,21 @@ $item-list-col-shrink: 3 !default;
 	.item-title {
 		margin: 0;
 		font-size: 1.1rem;
+		line-height: 1.4rem;
 		font-weight: 600;
+
+		@include media(lg) {
+			font-size: 1rem;
+			line-height: 1.4rem;
+		}
+
+		@include media(md) {
+			font-size: 0.95rem;
+		}
+
+		@include media-down(sm) {
+			font-size: 1.05rem;
+		}
 	}
 
 	/********************************************
