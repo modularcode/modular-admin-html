@@ -12,38 +12,40 @@
         </div>
     </div>
     <div class="card-block">
-        <ul class="tasks-list">
-            {{#each tasks}}
-                <li class="tasks-item">
-                    <label>
-                        <input class="checkbox" type="checkbox"
-                        {{#if done}}checked="checked"{{/if}}> 
-                        <span>{{title}}</span>
-                    </label>
-                    <div class="item-actions">
-                        <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
-                        <div class="actions-block">
-                            <ul class="actions-list">
-                                <li>
-                                    <a class="remove" href="#">
-                                        <i class="fa fa-trash-o "></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="check" href="#">
-                                        <i class="fa fa-check"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="edit" href="#">
-                                        <i class="fa fa-pencil"></i>
-                                    </a>
-                                </li>
-                            </ul>
+        <div class="tasks-block">
+            <ul class="tasks-list">
+                {{#each tasks}}
+                    <li class="tasks-item">
+                        <label>
+                            <input class="checkbox" type="checkbox"
+                            {{#if done}}checked="checked"{{/if}}> 
+                            <span>{{title}}</span>
+                        </label>
+                        <div class="item-actions">
+                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
+                            <div class="actions-block">
+                                <ul class="actions-list">
+                                    <li>
+                                        <a class="remove" href="#">
+                                            <i class="fa fa-trash-o "></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="check" href="#">
+                                            <i class="fa fa-check"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="edit" href="#">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            {{/each}}
-        </ul>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
     </div>
 </div>
