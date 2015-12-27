@@ -1,0 +1,22 @@
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #dddddd; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: $color-primary; 
+    -webkit-box-shadow: inset 0 0 6px $color-primary-lighter; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: $color-primary; 
+}
