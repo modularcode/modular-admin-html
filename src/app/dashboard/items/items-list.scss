@@ -60,7 +60,7 @@
 		@include media(xs) {
 
 			.item-col {
-				border-bottom: $item-list-color-border;
+				border-bottom: 1px solid $item-list-color-border;
 			}
 
 			.item-col-img {
