@@ -5,7 +5,7 @@ a:not(.btn) {
 	vertical-align: top;
 	z-index: 0;
 	transition: $link-transition;
-	text-decoration: none;
+	text-decoration: $link-decoration;
 	color: $link-color;
 
 	// &:before {
@@ -13,8 +13,8 @@ a:not(.btn) {
 	// }
 
 	&:hover{
-		text-decoration: none;
-		color: $link-color-hover;
+		text-decoration: $link-hover-decoration;
+		color: $link-hover-color;
 
 		&:before {
 			transform: scaleX(1);
