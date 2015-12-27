@@ -24,13 +24,13 @@
 		overflow-y: scroll;
 		overflow-x: hidden;
 		margin: 0;
-		margin-right: -10px;
+		margin-right: -5px;
 	}
 
 	.tasks-list {
 		list-style-type: none;
 		padding: 0;
-		padding-right: 10px;;
+		padding-right: 5px;
 
 		.tasks-item {
 
@@ -69,11 +69,11 @@
 
 				.actions-block {
 					height: 30px;
-					opacity: 0;
+					width: 0px;
+					overflow: hidden;
 					position: absolute;
 					top: 0;
-					right: -66px;
-					width: 66px;
+					right: -10px;
 					background-color: #C9D0DB;
 					border: 1px solid #C9D0DB;
 					border-radius: 3px;
@@ -108,8 +108,8 @@
 
 				&.active {
 					.actions-block  {
-						opacity: 1;
-						right: 0;
+						right: 0px;
+						width: 66px;
 					}
 				}
 			}
