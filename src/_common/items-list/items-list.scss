@@ -19,11 +19,13 @@ $item-list-col-shrink: 3 !default;
 	flex-flow: column nowrap;
 
 	.item-list-header {
-		font-size: 0.8rem;
-		color: #999;
 
-		.item-col {
-			font-weight: 700 !important;
+		.item-col.item-col-header {
+			span {
+				color: #999;
+				font-size: 0.8rem;
+				font-weight: 700 !important;
+			}
 		}
 	}
 
@@ -76,6 +78,7 @@ $item-list-col-shrink: 3 !default;
 		flex-shrink: $item-list-col-shrink;
 		margin-left: auto;
 		margin-right: auto;
+		min-width: 0;
 
 		&.fixed {
 			flex-grow: 0;
