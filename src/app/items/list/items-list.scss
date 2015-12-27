@@ -61,7 +61,9 @@
 				text-align: left;
 				margin-left: 0 !important;
 				margin-right: auto;
-				flex-basis: calc(40% - 100px);
+				// flex-basis: calc(40% - 100px);
+				flex-basis: 0;
+				flex-grow: 7;
 			}
 
 			&.item-col-sales {
