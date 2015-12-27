@@ -1,5 +1,5 @@
 $(function() {
-	var $itemActions = $(".item-actions");
+	var $itemActions = $(".item-actions-dropdown");
 
 	$(document).on('click',function(e) {
 		if (!$(e.target).closest('.item-actions-dropdown').length) {
