@@ -1306,6 +1306,17 @@ span a {
     background-color: #59c2e6;
     color: #ffffff; }
 
+.pagination {
+  margin-top: 0; }
+  .pagination .page-item .page-link {
+    color: #59c2e6; }
+  .pagination .page-item.active .page-link,
+  .pagination .page-item.active .page-link:focus,
+  .pagination .page-item.active .page-link:hover {
+    color: #fff;
+    border-color: #59c2e6;
+    background-color: #59c2e6; }
+
 #nprogress .bar {
   background: #59c2e6 !important; }
   #nprogress .bar .peg {
@@ -1317,17 +1328,6 @@ span a {
   #nprogress .spinner .spinner-icon {
     border-top-color: #59c2e6 !important;
     border-left-color: #59c2e6 !important; }
-
-.pagination {
-  margin-top: 0; }
-  .pagination .page-item .page-link {
-    color: #59c2e6; }
-  .pagination .page-item.active .page-link,
-  .pagination .page-item.active .page-link:focus,
-  .pagination .page-item.active .page-link:hover {
-    color: #fff;
-    border-color: #59c2e6;
-    background-color: #59c2e6; }
 
 /* Let's get this party started */
 ::-webkit-scrollbar {
@@ -1644,6 +1644,13 @@ pre {
 
 .dashboard-page .items .item-list .item-col-date {
   text-align: right; }
+
+@media (min-width: 1200px) {
+  .dashboard-page .items .item-list .item-col-date {
+    -webkit-box-flex: 4;
+    -webkit-flex-grow: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4; } }
 
 @media (max-width: 767px) {
   .dashboard-page .items .item-list .item-row {
