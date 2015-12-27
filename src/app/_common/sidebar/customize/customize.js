@@ -43,15 +43,13 @@ $(function () {
 		setThemeSettings();
 	});
 
-	$customizeMenuRadioBtns.on('click', function(e) {
-		e.preventDefault();
+
+	$customizeMenuRadioBtns.on('click', function() {
 
 		var optionName = $(this).prop('name');
 		var value = $(this).val();
 
 		themeSettings[optionName] = value;
-
-		console.log("RADIO CLICKED", optionName, value);
 
 		setThemeSettings();
 	});
@@ -59,8 +57,6 @@ $(function () {
 	function setThemeSettings() {
 		setThemeState();
 		setThemeControlsState();
-
-		console.log("***********************************");
 
 		saveThemeSettings();
 
@@ -81,7 +77,7 @@ $(function () {
 		}
 
 		// App classes
-		$app.removeClass('header-fixed header-static footer-fixed footer-static sidebar-fixed sidebar-static');
+		$app.removeClass('header-fixed footer-fixed sidebar-fixed');
 
 		// set header
 		$app.addClass(themeSettings.headerPosition);
@@ -113,17 +109,11 @@ $(function () {
 			var name = $(this).prop('name');
 			var value = $(this).val();
 
-			console.log("Name ", name);
-			console.log("Value ", value);
-			console.log("themeSetting ", themeSettings[name]);
-			console.log("-----------");
-
-
 			if (themeSettings[name] === value) {
-				$(this).prop( "checked", true );
+				$(this).prop("checked", true );
 			}
 			else {
-				$(this).prop( "checked", false );
+				$(this).prop("checked", false );
 			}
 		});
 	}
