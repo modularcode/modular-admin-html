@@ -46,6 +46,10 @@
 				width: auto;
 				text-align: center;
 				flex-basis: 70px;
+
+				&:not(.item-col-header) {
+					height: 80px;
+				}
 			}
 
 			&.item-col-title {
