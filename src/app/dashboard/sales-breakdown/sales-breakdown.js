@@ -8,7 +8,7 @@ $(function() {
 
     function drawSalesChart(){
 
-    $dashboardSalesBreakdownChart.html('');
+    $dashboardSalesBreakdownChart.empty();
 
         Morris.Donut({
             element: 'dashboard-sales-breakdown-chart',
