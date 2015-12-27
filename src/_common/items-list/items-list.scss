@@ -214,9 +214,8 @@ $item-list-col-shrink: 3 !default;
 		}
 
 		a {
-			flex-grow: 1;
-			display: flex;
-			align-self: stretch;
+			width: 100%;
+			// display: flex;
 		}
 	}
 
