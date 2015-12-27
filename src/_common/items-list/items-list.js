@@ -2,7 +2,7 @@ $(function() {
 	var $itemActions = $(".item-actions");
 
 	$(document).on('click',function(e) {
-		if (!$(e.target).closest('.item-actions').length) {
+		if (!$(e.target).closest('.item-actions-dropdown').length) {
 			$itemActions.removeClass('active');
 		}
 	});
@@ -10,7 +10,7 @@ $(function() {
 	$('.item-actions-toggle-btn').on('click',function(e){
 		e.preventDefault();
 
-		var $thisActionList = $(this).closest('.item-actions');
+		var $thisActionList = $(this).closest('.item-actions-dropdown');
 
 		$itemActions.not($thisActionList).removeClass('active');
 

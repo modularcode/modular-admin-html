@@ -242,7 +242,7 @@ $item-list-col-shrink: 3 !default;
 	*				     Actions
 	*********************************************/
 
-	.item-col.item-col-actions {
+	.item-col.item-col-actions-dropdown {
 		flex-basis: 30px + $item-list-padding-x;
 		text-align: center;
 		padding-left: 0 !important;
@@ -255,7 +255,7 @@ $item-list-col-shrink: 3 !default;
 		}
 	}
 
-	.item-actions {
+	.item-actions-dropdown {
 		position: relative;
 		font-size: 1.1rem;
 

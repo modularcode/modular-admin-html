@@ -130,7 +130,7 @@
 				&.item-col-check,
 				&.item-col-img,
 				&.item-col-title,
-				&.item-col-actions {
+				&.item-col-actions-dropdown {
 					border-bottom: 1px solid $color-divider;
 
 					.item-heading {
@@ -258,7 +258,7 @@
 					}
 				}
 
-				&.item-col-actions {
+				&.item-col-actions-dropdown {
 					border: none;
 					padding-bottom: 0;
 				}
