@@ -17,21 +17,28 @@ $(function() {
     });
 
 
+    function drawItemsListSparklines(){
+        $(".items-list-page .sparkline").each(function() {
+            var type = $(this).data('type');
 
-    $(".items-list-page .sparkline").each(function() {
-        var type = $(this).data('type');
+            // Generate random data
+            var data = [];
+            for (var i = 0; i < 17; i++) {
+                data.push(Math.round(100 * Math.random()));
+            }
 
-        // Generate random data
-        var data = [];
-        for (var i = 0; i < 17; i++) {
-            data.push(Math.round(100 * Math.random()));
-        }
-
-        $(this).sparkline(data, {
-            barColor: config.colorPrimary.toString(),
-            height: $(this).height(),
-            type: type
+            $(this).sparkline(data, {
+                barColor: config.colorPrimary.toString(),
+                height: $(this).height(),
+                type: type
+            });
         });
+    }
+
+    drawItemsListSparklines();
+
+    watch(config, "colorPrimary", function(){
+        drawItemsListSparklines();
     });
 
 });
