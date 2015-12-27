@@ -8,7 +8,7 @@ $(function() {
 
     function drawSalesMap() {
 
-        $dashboardSalesMap.html('');
+        $dashboardSalesMap.empty();
 
         var color = config.colorPrimary.toHexString();
         var darkColor = tinycolor(config.colorPrimary.toString()).darken(40).toHexString();
