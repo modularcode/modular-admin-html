@@ -13,34 +13,47 @@
     </div>
     <div class="card-block">
         <div class="tasks-block">
-            <ul class="tasks-list">
+            <ul class="item-list">
                 {{#each tasks}}
-                    <li class="tasks-item">
-                        <label>
-                            <input class="checkbox" type="checkbox"
-                            {{#if done}}checked="checked"{{/if}}> 
-                            <span>{{title}}</span>
-                        </label>
-                        <div class="item-actions">
-                            <a href="#" class="item-actions-toggle-btn setting"><I class="fa fa-cog"></I></a>
-                            <div class="actions-block">
-                                <ul class="actions-list">
-                                    <li>
-                                        <a class="remove" href="#">
-                                            <i class="fa fa-trash-o "></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="check" href="#">
-                                            <i class="fa fa-check"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="edit" href="#">
-                                            <i class="fa fa-pencil"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                    <li class="item">
+                        <div class="item-row">
+                            <div class="item-col item-col-title">
+                                <label>
+                                    <input class="checkbox" type="checkbox"
+                                    {{#if done}}checked="checked"{{/if}}> 
+                                    <span>{{title}}</span>
+                                </label>
+                            </div>
+                            <div class="item-col fixed item-col-actions-dropdown">
+                                <div class="item-actions-dropdown">
+                                    <a class="item-actions-toggle-btn">
+                                        <span class="inactive">
+                                            <i class="fa fa-cog"></i>
+                                        </span>
+                                        <span class="active">
+                                        <i class="fa fa-chevron-circle-right"></i>
+                                        </span>
+                                    </a>
+                                    <div class="item-actions-block">
+                                        <ul class="item-actions-list">
+                                            <li>
+                                                <a class="remove" href="#">
+                                                    <i class="fa fa-trash-o "></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="check" href="#">
+                                                    <i class="fa fa-check"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="edit" href="/item-editor.html">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>

@@ -32,7 +32,7 @@
 
 	// Desktop view
 
-	.item-list .item {
+	.item-list {
 
 		.item-col {
 			&.item-col-check {
@@ -46,10 +46,15 @@
 				width: auto;
 				text-align: center;
 				flex-basis: 70px;
+
+				@include media-up(sm) {
+					&:not(.item-col-header) {
+						height: 80px;
+					}
+				}
 			}
 
 			&.item-col-title {
-				line-height: 1.5rem;
 				text-align: left;
 				margin-left: 0 !important;
 				margin-right: auto;
@@ -79,8 +84,6 @@
 
 			&.item-col-date {
 				text-align: right;
-				white-space: nowrap;
-				flex-basis: 100px;
 			}			
 		}
 	}
@@ -93,16 +96,25 @@
 			box-shadow: none;
 		}
 
-		.item-list .item {
-			border: none;
-			font-size: 0.9rem;
-			margin-bottom: 10px;
-			background-color: #fff;
-			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+		.item-list {
+			.item {
+				border: none;
+				margin-bottom: 10px;
+				background-color: #fff;
+				box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+			}
 
 			.item-row {
-				padding: 0;
+				padding: 0 !important;
 			}
+
+			.item-col {
+				&.item-col-author {
+					flex-grow: $item-list-col-grow;
+				}
+			}
+
+
 		}
 	}
 
@@ -110,11 +122,17 @@
 	// Large Mobile view
 
 	@include media(sm) {
-		.item-list .item {
+		.item-list {
 
-			background-color: #fff;
-			margin-bottom: 10px;
-			box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+			.item {
+				background-color: #fff;
+				margin-bottom: 10px;
+				box-shadow: 1px 1px 5px fade-out($color-text-light, 0.9);
+			}
+
+			.item-row {
+				padding: 0;
+			}
 
 			.item-heading {
 				width: 100%;
@@ -124,11 +142,11 @@
 				width: 100%;
 				left: 0;
 				line-height: 40px;
+				padding-left: 0;
 			}
 
 			.item-col {
 				&.item-col-check,
-				&.item-col-img,
 				&.item-col-title,
 				&.item-col-actions-dropdown {
 					border-bottom: 1px solid $color-divider;
@@ -167,17 +185,12 @@
 
 				&.item-col-img {
 					padding-left: $item-list-padding-x;
-					flex-basis: 70px + $item-list-padding-x;
+					flex-basis: 69px + $item-list-padding-x;
 				}
 
 
 				&.item-col-sales {
-					padding-left: $item-list-padding-x;
 					text-align: left;
-
-					&:before {
-						padding-left: $item-list-padding-x;;
-					}
 				}
 
 				&.item-col-stats {
@@ -197,6 +210,8 @@
 					text-align: right;
 					white-space: nowrap;
 					flex-basis: 100px;
+					flex-basis: 0;
+					flex-grow: $item-list-col-grow;
 				}		
 			}
 
@@ -230,12 +245,6 @@
 				}
 
 				&.item-col-img {
-					
-
-					&:before {
-						display: none;
-					}
-
 					.item-img {
 						padding-bottom: 65%;
 					}

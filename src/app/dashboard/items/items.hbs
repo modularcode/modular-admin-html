@@ -26,23 +26,23 @@
 	<ul class="item-list striped">
 		<li class="item item-list-header hidden-sm-down">
 			<div class="item-row">
-				<div class="item-col fixed item-col-img xs"></div>
-				<div class="item-col item-col-title">
+				<div class="item-col item-col-header fixed item-col-img xs"></div>
+				<div class="item-col item-col-header item-col-title">
 					<div>
 						<span>Name</span>
 					</div>
 				</div>
-				<div class="item-col fixed item-col-sales">
+				<div class="item-col item-col-header item-col-sales">
 					<div>
 						<span>Sales</span>
 					</div>
 				</div>
-				<div class="item-col fixed item-col-stats">
+				<div class="item-col item-col-header item-col-stats">
 					<div class="no-overflow">
 						<span>Stats</span>
 					</div>
 				</div>
-				<div class="item-col fixed item-col-date">
+				<div class="item-col item-col-header item-col-date">
 					<div>
 						<span>Published</span>
 					</div>
@@ -52,48 +52,37 @@
 		{{#each items}}
 			<li class="item">	
 				<div class="item-row">
-
-					{{!-- Mobile image column --}}
-					<div class="item-col fixed item-col-img item-col-img-mobile hidden-md-up">
+					<div class="item-col fixed item-col-img xs">
 						<a href="">
-							<div class="item-img rounded" style="background-image: url({{this.img}})"></div>
+							<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
 						</a>
 					</div>
-
-					{{!-- Desktop view row --}}
-					<div class="item-col item-col-desktop-description">
-						<div class="item-row">
-
-							<div class="item-col fixed item-col-img xs">
-								<a href="">
-									<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
-								</a>
-							</div>
-							<div class="item-col item-col-title">
-								<div>
-									<a href="" class="">
-										<h4 class="item-title no-wrap">
-											{{this.title}}
-										</h4>
-									</a>
-								</div>
-							</div>
-							<div class="item-col fixed item-col-sales">
-								<div>
-									{{this.sales}}
-								</div>
-							</div>
-							<div class="item-col fixed item-col-stats">
-								<div class="no-overflow">
-									<div class="item-stats sparkline" data-type="bar"></div>	
-								</div>
-							</div>
-							<div class="item-col fixed item-col-date">
-								<div>
-									{{this.date}}
-								<div>
-							</div>
+					<div class="item-col item-col-title no-overflow">
+						<div>
+							<a href="" class="">
+								<h4 class="item-title no-wrap">
+									{{this.title}}
+								</h4>
+							</a>
 						</div>
+					</div>
+					<div class="item-col item-col-sales">
+						<div class="item-heading">Sales</div>
+						<div>
+							{{this.sales}}
+						</div>
+					</div>
+					<div class="item-col item-col-stats">
+						<div class="item-heading">Stats</div>
+						<div class="no-overflow">
+							<div class="item-stats sparkline" data-type="bar"></div>	
+						</div>
+					</div>
+					<div class="item-col item-col-date">
+						<div class="item-heading">Published</div>
+						<div>
+							{{this.date}}
+						<div>
 					</div>
 				</div>
 			</li>
