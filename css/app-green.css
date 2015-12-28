@@ -1538,6 +1538,11 @@ pre {
 .dashboard-page #dashboard-visits-chart {
   height: 220px; }
 
+.dashboard-page .sales-breakdown .dashboard-sales-breakdown-chart {
+  margin: 0 auto;
+  max-width: 250px;
+  max-height: 250px; }
+
 @media (max-width: 543px) {
   .dashboard-page .items .card-header {
     border: none;
@@ -1711,19 +1716,14 @@ pre {
   .dashboard-page .items .item-list .item-col-date {
     border: none; } }
 
-.dashboard-page .sales-breakdown .dashboard-sales-breakdown-chart {
-  margin: 0 auto;
-  max-width: 250px;
-  max-height: 250px; }
-
-.dashboard-page #sales-map .jqvmap-zoomin,
-.dashboard-page #sales-map .jqvmap-zoomout {
+.dashboard-page #dashboard-sales-map .jqvmap-zoomin,
+.dashboard-page #dashboard-sales-map .jqvmap-zoomout {
   background-color: #4bcf99;
   height: 20px;
   width: 20px;
   line-height: 14px; }
 
-.dashboard-page #sales-map .jqvmap-zoomout {
+.dashboard-page #dashboard-sales-map .jqvmap-zoomout {
   top: 32px; }
 
 .dashboard-page .stats .card-block {
@@ -2414,6 +2414,8 @@ pre {
     content: "";
     display: table;
     clear: both; }
+  .header .header-block-nav a {
+    text-decoration: none; }
   .header .header-block-nav ul {
     margin: 0;
     padding: 0;
