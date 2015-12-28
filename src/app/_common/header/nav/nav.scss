@@ -3,6 +3,10 @@
 
 	@include clearfix();
 
+	a {
+		text-decoration: none;
+	}
+
 	// All lists
 	ul {
 		margin: 0;
