@@ -1538,11 +1538,6 @@ pre {
 .dashboard-page #dashboard-visits-chart {
   height: 220px; }
 
-.dashboard-page .sales-breakdown .dashboard-sales-breakdown-chart {
-  margin: 0 auto;
-  max-width: 250px;
-  max-height: 250px; }
-
 @media (max-width: 543px) {
   .dashboard-page .items .card-header {
     border: none;
@@ -1715,6 +1710,11 @@ pre {
       text-align: left; }
   .dashboard-page .items .item-list .item-col-date {
     border: none; } }
+
+.dashboard-page .sales-breakdown .dashboard-sales-breakdown-chart {
+  margin: 0 auto;
+  max-width: 250px;
+  max-height: 250px; }
 
 .dashboard-page #dashboard-sales-map .jqvmap-zoomin,
 .dashboard-page #dashboard-sales-map .jqvmap-zoomout {
