@@ -12,6 +12,11 @@
 
 Demo: http://modularcode.github.io/modular-admin-html/
 
+## Browser support
+
+Lot of app components use new Flexbox Layout module which is available in modern browsers. Bootstrap4 is used as main fraimwork. 
+Please make sure if that's suitable for you [Flexbox browser support](http://caniuse.com/#feat=flexbox).
+
 ## Getting Started
 
 For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have Bower installed globally.
