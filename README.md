@@ -10,7 +10,7 @@
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
 
-#### [View Demo](http://modularcode.github.io/modular-admin-html/) | [ Download ZIP](https://github.com/modularcode/modular-admin-html/archive/master.zip)
+**[View Demo](http://modularcode.github.io/modular-admin-html/) | [ Download ZIP](https://github.com/modularcode/modular-admin-html/archive/master.zip)**
 
 
 ### Table of contents
