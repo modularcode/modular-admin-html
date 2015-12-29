@@ -10,8 +10,11 @@
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
 
-**[View Demo](http://modularcode.github.io/modular-admin-html/) | [ Download ZIP](https://github.com/modularcode/modular-admin-html/archive/master.zip)**
-
+<p align="center">
+  <strong>
+    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/archive/master.zip" target="_blank">Download ZIP</a>
+  </strong>
+</p>
 
 ### Table of contents
 
