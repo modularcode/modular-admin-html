@@ -12,7 +12,12 @@
 
 Demo: http://modularcode.github.io/modular-admin-html/
 
-## Browser support
+### Browser support
+
+* Last 2 Versions FF, Chrome, IE 10+, Safari Mac
+* IE 10+
+* Android 4.4+, Chrome for Android 44+
+* iOS Safari 7+
 
 Some of the components use new Flexbox Layout module which is available in modern browsers. Bootstrap4 is used as main fraimwork. 
 Please make sure if that's suitable for you [Flexbox browser support](http://caniuse.com/#feat=flexbox).
