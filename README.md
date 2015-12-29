@@ -10,9 +10,30 @@
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
 
-Demo: http://modularcode.github.io/modular-admin-html/
+#### [View Demo](http://modularcode.github.io/modular-admin-html/) | [ Download ZIP](https://github.com/modularcode/modular-admin-html/archive/master.zip)
 
-### Browser support
+
+### Table of contents
+
+  * [Browser support](#browser-support)
+  * [Getting started](#getting-started)
+  * [Folder structure](#folder-structure)
+      * [```src/``` folder](#src-folder)
+      * [```build/``` folder](#build-folder)
+      * [```dist/``` folder](#dist-folder)
+  * [File types](#file-types)
+      * [styles](#styles-scss)
+      * [scripts](#scripts-js)
+      * [layouts](#layouts--layouthbs)
+      * [pages](#pages--pagehbs)
+      * [templates](#templates-hbs)
+      * [page contexts](#contexts-_contextjs)
+  * [Build tasks](#build-tasks)
+  * [Get in touch](#get-in-touch)
+
+-------
+
+## Browser support
 
 * Last 2 Versions FF, Chrome, IE 10+, Safari Mac
 * IE 10+
