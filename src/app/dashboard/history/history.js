@@ -18,7 +18,7 @@ $(function() {
        
     });
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         switchHistoryCharts(item);
     });
 
@@ -73,9 +73,11 @@ function drawVisitsChart(){
         },
         resize: true,
         lineColors: [
-            config.colorPrimary.toString(),
-            tinycolor(config.colorPrimary.toString()).darken(10).toString()
+            config.chart.colorSecondary.toString(),
         ],
+        pointFillColors: [
+             config.chart.colorPrimary.toString(),
+        ]
     });
 }
 
@@ -134,8 +136,8 @@ function drawDownloadsChart(){
         hideHover: 'auto',
         resize: true,
         barColors: [
-            config.colorPrimary.toString(),
-            tinycolor(config.colorPrimary.toString()).darken(10).toString()
+            config.chart.colorPrimary.toString(),
+            tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
         ],
     });
 }

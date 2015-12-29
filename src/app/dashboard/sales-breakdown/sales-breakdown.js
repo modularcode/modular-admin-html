@@ -17,9 +17,9 @@ $(function() {
                 { label: "Mail-Order Sales", value: 20 } ],
             resize: true,
             colors: [
-                tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.colorPrimary.toString()).darken(8).toString(),
-                config.colorPrimary.toString()
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
+                config.chart.colorPrimary.toString()
             ],
         });
 
@@ -30,7 +30,7 @@ $(function() {
 
     drawSalesChart();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
        drawSalesChart();
     });
     

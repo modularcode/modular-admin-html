@@ -28,4 +28,13 @@ body {
 	.color-primary {
 		color: $color-primary;
 	}
+
+	.chart {
+		.color-primary {
+			color: $chart-color-primary;
+		}
+		.color-secondary {
+			color: $chart-color-secondary;
+		}
+	}
 }
