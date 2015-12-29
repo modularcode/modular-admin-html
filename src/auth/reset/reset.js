@@ -18,7 +18,7 @@ $(function() {
 	        }
 	    },
 	    invalidHandler: function() {
-			setAnimation({
+			animate({
 				name: 'shake',
 				selector: '.auth-container > .card'
 			});

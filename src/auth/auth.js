@@ -1,5 +1,5 @@
 $(function() {
-	setAnimation({
+	animate({
 		name: 'pulse',
 		selector: '.auth-container > .card'
 	});

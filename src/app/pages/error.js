@@ -1,5 +1,5 @@
 $(function() {
-	setAnimation({
+	animate({
 		name: 'flipInY',
 		selector: '.error-card > .error-title-block'
 	});
@@ -8,7 +8,7 @@ $(function() {
 	setTimeout(function(){
 		var $el = $('.error-card > .error-container');
 
-		setAnimation({
+		animate({
 			name: 'fadeInUp',
 			selector: $el 
 		});
