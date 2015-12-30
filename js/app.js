@@ -1,7 +1,12 @@
-var config = window.config = {};
+var config = window.config = {
+	chart: {}
+};
+
+// Config reference element
+var $ref = $("#ref");
 
 // set primary color	
-config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));	
+config.chart.colorPrimary = tinycolor($ref.find(".color-primary").css("color"));	
 
 // Configure responsive bootstrap toolkit
 config.ResponsiveBootstrapToolkitVisibilityDivs = {
@@ -13,14 +18,20 @@ config.ResponsiveBootstrapToolkitVisibilityDivs = {
 };
 
 ResponsiveBootstrapToolkit.use('Custom', config.ResponsiveBootstrapToolkitVisibilityDivs);
+
+// chart configurations
+config.chart = {};
+
+config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));
+config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));
 $(function() {
-	setAnimation({
+	animate({
 		name: 'pulse',
 		selector: '.auth-container > .card'
 	});
 })
 $(function() {
-	setAnimation({
+	animate({
 		name: 'flipInY',
 		selector: '.error-card > .error-title-block'
 	});
@@ -29,7 +40,7 @@ $(function() {
 	setTimeout(function(){
 		var $el = $('.error-card > .error-container');
 
-		setAnimation({
+		animate({
 			name: 'fadeInUp',
 			selector: $el 
 		});
@@ -61,7 +72,7 @@ $(function() {
 	        agree: "Please accept our policy"
 	    },
 	    invalidHandler: function() {
-			setAnimation({
+			animate({
 				name: 'shake',
 				selector: '.auth-container > .card'
 			});
@@ -92,7 +103,7 @@ $(function() {
 	        }
 	    },
 	    invalidHandler: function() {
-			setAnimation({
+			animate({
 				name: 'shake',
 				selector: '.auth-container > .card'
 			});
@@ -180,7 +191,7 @@ $(function() {
 	        agree: "Please accept our policy"
 	    },
 	    invalidHandler: function() {
-			setAnimation({
+			animate({
 				name: 'shake',
 				selector: '.auth-container > .card'
 			});
@@ -191,6 +202,21 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
+/***********************************************
+*        Animation Settings
+***********************************************/
+
+function animate(options) {
+	var animationName = "animated " + options.name;
+	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+	$(options.selector)
+	.addClass(animationName)
+	.one(animationEnd, 
+		function(){
+			$(this).removeClass(animationName);
+		}
+	);
+}
 /***********************************************
 *         Default Validation Settings
 ***********************************************/
@@ -321,7 +347,7 @@ $(function() {
             xaxis: {
                 tickDecimals: 0
             },
-            colors: [config.colorPrimary],
+            colors: [config.chart.colorPrimary],
             grid: {
                 color: "#999999",
                 hoverable: true,
@@ -370,7 +396,7 @@ $(function() {
             xaxis: {
                 tickDecimals: 0
             },
-            colors: [config.colorPrimary],
+            colors: [config.chart.colorPrimary],
             grid: {
                 color: "#999999",
                 hoverable: true,
@@ -403,19 +429,19 @@ $(function() {
         var data = [{
             label: "Sales 1",
             data: 21,
-            color: tinycolor(config.colorPrimary.toString()).lighten(20),
+            color: tinycolor(config.chart.colorPrimary.toString()).lighten(20),
         }, {
             label: "Sales 2",
             data: 15,
-            color: tinycolor(config.colorPrimary.toString()).lighten(10),
+            color: tinycolor(config.chart.colorPrimary.toString()).lighten(10),
         }, {
             label: "Sales 3",
             data: 7,
-            color: tinycolor(config.colorPrimary.toString()),
+            color: tinycolor(config.chart.colorPrimary.toString()),
         }, {
             label: "Sales 4",
             data: 52,
-            color: tinycolor(config.colorPrimary.toString()).darken(10),
+            color: tinycolor(config.chart.colorPrimary.toString()).darken(10),
         }];
 
         var plotObj = $.plot($("#flot-pie-chart"), data, {
@@ -512,7 +538,7 @@ $(function() {
                     return markings;
                 }
             },
-            colors: [config.colorPrimary.toString()],
+            colors: [config.chart.colorPrimary.toString()],
             xaxis: {
                 tickFormatter: function() {
                     return "";
@@ -586,7 +612,7 @@ $(function() {
                 legend: {
                     position: 'sw'
                 },
-                colors: [config.colorPrimary.toString()],
+                colors: [config.chart.colorPrimary.toString()],
                 grid: {
                     color: "#999999",
                     hoverable: true,
@@ -619,7 +645,7 @@ $(function() {
 
     drawFlotCharts();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         drawFlotCharts();
     });
 
@@ -650,7 +676,7 @@ $(function() {
             resize: true,
             lineWidth:4,
             labels: ['Value'],
-            lineColors: [config.colorPrimary.toString()],
+            lineColors: [config.chart.colorPrimary.toString()],
             pointSize:5,
         });
 
@@ -675,9 +701,9 @@ $(function() {
             hideHover: 'auto',
             resize: true,
             lineColors: [
-                tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString(),
-                config.colorPrimary.toString()
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString(),
+                config.chart.colorPrimary.toString()
             ],
             lineWidth:2,
             pointSize:1,
@@ -692,9 +718,9 @@ $(function() {
                 { label: "Mail-Order Sales", value: 20 } ],
             resize: true,
             colors: [
-                tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString(),
-                config.colorPrimary.toString()
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString(),
+                config.chart.colorPrimary.toString()
             ],
         });
 
@@ -715,8 +741,8 @@ $(function() {
             hideHover: 'auto',
             resize: true,
             barColors: [
-                config.colorPrimary.toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString()
+                config.chart.colorPrimary.toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
             ],
         });
 
@@ -737,31 +763,17 @@ $(function() {
             hideHover: 'auto',
             resize: true,
             lineColors: [
-                config.colorPrimary.toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString()
+                config.chart.colorPrimary.toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
             ],
         });
     }
 
     drawMorrisCharts();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         drawMorrisCharts();
     });
-});
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
-
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
 });
 $(function() {
 
@@ -783,7 +795,7 @@ $(function() {
        
     });
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         switchHistoryCharts(item);
     });
 
@@ -838,9 +850,11 @@ function drawVisitsChart(){
         },
         resize: true,
         lineColors: [
-            config.colorPrimary.toString(),
-            tinycolor(config.colorPrimary.toString()).darken(10).toString()
+            config.chart.colorSecondary.toString(),
         ],
+        pointFillColors: [
+             config.chart.colorPrimary.toString(),
+        ]
     });
 }
 
@@ -899,8 +913,8 @@ function drawDownloadsChart(){
         hideHover: 'auto',
         resize: true,
         barColors: [
-            config.colorPrimary.toString(),
-            tinycolor(config.colorPrimary.toString()).darken(10).toString()
+            config.chart.colorPrimary.toString(),
+            tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
         ],
     });
 }
@@ -932,7 +946,7 @@ $(function() {
 
 
 			$(this).sparkline(data, {
-				barColor: config.colorPrimary.toString(),
+				barColor: config.chart.colorPrimary.toString(),
 				height: $(this).height(),
 				type: type
 			});
@@ -941,47 +955,10 @@ $(function() {
 
 	drawDashboardItemsListSparklines();
 
-	watch(config, "colorPrimary", function(){
+	watch(config.chart, function(){
         drawDashboardItemsListSparklines();
     });
 });
-$(function() {
-
-    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
-
-    if (!$dashboardSalesBreakdownChart.length) {
-        return false;
-    } 
-
-    function drawSalesChart(){
-
-    $dashboardSalesBreakdownChart.empty();
-
-        Morris.Donut({
-            element: 'dashboard-sales-breakdown-chart',
-            data: [{ label: "Download Sales", value: 12 },
-                { label: "In-Store Sales", value: 30 },
-                { label: "Mail-Order Sales", value: 20 } ],
-            resize: true,
-            colors: [
-                tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.colorPrimary.toString()).darken(8).toString(),
-                config.colorPrimary.toString()
-            ],
-        });
-
-        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
-
-        setSameHeights($sameheightContainer);
-    }
-
-    drawSalesChart();
-
-    watch(config, "colorPrimary", function(){
-       drawSalesChart();
-    });
-    
-})
 $(function() {
 
     var $dashboardSalesMap = $('#dashboard-sales-map');
@@ -994,9 +971,9 @@ $(function() {
 
         $dashboardSalesMap.empty();
 
-        var color = config.colorPrimary.toHexString();
-        var darkColor = tinycolor(config.colorPrimary.toString()).darken(40).toHexString();
-        var selectedColor = tinycolor(config.colorPrimary.toString()).darken(10).toHexString();
+        var color = config.chart.colorPrimary.toHexString();
+        var darkColor = tinycolor(config.chart.colorPrimary.toString()).darken(40).toHexString();
+        var selectedColor = tinycolor(config.chart.colorPrimary.toString()).darken(10).toHexString();
 
         var sales_data = {
             us: 2000,
@@ -1028,10 +1005,47 @@ $(function() {
 
     drawSalesMap();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
        drawSalesMap();
     });
 });
+$(function() {
+
+    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
+
+    if (!$dashboardSalesBreakdownChart.length) {
+        return false;
+    } 
+
+    function drawSalesChart(){
+
+    $dashboardSalesBreakdownChart.empty();
+
+        Morris.Donut({
+            element: 'dashboard-sales-breakdown-chart',
+            data: [{ label: "Download Sales", value: 12 },
+                { label: "In-Store Sales", value: 30 },
+                { label: "Mail-Order Sales", value: 20 } ],
+            resize: true,
+            colors: [
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
+                config.chart.colorPrimary.toString()
+            ],
+        });
+
+        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
+
+        setSameHeights($sameheightContainer);
+    }
+
+    drawSalesChart();
+
+    watch(config.chart, function(){
+       drawSalesChart();
+    });
+    
+})
 $(function() {
 
 	$('.actions-list > li').on('click', '.check', function(e){
@@ -1045,7 +1059,44 @@ $(function() {
 	});
 
 });
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
 
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
+});
+$(function(){
+
+	// set sortable options
+	$('.images-container').sortable({
+		animation: 150,  // ms, animation speed moving items when sorting, `0` — without animation
+		handle: ".control-btn.move",  // Drag handle selector within list items
+		filter: ".new",  // Selectors that do not lead to dragging (String or Function)
+		draggable: ".image-container" // Specifies which items inside the element should be sortable
+	});
+
+	$controlsButtons = $('.controls');
+
+	$controlsButtonsStar = $controlsButtons.find('.star');
+	$controlsButtonsRemove = $controlsButtons.find('.remove');
+
+	$controlsButtonsStar.on('click',function(e){
+		e.preventDefault();
+
+		$controlsButtonsStar.removeClass('active')
+
+		$(this).addClass('active');
+	})
+
+})
 $(function() {
 
     if (!$('#select-all-items').length) {
@@ -1076,7 +1127,7 @@ $(function() {
             }
 
             $(this).sparkline(data, {
-                barColor: config.colorPrimary.toString(),
+                barColor: config.chart.colorPrimary.toString(),
                 height: $(this).height(),
                 type: type
             });
@@ -1085,7 +1136,7 @@ $(function() {
 
     drawItemsListSparklines();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         drawItemsListSparklines();
     });
 
@@ -1131,9 +1182,9 @@ $(function () {
 });
 $(function() {
 	$('.nav-profile > li > a').on('click', function() {
-
 		var $el = $(this).next();
-		setAnimation({
+
+		animate({
 			name: 'flipInX',
 			selector: $el
 		});
@@ -1288,8 +1339,9 @@ $(function () {
 	*************************************************/
 	function setThemeColor(){
 		setTimeout(function(){ 
-			config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));	
-		}, 100);
+			config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));	
+			config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));	
+		}, 200);
 	}
 
 	/************************************************
@@ -1327,20 +1379,3 @@ NProgress.start();
 
 // end loading bar 
 NProgress.done();
-
-
-/***********************************************
-*        Animation Settings
-***********************************************/
-
-function setAnimation(options) {
-	var animationName = "animated " + options.name;
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
-	$(options.selector)
-	.addClass(animationName)
-	.one(animationEnd, 
-		function(){
-			$(this).removeClass(animationName);
-		}
-	);
-}
