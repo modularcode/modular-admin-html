@@ -73,6 +73,16 @@
 
 				&.star {
 					color: #FFB300;
+
+					i:before{
+						content: "\f006";
+					}
+
+					&.active {
+						i:before{
+							content: "\f005";
+						}
+					}
 				}
 
 				&.remove {

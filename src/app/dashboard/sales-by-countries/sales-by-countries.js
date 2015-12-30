@@ -10,9 +10,9 @@ $(function() {
 
         $dashboardSalesMap.empty();
 
-        var color = config.colorPrimary.toHexString();
-        var darkColor = tinycolor(config.colorPrimary.toString()).darken(40).toHexString();
-        var selectedColor = tinycolor(config.colorPrimary.toString()).darken(10).toHexString();
+        var color = config.chart.colorPrimary.toHexString();
+        var darkColor = tinycolor(config.chart.colorPrimary.toString()).darken(40).toHexString();
+        var selectedColor = tinycolor(config.chart.colorPrimary.toString()).darken(10).toHexString();
 
         var sales_data = {
             us: 2000,
@@ -44,7 +44,7 @@ $(function() {
 
     drawSalesMap();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
        drawSalesMap();
     });
 });

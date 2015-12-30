@@ -1,3 +1,15 @@
+.customize {
+	// height: 200px;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.5);
+	padding: 5px 15px;
+	text-align: center;
+
+	.customize-header{
+		margin-bottom: 10px;
+	}
+}
+
 #customize-menu {
 	position: fixed;
 	bottom: 0;
@@ -23,6 +35,7 @@
 	& > li {
 		& > a {
 			background-color: $sidebar-color-primary;
+			border-top: 1px solid fade-out($sidebar-color-secondary, 0.5);
 		}
 
 		& > a:hover,

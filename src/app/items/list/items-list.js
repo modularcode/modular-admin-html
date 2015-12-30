@@ -28,7 +28,7 @@ $(function() {
             }
 
             $(this).sparkline(data, {
-                barColor: config.colorPrimary.toString(),
+                barColor: config.chart.colorPrimary.toString(),
                 height: $(this).height(),
                 type: type
             });
@@ -37,7 +37,7 @@ $(function() {
 
     drawItemsListSparklines();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         drawItemsListSparklines();
     });
 

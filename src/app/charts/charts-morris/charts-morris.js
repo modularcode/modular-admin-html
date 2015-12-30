@@ -24,7 +24,7 @@ $(function() {
             resize: true,
             lineWidth:4,
             labels: ['Value'],
-            lineColors: [config.colorPrimary.toString()],
+            lineColors: [config.chart.colorPrimary.toString()],
             pointSize:5,
         });
 
@@ -49,9 +49,9 @@ $(function() {
             hideHover: 'auto',
             resize: true,
             lineColors: [
-                tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString(),
-                config.colorPrimary.toString()
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString(),
+                config.chart.colorPrimary.toString()
             ],
             lineWidth:2,
             pointSize:1,
@@ -66,9 +66,9 @@ $(function() {
                 { label: "Mail-Order Sales", value: 20 } ],
             resize: true,
             colors: [
-                tinycolor(config.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString(),
-                config.colorPrimary.toString()
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString(),
+                config.chart.colorPrimary.toString()
             ],
         });
 
@@ -89,8 +89,8 @@ $(function() {
             hideHover: 'auto',
             resize: true,
             barColors: [
-                config.colorPrimary.toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString()
+                config.chart.colorPrimary.toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
             ],
         });
 
@@ -111,15 +111,15 @@ $(function() {
             hideHover: 'auto',
             resize: true,
             lineColors: [
-                config.colorPrimary.toString(),
-                tinycolor(config.colorPrimary.toString()).darken(10).toString()
+                config.chart.colorPrimary.toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
             ],
         });
     }
 
     drawMorrisCharts();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         drawMorrisCharts();
     });
 });

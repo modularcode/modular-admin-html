@@ -25,7 +25,7 @@ $(function() {
             xaxis: {
                 tickDecimals: 0
             },
-            colors: [config.colorPrimary],
+            colors: [config.chart.colorPrimary],
             grid: {
                 color: "#999999",
                 hoverable: true,
@@ -74,7 +74,7 @@ $(function() {
             xaxis: {
                 tickDecimals: 0
             },
-            colors: [config.colorPrimary],
+            colors: [config.chart.colorPrimary],
             grid: {
                 color: "#999999",
                 hoverable: true,
@@ -107,19 +107,19 @@ $(function() {
         var data = [{
             label: "Sales 1",
             data: 21,
-            color: tinycolor(config.colorPrimary.toString()).lighten(20),
+            color: tinycolor(config.chart.colorPrimary.toString()).lighten(20),
         }, {
             label: "Sales 2",
             data: 15,
-            color: tinycolor(config.colorPrimary.toString()).lighten(10),
+            color: tinycolor(config.chart.colorPrimary.toString()).lighten(10),
         }, {
             label: "Sales 3",
             data: 7,
-            color: tinycolor(config.colorPrimary.toString()),
+            color: tinycolor(config.chart.colorPrimary.toString()),
         }, {
             label: "Sales 4",
             data: 52,
-            color: tinycolor(config.colorPrimary.toString()).darken(10),
+            color: tinycolor(config.chart.colorPrimary.toString()).darken(10),
         }];
 
         var plotObj = $.plot($("#flot-pie-chart"), data, {
@@ -216,7 +216,7 @@ $(function() {
                     return markings;
                 }
             },
-            colors: [config.colorPrimary.toString()],
+            colors: [config.chart.colorPrimary.toString()],
             xaxis: {
                 tickFormatter: function() {
                     return "";
@@ -290,7 +290,7 @@ $(function() {
                 legend: {
                     position: 'sw'
                 },
-                colors: [config.colorPrimary.toString()],
+                colors: [config.chart.colorPrimary.toString()],
                 grid: {
                     color: "#999999",
                     hoverable: true,
@@ -323,7 +323,7 @@ $(function() {
 
     drawFlotCharts();
 
-    watch(config, "colorPrimary", function(){
+    watch(config.chart, function(){
         drawFlotCharts();
     });
 
