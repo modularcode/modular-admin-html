@@ -1,0 +1,17 @@
+.modal {
+
+    .modal-content {
+        border-radius: 0;
+
+        .modal-header {
+            background-color: $color-primary;
+            color: #ffffff;
+        }
+
+        .modal-footer {
+        	.btn {
+        		margin-bottom: 0;
+        	}
+        }
+    }
+}

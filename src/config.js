@@ -1,7 +1,12 @@
-var config = window.config = {};
+var config = window.config = {
+	chart: {}
+};
+
+// Config reference element
+var $ref = $("#ref");
 
 // set primary color	
-config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));	
+config.chart.colorPrimary = tinycolor($ref.find(".color-primary").css("color"));	
 
 // Configure responsive bootstrap toolkit
 config.ResponsiveBootstrapToolkitVisibilityDivs = {
@@ -13,3 +18,9 @@ config.ResponsiveBootstrapToolkitVisibilityDivs = {
 };
 
 ResponsiveBootstrapToolkit.use('Custom', config.ResponsiveBootstrapToolkitVisibilityDivs);
+
+// chart configurations
+config.chart = {};
+
+config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));
+config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));

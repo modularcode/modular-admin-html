@@ -124,8 +124,9 @@ $(function () {
 	*************************************************/
 	function setThemeColor(){
 		setTimeout(function(){ 
-			config.colorPrimary = tinycolor($("#ref .color-primary").css("color"));	
-		}, 100);
+			config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));	
+			config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));	
+		}, 200);
 	}
 
 	/************************************************

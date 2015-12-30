@@ -59,6 +59,8 @@ span a {
 		.nav-item {
 
 			.nav-link {
+				text-decoration: none;
+
 				&:hover {
 					color: #ffffff;	
 					background-color: $color-primary;
@@ -88,6 +90,8 @@ span a {
 		.nav-item {
 
 			.nav-link {
+				text-decoration: none;
+				
 				&:hover {
 					color: $color-text;	
 					background-color: transparent;
