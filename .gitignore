@@ -1,8 +1,9 @@
+.tmp
 .publish
 .deploy
-/public
+node_modules
+bower_components
 
-.tmp
 *~
 *#
 .DS_STORE
@@ -12,8 +13,6 @@ nbproject
 .idea
 .node_history
 
-node_modules
-bower_components
 
 lib-cov
 *.seed
