@@ -1,0 +1,1110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>
+			ModularAdmin - Free Dashboard Theme | HTML Version
+		</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<link rel="stylesheet" href="css/vendor.css">
+
+		<!-- Theme initialization -->
+		<script>
+			var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
+			var themeName = themeSettings.themeName || '';
+
+			if (themeName) {
+				document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+			}
+			else {
+				document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
+			}
+		</script>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="app" id="app">
+					<header class="header">
+					
+						<div class="header-block header-block-collapse hidden-lg-up" >
+							<button class="collapse-btn" id="sidebar-collapse-btn">
+								<i class="fa fa-bars"></i>
+							</button>
+						</div>
+						
+						<div class="header-block header-block-search hidden-sm-down">
+							<form role="search">
+								<div class="input-container">
+									<i class="fa fa-search"></i>
+									<input type="search" placeholder="Search">
+									<div class="underline"></div>
+								</div>
+							</form>
+						</div>
+						<div class="header-block header-block-nav">
+							<ul class="nav-profile">
+						
+								
+								<li class="notifications new">
+									<a href="" data-toggle="dropdown">
+										<i class="fa fa-bell-o"></i>
+										<sup>
+											<span class="counter">8</span>
+										</sup>
+									</a>
+								
+									<div class="dropdown-menu notifications-dropdown-menu">
+								
+										<ul class="notifications-container">
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/3.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Zack Alien</span> pushed new commit: 
+															<span class="accent">Fix page load performance issue</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/5.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Amaya Hatsumi</span> started new task: 
+															<span class="accent">Dashboard UI design.</span>.
+														</p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="" class="notification-item">
+													<div class="img-col">
+														<div class="img" style="background-image: url('assets/faces/8.jpg')"></div>
+													</div>
+													<div class="body-col">
+														<p>
+															<span class="accent">Andy Nouman</span> deployed new version of 
+															<span class="accent">NodeJS REST Api V3</span>
+														</p>
+													</div>
+												</a>
+											</li>
+										</ul>
+								
+										<footer>
+											<ul>
+												<li>
+													<a href="">
+														View All
+													</a>
+												</li>
+											</ul>
+										</footer>
+									</div>
+								</li>
+						
+								
+								<li class="profile dropdown">
+									<a href="" data-toggle="dropdown">
+										<div class="img" style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
+											 
+										</div>
+								
+										<span class="name">
+											John Doe
+										</span>
+								
+										<span class="arrow">
+											<i class="fa fa-angle-down"></i>
+										</span>
+									</a>
+								
+									<ul class="dropdown-menu profile-dropdown-menu">
+										<li>
+											<a href="">
+												<div class="col-xs-2 profile-dropdown-menu-icon">
+													<i class="fa fa-user"></i>
+												</div>
+												<div class="col-xs-10 profile-dropdown-menu-topic">
+													<span>Profile</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<div class="col-xs-2 profile-dropdown-menu-icon">
+													<i class="fa fa-bell"></i>
+												</div>
+												<div class="col-xs-10 profile-dropdown-menu-topic">
+													<span>Notifications</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<div class="col-xs-2 profile-dropdown-menu-icon">
+													<i class="fa fa-gear"></i>
+												</div>
+												<div class="col-xs-10 profile-dropdown-menu-topic">
+													<span>Settings</span>
+												</div>
+											</a>
+										</li>
+										<li class="divider"></li>
+										<li class="logout">
+											<a href="login.html">
+												<div class="col-xs-2 profile-dropdown-menu-icon">
+													<i class="fa fa-power-off"></i>
+												</div>
+												<div class="col-xs-10 profile-dropdown-menu-topic">
+													<span>Logout</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								
+								</li>		
+							</ul>
+						</div>
+					</header>
+					<aside class="sidebar">
+						<div class="sidebar-container">
+					
+							<div class="sidebar-header">
+								<div class="brand">
+									<div class="logo">
+										<span class="l l1"></span>
+										<span class="l l2"></span>
+										<span class="l l3"></span>
+										<span class="l l4"></span>
+										<span class="l l5"></span>
+									</div>
+									ModularAdmin
+								</div>
+							</div>
+							<nav class="menu">
+								<ul class="nav metismenu" id="sidebar-menu">
+					
+									<li  >
+										<a href="index.html">
+											<i class="fa fa-home"></i> Dashboard
+										</a>
+									</li>
+					
+					
+									<li  >
+					
+										<a href="">
+											<i class="fa fa-th-large"></i> Items Manager
+											<i class="fa arrow"></i>
+										</a>
+					
+										<ul>
+											<li  >
+												<a href="items-list.html">
+													Items List
+												</a>
+											</li>
+					
+											<li  >
+												<a href="item-editor.html">
+													Item Editor
+												</a>
+											</li>
+										</ul>
+									</li>
+					
+									<li  >
+										<a href="">
+											<i class="fa fa-bar-chart"></i> Charts 
+											<i class="fa arrow"></i>
+										</a>
+					
+										<ul>
+											<li  >
+												<a href="charts-flot.html">
+													Flot Chart
+												</a>
+											</li>
+					
+											<li  >
+												<a href="charts-morris.html">
+													Morris Chart
+												</a>
+											</li>
+										</ul>
+									</li>
+					
+									<li  >
+										<a href="">
+											<i class="fa fa-table"></i> Tables
+											<i class="fa arrow"></i>
+										</a>
+					
+										<ul>
+											<li  >
+												<a href="static-tables.html">
+													Static Tables
+												</a>
+											</li>
+					
+											<li  >
+												<a href="responsive-tables.html">
+													Responsive Tables
+												</a>
+											</li>
+					
+										</ul>
+									</li>
+					
+									<li  >
+										<a href="forms.html">
+											<i class="fa fa-pencil-square-o"></i> Forms
+										</a>
+									</li>
+					
+									<li 
+											class="active open"
+										 >
+										<a href="">
+											<i class="fa fa-desktop"></i> UI Elements
+											<i class="fa arrow"></i>
+										</a>
+					
+										<ul>
+											<li class="active">
+												<a href="buttons.html">
+													Buttons
+												</a>
+											</li>
+											
+											<li >
+												<a href="cards.html">
+													Cards
+												</a>
+											</li>
+					
+											<li >
+												<a href="typography.html">
+													Typography
+												</a>
+											</li>
+					
+											<li >
+												<a href="icons.html">
+													Icons
+												</a>
+											</li>
+					
+											<li >
+												<a href="grid.html">
+													Grid
+												</a>
+											</li>
+										</ul>
+									</li>
+					
+									<li  >
+					
+										<a href="">
+											<i class="fa fa-file-text-o"></i> Pages
+											<i class="fa arrow"></i>
+										</a>
+					
+										<ul>
+											<li >
+												<a href="login.html">
+													Login
+												</a>
+											</li>
+											
+											<li >
+												<a href="signup.html">
+													Sign Up
+												</a>
+											</li>
+					
+											<li >
+												<a href="reset.html">
+													Reset
+												</a>
+											</li>
+					
+											<li >
+												<a href="error-404.html">
+													Error 404 App
+												</a>
+											</li>
+					
+											<li >
+												<a href="error-404-alt.html">
+													Error 404 Global
+												</a>
+											</li>
+					
+											<li >
+												<a href="error-500.html">
+													Error 500 App
+												</a>
+											</li>
+					
+											<li >
+												<a href="error-500-alt.html">
+													Error 500 Global
+												</a>
+											</li>
+										</ul>
+									</li>
+					
+									<li  >
+										<a href="https://github.com/modularcode/modular-admin-html">
+											<i class="fa fa-github-alt"></i> Theme Docs
+										</a>
+									</li>
+					
+					
+								</ul>
+							</nav>
+					
+						</div>
+					
+						<footer class="sidebar-footer">
+							<ul class="nav metismenu" id="customize-menu">
+								<li>
+									<ul>
+										<li class="customize">
+											<div class="customize-item">
+												<div class="row customize-header">
+													<div class="col-xs-4">
+													</div>
+													<div class="col-xs-4">
+														<label class="title">fixed</label>
+													</div>
+													<div class="col-xs-4">
+														<label class="title">static</label>
+													</div>
+												</div>
+												<div class="row hidden-md-down">
+													<div class="col-xs-4">
+														<label class="title">Sidebar:</label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
+									                        <span></span>
+									                    </label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="sidebarPosition" value="">
+									                        <span></span>
+									                    </label>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-4">
+														<label class="title">Header:</label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="headerPosition" value="header-fixed">
+									                        <span></span>
+									                    </label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="headerPosition" value="">
+									                        <span></span>
+									                    </label>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-4">
+														<label class="title">Footer:</label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
+									                        <span></span>
+									                    </label>
+													</div>
+													<div class="col-xs-4">
+														<label>
+									                        <input class="radio" type="radio" name="footerPosition" value="">
+									                        <span></span>
+									                    </label>
+													</div>
+												</div>
+											</div>
+											<div class="customize-item">
+												<ul class="customize-colors">
+													<li>
+														<span class="color-item color-red" data-theme="red"></span>
+													</li>
+													<li>
+														<span class="color-item color-orange" data-theme="orange"></span>
+													</li>
+													<li>
+														<span class="color-item color-green" data-theme="green"></span>
+													</li>
+													<li>
+														<span class="color-item color-blue active" data-theme=""></span>
+													</li>
+													<li>
+														<span class="color-item color-purple" data-theme="purple"></span>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+									<a href="">
+										<i class="fa fa-cog"></i> Customize
+									</a>
+								</li>
+							</ul>
+						</footer>
+						
+					
+					</aside>
+					<div class="sidebar-overlay" id="sidebar-overlay"></div>
+				<article class="content buttons-page">
+		<div class="title-block">
+			<h3 class="title">
+				Buttons
+			</h3>
+			<p class="title-description">
+				Sample button elements
+			</p>
+		</div>
+
+		<section class="section">
+			<div class="row sameheight-container">
+
+				<div class="col-md-6">
+					<div class="card sameheight-item">
+						<div class="card-block">
+					
+							<div class="card-title-block">
+								<h3 class="title">
+									Button colors
+								</h3>
+							</div>
+							<section class="section">
+					            <button type="button" class="btn btn-primary">Primary</button>
+					
+					            <button type="button" class="btn btn-secondary">Secondary</button>
+					
+					            <button type="button" class="btn btn-success">Success</button>
+					
+					            <button type="button" class="btn btn-info">Info</button>
+					
+					            <button type="button" class="btn btn-warning">Warning</button>
+					
+					            <button type="button" class="btn btn-danger">Danger</button>
+					
+					            <a href="javascript:void(0);" class="btn btn-link">Button Link</a>
+					
+							</section>
+					
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="card sameheight-item">
+						<div class="card-block">
+					
+							<div class="card-title-block">
+								<h3 class="title">
+									Outline buttons
+								</h3>
+							</div>
+							<section class="section">
+					        
+					            <button type="button" class="btn btn-primary-outline">Primary</button>
+					
+					            <button type="button" class="btn btn-secondary-outline">Secondary</button>
+					
+					            <button type="button" class="btn btn-success-outline">Success</button>
+					
+					            <button type="button" class="btn btn-info-outline">Info</button>
+					
+					            <button type="button" class="btn btn-warning-outline">Warning</button>
+					
+					            <button type="button" class="btn btn-danger-outline">Danger</button>
+					            
+							</section>
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight-container">
+
+				<div class="col-md-6">
+					<div class="card sameheight-item">
+						<div class="card-block">
+					
+							<div class="card-title-block">
+								<h3 class="title">
+									Button sizing
+								</h3>
+							</div>
+							<section class="section">
+					
+					            <p>Large buttons</p>
+					            <button type="button" class="btn btn-primary btn-lg">Primary</button>
+					
+					            <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
+					
+					            <button type="button" class="btn btn-success btn-lg">Success</button>
+					
+					            <button type="button" class="btn btn-info btn-lg">Info</button>
+					
+					            <button type="button" class="btn btn-warning btn-lg">Warning</button>
+					
+					            <button type="button" class="btn btn-danger btn-lg">Danger</button>
+					            <p></p>
+					
+					            <p>Small buttons</p>
+					            <button type="button" class="btn btn-primary btn-sm">Primary</button>
+					
+					            <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
+					
+					            <button type="button" class="btn btn-success btn-sm">Success</button>
+					
+					            <button type="button" class="btn btn-info btn-sm">Info</button>
+					
+					            <button type="button" class="btn btn-warning btn-sm">Warning</button>
+					
+					            <button type="button" class="btn btn-danger btn-sm">Danger</button>
+					            <p></p>
+					            
+					            <p>Block buttons</p>
+					            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+					            <button type="button" class="btn btn-secondary btn-sm btn-block">Block level button</button>
+					            
+							</section>
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="card sameheight-item">
+						<div class="card-block">
+					
+							<div class="card-title-block">
+								<h3 class="title">
+									Button types
+								</h3>
+							</div>
+							<section class="section">
+					        
+					         <p>Pill left</p>
+					         <p>
+					            <button type="button" class="btn btn-pill-left btn-primary">Primary</button>
+					            <button type="button" class="btn btn-pill-left btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-pill-left btn-success">Success</button>
+					            <button type="button" class="btn btn-pill-left btn-info">Info</button>
+					            <button type="button" class="btn btn-pill-left btn-warning">Warning</button>
+					            <button type="button" class="btn btn-pill-left btn-danger">Danger</button>
+					         </p>
+					         <p>Pill right</p>
+					         <p>
+					            <button type="button" class="btn btn-pill-right btn-primary">Primary</button>
+					            <button type="button" class="btn btn-pill-right btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-pill-right btn-success">Success</button>
+					            <button type="button" class="btn btn-pill-right btn-info">Info</button>
+					            <button type="button" class="btn btn-pill-right btn-warning">Warning</button>
+					            <button type="button" class="btn btn-pill-right btn-danger">Danger</button>
+					         </p>
+					         <p>Oval</p>
+					         <p>
+					            <button type="button" class="btn btn-oval btn-primary">Primary</button>
+					            <button type="button" class="btn btn-oval btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-oval btn-success">Success</button>
+					            <button type="button" class="btn btn-oval btn-info">Info</button>
+					            <button type="button" class="btn btn-oval btn-warning">Warning</button>
+					            <button type="button" class="btn btn-oval btn-danger">Danger</button>
+					         </p> 
+							</section>
+						</div>
+					</div>				</div>
+
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="row sameheight-container">
+
+				<div class="col-md-6">
+					<div class="card sameheight-item">
+						<div class="card-block">
+					
+							<div class="card-title-block">
+								<h3 class="title">
+									Button group
+								</h3>
+							</div>
+							<section class="section">
+					        
+					         <p>Basic Example</p>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-secondary">Left</button>
+					            <button type="button" class="btn btn-secondary">Middle</button>
+					            <button type="button" class="btn btn-secondary">Right</button>
+					         </div>
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-primary">Left</button>
+					            <button type="button" class="btn btn-primary">Middle</button>
+					            <button type="button" class="btn btn-primary">Right</button>
+					         </div>
+					         <p></p>
+					
+					         <p>Button Group Sizing</p>
+					         <div class="btn-group btn-group-lg">
+					            <button type="button" class="btn btn-secondary">1</button>
+					            <button type="button" class="btn btn-secondary">2</button>
+					            <button type="button" class="btn btn-secondary">3</button>
+					            <button type="button" class="btn btn-secondary">4</button>
+					         </div>
+					         <div class="btn-group btn-group-lg">
+					            <button type="button" class="btn btn-secondary">5</button>
+					            <button type="button" class="btn btn-secondary">6</button>
+					            <button type="button" class="btn btn-secondary">7</button>
+					         </div>
+					         <div class="btn-group btn-group-lg">
+					            <button type="button" class="btn btn-secondary btn-lg">8</button>
+					         </div>
+					
+					         <p></p>
+					
+					         <div class="btn-group btn-group-sm">
+					            <button type="button" class="btn btn-primary">1</button>
+					            <button type="button" class="btn btn-primary">2</button>
+					            <button type="button" class="btn btn-primary">3</button>
+					            <button type="button" class="btn btn-primary">4</button>
+					         </div>
+					         <div class="btn-group btn-group-sm">
+					            <button type="button" class="btn btn-primary">5</button>
+					            <button type="button" class="btn btn-primary">6</button>
+					            <button type="button" class="btn btn-primary">7</button>
+					         </div>
+					         <div class="btn-group btn-group-sm">
+					            <button type="button" class="btn btn-primary">8</button>
+					         </div>
+					         <p></p>
+					
+					         <p>Nesting</p>
+					         <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+					            <button type="button" class="btn btn-secondary">1</button>
+					            <button type="button" class="btn btn-secondary">2</button>
+					
+					            <div class="btn-group" role="group">
+					               <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					                  Dropdown
+					               </button>
+					               <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					                  <a class="dropdown-item" href="#">Action</a>
+					                  <a class="dropdown-item" href="#">Another action</a>
+					                  <a class="dropdown-item" href="#">Something else here</a>
+					                  <div class="dropdown-divider"></div>
+					                  <a class="dropdown-item" href="#">Separated link</a>
+					               </div>
+					            </div>
+					         </div>  
+					         <p></p>
+					         <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
+					            <button type="button" class="btn btn-primary">1</button>
+					            <button type="button" class="btn btn-primary">2</button>
+					
+					            <div class="btn-group" role="group">
+					               <button id="btnGroupDrop1" type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					                  Dropdown
+					               </button>
+					               <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					                  <a class="dropdown-item" href="#">Action</a>
+					                  <a class="dropdown-item" href="#">Another action</a>
+					                  <a class="dropdown-item" href="#">Something else here</a>
+					                  <div class="dropdown-divider"></div>
+					                  <a class="dropdown-item" href="#">Separated link</a>
+					               </div>
+					            </div>
+					         </div>  
+							</section>
+						</div>
+					</div>				</div>
+
+				<div class="col-md-6">
+					<div class="card sameheight-item">
+					   <div class="card-block">
+					
+					      <div class="card-title-block">
+					         <h3 class="title">
+					            Button dropdowns
+					         </h3>
+					      </div>
+					      <section class="section">
+					        
+					         <p>Dropdowns</p>
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Primary
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Secondary
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Success
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Info
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Warning
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               Danger
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					
+					         <br>
+					         <br>
+					         <p>Split Dropdowns</p>
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-primary">Primary</button>
+					            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-success">Success</button>
+					            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-info">Info</button>
+					            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-warning">Warning</button>
+					            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group">
+					            <button type="button" class="btn btn-danger">Danger</button>
+					            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					
+					         <br>
+					         <br>
+					         <p>Dropup Dropdowns</p>
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-primary">Primary</button>
+					            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-secondary">Secondary</button>
+					            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-success">Success</button>
+					            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-info">Info</button>
+					            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-warning">Warning</button>
+					            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					         <!-- START button group-->
+					         <div class="btn-group dropup">
+					            <button type="button" class="btn btn-danger">Danger</button>
+					            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					               <span class="sr-only">Toggle Dropdown</span>
+					            </button>
+					            <div class="dropdown-menu">
+					               <a class="dropdown-item" href="#">Action</a>
+					               <a class="dropdown-item" href="#">Another action</a>
+					               <a class="dropdown-item" href="#">Something else here</a>
+					               <div class="dropdown-divider"></div>
+					               <a class="dropdown-item" href="#">Separated link</a>
+					            </div>
+					         </div>
+					         <!-- END button group-->
+					      </section>
+					   </div>
+					</div>				</div>
+
+			</div>
+		</section>
+				</article>
+
+					<footer class="footer">
+						<div class="footer-block buttons">
+							<iframe class="footer-github-btn"
+								src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" 
+								frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
+						</div>
+						<div class="footer-block author">
+							<ul>
+								<li>
+									created by 
+									<a href="https://github.com/modularcode">ModularCode</a>
+								</li>
+								<li>
+									<a href="https://github.com/modularcode/modular-admin-html#get-in-touch">get in touch</a>
+								</li>
+							</ul>
+						</div>
+					</footer>
+				<div class="modal fade" id="modal-media">
+					<div class="modal-dialog modal-lg animated flipInX">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									<span class="sr-only">Close</span>
+								</button>
+								<h4 class="modal-title">Media Library</h4>
+							</div>
+							<div class="modal-body">
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Insert Selected</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal --><div class="modal fade" id="confirm-modal">
+					<div class="modal-dialog animated flipInX" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title"><i class="fa fa-warning"></i> Alert</h4>
+							</div>
+							<div class="modal-body">
+								<p>Are you sure want to do this?</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->			</div>
+		</div>	
+		<!-- Reference block for JS -->
+		<div class="ref" id="ref">
+			<div class="color-primary"></div>
+			<div class="chart">
+				<div class="color-primary"></div>
+				<div class="color-secondary"></div>
+			</div>
+		</div>
+		<script src="js/vendor.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
