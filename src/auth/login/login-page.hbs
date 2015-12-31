@@ -4,7 +4,10 @@
 		<div class="auth-container">
 			<div class="card">
 				<header class="auth-header">
-					<h1 class="auth-title">{{themeTitle}}</h1>
+					<h1 class="auth-title">
+						{{> _common/logo/logo}}
+						{{themeTitle}}
+					</h1>
 				</header>
 				<div class="auth-content">
 					<p class="text-center">LOGIN TO CONTINUE</p>
@@ -26,7 +29,7 @@
 							<a href="reset.html" class="forgot-btn pull-right">Forgot password?</a>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-block btn-primary">Sign in</button>
+							<button type="submit" class="btn btn-block btn-primary">Login</button>
 						</div>
 						<div class="form-group">
 							<p class="text-muted text-center">Do not have an account? <a href="signup.html">Sign Up!</a></p>
@@ -34,7 +37,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="text-center">
+			<div class="text-xs-center">
 				<a href="index.html">
 					Back to dashboard
 				</a>
