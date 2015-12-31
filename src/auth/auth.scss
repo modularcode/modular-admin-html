@@ -7,15 +7,17 @@
 	transform: translateY(-50%) translateX(-50%);
 	
 	.auth-header {
-		background-color: $color-primary;
+		//background-color: $color-primary;
 		text-align: center;
 	}
 
 	.auth-title {
-		color: $color-text-inverse;
+		border-bottom: 1px solid $color-primary;
+		color: $color-primary;
 		padding: 20px;
 		line-height: 30px;
 		font-size: 30px;
+		font-weight: 600;
 		margin: 0;
 	}
 
