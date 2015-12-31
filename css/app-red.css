@@ -79,23 +79,33 @@ body {
     .app.sidebar-open {
       left: 0; } }
 
+.auth {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #667380;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
 .auth-container {
   width: 450px;
   min-height: 330px;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
       -ms-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%); }
   .auth-container .auth-header {
-    background-color: #FF6161;
-    text-align: center; }
+    text-align: center;
+    border-bottom: 1px solid #FF6161; }
   .auth-container .auth-title {
-    color: #ffffff;
+    color: #97A4B1;
     padding: 20px;
     line-height: 30px;
-    font-size: 30px;
+    font-size: 26px;
+    font-weight: 600;
     margin: 0; }
   .auth-container .auth-content {
     padding: 30px 50px;
@@ -114,10 +124,12 @@ body {
     width: 100%;
     position: relative;
     left: 0;
+    top: 0;
     -webkit-transform: inherit;
         -ms-transform: inherit;
             transform: inherit;
-    margin: 40px auto; }
+    margin: 0;
+    margin-bottom: 10px; }
     .auth-container .auth-content {
       padding: 30px 25px; } }
 
@@ -1254,6 +1266,39 @@ label,
     .card > .item-list .item > .item-row {
       padding: 0 10px; } }
 
+.logo {
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+  position: relative; }
+  .logo .l {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #FF6161;
+    position: absolute; }
+    .logo .l.l1 {
+      bottom: 0;
+      left: 0; }
+    .logo .l.l2 {
+      width: 7px;
+      height: 7px;
+      bottom: 13px;
+      left: 10px; }
+    .logo .l.l3 {
+      width: 7px;
+      height: 7px;
+      bottom: 4px;
+      left: 17px; }
+    .logo .l.l4 {
+      bottom: 13px;
+      left: 25px; }
+    .logo .l.l5 {
+      bottom: 0;
+      left: 34px; }
+
 a:not(.btn) {
   display: inline-block;
   position: relative;
@@ -1322,17 +1367,6 @@ span a {
       background-color: #FF6161;
       color: #ffffff; }
 
-.pagination {
-  margin-top: 0; }
-  .pagination .page-item .page-link {
-    color: #FF6161; }
-  .pagination .page-item.active .page-link,
-  .pagination .page-item.active .page-link:focus,
-  .pagination .page-item.active .page-link:hover {
-    color: #fff;
-    border-color: #FF6161;
-    background-color: #FF6161; }
-
 #nprogress .bar {
   background: #FF6161 !important; }
   #nprogress .bar .peg {
@@ -1344,6 +1378,17 @@ span a {
   #nprogress .spinner .spinner-icon {
     border-top-color: #FF6161 !important;
     border-left-color: #FF6161 !important; }
+
+.pagination {
+  margin-top: 0; }
+  .pagination .page-item .page-link {
+    color: #FF6161; }
+  .pagination .page-item.active .page-link,
+  .pagination .page-item.active .page-link:focus,
+  .pagination .page-item.active .page-link:hover {
+    color: #fff;
+    border-color: #FF6161;
+    background-color: #FF6161; }
 
 /* Let's get this party started */
 ::-webkit-scrollbar {
@@ -1725,11 +1770,6 @@ pre {
   .dashboard-page .items .item-list .item-col-date {
     border: none; } }
 
-.dashboard-page .sales-breakdown .dashboard-sales-breakdown-chart {
-  margin: 0 auto;
-  max-width: 250px;
-  max-height: 250px; }
-
 .dashboard-page #dashboard-sales-map .jqvmap-zoomin,
 .dashboard-page #dashboard-sales-map .jqvmap-zoomout {
   background-color: #FF6161;
@@ -1739,6 +1779,11 @@ pre {
 
 .dashboard-page #dashboard-sales-map .jqvmap-zoomout {
   top: 32px; }
+
+.dashboard-page .sales-breakdown .dashboard-sales-breakdown-chart {
+  margin: 0 auto;
+  max-width: 250px;
+  max-height: 250px; }
 
 .dashboard-page .stats .card-block {
   padding-bottom: 0; }
@@ -2567,38 +2612,6 @@ pre {
   padding-left: 25px;
   line-height: 70px;
   font-size: 16px; }
-  .sidebar-header .brand .logo {
-    display: inline-block;
-    width: 45px;
-    height: 25px;
-    vertical-align: middle;
-    margin-right: 5px;
-    position: relative; }
-    .sidebar-header .brand .logo .l {
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background-color: #FF6161;
-      position: absolute; }
-      .sidebar-header .brand .logo .l.l1 {
-        bottom: 0;
-        left: 0; }
-      .sidebar-header .brand .logo .l.l2 {
-        width: 7px;
-        height: 7px;
-        bottom: 13px;
-        left: 10px; }
-      .sidebar-header .brand .logo .l.l3 {
-        width: 7px;
-        height: 7px;
-        bottom: 4px;
-        left: 17px; }
-      .sidebar-header .brand .logo .l.l4 {
-        bottom: 13px;
-        left: 25px; }
-      .sidebar-header .brand .logo .l.l5 {
-        bottom: 0;
-        left: 34px; }
   @media (max-width: 767px) {
     .sidebar-header .brand {
       line-height: 50px;
