@@ -50898,7 +50898,7 @@ var Alert = (function ($) {
    */
 
   var NAME = 'alert';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -51084,7 +51084,7 @@ var Button = (function ($) {
    */
 
   var NAME = 'button';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.button';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -51250,7 +51250,7 @@ var Carousel = (function ($) {
    */
 
   var NAME = 'carousel';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.carousel';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -51722,7 +51722,7 @@ var Collapse = (function ($) {
    */
 
   var NAME = 'collapse';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.collapse';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -52080,7 +52080,7 @@ var Dropdown = (function ($) {
    */
 
   var NAME = 'dropdown';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.dropdown';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -52367,7 +52367,7 @@ var Modal = (function ($) {
    */
 
   var NAME = 'modal';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.modal';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -52897,7 +52897,7 @@ var ScrollSpy = (function ($) {
    */
 
   var NAME = 'scrollspy';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.scrollspy';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -53211,7 +53211,7 @@ var Tab = (function ($) {
    */
 
   var NAME = 'tab';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.tab';
   var EVENT_KEY = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -53478,7 +53478,7 @@ var Tooltip = (function ($) {
    */
 
   var NAME = 'tooltip';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.tooltip';
   var EVENT_KEY = '.' + DATA_KEY;
   var JQUERY_NO_CONFLICT = $.fn[NAME];
@@ -54081,7 +54081,7 @@ var Popover = (function ($) {
    */
 
   var NAME = 'popover';
-  var VERSION = '4.0.0-alpha.2';
+  var VERSION = '4.0.0-alpha';
   var DATA_KEY = 'bs.popover';
   var EVENT_KEY = '.' + DATA_KEY;
   var JQUERY_NO_CONFLICT = $.fn[NAME];

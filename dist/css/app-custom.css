@@ -86,7 +86,6 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%); }
   .auth-container .auth-header {
     background-color: #59c2e6;
@@ -115,7 +114,6 @@ body {
     position: relative;
     left: 0;
     -webkit-transform: inherit;
-        -ms-transform: inherit;
             transform: inherit;
     margin: 40px auto; }
     .auth-container .auth-content {
@@ -130,7 +128,6 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
-        -ms-transform: translateY(-50%) translateX(-50%);
             transform: translateY(-50%) translateX(-50%);
     margin: 0; }
   .error-card .error-title {
@@ -156,7 +153,6 @@ body {
       position: relative;
       left: 0;
       -webkit-transform: inherit;
-          -ms-transform: inherit;
               transform: inherit;
       margin: 40px auto; } }
 
@@ -167,7 +163,6 @@ body {
       position: relative;
       left: 0;
       -webkit-transform: inherit;
-          -ms-transform: inherit;
               transform: inherit;
       margin: 40px auto; } }
 
@@ -545,7 +540,6 @@ body {
 .btn-group .dropdown-menu > li:last-child a:hover:before {
   height: 0px;
   -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
           transform: scaleX(0); }
 
 .card {
@@ -1269,7 +1263,6 @@ a:not(.btn) {
     color: #20a5d3; }
     a:not(.btn):hover:before {
       -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
               transform: scaleX(1); }
   a:not(.btn):focus {
     text-decoration: none; }
@@ -1427,7 +1420,6 @@ span a {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
           transform: scaleX(0); }
 
 .stat-chart {
@@ -1468,7 +1460,6 @@ span a {
     line-height: 30px; }
   .list-icon [class^='col']:hover em {
     -webkit-transform: scale(2, 2);
-        -ms-transform: scale(2, 2);
             transform: scale(2, 2); }
 
 .well {
@@ -2332,7 +2323,6 @@ pre {
       background-color: #333e48; }
     .sidebar .nav > li.open > a i.arrow {
       -webkit-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
               transform: rotate(90deg); }
     .sidebar .nav > li > a i {
       margin-right: 5px;
@@ -2468,7 +2458,6 @@ pre {
           max-width: 140px; } }
     .header .header-block-search .input-container input:focus + .underline {
       -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
               transform: scaleX(1); }
 
 .customize {
