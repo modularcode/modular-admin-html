@@ -1,0 +1,46 @@
+.logo {
+	display: inline-block;
+	width: 45px;
+	height: 25px;
+	vertical-align: middle;
+	margin-right: 5px;
+	// background-color: fade(#fff, 10%);
+	position: relative;
+
+	.l {
+		width: 11px;
+		height: 11px;
+		border-radius: 50%;
+		background-color: $color-primary;
+		position: absolute;
+
+		&.l1 {
+			bottom: 0;
+			left: 0;
+		}
+
+		&.l2 {
+			width: 7px;
+			height: 7px;
+			bottom: 13px;
+			left: 10px;
+		}
+
+		&.l3 {
+			width: 7px;
+			height: 7px;
+			bottom: 4px;
+			left: 17px;
+		}
+
+		&.l4 {
+			bottom: 13px;
+			left: 25px;
+		}
+
+		&.l5 {
+			bottom: 0;
+			left: 34px;
+		}
+	}
+}
