@@ -86,7 +86,6 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%); }
   .auth-container .auth-header {
     background-color: #52BCD3;
@@ -115,7 +114,6 @@ body {
     position: relative;
     left: 0;
     -webkit-transform: inherit;
-        -ms-transform: inherit;
             transform: inherit;
     margin: 40px auto; }
     .auth-container .auth-content {
@@ -130,7 +128,6 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
-        -ms-transform: translateY(-50%) translateX(-50%);
             transform: translateY(-50%) translateX(-50%);
     margin: 0; }
   .error-card .error-title {
@@ -156,7 +153,6 @@ body {
       position: relative;
       left: 0;
       -webkit-transform: inherit;
-          -ms-transform: inherit;
               transform: inherit;
       margin: 40px auto; } }
 
@@ -167,7 +163,6 @@ body {
       position: relative;
       left: 0;
       -webkit-transform: inherit;
-          -ms-transform: inherit;
               transform: inherit;
       margin: 40px auto; } }
 
@@ -545,7 +540,6 @@ body {
 .btn-group .dropdown-menu > li:last-child a:hover:before {
   height: 0px;
   -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
           transform: scaleX(0); }
 
 .card {
@@ -1269,7 +1263,6 @@ a:not(.btn) {
     color: #2c96ad; }
     a:not(.btn):hover:before {
       -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
               transform: scaleX(1); }
   a:not(.btn):focus {
     text-decoration: none; }
@@ -1427,7 +1420,6 @@ span a {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
           transform: scaleX(0); }
 
 .stat-chart {
@@ -1468,7 +1460,6 @@ span a {
     line-height: 30px; }
   .list-icon [class^='col']:hover em {
     -webkit-transform: scale(2, 2);
-        -ms-transform: scale(2, 2);
             transform: scale(2, 2); }
 
 .well {
@@ -1740,50 +1731,6 @@ pre {
 .dashboard-page #dashboard-sales-map .jqvmap-zoomout {
   top: 32px; }
 
-.dashboard-page .stats .card-block {
-  padding-bottom: 0; }
-
-.dashboard-page .stats .stat-col {
-  margin-bottom: 20px;
-  float: left;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.dashboard-page .stats .stat-icon {
-  color: #52BCD3;
-  display: inline-block;
-  font-size: 26px;
-  text-align: center;
-  vertical-align: middle;
-  width: 50px; }
-
-.dashboard-page .stats .stat-chart {
-  margin-right: 5px;
-  vertical-align: middle; }
-  @media (min-width: 1200px) {
-    .dashboard-page .stats .stat-chart {
-      margin-right: 0.6vw; } }
-
-.dashboard-page .stats .stat {
-  vertical-align: middle; }
-  @media (min-width: 1200px) {
-    .dashboard-page .stats .stat .value {
-      font-size: 1.3vw; } }
-  @media (min-width: 1200px) {
-    .dashboard-page .stats .stat .name {
-      font-size: 0.9vw; } }
-
-.dashboard-page .stats .stat-progress {
-  height: 2px;
-  margin: 5px 0;
-  color: #52BCD3; }
-  .dashboard-page .stats .stat-progress[value]::-webkit-progress-bar {
-    background-color: #dddddd; }
-  .dashboard-page .stats .stat-progress[value]::-webkit-progress-value {
-    background-color: #52BCD3; }
-  .dashboard-page .stats .stat-progress[value]::-moz-progress-bar {
-    background-color: #dddddd; }
-
 .dashboard-page .tasks {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1830,6 +1777,50 @@ pre {
   .dashboard-page .tasks .item-list .item-col {
     padding-top: 5px;
     padding-bottom: 5px; }
+
+.dashboard-page .stats .card-block {
+  padding-bottom: 0; }
+
+.dashboard-page .stats .stat-col {
+  margin-bottom: 20px;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.dashboard-page .stats .stat-icon {
+  color: #52BCD3;
+  display: inline-block;
+  font-size: 26px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px; }
+
+.dashboard-page .stats .stat-chart {
+  margin-right: 5px;
+  vertical-align: middle; }
+  @media (min-width: 1200px) {
+    .dashboard-page .stats .stat-chart {
+      margin-right: 0.6vw; } }
+
+.dashboard-page .stats .stat {
+  vertical-align: middle; }
+  @media (min-width: 1200px) {
+    .dashboard-page .stats .stat .value {
+      font-size: 1.3vw; } }
+  @media (min-width: 1200px) {
+    .dashboard-page .stats .stat .name {
+      font-size: 0.9vw; } }
+
+.dashboard-page .stats .stat-progress {
+  height: 2px;
+  margin: 5px 0;
+  color: #52BCD3; }
+  .dashboard-page .stats .stat-progress[value]::-webkit-progress-bar {
+    background-color: #dddddd; }
+  .dashboard-page .stats .stat-progress[value]::-webkit-progress-value {
+    background-color: #52BCD3; }
+  .dashboard-page .stats .stat-progress[value]::-moz-progress-bar {
+    background-color: #dddddd; }
 
 .item-editor-page .images-container::after {
   content: "";
@@ -2332,7 +2323,6 @@ pre {
       background-color: #333e48; }
     .sidebar .nav > li.open > a i.arrow {
       -webkit-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
               transform: rotate(90deg); }
     .sidebar .nav > li > a i {
       margin-right: 5px;
@@ -2468,7 +2458,6 @@ pre {
           max-width: 140px; } }
     .header .header-block-search .input-container input:focus + .underline {
       -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
               transform: scaleX(1); }
 
 .customize {
