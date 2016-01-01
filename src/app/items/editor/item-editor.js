@@ -4,7 +4,7 @@ $(function(){
 	$('.images-container').sortable({
 		animation: 150,  // ms, animation speed moving items when sorting, `0` — without animation
 		handle: ".control-btn.move",  // Drag handle selector within list items
-		filter: ".new",  // Selectors that do not lead to dragging (String or Function)
+		filter: ".image-container.new",  // Selectors that do not lead to dragging (String or Function)
 		draggable: ".image-container" // Specifies which items inside the element should be sortable
 	});
 
