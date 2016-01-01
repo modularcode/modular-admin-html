@@ -70,7 +70,7 @@ gulp.task('watch', function() {
 
 // Builds and deploys to github pages
 gulp.task('deploy', ['build'], function() {
-	return gulp.src('../public/**/*')
+	return gulp.src('../dist/**/*')
 		.pipe(plugins.ghPages({
 			cacheDir: '../.deploy'
 		}));
