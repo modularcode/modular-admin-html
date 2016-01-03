@@ -51,19 +51,8 @@
 			// @include triangle(up, 9px, $dropdown-bg);
 		}
 
-		.profile-dropdown-menu-icon {
-			padding: 0;
-		}
-
-		.profile-dropdown-menu-topic {
-			color: #7e8e9f;
-			padding: 0;
-		}
-
-
 		a {
 			padding: 10px 15px;
-
 			.icon {
 				color: $color-primary;
 				text-align: center;
@@ -76,12 +65,23 @@
 				text-align: left;
 				color: $color-text-light;
 			}
+		}
 
+		.profile-dropdown-menu-icon {
+			padding: 0;
+		}
+
+		.profile-dropdown-menu-topic {
+			color: #7e8e9f;
+			padding: 0;
+		}
+
+		.dropdown-divider {
+			margin: 0;
 		}
 
 		.logout {
 			border-top: 1px solid $dropbown-color-border;
-			//text-align: center;
 		}
 
 
