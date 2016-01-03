@@ -1053,13 +1053,27 @@ $(function() {
 	});
 
 });
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
+
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
+});
 $(function(){
 
 	// set sortable options
 	$('.images-container').sortable({
 		animation: 150,  // ms, animation speed moving items when sorting, `0` — without animation
 		handle: ".control-btn.move",  // Drag handle selector within list items
-		filter: ".new",  // Selectors that do not lead to dragging (String or Function)
+		filter: ".image-container.new",  // Selectors that do not lead to dragging (String or Function)
 		draggable: ".image-container" // Specifies which items inside the element should be sortable
 	});
 
@@ -1120,20 +1134,6 @@ $(function() {
         drawItemsListSparklines();
     });
 
-});
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
-
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
 });
 $(function() {
 
