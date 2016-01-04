@@ -142,7 +142,7 @@ In this folder are located files related to our application building. That can b
 
 ```
 
-#### ```public/``` folder
+#### ```dist/``` folder
 
 Compiled state of our app with processed styles, templates, scripts and assets.
 
@@ -171,11 +171,11 @@ There are also different theme variations located in ```src/_themes/``` folder, 
 
 #### Scripts (*.js)
 
-#### Layouts (*-layout.hbs)
+#### Templates (*.hbs)
 
 #### Pages (*-page.hbs)
 
-#### Templates (*.hbs)
+#### Layouts (*-layout.hbs)
 
 #### Contexts (_context.js)
 
