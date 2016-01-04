@@ -9,9 +9,9 @@
     <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/archive/master.zip" target="_blank">Download ZIP</a>
   </strong>
 </p>
-
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme
 built in modular way. That makes it awesomely easy to scale, modify and maintain.
+### Main features
 
 ### Other versions
 
