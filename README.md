@@ -231,7 +231,11 @@ The final result of page context is compination of both ways. Moreover, differen
 
 #### Layouts (*-layout.hbs)
 
-If different pages have lot of common components like sidebar, header, footer, It's a good idea to define a layout for those common pages and define in page files only the content which is unique. Layout is a page content wrapper. If the page has layout in output we'll get page's content inserted into layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for page content.
+If different pages have lot of common components like sidebar, header, footer, It's a good idea to define a layout for those common pages and define in page files only the content which is unique. 
+
+Layout is a page content wrapper. If the page has layout in output we'll get page's content inserted into layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for page content. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/app-layout.hbs))
+
+To define a page layout you need to specify page file context's ```layout``` variable. It can be done both by YAML header or _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs))
 
 If you need more advanced layouting you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
 
