@@ -1,7 +1,9 @@
-module.exports.task = function(gulp, plugins, paths) {
-	gulp.src(paths.vendor.assets.src)
-		.pipe(gulp.dest(paths.vendor.assets.dest));
+var config = require('../config');
 
-	gulp.src(paths.vendor.fonts.src)
-		.pipe(gulp.dest(paths.vendor.fonts.dest));
+module.exports.task = function(gulp, plugins, paths) {
+	gulp.src(paths.vendor.assets)
+		.pipe(gulp.dest(config.destDir + "/assets"));
+
+	gulp.src(paths.vendor.fonts)
+		.pipe(gulp.dest(config.destDir + "/fonts"));
 };

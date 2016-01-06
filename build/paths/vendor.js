@@ -31,14 +31,11 @@ var bowerDir 		= config.bowerDir;
 
 	eg. 
 
-	export.scripts: {
-		src: [
-			bowerDir + "jquery/dist/jquery.js",
-			bowerDir + "angular/jquery.js",
-		]
-	}
+	export.scripts: [
+		bowerDir + "jquery/dist/jquery.js",
+		bowerDir + "angular/jquery.js",
+	]
 
-	
 ********************************************************************************/
 
 
@@ -48,7 +45,7 @@ var bowerDir 		= config.bowerDir;
 ************************************************/
 	
 
-	var vendorSrciptFiles = mainBowerFiles({
+	exports.scripts = mainBowerFiles({
 		filter: [
 			'**/*.js',
 			'!**/*.min.js'
@@ -56,27 +53,18 @@ var bowerDir 		= config.bowerDir;
 		paths: rootDir
 	});
 
-	exports.scripts = {
-		src: vendorSrciptFiles,
-		dest: destDir + "/js"
-	};
 
 /***********************************************
 *		Vendor style files
 ************************************************/
 
-	var vendorStyleFiles = mainBowerFiles({
+	exports.styles = mainBowerFiles({
 		filter: [
 			'**/*.css',
 			'!**/*.min.css'
 		],
 		paths: rootDir
 	});
-
-	exports.styles = {
-		src: vendorStyleFiles,
-		dest: destDir + "/css"
-	};
 
 
 /***********************************************
@@ -87,7 +75,7 @@ var bowerDir 		= config.bowerDir;
 		All files which are not .js, .css, .less and fonts
 	*/
 
-	var vendorAssetFiles = mainBowerFiles({
+	exports.assets = mainBowerFiles({
 		filter: [
 			'**/*',
 			'!**/*.js',
@@ -105,17 +93,12 @@ var bowerDir 		= config.bowerDir;
 		paths: rootDir
 	});
 
-	exports.assets = {
-		src: vendorAssetFiles,
-		dest: destDir + "/assets"
-	};
-
 /***********************************************
 *		Vendor font files
 ************************************************/
 
 
-	var vendorFontFiles = mainBowerFiles({
+	exports.fonts = mainBowerFiles({
 		filter: [
 			'**/*.otf',
 			'**/*.eot',
@@ -126,9 +109,3 @@ var bowerDir 		= config.bowerDir;
 		],
 		paths: rootDir
 	});
-
-
-	exports.fonts = {
-		src: vendorFontFiles,
-		dest: destDir + "/fonts"
-	};
