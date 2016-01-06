@@ -1,11 +1,5 @@
 # ModularAdmin: Free Dashboard Theme <br/>  HTML version 
 
-> [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme
-> built in modular way. That makes it awesomely easy to scale, modify and maintain.
-
-> This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
-> AngularJS, Angular2, React and Meteor versions are coming soon.
-
 <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
@@ -15,6 +9,14 @@
     <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/archive/master.zip" target="_blank">Download ZIP</a>
   </strong>
 </p>
+[ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme
+built in modular way. That makes it awesomely easy to scale, modify and maintain.
+### Main features
+
+### Other versions
+
+This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
+AngularJS, Angular2, React and Meteor versions are coming soon.
 
 ### Table of contents
 
@@ -142,7 +144,7 @@ In this folder are located files related to our application building. That can b
 
 ```
 
-#### ```public/``` folder
+#### ```dist/``` folder
 
 Compiled state of our app with processed styles, templates, scripts and assets.
 
@@ -171,11 +173,11 @@ There are also different theme variations located in ```src/_themes/``` folder, 
 
 #### Scripts (*.js)
 
-#### Layouts (*-layout.hbs)
+#### Templates (*.hbs)
 
 #### Pages (*-page.hbs)
 
-#### Templates (*.hbs)
+#### Layouts (*-layout.hbs)
 
 #### Contexts (_context.js)
 
