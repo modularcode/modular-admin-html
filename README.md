@@ -1,4 +1,4 @@
-# ModularAdmin: Free Dashboard Theme <br/>  HTML version 
+# Modular Admin: Free Bootstrap4 Dashboard Theme <br/>  HTML version 
 
 <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
