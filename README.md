@@ -1,8 +1,10 @@
-# Modular Admin: Free Bootstrap4 Dashboard Theme <br/>  HTML version 
+# Modular Admin: Free Bootstrap4 Dashboard Theme <br/>  HTML version
 
 <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
+
+![features](http://modularcode.github.io/modular-admin-html/assets/features.png)
 
 <p align="center">
   <strong>
@@ -12,6 +14,14 @@
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme
 built in modular way. That makes it awesomely easy to scale, modify and maintain.
 ### Main features
+
+* HTML5 + CSS3
+* jQuery
+* Bootstrap4 
+* SASS
+* Hanldebars + layouts support
+* Gulp 
+* Bower
 
 ### Other versions
 
