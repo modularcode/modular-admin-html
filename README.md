@@ -1,7 +1,11 @@
-# Modular Admin: Free Bootstrap4 Dashboard Theme <br/>  HTML version 
+# Modular Admin: Free Bootstrap4 Dashboard Theme <br/>  HTML version
 
 <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
+</a>
+
+<a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
+![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png)
 </a>
 
 <p align="center">
@@ -12,6 +16,14 @@
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme
 built in modular way. That makes it awesomely easy to scale, modify and maintain.
 ### Main features
+
+* HTML5 + CSS3 with FlexBox
+* jQuery
+* Bootstrap4 
+* SASS
+* Hanldebars with layouts
+* Gulp 
+* Bower
 
 ### Other versions
 
@@ -149,7 +161,7 @@ In this folder are located files related to our application building. That can b
 Compiled state of our app with processed styles, templates, scripts and assets.
 
 **Warning! Never work inside this folder, because your changes would be overwritten on every build**
-
+pu
 
 ## File Types
 
@@ -159,7 +171,7 @@ Our app consists of different file types.
 
 We use [SASS](http://sass-lang.com/) as CSS preprocessor language. 
 Main variables are defined in ```src/_variables.scss``` folder. 
-For making life easier we broke down styles into components, and on build we're just merging all ```.scss``` files together and processing it to ```pubilc/css/app.css``` file. Style files are merged in following order
+For making life easier we broke down styles into components, and on build we're just merging all ```.scss``` files together and processing it to ```dist/css/app.css``` file. Style files are merged in following order
 
 ```
 {variables.scss}
@@ -173,13 +185,63 @@ There are also different theme variations located in ```src/_themes/``` folder, 
 
 #### Scripts (*.js)
 
+We separate application's scripts across it's components. For simplicity we use ES5 in this version and just wrap each component's script in  jQuery ```$(function() { })```. JS configurations are defined in ```src/config.js``` file. On build application script files are merged together and copied to ```dist/js/app.js``` fole. Script files are merged in following order
+
+```
+{config.js}
+{all .js files except main.js}
+{main.js}
+```
+
 #### Templates (*.hbs)
+
+Templates are pieces of HTML files written in template engine language. We use [Handlebars](http://handlebarsjs.com/), which allows to have conditions in HTML, reuse partials in different pages (e.g. sidebars, footers), use loops, layouts etc. 
 
 #### Pages (*-page.hbs)
 
+Templates themselves are just parts of markup, and aren't compiled as separate files. What we really want in final output is ```.html``` page in ```dist/``` folder. For that reason there are special handlebar templates which filenames end with ```-page.hbs```. Each ```{pagename}-page.hbs``` file would be compiled to ```dist/{pagename}.html``` page with flatened file structure.
+
+Pages can consist of different templates (partials) which can be included thanks to handlebars partial including. Also each page have it's context which is data passed into template on rendering. That data is used in template expressions and variables. page contexts can be defined in two ways: 
+
+**YAML** headers ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/dashboard/index-page.hbs))
+
+```
+---
+foo: bar
+list: 
+  - One
+  - Two
+  - Three
+---
+```
+and **_context.js** files ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/_context.js)).
+```
+module.exports = {
+  foo: 'bar',
+  foo2: function() {
+    // do some magic, return some string
+  },
+  list: [
+    'One', 'Two', 'Three'
+  ]
+}
+```
+
+The final result of page context is compination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. In our case we have ```src/_context.js``` file, where main website properties are defined and YAML headers in ```*-page.hbs``` files.
+
 #### Layouts (*-layout.hbs)
 
-#### Contexts (_context.js)
+If different pages have lot of common components like sidebar, header, footer, It's a good idea to define a layout for those common pages and define in page files only the content which is unique. 
+
+Layout is a page content wrapper. If the page has layout in output we'll get page's content inserted into layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for page content. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/app-layout.hbs))
+
+To define a page layout you need to specify page file context's ```layout``` variable. It can be done both by YAML header or _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs))
+
+If you need more advanced layouting you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
+
+#### Vendor files
+
+Except application files there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all script and style files correspondingally to ```dist/js/vendor.js```and ```dist/css/vendor.css``` also will copy all assets to ```dist/assets/``` folder.
 
 ## Build Tasks
 
