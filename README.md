@@ -4,7 +4,9 @@
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
 
-![features](http://modularcode.github.io/modular-admin-html/assets/features.png)
+<a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
+![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png)
+</a>
 
 <p align="center">
   <strong>
@@ -15,11 +17,11 @@
 built in modular way. That makes it awesomely easy to scale, modify and maintain.
 ### Main features
 
-* HTML5 + CSS3
+* HTML5 + CSS3 with FlexBox
 * jQuery
 * Bootstrap4 
 * SASS
-* Hanldebars + layouts support
+* Hanldebars with layouts
 * Gulp 
 * Bower
 
