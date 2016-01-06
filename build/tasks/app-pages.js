@@ -38,7 +38,7 @@ module.exports.task = function(gulp, plugins, paths) {
 			var templateRes = template(context);
 
 			// Layout processing
-			var layout = file.frontMatter.layout || null;
+			var layout = context.layout || null;
 
 			// If the layout exists, render it with template inside
 			if (layout && handlebars.partials[layout]) {
