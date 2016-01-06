@@ -86,7 +86,7 @@ npm start
 
 Open the project [http://localhost:4000](http://localhost:4000).
 
-> The project is built by Gulp. You can read more info in [#build-tasks](**Build Tasks**) section
+> The project is built by Gulp. You can read more info in [Build Tasks](#build-tasks) section
 
 ## Folder Structure
 
