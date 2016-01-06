@@ -31,26 +31,18 @@
 		<div class="main-wrapper">
 			<div class="app" id="app">
 				{{!-- Default header block --}}
-				{{#block "header"}}
-					{{> app/_common/header/header}}
-				{{/block}}
+				{{> app/_common/header/header}}
 
 				{{!-- Default sidebar block --}}
-				{{#block "sidebar"}}
-					{{> app/_common/sidebar/sidebar}}
-				{{/block}}
+				{{> app/_common/sidebar/sidebar}}
 
 				{{!-- Content section --}}
 				<article class="content {{page}}-page">
-					{{#block "body"}}
-
-					{{/block}}
+					{{{body}}}
 				</article>
 
 				{{!-- Default footer block --}}
-				{{#block "footer"}}
-					{{> app/_common/footer/footer}}
-				{{/block}}
+				{{> app/_common/footer/footer}}
 
 				{{> app/_common/modals/modals}}
 			</div>

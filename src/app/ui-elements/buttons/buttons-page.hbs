@@ -1,57 +1,54 @@
 ---
+layout: app/app-layout
 page: buttons
 ---
-{{#extend "app/app-layout"}}
-	{{#content "body"}}
-		<div class="title-block">
-			<h3 class="title">
-				Buttons
-			</h3>
-			<p class="title-description">
-				Sample button elements
-			</p>
+<div class="title-block">
+	<h3 class="title">
+		Buttons
+	</h3>
+	<p class="title-description">
+		Sample button elements
+	</p>
+</div>
+
+<section class="section">
+	<div class="row sameheight-container">
+
+		<div class="col-md-6">
+			{{> app/ui-elements/buttons/button-colors/button-colors}}
 		</div>
 
-		<section class="section">
-			<div class="row sameheight-container">
+		<div class="col-md-6">
+			{{> app/ui-elements/buttons/button-outline/button-outline}}
+		</div>
 
-				<div class="col-md-6">
-					{{> app/ui-elements/buttons/button-colors/button-colors}}
-				</div>
+	</div>
+</section>
 
-				<div class="col-md-6">
-					{{> app/ui-elements/buttons/button-outline/button-outline}}
-				</div>
+<section class="section">
+	<div class="row sameheight-container">
 
-			</div>
-		</section>
+		<div class="col-md-6">
+			{{> app/ui-elements/buttons/button-sizing/button-sizing}}
+		</div>
 
-		<section class="section">
-			<div class="row sameheight-container">
+		<div class="col-md-6">
+			{{> app/ui-elements/buttons/button-types/button-types}}
+		</div>
 
-				<div class="col-md-6">
-					{{> app/ui-elements/buttons/button-sizing/button-sizing}}
-				</div>
+	</div>
+</section>
 
-				<div class="col-md-6">
-					{{> app/ui-elements/buttons/button-types/button-types}}
-				</div>
+<section class="section">
+	<div class="row sameheight-container">
 
-			</div>
-		</section>
+		<div class="col-md-6">
+			{{> app/ui-elements/buttons/button-group/button-group}}
+		</div>
 
-		<section class="section">
-			<div class="row sameheight-container">
+		<div class="col-md-6">
+			{{> app/ui-elements/buttons/button-dropdowns/button-dropdowns}}
+		</div>
 
-				<div class="col-md-6">
-					{{> app/ui-elements/buttons/button-group/button-group}}
-				</div>
-
-				<div class="col-md-6">
-					{{> app/ui-elements/buttons/button-dropdowns/button-dropdowns}}
-				</div>
-
-			</div>
-		</section>
-	{{/content}}
-{{/extend}}
+	</div>
+</section>
