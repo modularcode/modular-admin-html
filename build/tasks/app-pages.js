@@ -1,37 +1,66 @@
 var path 	= require('path');
 var glob 	= require('glob');
-var fs 		= require('fs');
+var fs 		= require('fs-extra');
+var through = require('through2');
 var extend 	= require('util')._extend;
 
 var config 	= require('../config');
 
 module.exports.task = function(gulp, plugins, paths) {
-	
+
+	// Handlebars engine
+	var handlebars = new require('handlebars');
+	var handlebarsRegistrar = require('handlebars-registrar');
+
+	// Register handlebars engine helpers and partials
+	handlebarsRegistrar(handlebars, {
+		helpers: paths.app.helpers,
+		partials: paths.app.templates,
+		parsePartialName: function (file) {
+			return file.shortPath;
+		},
+	});
+
 	gulp.src(paths.app.pages)
 		// Frontmatter
 		.pipe(plugins.frontMatter())
-		// handlebars compilation
-		.pipe(plugins.hb({
-			// Register all templates as partials
-			partials: paths.app.templates,
-			// Partials naming e.g. 'app/app-layout'
-			parsePartialName: function (file) {
-				return file.shortPath;
-			},
-			// Registering template helpers
-			helpers:  paths.app.helpers,
-			// Context data for each page file
-			dataEach: function (context, file) {
+		// Render pages
+		.pipe(through.obj(function (file, enc, cb) {
+			// Page render result
+			var pageRes = "";
 
-				var contextExtended = extend(context, getPageContext(file));
-					contextExtended = extend(contextExtended, file.frontMatter);
+			// Get context from _context.js files and frontmatter
+			var context = getPageContext(file);
+				context = extend(context, file.frontMatter);
 
-				return contextExtended;
-			},
-			// Remove cache every time for 'watch'
-			bustCache: true
+			// Compile template
+			var template = handlebars.compile(String(file.contents));
+			var templateRes = template(context);
+
+			// Layout processing
+			var layout = file.frontMatter.layout || null;
+
+			// If the layout exists, render it with template inside
+			if (layout && handlebars.partials[layout]) {
+				var layoutData = extend(context, {
+					body: templateRes
+				});
+
+				// Render layout with given context and content
+				var layoutRes = handlebars.partials[layout](layoutData);
+
+				pageRes = layoutRes;
+			}
+			// Return rendered template
+			else {
+				pageRes = templateRes;
+			}
+
+			file.contents = new Buffer(pageRes);
+
+			this.push(file);
+			cb();
 		}))
-
 		// Handle errors
 		.on('error', plugins.util.log)
 

@@ -43,6 +43,18 @@ var destDir 	= config.destDir;
 	exports.themes = srcDir + "/**/*-theme.scss";
 
 /***********************************************
+*		Application template files
+************************************************/
+	
+	/*
+		All template files in application.
+		Those should registered as handlebars partials
+		in order to use feature like includes or layouts
+	*/
+
+	exports.templates = srcDir + "/**/*.hbs";
+
+/***********************************************
 *		Application page files
 ************************************************/
 
@@ -54,18 +66,17 @@ var destDir 	= config.destDir;
 
 	exports.pages = srcDir + "/**/*-page.hbs";
 
-
 /***********************************************
-*		Application template files
+*		Application layout files
 ************************************************/
-	
+
 	/*
-		All template files in application.
-		Those should registered as handlebars partials
-		in order to use feature like includes or layouts
+		Layouts are used for "wrapping" the content of individual pages with common elements, 
+		such as the <head></head> and footer sections, which usually contain necessities 
+		such as <link> and <script> tags.
 	*/
 
-	exports.templates = srcDir + "/**/*.hbs";
+	exports.layouts = srcDir + "/**/*-layout.hbs";
 
 /***********************************************
 *  	Application handlebars helpers files
@@ -82,17 +93,6 @@ var destDir 	= config.destDir;
 	];
 
 
-/***********************************************
-*		Application layout files
-************************************************/
-
-	/*
-		Layouts are used for "wrapping" the content of individual pages with common elements, 
-		such as the <head></head> and footer sections, which usually contain necessities 
-		such as <link> and <script> tags.
-	*/
-
-	exports.layouts = srcDir + "/**/*-layout.hbs";
 
 /***********************************************
 *		Application asset files

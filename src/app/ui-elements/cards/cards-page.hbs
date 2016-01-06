@@ -1,32 +1,29 @@
 ---
+layout: app/app-layout
 page: cards
 ---
-{{#extend "app/app-layout"}}
-	{{#content "body"}}
-		<div class="title-block">
-			<h3 class="title">
-				Cards
-			</h3>
-			<p class="title-description">
-				Cards can contain almost any kind of element inside
-			</p>
-		</div>
+<div class="title-block">
+	<h3 class="title">
+		Cards
+	</h3>
+	<p class="title-description">
+		Cards can contain almost any kind of element inside
+	</p>
+</div>
 
-		<section class="section">
-			{{> app/ui-elements/cards/card-block/card-block}}
-		</section>
+<section class="section">
+	{{> app/ui-elements/cards/card-block/card-block}}
+</section>
 
-		<section class="section">
-			<div class="row sameheight-container">
-			    <div class="col-xl-6">
-			      	{{> app/ui-elements/cards/tabs/basic-tabs}}
-			    </div>
-			    <!-- /.col-xl-6 -->
-			    <div class="col-xl-6">
-			    	{{> app/ui-elements/cards/tabs/pill-tabs}}
-			    </div>
-			    <!-- /.col-xl-6 -->
-			</div>
-		</section>
-	{{/content}}
-{{/extend}}
+<section class="section">
+	<div class="row sameheight-container">
+	    <div class="col-xl-6">
+	      	{{> app/ui-elements/cards/tabs/basic-tabs}}
+	    </div>
+	    <!-- /.col-xl-6 -->
+	    <div class="col-xl-6">
+	    	{{> app/ui-elements/cards/tabs/pill-tabs}}
+	    </div>
+	    <!-- /.col-xl-6 -->
+	</div>
+</section>
