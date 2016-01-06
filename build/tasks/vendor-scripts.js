@@ -1,5 +1,7 @@
+var config = require('../config');
+
 module.exports.task = function(gulp, plugins, paths) {
-	gulp.src(paths.vendor.scripts.src)
+	gulp.src(paths.vendor.scripts)
 		.pipe(plugins.concat('vendor.js'))
-		.pipe(gulp.dest(paths.vendor.scripts.dest));
+		.pipe(gulp.dest(config.destDir + "/js"));
 };

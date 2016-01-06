@@ -43,7 +43,7 @@ gulp.task('connect', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
 	// When template changes recompile .html pages
-	plugins.watch(paths.app.templates.src, function() {
+	plugins.watch(paths.app.templates, function() {
 	    gulp.start('app-pages');
 	});
 
@@ -53,17 +53,17 @@ gulp.task('watch', function() {
 	});
 
 	// When script changes recompile scripts
-	plugins.watch(paths.app.scripts.src, function() {
+	plugins.watch(paths.app.scripts, function() {
 	    gulp.start('app-scripts');
 	});
 
 	// When style changes recompile styles
-	plugins.watch(paths.app.styles.src, function() {
+	plugins.watch(paths.app.styles, function() {
 	    gulp.start('app-styles');
 	});
 
 	// When theme changes recompile themes
-	plugins.watch(paths.app.themes.src, function() {
+	plugins.watch(paths.app.themes, function() {
 	    gulp.start('app-themes');
 	});
 });

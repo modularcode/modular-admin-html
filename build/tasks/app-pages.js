@@ -7,19 +7,19 @@ var config 	= require('../config');
 
 module.exports.task = function(gulp, plugins, paths) {
 	
-	gulp.src(paths.app.pages.src)
+	gulp.src(paths.app.pages)
 		// Frontmatter
 		.pipe(plugins.frontMatter())
 		// handlebars compilation
 		.pipe(plugins.hb({
 			// Register all templates as partials
-			partials: paths.app.templates.src,
+			partials: paths.app.templates,
 			// Partials naming e.g. 'app/app-layout'
 			parsePartialName: function (file) {
 				return file.shortPath;
 			},
 			// Registering template helpers
-			helpers:  paths.app.helpers.src,
+			helpers:  paths.app.helpers,
 			// Context data for each page file
 			dataEach: function (context, file) {
 
@@ -45,7 +45,7 @@ module.exports.task = function(gulp, plugins, paths) {
 		.pipe(plugins.flatten())
 
 		// Output
-		.pipe(gulp.dest(paths.app.pages.dest));
+		.pipe(gulp.dest(config.destDir));
 };
 
 

@@ -5,10 +5,10 @@ var glob = require('glob');
 module.exports.task = function(gulp, plugins, paths) {
 
 	// For each theme file
-	glob.sync(paths.app.themes.src).forEach(function(filePath) {
+	glob.sync(paths.app.themes).forEach(function(filePath) {
 
 		// Prepend file to styles glob
-		var src = [].concat(paths.app.styles.src);
+		var src = [].concat(paths.app.styles);
 			src.unshift(filePath);
 
 		// Theme name 
@@ -27,7 +27,7 @@ module.exports.task = function(gulp, plugins, paths) {
 				.on('error', plugins.sass.logError)
 			)
 			.pipe(plugins.autoprefixer())
-			.pipe(gulp.dest(paths.app.themes.dest));
+			.pipe(gulp.dest(config.destDir + '/css'));
 
 	});
 

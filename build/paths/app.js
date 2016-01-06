@@ -20,37 +20,27 @@ var destDir 	= config.destDir;
 		Ignore context.js files.
 	*/
 
-	exports.scripts = {
-		src: [
-			srcDir + "/config.js",
-			srcDir + "/**/!(_context|config|main|*-helper)*.js",
-			srcDir + "/main.js",
-			"!" + srcDir + "/_vendor/**"
-		],
-		dest: destDir + "/js"
-	};
+	exports.scripts = [
+		srcDir + "/config.js",
+		srcDir + "/**/!(_context|config|main|*-helper)*.js",
+		srcDir + "/main.js",
+		"!" + srcDir + "/_vendor/**"
+	];
 
 /***********************************************
 *		Application style files
 ************************************************/
 
-	exports.styles = {
-		src: [
-			srcDir + "/_main.scss",
-			srcDir + "/**/!(_main|_variables|*-theme)*.scss",
-		],
-		dest: destDir + "/css/"
-	};
+	exports.styles = [
+		srcDir + "/_main.scss",
+		srcDir + "/**/!(_main|_variables|*-theme)*.scss",
+	];
 
 /***********************************************
 *		Application theme files
 ************************************************/
 
-	exports.themes = {
-		src: srcDir + "/**/*-theme.scss",
-		dest: destDir + "/css/"
-	};
-
+	exports.themes = srcDir + "/**/*-theme.scss";
 
 /***********************************************
 *		Application page files
@@ -62,10 +52,7 @@ var destDir 	= config.destDir;
 
 	*/
 
-	exports.pages = {
-		src: srcDir + "/**/*-page.hbs",
-		dest: destDir + "/"
-	};
+	exports.pages = srcDir + "/**/*-page.hbs";
 
 
 /***********************************************
@@ -78,10 +65,7 @@ var destDir 	= config.destDir;
 		in order to use feature like includes or layouts
 	*/
 
-	exports.templates = {
-		src: srcDir + "/**/*.hbs",
-		dest: destDir + "/templates"
-	};
+	exports.templates = srcDir + "/**/*.hbs";
 
 /***********************************************
 *  	Application handlebars helpers files
@@ -92,13 +76,10 @@ var destDir 	= config.destDir;
 		Read more: http://handlebarsjs.com/block_helpers.html
 	*/
 
-	exports.helpers = {
-		src: [
-			srcDir + "/**/*-helper.js",
-			rootDir + '/node_modules/handlebars-layouts/index.js',
-		],
-		dest: destDir + "/templates"
-	};
+	exports.helpers = [
+		srcDir + "/**/*-helper.js",
+		rootDir + '/node_modules/handlebars-layouts/index.js',
+	];
 
 
 /***********************************************
@@ -111,16 +92,10 @@ var destDir 	= config.destDir;
 		such as <link> and <script> tags.
 	*/
 
-	exports.layouts = {
-		src: srcDir + "/**/*-layout.hbs",
-		dest: destDir + "/templates"
-	};
+	exports.layouts = srcDir + "/**/*-layout.hbs";
 
 /***********************************************
 *		Application asset files
 ************************************************/
 
-	exports.assets = {
-		src: srcDir + "/_assets/**/*",
-		dest: destDir + "/assets"
-	};
+	exports.assets = srcDir + "/_assets/**/*";
