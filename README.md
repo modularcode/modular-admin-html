@@ -59,14 +59,14 @@ For assembling the application, you need to have [NodeJs](https://nodejs.org/en/
 npm install -g bower
 ```
 
-Clone repository to local `modular-admin` folder
+Clone repository to local `modular-admin-html` folder
 ```
-git clone git@github.com:modularcode/modular-admin-html.git modular-admin
+git clone https://github.com/modularcode/modular-admin-html.git
 ```
 
 Change to new folder
 ```
-cd modular-admin
+cd modular-admin-html
 ```
 
 Install npm dependencies 
