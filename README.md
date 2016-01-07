@@ -120,7 +120,7 @@ This file structuring makes our app file organization very semantic and scalable
 ├── _themes/                           # different theming versions
 ├── app/                               # app module (dashboard view)
 │   ├── _common/                       # app common components
-│   |   ├── editor/                    # whyiwyg editor files
+│   |   ├── editor/                    # wysiwyg editor files
 │   |   ├── footer/                    # footer files
 │   |   ├── header/                    # header files
 │   |   ├── modals/                    # common modal dialogs (confirm, image library, etc)
@@ -257,11 +257,14 @@ Except application files there are also third party plugin files (e.g. Bootstrap
 
 ## Get in touch
 
-Usually we're discussing stuff [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/).
+Usually we're discussing stuff in [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/).
 Feel free to reach us for any questions, sugestions, remarks and potential feature requests.
 
-Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | [gevharut@gmail.com](mailto:gevharut@gmail.com)
+* Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | [gevharut@gmail.com](mailto:gevharut@gmail.com)
+* Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
+* David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
 
-Aram Manukyan [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
+## Hire Us
 
-David Tigranyan [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
+You have a great project? Need theme customization or intagration with back-end? Want to create something awesome?
+We may be available for hire. Just drop a message to [gevharut@gmail.com](mailto:gevharut@gmail.com) and let's talk.
