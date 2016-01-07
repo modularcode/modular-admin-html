@@ -243,7 +243,7 @@ Layouts can also have contexts and parent layouts.
 ```
 {_main-layout.hbs}                  # main layout with doctype, head, scripts declaration
     {app/app-layout.hbs}            # dashboard layout with sidebar, header and footer
-        {app/forms/forms-page.hbs}    # any dashboard page
+        {app/forms/forms-page.hbs}  # any dashboard page
 ```
 
 
