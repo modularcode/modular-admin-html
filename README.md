@@ -214,7 +214,7 @@ list:
   - Three
 ---
 ```
-and **_context.js** files ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/_context.js)).
+and **_context.js** files.
 ```
 module.exports = {
   foo: 'bar',
@@ -227,7 +227,7 @@ module.exports = {
 }
 ```
 
-The final result of page context is compination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. In our case we have ```src/_context.js``` file, where main website properties are defined and YAML headers in ```*-page.hbs``` files.
+The final result of page context is compination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. For simplicity we use only **YAML** headers.
 
 #### Layouts (*-layout.hbs)
 
@@ -235,9 +235,18 @@ If different pages have lot of common components like sidebar, header, footer, I
 
 Layout is a page content wrapper. If the page has layout in output we'll get page's content inserted into layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for page content. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/app-layout.hbs))
 
-To define a page layout you need to specify page file context's ```layout``` variable. It can be done both by YAML header or _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs))
+To define a page layout you need to specify page file context's ```layout``` variable. It can be done both by YAML header or _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs)).
 
-If you need more advanced layouting you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
+Layouts can also have contexts and parent layouts.
+
+```
+{_main-layout.hbs}                  # main layout with doctype, head, scripts declaration
+    {app/app-layout.hbs}            # dashboard layout with sidebar, header and footer
+      {app/forms/forms-page.hbs}    # any dashboard page
+```
+
+
+If you need more advanced layouting with multiple content blocks at the same time you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
 
 #### Vendor files
 
