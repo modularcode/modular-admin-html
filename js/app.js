@@ -79,6 +79,37 @@ $(function() {
 })
 //LoginForm validation
 $(function() {
+	if (!$('#reset-form').length) {
+        return false;
+    }
+
+    var resetValidationSettings = {
+	    rules: {
+	        email1: {
+	            required: true,
+	            email: true
+	        }
+	    },
+	    messages: {
+	        email1: {
+	            required: "Please enter email address",
+	            email: "Please enter a valid email address"
+	        }
+	    },
+	    invalidHandler: function() {
+			animate({
+				name: 'shake',
+				selector: '.auth-container > .card'
+			});
+		}
+	}
+
+	$.extend(resetValidationSettings, validationDefaultSettings);
+
+    $('#reset-form').validate(resetValidationSettings);
+})
+//LoginForm validation
+$(function() {
 	if (!$('#signup-form').length) {
         return false;
     }
@@ -165,37 +196,6 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
-//LoginForm validation
-$(function() {
-	if (!$('#reset-form').length) {
-        return false;
-    }
-
-    var resetValidationSettings = {
-	    rules: {
-	        email1: {
-	            required: true,
-	            email: true
-	        }
-	    },
-	    messages: {
-	        email1: {
-	            required: "Please enter email address",
-	            email: "Please enter a valid email address"
-	        }
-	    },
-	    invalidHandler: function() {
-			animate({
-				name: 'shake',
-				selector: '.auth-container > .card'
-			});
-		}
-	}
-
-	$.extend(resetValidationSettings, validationDefaultSettings);
-
-    $('#reset-form').validate(resetValidationSettings);
-})
 /***********************************************
 *        Animation Settings
 ***********************************************/
@@ -1053,20 +1053,6 @@ $(function() {
 	});
 
 });
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
-
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
-});
 $(function(){
 
 	// set sortable options
@@ -1134,6 +1120,20 @@ $(function() {
         drawItemsListSparklines();
     });
 
+});
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
+
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
 });
 $(function() {
 

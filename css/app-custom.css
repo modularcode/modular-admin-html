@@ -241,12 +241,6 @@ body {
     .alert.alert-inverse .alert-link {
       color: #e6e6e6; }
 
-.animated {
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-  -webkit-animation-delay: .1s;
-          animation-delay: .1s; }
-
 .btn {
   background-image: none;
   border-radius: 0;
@@ -566,6 +560,12 @@ body {
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
           transform: scaleX(0); }
+
+.animated {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s; }
 
 .card {
   background-color: #fff;
