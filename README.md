@@ -50,7 +50,7 @@ AngularJS, Angular2, React and Meteor versions are coming soon.
 
 Some of the components use new Flexbox Layout module which is available in modern browsers. Bootstrap4 is used as main fraimwork. 
 Please make sure if that's suitable for you [Flexbox browser support](http://caniuse.com/#feat=flexbox).
-
+<br>
 ## Getting Started
 
 For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have Bower installed globally.
@@ -88,6 +88,7 @@ Open the project [http://localhost:4000](http://localhost:4000).
 
 > The project is built by Gulp. You can read more info in [Build Tasks](#build-tasks) section
 
+<br>
 ## Folder Structure
 
 ```
@@ -120,7 +121,7 @@ This file structuring makes our app file organization very semantic and scalable
 ├── _themes/                           # different theming versions
 ├── app/                               # app module (dashboard view)
 │   ├── _common/                       # app common components
-│   |   ├── editor/                    # whyiwyg editor files
+│   |   ├── editor/                    # wysiwyg editor files
 │   |   ├── footer/                    # footer files
 │   |   ├── header/                    # header files
 │   |   ├── modals/                    # common modal dialogs (confirm, image library, etc)
@@ -161,8 +162,8 @@ In this folder are located files related to our application building. That can b
 Compiled state of our app with processed styles, templates, scripts and assets.
 
 **Warning! Never work inside this folder, because your changes would be overwritten on every build**
-pu
 
+<br>
 ## File Types
 
 Our app consists of different file types.
@@ -214,7 +215,7 @@ list:
   - Three
 ---
 ```
-and **_context.js** files ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/_context.js)).
+and **_context.js** files.
 ```
 module.exports = {
   foo: 'bar',
@@ -227,7 +228,7 @@ module.exports = {
 }
 ```
 
-The final result of page context is compination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. In our case we have ```src/_context.js``` file, where main website properties are defined and YAML headers in ```*-page.hbs``` files.
+The final result of page context is compination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. For simplicity we use only **YAML** headers.
 
 #### Layouts (*-layout.hbs)
 
@@ -235,24 +236,37 @@ If different pages have lot of common components like sidebar, header, footer, I
 
 Layout is a page content wrapper. If the page has layout in output we'll get page's content inserted into layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for page content. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/app-layout.hbs))
 
-To define a page layout you need to specify page file context's ```layout``` variable. It can be done both by YAML header or _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs))
+To define a page layout you need to specify page file context's ```layout``` variable. It can be done both by YAML header or _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs)).
 
-If you need more advanced layouting you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
+Layouts can also have contexts and parent layouts.
+
+```
+{_main-layout.hbs}                  # main layout with doctype, head, scripts declaration
+    {app/app-layout.hbs}            # dashboard layout with sidebar, header and footer
+        {app/forms/forms-page.hbs}  # any dashboard page
+```
+
+
+If you need more advanced layouting with multiple content blocks at the same time you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
 
 #### Vendor files
 
 Except application files there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all script and style files correspondingally to ```dist/js/vendor.js```and ```dist/css/vendor.css``` also will copy all assets to ```dist/assets/``` folder.
 
+<br>
 ## Build Tasks
 
-
+<br>
 ## Get in touch
 
-Usually we're discussing stuff [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/).
+Usually we're discussing stuff in [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/).
 Feel free to reach us for any questions, sugestions, remarks and potential feature requests.
 
-Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | [gevharut@gmail.com](mailto:gevharut@gmail.com)
+* Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | [gevharut@gmail.com](mailto:gevharut@gmail.com)
+* Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
+* David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
 
-Aram Manukyan [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
+## Hire Us?
 
-David Tigranyan [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
+Do you have a great project? Need theme customization or intagration with back-end? Want to create something awesome?
+We may be available for hire. Just drop a message to [gevharut@gmail.com](mailto:gevharut@gmail.com) and let's talk.
