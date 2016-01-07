@@ -50,7 +50,7 @@ AngularJS, Angular2, React and Meteor versions are coming soon.
 
 Some of the components use new Flexbox Layout module which is available in modern browsers. Bootstrap4 is used as main fraimwork. 
 Please make sure if that's suitable for you [Flexbox browser support](http://caniuse.com/#feat=flexbox).
-
+<br>
 ## Getting Started
 
 For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have Bower installed globally.
@@ -88,6 +88,7 @@ Open the project [http://localhost:4000](http://localhost:4000).
 
 > The project is built by Gulp. You can read more info in [Build Tasks](#build-tasks) section
 
+<br>
 ## Folder Structure
 
 ```
@@ -161,8 +162,8 @@ In this folder are located files related to our application building. That can b
 Compiled state of our app with processed styles, templates, scripts and assets.
 
 **Warning! Never work inside this folder, because your changes would be overwritten on every build**
-pu
 
+<br>
 ## File Types
 
 Our app consists of different file types.
@@ -252,9 +253,10 @@ If you need more advanced layouting with multiple content blocks at the same tim
 
 Except application files there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all script and style files correspondingally to ```dist/js/vendor.js```and ```dist/css/vendor.css``` also will copy all assets to ```dist/assets/``` folder.
 
+<br>
 ## Build Tasks
 
-
+<br>
 ## Get in touch
 
 Usually we're discussing stuff in [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/).
@@ -264,7 +266,7 @@ Feel free to reach us for any questions, sugestions, remarks and potential featu
 * Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
 * David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
 
-## Hire Us
+## Hire Us?
 
-You have a great project? Need theme customization or intagration with back-end? Want to create something awesome?
+Do you have a great project? Need theme customization or intagration with back-end? Want to create something awesome?
 We may be available for hire. Just drop a message to [gevharut@gmail.com](mailto:gevharut@gmail.com) and let's talk.
