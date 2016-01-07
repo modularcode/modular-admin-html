@@ -24,6 +24,24 @@ config.chart = {};
 
 config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));
 config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));
+$(function() {
+	animate({
+		name: 'flipInY',
+		selector: '.error-card > .error-title-block'
+	});
+
+
+	setTimeout(function(){
+		var $el = $('.error-card > .error-container');
+
+		animate({
+			name: 'fadeInUp',
+			selector: $el 
+		});
+
+		$el.addClass('visible');
+	}, 1000);
+})
 //LoginForm validation
 $(function() {
 	if (!$('#login-form').length) {
@@ -178,24 +196,6 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
-$(function() {
-	animate({
-		name: 'flipInY',
-		selector: '.error-card > .error-title-block'
-	});
-
-
-	setTimeout(function(){
-		var $el = $('.error-card > .error-container');
-
-		animate({
-			name: 'fadeInUp',
-			selector: $el 
-		});
-
-		$el.addClass('visible');
-	}, 1000);
-})
 /***********************************************
 *        Animation Settings
 ***********************************************/
@@ -1053,6 +1053,20 @@ $(function() {
 	});
 
 });
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
+
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
+});
 $(function(){
 
 	// set sortable options
@@ -1120,20 +1134,6 @@ $(function() {
         drawItemsListSparklines();
     });
 
-});
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
-
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
 });
 $(function() {
 
