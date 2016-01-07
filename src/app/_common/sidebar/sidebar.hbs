@@ -6,14 +6,14 @@
 		<nav class="menu">
 			<ul class="nav metismenu" id="sidebar-menu">
 
-				<li {{#is page "===" "dashboard"}}class="active"{{/is}} >
+				<li {{#is pagename "===" "dashboard"}}class="active"{{/is}} >
 					<a href="index.html">
 						<i class="fa fa-home"></i> Dashboard
 					</a>
 				</li>
 
 
-				<li {{#is page "in" "items-list,item-editor"}}class="active open"{{/is}} >
+				<li {{#is pagename "in" "items-list,item-editor"}}class="active open"{{/is}} >
 
 					<a href="">
 						<i class="fa fa-th-large"></i> Items Manager
@@ -21,13 +21,13 @@
 					</a>
 
 					<ul>
-						<li {{#is page "===" "items-list"}}class="active"{{/is}} >
+						<li {{#is pagename "===" "items-list"}}class="active"{{/is}} >
 							<a href="items-list.html">
 								Items List
 							</a>
 						</li>
 
-						<li {{#is page "===" "item-editor"}}class="active"{{/is}} >
+						<li {{#is pagename "===" "item-editor"}}class="active"{{/is}} >
 							<a href="item-editor.html">
 								Item Editor
 							</a>
@@ -35,20 +35,20 @@
 					</ul>
 				</li>
 
-				<li {{#is page "in" "charts-flot,charts-morris"}}class="active open"{{/is}} >
+				<li {{#is pagename "in" "charts-flot,charts-morris"}}class="active open"{{/is}} >
 					<a href="">
 						<i class="fa fa-bar-chart"></i> Charts 
 						<i class="fa arrow"></i>
 					</a>
 
 					<ul>
-						<li {{#is page "===" "charts-flot"}}class="active"{{/is}} >
+						<li {{#is pagename "===" "charts-flot"}}class="active"{{/is}} >
 							<a href="charts-flot.html">
 								Flot Charts
 							</a>
 						</li>
 
-						<li {{#is page "===" "charts-morris"}}class="active"{{/is}} >
+						<li {{#is pagename "===" "charts-morris"}}class="active"{{/is}} >
 							<a href="charts-morris.html">
 								Morris Charts
 							</a>
@@ -56,20 +56,20 @@
 					</ul>
 				</li>
 
-				<li {{#is page "in" "static-tables,responsive-tables"}}class="active open"{{/is}} >
+				<li {{#is pagename "in" "static-tables,responsive-tables"}}class="active open"{{/is}} >
 					<a href="">
 						<i class="fa fa-table"></i> Tables
 						<i class="fa arrow"></i>
 					</a>
 
 					<ul>
-						<li {{#is page "===" "static-tables"}}class="active"{{/is}} >
+						<li {{#is pagename "===" "static-tables"}}class="active"{{/is}} >
 							<a href="static-tables.html">
 								Static Tables
 							</a>
 						</li>
 
-						<li {{#is page "===" "responsive-tables"}}class="active"{{/is}} >
+						<li {{#is pagename "===" "responsive-tables"}}class="active"{{/is}} >
 							<a href="responsive-tables.html">
 								Responsive Tables
 							</a>
@@ -78,13 +78,13 @@
 					</ul>
 				</li>
 
-				<li {{#is page "===" "forms"}}class="active"{{/is}} >
+				<li {{#is pagename "===" "forms"}}class="active"{{/is}} >
 					<a href="forms.html">
 						<i class="fa fa-pencil-square-o"></i> Forms
 					</a>
 				</li>
 
-				<li {{#is page "in" "buttons,grid,icons,cards,typography"}}
+				<li {{#is pagename "in" "buttons,grid,icons,cards,typography"}}
 						class="active open"
 					{{/is}} >
 					<a href="">
@@ -93,31 +93,31 @@
 					</a>
 
 					<ul>
-						<li {{#is page "===" "buttons"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "buttons"}}class="active"{{/is}}>
 							<a href="buttons.html">
 								Buttons
 							</a>
 						</li>
 						
-						<li {{#is page "===" "cards"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "cards"}}class="active"{{/is}}>
 							<a href="cards.html">
 								Cards
 							</a>
 						</li>
 
-						<li {{#is page "===" "typography"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "typography"}}class="active"{{/is}}>
 							<a href="typography.html">
 								Typography
 							</a>
 						</li>
 
-						<li {{#is page "===" "icons"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "icons"}}class="active"{{/is}}>
 							<a href="icons.html">
 								Icons
 							</a>
 						</li>
 
-						<li {{#is page "===" "grid"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "grid"}}class="active"{{/is}}>
 							<a href="grid.html">
 								Grid
 							</a>
@@ -125,7 +125,7 @@
 					</ul>
 				</li>
 
-				<li {{#is page "in" "login,signup,reset,error-404,error-500"}}
+				<li {{#is pagename "in" "login,signup,reset,error-404,error-500"}}
 						class="active open"
 					{{/is}} >
 
@@ -135,43 +135,43 @@
 					</a>
 
 					<ul>
-						<li {{#is page "===" "login"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "login"}}class="active"{{/is}}>
 							<a href="login.html">
 								Login
 							</a>
 						</li>
 						
-						<li {{#is page "===" "signup"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "signup"}}class="active"{{/is}}>
 							<a href="signup.html">
 								Sign Up
 							</a>
 						</li>
 
-						<li {{#is page "===" "reset"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "reset"}}class="active"{{/is}}>
 							<a href="reset.html">
 								Reset
 							</a>
 						</li>
 
-						<li {{#is page "===" "error-404"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "error-404"}}class="active"{{/is}}>
 							<a href="error-404.html">
 								Error 404 App
 							</a>
 						</li>
 
-						<li {{#is page "===" "error-404-alt"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "error-404-alt"}}class="active"{{/is}}>
 							<a href="error-404-alt.html">
 								Error 404 Global
 							</a>
 						</li>
 
-						<li {{#is page "===" "error-500"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "error-500"}}class="active"{{/is}}>
 							<a href="error-500.html">
 								Error 500 App
 							</a>
 						</li>
 
-						<li {{#is page "===" "error-500-alt"}}class="active"{{/is}}>
+						<li {{#is pagename "===" "error-500-alt"}}class="active"{{/is}}>
 							<a href="error-500-alt.html">
 								Error 500 Global
 							</a>
@@ -179,7 +179,7 @@
 					</ul>
 				</li>
 
-				<li {{#is page "===" "docs"}}class="active"{{/is}} >
+				<li {{#is pagename "===" "docs"}}class="active"{{/is}} >
 					<a href="https://github.com/modularcode/modular-admin-html">
 						<i class="fa fa-github-alt"></i> Theme Docs
 					</a>
