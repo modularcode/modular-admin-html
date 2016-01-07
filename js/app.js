@@ -24,55 +24,6 @@ config.chart = {};
 
 config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));
 config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));
-$(function() {
-	animate({
-		name: 'flipInY',
-		selector: '.error-card > .error-title-block'
-	});
-
-
-	setTimeout(function(){
-		var $el = $('.error-card > .error-container');
-
-		animate({
-			name: 'fadeInUp',
-			selector: $el 
-		});
-
-		$el.addClass('visible');
-	}, 1000);
-})
-//LoginForm validation
-$(function() {
-	if (!$('#reset-form').length) {
-        return false;
-    }
-
-    var resetValidationSettings = {
-	    rules: {
-	        email1: {
-	            required: true,
-	            email: true
-	        }
-	    },
-	    messages: {
-	        email1: {
-	            required: "Please enter email address",
-	            email: "Please enter a valid email address"
-	        }
-	    },
-	    invalidHandler: function() {
-			animate({
-				name: 'shake',
-				selector: '.auth-container > .card'
-			});
-		}
-	}
-
-	$.extend(resetValidationSettings, validationDefaultSettings);
-
-    $('#reset-form').validate(resetValidationSettings);
-})
 //LoginForm validation
 $(function() {
 	if (!$('#login-form').length) {
@@ -107,6 +58,37 @@ $(function() {
 	$.extend(loginValidationSettings, validationDefaultSettings);
 
     $('#login-form').validate(loginValidationSettings);
+})
+//LoginForm validation
+$(function() {
+	if (!$('#reset-form').length) {
+        return false;
+    }
+
+    var resetValidationSettings = {
+	    rules: {
+	        email1: {
+	            required: true,
+	            email: true
+	        }
+	    },
+	    messages: {
+	        email1: {
+	            required: "Please enter email address",
+	            email: "Please enter a valid email address"
+	        }
+	    },
+	    invalidHandler: function() {
+			animate({
+				name: 'shake',
+				selector: '.auth-container > .card'
+			});
+		}
+	}
+
+	$.extend(resetValidationSettings, validationDefaultSettings);
+
+    $('#reset-form').validate(resetValidationSettings);
 })
 //LoginForm validation
 $(function() {
@@ -196,6 +178,24 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
+$(function() {
+	animate({
+		name: 'flipInY',
+		selector: '.error-card > .error-title-block'
+	});
+
+
+	setTimeout(function(){
+		var $el = $('.error-card > .error-container');
+
+		animate({
+			name: 'fadeInUp',
+			selector: $el 
+		});
+
+		$el.addClass('visible');
+	}, 1000);
+})
 /***********************************************
 *        Animation Settings
 ***********************************************/
@@ -955,43 +955,6 @@ $(function() {
 });
 $(function() {
 
-    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
-
-    if (!$dashboardSalesBreakdownChart.length) {
-        return false;
-    } 
-
-    function drawSalesChart(){
-
-    $dashboardSalesBreakdownChart.empty();
-
-        Morris.Donut({
-            element: 'dashboard-sales-breakdown-chart',
-            data: [{ label: "Download Sales", value: 12 },
-                { label: "In-Store Sales", value: 30 },
-                { label: "Mail-Order Sales", value: 20 } ],
-            resize: true,
-            colors: [
-                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
-                config.chart.colorPrimary.toString()
-            ],
-        });
-
-        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
-
-        setSameHeights($sameheightContainer);
-    }
-
-    drawSalesChart();
-
-    watch(config.chart, function(){
-       drawSalesChart();
-    });
-    
-})
-$(function() {
-
     var $dashboardSalesMap = $('#dashboard-sales-map');
 
     if (!$dashboardSalesMap.length) {
@@ -1042,6 +1005,43 @@ $(function() {
 });
 $(function() {
 
+    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
+
+    if (!$dashboardSalesBreakdownChart.length) {
+        return false;
+    } 
+
+    function drawSalesChart(){
+
+    $dashboardSalesBreakdownChart.empty();
+
+        Morris.Donut({
+            element: 'dashboard-sales-breakdown-chart',
+            data: [{ label: "Download Sales", value: 12 },
+                { label: "In-Store Sales", value: 30 },
+                { label: "Mail-Order Sales", value: 20 } ],
+            resize: true,
+            colors: [
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
+                config.chart.colorPrimary.toString()
+            ],
+        });
+
+        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
+
+        setSameHeights($sameheightContainer);
+    }
+
+    drawSalesChart();
+
+    watch(config.chart, function(){
+       drawSalesChart();
+    });
+    
+})
+$(function() {
+
 	$('.actions-list > li').on('click', '.check', function(e){
 		e.preventDefault();
 
@@ -1052,20 +1052,6 @@ $(function() {
 		removeActionList();
 	});
 
-});
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
-
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
 });
 $(function(){
 
@@ -1134,6 +1120,20 @@ $(function() {
         drawItemsListSparklines();
     });
 
+});
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
+
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
 });
 $(function() {
 
