@@ -13,8 +13,8 @@
     <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/archive/master.zip" target="_blank">Download ZIP</a>
   </strong>
 </p>
-[ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme
-built in modular way. That makes it awesomely easy to scale, modify and maintain.
+[ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
+
 ### Main features
 
 * HTML5 + CSS3 with FlexBox
@@ -48,8 +48,8 @@ AngularJS, Angular2, React and Meteor versions are coming soon.
 * Android 4.4+, Chrome for Android 44+
 * iOS Safari 7+
 
-Some of the components use new Flexbox Layout module which is available in modern browsers. Bootstrap4 is used as main fraimwork. 
-Please make sure if that's suitable for you [Flexbox browser support](http://caniuse.com/#feat=flexbox).
+Some of the components use the new Flexbox Layout module which is available in most modern browsers. Bootstrap4 is used as main framework. Please make sure that it's suitable for you: [Flexbox browser support](http://caniuse.com/#feat=flexbox).
+
 <br>
 ## Getting Started
 
@@ -59,12 +59,12 @@ For assembling the application, you need to have [NodeJs](https://nodejs.org/en/
 npm install -g bower
 ```
 
-Clone repository to local `modular-admin-html` folder
+Clone repository to the local `modular-admin-html` folder
 ```
 git clone https://github.com/modularcode/modular-admin-html.git
 ```
 
-Change to new folder
+Change to the new folder
 ```
 cd modular-admin-html
 ```
@@ -103,22 +103,23 @@ Open the project [http://localhost:4000](http://localhost:4000).
 
 #### ```src/``` folder
 
-In this folder are our application source files located. 
-The folder structure represents app component structure.
+This folder contains our application source files. 
+The folder structure reflects the app component structure.
+
 
 Each non-underscored folder represents a single component module. Modules can be nested inside each other.
 
-There are also special folders which start with underscore. 
-For example ```_common/``` folder contains common components that are used by other components at the same lavel.
+There are also special folders which start with an underscore. 
+For example ```_common/``` folder contains common components that are used by other components at the same level.
 
-This file structuring makes our app file organization very semantic and scalable. Also It's very easy to work on separate components even if we're developing large-scale application.
+This file structuring makes our app file organization very semantic and scalable. Also It's very easy to work on separate components even if you're developing large-scale applications.
 
 ```
 ├── _assets/                           # application assets
 ├── _common/                           # common components
 |   ├── helpers/                       # handlebars helpers
 |   └── styles/                        # application common styles
-├── _themes/                           # different theming versions
+├── _themes/                           # different theme versions
 ├── app/                               # app module (dashboard view)
 │   ├── _common/                       # app common components
 │   |   ├── editor/                    # wysiwyg editor files
@@ -143,7 +144,7 @@ This file structuring makes our app file organization very semantic and scalable
 
 #### ```build/``` folder
 
-In this folder are located files related to our application building. That can be stype preprocessors and template engine compilation, script files concatenation and minification and other related tasks.
+This folder contains files related to our application compilation. That can be styles preprocessing (LESS,SASS,PostCSS) and template engine compilation, script file concatenation and minification and other related tasks.
 
 ```
 ├── paths/                           # application file paths
@@ -172,7 +173,7 @@ Our app consists of different file types.
 
 We use [SASS](http://sass-lang.com/) as CSS preprocessor language. 
 Main variables are defined in ```src/_variables.scss``` folder. 
-For making life easier we broke down styles into components, and on build we're just merging all ```.scss``` files together and processing it to ```dist/css/app.css``` file. Style files are merged in following order
+For making life easier we broke down styles into components, and on build we're just merging all ```.scss``` files together and processing it to ```dist/css/app.css``` file. Style files are merged in the following order
 
 ```
 {variables.scss}
@@ -180,13 +181,13 @@ For making life easier we broke down styles into components, and on build we're 
 {bootstrap mixins}
 {rest style files}
 ```
-The rest style files are merged in alphabetical order depending on their deepth level.
+The remaining style files are merged in the alphabetical order.
 
-There are also different theme variations located in ```src/_themes/``` folder, where you can overwrite main variables and get different themes. There are few predefined themes built in. You can add new theme by adding new file in ```src/_themes/``` folder. The file name should end with ```-theme.scss```.
+There are also different theme variations located in ```src/_themes/ folder```, where you can change the main variables to get different themes. There are a few predefined themes built in. You can add new themes by adding a new file in ```src/_themes/``` folder. The file name must end with ```-theme.scss```.
 
 #### Scripts (*.js)
 
-We separate application's scripts across it's components. For simplicity we use ES5 in this version and just wrap each component's script in  jQuery ```$(function() { })```. JS configurations are defined in ```src/config.js``` file. On build application script files are merged together and copied to ```dist/js/app.js``` fole. Script files are merged in following order
+We separate application's scripts across its components. For simplicity we use ES5 in this version, and just wrap each component's script in jQuery ```$(function() { })```. JS configurations are defined in ```src/config.js``` file. On build, application script files are merged together and copied to ```dist/js/app.js``` folder. The script files are merged in the following order.
 
 ```
 {config.js}
@@ -196,13 +197,13 @@ We separate application's scripts across it's components. For simplicity we use 
 
 #### Templates (*.hbs)
 
-Templates are pieces of HTML files written in template engine language. We use [Handlebars](http://handlebarsjs.com/), which allows to have conditions in HTML, reuse partials in different pages (e.g. sidebars, footers), use loops, layouts etc. 
+Templates are pieces of HTML files written in template engine language. We use [Handlebars](http://handlebarsjs.com/), which allows to have conditions in HTML, reuse partials in different pages (e.g. sidebars, footers), use loops, layouts etc.
 
 #### Pages (*-page.hbs)
 
-Templates themselves are just parts of markup, and aren't compiled as separate files. What we really want in final output is ```.html``` page in ```dist/``` folder. For that reason there are special handlebar templates which filenames end with ```-page.hbs```. Each ```{pagename}-page.hbs``` file would be compiled to ```dist/{pagename}.html``` page with flatened file structure.
+Templates themselves are just parts of the markup, and aren't compiled as separate files. What we really want in the final output is a ```.html``` page in the ```dist/``` folder. There are special handlebar templates for it, their filenames ending with ```-page.hbs```. Each ```{pagename}-page.hbs``` file would be compiled to ```dist/{pagename}.html``` page with a flatened file structure.
 
-Pages can consist of different templates (partials) which can be included thanks to handlebars partial including. Also each page have it's context which is data passed into template on rendering. That data is used in template expressions and variables. page contexts can be defined in two ways: 
+Pages can consist of different templates (partials) which can be included thanks to handlebars partial including feature. Also each page has its context, which is a data passed into the template on rendering. That data is used in template expressions and variables. page contexts can be defined in two ways:
 
 **YAML** headers ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/dashboard/index-page.hbs))
 
@@ -228,15 +229,15 @@ module.exports = {
 }
 ```
 
-The final result of page context is compination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. For simplicity we use only **YAML** headers.
+The final result of page context is a combination of both ways. Moreover, different depth level _context.js files are extending each other and then are extended with YAML headers data. For simplicity we use only **YAML** headers.
 
 #### Layouts (*-layout.hbs)
 
-If different pages have lot of common components like sidebar, header, footer, It's a good idea to define a layout for those common pages and define in page files only the content which is unique. 
+If different pages have a lot of common components like sidebars, headers, footers, then it's a good idea to define a layout for those common pages, and define in page files only the content which is unique.
 
-Layout is a page content wrapper. If the page has layout in output we'll get page's content inserted into layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for page content. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/app-layout.hbs))
+Layout is a page content wrapper. If the page has a layout in output we'll get page's content inserted into the layout. Layouts should have ```{{{body}}}``` handlebars tag, which is entry point for the page content. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/app-layout.hbs))
 
-To define a page layout you need to specify page file context's ```layout``` variable. It can be done both by YAML header or _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs)).
+To define a page layout you need to specify page file context's ```layout``` variable. It can be done both with a YAML header or a _context.js file. ([example](https://github.com/modularcode/modular-admin-html/blob/master/src/app/forms/forms-page.hbs)).
 
 Layouts can also have contexts and parent layouts.
 
@@ -251,7 +252,7 @@ If you need more advanced layouting with multiple content blocks at the same tim
 
 #### Vendor files
 
-Except application files there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all script and style files correspondingally to ```dist/js/vendor.js```and ```dist/css/vendor.css``` also will copy all assets to ```dist/assets/``` folder.
+In addition to application files, there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all the script and style files accordingly to ```dist/js/vendor.js``` and ```dist/css/vendor.css```. It also will copy all assets to the ```dist/assets/``` folder.
 
 <br>
 ## Build Tasks
@@ -259,8 +260,8 @@ Except application files there are also third party plugin files (e.g. Bootstrap
 <br>
 ## Get in touch
 
-Usually we're discussing stuff in [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/).
-Feel free to reach us for any questions, sugestions, remarks and potential feature requests.
+Usually we're discussing stuff in the [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
+Feel free to contact us with any questions, sugestions, remarks and potential feature requests that you might have.
 
 * Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | [gevharut@gmail.com](mailto:gevharut@gmail.com)
 * Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
