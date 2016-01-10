@@ -41,17 +41,6 @@ The cloned repository desn't contain prebuilt version of the project and you nee
 This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
 AngularJS, Angular2, React and Meteor versions are coming soon.
 
-### Main features
-
-* HTML5 + CSS3 with FlexBox
-* jQuery
-* Bootstrap4 
-* SASS
-* Hanldebars with layouts
-* Gulp 
-* Bower
-
-
 ### Table of contents
 
   * [Browser support](#browser-support)
