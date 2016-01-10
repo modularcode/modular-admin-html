@@ -15,6 +15,30 @@
 </p>
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
 
+### Other versions
+
+This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
+AngularJS, Angular2, React and Meteor versions are coming soon.
+
+## Download
+
+You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
+
+#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip)
+
+The downloaded zip file will contain ```dist/``` folder which is compiled version of the project (with all scripts are merged together, processed styles and templates). You can use it as final result, but for development you should use aplication sources locaed in ```src/``` folder and rebuild the project. See [development](#development).
+
+**Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
+
+#### Git clone
+
+Clone repository to the local `modular-admin-html` folder
+```
+git clone https://github.com/modularcode/modular-admin-html.git
+```
+
+The cloned repository desn't contain prebuilt version of the project and you need to build it, See [development](#development).
+
 ### Main features
 
 * HTML5 + CSS3 with FlexBox
@@ -25,15 +49,10 @@
 * Gulp 
 * Bower
 
-### Other versions
-
-This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
-AngularJS, Angular2, React and Meteor versions are coming soon.
 
 ### Table of contents
 
   * [Browser support](#browser-support)
-  * [Download](#download)
   * [Development](#development)
   * [Folder structure](#folder-structure)
   * [File types](#file-types)
@@ -52,34 +71,11 @@ AngularJS, Angular2, React and Meteor versions are coming soon.
 Some of the components use the new Flexbox Layout module which is available in most modern browsers. Bootstrap4 is used as main framework. Please make sure that it's suitable for you: [Flexbox browser support](http://caniuse.com/#feat=flexbox).
 
 <br>
-## Download
-
-You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
-
-#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip)
-
-The downloaded zip file will contain ```dist/``` folder which is compiled version of the project (with all scripts are merged together, processed styles and templates). You can use it as final result, but for development you should use aplication sources locaed in ```src/``` folder and rebuild the project. See [development](#development).
-
-**Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
-
-#### Git clone
-
-Clone repository to the local `modular-admin-html` folder
-```
-git clone https://github.com/modularcode/modular-admin-html.git
-```
-
-Change to the new folder
-```
-cd modular-admin-html
-```
-
-The cloned repository desn't contain prebuilt version of the project and you need to build it, See [development](#development).
-
 ## Development
 
 For building the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
-From the project folder run the following commands:
+
+After [downloading](#download) run the following commands from the project folder:
 
 Install bower globally
 ```
