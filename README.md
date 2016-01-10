@@ -15,10 +15,7 @@
 </p>
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
 
-### Other versions
 
-This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
-AngularJS, Angular2, React and Meteor versions are coming soon.
 
 ## Download
 
@@ -38,6 +35,11 @@ git clone https://github.com/modularcode/modular-admin-html.git
 ```
 
 The cloned repository desn't contain prebuilt version of the project and you need to build it, See [development](#development).
+
+## Other versions
+
+This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
+AngularJS, Angular2, React and Meteor versions are coming soon.
 
 ### Main features
 
