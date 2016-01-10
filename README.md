@@ -33,7 +33,8 @@ AngularJS, Angular2, React and Meteor versions are coming soon.
 ### Table of contents
 
   * [Browser support](#browser-support)
-  * [Getting started](#getting-started)
+  * [Download](#download)
+  * [Development](#development)
   * [Folder structure](#folder-structure)
   * [File types](#file-types)
   * [Build tasks](#build-tasks)
@@ -51,13 +52,17 @@ AngularJS, Angular2, React and Meteor versions are coming soon.
 Some of the components use the new Flexbox Layout module which is available in most modern browsers. Bootstrap4 is used as main framework. Please make sure that it's suitable for you: [Flexbox browser support](http://caniuse.com/#feat=flexbox).
 
 <br>
-## Getting Started
+## Download
 
-For assembling the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have Bower installed globally.
+You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
 
-```
-npm install -g bower
-```
+#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip)
+
+The downloaded zip file will contain ```dist/``` folder which is compiled version of the project (with all scripts are merged together, processed styles and templates). You can use it as final result, but for development you should use aplication sources locaed in ```src/``` folder and rebuild the project. See [development](#development).
+
+**Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
+
+#### Git clone
 
 Clone repository to the local `modular-admin-html` folder
 ```
@@ -67,6 +72,18 @@ git clone https://github.com/modularcode/modular-admin-html.git
 Change to the new folder
 ```
 cd modular-admin-html
+```
+
+The cloned repository desn't contain prebuilt version of the project and you need to build it, See [development](#development).
+
+## Development
+
+For building the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
+From the project folder run the following commands:
+
+Install bower globally
+```
+npm install -g bower
 ```
 
 Install npm dependencies 
