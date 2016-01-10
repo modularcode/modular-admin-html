@@ -112,7 +112,7 @@ Open the project [http://localhost:4000](http://localhost:4000).
 ├── bower_components/       # vendor libraries installed by bower
 ├── build/                  # app build tasks and tools
 ├── node_modules/           # node dependencies        
-├── public/                 # compiled result
+├── dist/                   # compiled result
 ├── src/                    # source files
 │── bowere.json             # bower configuration file
 └── package.json            # npm configuration file
