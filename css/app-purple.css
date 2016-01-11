@@ -238,12 +238,6 @@ body {
     .alert.alert-inverse .alert-link {
       color: #e6e6e6; }
 
-.animated {
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
-  -webkit-animation-delay: .1s;
-          animation-delay: .1s; }
-
 .btn {
   background-image: none;
   border-radius: 0;
@@ -563,6 +557,12 @@ body {
   -webkit-transform: scaleX(0);
           transform: scaleX(0); }
 
+.animated {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s; }
+
 .card {
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
@@ -722,13 +722,6 @@ body {
 .card-footer {
   background-color: #fafafa; }
 
-.easy-pie-chart {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  background-color: #d7dde4;
-  border-radius: 5px; }
-
 .dropdown-menu {
   float: left;
   box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
@@ -750,6 +743,13 @@ body {
       color: #7867A7 !important;
       background: none;
       background-color: whitesmoke; }
+
+.easy-pie-chart {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: #d7dde4;
+  border-radius: 5px; }
 
 .flex-row {
   display: -webkit-box;
@@ -1770,16 +1770,6 @@ pre {
   max-width: 250px;
   max-height: 250px; }
 
-.dashboard-page #dashboard-sales-map .jqvmap-zoomin,
-.dashboard-page #dashboard-sales-map .jqvmap-zoomout {
-  background-color: #7867A7;
-  height: 20px;
-  width: 20px;
-  line-height: 14px; }
-
-.dashboard-page #dashboard-sales-map .jqvmap-zoomout {
-  top: 32px; }
-
 .dashboard-page .stats .card-block {
   padding-bottom: 0; }
 
@@ -1823,6 +1813,16 @@ pre {
     background-color: #7867A7; }
   .dashboard-page .stats .stat-progress[value]::-moz-progress-bar {
     background-color: #dddddd; }
+
+.dashboard-page #dashboard-sales-map .jqvmap-zoomin,
+.dashboard-page #dashboard-sales-map .jqvmap-zoomout {
+  background-color: #7867A7;
+  height: 20px;
+  width: 20px;
+  line-height: 14px; }
+
+.dashboard-page #dashboard-sales-map .jqvmap-zoomout {
+  top: 32px; }
 
 .dashboard-page .tasks {
   display: -webkit-box;
@@ -2509,6 +2509,17 @@ pre {
       -webkit-transform: scaleX(1);
               transform: scaleX(1); }
 
+.sidebar-header .brand {
+  color: #fff;
+  text-align: left;
+  padding-left: 25px;
+  line-height: 70px;
+  font-size: 16px; }
+  @media (max-width: 767px) {
+    .sidebar-header .brand {
+      line-height: 50px;
+      font-size: 16px; } }
+
 .customize {
   width: 100%;
   color: rgba(255, 255, 255, 0.5);
@@ -2601,17 +2612,6 @@ pre {
                 top: 0;
                 left: 0;
                 color: #fff; }
-
-.sidebar-header .brand {
-  color: #fff;
-  text-align: left;
-  padding-left: 25px;
-  line-height: 70px;
-  font-size: 16px; }
-  @media (max-width: 767px) {
-    .sidebar-header .brand {
-      line-height: 50px;
-      font-size: 16px; } }
 
 .header .header-block-nav .notifications {
   font-size: 16px; }
