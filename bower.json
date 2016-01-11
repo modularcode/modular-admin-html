@@ -1,6 +1,6 @@
 {
-  "name": "modularus",
-  "version": "0.0.1",
+  "name": "modular-admin-html",
+  "version": "1.0.0-beta",
   "devDependencies": {},
   "dependencies": {
     "animate.css": "~3.4.0",
