@@ -91,8 +91,8 @@
 
 				li {
 					display: inline-block;
-					margin-left: 8px;
-					margin-right: 8px;
+					margin-left: 5px;
+					margin-right: 5px;
 
 					.color-item {
 						display: block;
@@ -112,6 +112,11 @@
 						}
 
 						&.color-green {
+							background-color: #8CDE33;
+							border-color: #8CDE33;
+						}
+
+						&.color-seagreen {
 							background-color: #4bcf99;
 							border-color: #4bcf99;
 						}

@@ -92,7 +92,7 @@ $item-list-color-border: lighten($color-divider, 6%) !default;
 
 // Charts
 $chart-color-primary: $color-primary !default;
-$chart-color-secondary: lighten($color-primary, 10%) !default;
+$chart-color-secondary: lighten($chart-color-primary, 10%) !default;
 
 
 
