@@ -19,8 +19,7 @@
     "responsive-bootstrap-toolkit": "~2.5.0",
     "Sortable": "~1.4.2",
     "tether": "~1.1.1",
-    "tinycolor": "~1.2.1",
-    "Watch.JS": "watch#*"
+    "tinycolor": "~1.2.1"
   },
   "overrides": {
     "bootstrap": {
