@@ -60,8 +60,6 @@ $(function () {
 		setThemeControlsState();
 
 		saveThemeSettings();
-
-		$(document).trigger("themechange");
 	}
 
 	/************************************************
@@ -126,6 +124,8 @@ $(function () {
 		setTimeout(function(){ 
 			config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));	
 			config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));	
+
+			$(document).trigger("themechange");
 		}, 200);
 	}
 

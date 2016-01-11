@@ -30,7 +30,7 @@ $(function() {
 
     drawSalesChart();
 
-    watch(config.chart, function(){
+    $(document).on("themechange", function(){
        drawSalesChart();
     });
     
