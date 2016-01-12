@@ -152,7 +152,11 @@ function setFrontMatter(file) {
 
 function getPageContextExternal(file) {
 
+	// Initial context
 	var context = {};
+
+	// Package data
+	context.pkg = require('../../package.json');
 
 	var rootDir = path.resolve(config.srcDir);
 	var pageDir = path.dirname(file.path);
