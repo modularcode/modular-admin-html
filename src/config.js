@@ -1,12 +1,7 @@
-var config = window.config = {
-	chart: {}
-};
+var config = window.config = {};
 
 // Config reference element
 var $ref = $("#ref");
-
-// set primary color	
-config.chart.colorPrimary = tinycolor($ref.find(".color-primary").css("color"));	
 
 // Configure responsive bootstrap toolkit
 config.ResponsiveBootstrapToolkitVisibilityDivs = {
@@ -18,6 +13,9 @@ config.ResponsiveBootstrapToolkitVisibilityDivs = {
 };
 
 ResponsiveBootstrapToolkit.use('Custom', config.ResponsiveBootstrapToolkitVisibilityDivs);
+
+//delay time configuration
+config.delayTime = 50;
 
 // chart configurations
 config.chart = {};
