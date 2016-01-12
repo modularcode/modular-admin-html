@@ -1,5 +1,6 @@
 .header .header-block-nav {
 	margin-left: auto;
+	white-space: nowrap;
 
 	@include clearfix();
 
@@ -14,10 +15,13 @@
 		list-style: none;
 	}
 
+	& > ul {
+		display: table;
+	}
+
 	// First level items
 	& > ul > li {
-		// display: inline-block;
-		float: left;
+		display: table-cell;
 		position: relative;
 
 		&:before {

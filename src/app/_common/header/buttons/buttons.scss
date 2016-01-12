@@ -2,19 +2,16 @@
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	white-space: nowrap;
 
-	.header-btn {
-		border: 1px solid $color-text;
-		color: $color-text;
-	}
+	.btn.header-btn {
+		background-color: transparent;
+		border: none;
+		color: lighten($color-text, 10%);
 
-	.header-btn:hover {
-		border: 1px solid $color-primary;
-		color: #ffffff;
-	}
-
-	.header-btn:focus {
-		border: 1px solid $color-primary;
-		color: #ffffff;
+		&:hover,
+		&:focus {
+			color: darken($color-text, 10%);
+		}
 	}
 }
