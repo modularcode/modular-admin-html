@@ -29,7 +29,7 @@ $(function() {
 		}
 	}
 
-	$.extend(loginValidationSettings, validationDefaultSettings);
+	$.extend(loginValidationSettings, config.validations);
 
     $('#login-form').validate(loginValidationSettings);
 })
