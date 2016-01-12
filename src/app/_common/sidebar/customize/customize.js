@@ -55,11 +55,18 @@ $(function () {
 	});
 
 	function setThemeSettings() {
-		setThemeColor();
-		setThemeState();
-		setThemeControlsState();
+		setThemeState()
+		.delay(config.delayTime)
+		.queue(function (next) {
 
-		saveThemeSettings();
+			setThemeColor();
+			setThemeControlsState();
+			saveThemeSettings();
+
+			$(document).trigger("themechange");	
+			
+			next();
+		});	
 	}
 
 	/************************************************
@@ -86,6 +93,8 @@ $(function () {
 
 		// set footer
 		$app.addClass(themeSettings.sidebarPosition);
+
+		return $app;
 	}
 
 	/************************************************
@@ -121,12 +130,8 @@ $(function () {
 	*			Update theme color
 	*************************************************/
 	function setThemeColor(){
-		setTimeout(function(){ 
-			config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));	
-			config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));	
-
-			$(document).trigger("themechange");
-		}, 200);
+		config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));	
+		config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));	
 	}
 
 	/************************************************
