@@ -25,7 +25,7 @@ $(function() {
 		}
 	}
 
-	$.extend(resetValidationSettings, validationDefaultSettings);
+	$.extend(resetValidationSettings, config.validations);
 
     $('#reset-form').validate(resetValidationSettings);
 })

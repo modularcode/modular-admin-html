@@ -82,7 +82,7 @@ $(function() {
 		}
 	}
 
-	$.extend(signupValidationSettings, validationDefaultSettings);
+	$.extend(signupValidationSettings, config.validations);
 
     $('#signup-form').validate(signupValidationSettings);
 });

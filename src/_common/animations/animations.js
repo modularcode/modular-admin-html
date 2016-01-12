@@ -1,7 +1,6 @@
 /***********************************************
 *        Animation Settings
 ***********************************************/
-
 function animate(options) {
 	var animationName = "animated " + options.name;
 	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
