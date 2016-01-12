@@ -1,0 +1,26 @@
+.header .header-block-buttons {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+	.buttons {
+		background-color: $color-divider;
+		border: 1px solid $color-text;
+	}
+
+	button:hover {
+		background-color: $color-divider;
+		border-color: $color-primary;
+		color: $color-primary;
+	}
+
+	button:active {
+		background-color: $color-divider;
+		border-color: $color-primary;
+	}
+
+	button:focus {
+		background-color: $color-divider;
+		border-color: $color-primary;
+	}
+}
