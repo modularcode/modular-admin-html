@@ -3,24 +3,18 @@
 	margin-left: auto;
 	margin-right: auto;
 
-	.buttons {
-		background-color: $color-divider;
+	.header-btn {
 		border: 1px solid $color-text;
+		color: $color-text;
 	}
 
-	button:hover {
-		background-color: $color-divider;
-		border-color: $color-primary;
-		color: $color-primary;
+	.header-btn:hover {
+		border: 1px solid $color-primary;
+		color: #ffffff;
 	}
 
-	button:active {
-		background-color: $color-divider;
-		border-color: $color-primary;
-	}
-
-	button:focus {
-		background-color: $color-divider;
-		border-color: $color-primary;
+	.header-btn:focus {
+		border: 1px solid $color-primary;
+		color: #ffffff;
 	}
 }
