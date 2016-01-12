@@ -10,7 +10,7 @@
 
 <p align="center">
   <strong>
-    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip" target="_blank">Download ZIP</a>
+    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-1.0.0-beta.zip" target="_blank">Download ZIP</a>
   </strong>
 </p>
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
@@ -19,9 +19,9 @@
 
 ## Download
 
-You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
+You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-1.0.0-beta.zip" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
 
-#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-v1.0.0-beta.zip)
+#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0-beta/modular-admin-html-1.0.0-beta.zip)
 
 The downloaded zip file will contain ```dist/``` folder which is compiled version of the project (with all scripts are merged together, processed styles and templates). You can use it as final result, but for development you should use aplication sources locaed in ```src/``` folder and rebuild the project. See [development](#development).
 
