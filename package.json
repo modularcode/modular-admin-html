@@ -4,9 +4,9 @@
   "description": "ModularAdmin: Free Dashboard Theme; html version",
   "repository": {
     "type": "git",
-    "url": "https://github.com/modularcode/modular-admin-free-dashboard-theme-html.git"
+    "url": "https://github.com/modularcode/modular-admin-html.git"
   },
-  "author": "",
+  "author": "ModularCode",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/modularcode/modular-admin-html/issues"
