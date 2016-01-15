@@ -6,11 +6,13 @@
 
 	.btn.header-btn {
 		background-color: transparent;
-		border: none;
+		border: 1px solid lighten($color-text, 10%);
 		color: lighten($color-text, 10%);
+		margin: 0 5px;
 
 		&:hover,
 		&:focus {
+			border: 1px solid darken($color-text, 10%);
 			color: darken($color-text, 10%);
 		}
 	}
