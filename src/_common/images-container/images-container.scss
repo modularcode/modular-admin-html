@@ -1,0 +1,129 @@
+.images-container {
+	@include clearfix();
+
+	// padding-top: 30px;
+
+	.image-container {
+		float: left;
+		padding: 3px;
+		margin-right: 10px;
+		margin-bottom: 35px;
+		position: relative;
+		border: 1px solid lighten($color-divider, 5%);
+		overflow: hidden;
+		// box-shadow: 0 0 3px #BFBFBF;
+		// border-radius: 3px;
+		
+
+		&.active {
+			border-color: $color-primary;
+		}
+
+		// .controls {
+			// transition: opacity .2s ease;
+			// opacity: 0;
+		// }
+
+		&:hover {
+			.controls {
+				bottom: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	.controls {
+		position: absolute;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		bottom: -35px;
+		text-align: center;
+		height: 35px;
+		// background-color: lighten($color-divider, 8%);
+		font-size: 24px;
+		transition: bottom 0.2s ease, opacity 0.2s ease;
+		background-color: #fff;
+
+		@include clearfix();
+
+		.control-btn {
+			display: inline-block;
+			color: $color-text;
+			// border-radius: 3px;
+			cursor: pointer;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			// color: $color-text-inverse;
+			opacity: 0.5;
+			transition: opacity 0.3s ease;
+
+			&:hover {
+				opacity: 1;
+			}
+
+
+
+			&.move {
+				cursor: move;
+			}
+
+			&.star {
+				color: #FFB300;
+
+				i:before{
+					content: "\f006";
+				}
+
+				&.active {
+					i:before{
+						content: "\f005";
+					}
+				}
+			}
+
+			&.remove {
+				color: $color-danger;
+			}
+		}
+	}
+
+	.image {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 130px;
+		height: 135px;
+		// cursor: pointer;
+		line-height: 135px;
+		text-align: center;
+		
+		
+
+		&:active {
+
+		}
+	}
+
+	.image-container.main {
+		border-color: #FFB300; 
+	}
+
+	.image-container.new {
+		opacity: 0.6;
+		transition: opacity 0.3s ease;
+		border-style: dashed;
+		border: 1px $color-primary solid;
+		color: $color-primary;
+
+		.image {
+			font-size: 2.5rem;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

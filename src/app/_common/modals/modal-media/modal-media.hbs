@@ -8,8 +8,49 @@
 				</button>
 				<h4 class="modal-title">Media Library</h4>
 			</div>
-			<div class="modal-body">
-				
+			<div class="modal-body modal-tab-container">
+
+				<ul class="modal-tabs">
+		            <li class="modal-tab-item">
+		            	<a href="#gallery">Gallery</a>
+		            </li>
+		            <li class="modal-tab-item">
+		            	<a class="active" href="#upload">Upload</a>
+		            </li>
+		        </ul>
+
+		        <div class="modal-tab-content">
+		        	<div class="modal-tab-pane fade" id="gallery">
+		        		<div class="images-container">
+							{{#each images}}
+								<div class="image-container">
+									<div class="controls">
+										<a href="" class="control-btn move">
+											<i class="fa fa-arrows"></i>
+										</a><!--
+										--><a href="" class="control-btn star">
+											<i class="fa"></i>
+										</a><!--
+										--><a href="#" class="control-btn remove" data-toggle="modal" data-target="#confirm-modal">
+											<i class="fa fa-trash-o"></i>
+										</a>
+									</div>
+									<div class="image" style="background-image:url('{{this.url}}')"></div>
+								</div>
+							{{/each}}
+						</div>
+		        	</div>
+		        	<div class="modal-tab-pane fade" id="upload">
+		        		<div id="dropzone">
+							<form action="/" method="POST" enctype="multipart/form-data" class="dropzone needsclick dz-clickable" id="demo-upload">
+								<div class="dz-message needsclick">
+									Drop files here or click to upload.<br>
+									<span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+								</div>
+							</form>
+						</div>
+		        	</div>
+		        </div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
