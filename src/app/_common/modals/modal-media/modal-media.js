@@ -21,3 +21,37 @@ var modalMedia = {
 		}
 	}
 };
+
+$(function(){
+
+	activateTab('#upload');
+
+	$('.modal-tab-item a').on('click', function(e){
+		e.preventDefault();
+		
+		activateTab(e.target.hash);
+	});
+
+	function activateTab(tabId){
+
+		var $modalTabs = $('.modal-tabs');
+		var $modalTabsPane = $('.modal-tab-pane');
+
+		// reset item tabs and panels
+		$modalTabs.find('a').removeClass('active');
+		$modalTabsPane.removeClass('active in ');
+		
+		// set active tab
+		var $activeTab = $modalTabs.find('a[href="' +  tabId + '"]');
+		
+		// activate current tab and pane
+		$activeTab.addClass('active');
+
+		$(tabId).addClass('active')
+		.delay(150)
+		.queue(function(next){
+		    $(this).addClass("in");
+		    next();
+		});
+	};
+})

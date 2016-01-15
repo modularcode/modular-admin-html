@@ -19,7 +19,8 @@
     "responsive-bootstrap-toolkit": "~2.5.0",
     "Sortable": "~1.4.2",
     "tether": "~1.1.1",
-    "tinycolor": "~1.2.1"
+    "tinycolor": "~1.2.1",
+    "dropzone": "~4.2.0"
   },
   "overrides": {
     "bootstrap": {
@@ -50,7 +51,7 @@
     "animate.css": {
       "main": "animate.css"
     },
-    "Sortable":{
+    "Sortable": {
       "main": [
         "Sortable.js",
         "jquery.binding.js"
@@ -61,6 +62,12 @@
         "dist/quill.js",
         "dist/quill.base.css",
         "dist/quill.snow.css"
+      ]
+    },
+    "dropzone": {
+      "main": [
+        "dist/dropzone.css",
+        "dist/dropzone.js"
       ]
     }
   }
