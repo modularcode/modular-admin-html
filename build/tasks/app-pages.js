@@ -56,6 +56,11 @@ module.exports.task = function(gulp, plugins, paths) {
 		// Flatten structure
 		.pipe(plugins.flatten())
 
+		// pretify html structure
+		.pipe(plugins.prettify({
+			indent_size: 4
+		}))
+
 		// Output
 		.pipe(gulp.dest(config.destDir));
 	
