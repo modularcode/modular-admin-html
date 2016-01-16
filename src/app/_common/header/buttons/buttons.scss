@@ -16,4 +16,8 @@
 			color: darken($color-text, 10%);
 		}
 	}
+
+	@include media-down(sm) {
+		display: none;
+	}
 }

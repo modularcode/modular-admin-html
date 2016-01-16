@@ -45,6 +45,8 @@
             }
 
             .modal-tab-content {
+                min-height: 300px;
+                
                 .modal-tab-pane {
                     display: none;
                     padding: 5px 10px;
