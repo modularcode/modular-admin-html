@@ -23,6 +23,10 @@
 				}
 			}
 
+			@include media-down(sm){
+				display: none;
+			}
+
 		}
 	}
 
