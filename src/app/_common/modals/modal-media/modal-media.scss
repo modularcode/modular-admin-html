@@ -1,13 +1,45 @@
 #modal-media {
-	.modal-dialog {
-		.modal-content {
-			.modal-body {
-				min-height: 250px;
+	.modal-body {
+		min-height: 250px;
 
-				.image-container {
-					margin-bottom: 10px;
-				}
+	}
+	
+	.modal-tab-content {
+        min-height: 300px;    
+    }
+
+	.images-container {
+		padding: 15px;
+		text-align: center;
+
+		.image-container {
+			margin: 0 auto 10px auto;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			display: inline-block;
+			float: none;
+
+			&:hover {
+				border-color: fade-out($color-primary, 0.5);
+			}
+
+			&.active {
+				border-color: fade-out($color-primary, 0.5);	
 			}
 		}
 	}
+
+	.upload-container {
+		padding: 15px;
+
+		.dropzone {
+			border: 2px dashed $color-divider;
+			height: 270px;
+
+			.dz-message {
+				margin: 5em 0;
+			}
+		}
+	}
+
 }
