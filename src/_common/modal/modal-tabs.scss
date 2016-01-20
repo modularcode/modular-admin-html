@@ -1,0 +1,41 @@
+.modal-body.modal-tab-container {
+    padding: 0;
+
+    .modal-tabs {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style:none;
+        background-color: #ffffff;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+
+        .modal-tab-item {
+            display: inline;
+
+            a {
+                display: inline-block;
+                padding: 10px 20px;
+            }
+
+            &:hover,
+            &.active {
+                a {
+                    border-bottom: 2px solid  $color-primary;
+                }
+            }
+
+            &.active {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .modal-tab-pane {
+        display: none;
+        padding: 0;
+
+        &.active {
+            display: block;
+        }
+    }
+}
