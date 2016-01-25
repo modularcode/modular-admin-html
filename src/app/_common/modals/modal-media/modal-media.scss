@@ -30,14 +30,25 @@
 	}
 
 	.upload-container {
-		padding: 15px;
+		padding: 15px;	
 
 		.dropzone {
-			border: 2px dashed $color-divider;
+			position: relative;
+			border: 2px dashed $color-primary;
 			height: 270px;
 
-			.dz-message {
-				margin: 5em 0;
+			.dz-message-block {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+
+				.dz-message {
+					margin: 0;
+					font-size: 24px;
+					color: $color-primary;
+					width: 230px;
+				}
 			}
 		}
 	}
