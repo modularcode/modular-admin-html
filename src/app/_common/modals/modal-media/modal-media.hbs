@@ -10,17 +10,17 @@
 			</div>
 			<div class="modal-body modal-tab-container">
 
-				<ul class="modal-tabs">
-		            <li class="modal-tab-item">
-		            	<a href="#gallery">Gallery</a>
+				<ul class="nav nav-tabs modal-tabs" role="tablist">
+		            <li class="nav-item">
+		            	<a class="nav-link" href="#gallery" data-toggle="tab" role="tab">Gallery</a>
 		            </li>
-		            <li class="modal-tab-item">
-		            	<a href="#upload">Upload</a>
+		            <li class="nav-item">
+		            	<a class="nav-link active" href="#upload" data-toggle="tab" role="tab">Upload</a>
 		            </li>
 		        </ul>
 
-		        <div class="modal-tab-content">
-		        	<div class="modal-tab-pane fade" id="gallery">
+		        <div class="tab-content modal-tab-content">
+		        	<div class="tab-pane fade" id="gallery" role="tabpanel">
 		        		<div class="images-container">
 		        			<div class="row">
 								{{#each gallery}}
@@ -33,13 +33,14 @@
 							</div>
 						</div>
 		        	</div>
-		        	<div class="modal-tab-pane fade" id="upload">
+		        	<div class="tab-pane fade active in" id="upload" role="tabpanel">
 		        		<div class="upload-container">
 			        		<div id="dropzone">
 								<form action="/" method="POST" enctype="multipart/form-data" class="dropzone needsclick dz-clickable" id="demo-upload">
-									<div class="dz-message needsclick">
-										Drop files here or click to upload.<br>
-										<span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+									<div class="dz-message-block">
+										<div class="dz-message needsclick">
+											Drop files here or click to upload.
+										</div>
 									</div>
 								</form>
 							</div>
