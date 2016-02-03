@@ -1,12 +1,7 @@
-var config = window.config = {
-	chart: {}
-};
+var config = window.config = {};
 
 // Config reference element
 var $ref = $("#ref");
-
-// set primary color	
-config.chart.colorPrimary = tinycolor($ref.find(".color-primary").css("color"));	
 
 // Configure responsive bootstrap toolkit
 config.ResponsiveBootstrapToolkitVisibilityDivs = {
@@ -18,6 +13,36 @@ config.ResponsiveBootstrapToolkitVisibilityDivs = {
 };
 
 ResponsiveBootstrapToolkit.use('Custom', config.ResponsiveBootstrapToolkitVisibilityDivs);
+
+//validation configuration
+config.validations = {
+	debug: true,
+	errorClass:'has-error',
+	validClass:'success',
+	errorElement:"span",
+
+	// add error class
+	highlight: function(element, errorClass, validClass) {
+		$(element).parents("div.form-group")
+		.addClass(errorClass)
+		.removeClass(validClass); 
+	}, 
+
+	// add error class
+	unhighlight: function(element, errorClass, validClass) {
+		$(element).parents(".has-error")
+		.removeClass(errorClass)
+		.addClass(validClass); 
+	},
+
+	// submit handler
+    submitHandler: function(form) {
+        form.submit();
+    }
+}
+
+//delay time configuration
+config.delayTime = 50;
 
 // chart configurations
 config.chart = {};
@@ -73,7 +98,7 @@ $(function() {
 		}
 	}
 
-	$.extend(loginValidationSettings, validationDefaultSettings);
+	$.extend(loginValidationSettings, config.validations);
 
     $('#login-form').validate(loginValidationSettings);
 })
@@ -104,7 +129,7 @@ $(function() {
 		}
 	}
 
-	$.extend(resetValidationSettings, validationDefaultSettings);
+	$.extend(resetValidationSettings, config.validations);
 
     $('#reset-form').validate(resetValidationSettings);
 })
@@ -192,14 +217,13 @@ $(function() {
 		}
 	}
 
-	$.extend(signupValidationSettings, validationDefaultSettings);
+	$.extend(signupValidationSettings, config.validations);
 
     $('#signup-form').validate(signupValidationSettings);
 });
 /***********************************************
 *        Animation Settings
 ***********************************************/
-
 function animate(options) {
 	var animationName = "animated " + options.name;
 	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
@@ -211,35 +235,7 @@ function animate(options) {
 		}
 	);
 }
-/***********************************************
-*         Default Validation Settings
-***********************************************/
 
-var validationDefaultSettings = {
-	debug: true,
-	errorClass:'has-error',
-	validClass:'success',
-	errorElement:"span",
-	highlight: addErrorClass, 
-	unhighlight: addValidClass,
-    submitHandler: function(form) {
-        form.submit();
-    }
-};
-
-// add error class
-function addErrorClass(element, errorClass, validClass) {
-	$(element).parents("div.form-group")
-	.addClass(errorClass)
-	.removeClass(validClass); 
-}
-
-// add valid class
-function addValidClass(element, errorClass, validClass) {
-	$(element).parents(".has-error")
-	.removeClass(errorClass)
-	.addClass(validClass); 
-}
 $(function() {
 	var $itemActions = $(".item-actions-dropdown");
 
@@ -639,7 +635,7 @@ $(function() {
 
     drawFlotCharts();
 
-    watch(config.chart, function(){
+    $(document).on("themechange", function(){
         drawFlotCharts();
     });
 
@@ -765,7 +761,7 @@ $(function() {
 
     drawMorrisCharts();
 
-    watch(config.chart, function(){
+    $(document).on("themechange", function(){
         drawMorrisCharts();
     });
 });
@@ -789,129 +785,132 @@ $(function() {
        
     });
 
-    watch(config.chart, function(){
+    $(document).on("themechange", function(){
         switchHistoryCharts(item);
     });
 
+    function switchHistoryCharts(item){
+        var chartSelector = "#dashboard-" + item + "-chart";
+
+        if ($(chartSelector).has('svg').length) {
+            $(chartSelector).empty();
+        }
+
+        switch(item){
+            case 'visits':
+                drawVisitsChart();
+                break;
+             case 'downloads':
+                drawDownloadsChart();
+                break;
+        }
+    }
+
+    function drawVisitsChart(){
+        var dataVisits = [
+            { x: '2015-09-01', y: 70},
+            { x: '2015-09-02', y: 75 },
+            { x: '2015-09-03', y: 50},
+            { x: '2015-09-04', y: 75 },
+            { x: '2015-09-05', y: 50 },
+            { x: '2015-09-06', y: 75 },
+            { x: '2015-09-07', y: 86 } 
+        ];
+
+
+        Morris.Line({
+            element: 'dashboard-visits-chart',
+            data: dataVisits,
+            xkey: 'x',
+            ykeys: ['y'],
+            ymin: 'auto 40',
+            labels: ['Visits'],
+            xLabels: "day",
+            hideHover: 'auto',
+            yLabelFormat: function (y) {
+                // Only integers
+                if (y === parseInt(y, 10)) {
+                    return y;
+                }
+                else {
+                    return '';
+                }
+            },
+            resize: true,
+            lineColors: [
+                config.chart.colorSecondary.toString(),
+            ],
+            pointFillColors: [
+                 config.chart.colorPrimary.toString(),
+            ]
+        });
+    }
+
+    function drawDownloadsChart(){
+
+        var dataDownloads = [
+            { 
+                year: '2006',
+                downloads: 1300
+            },
+            { 
+                year: '2007', 
+                downloads: 1526
+            },
+            { 
+                year: '2008', 
+                downloads: 2000
+            },
+            { 
+                year: '2009', 
+                downloads: 1800
+            },
+            { 
+                year: '2010', 
+                downloads: 1650
+            },    
+            { 
+                year: '2011', 
+                downloads: 620
+            },
+            { 
+                year: '2012', 
+                downloads: 1000
+            },
+            { 
+                year: '2013', 
+                downloads: 1896
+            },
+            { 
+                year: '2014', 
+                downloads: 850
+            },
+            { 
+                year: '2015', 
+                downloads: 1500
+            }  
+        ];
+
+
+        Morris.Bar({
+            element: 'dashboard-downloads-chart',
+            data: dataDownloads,
+            xkey: 'year',
+            ykeys: ['downloads'],
+            labels: ['Downloads'],
+            hideHover: 'auto',
+            resize: true,
+            barColors: [
+                config.chart.colorPrimary.toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
+            ],
+        });
+    }
 });
 
-function switchHistoryCharts(item){
-    var chartSelector = "#dashboard-" + item + "-chart";
-
-    if ($(chartSelector).has('svg').length) {
-        $(chartSelector).empty();
-    }
-
-    switch(item){
-        case 'visits':
-            drawVisitsChart();
-            break;
-         case 'downloads':
-            drawDownloadsChart();
-            break;
-    }
-}
-
-function drawVisitsChart(){
-    var dataVisits = [
-        { x: '2015-09-01', y: 70},
-        { x: '2015-09-02', y: 75 },
-        { x: '2015-09-03', y: 50},
-        { x: '2015-09-04', y: 75 },
-        { x: '2015-09-05', y: 50 },
-        { x: '2015-09-06', y: 75 },
-        { x: '2015-09-07', y: 86 } 
-    ];
 
 
-    Morris.Line({
-        element: 'dashboard-visits-chart',
-        data: dataVisits,
-        xkey: 'x',
-        ykeys: ['y'],
-        ymin: 'auto 40',
-        labels: ['Visits'],
-        xLabels: "day",
-        hideHover: 'auto',
-        yLabelFormat: function (y) {
-            // Only integers
-            if (y === parseInt(y, 10)) {
-                return y;
-            }
-            else {
-                return '';
-            }
-        },
-        resize: true,
-        lineColors: [
-            config.chart.colorSecondary.toString(),
-        ],
-        pointFillColors: [
-             config.chart.colorPrimary.toString(),
-        ]
-    });
-}
 
-function drawDownloadsChart(){
-
-    var dataDownloads = [
-        { 
-            year: '2006',
-            downloads: 1300
-        },
-        { 
-            year: '2007', 
-            downloads: 1526
-        },
-        { 
-            year: '2008', 
-            downloads: 2000
-        },
-        { 
-            year: '2009', 
-            downloads: 1800
-        },
-        { 
-            year: '2010', 
-            downloads: 1650
-        },    
-        { 
-            year: '2011', 
-            downloads: 620
-        },
-        { 
-            year: '2012', 
-            downloads: 1000
-        },
-        { 
-            year: '2013', 
-            downloads: 1896
-        },
-        { 
-            year: '2014', 
-            downloads: 850
-        },
-        { 
-            year: '2015', 
-            downloads: 1500
-        }  
-    ];
-
-
-    Morris.Bar({
-        element: 'dashboard-downloads-chart',
-        data: dataDownloads,
-        xkey: 'year',
-        ykeys: ['downloads'],
-        labels: ['Downloads'],
-        hideHover: 'auto',
-        resize: true,
-        barColors: [
-            config.chart.colorPrimary.toString(),
-            tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
-        ],
-    });
-}
 $(function() {
 	
 
@@ -949,7 +948,7 @@ $(function() {
 
 	drawDashboardItemsListSparklines();
 
-	watch(config.chart, function(){
+	$(document).on("themechange", function(){
         drawDashboardItemsListSparklines();
     });
 });
@@ -985,7 +984,7 @@ $(function() {
 
     drawSalesChart();
 
-    watch(config.chart, function(){
+    $(document).on("themechange", function(){
        drawSalesChart();
     });
     
@@ -1036,7 +1035,7 @@ $(function() {
 
     drawSalesMap();
 
-    watch(config.chart, function(){
+    $(document).on("themechange", function(){
        drawSalesMap();
     });
 });
@@ -1071,11 +1070,18 @@ $(function(){
 
 	// set sortable options
 	$('.images-container').sortable({
-		animation: 150,  // ms, animation speed moving items when sorting, `0` — without animation
-		handle: ".control-btn.move",  // Drag handle selector within list items
-		filter: ".image-container.new",  // Selectors that do not lead to dragging (String or Function)
-		draggable: ".image-container" // Specifies which items inside the element should be sortable
+		animation: 150,
+		handle: ".control-btn.move",
+		draggable: ".image-container",
+		onMove: function (evt) {
+			var $relatedElem = $(evt.related);
+
+	        if ($relatedElem.hasClass('add-image')) {
+	        	return false;
+	        }
+	    }
 	});
+
 
 	$controlsButtons = $('.controls');
 
@@ -1085,9 +1091,12 @@ $(function(){
 	$controlsButtonsStar.on('click',function(e){
 		e.preventDefault();
 
-		$controlsButtonsStar.removeClass('active')
+		$controlsButtonsStar.removeClass('active');
+		$controlsButtonsStar.parents('.image-container').removeClass('main');
 
 		$(this).addClass('active');
+
+		$(this).parents('.image-container').addClass('main');
 	})
 
 })
@@ -1130,7 +1139,7 @@ $(function() {
 
     drawItemsListSparklines();
 
-    watch(config.chart, function(){
+    $(document).on("themechange", function(){
         drawItemsListSparklines();
     });
 
@@ -1264,13 +1273,18 @@ $(function () {
 	});
 
 	function setThemeSettings() {
-		setThemeColor();
-		setThemeState();
-		setThemeControlsState();
+		setThemeState()
+		.delay(config.delayTime)
+		.queue(function (next) {
 
-		saveThemeSettings();
+			setThemeColor();
+			setThemeControlsState();
+			saveThemeSettings();
 
-		$(document).trigger("themechange");
+			$(document).trigger("themechange");	
+			
+			next();
+		});	
 	}
 
 	/************************************************
@@ -1297,6 +1311,8 @@ $(function () {
 
 		// set footer
 		$app.addClass(themeSettings.sidebarPosition);
+
+		return $app;
 	}
 
 	/************************************************
@@ -1332,10 +1348,8 @@ $(function () {
 	*			Update theme color
 	*************************************************/
 	function setThemeColor(){
-		setTimeout(function(){ 
-			config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));	
-			config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));	
-		}, 200);
+		config.chart.colorPrimary = tinycolor($ref.find(".chart .color-primary").css("color"));	
+		config.chart.colorSecondary = tinycolor($ref.find(".chart .color-secondary").css("color"));	
 	}
 
 	/************************************************
