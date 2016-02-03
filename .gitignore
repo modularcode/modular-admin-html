@@ -3,7 +3,7 @@
 .deploy
 node_modules
 bower_components
-bin
+releases
 
 *~
 *#
