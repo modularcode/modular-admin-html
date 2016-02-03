@@ -39,6 +39,7 @@
 				background-color: inherit;
 				color: $color-inactive;
 				width: 100px;
+				transition: color 0.3s ease;
 
 				@include placeholder() {
 					transition: color 0.3s ease;
@@ -50,8 +51,10 @@
 				}
 
 				&:focus {
+					color: $color-active;
+
 					@include placeholder() {
-						color:  $color-active;
+						color:  lighten($color-active, 15%);
 					}
 
 					&+.search-icon {
