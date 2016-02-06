@@ -1,5 +1,7 @@
 # Modular Admin: Free Bootstrap4 Dashboard Theme <br/>  HTML version
 
+[![Join the chat at https://gitter.im/modularcode/modular-admin-html](https://badges.gitter.im/modularcode/modular-admin-html.svg)](https://gitter.im/modularcode/modular-admin-html?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
  ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
 </a>
