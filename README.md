@@ -7,7 +7,7 @@
 </a>
 
 <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
-![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png)
+![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png) 
 </a>
 
 <p align="center">
