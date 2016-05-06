@@ -1,6 +1,6 @@
 {
   "name": "modular-admin-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {},
   "dependencies": {
     "animate.css": "~3.4.0",
