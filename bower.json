@@ -69,6 +69,9 @@
         "dist/dropzone.css",
         "dist/dropzone.js"
       ]
+    },
+    "raphael": {
+      "main": "raphael.js"
     }
   }
 }
