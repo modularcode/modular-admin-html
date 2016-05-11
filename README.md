@@ -1,4 +1,4 @@
-# Modular Admin: Free Bootstrap 4 Dashboard Theme <br/>  HTML version
+# Modular Admin: Free Bootstrap 4 Dashboard Theme | HTML version
 
 [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
