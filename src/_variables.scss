@@ -7,7 +7,7 @@
 *					  Colors Definitions
 **************************************************************/
 
-$color-primary: #59c2e6 !default;
+$color-primary: #85CE36 !default;
 $color-primary-light: lighten($color-primary, 10%) !default; 
 $color-primary-lighter: lighten($color-primary-light, 6%) !default; 
 $color-primary-dark: darken($color-primary, 10%) !default;
@@ -41,12 +41,12 @@ $btn-primary-color-text: $color-text-inverse !default;
 
 
 // Links
-$link-color: $color-primary !default;
-$link-transition: color 0.13s !default;
-$link-decoration: none !default;
+$link-color: #969696 !default;
+$link-transition: initial;
+$link-decoration: underline;
 
-$link-hover-color: darken($color-primary, 15%) !default;
-$link-hover-decoration: inherit !default;
+$link-hover-color: darken($color-primary, 8%) !default;
+$link-hover-decoration: underline !default;
 
 // Header
 $header-height: 70px !default;
@@ -101,4 +101,4 @@ $chart-color-secondary: lighten($chart-color-primary, 10%) !default;
 ****************************************************** */
 
 // Dashboard
-$dashboard-stat-icon-color: $color-primary !default;
+$dashboard-stat-icon-color: #BDBDBD !default;
