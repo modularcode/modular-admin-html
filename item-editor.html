@@ -30,20 +30,19 @@
         <div class="main-wrapper">
             <div class="app" id="app">
                 <header class="header">
-                    <div class="header-block header-block-collapse hidden-lg-up">
-                        <button class="collapse-btn" id="sidebar-collapse-btn"> <i class="fa fa-bars"></i> </button>
-                    </div>
+                    <div class="header-block header-block-collapse hidden-lg-up"> <button class="collapse-btn" id="sidebar-collapse-btn">
+    			<i class="fa fa-bars"></i>
+    		</button> </div>
                     <div class="header-block header-block-search hidden-sm-down">
                         <form role="search">
-                            <div class="input-container"> <i class="fa fa-search"></i>
-                                <input type="search" placeholder="Search">
+                            <div class="input-container"> <i class="fa fa-search"></i> <input type="search" placeholder="Search">
                                 <div class="underline"></div>
                             </div>
                         </form>
                     </div>
                     <div class="header-block header-block-buttons">
                         <a href="https://github.com/modularcode/modular-admin-html" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-github-alt"></i> View on GitHub </a>
-                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0/modular-admin-html-1.0.0.zip" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-cloud-download"></i> Download .zip </a>
+                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.1/modular-admin-html-1.0.1.zip" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-cloud-download"></i> Download .zip </a>
                     </div>
                     <div class="header-block header-block-nav">
                         <ul class="nav-profile">
@@ -216,60 +215,50 @@
                                         <div class="customize-item">
                                             <div class="row customize-header">
                                                 <div class="col-xs-4"> </div>
-                                                <div class="col-xs-4">
-                                                    <label class="title">fixed</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label class="title">static</label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">fixed</label> </div>
+                                                <div class="col-xs-4"> <label class="title">static</label> </div>
                                             </div>
                                             <div class="row hidden-md-down">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Sidebar:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="sidebarPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Sidebar:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="sidebarPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Header:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="headerPosition" value="header-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="headerPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Header:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="headerPosition" value="header-fixed">
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="headerPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Footer:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="footerPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Footer:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="footerPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                         </div>
                                         <div class="customize-item">
                                             <ul class="customize-colors">
                                                 <li> <span class="color-item color-red" data-theme="red"></span> </li>
                                                 <li> <span class="color-item color-orange" data-theme="orange"></span> </li>
-                                                <li> <span class="color-item color-green" data-theme="green"></span> </li>
+                                                <li> <span class="color-item color-green active" data-theme=""></span> </li>
                                                 <li> <span class="color-item color-seagreen" data-theme="seagreen"></span> </li>
-                                                <li> <span class="color-item color-blue active" data-theme=""></span> </li>
+                                                <li> <span class="color-item color-blue" data-theme="blue"></span> </li>
                                                 <li> <span class="color-item color-purple" data-theme="purple"></span> </li>
                                             </ul>
                                         </div>
@@ -288,13 +277,14 @@
 	</h3> </div>
                     <form name="item">
                         <div class="card card-block">
-                            <div class="form-group row">
-                                <label class="col-sm-2 form-control-label text-xs-right"> Name: </label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control boxed" placeholder=""> </div>
+                            <div class="form-group row"> <label class="col-sm-2 form-control-label text-xs-right">
+				Name:
+			</label>
+                                <div class="col-sm-10"> <input type="text" class="form-control boxed" placeholder=""> </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 form-control-label text-xs-right"> Content: </label>
+                            <div class="form-group row"> <label class="col-sm-2 form-control-label text-xs-right">
+				Content:
+			</label>
                                 <div class="col-sm-10">
                                     <div class="wyswyg">
                                         <div class="toolbar"> <span class="ql-format-group">
@@ -343,75 +333,71 @@
 				<option value="rgb(0, 41, 102)" label="rgb(0, 41, 102)"></option>
 				<option value="rgb(61, 20, 102)" label="rgb(61, 20, 102)"></option>
 			</select>
-			<span class="ql-format-separator"></span>
-                                            <select title="Background Color" class="ql-background">
-                                                <option value="rgb(0, 0, 0)" label="rgb(0, 0, 0)"></option>
-                                                <option value="rgb(230, 0, 0)" label="rgb(230, 0, 0)"></option>
-                                                <option value="rgb(255, 153, 0)" label="rgb(255, 153, 0)"></option>
-                                                <option value="rgb(255, 255, 0)" label="rgb(255, 255, 0)"></option>
-                                                <option value="rgb(0, 138, 0)" label="rgb(0, 138, 0)"></option>
-                                                <option value="rgb(0, 102, 204)" label="rgb(0, 102, 204)"></option>
-                                                <option value="rgb(153, 51, 255)" label="rgb(153, 51, 255)"></option>
-                                                <option value="rgb(255, 255, 255)" label="rgb(255, 255, 255)" selected></option>
-                                                <option value="rgb(250, 204, 204)" label="rgb(250, 204, 204)"></option>
-                                                <option value="rgb(255, 235, 204)" label="rgb(255, 235, 204)"></option>
-                                                <option value="rgb(255, 255, 204)" label="rgb(255, 255, 204)"></option>
-                                                <option value="rgb(204, 232, 204)" label="rgb(204, 232, 204)"></option>
-                                                <option value="rgb(204, 224, 245)" label="rgb(204, 224, 245)"></option>
-                                                <option value="rgb(235, 214, 255)" label="rgb(235, 214, 255)"></option>
-                                                <option value="rgb(187, 187, 187)" label="rgb(187, 187, 187)"></option>
-                                                <option value="rgb(240, 102, 102)" label="rgb(240, 102, 102)"></option>
-                                                <option value="rgb(255, 194, 102)" label="rgb(255, 194, 102)"></option>
-                                                <option value="rgb(255, 255, 102)" label="rgb(255, 255, 102)"></option>
-                                                <option value="rgb(102, 185, 102)" label="rgb(102, 185, 102)"></option>
-                                                <option value="rgb(102, 163, 224)" label="rgb(102, 163, 224)"></option>
-                                                <option value="rgb(194, 133, 255)" label="rgb(194, 133, 255)"></option>
-                                                <option value="rgb(136, 136, 136)" label="rgb(136, 136, 136)"></option>
-                                                <option value="rgb(161, 0, 0)" label="rgb(161, 0, 0)"></option>
-                                                <option value="rgb(178, 107, 0)" label="rgb(178, 107, 0)"></option>
-                                                <option value="rgb(178, 178, 0)" label="rgb(178, 178, 0)"></option>
-                                                <option value="rgb(0, 97, 0)" label="rgb(0, 97, 0)"></option>
-                                                <option value="rgb(0, 71, 178)" label="rgb(0, 71, 178)"></option>
-                                                <option value="rgb(107, 36, 178)" label="rgb(107, 36, 178)"></option>
-                                                <option value="rgb(68, 68, 68)" label="rgb(68, 68, 68)"></option>
-                                                <option value="rgb(92, 0, 0)" label="rgb(92, 0, 0)"></option>
-                                                <option value="rgb(102, 61, 0)" label="rgb(102, 61, 0)"></option>
-                                                <option value="rgb(102, 102, 0)" label="rgb(102, 102, 0)"></option>
-                                                <option value="rgb(0, 55, 0)" label="rgb(0, 55, 0)"></option>
-                                                <option value="rgb(0, 41, 102)" label="rgb(0, 41, 102)"></option>
-                                                <option value="rgb(61, 20, 102)" label="rgb(61, 20, 102)"></option>
-                                            </select>
-                                            </span> <span class="ql-format-group">
-			<span title="List" class="ql-format-button ql-list"></span> <span class="ql-format-separator"></span> <span title="Bullet" class="ql-format-button ql-bullet"></span> <span class="ql-format-separator"></span>
-                                            <select title="Text Alignment" class="ql-align">
-                                                <option value="left" label="Left" selected></option>
-                                                <option value="center" label="Center"></option>
-                                                <option value="right" label="Right"></option>
-                                                <option value="justify" label="Justify"></option>
-                                            </select>
-                                            </span> <span class="ql-format-group">
-			<span title="Link" class="ql-format-button ql-link"></span> <span class="ql-format-separator"></span>
-                                            <button type="button" title="Image" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modal-media"> <i class="fa fa-image"></i> Media </button>
-                                            </span> <span class="ql-format-group">
+			<span class="ql-format-separator"></span> <select title="Background Color" class="ql-background">
+				<option value="rgb(0, 0, 0)" label="rgb(0, 0, 0)"></option>
+				<option value="rgb(230, 0, 0)" label="rgb(230, 0, 0)"></option>
+				<option value="rgb(255, 153, 0)" label="rgb(255, 153, 0)"></option>
+				<option value="rgb(255, 255, 0)" label="rgb(255, 255, 0)"></option>
+				<option value="rgb(0, 138, 0)" label="rgb(0, 138, 0)"></option>
+				<option value="rgb(0, 102, 204)" label="rgb(0, 102, 204)"></option>
+				<option value="rgb(153, 51, 255)" label="rgb(153, 51, 255)"></option>
+				<option value="rgb(255, 255, 255)" label="rgb(255, 255, 255)" selected></option>
+				<option value="rgb(250, 204, 204)" label="rgb(250, 204, 204)"></option>
+				<option value="rgb(255, 235, 204)" label="rgb(255, 235, 204)"></option>
+				<option value="rgb(255, 255, 204)" label="rgb(255, 255, 204)"></option>
+				<option value="rgb(204, 232, 204)" label="rgb(204, 232, 204)"></option>
+				<option value="rgb(204, 224, 245)" label="rgb(204, 224, 245)"></option>
+				<option value="rgb(235, 214, 255)" label="rgb(235, 214, 255)"></option>
+				<option value="rgb(187, 187, 187)" label="rgb(187, 187, 187)"></option>
+				<option value="rgb(240, 102, 102)" label="rgb(240, 102, 102)"></option>
+				<option value="rgb(255, 194, 102)" label="rgb(255, 194, 102)"></option>
+				<option value="rgb(255, 255, 102)" label="rgb(255, 255, 102)"></option>
+				<option value="rgb(102, 185, 102)" label="rgb(102, 185, 102)"></option>
+				<option value="rgb(102, 163, 224)" label="rgb(102, 163, 224)"></option>
+				<option value="rgb(194, 133, 255)" label="rgb(194, 133, 255)"></option>
+				<option value="rgb(136, 136, 136)" label="rgb(136, 136, 136)"></option>
+				<option value="rgb(161, 0, 0)" label="rgb(161, 0, 0)"></option>
+				<option value="rgb(178, 107, 0)" label="rgb(178, 107, 0)"></option>
+				<option value="rgb(178, 178, 0)" label="rgb(178, 178, 0)"></option>
+				<option value="rgb(0, 97, 0)" label="rgb(0, 97, 0)"></option>
+				<option value="rgb(0, 71, 178)" label="rgb(0, 71, 178)"></option>
+				<option value="rgb(107, 36, 178)" label="rgb(107, 36, 178)"></option>
+				<option value="rgb(68, 68, 68)" label="rgb(68, 68, 68)"></option>
+				<option value="rgb(92, 0, 0)" label="rgb(92, 0, 0)"></option>
+				<option value="rgb(102, 61, 0)" label="rgb(102, 61, 0)"></option>
+				<option value="rgb(102, 102, 0)" label="rgb(102, 102, 0)"></option>
+				<option value="rgb(0, 55, 0)" label="rgb(0, 55, 0)"></option>
+				<option value="rgb(0, 41, 102)" label="rgb(0, 41, 102)"></option>
+				<option value="rgb(61, 20, 102)" label="rgb(61, 20, 102)"></option>
+			</select> </span> <span class="ql-format-group">
+			<span title="List" class="ql-format-button ql-list"></span> <span class="ql-format-separator"></span> <span title="Bullet" class="ql-format-button ql-bullet"></span> <span class="ql-format-separator"></span> <select title="Text Alignment" class="ql-align">
+				<option value="left" label="Left" selected></option>
+				<option value="center" label="Center"></option>
+				<option value="right" label="Right"></option>
+				<option value="justify" label="Justify"></option>
+			</select> </span> <span class="ql-format-group">
+			<span title="Link" class="ql-format-button ql-link"></span> <span class="ql-format-separator"></span> <button type="button" title="Image" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#modal-media">
+				<i class="fa fa-image"></i> Media
+			</button> </span> <span class="ql-format-group">
 		</span> </div>
                                         <!-- Create the editor container -->
                                         <div class="editor"> Hello World </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 form-control-label text-xs-right"> Category: </label>
-                                <div class="col-sm-10">
-                                    <select class="c-select form-control boxed">
-                                        <option selected>Select Category</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
+                            <div class="form-group row"> <label class="col-sm-2 form-control-label text-xs-right">
+				Category:
+			</label>
+                                <div class="col-sm-10"> <select class="c-select form-control boxed">
+					<option selected>Select Category</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select> </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 form-control-label text-xs-right"> Images: </label>
+                            <div class="form-group row"> <label class="col-sm-2 form-control-label text-xs-right">
+				Images:
+			</label>
                                 <div class="col-sm-10">
                                     <div class="images-container">
                                         <div class="image-container">
@@ -459,17 +445,15 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-sm-10 col-sm-offset-2">
-                                    <button type="submit" class="btn btn-primary"> Submit </button>
-                                </div>
+                                <div class="col-sm-10 col-sm-offset-2"> <button type="submit" class="btn btn-primary">
+					Submit
+				</button> </div>
                             </div>
                         </div>
                     </form>
                 </article>
                 <footer class="footer">
-                    <div class="footer-block buttons">
-                        <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
-                    </div>
+                    <div class="footer-block buttons"> <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe> </div>
                     <div class="footer-block author">
                         <ul>
                             <li> created by <a href="https://github.com/modularcode">ModularCode</a> </li>
@@ -480,8 +464,10 @@
                 <div class="modal fade" id="modal-media">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> <span class="sr-only">Close</span> </button>
+                            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    					<span class="sr-only">Close</span>
+    				</button>
                                 <h4 class="modal-title">Media Library</h4> </div>
                             <div class="modal-body modal-tab-container">
                                 <ul class="nav nav-tabs modal-tabs" role="tablist">
@@ -568,10 +554,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Insert Selected</button>
-                            </div>
+                            <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Insert Selected</button> </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>
@@ -581,16 +564,14 @@
                 <div class="modal fade" id="confirm-modal">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    				</button>
                                 <h4 class="modal-title"><i class="fa fa-warning"></i> Alert</h4> </div>
                             <div class="modal-body">
                                 <p>Are you sure want to do this?</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            </div>
+                            <div class="modal-footer"> <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button> <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button> </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>

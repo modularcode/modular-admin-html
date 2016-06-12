@@ -30,20 +30,19 @@
         <div class="main-wrapper">
             <div class="app" id="app">
                 <header class="header">
-                    <div class="header-block header-block-collapse hidden-lg-up">
-                        <button class="collapse-btn" id="sidebar-collapse-btn"> <i class="fa fa-bars"></i> </button>
-                    </div>
+                    <div class="header-block header-block-collapse hidden-lg-up"> <button class="collapse-btn" id="sidebar-collapse-btn">
+    			<i class="fa fa-bars"></i>
+    		</button> </div>
                     <div class="header-block header-block-search hidden-sm-down">
                         <form role="search">
-                            <div class="input-container"> <i class="fa fa-search"></i>
-                                <input type="search" placeholder="Search">
+                            <div class="input-container"> <i class="fa fa-search"></i> <input type="search" placeholder="Search">
                                 <div class="underline"></div>
                             </div>
                         </form>
                     </div>
                     <div class="header-block header-block-buttons">
                         <a href="https://github.com/modularcode/modular-admin-html" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-github-alt"></i> View on GitHub </a>
-                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0/modular-admin-html-1.0.0.zip" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-cloud-download"></i> Download .zip </a>
+                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.1/modular-admin-html-1.0.1.zip" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-cloud-download"></i> Download .zip </a>
                     </div>
                     <div class="header-block header-block-nav">
                         <ul class="nav-profile">
@@ -216,60 +215,50 @@
                                         <div class="customize-item">
                                             <div class="row customize-header">
                                                 <div class="col-xs-4"> </div>
-                                                <div class="col-xs-4">
-                                                    <label class="title">fixed</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label class="title">static</label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">fixed</label> </div>
+                                                <div class="col-xs-4"> <label class="title">static</label> </div>
                                             </div>
                                             <div class="row hidden-md-down">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Sidebar:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="sidebarPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Sidebar:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="sidebarPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Header:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="headerPosition" value="header-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="headerPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Header:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="headerPosition" value="header-fixed">
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="headerPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Footer:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="footerPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Footer:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="footerPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                         </div>
                                         <div class="customize-item">
                                             <ul class="customize-colors">
                                                 <li> <span class="color-item color-red" data-theme="red"></span> </li>
                                                 <li> <span class="color-item color-orange" data-theme="orange"></span> </li>
-                                                <li> <span class="color-item color-green" data-theme="green"></span> </li>
+                                                <li> <span class="color-item color-green active" data-theme=""></span> </li>
                                                 <li> <span class="color-item color-seagreen" data-theme="seagreen"></span> </li>
-                                                <li> <span class="color-item color-blue active" data-theme=""></span> </li>
+                                                <li> <span class="color-item color-blue" data-theme="blue"></span> </li>
                                                 <li> <span class="color-item color-purple" data-theme="purple"></span> </li>
                                             </ul>
                                         </div>
@@ -307,8 +296,7 @@
                         </div>
                         <div class="items-search">
                             <form class="form-inline">
-                                <div class="input-group">
-                                    <input type="text" class="form-control boxed rounded-s" placeholder="Search for..."> <span class="input-group-btn">
+                                <div class="input-group"> <input type="text" class="form-control boxed rounded-s" placeholder="Search for..."> <span class="input-group-btn">
 					<button class="btn btn-secondary rounded-s" type="button">
 						<i class="fa fa-search"></i>
 					</button>
@@ -320,10 +308,10 @@
                         <ul class="item-list striped">
                             <li class="item item-list-header hidden-sm-down">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox"> <span></span> </label>
-                                    </div>
+                                    <div class="item-col fixed item-col-check"> <label class="item-check" id="select-all-items">
+						<input type="checkbox" class="checkbox">
+						<span></span>
+					</label> </div>
                                     <div class="item-col item-col-header fixed item-col-img md">
                                         <div> <span>Media</span> </div>
                                     </div>
@@ -350,10 +338,10 @@
                             </li>
                             <li class="item">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox"> <span></span> </label>
-                                    </div>
+                                    <div class="item-col fixed item-col-check"> <label class="item-check" id="select-all-items">
+							<input type="checkbox" class="checkbox">
+							<span></span>
+						</label> </div>
                                     <div class="item-col fixed item-col-img md">
                                         <a href="item-editor.html">
                                             <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg)"></div>
@@ -413,10 +401,10 @@
                             </li>
                             <li class="item">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox"> <span></span> </label>
-                                    </div>
+                                    <div class="item-col fixed item-col-check"> <label class="item-check" id="select-all-items">
+							<input type="checkbox" class="checkbox">
+							<span></span>
+						</label> </div>
                                     <div class="item-col fixed item-col-img md">
                                         <a href="item-editor.html">
                                             <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg)"></div>
@@ -476,10 +464,10 @@
                             </li>
                             <li class="item">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox"> <span></span> </label>
-                                    </div>
+                                    <div class="item-col fixed item-col-check"> <label class="item-check" id="select-all-items">
+							<input type="checkbox" class="checkbox">
+							<span></span>
+						</label> </div>
                                     <div class="item-col fixed item-col-img md">
                                         <a href="item-editor.html">
                                             <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg)"></div>
@@ -539,10 +527,10 @@
                             </li>
                             <li class="item">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox"> <span></span> </label>
-                                    </div>
+                                    <div class="item-col fixed item-col-check"> <label class="item-check" id="select-all-items">
+							<input type="checkbox" class="checkbox">
+							<span></span>
+						</label> </div>
                                     <div class="item-col fixed item-col-img md">
                                         <a href="item-editor.html">
                                             <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg)"></div>
@@ -602,10 +590,10 @@
                             </li>
                             <li class="item">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox"> <span></span> </label>
-                                    </div>
+                                    <div class="item-col fixed item-col-check"> <label class="item-check" id="select-all-items">
+							<input type="checkbox" class="checkbox">
+							<span></span>
+						</label> </div>
                                     <div class="item-col fixed item-col-img md">
                                         <a href="item-editor.html">
                                             <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg)"></div>
@@ -665,10 +653,10 @@
                             </li>
                             <li class="item">
                                 <div class="item-row">
-                                    <div class="item-col fixed item-col-check">
-                                        <label class="item-check" id="select-all-items">
-                                            <input type="checkbox" class="checkbox"> <span></span> </label>
-                                    </div>
+                                    <div class="item-col fixed item-col-check"> <label class="item-check" id="select-all-items">
+							<input type="checkbox" class="checkbox">
+							<span></span>
+						</label> </div>
                                     <div class="item-col fixed item-col-img md">
                                         <a href="item-editor.html">
                                             <div class="item-img rounded" style="background-image: url(https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg)"></div>
@@ -755,9 +743,7 @@
                     </nav>
                 </article>
                 <footer class="footer">
-                    <div class="footer-block buttons">
-                        <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
-                    </div>
+                    <div class="footer-block buttons"> <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe> </div>
                     <div class="footer-block author">
                         <ul>
                             <li> created by <a href="https://github.com/modularcode">ModularCode</a> </li>
@@ -768,8 +754,10 @@
                 <div class="modal fade" id="modal-media">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> <span class="sr-only">Close</span> </button>
+                            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    					<span class="sr-only">Close</span>
+    				</button>
                                 <h4 class="modal-title">Media Library</h4> </div>
                             <div class="modal-body modal-tab-container">
                                 <ul class="nav nav-tabs modal-tabs" role="tablist">
@@ -795,10 +783,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Insert Selected</button>
-                            </div>
+                            <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Insert Selected</button> </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>
@@ -808,16 +793,14 @@
                 <div class="modal fade" id="confirm-modal">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    				</button>
                                 <h4 class="modal-title"><i class="fa fa-warning"></i> Alert</h4> </div>
                             <div class="modal-body">
                                 <p>Are you sure want to do this?</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            </div>
+                            <div class="modal-footer"> <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button> <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button> </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>

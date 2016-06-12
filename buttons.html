@@ -30,20 +30,19 @@
         <div class="main-wrapper">
             <div class="app" id="app">
                 <header class="header">
-                    <div class="header-block header-block-collapse hidden-lg-up">
-                        <button class="collapse-btn" id="sidebar-collapse-btn"> <i class="fa fa-bars"></i> </button>
-                    </div>
+                    <div class="header-block header-block-collapse hidden-lg-up"> <button class="collapse-btn" id="sidebar-collapse-btn">
+    			<i class="fa fa-bars"></i>
+    		</button> </div>
                     <div class="header-block header-block-search hidden-sm-down">
                         <form role="search">
-                            <div class="input-container"> <i class="fa fa-search"></i>
-                                <input type="search" placeholder="Search">
+                            <div class="input-container"> <i class="fa fa-search"></i> <input type="search" placeholder="Search">
                                 <div class="underline"></div>
                             </div>
                         </form>
                     </div>
                     <div class="header-block header-block-buttons">
                         <a href="https://github.com/modularcode/modular-admin-html" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-github-alt"></i> View on GitHub </a>
-                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.0/modular-admin-html-1.0.0.zip" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-cloud-download"></i> Download .zip </a>
+                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.1/modular-admin-html-1.0.1.zip" class="btn btn-oval btn-sm rounded-s header-btn"> <i class="fa fa-cloud-download"></i> Download .zip </a>
                     </div>
                     <div class="header-block header-block-nav">
                         <ul class="nav-profile">
@@ -216,60 +215,50 @@
                                         <div class="customize-item">
                                             <div class="row customize-header">
                                                 <div class="col-xs-4"> </div>
-                                                <div class="col-xs-4">
-                                                    <label class="title">fixed</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label class="title">static</label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">fixed</label> </div>
+                                                <div class="col-xs-4"> <label class="title">static</label> </div>
                                             </div>
                                             <div class="row hidden-md-down">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Sidebar:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="sidebarPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Sidebar:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed" >
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="sidebarPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Header:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="headerPosition" value="header-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="headerPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Header:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="headerPosition" value="header-fixed">
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="headerPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
-                                                    <label class="title">Footer:</label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed"> <span></span> </label>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>
-                                                        <input class="radio" type="radio" name="footerPosition" value=""> <span></span> </label>
-                                                </div>
+                                                <div class="col-xs-4"> <label class="title">Footer:</label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
+    				                        <span></span>
+    				                    </label> </div>
+                                                <div class="col-xs-4"> <label>
+    				                        <input class="radio" type="radio" name="footerPosition" value="">
+    				                        <span></span>
+    				                    </label> </div>
                                             </div>
                                         </div>
                                         <div class="customize-item">
                                             <ul class="customize-colors">
                                                 <li> <span class="color-item color-red" data-theme="red"></span> </li>
                                                 <li> <span class="color-item color-orange" data-theme="orange"></span> </li>
-                                                <li> <span class="color-item color-green" data-theme="green"></span> </li>
+                                                <li> <span class="color-item color-green active" data-theme=""></span> </li>
                                                 <li> <span class="color-item color-seagreen" data-theme="seagreen"></span> </li>
-                                                <li> <span class="color-item color-blue active" data-theme=""></span> </li>
+                                                <li> <span class="color-item color-blue" data-theme="blue"></span> </li>
                                                 <li> <span class="color-item color-purple" data-theme="purple"></span> </li>
                                             </ul>
                                         </div>
@@ -297,13 +286,8 @@
                                             <h3 class="title">
 							Button colors
 						</h3> </div>
-                                        <section class="section">
-                                            <button type="button" class="btn btn-primary">Primary</button>
-                                            <button type="button" class="btn btn-secondary">Secondary</button>
-                                            <button type="button" class="btn btn-success">Success</button>
-                                            <button type="button" class="btn btn-info">Info</button>
-                                            <button type="button" class="btn btn-warning">Warning</button>
-                                            <button type="button" class="btn btn-danger">Danger</button> <a href="javascript:void(0);" class="btn btn-link">Button Link</a> </section>
+                                        <section class="section"> <button type="button" class="btn btn-primary">Primary</button> <button type="button" class="btn btn-secondary">Secondary</button> <button type="button" class="btn btn-success">Success</button> <button type="button"
+                                                class="btn btn-info">Info</button> <button type="button" class="btn btn-warning">Warning</button> <button type="button" class="btn btn-danger">Danger</button> <a href="javascript:void(0);" class="btn btn-link">Button Link</a>                                            </section>
                                     </div>
                                 </div>
                             </div>
@@ -314,14 +298,7 @@
                                             <h3 class="title">
 							Outline buttons
 						</h3> </div>
-                                        <section class="section">
-                                            <button type="button" class="btn btn-primary-outline">Primary</button>
-                                            <button type="button" class="btn btn-secondary-outline">Secondary</button>
-                                            <button type="button" class="btn btn-success-outline">Success</button>
-                                            <button type="button" class="btn btn-info-outline">Info</button>
-                                            <button type="button" class="btn btn-warning-outline">Warning</button>
-                                            <button type="button" class="btn btn-danger-outline">Danger</button>
-                                        </section>
+                                        <section class="section"> <button type="button" class="btn btn-primary-outline">Primary</button> <button type="button" class="btn btn-secondary-outline">Secondary</button> <button type="button" class="btn btn-success-outline">Success</button>                                            <button type="button" class="btn btn-info-outline">Info</button> <button type="button" class="btn btn-warning-outline">Warning</button> <button type="button" class="btn btn-danger-outline">Danger</button> </section>
                                     </div>
                                 </div>
                             </div>
@@ -337,26 +314,11 @@
 							Button sizing
 						</h3> </div>
                                         <section class="section">
-                                            <p>Large buttons</p>
-                                            <button type="button" class="btn btn-primary btn-lg">Primary</button>
-                                            <button type="button" class="btn btn-secondary btn-lg">Secondary</button>
-                                            <button type="button" class="btn btn-success btn-lg">Success</button>
-                                            <button type="button" class="btn btn-info btn-lg">Info</button>
-                                            <button type="button" class="btn btn-warning btn-lg">Warning</button>
-                                            <button type="button" class="btn btn-danger btn-lg">Danger</button>
+                                            <p>Large buttons</p> <button type="button" class="btn btn-primary btn-lg">Primary</button> <button type="button" class="btn btn-secondary btn-lg">Secondary</button> <button type="button" class="btn btn-success btn-lg">Success</button>                                            <button type="button" class="btn btn-info btn-lg">Info</button> <button type="button" class="btn btn-warning btn-lg">Warning</button> <button type="button" class="btn btn-danger btn-lg">Danger</button>
                                             <p></p>
-                                            <p>Small buttons</p>
-                                            <button type="button" class="btn btn-primary btn-sm">Primary</button>
-                                            <button type="button" class="btn btn-secondary btn-sm">Secondary</button>
-                                            <button type="button" class="btn btn-success btn-sm">Success</button>
-                                            <button type="button" class="btn btn-info btn-sm">Info</button>
-                                            <button type="button" class="btn btn-warning btn-sm">Warning</button>
-                                            <button type="button" class="btn btn-danger btn-sm">Danger</button>
+                                            <p>Small buttons</p> <button type="button" class="btn btn-primary btn-sm">Primary</button> <button type="button" class="btn btn-secondary btn-sm">Secondary</button> <button type="button" class="btn btn-success btn-sm">Success</button>                                            <button type="button" class="btn btn-info btn-sm">Info</button> <button type="button" class="btn btn-warning btn-sm">Warning</button> <button type="button" class="btn btn-danger btn-sm">Danger</button>
                                             <p></p>
-                                            <p>Block buttons</p>
-                                            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                                            <button type="button" class="btn btn-secondary btn-sm btn-block">Block level button</button>
-                                        </section>
+                                            <p>Block buttons</p> <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button> <button type="button" class="btn btn-secondary btn-sm btn-block">Block level button</button> </section>
                                     </div>
                                 </div>
                             </div>
@@ -369,32 +331,11 @@
 						</h3> </div>
                                         <section class="section">
                                             <p>Pill left</p>
-                                            <p>
-                                                <button type="button" class="btn btn-pill-left btn-primary">Primary</button>
-                                                <button type="button" class="btn btn-pill-left btn-secondary">Secondary</button>
-                                                <button type="button" class="btn btn-pill-left btn-success">Success</button>
-                                                <button type="button" class="btn btn-pill-left btn-info">Info</button>
-                                                <button type="button" class="btn btn-pill-left btn-warning">Warning</button>
-                                                <button type="button" class="btn btn-pill-left btn-danger">Danger</button>
-                                            </p>
+                                            <p> <button type="button" class="btn btn-pill-left btn-primary">Primary</button> <button type="button" class="btn btn-pill-left btn-secondary">Secondary</button> <button type="button" class="btn btn-pill-left btn-success">Success</button>                                                <button type="button" class="btn btn-pill-left btn-info">Info</button> <button type="button" class="btn btn-pill-left btn-warning">Warning</button> <button type="button" class="btn btn-pill-left btn-danger">Danger</button>                                                </p>
                                             <p>Pill right</p>
-                                            <p>
-                                                <button type="button" class="btn btn-pill-right btn-primary">Primary</button>
-                                                <button type="button" class="btn btn-pill-right btn-secondary">Secondary</button>
-                                                <button type="button" class="btn btn-pill-right btn-success">Success</button>
-                                                <button type="button" class="btn btn-pill-right btn-info">Info</button>
-                                                <button type="button" class="btn btn-pill-right btn-warning">Warning</button>
-                                                <button type="button" class="btn btn-pill-right btn-danger">Danger</button>
-                                            </p>
+                                            <p> <button type="button" class="btn btn-pill-right btn-primary">Primary</button> <button type="button" class="btn btn-pill-right btn-secondary">Secondary</button> <button type="button" class="btn btn-pill-right btn-success">Success</button>                                                <button type="button" class="btn btn-pill-right btn-info">Info</button> <button type="button" class="btn btn-pill-right btn-warning">Warning</button> <button type="button" class="btn btn-pill-right btn-danger">Danger</button>                                                </p>
                                             <p>Oval</p>
-                                            <p>
-                                                <button type="button" class="btn btn-oval btn-primary">Primary</button>
-                                                <button type="button" class="btn btn-oval btn-secondary">Secondary</button>
-                                                <button type="button" class="btn btn-oval btn-success">Success</button>
-                                                <button type="button" class="btn btn-oval btn-info">Info</button>
-                                                <button type="button" class="btn btn-oval btn-warning">Warning</button>
-                                                <button type="button" class="btn btn-oval btn-danger">Danger</button>
-                                            </p>
+                                            <p> <button type="button" class="btn btn-oval btn-primary">Primary</button> <button type="button" class="btn btn-oval btn-secondary">Secondary</button> <button type="button" class="btn btn-oval btn-success">Success</button>                                                <button type="button" class="btn btn-oval btn-info">Info</button> <button type="button" class="btn btn-oval btn-warning">Warning</button> <button type="button" class="btn btn-oval btn-danger">Danger</button>                                                </p>
                                         </section>
                                     </div>
                                 </div>
@@ -412,64 +353,35 @@
 						</h3> </div>
                                         <section class="section">
                                             <p>Basic Example</p>
+                                            <div class="btn-group"> <button type="button" class="btn btn-secondary">Left</button> <button type="button" class="btn btn-secondary">Middle</button> <button type="button" class="btn btn-secondary">Right</button> </div>
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-secondary">Left</button>
-                                                <button type="button" class="btn btn-secondary">Middle</button>
-                                                <button type="button" class="btn btn-secondary">Right</button>
-                                            </div>
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-primary">Left</button>
-                                                <button type="button" class="btn btn-primary">Middle</button>
-                                                <button type="button" class="btn btn-primary">Right</button>
-                                            </div>
+                                            <button type="button" class="btn btn-primary">Left</button> <button type="button" class="btn btn-primary">Middle</button> <button type="button" class="btn btn-primary">Right</button> </div>
                                             <p></p>
                                             <p>Button Group Sizing</p>
+                                            <div class="btn-group btn-group-lg"> <button type="button" class="btn btn-secondary">1</button> <button type="button" class="btn btn-secondary">2</button> <button type="button" class="btn btn-secondary">3</button> <button type="button" class="btn btn-secondary">4</button>                                                </div>
+                                            <div class="btn-group btn-group-lg"> <button type="button" class="btn btn-secondary">5</button> <button type="button" class="btn btn-secondary">6</button> <button type="button" class="btn btn-secondary">7</button> </div>
                                             <div class="btn-group btn-group-lg">
-                                                <button type="button" class="btn btn-secondary">1</button>
-                                                <button type="button" class="btn btn-secondary">2</button>
-                                                <button type="button" class="btn btn-secondary">3</button>
-                                                <button type="button" class="btn btn-secondary">4</button>
-                                            </div>
-                                            <div class="btn-group btn-group-lg">
-                                                <button type="button" class="btn btn-secondary">5</button>
-                                                <button type="button" class="btn btn-secondary">6</button>
-                                                <button type="button" class="btn btn-secondary">7</button>
-                                            </div>
-                                            <div class="btn-group btn-group-lg">
-                                                <button type="button" class="btn btn-secondary btn-lg">8</button>
-                                            </div>
+                                            <button type="button" class="btn btn-secondary btn-lg">8</button> </div>
                                             <p></p>
+                                            <div class="btn-group btn-group-sm"> <button type="button" class="btn btn-primary">1</button> <button type="button" class="btn btn-primary">2</button> <button type="button" class="btn btn-primary">3</button> <button type="button" class="btn btn-primary">4</button>                                                </div>
+                                            <div class="btn-group btn-group-sm"> <button type="button" class="btn btn-primary">5</button> <button type="button" class="btn btn-primary">6</button> <button type="button" class="btn btn-primary">7</button> </div>
                                             <div class="btn-group btn-group-sm">
-                                                <button type="button" class="btn btn-primary">1</button>
-                                                <button type="button" class="btn btn-primary">2</button>
-                                                <button type="button" class="btn btn-primary">3</button>
-                                                <button type="button" class="btn btn-primary">4</button>
-                                            </div>
-                                            <div class="btn-group btn-group-sm">
-                                                <button type="button" class="btn btn-primary">5</button>
-                                                <button type="button" class="btn btn-primary">6</button>
-                                                <button type="button" class="btn btn-primary">7</button>
-                                            </div>
-                                            <div class="btn-group btn-group-sm">
-                                                <button type="button" class="btn btn-primary">8</button>
-                                            </div>
+                                            <button type="button" class="btn btn-primary">8</button> </div>
                                             <p></p>
                                             <p>Nesting</p>
-                                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                                                <button type="button" class="btn btn-secondary">1</button>
-                                                <button type="button" class="btn btn-secondary">2</button>
-                                                <div class="btn-group" role="group">
-                                                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </button>
+                                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown"> <button type="button" class="btn btn-secondary">1</button> <button type="button" class="btn btn-secondary">2</button>
+                                                <div class="btn-group" role="group"> <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			                  Dropdown
+			               </button>
                                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                         <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                                 </div>
                                             </div>
                                             <p></p>
-                                            <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
-                                                <button type="button" class="btn btn-primary">1</button>
-                                                <button type="button" class="btn btn-primary">2</button>
-                                                <div class="btn-group" role="group">
-                                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </button>
+                                            <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown"> <button type="button" class="btn btn-primary">1</button> <button type="button" class="btn btn-primary">2</button>
+                                                <div class="btn-group" role="group"> <button id="btnGroupDrop1" type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			                  Dropdown
+			               </button>
                                                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                         <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                                 </div>
@@ -488,145 +400,147 @@
                                         <section class="section">
                                             <p>Dropdowns</p>
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Primary </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               Primary
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Secondary </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               Secondary
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Success </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               Success
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Info </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               Info
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Warning </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               Warning
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Danger </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               Danger
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
-                                            <!-- END button group-->
-                                            <br>
-                                            <br>
+                                            <!-- END button group--><br> <br>
                                             <p>Split Dropdowns</p>
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-primary">Primary</button>
-                                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-primary">Primary</button> <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-secondary">Secondary</button>
-                                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-secondary">Secondary</button> <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-success">Success</button>
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-success">Success</button> <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-info">Info</button>
-                                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-info">Info</button> <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-warning">Warning</button>
-                                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-warning">Warning</button> <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-danger">Danger</button>
-                                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group"> <button type="button" class="btn btn-danger">Danger</button> <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
-                                            <!-- END button group-->
-                                            <br>
-                                            <br>
+                                            <!-- END button group--><br> <br>
                                             <p>Dropup Dropdowns</p>
                                             <!-- START button group-->
-                                            <div class="btn-group dropup">
-                                                <button type="button" class="btn btn-primary">Primary</button>
-                                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group dropup"> <button type="button" class="btn btn-primary">Primary</button> <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group dropup">
-                                                <button type="button" class="btn btn-secondary">Secondary</button>
-                                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group dropup"> <button type="button" class="btn btn-secondary">Secondary</button> <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group dropup">
-                                                <button type="button" class="btn btn-success">Success</button>
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group dropup"> <button type="button" class="btn btn-success">Success</button> <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group dropup">
-                                                <button type="button" class="btn btn-info">Info</button>
-                                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group dropup"> <button type="button" class="btn btn-info">Info</button> <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group dropup">
-                                                <button type="button" class="btn btn-warning">Warning</button>
-                                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group dropup"> <button type="button" class="btn btn-warning">Warning</button> <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
                                             <!-- END button group-->
                                             <!-- START button group-->
-                                            <div class="btn-group dropup">
-                                                <button type="button" class="btn btn-danger">Danger</button>
-                                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="sr-only">Toggle Dropdown</span> </button>
+                                            <div class="btn-group dropup"> <button type="button" class="btn btn-danger">Danger</button> <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			               <span class="sr-only">Toggle Dropdown</span>
+			            </button>
                                                 <div class="dropdown-menu"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
                                                     <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Separated link</a> </div>
                                             </div>
@@ -639,9 +553,7 @@
                     </section>
                 </article>
                 <footer class="footer">
-                    <div class="footer-block buttons">
-                        <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe>
-                    </div>
+                    <div class="footer-block buttons"> <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe> </div>
                     <div class="footer-block author">
                         <ul>
                             <li> created by <a href="https://github.com/modularcode">ModularCode</a> </li>
@@ -652,8 +564,10 @@
                 <div class="modal fade" id="modal-media">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> <span class="sr-only">Close</span> </button>
+                            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    					<span class="sr-only">Close</span>
+    				</button>
                                 <h4 class="modal-title">Media Library</h4> </div>
                             <div class="modal-body modal-tab-container">
                                 <ul class="nav nav-tabs modal-tabs" role="tablist">
@@ -679,10 +593,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Insert Selected</button>
-                            </div>
+                            <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Insert Selected</button> </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>
@@ -692,16 +603,14 @@
                 <div class="modal fade" id="confirm-modal">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    					<span aria-hidden="true">&times;</span>
+    				</button>
                                 <h4 class="modal-title"><i class="fa fa-warning"></i> Alert</h4> </div>
                             <div class="modal-body">
                                 <p>Are you sure want to do this?</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                            </div>
+                            <div class="modal-footer"> <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button> <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button> </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>
