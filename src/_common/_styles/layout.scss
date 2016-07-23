@@ -39,7 +39,25 @@
 
 .section {
 	display: block;
-	margin-bottom: 30px;
+	margin-bottom: $content-padding-y-md - $card-margin-bottom;
+
+
+	@include media(xl) {
+		margin-bottom: $content-padding-y-xl - $card-margin-bottom;
+	}
+
+	@include media(lg) {
+		margin-bottom: $content-padding-y-lg - $card-margin-bottom;
+	}
+
+	@include media(md) {
+		margin-bottom: $content-padding-y-md - $card-margin-bottom;
+	}
+
+	@include media-down(sm) {
+		margin-bottom: $content-padding-y-sm - $card-margin-bottom;
+	}
+
 
 	&:last-of-type {
 		margin-bottom: 0;

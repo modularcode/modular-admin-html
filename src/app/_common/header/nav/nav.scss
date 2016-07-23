@@ -1,6 +1,11 @@
 .header .header-block-nav {
 	margin-left: auto;
 	white-space: nowrap;
+	padding-right: 15px;
+
+	@include media-down(sm) {
+		padding-right: 25px;
+	}
 
 	@include clearfix();
 

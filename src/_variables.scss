@@ -69,14 +69,17 @@ $dropbown-color-border: fade-out($color-text-light, 0.9) !default;
 $dropdown-link-hover-color-bg: #f5f5f5 !default;
 
 // Content
-$content-padding-x-lg: 50px !default;
-$content-padding-y-lg: 50px !default;
+$content-padding-x-xl: 40px !default;
+$content-padding-y-xl: 35px !default;
 
-$content-padding-x-md: 30px !default;
-$content-padding-y-md: 40px !default;
+$content-padding-x-lg: 35px !default;
+$content-padding-y-lg: 30px !default;
+
+$content-padding-x-md: 20px !default;
+$content-padding-y-md: 25px !default;
 
 $content-padding-x-sm: 20px !default;
-$content-padding-y-sm: 25px !default;
+$content-padding-y-sm: 20px !default;
 
 $content-padding-x-xs: 10px !default;
 $content-padding-y-xs: 15px !default;
@@ -86,6 +89,8 @@ $content-padding-y-xs: 15px !default;
 $card-padding-x: 15px !default;
 $card-padding-x-xl: 20px !default;
 $card-padding-x-sm: 10px !default;
+
+$card-margin-bottom: 10px;
 
 // Item list
 $item-list-color-border: lighten($color-divider, 6%) !default;

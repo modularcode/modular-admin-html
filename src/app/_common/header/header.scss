@@ -9,6 +9,7 @@
 
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 
 
 	@include media-down(md) {
@@ -25,8 +26,6 @@
 	}
 
 	.header-block {
-		margin-right: 15px;
-		
 		@include media-down(sm) {
 			padding: 5px;
 		}

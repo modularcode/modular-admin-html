@@ -9,15 +9,22 @@
 		border: 1px solid lighten($color-text, 10%);
 		color: lighten($color-text, 10%);
 		margin: 0 5px;
+		border-radius: 0.2rem;
+		// border-radius: 25px;
 
 		&:hover,
 		&:focus {
 			border: 1px solid darken($color-text, 10%);
 			color: darken($color-text, 10%);
 		}
+
+
+		@include media-down(sm) {
+			span {
+				display: none;
+			}
+		}
 	}
 
-	@include media-down(sm) {
-		display: none;
-	}
+	
 }

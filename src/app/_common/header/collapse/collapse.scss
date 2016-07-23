@@ -1,7 +1,10 @@
 .header .header-block-collapse {
 
-	// padding-left: 0;
 	padding-right: 5px;
+
+	@include media-down(sm) {
+		width: 155px;
+	}
 
 	.collapse-btn {
 		background: none;
@@ -17,5 +20,4 @@
 		padding-right: 10px;
 		vertical-align: initial;
 	}
-
 }
