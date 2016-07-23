@@ -24,3 +24,4 @@ npm-debug.log
 
 *.iml
 /dist
+/.env

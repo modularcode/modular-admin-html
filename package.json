@@ -12,8 +12,10 @@
     "url": "https://github.com/modularcode/modular-admin-html/issues"
   },
   "homepage": "https://github.com/modularcode/modular-admin-html",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
+    "dotenv": "^2.0.0",
     "front-matter": "^2.0.5",
     "fs-extra": "^0.26.4",
     "glob": "^5.0.14",

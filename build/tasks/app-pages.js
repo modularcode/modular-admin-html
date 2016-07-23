@@ -5,6 +5,7 @@ var through = require('through2');
 var File = require('vinyl');
 var StringDecoder = require('string_decoder').StringDecoder;
 var extend 	= require('util')._extend;
+var dotenv = require('dotenv');
 
 var frontMatter = require('front-matter');
 var handlebars = require('handlebars');
@@ -152,6 +153,8 @@ function setFrontMatter(file) {
 	This function returns context of current page 
 	which is root context extended by all contexts untill
 	current level context
+
+	You may also use .env file in root folder
 */
 
 
@@ -159,6 +162,15 @@ function getPageContextExternal(file) {
 
 	// Initial context
 	var context = {};
+
+	// Environmental variables
+	env = dotenv.config({
+		silent: true,
+		path: path.resolve(config.rootDir, '.env')
+	});
+
+	// 
+	extend(context, env);
 
 	// Package data
 	context.pkg = require('../../package.json');
