@@ -56,22 +56,22 @@ body {
           transition: left 0.3s ease, padding-left 0.3s ease;
   overflow: hidden; }
   .app .content {
-    padding: 110px 30px 90px 30px;
+    padding: 95px 20px 75px 20px;
     min-height: 100vh; }
     @media (min-width: 1200px) {
       .app .content {
-        padding: 120px 50px 100px 50px; } }
+        padding: 105px 40px 85px 40px; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .app .content {
-    padding: 110px 30px 90px 30px; } }
+    padding: 100px 35px 80px 35px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .app .content {
     padding: 95px 20px 75px 20px; } }
     @media (max-width: 767px) {
       .app .content {
-        padding: 65px 10px 65px 10px; } }
+        padding: 70px 20px 70px 20px; } }
   @media (max-width: 991px) {
     .app {
       padding-left: 0; } }
@@ -1022,39 +1022,6 @@ label,
   .images-container .image-container.new:hover {
     opacity: 1; }
 
-.logo {
-  display: inline-block;
-  width: 45px;
-  height: 25px;
-  vertical-align: middle;
-  margin-right: 5px;
-  position: relative; }
-  .logo .l {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background-color: #85CE36;
-    position: absolute; }
-    .logo .l.l1 {
-      bottom: 0;
-      left: 0; }
-    .logo .l.l2 {
-      width: 7px;
-      height: 7px;
-      bottom: 13px;
-      left: 10px; }
-    .logo .l.l3 {
-      width: 7px;
-      height: 7px;
-      bottom: 4px;
-      left: 17px; }
-    .logo .l.l4 {
-      bottom: 13px;
-      left: 25px; }
-    .logo .l.l5 {
-      bottom: 0;
-      left: 34px; }
-
 /* *******************************************
 *		  Item List general styles
 ********************************************** */
@@ -1386,6 +1353,39 @@ label,
     .card > .item-list .item > .item-row {
       padding: 0 10px; } }
 
+.logo {
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+  position: relative; }
+  .logo .l {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #85CE36;
+    position: absolute; }
+    .logo .l.l1 {
+      bottom: 0;
+      left: 0; }
+    .logo .l.l2 {
+      width: 7px;
+      height: 7px;
+      bottom: 13px;
+      left: 10px; }
+    .logo .l.l3 {
+      width: 7px;
+      height: 7px;
+      bottom: 4px;
+      left: 17px; }
+    .logo .l.l4 {
+      bottom: 13px;
+      left: 25px; }
+    .logo .l.l5 {
+      bottom: 0;
+      left: 34px; }
+
 .modal-body.modal-tab-container {
   padding: 0; }
   .modal-body.modal-tab-container .modal-tabs {
@@ -1545,7 +1545,21 @@ span a {
 
 .section {
   display: block;
-  margin-bottom: 30px; }
+  margin-bottom: 15px; }
+  @media (min-width: 1200px) {
+    .section {
+      margin-bottom: 25px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section {
+    margin-bottom: 20px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    margin-bottom: 15px; } }
+  @media (max-width: 767px) {
+    .section {
+      margin-bottom: 10px; } }
   .section:last-of-type {
     margin-bottom: 0; }
 
@@ -2328,7 +2342,11 @@ pre {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   @media (max-width: 991px) {
     .header {
       left: 0; } }
@@ -2338,11 +2356,9 @@ pre {
       height: 50px; } }
   .header-fixed .header {
     position: fixed; }
-  .header .header-block {
-    margin-right: 15px; }
-    @media (max-width: 767px) {
-      .header .header-block {
-        padding: 5px; } }
+  @media (max-width: 767px) {
+    .header .header-block {
+      padding: 5px; } }
 
 .modal .modal-content {
   border-radius: 0; }
@@ -2469,16 +2485,20 @@ pre {
     background-color: transparent;
     border: 1px solid #64798d;
     color: #64798d;
-    margin: 0 5px; }
+    margin: 0 5px;
+    border-radius: 0.2rem; }
     .header .header-block-buttons .btn.header-btn:hover, .header .header-block-buttons .btn.header-btn:focus {
       border: 1px solid #3a4651;
       color: #3a4651; }
-  @media (max-width: 767px) {
-    .header .header-block-buttons {
-      display: none; } }
+    @media (max-width: 767px) {
+      .header .header-block-buttons .btn.header-btn span {
+        display: none; } }
 
 .header .header-block-collapse {
   padding-right: 5px; }
+  @media (max-width: 767px) {
+    .header .header-block-collapse {
+      width: 155px; } }
   .header .header-block-collapse .collapse-btn {
     background: none;
     border: none;
@@ -2495,7 +2515,11 @@ pre {
 
 .header .header-block-nav {
   margin-left: auto;
-  white-space: nowrap; }
+  white-space: nowrap;
+  padding-right: 15px; }
+  @media (max-width: 767px) {
+    .header .header-block-nav {
+      padding-right: 25px; } }
   .header .header-block-nav::after {
     content: "";
     display: table;
@@ -2533,7 +2557,7 @@ pre {
 
 .header .header-block-search {
   margin-right: auto;
-  padding-left: 30px; }
+  padding-left: 20px; }
   @media (max-width: 767px) {
     .header .header-block-search {
       padding-left: 10px; } }
@@ -2544,10 +2568,10 @@ pre {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .header .header-block-search {
-    padding-left: 30px; } }
+    padding-left: 20px; } }
   @media (min-width: 1200px) {
     .header .header-block-search {
-      padding-left: 50px; } }
+      padding-left: 35px; } }
   .header .header-block-search > form {
     float: right; }
     @media (max-width: 767px) {
@@ -2614,17 +2638,6 @@ pre {
         font-size: 24px;
         color: #85CE36;
         width: 230px; }
-
-.sidebar-header .brand {
-  color: #fff;
-  text-align: left;
-  padding-left: 25px;
-  line-height: 70px;
-  font-size: 16px; }
-  @media (max-width: 767px) {
-    .sidebar-header .brand {
-      line-height: 50px;
-      font-size: 16px; } }
 
 .customize {
   width: 100%;
@@ -2718,6 +2731,17 @@ pre {
                 top: 0;
                 left: 0;
                 color: #fff; }
+
+.sidebar-header .brand {
+  color: #fff;
+  text-align: left;
+  padding-left: 25px;
+  line-height: 70px;
+  font-size: 16px; }
+  @media (max-width: 767px) {
+    .sidebar-header .brand {
+      line-height: 50px;
+      font-size: 16px; } }
 
 .header .header-block-nav .notifications {
   font-size: 16px; }
