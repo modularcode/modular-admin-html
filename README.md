@@ -276,4 +276,4 @@ Feel free to contact us with any questions, sugestions, remarks and potential fe
 ## Hire Us?
 
 Do you have a great project? Need theme customization or intagration with back-end? Want to create something awesome?
-We may be available for hire. Just drop a message to [gevharut@gmail.com](mailto:gevharut@gmail.com) and let's talk.
+We may be available for hire. Just drop a message to gevharut[at]gmail.com and let's talk.
