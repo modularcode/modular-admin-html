@@ -1,4 +1,4 @@
-//LoginForm validation
+//SignupForm validation
 $(function() {
 	if (!$('#signup-form').length) {
         return false;
