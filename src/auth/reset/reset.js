@@ -1,4 +1,4 @@
-//LoginForm validation
+//ResetForm validation
 $(function() {
 	if (!$('#reset-form').length) {
         return false;
