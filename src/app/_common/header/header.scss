@@ -2,7 +2,7 @@
 	background-color: $color-divider;
 	height: $header-height;
 	position: absolute;
-	left: $sidebar-width;
+	left: 0;
 	right: 0;
 	transition: left 0.3s ease;
 	z-index: 10;
@@ -10,7 +10,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 
 	@include media-down(md) {
 		left: 0;
@@ -28,6 +27,12 @@
 	.header-block {
 		@include media-down(sm) {
 			padding: 5px;
+		}
+	}
+
+	.sidebar-open & {
+		@include media-up(md) {
+			left: $sidebar-width;
 		}
 	}
 }
