@@ -102,7 +102,7 @@ $(function() {
 
     $('#login-form').validate(loginValidationSettings);
 })
-//LoginForm validation
+//ResetForm validation
 $(function() {
 	if (!$('#reset-form').length) {
         return false;
@@ -133,7 +133,7 @@ $(function() {
 
     $('#reset-form').validate(resetValidationSettings);
 })
-//LoginForm validation
+//SignupForm validation
 $(function() {
 	if (!$('#signup-form').length) {
         return false;
