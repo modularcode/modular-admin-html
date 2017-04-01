@@ -2,19 +2,16 @@
 
 [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
- ![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)
-</a>
+[![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)](http://modularcode.github.io/modular-admin-html/)
 
-<a href="http://modularcode.github.io/modular-admin-html/" target="_blank">
-![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png) 
-</a>
+[![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png)](http://modularcode.github.io/modular-admin-html/)
 
 <p align="center">
   <strong>
     <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.1.0/modular-admin-html-1.1.0.zip" target="_blank">Download ZIP</a>
   </strong>
 </p>
+
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
 
 
