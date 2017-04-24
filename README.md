@@ -100,7 +100,7 @@ Open the project [http://localhost:4000](http://localhost:4000).
 ├── node_modules/           # node dependencies        
 ├── dist/                   # compiled result
 ├── src/                    # source files
-│── bowere.json             # bower configuration file
+│── bower.json              # bower configuration file
 └── package.json            # npm configuration file
 ```
 
