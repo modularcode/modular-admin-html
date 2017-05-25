@@ -5,7 +5,7 @@
   "dependencies": {
     "animate.css": "~3.4.0",
     "bootstrap": "v4.0.0-alpha.5",
-    "font-awesome": "~4.3.0",
+    "font-awesome": "~4.7.0",
     "jquery": "~2.1.4",
     "jquery-flot": "~0.8.3",
     "flot.tooltip": "~0.8.5",
@@ -28,6 +28,12 @@
         "dist/css/bootstrap.css",
         "dist/css/bootstrap-theme.css",
         "dist/js/bootstrap.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./css/font-awesome.css",
+        "./fonts/*"
       ]
     },
     "jquery-flot": {
