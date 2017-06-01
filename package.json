@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/modularcode/modular-admin-html",
   "dependencies": {
+    "opencollective": "^1.0.3"
   },
   "devDependencies": {
     "dotenv": "^2.0.0",
@@ -47,6 +48,12 @@
   "scripts": {
     "gulp": "gulp --gulpfile build/gulpfile.js",
     "start": "npm run gulp",
-    "deploy": "npm run gulp deploy"
+    "deploy": "npm run gulp deploy",
+    "postinstall": "opencollective postinstall"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/modular-admin-html",
+    "logo": "https://opencollective.com/opencollective/logo.txt"
   }
 }
