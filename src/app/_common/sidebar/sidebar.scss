@@ -6,9 +6,13 @@
 	top: 0;
 	left: 0;
 	bottom: 0;
-	transition: left 0.3s ease;
+	transition: left 0.3s ease, transform 0.3s ease;
 	z-index: 20;
 
+	@include media-up(md) {
+		transform: translateX(-$sidebar-width);
+
+    }
 
 	@include media-down(md) {
 		position: fixed;
@@ -22,6 +26,9 @@
 	.sidebar-open & {
 		left: 0;
 
+        @include media-up(md) {
+          transform: translateX(0);
+        }
 	}
 
 	.sidebar-container {
@@ -114,7 +121,7 @@
 				}
 			}
 
-			// First level item links arrow 
+			// First level item links arrow
 			& > a {
 				i {
 					margin-right: 5px;
@@ -139,7 +146,7 @@
 		& > li > ul > li {
 
 			// Second level and deeper items links
-			// Have bit darker background and more padding 
+			// Have bit darker background and more padding
 			// from left side
 			a {
 				padding-top: 10px;
