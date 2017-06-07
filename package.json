@@ -7,21 +7,28 @@
     "url": "https://github.com/modularcode/modular-admin-html.git"
   },
   "author": "ModularCode",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/modularcode/modular-admin-html/issues"
   },
   "homepage": "https://github.com/modularcode/modular-admin-html",
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "gulp-babel": "^6.1.2",
     "opencollective": "^1.0.3"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.2",
     "dotenv": "^4.0.0",
     "front-matter": "^2.0.5",
     "fs-extra": "^3.0.1",
     "glob": "^7.1.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-cached": "^1.1.1",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
@@ -46,6 +53,10 @@
     "vinyl": "^2.0.2"
   },
   "scripts": {
+    "dev": "npm run gulp dev",
+    "build": "npm run gulp",
+    "gulp": "gulp --gulpfile tools/gulpfile.js",
+    "build:templates": "npm run gulp templates",
     "postinstall": "opencollective postinstall"
   },
   "collective": {
