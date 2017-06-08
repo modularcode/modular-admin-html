@@ -20,7 +20,7 @@ const gulpTaskHTML = require('./gulptask-html');
 
 gulp.task('html', gulpTaskHTML);
 
-gulp.task('html:watch', function() {
+gulp.task('html:watch', ['html'], function() {
   plugins.watch([paths.pages, paths.partials, paths.helpers], function() {
       gulp.start('html');
   });
