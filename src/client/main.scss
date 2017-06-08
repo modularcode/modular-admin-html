@@ -1,3 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background-color: red;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  color: $colorText;
+  overflow-x: hidden;
 }

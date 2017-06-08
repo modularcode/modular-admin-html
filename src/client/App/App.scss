@@ -1,0 +1,59 @@
+.App {
+
+  .HeaderContainer {
+    position: absolute;
+    left: $SidebarWidth;
+    right: 0;
+    top: 0;
+    height: $HeaderHeight;
+    background-color: red;
+  }
+
+  .SidebarContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $SidebarWidth;
+    background-color: orange;
+  }
+
+  .ContentContainer {
+    padding-top: $HeaderHeight;
+    padding-bottom: $FooterHeight;
+    margin-left: $SidebarWidth;
+    background-color: #efefef;
+    min-height: 100vh;
+  }
+
+  .FooterContainer {
+    position: absolute;
+    left: $SidebarWidth;
+    bottom: 0;
+    right: 0;
+    height: $FooterHeight;
+    background-color: purple;
+  }
+
+  &.-header-fixed {
+    .HeaderContainer {
+      position: fixed;
+    }
+  }
+
+
+  &.-sidebar-fixed {
+    .SidebarContainer {
+      position: fixed;
+    }
+  }
+
+  &.-footer-fixed {
+    .FooterContainer {
+      position: fixed;
+    }
+  }
+
+
+
+}

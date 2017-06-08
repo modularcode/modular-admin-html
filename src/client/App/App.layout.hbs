@@ -1,18 +1,20 @@
 ---
 layout: main.layout
 ---
-<div class="app" id="app">
-  {{!-- Default header block --}}
-  {{!-- {{> app/_common/header/header}} --}}
-  {{!-- Default sidebar block --}}
-  {{!-- {{> app/_common/sidebar/sidebar}} --}}
+<div class="App" id="App">
 
-  {{!-- Content section --}}
-  <article class="content {{pagename}}-page">
+  <div class="HeaderContainer">
+    {{> App/_common/Header/Header}}
+  </div>
+  <div class="SidebarContainer">
+    {{> App/_common/Sidebar/Sidebar}}
+  </div>
+
+  <div class="ContentContainer {{pagename}}">
     {{{body}}}
-  </article>
+  </div>
 
-  {{!-- Default footer block --}}
-  {{!-- {{> app/_common/footer/footer}} --}}
-  {{!-- {{> app/_common/modals/modals}} --}}
+  <div class="FooterContainer" >
+    {{> App/_common/Footer/Footer}}
+  </div>
 </div>
