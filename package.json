@@ -14,6 +14,7 @@
   "homepage": "https://github.com/modularcode/modular-admin-html",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
+    "cpx": "^1.5.0",
     "cross-env": "^5.0.1",
     "font-awesome": "^4.7.0",
     "opencollective": "^1.0.3"
@@ -45,6 +46,7 @@
     "handlebars-layouts": "^3.1.0",
     "handlebars-registrar": "^1.5.2",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
     "sass-resources-loader": "^1.2.1",
@@ -56,14 +58,17 @@
     "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
-    "dev": "npm run clean && (npm run html:dev | npm run bundle:dev)",
-    "build": "npm run clean && (npm run html:prod | npm run bundle:prod)",
+    "dev": "npm run clean && (npm run assets:dev | npm run html:dev | npm run bundle:dev)",
+    "start": "npm run build && npm run server:prod",
+    "build": "npm run clean && (npm run assets:prod | npm run html:prod | npm run bundle:prod)",
+    "assets:dev": "cpx \"src/client/_assets/**/*\" dist/assets  --watch",
+    "assets:prod": "cpx \"src/client/_assets/**/*\" dist/assets ",
     "html:dev": "cross-env NODE_ENV=development gulp html:watch --gulpfile tools/gulpfile.js",
     "html:prod": "cross-env NODE_ENV=production gulp html --gulpfile tools/gulpfile.js",
     "bundle:dev": "cross-env NODE_ENV=development webpack-dev-server --config tools/webpack.config.dev.js",
     "bundle:prod": "cross-env NODE_ENV=production webpack --config tools/webpack.config.prod.js",
-    "server:dev": "return;",
-    "server:prod": "return;",
+    "server:dev": "nodemon src/server/main.js",
+    "server:prod": "node src/server/main.js",
     "clean": "rimraf dist",
     "prebuild": "npm run clean # clear dist directory",
     "postinstall": "opencollective postinstall"
