@@ -1,14 +1,25 @@
-const path = require('path');
+/**
+ *  This is the project directory configuration file.
+ *
+ *  It's located in the root directory, because It's used in
+ *  build tools and src/ files.
+ */
 
-const ENV = require('dotenv').load({
-  path: path.resolve(__dirname, ".env"),
+const fs = require('fs');
+const path = require('path');
+const dotenv = require('dotenv');
+
+const envFilePath = fs.existsSync(path.resolve(__dirname, ".env")) ?
+  path.resolve(__dirname, ".env") :
+  path.resolve(__dirname, ".env.example");
+
+const ENV = dotenv.load({
+  path: envFilePath,
   silent: true
 });
 
 const config = {
-  ENV: ENV.NODE_ENV || "development",
-  PORT: process.env.PORT || ENV.PORT || 4000,
-
+  ENV: ENV,
   ROOT_DIR: path.resolve(__dirname),                     // Root dir
   NPM_DIR:   path.resolve(__dirname, "./node_modules"),  // Npm dir
   SRC_DIR: path.resolve(__dirname, "./src"),             // Source files

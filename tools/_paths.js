@@ -10,7 +10,10 @@ exports.styles = {
   main: config.CLIENT_DIR + "/main.scss",
 };
 
-exports.scripts = config.CLIENT_DIR + "/**/!(_context|*.helper)*.js";
+exports.scripts = {
+  all: config.CLIENT_DIR + "/**/!(_context|*.helper)*.js",
+  main: config.CLIENT_DIR + "/main.js",
+};
 
 // Handlebars paths
 
@@ -19,3 +22,5 @@ exports.helpers = config.CLIENT_DIR + "/**/*.helper.js";
 exports.pages = config.CLIENT_DIR + "/**/*.page.hbs";
 
 exports.partials = config.CLIENT_DIR + "/**/*.hbs";
+
+exports.mainPage = "Dashboard";

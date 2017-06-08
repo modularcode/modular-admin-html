@@ -15,7 +15,7 @@ const handlebars = require('handlebars');
 const handlebarsRegistrar = require('handlebars-registrar');
 
 const config  = require('../config');
-const paths = require('./paths');
+const paths = require('./_paths');
 const partials = {};
 
 module.exports = function() {
@@ -53,8 +53,14 @@ module.exports = function() {
     .on('error', plugins.util.log)
 
     // Rename .page.hbs to .html
+    // Rename main page to index
     .pipe(plugins.rename(function (path) {
       path.basename = path.basename.replace(".page", "");
+      path.basename = path.basename.replace(
+        new RegExp(`^${paths.mainPage}$`),
+        "index"
+      );
+
       path.extname = ".html"
     }))
 
