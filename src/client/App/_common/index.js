@@ -1,0 +1,4 @@
+import './Sidebar';
+
+
+export default {};
