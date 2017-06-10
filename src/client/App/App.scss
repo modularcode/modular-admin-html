@@ -1,6 +1,9 @@
 .App {
 
+  --app-color-bg: $AppColorBg;
+
   background-color: $AppColorBg;
+  background-color: var(--app-color-bg);
 
   .HeaderContainer {
     position: absolute;

@@ -1,6 +1,10 @@
 .Footer {
+  --footer-color-bg: $FooterColorBg;
+
   width: 100%;
-  background-color: $FooterColorBg;
   align-items: center;
   justify-content: space-between;
+
+  background-color: $FooterColorBg;
+  background-color: var(--footer-color-bg);
 }

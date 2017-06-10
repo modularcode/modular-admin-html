@@ -1,4 +1,7 @@
 .Header {
+  --header-color-bg: $HeaderColorBg;
+
   width: 100%;
   background-color: $HeaderColorBg;
+  background-color: var(--header-color-bg);
 }
