@@ -1,4 +1,8 @@
 const path = require('path');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
+const cssvariables = require("postcss-css-variables");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = require('../config');
 
@@ -20,11 +24,36 @@ module.exports = {
       {
         test:   /\.scss/,
         use: [
-          'style-loader',
-          'css-loader',
           {
-            'loader': 'sass-loader',
-            'options': {
+            loader: 'style-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              // modules: true,  // This option activates css modules
+              importLoaders: 1,
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              plugins: [
+                cssvariables({
+                  preserve: true
+                }),
+                autoprefixer('last 2 versions', 'ie 10'),
+              ]
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
               includePaths: [
                 config.NPM_DIR,
                 config.APP_DIR

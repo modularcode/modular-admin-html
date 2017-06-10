@@ -1,15 +1,7 @@
 .Sidebar {
-  --sidebar-color-bg: $SidebarColorBg;
-  --sidebar-color-text: $SidebarColorText;
-
-  background-color: $FooterColorBg;
-  background-color: var(--footer-color-bg);
-
   width: 100%;
   box-shadow: 0px 0px 30px fade-out(#666, 0.5);
 
-  color: $SidebarColorText;
-  color: var(--sidebar-color-text);
-  background-color: $SidebarColorBg;
-  background-color: var(--sidebar-color-bg);
+  color: var(--SidebarColorText);
+  background-color: var(--SidebarColorBg);
 }

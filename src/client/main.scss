@@ -3,18 +3,39 @@
 @import "bootstrap/scss/normalize.scss";
 @import "bootstrap/scss/print.scss";
 
-// Css variables
+// Customizable css variables
 :root {
-  --color-primary: $colorPrimary;
-  --color-primary-light: $colorPrimary-light;
-  --color-primary-lighter: $colorPrimary-lighter;
-  --color-primary-dark: $colorPrimary-dark;
-  --color-primary-darker: $colorPrimary-darker;
-  --color-text: $colorText;
-  --color-text-light: $colorText-light;
-  --color-text-muted: $colorText-muted;
-  --color-text-inverse: $colorText-inverse;
-  --color-text-passive: $colorText-passive;
+  /*----------  Primary colors  ----------*/
+
+  --colorPrimary: $colorPrimary;
+  --colorPrimary-light: $colorPrimary-light;
+  --colorPrimary-lighter: $colorPrimary-lighter;
+  --colorPrimary-dark: $colorPrimary-dark;
+  --colorPrimary-darker: $colorPrimary-darker;
+  --colorText: $colorText;
+  --colorText-light: $colorText-light;
+  --colorText-muted: $colorText-muted;
+  --colorText-inverse: $colorText-inverse;
+  --colorText-passive: $colorText-passive;
+
+  /*----------  Components  ----------*/
+
+  // App
+  --AppColorBg: $AppColorBg;
+
+  // Header
+  --HeaderHeight: $HeaderHeight;
+  --HeaderHeight-xs: $HeaderHeight-xs;
+  --HeaderColorBg: $HeaderColorBg;
+
+  // Sidebar
+  --SidebarWidth: $SidebarWidth;
+  --SidebarColorBg: $SidebarColorBg;
+  --SidebarColorText: $SidebarColorText;
+
+  // Footer
+  --FooterHeight: $FooterHeight;
+  --FooterColorBg: $FooterColorBg;
 }
 
 
@@ -26,8 +47,7 @@ body {
   margin: 0;
   min-height: 100%;
   position: relative;
-  color: $colorText;
-  color: var(--color-text);
+  color: var(--colorText);
   overflow-x: hidden;
 }
 
