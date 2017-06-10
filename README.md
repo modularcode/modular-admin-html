@@ -10,7 +10,7 @@
 
 ```
 # 1. Clone the repo
-git clone -b v2 git@github.com:modularcode/modular-admin-html.git modular-admin-html
+git clone --depth=1 -b v2 git@github.com:modularcode/modular-admin-html.git modular-admin-html
 
 # 2. Install dependenices
 cd modular-admin-html
