@@ -1,0 +1,6 @@
+.Card {
+  --card-color-bg: $CardColorBg;
+
+  background-color: $CardColorBg;
+  background-color: var(--card-color-bg);
+}

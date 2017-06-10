@@ -2,6 +2,10 @@
   --header-color-bg: $HeaderColorBg;
 
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   background-color: $HeaderColorBg;
   background-color: var(--header-color-bg);
 }
