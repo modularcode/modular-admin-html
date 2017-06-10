@@ -1,12 +1,15 @@
 .App {
 
+  background-color: $AppColorBg;
+
   .HeaderContainer {
     position: absolute;
+    top: 0;
     left: $SidebarWidth;
     right: 0;
-    top: 0;
     height: $HeaderHeight;
-    background-color: red;
+    display: flex;
+    align-items: 'stretch';
   }
 
   .SidebarContainer {
@@ -15,15 +18,17 @@
     top: 0;
     bottom: 0;
     width: $SidebarWidth;
-    background-color: orange;
+    display: flex;
+    align-items: 'stretch';
   }
 
   .ContentContainer {
+    display: flex;
     padding-top: $HeaderHeight;
     padding-bottom: $FooterHeight;
     margin-left: $SidebarWidth;
-    background-color: #efefef;
     min-height: 100vh;
+    align-items: 'stretch';
   }
 
   .FooterContainer {
@@ -32,7 +37,8 @@
     bottom: 0;
     right: 0;
     height: $FooterHeight;
-    background-color: purple;
+    display: flex;
+    align-items: 'stretch';
   }
 
   &.-header-fixed {

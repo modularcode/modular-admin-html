@@ -1,16 +1,35 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,800,700,600);
 
-* {
-  box-sizing: border-box;
+@import "bootstrap/scss/normalize.scss";
+@import "bootstrap/scss/print.scss";
+
+// Css variables
+:root {
+  --color-primary: $colorPrimary;
+  --color-primary-light: $colorPrimary-light;
+  --color-primary-lighter: $colorPrimary-lighter;
+  --color-primary-dark: $colorPrimary-dark;
+  --color-primary-darker: $colorPrimary-darker;
+  --color-text: $colorText;
+  --color-text-light: $colorText-light;
+  --color-text-muted: $colorText-muted;
+  --color-text-inverse: $colorText-inverse;
+  --color-text-passive: $colorText-passive;
 }
 
+
+
+// Main styles
 html,
 body {
   padding: 0;
   margin: 0;
   min-height: 100%;
   position: relative;
-  font-family: 'Open Sans', sans-serif;
   color: $colorText;
+  color: var(--color-text);
   overflow-x: hidden;
 }
+
+
+
