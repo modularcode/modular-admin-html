@@ -16,10 +16,10 @@ const webpackConfigProduction = {
 // Result config
 const webpackConfig = Object.assign({}, webpackConfigBase, webpackConfigProduction);
 
-// Add css minification
-webpackConfig.module.rules[1].use[2].options.plugins.push(
-  cssnano()
-);
+// // Add css minification
+// webpackConfig.module.rules[1].use[2].options.plugins.push(
+//   cssnano()
+// );
 
 // Add extract text webpack plugin for styles extraction
 const sassRule = Object.assign({}, webpackConfig.module.rules[1]);

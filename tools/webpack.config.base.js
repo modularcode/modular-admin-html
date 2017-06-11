@@ -59,7 +59,7 @@ webpackConfigBase.module.rules = [
           sourceMap: true,
           plugins: [
             postcssImport(),
-            cssvariables({
+            customProperties({
               preserve: true,
               variables: theme.JS
             }),
@@ -102,6 +102,27 @@ webpackConfigBase.module.rules = [
         },
       }
     ],
+  },
+
+  // CSS files
+  {
+    test:   /\.css/,
+    use: [
+      {
+        loader: 'style-loader',
+        options: {
+          sourceMap: true
+        }
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          // modules: true,  // This option activates css modules
+          importLoaders: 1,
+          sourceMap: true
+        }
+      }
+    ]
   },
 
   /*----------  Static files  ----------*/
