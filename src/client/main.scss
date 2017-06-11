@@ -3,40 +3,13 @@
 @import "bootstrap/scss/normalize.scss";
 @import "bootstrap/scss/print.scss";
 
-// Customizable css variables
+
 :root {
-  /*----------  Primary colors  ----------*/
-
-  --colorPrimary: $colorPrimary;
-  --colorPrimary-light: $colorPrimary-light;
-  --colorPrimary-lighter: $colorPrimary-lighter;
-  --colorPrimary-dark: $colorPrimary-dark;
-  --colorPrimary-darker: $colorPrimary-darker;
-  --colorText: $colorText;
-  --colorText-light: $colorText-light;
-  --colorText-muted: $colorText-muted;
-  --colorText-inverse: $colorText-inverse;
-  --colorText-passive: $colorText-passive;
-
-  /*----------  Components  ----------*/
-
-  // App
-  --AppColorBg: $AppColorBg;
-
-  // Header
-  --HeaderHeight: $HeaderHeight;
-  --HeaderHeight-xs: $HeaderHeight-xs;
-  --HeaderColorBg: $HeaderColorBg;
-
-  // Sidebar
-  --SidebarWidth: $SidebarWidth;
-  --SidebarColorBg: $SidebarColorBg;
-  --SidebarColorText: $SidebarColorText;
-
-  // Footer
-  --FooterHeight: $FooterHeight;
-  --FooterColorBg: $FooterColorBg;
+  // This line will be replaced by computed value of
+  // CSS exported string value of '_common/theme.js'
+  <--themeCSS-->
 }
+
 
 
 

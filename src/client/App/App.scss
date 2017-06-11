@@ -4,9 +4,9 @@
   .HeaderContainer {
     position: absolute;
     top: 0;
-    left: var(--SidebarWidth);
+    left: var(--AppSidebarWidth);
     right: 0;
-    height: var(--HeaderHeight);
+    height: var(--AppHeaderHeight);
     display: flex;
     align-items: 'stretch';
   }
@@ -16,16 +16,16 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: var(--SidebarWidth);
+    width: var(--AppSidebarWidth);
     display: flex;
     align-items: 'stretch';
   }
 
   .ContentContainer {
     display: flex;
-    padding-top: var(--HeaderHeight);
-    padding-bottom: var(--FooterHeight);
-    margin-left: var(--SidebarWidth);
+    padding-top: var(--AppHeaderHeight);
+    padding-bottom: var(--AppFooterHeight);
+    margin-left: var(--AppSidebarWidth);
     min-height: 100vh;
     align-items: stretch;
   }
@@ -34,8 +34,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    left: var(--SidebarWidth);
-    height: var(--FooterHeight);
+    left: var(--AppSidebarWidth);
+    height: var(--AppFooterHeight);
     display: flex;
     align-items: 'stretch';
   }

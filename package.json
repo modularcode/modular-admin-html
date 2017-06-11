@@ -57,6 +57,7 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
     "sass-resources-loader": "^1.2.1",
+    "string-replace-loader": "^1.2.0",
     "style-loader": "^0.18.2",
     "through2": "^2.0.0",
     "url-loader": "^0.5.8",
