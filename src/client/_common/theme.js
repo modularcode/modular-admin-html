@@ -33,14 +33,17 @@ theme.JS = {
   'AppFooterHeight': '50px',
 
   // Header
-  'HeaderColorBg': '#d7dde4',
+  'HeaderColorBg': '#fff',
+  'HeaderShadow': '0px 0px 11px rgba(102, 102, 102, 0.05)',
 
   // Footer
   'FooterColorBg': '#fff',
+  'FooterShadow': 'none',
 
   // Sidebar
   'SidebarColorBg': '#4f5f6f',  // should be // 'darken(#4f5f6f, 10%)',
   'SidebarColorText': '#4f5f6f',  // should be //'fade-out('colorText-inverse, 0.5)',
+  'SidebarShadow': '0px 0px 30px fade-out(#666, 0.5)',  // should be //'fade-out('colorText-inverse, 0.5)',
 
   // Sidebar Nav
   // 'SidebarNavColorText': 'fade-out('colorText-inverse, 0.5)',
@@ -71,6 +74,7 @@ theme.JS = {
   'CardMarginBottom': '10px',
 
   'CardColorBg': 'rgba(255,255,255,0.94)',
+  'CardShadow': '0px 0px 30px rgba(232, 232, 232, 0.37)',
 };
 
 // Generate CSS and SCSS variables strings

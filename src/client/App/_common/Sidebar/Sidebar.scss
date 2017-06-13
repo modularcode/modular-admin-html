@@ -1,7 +1,7 @@
 .Sidebar {
   width: 100%;
-  box-shadow: 0px 0px 30px fade-out(#666, 0.5);
 
   color: var(--SidebarColorText);
   background-color: var(--SidebarColorBg);
+  box-shadow: var(--SidebarShadow);
 }
