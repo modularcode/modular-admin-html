@@ -1,1 +1,0 @@
-import './Content.scss';

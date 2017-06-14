@@ -23,17 +23,6 @@
     z-index: 40;
   }
 
-  .ContentContainer {
-    display: flex;
-    position: relative;
-    padding-top: var(--AppHeaderHeight);
-    padding-bottom: var(--AppFooterHeight);
-    margin-left: var(--AppSidebarWidth);
-    min-height: 100vh;
-    align-items: stretch;
-    z-index: 10;
-  }
-
   .FooterContainer {
     position: absolute;
     bottom: 0;
@@ -45,35 +34,67 @@
     z-index: 20;
   }
 
-  .ContentBackground {
-    opacity: 0.4;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: var(--AppHeaderHeight);
-    bottom: var(--AppFooterHeight);
-    background-size: 100%;
-    background-image: url(/assets/page-bg-1.svg);
-    background-repeat: no-repeat;
+  .ContentContainer {
+    display: flex;
+    position: relative;
+    padding-top: var(--AppHeaderHeight);
+    padding-bottom: var(--AppFooterHeight);
+    margin-left: var(--AppSidebarWidth);
+    min-height: 100vh;
+    align-items: stretch;
+    z-index: 10;
   }
 
-  &.--header-fixed {
+  .Content {
+    width: 100%;
+  }
+
+  .ContentBackground {
+    position: absolute;
+    width: 100%;
+    top: var(--AppHeaderHeight);
+    bottom: var(--AppFooterHeight);
+  }
+
+
+  // Layout variations
+  &.-header-fixed {
     .HeaderContainer {
       position: fixed;
     }
   }
 
 
-  &.--sidebar-fixed {
+  &.-sidebar-fixed {
     .SidebarContainer {
       position: fixed;
     }
   }
 
-  &.--footer-fixed {
+  &.-footer-fixed {
     .FooterContainer {
       position: fixed;
     }
+  }
+
+
+  // Background variations
+  &.-bg-fixed .ContentBackground {
+    background-attachment: fixed;
+  }
+
+  &.-bg1 .ContentBackground {
+    opacity: 0.4;
+    background-size: 100%;
+    background-image: url(/assets/page-bg-1.svg);
+    background-repeat: no-repeat;
+  }
+
+  &.-bg2 .ContentBackground {
+    opacity: 0.4;
+    background-size: cover;
+    background-image: url(/assets/page-bg-2.svg);
+    background-repeat: no-repeat;
   }
 
 

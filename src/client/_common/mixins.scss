@@ -5,4 +5,41 @@
 @import "bootstrap/scss/mixins";
 
 
+// Specified breakpoint
+@mixin media($name) {
+  @include media-breakpoint-only($name) {
+    @content;
+  };
+}
 
+// Larger than specified breakpoint
+@mixin media-up($name) {
+  @include media-breakpoint-up($name) {
+    @content;
+  };
+}
+
+// smaller than specified breakpoint
+@mixin media-down($name) {
+  @include media-breakpoint-down($name) {
+    @content;
+  };
+}
+
+// /******************************************
+// *           Placeholder
+// *******************************************/
+@mixin placeholder() {
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    @content;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    @content;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    @content;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    @content;
+  }
+}

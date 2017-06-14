@@ -7,6 +7,8 @@ import './Icon';
 import './ItemList';
 import './Layout';
 import './Modal';
+import './Page';
+import './ScrollBar';
 import './Table';
 import './Typography';
 import './Util';

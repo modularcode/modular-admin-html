@@ -1,4 +1,14 @@
 .Card {
   background-color: var(--CardColorBg);
   box-shadow: var(--CardShadow);
+  width: 100%;
+  margin-bottom: var(--CardMarginBottom);
+
+  .CardHeader {
+
+  }
+
+  .CardBlock {
+
+  }
 }
