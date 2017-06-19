@@ -61,7 +61,7 @@ webpackConfigBase.module.rules = [
             postcssImport(),
             customProperties({
               preserve: true,
-              variables: theme.JS
+              variables: theme.COMPUTED
             }),
             autoprefixer('last 2 versions', 'ie 10'),
           ]
