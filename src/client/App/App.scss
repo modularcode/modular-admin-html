@@ -126,6 +126,25 @@
   }
 
 
+  &.-sidebar-closed {
+    .HeaderContainer {
+      left: 0;
+    }
+
+    .SidebarContainer {
+      left: calc(-1 * var(--AppSidebarWidth));
+    }
+
+    .ContentContainer {
+      margin-left: 0;
+    }
+
+    .FooterContainer {
+      left: 0;
+    }
+  }
+
+  // This rule is more powerfull than .-sidebar-closed
   &.-sidebar-open {
     .HeaderContainer {
       left: var(--AppSidebarWidth);
@@ -167,25 +186,6 @@
       filter: blur(5px);
     }
   }
-
-  &.-sidebar-closed {
-    .HeaderContainer {
-      left: 0;
-    }
-
-    .SidebarContainer {
-      left: calc(-1 * var(--AppSidebarWidth));
-    }
-
-    .ContentContainer {
-      margin-left: 0;
-    }
-
-    .FooterContainer {
-      left: 0;
-    }
-  }
-
 
   // Background variations
   &.-bg-fixed .ContentBackground {
