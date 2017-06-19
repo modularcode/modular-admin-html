@@ -31,6 +31,7 @@ theme.JS = {
   'AppHeaderHeight-xs': '50px',
   'AppSidebarWidth': '230px',
   'AppFooterHeight': '50px',
+  'AppLayoutTransitionDuration': '.3s',
 
   // Header
   'HeaderColorBg': '#fff',
@@ -43,7 +44,7 @@ theme.JS = {
   // Sidebar
   'SidebarColorBg': '#4f5f6f',  // should be // 'darken(#4f5f6f, 10%)',
   'SidebarColorText': '#4f5f6f',  // should be //'fade-out('colorText-inverse, 0.5)',
-  'SidebarShadow': '0px 0px 30px fade-out(#666, 0.5)',  // should be //'fade-out('colorText-inverse, 0.5)',
+  'SidebarShadow': '0px 0px 30px rgba(72, 72, 72, 0.5)',  // should be //'fade-out('colorText-inverse, 0.5)',
 
   // Sidebar Nav
   // 'SidebarNavColorText': 'fade-out('colorText-inverse, 0.5)',

@@ -1,4 +1,5 @@
 .App {
+  overflow-x: hidden;
   background-color: var(--AppColorBg);
 
   .HeaderContainer {
@@ -10,6 +11,14 @@
     display: flex;
     align-items: 'stretch';
     z-index: 30;
+
+    transition-property: left;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+
+    @include media-down(md) {
+      left: 0;
+    }
   }
 
   .SidebarContainer {
@@ -21,6 +30,29 @@
     display: flex;
     align-items: 'stretch';
     z-index: 40;
+
+    transition-property: left;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+
+    @include media-down(md) {
+      left: calc(-1 * var(--AppSidebarWidth));
+    }
+  }
+
+  .SidebarOverlay {
+    position: absolute;
+    // display: none;
+    left: 200vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    z-index: 35;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .FooterContainer {
@@ -32,6 +64,14 @@
     display: flex;
     align-items: 'stretch';
     z-index: 20;
+
+    transition-property: left;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+
+    @include media-down(md) {
+      left: 0;
+    }
   }
 
   .ContentContainer {
@@ -43,6 +83,14 @@
     min-height: 100vh;
     align-items: stretch;
     z-index: 10;
+
+    transition-property: margin-left;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+
+    @include media-down(md) {
+      margin-left: 0;
+    }
   }
 
   .Content {
@@ -78,6 +126,67 @@
   }
 
 
+  &.-sidebar-open {
+    .HeaderContainer {
+      left: var(--AppSidebarWidth);
+
+      @include media-down(md) {
+        left: 0;
+      }
+    }
+
+    .SidebarContainer {
+      left: 0;
+    }
+
+    .SidebarOverlay {
+      left: 0;
+      opacity: 1;
+    }
+
+    .ContentContainer {
+      margin-left: var(--AppSidebarWidth);
+
+      @include media-down(md) {
+        margin-left: 0;
+      }
+    }
+
+    .FooterContainer {
+      left: var(--AppSidebarWidth);
+
+      @include media-down(md) {
+        left: 0;
+      }
+    }
+
+    // Blur out content
+    .HeaderContainer,
+    .ContentContainer,
+    .FooterContainer {
+      filter: blur(5px);
+    }
+  }
+
+  &.-sidebar-closed {
+    .HeaderContainer {
+      left: 0;
+    }
+
+    .SidebarContainer {
+      left: calc(-1 * var(--AppSidebarWidth));
+    }
+
+    .ContentContainer {
+      margin-left: 0;
+    }
+
+    .FooterContainer {
+      left: 0;
+    }
+  }
+
+
   // Background variations
   &.-bg-fixed .ContentBackground {
     background-attachment: fixed;
@@ -96,7 +205,5 @@
     background-image: url(/assets/page-bg-2.svg);
     background-repeat: no-repeat;
   }
-
-
 
 }
