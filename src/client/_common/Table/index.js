@@ -1,0 +1,1 @@
+import './Table.scss'

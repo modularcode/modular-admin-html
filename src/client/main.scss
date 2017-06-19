@@ -1,0 +1,16 @@
+:root {
+  // This line will be replaced by computed value of
+  // CSS exported string value of '_common/theme.js'
+  <--themeCSS-->
+}
+
+// Main styles
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+  color: var(--colorText);
+  overflow-x: hidden;
+}

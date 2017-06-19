@@ -1,0 +1,27 @@
+---
+layout: main.layout
+titleSeparator: '-'
+titleName: 'ModularAdmin | HTML version'
+---
+<div class="App" id="App">
+  <div class="HeaderContainer">
+    {{> App/_common/Header/Header}}
+  </div>
+  <div class="SidebarContainer">
+    {{> App/_common/Sidebar/Sidebar}}
+  </div>
+
+  <div class="ContentContainer {{pagename}}">
+    <div class="ContentBackground"></div>
+    <div class="Content">
+      {{{body}}}
+    </div>
+  </div>
+
+  <div class="FooterContainer" >
+    {{> App/_common/Footer/Footer}}
+  </div>
+
+  <div class="AppBackground"></div>
+
+</div>
