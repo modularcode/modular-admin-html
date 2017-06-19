@@ -61,7 +61,7 @@ webpackConfigBase.module.rules = [
             postcssImport(),
             customProperties({
               preserve: true,
-              variables: theme.COMPUTED
+              variables: theme.toObject()
             }),
             autoprefixer('last 2 versions', 'ie 10'),
           ]
@@ -83,11 +83,11 @@ webpackConfigBase.module.rules = [
           multiple: [
             {
               search: '<--themeSCSS-->',
-              replace: theme.SCSS
+              replace: theme.toSCSS()
             },
             {
               search: '<--themeCSS-->',
-              replace: theme.CSS
+              replace: theme.toCSS()
             }
           ]
         }

@@ -1,7 +1,6 @@
 const Color = require('color');
-const theme = {};
 
-theme.JS = {
+let variables = {
 
   /*----------  Main Colors  ----------*/
 
@@ -80,25 +79,99 @@ theme.JS = {
   'CardBlockPaddingHorizontal': '15px',
   'CardBlockPaddingHorizontal-xl': '20px',
   'CardBlockPaddingHorizontal-sm': '10px',
-
 };
 
-// Generate CSS and SCSS variables strings
-theme.CSS = '';
-theme.SCSS = '';
-theme.COMPUTED = {};
+const theme = {
+  get,
+  set,
+  extend,
+  toCSS,
+  toSCSS,
+  toObject,
+};
 
-Object.keys(theme.JS).map(function(key, index) {
-  let varName = key;
+/*----------  Function Definitions  ----------*/
+
+
+function get() {
+  return variables;
+};
+
+function set() {
+  if (arguments.length === 1) {
+    const value = arguments[0];
+
+    variables = value;
+  }
+  // .set('Something', 'value')
+  else if (arguments.length > 1) {
+    const key = arguments[0];
+    const value = arguments[1];
+
+    variables[key] = value;
+  }
+};
+
+function extend(value) {
+  variables = Object.assign(variables, value);
+};
+
+
+function toCSS() {
+
+  let CSS = '';
+
+  Object.keys(variables).map(function(key, index) {
+    const varName = key;
+    const varValue = getVariableValue(key);
+    const cssRule = `--${varName}: ${varValue};`;
+
+    CSS = CSS + cssRule;
+  });
+
+  return CSS;
+};
+
+function toSCSS() {
+
+  let SCSS = '';
+
+  Object.keys(variables).map(function(key, index) {
+    const varName = key;
+    const varValue = getVariableValue(key);
+    const sassRule = `$${varName}: ${varValue} !default;`;
+
+    SCSS = SCSS + sassRule;
+  });
+
+  return SCSS;
+};
+
+function toObject() {
+  let res = {};
+
+  Object.keys(variables).map(function(key, index) {
+    const varName = key;
+    const varValue = getVariableValue(key);
+
+    res[varName] = varValue;
+  });
+
+  return res;
+};
+
+
+
+function getVariableValue(key) {
   let varValue = '';
 
   // Value is defined as color
-  if (typeof theme.JS[key].string === "function") {
-    varValue = theme.JS[key].string();
+  if (typeof variables[key].string === "function") {
+    varValue = variables[key].string();
   }
   // Values is defined as functions as well
-  else if (typeof theme.JS[key] === "function") {
-    varValue = theme.JS[key]();
+  else if (typeof variables[key] === "function") {
+    varValue = variables[key]();
 
     // Function return value is Color
     if (
@@ -110,16 +183,11 @@ Object.keys(theme.JS).map(function(key, index) {
   }
   // Value is defined as string
   else {
-    varValue = theme.JS[key];
+    varValue = variables[key];
   }
 
-  const cssRule = `--${varName}: ${varValue};`;
-  const sassRule = `$${varName}: ${varValue} !default;`;
-
-  theme.CSS = theme.CSS + cssRule;
-  theme.SCSS = theme.SCSS + sassRule;
-  theme.COMPUTED[varName] = varValue;
-});
+  return varValue;
+}
 
 
 module.exports = theme;
