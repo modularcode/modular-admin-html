@@ -30,6 +30,7 @@
     "css-loader": "^0.28.4",
     "cssnano": "^3.10.0",
     "dotenv": "^4.0.0",
+    "eslint": "^4.0.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "front-matter": "^2.0.5",
@@ -78,6 +79,8 @@
     "bundle:prod": "cross-env NODE_ENV=production webpack --config tools/webpack.config.prod.js",
     "server:dev": "nodemon src/server/main.js",
     "server:prod": "node src/server/main.js",
+    "lint": "eslint --config .eslintrc src/**/*.js",
+    "lint:fix": "eslint --config .eslintrc src/**/*.js --fix",
     "clean": "rimraf dist",
     "prebuild": "npm run clean # clear dist directory",
     "postinstall": "opencollective postinstall"

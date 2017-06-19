@@ -82,6 +82,7 @@ let variables = {
 };
 
 const theme = {
+  on,
   get,
   set,
   extend,
@@ -92,10 +93,13 @@ const theme = {
 
 /*----------  Function Definitions  ----------*/
 
+function on(event, callback) {
+
+}
 
 function get() {
   return variables;
-};
+}
 
 function set() {
   if (arguments.length === 1) {
@@ -110,11 +114,11 @@ function set() {
 
     variables[key] = value;
   }
-};
+}
 
 function extend(value) {
   variables = Object.assign(variables, value);
-};
+}
 
 
 function toCSS() {
@@ -130,7 +134,7 @@ function toCSS() {
   });
 
   return CSS;
-};
+}
 
 function toSCSS() {
 
@@ -158,7 +162,7 @@ function toObject() {
   });
 
   return res;
-};
+}
 
 
 

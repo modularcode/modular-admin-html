@@ -1,4 +1,4 @@
-import Common from './_common';
+import './_common';
 
 export default () => {
 
