@@ -1,6 +1,6 @@
 {
   "name": "modular-admin-html",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ModularAdmin: Free Dashboard Theme; html version",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "opencollective": "^1.0.3"
   },
   "devDependencies": {
+    "code-point-at": "^1.1.0",
     "dotenv": "^2.0.0",
     "front-matter": "^2.0.5",
     "fs-extra": "^0.26.4",
@@ -34,7 +35,7 @@
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-prettify": "^0.4.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.0",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4",
@@ -42,6 +43,7 @@
     "handlebars-layouts": "^3.1.0",
     "handlebars-registrar": "^1.5.2",
     "main-bower-files": "^2.9.0",
+    "node-sass": "^4.5.3",
     "through2": "^2.0.0",
     "vinyl": "^1.1.0"
   },
