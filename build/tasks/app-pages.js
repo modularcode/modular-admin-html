@@ -165,7 +165,6 @@ function getPageContextExternal(file) {
 
 	// Environmental variables
 	env = dotenv.config({
-		silent: true,
 		path: path.resolve(config.rootDir, '.env')
 	});
 
@@ -192,7 +191,7 @@ function getPageContextExternal(file) {
 
 
 	contextPaths.map(function(filePath) {
-		if (!fs.existsSync(filePath)) {
+		if (!fs.pathExistsSync(filePath)) {
 			return false;
 		}
 
