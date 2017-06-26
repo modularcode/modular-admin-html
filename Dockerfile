@@ -5,12 +5,10 @@ COPY . /app
 WORKDIR /app
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN npm install -g bower
-RUN npm install
-
-#RUN adduser --disabled-password --gecos "" modular
-
-RUN chown -R node:node /app
+RUN npm install -g bower \
+&& npm install \
+&& chown -R node:node /app \
+&& npm cache clean --force
 
 USER node
 WORKDIR /app
@@ -18,6 +16,5 @@ RUN bower install
 
 EXPOSE 4000
 
-USER root
 CMD ["npm", "start"]
 
