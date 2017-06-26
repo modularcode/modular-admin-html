@@ -62,19 +62,20 @@ AngularJS, Angular2, React and Meteor versions are coming soon.
 Some of the components use the new Flexbox Layout module which is available in most modern browsers. Bootstrap4 is used as main framework. Please make sure that it's suitable for you: [Flexbox browser support](http://caniuse.com/#feat=flexbox).
 
 <br>
+
 ## Docker
-To build the container, you need to install docker and launch the docker daemon.
+
+To build the container, you need to install docker and docker-compose than launch the docker daemon.
 After launching the daemon run the following commands from the project folder:
 
 Build the image
 ```
-docker build -t modular-admin .
+docker-compose build
 ```
-
 
 Launch the container
 ```
-docker run -ti -p 4000:4000 modular-admin:latest
+docker-compose up
 ```
 
 ## Development

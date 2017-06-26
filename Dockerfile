@@ -8,13 +8,16 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN npm install -g bower
 RUN npm install
 
-RUN adduser modular
-RUN chown -R modular:modular /app
-USER modular
+#RUN adduser --disabled-password --gecos "" modular
 
+RUN chown -R node:node /app
+
+USER node
+WORKDIR /app
 RUN bower install
 
 EXPOSE 4000
 
-ENTRYPOINT ["npm", "start"]
+USER root
+CMD ["npm", "start"]
 
