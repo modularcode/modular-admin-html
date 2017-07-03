@@ -1,7 +1,25 @@
 .Sidebar {
   width: 100%;
 
+  z-index: 1;
   color: var(--SidebarColorText);
   background-color: var(--SidebarColorBg);
   box-shadow: var(--SidebarShadow);
+
+  // Sidebar background image
+  &:before {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    left:0;
+    top:0;
+    display: block;
+    content: ' ';
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-image: var(--SidebarBgImage);
+    opacity: var(--SidebarBgImageOpacity);
+    z-index: -1;
+  }
 }

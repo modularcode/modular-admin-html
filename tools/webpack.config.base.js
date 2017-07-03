@@ -93,7 +93,7 @@ webpackConfigBase.module.rules = [
         loader: 'sass-resources-loader',
         options: {
           resources: [
-            config.CLIENT_DIR + '/_theme/theme.scss',
+            config.CLIENT_DIR + '/_theme/variables.scss',
             config.CLIENT_DIR + '/_common/Util/Mixins.scss',
           ]
         },

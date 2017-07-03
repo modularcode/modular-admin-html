@@ -22,13 +22,13 @@
   }
 
   .SidebarContainer {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     width: var(--AppSidebarWidth);
     display: flex;
-    align-items: 'stretch';
+    //align-items: 'stretch';
     z-index: 40;
 
     transition-property: left;
@@ -47,7 +47,6 @@
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 5;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
@@ -116,6 +115,12 @@
   &.-sidebar-fixed {
     .SidebarContainer {
       position: fixed;
+    }
+  }
+
+  &.-sidebar-static {
+    .SidebarContainer {
+      position: absolute;
     }
   }
 
