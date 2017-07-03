@@ -2,18 +2,35 @@ const Color = require('color');
 
 let variables = {
 
+  /*----------  Colors palette  ----------*/
+
+  'colorBblue':  Color('#007bff'),
+  'indigo':      Color('#6610f2'),
+  'purple':      Color('#6f42c1'),
+  'pink':        Color('#e83e8c'),
+  'red':         Color('#dc3545'),
+  'orange':      Color('#fd7e14'),
+  'yellow':      Color('#ffc107'),
+  'green':       Color('#28a745'),
+  'teal':        Color('#20c997'),
+  'cyan':        Color('#17a2b8'),
+
   /*----------  Main Colors  ----------*/
 
-  'colorPrimary':   Color('#85CE36'),
-  'colorPrimary1':  Color('#85CE36'),
-  'colorPrimary2':  Color('#85CE36'),
-  'colorPrimary3':  Color('#85CE36'),
-  'colorPrimary4':  Color('#85CE36'),
-
-  'colorPrimary-light':    Color('#85CE36'),
-  'colorPrimary-lighter':  Color('#85CE36'),
-  'colorPrimary-dark':     Color('#85CE36'),
-  'colorPrimary-darker':   Color('#85CE36'),
+  'colorPrimary':   Color('#28a745'),
+  'colorPrimary-light': function() {
+    return this['colorPrimary'].lighten(0.1);
+  },
+  'colorPrimary-lighter':  function() {
+    return this['colorPrimary'].lighten(0.15);
+  },
+  'colorPrimary-dark':     function() {
+    return this['colorPrimary'].darken(0.1);
+  },
+  'colorPrimary-darker':   function() {
+    return this['colorPrimary'].darken(0.15);
+  },
+  'colorSecondary': Color('#868e96'),
 
   'colorText':             Color('#4f5f6f'),
   'colorText-light':       Color('#7e8e9f'),
@@ -22,6 +39,10 @@ let variables = {
   'colorText-passive':     Color('#c5c5c5'),
 
   'colorDivider':          Color('#d7dde4'),
+
+  /*----------  Options  ----------*/
+
+
 
   /*----------  Components  ----------*/
 
@@ -94,7 +115,9 @@ const theme = {
 /*----------  Function Definitions  ----------*/
 
 function on(event, callback) {
-
+  return {
+    event, callback
+  };
 }
 
 function get() {
@@ -103,9 +126,7 @@ function get() {
 
 function set() {
   if (arguments.length === 1) {
-    const value = arguments[0];
-
-    variables = value;
+    variables = arguments[0];
   }
   // .set('Something', 'value')
   else if (arguments.length > 1) {
@@ -125,7 +146,7 @@ function toCSS() {
 
   let CSS = '';
 
-  Object.keys(variables).map(function(key, index) {
+  Object.keys(variables).map(function(key) {
     const varName = key;
     const varValue = getVariableValue(key);
     const cssRule = `--${varName}: ${varValue};`;
@@ -140,7 +161,7 @@ function toSCSS() {
 
   let SCSS = '';
 
-  Object.keys(variables).map(function(key, index) {
+  Object.keys(variables).map(function(key) {
     const varName = key;
     const varValue = getVariableValue(key);
     const sassRule = `$${varName}: ${varValue} !default;`;
@@ -149,12 +170,12 @@ function toSCSS() {
   });
 
   return SCSS;
-};
+}
 
 function toObject() {
   let res = {};
 
-  Object.keys(variables).map(function(key, index) {
+  Object.keys(variables).map(function(key) {
     const varName = key;
     const varValue = getVariableValue(key);
 
@@ -170,19 +191,19 @@ function getVariableValue(key) {
   let varValue = '';
 
   // Value is defined as color
-  if (typeof variables[key].string === "function") {
+  if (typeof variables[key].string === 'function') {
     varValue = variables[key].string();
   }
   // Values is defined as functions as well
-  else if (typeof variables[key] === "function") {
+  else if (typeof variables[key] === 'function') {
     varValue = variables[key]();
 
     // Function return value is Color
     if (
-      typeof varValue !== "string" &&
-      typeof varValue.string === "function"
+      typeof varValue !== 'string' &&
+      typeof varValue.string === 'function'
     ) {
-        varValue = varValue.string();
+      varValue = varValue.string();
     }
   }
   // Value is defined as string

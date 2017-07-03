@@ -1,20 +1,17 @@
 const path = require('path');
-const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
 const postcssImport = require('postcss-import');
-const cssvariables = require("postcss-css-variables");
-const customProperties = require("postcss-custom-properties");
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const customProperties = require('postcss-custom-properties');
 
 const config = require('../config');
-const theme = require(config.CLIENT_DIR + '/_common/theme');
+const theme = require(config.CLIENT_DIR + '/theme');
 
 // Basic properties
 const webpackConfigBase = {
   entry: path.resolve(config.CLIENT_DIR, 'main.js'),
   output: {
     path: config.DIST_DIR,
-    filename: "bundle.js",
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['.js'],
@@ -73,7 +70,7 @@ webpackConfigBase.module.rules = [
           sourceMap: true,
           includePaths: [
             config.NPM_DIR,
-            config.APP_DIR
+            config.CLIENT_DIR
           ]
         }
       },
@@ -96,8 +93,8 @@ webpackConfigBase.module.rules = [
         loader: 'sass-resources-loader',
         options: {
           resources: [
-            config.CLIENT_DIR + '/_common/theme.scss',
-            config.CLIENT_DIR + '/_common/mixins.scss',
+            config.CLIENT_DIR + '/theme.scss',
+            config.CLIENT_DIR + '/_common/Util/Mixins.scss',
           ]
         },
       }
