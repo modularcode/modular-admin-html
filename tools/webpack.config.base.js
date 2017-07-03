@@ -4,7 +4,7 @@ const postcssImport = require('postcss-import');
 const customProperties = require('postcss-custom-properties');
 
 const config = require('../config');
-const theme = require(config.CLIENT_DIR + '/theme');
+const theme = require(config.CLIENT_DIR + '/_theme/theme');
 
 // Basic properties
 const webpackConfigBase = {
@@ -93,7 +93,7 @@ webpackConfigBase.module.rules = [
         loader: 'sass-resources-loader',
         options: {
           resources: [
-            config.CLIENT_DIR + '/theme.scss',
+            config.CLIENT_DIR + '/_theme/theme.scss',
             config.CLIENT_DIR + '/_common/Util/Mixins.scss',
           ]
         },
