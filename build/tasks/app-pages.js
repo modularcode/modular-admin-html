@@ -166,10 +166,12 @@ function getPageContextExternal(file) {
 	// Environmental variables
 	env = dotenv.config({
 		path: path.resolve(config.rootDir, '.env')
-	});
+	}) || {};
+
+	env.parsed = env.parsed || {};
 
 	// 
-	extend(context, env);
+	extend(context, env.parsed);
 
 	// Package data
 	context.pkg = require('../../package.json');
