@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN npm install -g bower \
 && npm install \
 && chown -R node:node /app \
-&& npm rebuild node-sass
+&& npm rebuild node-sass \
 && npm cache clean --force
 
 USER node
