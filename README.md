@@ -63,20 +63,6 @@ Some of the components use the new Flexbox Layout module which is available in m
 
 <br>
 
-## Docker
-
-To build the container, you need to install docker and docker-compose than launch the docker daemon.
-After launching the daemon run the following commands from the project folder:
-
-Build the image
-```
-docker-compose build
-```
-
-Launch the container
-```
-docker-compose up
-```
 
 ## Development
 
@@ -107,6 +93,21 @@ npm start
 Open the project [http://localhost:4000](http://localhost:4000).
 
 > The project is built by Gulp. You can read more info in [Build Tasks](#build-tasks) section
+
+## Running in Docker
+
+To build the container, you need to install docker and docker-compose than launch the docker daemon.
+After launching the daemon run the following commands from the project folder:
+
+Build the image
+```
+docker-compose build
+```
+
+Launch the container
+```
+docker-compose up
+```
 
 <br>
 ## Folder Structure
