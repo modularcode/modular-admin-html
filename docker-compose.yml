@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  node:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
+      - /app/node_modules
+      - /app/bower_components
+    ports:
+      # Expose container port.
+      - "4000:4000"
+
