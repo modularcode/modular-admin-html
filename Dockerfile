@@ -5,7 +5,10 @@ COPY . /app
 WORKDIR /app
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN npm install -g bower \
+RUN apk update \
+&& apk upgrade \
+&& apk add --no-cache bash git openssh \
+&& npm install -g bower \
 && npm install \
 && chown -R node:node /app \
 && npm rebuild node-sass \
