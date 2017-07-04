@@ -1,4 +1,7 @@
 .Header {
+
+  $HeaderPaddingHorizontal: 20px;
+
   width: 100%;
   display: flex;
   align-items: center;
@@ -6,4 +9,5 @@
   background-color: var(--HeaderColorBg);
   box-shadow: var(--HeaderShadow);
   border-bottom: var(--HeaderBorderBottom);
+  padding: 0 $HeaderPaddingHorizontal;
 }

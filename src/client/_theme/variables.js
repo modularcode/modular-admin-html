@@ -11,14 +11,14 @@ let variables = {
   'colorRed':         Color('#dc3545'),
   'colorOrange':      Color('#fd7e14'),
   'colorYellow':      Color('#ffc107'),
-  'colorGreen':       Color('#28a745'),
+  'colorGreen':       Color('#85CE36'),
   'colorTeal':        Color('#20c997'),
   'colorCyan':        Color('#17a2b8'),
   'colorWhite':       Color('#fff'),
 
   /*----------  Main Colors  ----------*/
 
-  'colorPrimary':          Color('#28a745'),
+  'colorPrimary':          Color('#85CE36'),
   'colorPrimary-light':    () => variables['colorPrimary'].lighten(0.1),
   'colorPrimary-lighter':  () => variables['colorPrimary'].lighten(0.15),
   'colorPrimary-dark':     () => variables['colorPrimary'].darken(0.1),
@@ -39,11 +39,15 @@ let variables = {
 
   /*----------  Components  ----------*/
 
+  // Body
+  'BodyColorBg':                  Color('#f0f3f6'),
+
   // App
   'AppColorBg':                   Color('#f0f3f6'),
   'AppHeaderHeight':              '70px',
   'AppHeaderHeight-xs':           '50px',
   'AppSidebarWidth':              '230px',
+  'AppSidebarWidth-collapsed':    '70px',
   'AppFooterHeight':              '50px',
   'AppLayoutTransitionDuration':  '.3s',
 

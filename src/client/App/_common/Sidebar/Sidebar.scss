@@ -1,6 +1,11 @@
 .Sidebar {
-  width: 100%;
 
+  $SidebarPaddingHorizontal: 15px;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   z-index: 1;
   color: var(--SidebarColorText);
   background-color: var(--SidebarColorBg);
@@ -21,5 +26,82 @@
     background-image: var(--SidebarBgImage);
     opacity: var(--SidebarBgImageOpacity);
     z-index: -1;
+  }
+
+  /*----------  Sidebar Header  ----------*/
+
+  .SidebarHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 $SidebarPaddingHorizontal;
+    height: $AppHeaderHeight;
+  }
+
+  .Logo {
+    width: 46px;
+    height: 46px;
+
+    .path {
+      fill: var(--colorPrimary);
+    }
+  }
+
+  .LogoLink {
+    margin-right: 10px;
+    opacity: .7;
+  }
+
+  .Title {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: $colorWhite;
+    position: relative;
+    top: -1px;
+  }
+
+  .Link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Version {
+    color: $colorText-muted;
+  }
+
+  .Platform {
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    top: 100%;
+    margin-top: 1px;
+    right: 0;
+    font-size: 8px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    opacity: 0.4;
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  /*----------  Sidebar Content  ----------*/
+
+  .SidebarContent {
+    flex: 1;
+  }
+
+
+  /*----------  Sidebar Footer  ----------*/
+
+  .SidebarFooter {
+    height: 40px;
+    padding: 0 $SidebarPaddingHorizontal;
   }
 }
