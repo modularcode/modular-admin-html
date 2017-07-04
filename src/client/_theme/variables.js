@@ -92,9 +92,15 @@ let variables = {
   'CardShadow':         '1px 1px 5px rgba(126, 142, 159, 0.1)',
   'CardMarginBottom':   '10px',
 
+  'CardBlockPaddingVertical':       '10px',
+  'CardBlockPaddingVertical-xl':    '15px',
+  'CardBlockPaddingVertical-sm':    '8px',
+
   'CardBlockPaddingHorizontal':     '15px',
   'CardBlockPaddingHorizontal-xl':  '20px',
   'CardBlockPaddingHorizontal-sm':  '10px',
+
+
 };
 
 module.exports = variables;

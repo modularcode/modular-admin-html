@@ -9,6 +9,14 @@
   }
 
   .CardBlock {
+    padding: $CardBlockPaddingVertical $CardBlockPaddingHorizontal;
 
+    @include media-down(sm) {
+      padding: $CardBlockPaddingVertical-sm $CardBlockPaddingHorizontal-sm;
+    }
+
+    @include media-up(xl) {
+      padding: $CardBlockPaddingVertical-xl $CardBlockPaddingHorizontal-xl;
+    }
   }
 }
