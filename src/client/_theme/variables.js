@@ -46,7 +46,7 @@ let variables = {
   'AppColorBg':                   Color('#f0f3f6'),
   'AppHeaderHeight':              '70px',
   'AppHeaderHeight-xs':           '50px',
-  'AppSidebarWidth':              '230px',
+  'AppSidebarWidth':              '240px',
   'AppSidebarWidth-collapsed':    '70px',
   'AppFooterHeight':              '50px',
   'AppLayoutTransitionDuration':  '.3s',
@@ -68,7 +68,7 @@ let variables = {
   'SidebarShadow':          '0px 0px 30px rgba(72, 72, 72, 0.72)',
 
   // Sidebar Nav
-  'SidebarNavColorText':        () => variables['colorWhite'].fade(0.5),
+  'SidebarNavColorText':        () => variables['colorWhite'].fade(0.4),
   'SidebarNavColorText-active': () => variables['colorWhite'],
 
   // Page

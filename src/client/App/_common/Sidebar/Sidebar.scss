@@ -1,6 +1,6 @@
 .Sidebar {
 
-  $SidebarPaddingHorizontal: 15px;
+  $SidebarPaddingHorizontal: 20px;
 
   width: 100%;
   display: flex;
@@ -36,12 +36,14 @@
     justify-content: flex-start;
     align-items: center;
     padding: 0 $SidebarPaddingHorizontal;
+    flex-shrink: 0;
     height: $AppHeaderHeight;
   }
 
   .Logo {
     width: 46px;
     height: 46px;
+    display: block;
 
     .path {
       fill: var(--colorPrimary);
@@ -49,21 +51,25 @@
   }
 
   .LogoLink {
-    margin-right: 10px;
+    margin-right: 5px;
     opacity: .7;
   }
 
   .Title {
+    margin: 0;
     font-size: 1.1rem;
     font-weight: normal;
     color: $colorWhite;
     position: relative;
+    white-space: nowrap;
     top: -1px;
   }
 
   .Link {
     text-decoration: none;
     color: inherit;
+    display: block;
+    //padding: 10px 0;
   }
 
   .Version {
@@ -95,13 +101,92 @@
 
   .SidebarContent {
     flex: 1;
+    overflow-x: visible;
+    overflow-y: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+
+  .SidebarNav {
+
+    $font-size: 15px;
+    $icon-size: 26px;
+    $badge-size: 25px;
+    $item-height: 44px;
+    $item-height-nested: 36px;
+
+    font-size: $font-size;
+
+
+
+    .icon {
+      position: absolute;
+      font-size: 1.3em;
+      width: $icon-size;
+      height: $item-height;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      left: $SidebarPaddingHorizontal;
+      top: 0;
+    }
+
+    a,
+    span {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: $item-height;
+      align-items: center;
+      justify-content: flex-start;
+      text-decoration: none;
+      transition: color .3s ease, background .3s ease;
+      color: var(--SidebarNavColorText);
+      cursor: pointer;
+      //background-color: rgba(255,255,255,0);
+      padding: 0 $SidebarPaddingHorizontal 0 $icon-size + $SidebarPaddingHorizontal + 7px;
+
+      &.active,
+      &.open {
+        color: var(--SidebarNavColorText-active);
+        //background: linear-gradient(to right, rgba(201,201,201,0) 33%,rgba(229,229,229,0.14) 100%);
+      }
+
+      &:hover {
+        color: var(--SidebarNavColorText-active);
+        //background: linear-gradient(to right, rgba(201,201,201,0) 33%,rgba(229,229,229,0.14) 100%);
+      }
+    }
+
+    // Nested items
+    .nav-group nav {
+      padding-left: 2px;
+      overflow-x: visible;
+      overflow-y: hidden;
+
+      a, span, .icon {
+        font-size: 0.9em;
+        height: $item-height-nested;
+      }
+    }
+
+    // 2 + level nested items
+    .nav-group nav nav {
+      padding-left: 7px;
+    }
   }
 
 
   /*----------  Sidebar Footer  ----------*/
 
   .SidebarFooter {
-    height: 40px;
+    height: 50px;
     padding: 0 $SidebarPaddingHorizontal;
+    flex-shrink: 0;
+    display: flex;
+    width:100%;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
