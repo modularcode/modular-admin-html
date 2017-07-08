@@ -111,29 +111,42 @@
   .SidebarNav {
 
     $font-size: 15px;
-    $icon-size: 26px;
-    $badge-size: 25px;
+
+    $icon-font-size: 20px;
+    $icon-font-size-nested: 15px;
+
+    $icon-box-width: 26px;
+    $icon-box-width-nested: 22px;
+
+    $icon-spacing: 5px;
+
+    $badge-font-size: 25px;
+    $badge-font-nested: 25px;
+
     $item-height: 44px;
     $item-height-nested: 36px;
+    $item-padding-base: $SidebarPaddingHorizontal + $icon-box-width + $icon-spacing;
+
+    $sumbenu-padding: 6px;
+    $submenu-levels: 4;
+
 
     font-size: $font-size;
 
-
-
     .icon {
       position: absolute;
-      font-size: 1.3em;
-      width: $icon-size;
+      font-size: $icon-font-size;
+      width: $icon-box-width;
       height: $item-height;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       left: $SidebarPaddingHorizontal;
       top: 0;
     }
 
-    a,
-    span {
+    // General styles for items
+    a {
       position: relative;
       display: flex;
       width: 100%;
@@ -145,10 +158,10 @@
       color: var(--SidebarNavColorText);
       cursor: pointer;
       //background-color: rgba(255,255,255,0);
-      padding: 0 $SidebarPaddingHorizontal 0 $icon-size + $SidebarPaddingHorizontal + 7px;
+      padding: 0 $SidebarPaddingHorizontal 0 $item-padding-base;
 
-      &.active,
-      &.open {
+      &.-active,
+      &.-open {
         color: var(--SidebarNavColorText-active);
         //background: linear-gradient(to right, rgba(201,201,201,0) 33%,rgba(229,229,229,0.14) 100%);
       }
@@ -157,23 +170,54 @@
         color: var(--SidebarNavColorText-active);
         //background: linear-gradient(to right, rgba(201,201,201,0) 33%,rgba(229,229,229,0.14) 100%);
       }
-    }
 
-    // Nested items
-    .nav-group nav {
-      padding-left: 2px;
-      overflow-x: visible;
-      overflow-y: hidden;
-
-      a, span, .icon {
-        font-size: 0.9em;
-        height: $item-height-nested;
+      &.-accented {
+        & > .icon {
+          color: var(--colorPrimary);
+        }
       }
     }
 
-    // 2 + level nested items
-    .nav-group nav nav {
-      padding-left: 7px;
+    // Nested items
+    .NavGroup nav {
+      overflow-x: visible;
+      overflow-y: hidden;
+      height: 0;
+
+      a {
+        font-size: 0.9em;
+        height: $item-height-nested;
+      }
+
+      // .icon {
+      //   font-size: $icon-font-size-nested;
+      //   height: $item-height-nested;
+      //   width: $icon-box-width-nested;
+      // }
+    }
+
+    // Nested items padding
+    $sel: '';
+
+    @for $i from 1 through $submenu-levels {
+
+      $padding-base:  $icon-box-width + $SidebarPaddingHorizontal;
+      $sel: if($i == 1, 'nav', selector-nest($sel, 'nav')); //selector-nest($sel, "nav")) !global;;
+
+      // $padding-base +
+      // $sel: if($i == 1, "nav", selector-nest($sel, "nav")) !global;
+
+      // #{$sel} {
+      //     padding-left:  10px * $i;
+      // }
+
+      #{$sel} a {
+        padding-left: $item-padding-base + $sumbenu-padding * $i;
+
+        .icon {
+          left: $SidebarPaddingHorizontal + $sumbenu-padding * $i;
+        }
+      }
     }
   }
 
