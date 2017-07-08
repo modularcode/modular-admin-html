@@ -17,15 +17,13 @@
     "color": "^2.0.0",
     "cross-env": "^5.0.1",
     "font-awesome": "^4.7.0",
-    "opencollective": "^1.0.3",
-    "postcss-css-variables": "^0.7.0",
-    "postcss-import": "^10.0.0"
+    "opencollective": "^1.0.3"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
+    "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.5.2",
+    "babel-preset-env": "^1.6.0",
     "cpx": "^1.5.0",
     "css-loader": "^0.28.4",
     "cssnano": "^3.10.0",
@@ -64,8 +62,10 @@
     "through2": "^2.0.0",
     "url-loader": "^0.5.9",
     "vinyl": "^2.1.0",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1",
+    "postcss-css-variables": "^0.7.0",
+    "postcss-import": "^10.0.0"
   },
   "scripts": {
     "dev": "npm run clean && (npm run assets:dev | npm run html:dev | npm run bundle:dev)",
