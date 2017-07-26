@@ -110,6 +110,7 @@ docker-compose up
 ```
 
 <br>
+
 ## Folder Structure
 
 ```
@@ -186,6 +187,7 @@ Compiled state of our app with processed styles, templates, scripts and assets.
 **Warning! Never work inside this folder, because your changes would be overwritten on every build**
 
 <br>
+
 ## File Types
 
 Our app consists of different file types.
@@ -276,9 +278,11 @@ If you need more advanced layouting with multiple content blocks at the same tim
 In addition to application files, there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all the script and style files accordingly to ```dist/js/vendor.js``` and ```dist/css/vendor.css```. It also will copy all assets to the ```dist/assets/``` folder.
 
 <br>
+
 ## Build Tasks
 
 <br>
+
 ## Get in touch
 
 You can get in touch with us in gitter chat [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) or in the [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
