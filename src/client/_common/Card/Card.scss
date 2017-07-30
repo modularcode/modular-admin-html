@@ -5,7 +5,44 @@
   margin-bottom: var(--CardMarginBottom);
 
   .CardHeader {
+    background-image: none;
+    background-color: #ffffff;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border-radius: 0;
+    min-height: 45px;
+    border: none;
 
+    &.-bordered {
+      border-bottom: 1px solid var(--colorDivider);
+    }
+
+    &.-sm {
+      min-height: 40px;
+    }
+
+    &.-lg {
+      min-height: 50px;
+    }
+  }
+
+  .HeaderBlock {
+    padding: 0 $CardBlockPaddingVertical;
+
+
+    @include media-down(sm) {
+      padding: 0.5rem $CardBlockPaddingHorizontal-sm;
+    }
+
+    @include media(xl) {
+      padding: 0.5rem $CardBlockPaddingHorizontal-xl;
+    }
+
+    .Title {
+      margin: 0;
+    }
   }
 
   .CardBlock {
@@ -17,6 +54,29 @@
 
     @include media-up(xl) {
       padding: $CardBlockPaddingVertical-xl $CardBlockPaddingHorizontal-xl;
+    }
+  }
+
+  .Title {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+
+  .TitleDescription {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #7e8e9f;
+  }
+
+  .TitleBlock {
+    margin-bottom: 20px;
+
+    & > .Title {
+      margin-bottom: 0;
     }
   }
 }

@@ -133,7 +133,7 @@
 
     font-size: $font-size;
 
-    .icon {
+    .Icon {
       position: absolute;
       font-size: $icon-font-size;
       width: $icon-box-width;
@@ -143,6 +143,14 @@
       justify-content: center;
       left: $SidebarPaddingHorizontal;
       top: 0;
+    }
+
+    .Divider {
+      display: block;
+      // width: 100%;
+      height: 1px;
+      margin: 3px $SidebarPaddingHorizontal;
+      background-color: rgba(255, 255, 255, 0.13);
     }
 
     // General styles for items
@@ -172,7 +180,7 @@
       }
 
       &.-accented {
-        & > .icon {
+        & > .Icon {
           color: var(--colorPrimary);
         }
       }
@@ -214,7 +222,7 @@
       #{$sel} a {
         padding-left: $item-padding-base + $sumbenu-padding * $i;
 
-        .icon {
+        .Icon {
           left: $SidebarPaddingHorizontal + $sumbenu-padding * $i;
         }
       }

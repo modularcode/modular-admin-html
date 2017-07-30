@@ -1,2 +1,14 @@
 // @use "bootstrap/scss/bootstrap-grid.scss";
 @import "bootstrap/scss/bootstrap-grid.scss";
+
+
+.row.-sm,
+.row.-condense {
+  margin-left: -10px;
+  margin-right: -10px;
+
+  [class^='col'] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
