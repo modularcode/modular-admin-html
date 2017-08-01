@@ -49,13 +49,13 @@ History.init = () => {
           backgroundColor: theme.get().colors.yellow.string(),
           borderColor: theme.get().colors.yellow.string(),
           data: [
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor()
+            10,
+            19,
+            27,
+            30,
+            35,
+            49,
+            68,
           ],
           fill: false,
         }, {
@@ -64,13 +64,13 @@ History.init = () => {
           backgroundColor: theme.get().colors.green.string(),
           borderColor: theme.get().colors.green.string(),
           data: [
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor(),
-            Util.randomScalingFactor()
+            30,
+            45,
+            63,
+            90,
+            100,
+            120,
+            178,
           ],
         }]
       },
@@ -91,17 +91,17 @@ History.init = () => {
         scales: {
           xAxes: [{
             display: true,
-            scaleLabel: {
-              display: true,
-              labelString: 'Month'
-            }
+            // scaleLabel: {
+            //   display: true,
+            //   labelString: 'Month'
+            // }
           }],
           yAxes: [{
             display: true,
-            scaleLabel: {
-              display: true,
-              labelString: 'Value'
-            }
+            // scaleLabel: {
+            //   display: true,
+            //   labelString: 'Value'
+            // }
           }]
         }
       }
