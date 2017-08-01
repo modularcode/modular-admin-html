@@ -88,7 +88,7 @@ variables = Object.assign(variables, {
 
   // Header
   'HeaderColorBg':          Color('#fff'),
-  'HeaderShadow':           '0px 0px 11px rgba(102, 102, 102, 0.05)',
+  'HeaderShadow':           '0px 0 20px rgba(72, 72, 72, 0.09)',
   'HeaderBorderBottom':     '1px solid #e0e0e0',
 
   // Footer
