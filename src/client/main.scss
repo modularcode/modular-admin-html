@@ -15,3 +15,14 @@ body {
   overflow-x: hidden;
   background: var(--BodyColorBg);
 }
+
+a {
+  color: var(--LinkColor);
+  font-style: var(--LinkFontStyle);
+
+
+  &:hover {
+    color: var(--LinkColor-hover);
+    font-style: var(--LinkFontStyle-hover);
+  }
+}

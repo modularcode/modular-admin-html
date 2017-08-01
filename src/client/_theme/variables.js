@@ -4,6 +4,9 @@ let variables = {
 
   /*----------  Colors palette  ----------*/
 
+  // Ref:
+  // https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
+
   'palette': {
     'blue':           Color('#007bff'),
     'indigo':         Color('#6610f2'),
@@ -11,11 +14,14 @@ let variables = {
     'pink':           Color('#e83e8c'),
     'red':            Color('#dc3545'),
     'orange':         Color('#fd7e14'),
-    'yelow':          Color('#ffc107'),
+    'yellow':         Color('#ffc107'),
     'green':          Color('#85CE36'),
     'teal':           Color('#20c997'),
     'cyan':           Color('#17a2b8'),
     'white':          Color('#fff'),
+    'gray':           Color('#868e96'),
+    'gray-dark':      Color('#343a40'),
+    'black':          Color('#000')
   },
 
   /*----------  Context Colors  ----------*/
@@ -61,6 +67,12 @@ let variables = {
 
   // Body
   'BodyColorBg':                  Color('#f0f3f6'),
+
+  // Link
+  'LinkColor':                    'inherit',
+  'LinkColor-hover':              () => variables['colorPrimary'],
+  'LinkFontStyle':                'underline',
+  'LinkFontStyle-hover':          'underline',
 
   // App
   'AppColorBg':                   Color('#f0f3f6'),

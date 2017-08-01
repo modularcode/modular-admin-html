@@ -1,5 +1,11 @@
 .Dashboard .Stats {
 
+  .StatCol {
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
   .Icon {
     color: #ccc;
     display: inline-block;
@@ -7,6 +13,24 @@
     text-align: center;
     vertical-align: middle;
     width: 50px;
+  }
+
+  .Stat {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .Value {
+    font-size: 20px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+  }
+
+  .Name {
+    font-size: 14px;
+    color: $colorText-light;
   }
 
 }

@@ -10,6 +10,11 @@
   color: var(--SidebarColorText);
   background-color: var(--SidebarColorBg);
   box-shadow: var(--SidebarShadow);
+  transition: background-color .3s ease;
+
+
+
+
 
   // Sidebar background image
   &:before {
@@ -105,6 +110,28 @@
     overflow-y: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    &::-webkit-scrollbar {
+      width: 14px;
+      height: 18px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height: 6px;
+      border: 4px solid rgba(0, 0, 0, 0);
+      background-clip: padding-box;
+      -webkit-border-radius: 7px;
+      -webkit-box-shadow: none;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        // background-color: rgba(0, 0, 0, 0.35);
+        background-color: var(--colorPrimary);
+        -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+      }
+    }
   }
 
 
