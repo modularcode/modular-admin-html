@@ -44,6 +44,7 @@ let variables = {
 };
 
 /*----------  All Colors  ----------*/
+
 variables.colors = Object.assign(
   {},
   variables['palette'],
@@ -59,12 +60,13 @@ variables.colors = Object.assign(
 );
 
 
+/*----------  Options  ----------*/
+
+
+/*----------  Components  ----------*/
+
 variables = Object.assign(variables, {
 
-  /*----------  Options  ----------*/
-
-
-  /*----------  Components  ----------*/
 
   // Body
   'BodyColorBg':                  Color('#f0f3f6'),
@@ -132,7 +134,6 @@ variables = Object.assign(variables, {
   'CardBlockPaddingHorizontal':     '15px',
   'CardBlockPaddingHorizontal-xl':  '20px',
   'CardBlockPaddingHorizontal-sm':  '10px',
-
 
 });
 
