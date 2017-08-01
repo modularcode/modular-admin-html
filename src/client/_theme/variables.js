@@ -4,19 +4,21 @@ let variables = {
 
   /*----------  Colors palette  ----------*/
 
-  'colorBlue':        Color('#007bff'),
-  'colorIndigo':      Color('#6610f2'),
-  'colorPurple':      Color('#6f42c1'),
-  'colorPink':        Color('#e83e8c'),
-  'colorRed':         Color('#dc3545'),
-  'colorOrange':      Color('#fd7e14'),
-  'colorYellow':      Color('#ffc107'),
-  'colorGreen':       Color('#85CE36'),
-  'colorTeal':        Color('#20c997'),
-  'colorCyan':        Color('#17a2b8'),
-  'colorWhite':       Color('#fff'),
+  'palette': {
+    'blue':           Color('#007bff'),
+    'indigo':         Color('#6610f2'),
+    'purple':         Color('#6f42c1'),
+    'pink':           Color('#e83e8c'),
+    'red':            Color('#dc3545'),
+    'orange':         Color('#fd7e14'),
+    'yelow':          Color('#ffc107'),
+    'green':          Color('#85CE36'),
+    'teal':           Color('#20c997'),
+    'cyan':           Color('#17a2b8'),
+    'white':          Color('#fff'),
+  },
 
-  /*----------  Main Colors  ----------*/
+  /*----------  Context Colors  ----------*/
 
   'colorPrimary':          Color('#85CE36'),
   'colorPrimary-light':    () => variables['colorPrimary'].lighten(0.1),
@@ -32,6 +34,24 @@ let variables = {
   'colorText-passive':     Color('#c5c5c5'),
 
   'colorDivider':          Color('#d7dde4'),
+
+  /*----------  All Colors  ----------*/
+
+  'colors':                () => {
+    return Object.assign(
+      {},
+      variables['palette'],
+      {
+        'primary':              variables['colorPrimary'],
+        'primary-light':        variables['colorPrimary-light'],
+        'primary-lighter':      variables['colorPrimary-lighter'],
+        'primary-dark':         variables['colorPrimary-dark'],
+        'primary-darker':       variables['colorPrimary-darker'],
+        'secondary':            variables['colorSecondary'],
+        'divider':              variables['colorDivider'],
+      }
+    )
+  },
 
   /*----------  Options  ----------*/
 
@@ -68,8 +88,8 @@ let variables = {
   'SidebarShadow':          '0px 0px 30px rgba(72, 72, 72, 0.72)',
 
   // Sidebar Nav
-  'SidebarNavColorText':        () => variables['colorWhite'].fade(0.4),
-  'SidebarNavColorText-active': () => variables['colorWhite'],
+  'SidebarNavColorText':        () => variables.palette.white.fade(0.4),
+  'SidebarNavColorText-active': () => variables.palette.white,
 
   // Page
   'PagePaddingVertical-xl':     '35px',

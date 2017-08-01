@@ -1,6 +1,7 @@
 import './Button';
 import './Card';
 import './Chart';
+import './Code';
 import './Form';
 import './Grid';
 import './Icon';
@@ -8,6 +9,7 @@ import './ItemList';
 import './Layout';
 import './Modal';
 import './Page';
+import './Progress';
 import './ScrollBar';
 import './Table';
 import './Typography';

@@ -3,3 +3,18 @@
   flex-direction: row;
   align-items: stretch;
 }
+
+
+// Color utils definitions
+
+@each $colorName, $color in $colors {
+
+  .-color-#{$colorName} {
+    color: $color;
+  }
+
+  .-bg-#{$colorName} {
+    background-color: $color;
+  }
+
+}
