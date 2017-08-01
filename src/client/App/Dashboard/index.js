@@ -1,4 +1,5 @@
 import './Dashboard.scss';
+import Dashboard from './Dashboard.js';
 
 // Components
 import Stats from './Stats';

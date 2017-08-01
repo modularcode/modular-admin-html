@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const postcssImport = require('postcss-import');
 const customProperties = require('postcss-custom-properties');
@@ -16,8 +17,20 @@ const webpackConfigBase = {
   resolve: {
     extensions: ['.js'],
     modules: [config.NPM_DIR, config.CLIENT_DIR],
+    alias: {
+      jquery: "jquery/src/jquery",
+      'morris.js': 'morris.js/morris.js'
+    }
   },
   devtool: 'source-map',
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery:   'jquery',
+      Raphael:  'raphael',
+      raphael:  'raphael',
+    })
+  ]
 };
 
 // Loaders configuration
