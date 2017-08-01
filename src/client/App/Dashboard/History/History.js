@@ -1,7 +1,10 @@
-import 'morris.js';
-import Chart from 'chart.js';
+import { ChartJS } from '_common/Chart';
 
-Chart.defaults.global.defaultFontFamily = 'Open Sans';
+
+// import 'morris.js';
+// import Chart from 'chart.js';
+
+// Chart.defaults.global.defaultFontFamily = 'Open Sans';
 
 import theme from '_theme';
 import Util from '_common/Util';
@@ -105,7 +108,7 @@ History.init = () => {
     };
 
 
-    var myLine = new Chart(ctx, config);
+    var myLine = new ChartJS(ctx, config);
 
   }
 

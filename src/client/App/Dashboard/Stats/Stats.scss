@@ -1,7 +1,16 @@
 .Dashboard .Stats {
 
+  .CardBlock {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .StatsRow {
+    flex: 1;
+  }
+
   .StatCol {
-    margin-bottom: 20px;
+    margin: 10px 0;
     white-space: nowrap;
     overflow: hidden;
   }
