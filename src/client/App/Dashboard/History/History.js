@@ -90,8 +90,16 @@ History.init = () => {
           intersect: true
         },
         scales: {
+          gridLines: {
+            tickMarkLength: 0
+          },
           xAxes: [{
             display: true,
+            // gridLines: {
+            //   // drawTicks: false,
+            //   // offsetGridLines: true,
+            //   // zeroLineBorderDashOffset: 10
+            // }
             // scaleLabel: {
             //   display: true,
             //   labelString: 'Month'
@@ -99,6 +107,9 @@ History.init = () => {
           }],
           yAxes: [{
             display: true,
+            // gridLines: {
+            //   // drawTicks: false
+            // }
             // scaleLabel: {
             //   display: true,
             //   labelString: 'Value'
