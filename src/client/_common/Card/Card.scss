@@ -3,6 +3,8 @@
   box-shadow: var(--CardShadow);
   width: 100%;
   margin-bottom: var(--CardMarginBottom);
+  display: flex;
+  flex-direction: column;
 
   .CardHeader {
     background-image: none;
@@ -46,6 +48,7 @@
   }
 
   .CardBlock {
+    flex: 1;
     padding: $CardBlockPaddingVertical $CardBlockPaddingHorizontal;
 
     @include media-down(sm) {

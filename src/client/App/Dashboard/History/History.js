@@ -1,6 +1,8 @@
 import 'morris.js';
 import Chart from 'chart.js';
 
+Chart.defaults.global.defaultFontFamily = 'Open Sans';
+
 import theme from '_theme';
 import Util from '_common/Util';
 
@@ -34,14 +36,15 @@ History.init = () => {
     var ctx = document.getElementById("DashboardHistoryVisitsChart").getContext("2d");
 
     var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
     var config = {
       type: 'line',
       data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
-          label: "My First dataset",
-          backgroundColor: theme.get().colorPrimary.string(),
-          borderColor: theme.get().colorPrimary.string(),
+          label: "Users",
+          backgroundColor: theme.get().colors.yellow.string(),
+          borderColor: theme.get().colors.yellow.string(),
           data: [
             Util.randomScalingFactor(),
             Util.randomScalingFactor(),
@@ -53,10 +56,10 @@ History.init = () => {
           ],
           fill: false,
         }, {
-          label: "My Second dataset",
+          label: "Visits",
           fill: false,
-          backgroundColor: theme.get().colorPrimary.string(),
-          borderColor: theme.get().colorPrimary.string(),
+          backgroundColor: theme.get().colors.green.string(),
+          borderColor: theme.get().colors.green.string(),
           data: [
             Util.randomScalingFactor(),
             Util.randomScalingFactor(),
@@ -70,10 +73,10 @@ History.init = () => {
       },
       options: {
         responsive: true,
-        title:{
-          display:true,
-          text:'Chart.js Line Chart'
-        },
+        // title:{
+        //   display:true,
+        //   text:'Chart.js Line Chart'
+        // },
         tooltips: {
           mode: 'index',
           intersect: false,

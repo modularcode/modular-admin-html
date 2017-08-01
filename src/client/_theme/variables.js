@@ -41,26 +41,27 @@ let variables = {
 
   'colorDivider':          Color('#d7dde4'),
 
-  /*----------  All Colors  ----------*/
+};
 
-  'colors':                () => {
-    return Object.assign(
-      {},
-      variables['palette'],
-      {
-        'primary':              variables['colorPrimary'],
-        'primary-light':        variables['colorPrimary-light'],
-        'primary-lighter':      variables['colorPrimary-lighter'],
-        'primary-dark':         variables['colorPrimary-dark'],
-        'primary-darker':       variables['colorPrimary-darker'],
-        'secondary':            variables['colorSecondary'],
-        'divider':              variables['colorDivider'],
-      }
-    )
-  },
+/*----------  All Colors  ----------*/
+variables.colors = Object.assign(
+  {},
+  variables['palette'],
+  {
+    'primary':              variables['colorPrimary'],
+    'primary-light':        variables['colorPrimary-light'],
+    'primary-lighter':      variables['colorPrimary-lighter'],
+    'primary-dark':         variables['colorPrimary-dark'],
+    'primary-darker':       variables['colorPrimary-darker'],
+    'secondary':            variables['colorSecondary'],
+    'divider':              variables['colorDivider'],
+  }
+);
+
+
+variables = Object.assign(variables, {
 
   /*----------  Options  ----------*/
-
 
 
   /*----------  Components  ----------*/
@@ -133,6 +134,6 @@ let variables = {
   'CardBlockPaddingHorizontal-sm':  '10px',
 
 
-};
+});
 
 module.exports = variables;
