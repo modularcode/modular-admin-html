@@ -1,6 +1,10 @@
-import theme from '_theme';
-
 import 'morris.js';
+import Chart from 'chart.js';
+
+import theme from '_theme';
+import Util from '_common/Util';
+
+
 
 // console.log(Morris);
 
@@ -25,8 +29,85 @@ History.init = () => {
   //   switchHistoryCharts(item);
   // });
 
+  function drawVisitsChart() {
 
-  function drawVisitsChart(){
+    var ctx = document.getElementById("DashboardHistoryVisitsChart").getContext("2d");
+
+    var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var config = {
+      type: 'line',
+      data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+          label: "My First dataset",
+          backgroundColor: theme.get().colorPrimary.string(),
+          borderColor: theme.get().colorPrimary.string(),
+          data: [
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor()
+          ],
+          fill: false,
+        }, {
+          label: "My Second dataset",
+          fill: false,
+          backgroundColor: theme.get().colorPrimary.string(),
+          borderColor: theme.get().colorPrimary.string(),
+          data: [
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor(),
+            Util.randomScalingFactor()
+          ],
+        }]
+      },
+      options: {
+        responsive: true,
+        title:{
+          display:true,
+          text:'Chart.js Line Chart'
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+        scales: {
+          xAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Month'
+            }
+          }],
+          yAxes: [{
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: 'Value'
+            }
+          }]
+        }
+      }
+    };
+
+
+    var myLine = new Chart(ctx, config);
+
+  }
+
+
+  function drawVisitsChartMorris(){
 
     // var ctx = document.getElementById("DashboardHistoryVisitsChart").getContext('2d');
 
