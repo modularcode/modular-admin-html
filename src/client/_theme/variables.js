@@ -80,7 +80,7 @@ let variables = {
   'AppHeaderHeight-xs':           '50px',
   'AppSidebarWidth':              '240px',
   'AppSidebarWidth-collapsed':    '70px',
-  'AppFooterHeight':              '50px',
+  'AppFooterHeight':              '46px',
   'AppLayoutTransitionDuration':  '.3s',
 
   // Header

@@ -88,17 +88,41 @@
     top: 100%;
     margin-top: 1px;
     right: 0;
-    font-size: 8px;
-    font-weight: bold;
+    font-size: 9px;
+    font-weight: 500;
     color: rgba(0, 0, 0, 0.7);
-    padding: 0 2px;
+    padding: 1px 3px;
     background-color: #fff;
-    border-radius: 2px;
-    opacity: 0.4;
+    border-radius: 1px;
+    opacity: 0.85;
     transition: opacity .3s ease;
 
     &:hover {
       opacity: 1;
+    }
+
+    &.-html {
+      color: #f16529;
+    }
+
+    &.-vue {
+      color: #4fc08d;
+    }
+
+    &.-react {
+      color: #61dafb;
+    }
+
+    &.-angular {
+      color: #dd0031;
+    }
+
+    &.-java {
+      color: #ff0000;
+    }
+
+    &.-asp {
+      color: #1381c4;
     }
   }
 
@@ -159,6 +183,7 @@
 
 
     font-size: $font-size;
+    padding-bottom: 15px;
 
     .Icon {
       position: absolute;
@@ -260,12 +285,67 @@
   /*----------  Sidebar Footer  ----------*/
 
   .SidebarFooter {
-    height: 50px;
-    padding: 0 $SidebarPaddingHorizontal;
+
+    $height: $AppFooterHeight;
+
+    height: $height;
     flex-shrink: 0;
     display: flex;
-    width:100%;
+    width: 100%;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.09);
+    position: relative;
+
+    .SidebarFooterNav {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: row;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: background-color .3s ease, color .3s ease;
+        color: var(--SidebarNavColorText);
+
+
+        &:hover {
+          color: var(--SidebarNavColorText-active);
+          background-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+    }
+
+    .LinkCustomize {
+      flex: 1;
+
+      justify-content: flex-start;
+      padding: 0 $SidebarPaddingHorizontal 0 $SidebarPaddingHorizontal + 31px;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      flex-grow: 3.5;
+
+      .Icon {
+        position: absolute;
+        font-size: 20px;
+        width: 26px;
+        height: $height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: $SidebarPaddingHorizontal;
+        top: 0;
+      }
+    }
+
+    .LinkCollapse {
+      justify-content: center;
+      flex-grow: 1;
+    }
   }
+
+
 }
