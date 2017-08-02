@@ -19,7 +19,7 @@ const webpackConfigBase = {
     modules: [config.NPM_DIR, config.CLIENT_DIR],
     alias: {
       jquery: "jquery/src/jquery",
-      'morris.js': 'morris.js/morris.js'
+      // 'morris.js': 'morris.js/morris.js'
     }
   },
   devtool: 'source-map',

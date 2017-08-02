@@ -5,5 +5,7 @@ import History from './History.js';
 
 
 window.addEventListener('load', function() {
-  History.init();
+  setTimeout(function() {
+    History.init();
+  }, 500);
 })

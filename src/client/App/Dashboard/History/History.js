@@ -1,17 +1,8 @@
-import { ChartJS } from '_common/Chart';
+import { Morris } from '_common/Chart';
 
-
-// import 'morris.js';
-// import Chart from 'chart.js';
-
-// Chart.defaults.global.defaultFontFamily = 'Open Sans';
 
 import theme from '_theme';
 import Util from '_common/Util';
-
-
-
-// console.log(Morris);
 
 
 // History component
@@ -34,110 +25,20 @@ History.init = () => {
   //   switchHistoryCharts(item);
   // });
 
-  function drawVisitsChart() {
 
-    var ctx = document.getElementById("DashboardHistoryVisitsChart").getContext("2d");
-
-    var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    var config = {
-      type: 'line',
-      data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [{
-          label: "Users",
-          backgroundColor: theme.get().colors.yellow.string(),
-          borderColor: theme.get().colors.yellow.string(),
-          data: [
-            10,
-            19,
-            27,
-            30,
-            35,
-            49,
-            68,
-          ],
-          fill: false,
-        }, {
-          label: "Visits",
-          fill: false,
-          backgroundColor: theme.get().colors.green.string(),
-          borderColor: theme.get().colors.green.string(),
-          data: [
-            30,
-            45,
-            63,
-            90,
-            100,
-            120,
-            178,
-          ],
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        // title:{
-        //   display:true,
-        //   text:'Chart.js Line Chart'
-        // },
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-        },
-        hover: {
-          mode: 'nearest',
-          intersect: true
-        },
-        scales: {
-          gridLines: {
-            tickMarkLength: 0
-          },
-          xAxes: [{
-            display: true,
-            // gridLines: {
-            //   // drawTicks: false,
-            //   // offsetGridLines: true,
-            //   // zeroLineBorderDashOffset: 10
-            // }
-            // scaleLabel: {
-            //   display: true,
-            //   labelString: 'Month'
-            // }
-          }],
-          yAxes: [{
-            display: true,
-            // gridLines: {
-            //   // drawTicks: false
-            // }
-            // scaleLabel: {
-            //   display: true,
-            //   labelString: 'Value'
-            // }
-          }]
-        }
-      }
-    };
-
-
-    var myLine = new ChartJS(ctx, config);
-
-  }
-
-
-  function drawVisitsChartMorris(){
+  function drawVisitsChart(){
 
     // var ctx = document.getElementById("DashboardHistoryVisitsChart").getContext('2d');
 
 
     const dataVisits = [
-      { x: '2015-09-01', y: 70},
-      { x: '2015-09-02', y: 75 },
-      { x: '2015-09-03', y: 50},
-      { x: '2015-09-04', y: 75 },
-      { x: '2015-09-05', y: 50 },
-      { x: '2015-09-06', y: 75 },
-      { x: '2015-09-07', y: 86 }
+      { x: '2015-09-01', visits: 70, users: 36 },
+      { x: '2015-09-02', visits: 75, users: 39 },
+      { x: '2015-09-03', visits: 50, users: 57 },
+      { x: '2015-09-04', visits: 75, users: 55 },
+      { x: '2015-09-05', visits: 50, users: 60 },
+      { x: '2015-09-06', visits: 75, users: 70 },
+      { x: '2015-09-07', visits: 86, users: 80 }
     ];
 
 
@@ -145,9 +46,9 @@ History.init = () => {
       element: 'DashboardHistoryVisitsChart',
       data: dataVisits,
       xkey: 'x',
-      ykeys: ['y'],
+      ykeys: ['visits', 'users'],
       ymin: 'auto 40',
-      labels: ['Visits'],
+      labels: ['Visits', 'Users'],
       xLabels: "day",
       hideHover: 'auto',
       yLabelFormat: function (y) {
@@ -161,10 +62,12 @@ History.init = () => {
       },
       resize: true,
       lineColors: [
-        theme.get().colorPrimary.string(),
+        theme.get().colors.green.string(),
+        theme.get().colors.purple.string(),
       ],
       pointFillColors: [
-        theme.get().colorPrimary.string(),
+        theme.get().colors.green.string(),
+        theme.get().colors.purple.string(),
       ]
     });
   }

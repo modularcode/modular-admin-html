@@ -1,8 +1,14 @@
 .Dashboard .History {
 
   #DashboardHistoryVisitsChart {
-    display: block;
-    width: 100%;
-    height: 300px;
+    // display: block;
+    // width: 100%;
+    height: 220px;
+  }
+
+
+  #DashboardHistoryVisitsChart,
+  #DashboardHistoryDownloadsChart {
+    height: 220px;
   }
 }
