@@ -31,15 +31,20 @@
   }
 
   .HeaderBlock {
-    padding: 0 $CardBlockPaddingVertical;
+
+    display: flex;
+    padding: 0 $CardBlockPaddingHorizontal;
+    align-self: stretch;
+    align-items: center;
+
 
 
     @include media-down(sm) {
-      padding: 0.5rem $CardBlockPaddingHorizontal-sm;
+      padding: 0 $CardBlockPaddingHorizontal-sm;
     }
 
     @include media(xl) {
-      padding: 0.5rem $CardBlockPaddingHorizontal-xl;
+      padding: 0 $CardBlockPaddingHorizontal-xl;
     }
 
     .Title {
@@ -48,7 +53,9 @@
   }
 
   .CardBlock {
+    width: 100%;
     flex: 1;
+    display: flex;
     padding: $CardBlockPaddingVertical $CardBlockPaddingHorizontal;
 
     @include media-down(sm) {

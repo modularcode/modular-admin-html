@@ -5,31 +5,48 @@ import theme from '_theme';
 import Util from '_common/Util';
 
 
+const colors = theme.get().colors;
+
+
 // History component
 const History = {};
 
 History.init = () => {
 
-  if (!$('#DashboardHistoryVisitsChart').length) {
+  const TabContentEl = document.querySelector('#DashboardHistoryTabContent');
+
+  if (!TabContentEl) {
     return false;
   }
 
   // drawing visits chart
-  drawVisitsChart();
+  drawChart();
 
-  // var el = null;
-  // var item = 'visits';
-  // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  //   el = e.target;
-  //   item = $(el).attr('href').replace('#', '');
-  //   switchHistoryCharts(item);
-  // });
+  Util.addEventListener(document, 'tab.select', (e) => {
+
+    drawChart();
+
+  });
+
+  function drawChart() {
+
+    const AudienceTabEl = document.querySelector('#DashboardHistoryAudienceTab');
+    const DownloadsTabEl = document.querySelector('#DashboardHistoryDownloadsTab');
+
+    if (Util.isVisible(AudienceTabEl)) {
+      drawAudienceChart();
+    }
+    else if (Util.isVisible(DownloadsTabEl)) {
+      drawDownloadsChart();
+    }
+  }
 
 
-  function drawVisitsChart(){
+  function drawAudienceChart() {
 
-    // var ctx = document.getElementById("DashboardHistoryVisitsChart").getContext('2d');
+    const containerEl = document.querySelector('#DashboardHistoryAudienceChart');
 
+    Util.empty(containerEl);
 
     const dataVisits = [
       { x: '2015-09-01', visits: 70, users: 36 },
@@ -38,12 +55,12 @@ History.init = () => {
       { x: '2015-09-04', visits: 75, users: 55 },
       { x: '2015-09-05', visits: 50, users: 60 },
       { x: '2015-09-06', visits: 75, users: 70 },
-      { x: '2015-09-07', visits: 86, users: 80 }
+      { x: '2015-09-07', visits: 86, users: 73 }
     ];
 
 
     Morris.Line({
-      element: 'DashboardHistoryVisitsChart',
+      element: containerEl,
       data: dataVisits,
       xkey: 'x',
       ykeys: ['visits', 'users'],
@@ -62,92 +79,80 @@ History.init = () => {
       },
       resize: true,
       lineColors: [
-        theme.get().colors.green.string(),
-        theme.get().colors.purple.string(),
+        colors.green.string(),
+        colors.yellow.string(),
+
       ],
       pointFillColors: [
-        theme.get().colors.green.string(),
-        theme.get().colors.purple.string(),
+        colors.green.string(),
+        colors.yellow.string(),
       ]
     });
   }
 
-  function drawDownloadsChart(){
+  function drawDownloadsChart() {
 
-      var dataDownloads = [
-          {
-              year: '2006',
-              downloads: 1300
-          },
-          {
-              year: '2007',
-              downloads: 1526
-          },
-          {
-              year: '2008',
-              downloads: 2000
-          },
-          {
-              year: '2009',
-              downloads: 1800
-          },
-          {
-              year: '2010',
-              downloads: 1650
-          },
-          {
-              year: '2011',
-              downloads: 620
-          },
-          {
-              year: '2012',
-              downloads: 1000
-          },
-          {
-              year: '2013',
-              downloads: 1896
-          },
-          {
-              year: '2014',
-              downloads: 850
-          },
-          {
-              year: '2015',
-              downloads: 1500
-          }
-      ];
+    const containerEl = document.querySelector('#DashboardHistoryDownloadsChart');
+
+    Util.empty(containerEl);
+
+    const dataDownloads = [
+      {
+          year: '2006',
+          downloads: 1300
+      },
+      {
+          year: '2007',
+          downloads: 1526
+      },
+      {
+          year: '2008',
+          downloads: 2000
+      },
+      {
+          year: '2009',
+          downloads: 1800
+      },
+      {
+          year: '2010',
+          downloads: 1650
+      },
+      {
+          year: '2011',
+          downloads: 620
+      },
+      {
+          year: '2012',
+          downloads: 1000
+      },
+      {
+          year: '2013',
+          downloads: 1896
+      },
+      {
+          year: '2014',
+          downloads: 850
+      },
+      {
+          year: '2015',
+          downloads: 1500
+      }
+    ];
 
 
-      Morris.Bar({
-          element: 'dashboard-downloads-chart',
-          data: dataDownloads,
-          xkey: 'year',
-          ykeys: ['downloads'],
-          labels: ['Downloads'],
-          hideHover: 'auto',
-          resize: true,
-          barColors: [
-              config.chart.colorPrimary.toString(),
-              tinycolor(config.chart.colorPrimary.toString()).darken(10).toString()
-          ],
-      });
-  }
-
-  function switchHistoryCharts(item){
-    var chartSelector = "#dashboard-" + item + "-chart";
-
-    if ($(chartSelector).has('svg').length) {
-        $(chartSelector).empty();
-    }
-
-    switch(item){
-      case 'visits':
-        drawVisitsChart();
-        break;
-       case 'downloads':
-        drawDownloadsChart();
-        break;
-    }
+    Morris.Bar({
+      element: containerEl,
+      data: dataDownloads,
+      xkey: 'year',
+      ykeys: ['downloads'],
+      labels: ['Downloads'],
+      hideHover: 'auto',
+      resize: true,
+      barColors: [
+        theme.get().colors.green.string(),
+        theme.get().colors.green.string()
+      ],
+    });
   }
 
 };

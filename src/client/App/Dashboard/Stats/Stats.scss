@@ -10,9 +10,15 @@
   }
 
   .StatCol {
+    display: flex;
+    align-items: center;
+  }
+
+  .StatGroup {
     margin: 10px 0;
     white-space: nowrap;
     overflow: hidden;
+    width: 100%;
   }
 
   .Icon {

@@ -11,6 +11,7 @@ import './Modal';
 import './Page';
 import './Progress';
 import './ScrollBar';
+import './Tab';
 import './Table';
 import './Typography';
 import './Util';

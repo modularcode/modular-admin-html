@@ -4,34 +4,47 @@
     <div class="HeaderBlock">
       <h4 class="Title">History</h4>
     </div>
+
+    <ul class="TabNav -pull-right">
+      <li class="TabNavItem -active">
+        <a
+          href="#DashboardHistoryAudienceTab">
+          Audience
+        </a>
+      </li>
+      <li class="TabNavItem">
+        <a
+          href="#DashboardHistoryDownloadsTab">
+          Downloads
+        </a>
+      </li>
+    </ul>
+
   </div>
   <div class="CardBlock">
 
-    <p class="TitleDescription">
-      Audience history last 30 days
-    </p>
+    <div class="TabContent" id="DashboardHistoryTabContent">
+      <div
+        class="TabPane -active"
+        id="DashboardHistoryAudienceTab">
 
-    <div id="DashboardHistoryVisitsChart"></div>
-
-    {{!-- <canvas
-      id="DashboardHistoryVisitsChart"></canvas> --}}
-
-    {{!-- <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active fade in" id="visits">
-        <p class="title-description">
-          Number of unique visits last 30 days
+        <p class="TitleDescription">
+          Audience history last 7 days
         </p>
 
-        <div id="dashboard-visits-chart"></div>
+        <div id="DashboardHistoryAudienceChart"></div>
       </div>
-      <div role="tabpanel" class="tab-pane fade" id="downloads">
-        <p class="title-description">
-          Number of downloads last 30 days
+      <div
+        class="TabPane"
+        id="DashboardHistoryDownloadsTab">
+
+        <p class="TitleDescription">
+          Number of downloads last 10 days
         </p>
 
-        <div id="dashboard-downloads-chart"></div>
+        <div id="DashboardHistoryDownloadsChart"></div>
       </div>
-    </div> --}}
+    </div>
 
 
   </div>
