@@ -7,14 +7,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 const webpackConfigBase = require('./webpack.config.base');
-const webpackConfigProduction = {
-  plugins: [
-    new ExtractTextPlugin({ filename: 'bundle.css', allChunks: true })
-  ]
-};
+const webpackConfigProduction = {};
 
 // Result config
 const webpackConfig = Object.assign({}, webpackConfigBase, webpackConfigProduction);
+
+webpackConfig.plugins.push(
+  new ExtractTextPlugin({ filename: 'bundle.css', allChunks: true })
+);
 
 // // Add css minification
 // webpackConfig.module.rules[1].use[2].options.plugins.push(
