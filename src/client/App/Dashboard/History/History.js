@@ -79,13 +79,13 @@ History.init = () => {
       },
       resize: true,
       lineColors: [
-        colors.green.string(),
         colors.yellow.string(),
+        colors.green.string(),
 
       ],
       pointFillColors: [
-        colors.green.string(),
         colors.yellow.string(),
+        colors.green.string(),
       ]
     });
   }
