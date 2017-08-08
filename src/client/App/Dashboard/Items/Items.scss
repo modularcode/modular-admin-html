@@ -1,0 +1,92 @@
+.Dashboard .Items {
+
+  .ItemList {
+    font-size: .9em;
+  }
+
+  .ListHeader {
+
+    // Hide element, but keep the place
+    .Img {
+      visibility: none;
+    }
+  }
+
+  .ColDate {
+
+    text-align: right;
+    justify-content: flex-end;
+
+
+    .Value {
+      justify-content: flex-end;
+      font-size: .9em;
+      color: var(--colorText-light);
+    }
+  }
+
+  .Value {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .Img {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include media(xs) {
+
+    .ColDate {
+      align-items: flex-end;
+      text-align: left;
+      .Value {
+        justify-content: flex-start;
+      }
+    }
+
+    .Label {
+      display: flex;
+    }
+  }
+
+  @include media(sm) {
+    .ColSales,
+    .ColStats,
+    .ColDate {
+      flex-direction: column;
+      justify-content: space-between;
+
+      .Value {
+        flex: 0;
+      }
+    }
+
+    .ColSales {
+      align-items: flex-start;
+    }
+
+    .ColStats {
+      align-items: center;
+    }
+
+    .ColDate {
+      align-items: flex-end;
+    }
+
+
+
+    .Img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .Label {
+      display: flex;
+    }
+  }
+}

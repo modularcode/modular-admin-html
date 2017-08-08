@@ -27,7 +27,20 @@
     font-size: 26px;
     text-align: center;
     vertical-align: middle;
-    width: 50px;
+    width: 40px;
+
+    @include media-down(sm) {
+      width: 60px;
+    }
+
+    @include media(lg) {
+      width: 36px;
+      font-size: 24px;
+    }
+
+    @include media(xl) {
+      width: 50px;
+    }
   }
 
   .Stat {
@@ -41,11 +54,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 500;
+
+    @include media(lg) {
+      font-size: 18px;
+    }
   }
 
   .Name {
     font-size: 14px;
     color: $colorText-light;
+
+    @include media(lg) {
+      font-size: 12px;
+    }
   }
 
 }

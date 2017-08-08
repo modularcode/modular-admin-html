@@ -2,6 +2,26 @@
 
   padding: $PagePaddingVertical-lg $PagePaddingHorizontal-lg;
 
+  @include media(xs) {
+    padding: $PagePaddingVertical-xs $PagePaddingHorizontal-xs;
+  }
+
+  @include media(sm) {
+    padding: $PagePaddingVertical-sm $PagePaddingHorizontal-sm;
+  }
+
+  @include media(md) {
+    padding: $PagePaddingVertical-md $PagePaddingHorizontal-md;
+  }
+
+  @include media(lg) {
+    padding: $PagePaddingVertical-lg $PagePaddingHorizontal-lg;
+  }
+
+  @include media(xl) {
+    padding: $PagePaddingVertical-xl $PagePaddingHorizontal-xl;
+  }
+
   .Section {
     width: 100%;
     margin-bottom: 20px;

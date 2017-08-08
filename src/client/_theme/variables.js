@@ -40,6 +40,10 @@ let variables = {
   'colorText-passive':     Color('#c5c5c5'),
 
   'colorDivider':          Color('#d7dde4'),
+  'colorDivider-light':    () => variables['colorDivider'].lighten(0.1),
+  'colorDivider-lighter':    () => variables['colorDivider'].lighten(0.15),
+  'colorDivider-dark':     () => variables['colorDivider'].darken(0.1),
+  'colorDivider-darker':     () => variables['colorDivider'].darken(0.15),
 
 };
 
@@ -107,25 +111,29 @@ variables = Object.assign(variables, {
   'SidebarNavColorText-active': () => variables.palette.white,
 
   // Page
-  'PagePaddingVertical-xl':     '35px',
-  'PagePaddingHorizontal-xl':   '40px',
-
-  'PagePaddingVertical-lg':     '30px',
-  'PagePaddingHorizontal-lg':   '35px',
-
-  'PagePaddingVertical-md':     '25px',
-  'PagePaddingHorizontal-md':   '20px',
+  'PagePaddingVertical-xs':     '15px',
+  'PagePaddingHorizontal-xs':    '10px',
 
   'PagePaddingVertical-sm':     '20px',
   'PagePaddingHorizontal-sm':   '20px',
 
-  'PagePaddingVertical-xs':     '15px',
-  'PagePaddingHorizontal-xs':    '10px',
+  'PagePaddingVertical-md':     '25px',
+  'PagePaddingHorizontal-md':   '20px',
+
+  'PagePaddingVertical-lg':     '30px',
+  'PagePaddingHorizontal-lg':   '35px',
+
+  'PagePaddingVertical-xl':     '35px',
+  'PagePaddingHorizontal-xl':   '40px',
+
+
 
   // Card
-  'CardColorBg':        'rgba(255,255,255,0.94)',
-  'CardShadow':         '1px 1px 5px rgba(126, 142, 159, 0.1)',
-  'CardMarginBottom':   '10px',
+  'CardColorBg':            'rgba(255,255,255,0.94)',
+  'CardShadow':             '1px 1px 5px rgba(126, 142, 159, 0.1)',
+  'CardMarginBottom':       '15px',
+  'CardMarginBottom-lg':    '30px',
+  'CardMarginBottom-sm':    '15px',
 
   'CardBlockPaddingVertical':       '10px',
   'CardBlockPaddingVertical-xl':    '15px',
