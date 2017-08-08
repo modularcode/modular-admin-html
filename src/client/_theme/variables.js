@@ -120,8 +120,8 @@ variables = Object.assign(variables, {
   'PagePaddingVertical-md':     '25px',
   'PagePaddingHorizontal-md':   '20px',
 
-  'PagePaddingVertical-lg':     '30px',
-  'PagePaddingHorizontal-lg':   '35px',
+  'PagePaddingVertical-lg':     '25px',
+  'PagePaddingHorizontal-lg':   '20px',
 
   'PagePaddingVertical-xl':     '35px',
   'PagePaddingHorizontal-xl':   '40px',
@@ -132,8 +132,10 @@ variables = Object.assign(variables, {
   'CardColorBg':            'rgba(255,255,255,0.94)',
   'CardShadow':             '1px 1px 5px rgba(126, 142, 159, 0.1)',
   'CardMarginBottom':       '15px',
-  'CardMarginBottom-lg':    '30px',
   'CardMarginBottom-sm':    '15px',
+  'CardMarginBottom-md':    '20px',
+  'CardMarginBottom-lg':    '20px',
+  'CardMarginBottom-xl':    '30px',
 
   'CardBlockPaddingVertical':       '10px',
   'CardBlockPaddingVertical-xl':    '15px',

@@ -6,12 +6,20 @@
   display: flex;
   flex-direction: column;
 
-  @include media-down(sm) {
+  @include media-down (sm) {
     margin-bottom: var(--CardMarginBottom-sm);
   }
 
-  @include media-up(lg) {
+  @include media (md) {
+    margin-bottom: var(--CardMarginBottom-md);
+  }
+
+  @include media (lg) {
     margin-bottom: var(--CardMarginBottom-lg);
+  }
+
+  @include media (xl) {
+    margin-bottom: var(--CardMarginBottom-xl);
   }
 
   .CardHeader {

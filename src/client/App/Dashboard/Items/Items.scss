@@ -9,6 +9,7 @@
     // Hide element, but keep the place
     .Img {
       visibility: none;
+      box-shadow: none;
     }
   }
 
@@ -37,6 +38,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 10%;
+    box-shadow: 0 0 1px 0px #d2d2d2;
   }
 
   @include media(xs) {

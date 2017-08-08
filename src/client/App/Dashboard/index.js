@@ -5,3 +5,4 @@ import Dashboard from './Dashboard.js';
 import Stats from './Stats';
 import History from './History';
 import Items from './Items';
+import SalesBreakdown from './SalesBreakdown';
