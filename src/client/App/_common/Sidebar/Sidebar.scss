@@ -68,6 +68,7 @@
     position: relative;
     white-space: nowrap;
     top: -1px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   }
 
   .Link {
@@ -86,43 +87,16 @@
     display: block;
     text-decoration: none;
     top: 100%;
-    margin-top: 1px;
+    margin-top: 2px;
     right: 0;
     font-size: 9px;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.7);
-    padding: 1px 3px;
-    background-color: #fff;
-    border-radius: 1px;
-    opacity: 0.85;
-    transition: opacity .3s ease;
+    font-weight: bold;
+    color: var(--colorPrimary);
+    transition: color .3s ease;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
 
     &:hover {
-      opacity: 1;
-    }
-
-    &.-html {
-      color: #f16529;
-    }
-
-    &.-vue {
-      color: #4fc08d;
-    }
-
-    &.-react {
-      color: #61dafb;
-    }
-
-    &.-angular {
-      color: #dd0031;
-    }
-
-    &.-java {
-      color: #ff0000;
-    }
-
-    &.-asp {
-      color: #1381c4;
+      color: #fff;
     }
   }
 
