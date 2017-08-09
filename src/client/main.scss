@@ -18,6 +18,11 @@ body {
   overflow-x: hidden;
   background: var(--BodyColorBg);
   font-family: 'Open Sans', sans-serif;
+
+
+  &.-rtl {
+    text-align: right;
+  }
 }
 
 a {

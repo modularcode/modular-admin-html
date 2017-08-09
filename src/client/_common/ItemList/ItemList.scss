@@ -25,6 +25,11 @@ $ItemListColPaddingHorizontal: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    .-rtl & {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
   }
 
 
@@ -98,18 +103,11 @@ $ItemListColPaddingHorizontal: 5px;
   .Item {
 
     $spacing: $CardBlockPaddingHorizontal - $ItemListColPaddingHorizontal;
-
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 0 $spacing;
 
     .Divider:after {
       left: - $spacing;
       right: - $spacing;
-      // margin-left: - $spacing;
-      // margin-right: - $spacing;
     }
 
     @include media-down(sm) {

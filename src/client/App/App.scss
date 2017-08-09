@@ -211,4 +211,42 @@
     background-repeat: no-repeat;
   }
 
+  // RTL variation
+
+  .-rtl & {
+
+    .HeaderContainer {
+      left: 0;
+      right: var(--AppSidebarWidth);
+    }
+
+    .SidebarContainer {
+      left: auto;
+      right: 0;
+
+      @include media-down(md) {
+        left: auto;
+        right: calc(-1 * var(--AppSidebarWidth));
+      }
+    }
+
+
+    .FooterContainer {
+      left: 0;
+      right: var(--AppSidebarWidth);
+
+      @include media-down(md) {
+        right: 0;
+      }
+    }
+
+    .ContentContainer {
+      margin-left: 0;
+      margin-right: var(--AppSidebarWidth);
+      @include media-down(md) {
+        margin-right: 0;
+      }
+    }
+  }
+
 }

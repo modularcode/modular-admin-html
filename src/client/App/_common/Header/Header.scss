@@ -10,4 +10,8 @@
   box-shadow: var(--HeaderShadow);
   border-bottom: var(--HeaderBorderBottom);
   padding: 0 $HeaderPaddingHorizontal;
+
+  .-rtl & {
+    flex-direction: row-reverse;
+  }
 }

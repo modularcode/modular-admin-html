@@ -44,6 +44,12 @@
     &.-lg {
       min-height: 50px;
     }
+
+    // RTL support
+
+    .-rtl & {
+      flex-direction: row-reverse;
+    }
   }
 
   .HeaderBlock {

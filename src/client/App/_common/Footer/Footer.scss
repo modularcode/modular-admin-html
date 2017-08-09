@@ -10,4 +10,8 @@
 
   background-color: var(--FooterColorBg);
   box-shadow: var(--FooterShadow);
+
+  .-rtl & {
+    flex-direction: row-reverse;
+  }
 }
