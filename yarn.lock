@@ -4454,6 +4454,10 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+pixeden-stroke-7-icon@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/pixeden-stroke-7-icon/-/pixeden-stroke-7-icon-1.2.3.tgz#050db2113537e5d8634bbd818708eedcb4c72fd6"
+
 pixrem@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/pixrem/-/pixrem-3.0.2.tgz#30d1bafb4c3bdce8e9bb4bd56a13985619320c34"

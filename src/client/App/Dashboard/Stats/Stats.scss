@@ -22,20 +22,20 @@
   }
 
   .Icon {
-    color: #cacaca;
+    color: #6d6d6d;
     display: inline-block;
-    font-size: 26px;
+    font-size: 36px;
     text-align: center;
     vertical-align: middle;
     width: 40px;
+    margin-right: 5px;
 
     @include media-down(sm) {
       width: 60px;
     }
 
     @include media(lg) {
-      width: 36px;
-      font-size: 24px;
+
     }
 
     @include media(xl) {
