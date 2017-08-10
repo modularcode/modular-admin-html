@@ -19,6 +19,7 @@ let variables = {
 
   'colorText':             Color('#4f5f6f'),
   'colorText-light':       Color('#7e8e9f'),
+  'colorText-dark':        Color('#2f373f'),
   'colorText-muted':       Color('#C2CCD6'),
   'colorText-inverse':     Color('#ffffff'),
   'colorText-passive':     Color('#c5c5c5'),
@@ -68,10 +69,11 @@ variables = Object.assign(variables, {
   'BodyColorBg':                  Color('#f0f3f6'),
 
   // Link
-  'LinkColor':                    'inherit',
-  'LinkColor-hover':              () => variables['colorPrimary'],
-  'LinkFontStyle':                'underline',
-  'LinkFontStyle-hover':          'underline',
+  'LinkColor':                    () => variables['colorPrimary-dark'],
+  'LinkColor-hover':              () => variables['colorText-dark'],
+  'LinkFontWeight':               '500',
+  'LinkTextDecoration':           'none',
+  'LinkTextDecoration-hover':     'none',
 
   // App
   'AppColorBg':                   Color('#f0f3f6'),

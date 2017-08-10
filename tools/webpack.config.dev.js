@@ -5,7 +5,7 @@ const env = require('./env');
 
 const webpackConfigBase = require('./webpack.config.base');
 const webpackConfigDevelopment = {
-  devtool: 'source-map',
+  devtool: 'eval',
   devServer: {
     contentBase: config.DIST_DIR,
     setup: function(app) {

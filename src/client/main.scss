@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat|Roboto|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Indie+Flower|Montserrat|Roboto|Open+Sans');
 // @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 :root {
@@ -19,7 +19,7 @@ body {
   color: var(--colorText);
   overflow-x: hidden;
   background: var(--BodyColorBg);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
 
   &.-rtl {
     text-align: right;
@@ -28,11 +28,12 @@ body {
 
 a {
   color: var(--LinkColor);
-  font-style: var(--LinkFontStyle);
+  text-decoration: var(--LinkTextDecoration);
+  font-weight: var(--LinkFontWeight);
 
 
   &:hover {
     color: var(--LinkColor-hover);
-    font-style: var(--LinkFontStyle-hover);
+    text-decoration: var(--LinkTextDecoration-hover);
   }
 }

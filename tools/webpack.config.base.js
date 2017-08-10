@@ -41,7 +41,12 @@ webpackConfigBase.module.rules = [
     test: /\.js$/,
     exclude: config.NPM_DIR,
     use: [
-      'babel-loader'
+      {
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: config.TMP_DIR
+        }
+      }
     ]
   },
 
@@ -81,7 +86,6 @@ webpackConfigBase.module.rules = [
         loader: 'sass-loader',
         options: {
           sourceMap: true,
-          debug: true,
           includePaths: [
             config.NPM_DIR,
             config.CLIENT_DIR

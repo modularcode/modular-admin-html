@@ -21,6 +21,7 @@ const ENV = dotenv.load({
 const config = {
   ENV: ENV,
   ROOT_DIR: path.resolve(__dirname),                     // Root dir
+  TMP_DIR: path.resolve(__dirname, './.tmp'),             // Tmp dir
   NPM_DIR:   path.resolve(__dirname, './node_modules'),  // Npm dir
   SRC_DIR: path.resolve(__dirname, './src'),             // Source files
 
