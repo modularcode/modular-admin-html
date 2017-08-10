@@ -1,3 +1,27 @@
 $fa-font-path: "~font-awesome/fonts";
 
 @import 'font-awesome/scss/font-awesome.scss';
+
+.Icon {
+
+  &.-x2 {
+    font-size: 2em;
+  }
+
+  &.-x3 {
+    font-size: 3em;
+  }
+
+  &.-x4 {
+    font-size: 4em;
+  }
+
+  &.-x5 {
+    font-size: 5em;
+  }
+
+  &.-x6 {
+    font-size: 6em;
+  }
+
+}
