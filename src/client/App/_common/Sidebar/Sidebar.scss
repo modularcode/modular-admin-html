@@ -42,7 +42,9 @@
     align-items: center;
     padding: 0 $SidebarPaddingHorizontal;
     flex-shrink: 0;
-    height: $AppHeaderHeight;
+    height: var(--AppHeaderHeight);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    // font-family: 'Montserrat', sans-serif;
 
     .-rtl & {
       flex-direction: row-reverse;
@@ -50,33 +52,56 @@
   }
 
   .Logo {
-    width: 46px;
-    height: 46px;
+    width: 38px;
+    height: 38px;
     display: block;
 
+    // https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
+    // https://github.com/Schepp/CSS-Filters-Polyfill
+    -webkit-filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.3) );
+            filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.3) );
+
     .path {
+      transition: all .3s ease;
+    }
+
+    .outline {
       fill: var(--colorPrimary);
+    }
+
+    .letter {
+      fill: var(--colorPrimary-light);
+    }
+
+    &:hover {
+      .outline {
+
+      }
+
+      .letter {
+        fill: #fff;
+      }
     }
   }
 
   .LogoLink {
-    margin-right: 5px;
-    opacity: .7;
+    margin-left: 5px;
+    margin-right: 10px;
 
     .-rtl & {
-      margin-left: 5px;
-      margin-right: 0;
+      margin-left: 10px;
+      margin-right: 5px;
     }
   }
 
   .Title {
     margin: 0;
-    font-size: 1.1rem;
-    font-weight: normal;
+    font-size: 1rem;
+    // font-weight: bold;
     color: #fff;
     position: relative;
     white-space: nowrap;
-    top: -1px;
+    // top: -1px;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   }
 
@@ -115,7 +140,6 @@
     flex: 1;
     overflow-x: visible;
     overflow-y: auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
     &::-webkit-scrollbar {

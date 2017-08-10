@@ -75,7 +75,7 @@ variables = Object.assign(variables, {
 
   // App
   'AppColorBg':                   Color('#f0f3f6'),
-  'AppHeaderHeight':              '70px',
+  'AppHeaderHeight':              '60px',
   'AppHeaderHeight-xs':           '50px',
   'AppSidebarWidth':              '240px',
   'AppSidebarWidth-collapsed':    '70px',

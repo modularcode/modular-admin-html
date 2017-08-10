@@ -1,6 +1,6 @@
 .Header {
 
-  $HeaderPaddingHorizontal: 35px;
+  $HeaderPaddingHorizontal: 20px;
 
   width: 100%;
   display: flex;
@@ -10,6 +10,14 @@
   box-shadow: var(--HeaderShadow);
   border-bottom: var(--HeaderBorderBottom);
   padding: 0 $HeaderPaddingHorizontal;
+
+  .HeaderBlock {
+
+  }
+
+  .SidebarToggleButton {
+    padding: 7px 10px;
+  }
 
   .-rtl & {
     flex-direction: row-reverse;
