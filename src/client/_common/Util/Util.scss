@@ -172,23 +172,23 @@
 @each $colorName, $color in $colors {
 
   .-color-#{$colorName}.-color-#{$colorName} {
-    color: $color;
+    color: $color !important;
   }
 
   .-bg-#{$colorName}.-bg-#{$colorName} {
-    background-color: $color;
+    background-color: $color !important;
   }
 
   .-border-#{$colorName}.-border-#{$colorName} {
-    border-color: $color;
+    border-color: $color !important;
   }
 
   .-stroke-#{$colorName}.-stroke-#{$colorName} {
-    stroke: $color;
+    stroke: $color !important;
   }
 
   .-fill-#{$colorName}.-fill-#{$colorName} {
-    stroke: $color;
+    fill: $color !important;
   }
 
 }

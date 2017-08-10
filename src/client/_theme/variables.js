@@ -69,9 +69,9 @@ variables = Object.assign(variables, {
   'BodyColorBg':                  Color('#f0f3f6'),
 
   // Link
-  'LinkColor':                    () => variables['colorPrimary-dark'],
-  'LinkColor-hover':              () => variables['colorText-dark'],
-  'LinkFontWeight':               '500',
+  'LinkColor':                    () => variables['colorText-dark'],
+  'LinkColor-hover':              () => variables['colorPrimary-dark'],
+  'LinkFontWeight':               '600',
   'LinkTextDecoration':           'none',
   'LinkTextDecoration-hover':     'none',
 
@@ -106,7 +106,7 @@ variables = Object.assign(variables, {
 
   // Page
   'PagePaddingVertical-xs':     '15px',
-  'PagePaddingHorizontal-xs':    '10px',
+  'PagePaddingHorizontal-xs':   '10px',
 
   'PagePaddingVertical-sm':     '20px',
   'PagePaddingHorizontal-sm':   '20px',
