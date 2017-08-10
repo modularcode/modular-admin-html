@@ -1,4 +1,9 @@
-.Dashboard .History {
+.DashboardHistory {
+
+  .CardHeader .Icon {
+    margin-right: 6px;
+    font-size: 1.7em;
+  }
 
   #DashboardHistoryAudienceChart,
   #DashboardHistoryDownloadsChart {
