@@ -4,9 +4,11 @@
 
   .CardBlock {
     justify-content: center;
+    align-items: center;
   }
 
   #DashboardSalesBreakdownChart {
-    width: 85%;
+    width: 280px;
+    height: 280px;
   }
 }
