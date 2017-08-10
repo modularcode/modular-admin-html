@@ -171,12 +171,24 @@
 
 @each $colorName, $color in $colors {
 
-  .-color-#{$colorName} {
+  .-color-#{$colorName}.-color-#{$colorName} {
     color: $color;
   }
 
-  .-bg-#{$colorName} {
+  .-bg-#{$colorName}.-bg-#{$colorName} {
     background-color: $color;
+  }
+
+  .-border-#{$colorName}.-border-#{$colorName} {
+    border-color: $color;
+  }
+
+  .-stroke-#{$colorName}.-stroke-#{$colorName} {
+    stroke: $color;
+  }
+
+  .-fill-#{$colorName}.-fill-#{$colorName} {
+    stroke: $color;
   }
 
 }

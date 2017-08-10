@@ -8,7 +8,6 @@ import Util from '_common/Util';
 const colors = theme.get().colors;
 
 
-// History component
 const SalesBreakdown = {};
 
 SalesBreakdown.init = () => {
@@ -35,9 +34,9 @@ SalesBreakdown.init = () => {
       ],
       resize: true,
       colors: [
-        colors.yellow.string(),
-        colors.cyan.string(),
-        colors.gray.string(),
+        colors['amber-200'].string(),
+        colors['light-blue-200'].string(),
+        colors['blue-grey-200'].string(),
       ]
     });
   }

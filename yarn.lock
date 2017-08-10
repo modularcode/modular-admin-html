@@ -3295,6 +3295,10 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+jquery-sparkline@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/jquery-sparkline/-/jquery-sparkline-2.4.0.tgz#1be8b7b704dd3857152708aefb1d4a4b3a69fb33"
+
 jquery@>=1.9.1, jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
@@ -3734,6 +3738,10 @@ map-obj@^1.0.0, map-obj@^1.0.1:
 map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
+
+material-colors@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.5.tgz#5292593e6754cb1bcc2b98030e4e0d6a3afc9ea1"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"

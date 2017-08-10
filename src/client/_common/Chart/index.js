@@ -3,13 +3,15 @@ import './Chart.scss';
 
 import ChartJS from './ChartJS';
 import Morris from './Morris';
+import Sparkline from './Sparkline';
 
 
 export {
   ChartJS,
-  Morris
+  Morris,
+  Sparkline
 };
 
 export default {
-  ChartJS, Morris
+  ChartJS, Morris, Sparkline
 };

@@ -1,4 +1,7 @@
+const themeUtils = require('./themeUtils');
+
 let variables = require('./variables');
+
 
 const theme = {
   on,
@@ -46,7 +49,7 @@ function toCSS() {
 
   Object.keys(variables).map(function(key) {
     let varName = key;
-    let varValue = getVariableValue(variables[key]);
+    let varValue = themeUtils.getVariableValue(variables[key]);
 
     let cssRule;
 
@@ -69,7 +72,7 @@ function toSCSS() {
 
   Object.keys(variables).map(function(key) {
     let varName = key;
-    let varValue = getVariableValue(variables[key]);
+    let varValue = themeUtils.getVariableValue(variables[key]);
 
     let sassRule;
 
@@ -94,45 +97,12 @@ function toObject() {
 
   Object.keys(variables).map(function(key) {
     const varName = key;
-    const varValue = getVariableValue(variables[key]);
+    const varValue = themeUtils.getVariableValue(variables[key]);
 
     res[varName] = varValue;
   });
 
   return res;
-}
-
-function getVariableValue(value) {
-  let varValue = '';
-
-  // Value is defined as color
-  if (typeof value.string === 'function') {
-    varValue = value.string();
-  }
-  // Value is defined as object, use SASS map
-  else if (typeof value === 'object') {
-    varValue = {};
-
-    Object.keys(value).map(function(key) {
-      varValue[key] = getVariableValue(value[key]);
-    });
-
-    return varValue;
-  }
-  // Values is defined as functions as well
-  else if (typeof value === 'function') {
-    // Execute function
-    varValue = value();
-
-    // Get value
-    varValue = getVariableValue(varValue);
-  }
-  // Value is defined as string
-  else {
-    varValue = value;
-  }
-
-  return varValue;
 }
 
 

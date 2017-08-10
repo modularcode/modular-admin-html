@@ -1,5 +1,3 @@
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 // External modules
 import 'bootstrap/scss/_normalize.scss';
 import 'bootstrap/scss/_print.scss';

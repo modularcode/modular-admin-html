@@ -81,6 +81,7 @@ webpackConfigBase.module.rules = [
         loader: 'sass-loader',
         options: {
           sourceMap: true,
+          debug: true,
           includePaths: [
             config.NPM_DIR,
             config.CLIENT_DIR

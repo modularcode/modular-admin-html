@@ -6,11 +6,17 @@
 
   .ListHeader {
 
+    font-size: .85em;
+
     // Hide element, but keep the place
     .Img {
       visibility: none;
       box-shadow: none;
     }
+  }
+
+  .ColStats {
+    justify-content: center;
   }
 
   .ColDate {
@@ -23,6 +29,20 @@
       justify-content: flex-end;
       font-size: .9em;
       color: var(--colorText-light);
+    }
+  }
+
+  .ColSales {
+    font-size: .9em;
+    font-weight: bold;
+  }
+
+  .ColStats {
+    justify-content: center;
+
+    .Value {
+      justify-content: center;
+      height: 26px;
     }
   }
 
@@ -44,9 +64,11 @@
 
   @include media(xs) {
 
+    .ColStats,
     .ColDate {
       align-items: flex-end;
       text-align: left;
+
       .Value {
         justify-content: flex-start;
       }
@@ -63,10 +85,6 @@
     .ColDate {
       flex-direction: column;
       justify-content: space-between;
-
-      .Value {
-        flex: 0;
-      }
     }
 
     .ColSales {
@@ -82,7 +100,6 @@
     }
 
 
-
     .Img {
       width: 50px;
       height: 50px;
@@ -91,5 +108,9 @@
     .Label {
       display: flex;
     }
+  }
+
+  @include media(xl) {
+    margin-bottom: 0;
   }
 }

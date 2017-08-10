@@ -1,49 +1,35 @@
 const Color = require('color');
+const MaterialColors = require('material-colors');
+
+const themeUtils = require('./themeUtils');
+
+
+const MaterialColorsAll = themeUtils.getColors(MaterialColors);
+const MaterialColorsPalette = themeUtils.getColors(MaterialColors, true);
+
 
 let variables = {
 
-  /*----------  Colors palette  ----------*/
-
-  // Ref:
-  // https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-
-  'palette': {
-    'blue':           Color('#007bff'),
-    'indigo':         Color('#6610f2'),
-    'purple':         Color('#6f42c1'),
-    'pink':           Color('#e83e8c'),
-    'red':            Color('#dc3545'),
-    'orange':         Color('#fd7e14'),
-    'yellow':         Color('#ffc107'),
-    'green':          Color('#85CE36'),
-    'teal':           Color('#20c997'),
-    'cyan':           Color('#17a2b8'),
-    'white':          Color('#fff'),
-    'gray':           Color('#868e96'),
-    'gray-dark':      Color('#343a40'),
-    'black':          Color('#000')
-  },
-
   /*----------  Context Colors  ----------*/
 
-  'colorPrimary':          Color('#85CE36'),
-  'colorPrimary-light':    () => variables['colorPrimary'].lighten(0.1),
-  'colorPrimary-lighter':  () => variables['colorPrimary'].lighten(0.15),
-  'colorPrimary-dark':     () => variables['colorPrimary'].darken(0.1),
-  'colorPrimary-darker':   () => variables['colorPrimary'].darken(0.15),
-  'colorSecondary':        Color('#868e96'),
+  'colorPrimary':          Color('#8BC34A'),
+  'colorPrimary-dark':     Color('#689F38'),
+  'colorPrimary-light':    Color('#DCEDC8'),
+  'colorSecondary':        Color('#536DFE'),
 
   'colorText':             Color('#4f5f6f'),
   'colorText-light':       Color('#7e8e9f'),
   'colorText-muted':       Color('#C2CCD6'),
   'colorText-inverse':     Color('#ffffff'),
   'colorText-passive':     Color('#c5c5c5'),
+  'colorTextSecondary':    Color('#757575'),
 
   'colorDivider':          Color('#d7dde4'),
+
   'colorDivider-light':    () => variables['colorDivider'].lighten(0.1),
-  'colorDivider-lighter':    () => variables['colorDivider'].lighten(0.15),
+  'colorDivider-lighter':  () => variables['colorDivider'].lighten(0.15),
   'colorDivider-dark':     () => variables['colorDivider'].darken(0.1),
-  'colorDivider-darker':     () => variables['colorDivider'].darken(0.15),
+  'colorDivider-darker':   () => variables['colorDivider'].darken(0.15),
 
 };
 
@@ -51,17 +37,23 @@ let variables = {
 
 variables.colors = Object.assign(
   {},
-  variables['palette'],
+  MaterialColorsAll,
   {
     'primary':              variables['colorPrimary'],
     'primary-light':        variables['colorPrimary-light'],
-    'primary-lighter':      variables['colorPrimary-lighter'],
     'primary-dark':         variables['colorPrimary-dark'],
-    'primary-darker':       variables['colorPrimary-darker'],
     'secondary':            variables['colorSecondary'],
+    'text':                 variables['colorText'],
+    'text-light':           variables['colorText-light'],
+    'text-muted':           variables['colorText-muted'],
+    'text-inverse':         variables['colorText-inverse'],
+    'text-passive':         variables['colorText-passive'],
+    'textSecondary':        variables['colorTextSecondary'],
     'divider':              variables['colorDivider'],
   }
 );
+
+variables.palette = MaterialColorsPalette;
 
 
 /*----------  Options  ----------*/
@@ -107,8 +99,8 @@ variables = Object.assign(variables, {
   'SidebarShadow':          '0px 0px 30px rgba(72, 72, 72, 0.72)',
 
   // Sidebar Nav
-  'SidebarNavColorText':        () => variables.palette.white.fade(0.4),
-  'SidebarNavColorText-active': () => variables.palette.white,
+  'SidebarNavColorText':        () => variables.colors.white.fade(0.4),
+  'SidebarNavColorText-active': () => variables.colors.white,
 
   // Page
   'PagePaddingVertical-xs':     '15px',
@@ -148,3 +140,8 @@ variables = Object.assign(variables, {
 });
 
 module.exports = variables;
+
+
+
+
+

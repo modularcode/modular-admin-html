@@ -79,13 +79,13 @@ History.init = () => {
       },
       resize: true,
       lineColors: [
-        colors.yellow.string(),
-        colors.green.string(),
+        colors['light-blue-300'].string(),
+        colors['light-green-400'].string(),
 
       ],
       pointFillColors: [
-        colors.yellow.string(),
-        colors.green.string(),
+        colors['light-blue-300'].string(),
+        colors['light-green-400'].string(),
       ]
     });
   }
@@ -149,8 +149,8 @@ History.init = () => {
       hideHover: 'auto',
       resize: true,
       barColors: [
-        theme.get().colors.green.string(),
-        theme.get().colors.green.string()
+        colors['primary'].string(),
+        colors['primary'].string()
       ],
     });
   }
