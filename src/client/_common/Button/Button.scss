@@ -27,7 +27,7 @@
   }
 
   &.-default {
-    color: var(--colorText);
+    color: var(--colorText-light);
 
     &.-raised:not(&.outline) {
       background-color: var(--colorText-lighter);
