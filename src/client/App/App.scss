@@ -110,6 +110,7 @@
     width: 100%;
     top: var(--AppHeaderHeight);
     bottom: var(--AppFooterHeight);
+    z-index: -1;
   }
 
 
