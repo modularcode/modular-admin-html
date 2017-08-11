@@ -29,8 +29,17 @@
       transition: color .2s ease, border-color .2s ease;
       font-weight: 600;
 
+
+      html.-rounded & {
+        border-radius: 5px 5px 0 0;
+      }
+
       &:hover {
         color: var(--colorPrimary-dark);
+      }
+
+      .-rtl & {
+        flex-direction: row-reverse;
       }
     }
 

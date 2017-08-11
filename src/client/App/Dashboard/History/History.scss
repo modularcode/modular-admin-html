@@ -8,7 +8,17 @@
   .TabNav {
     margin-left: auto;
 
-    .-rtl & {
+
+  }
+
+  .-rtl & {
+    .CardHeader .Icon {
+      margin-right: 0;
+      margin-left: 6px;
+      transform: scaleX(-1);
+    }
+
+    .TabNav {
       margin-left: 0;
       margin-right: auto;
     }

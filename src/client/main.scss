@@ -27,6 +27,10 @@ body {
   &.-rtl {
     text-align: right;
   }
+
+  &.-rounded {
+    border-radius: 0;
+  }
 }
 
 a {

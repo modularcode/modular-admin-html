@@ -126,7 +126,7 @@ variables = Object.assign(variables, {
 
 
   // Card
-  'CardColorBg':            'rgba(255,255,255,0.94)',
+  'CardColorBg':            'rgba(255,255,255)',
   'CardShadow':             '1px 1px 5px rgba(126, 142, 159, 0.1)',
   'CardMarginBottom':       '15px',
   'CardMarginBottom-sm':    '15px',

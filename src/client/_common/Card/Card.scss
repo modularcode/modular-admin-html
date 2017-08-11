@@ -22,6 +22,16 @@
     margin-bottom: var(--CardMarginBottom-xl);
   }
 
+  // Rrounded
+  .-rounded,
+  .-rounded & {
+    border-radius: 7px;
+
+    .CardHeader {
+      border-radius: 7px 7px 0 0;
+    }
+  }
+
   .CardHeader {
     background-image: none;
     background-color: #ffffff;

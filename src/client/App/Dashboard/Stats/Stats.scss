@@ -21,6 +21,15 @@
     width: 100%;
   }
 
+  .Stat {
+    display: flex;
+    flex-direction: row;
+
+    .-rtl & {
+      flex-direction: row-reverse;
+    }
+  }
+
   .Icon {
     color: #6d6d6d;
     display: inline-block;
@@ -41,12 +50,15 @@
     @include media(xl) {
       width: 50px;
     }
+
+    .-rtl & {
+      margin-left: 6px;
+      margin-right: 0;
+      transform: scaleX(-1);
+    }
   }
 
-  .Stat {
-    display: inline-block;
-    vertical-align: middle;
-  }
+
 
   .Value {
     font-size: 20px;
