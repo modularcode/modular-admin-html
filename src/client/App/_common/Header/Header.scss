@@ -11,15 +11,133 @@
   border-bottom: var(--HeaderBorderBottom);
   padding: 0 $HeaderPaddingHorizontal;
 
-  .HeaderBlock {
-
-  }
-
-  .SidebarToggleButton {
-    padding: 7px 10px;
-  }
-
   .-rtl & {
     flex-direction: row-reverse;
+  }
+
+  .HeaderBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .-rtl & {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .SidebarButton {
+    padding: 5px 9px;
+    font-size: 1.3em;
+    margin-right: 5px;
+
+    .-rtl & {
+      margin-right: 0;
+      margin-left: 5px;
+    }
+  }
+
+  .ProjectNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    a {
+      margin: 1px;
+      padding: 6px 11px;
+      white-space: nowrap;
+    }
+
+    @include media-down(sm) {
+      display: none;
+    }
+
+    .-rtl & {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .ProfileNav {
+    display: flex;
+    flex-direction: row;
+
+    .-rtl & {
+      flex-direction: row-reverse;
+    }
+
+    .NavItem {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        display: block;
+        content: " ";
+        width: 1px;
+        height: 24px;
+        top: 50%;
+        margin-top: -12px;
+        background-color: var(--colorDivider);
+        position: absolute;
+        left: 0;
+
+        .-rtl & {
+          left: auto;
+          right: 0;
+        }
+      }
+
+      &:first-of-type:before {
+        display: none;
+      }
+
+      & > a,
+      .NavLink {
+        color: var(--colorText);
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        height: 40px;
+        transition: all .2s ease;
+
+        &:hover {
+          background-color: #f5f5f5;
+          color: var(--colorPrimary);
+        }
+      }
+    }
+
+    .NotificationsLink {
+      &:after {
+        display: none;
+      }
+
+      .Counter {
+        color: var(--colorPrimary);
+      }
+    }
+
+    .ProfileLink {
+      white-space: nowrap;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .Img {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 4px;
+      background-color: #8b9cb1;
+      color: #ffffff;
+      text-align: center;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 }

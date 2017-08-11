@@ -13,6 +13,9 @@
   transition: background-color .3s ease;
 
 
+  @include media-down(md) {
+    box-shadow: none;
+  }
 
 
 
@@ -230,6 +233,7 @@
       color: var(--SidebarNavColorText);
       cursor: pointer;
       padding: 0 $SidebarPaddingHorizontal 0 $item-padding-base;
+      font-weight: normal;
 
       &.-active,
       &.-open {

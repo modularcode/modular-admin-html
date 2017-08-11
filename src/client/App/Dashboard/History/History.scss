@@ -5,6 +5,15 @@
     font-size: 1.7em;
   }
 
+  .TabNav {
+    margin-left: auto;
+
+    .-rtl & {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
   #DashboardHistoryAudienceChart,
   #DashboardHistoryDownloadsChart {
     height: 220px;

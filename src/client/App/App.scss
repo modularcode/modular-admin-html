@@ -19,6 +19,15 @@
     @include media-down(md) {
       left: 0;
     }
+
+    .-rtl & {
+      left: 0;
+      right: var(--AppSidebarWidth);
+
+      @include media-down(md) {
+        right: 0;
+      }
+    }
   }
 
   .SidebarContainer {
@@ -215,10 +224,6 @@
 
   .-rtl & {
 
-    .HeaderContainer {
-      left: 0;
-      right: var(--AppSidebarWidth);
-    }
 
     .SidebarContainer {
       left: auto;

@@ -2,6 +2,7 @@ import './Button';
 import './Card';
 import './Chart';
 import './Code';
+import './Dropdown';
 import './Form';
 import './Grid';
 import './Icon';

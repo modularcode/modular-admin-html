@@ -1,15 +1,79 @@
 <header class="Header">
   <div class="HeaderBlock">
 
-    <button class="Button -primary -lg SidebarToggleButton">
+    <button class="Button -primary -lg SidebarButton">
       <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
 
-  </div>
-  <div class="HeaderBlock">
+    <form class="Search">
+      <button class="Button -primary -lg SidebarButton">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+      {{!-- <input type="seaarch" class="FormControl -sm" placeholder="Search..."> --}}
+    </form>
 
   </div>
   <div class="HeaderBlock">
+    <nav class="ProjectNav">
+
+
+      <a
+        href=""
+        class="Button -sm -default -outline -rounded">
+        <i class="fa fa-github"></i>
+        <span>View on GitHub</span>
+      </a>
+
+      <a
+        href=""
+        class="Button -sm -default -outline -rounded">
+        <i class="fa fa-cloud-download"></i>
+        <span>Download</span>
+      </a>
+
+      <a
+        href=""
+        class="Button -sm -primary -raised -rounded">
+        <i class="fa fa-star"></i>
+        <span>Star Us</span>
+      </a>
+    </nav>
+  </div>
+  <div class="HeaderBlock">
+
+    <nav class="ProfileNav">
+      <div class="Dropdown NavItem Notifications">
+        <a
+          href=""
+          class="DropdownToggle NavLink NotificationsLink">
+          <i class="fa fa-bell-o"></i>
+          <sup>
+            <span class="Counter">8</span>
+          </sup>
+        </a>
+        <div class="DropdownContent">
+          Dropdown Content
+        </div>
+      </div>
+      <div class="Dropdown NavItem Profile">
+        <a
+          href=""
+          class="DropdownToggle NavLink ProfileLink">
+          <div
+            class="Img"
+            style="
+              background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&amp;s=40')
+            ">
+          </div>
+          <div class="Name">
+            John Doe
+          </div>
+        </a>
+        <div class="DropdownContent">
+          Dropdown Content
+        </div>
+      </div>
+    </nav>
 
   </div>
 </header>

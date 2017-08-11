@@ -1,0 +1,21 @@
+.Dropdown {
+
+  .DropdownToggle {
+    &:after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 0.3em;
+      vertical-align: middle;
+      content: "";
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-left: 0.3em solid transparent;
+    }
+  }
+
+
+  .DropdownContent {
+    display: none;
+  }
+}

@@ -19,7 +19,9 @@ let variables = {
 
   'colorText':             Color('#4f5f6f'),
   'colorText-light':       Color('#7e8e9f'),
+  'colorText-lighter':     Color('#a5b4c3'),
   'colorText-dark':        Color('#2f373f'),
+  'colorText-darker':      Color('#2f373f'),
   'colorText-muted':       Color('#C2CCD6'),
   'colorText-inverse':     Color('#ffffff'),
   'colorText-passive':     Color('#c5c5c5'),
@@ -94,8 +96,9 @@ variables = Object.assign(variables, {
   'FooterShadow':           'none',
 
   // Sidebar
-  'SidebarColorBg':         Color('#3a4651').darken(0.1),
+  'SidebarColorBg':         Color('#3b4c5d'),
   'SidebarColorText':       () => variables['colorText-inverse'].fade(0.2),
+  // 'SidebarBgImage':         'none',
   'SidebarBgImage':         'url(\'~_assets/sidebar-bg-1.jpg\')',
   'SidebarBgImageOpacity':  1,
   'SidebarShadow':          '0px 0px 30px rgba(72, 72, 72, 0.72)',

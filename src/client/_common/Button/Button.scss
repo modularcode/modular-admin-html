@@ -27,21 +27,27 @@
   }
 
   &.-default {
-    color: var(--colorDivider);
-    background-color: #efefef;
-    border-color: var(--colorDivider);
+    color: var(--colorText-light);
+
+    &.-raised:not(&.outline) {
+      background-color: var(--colorText-light);
+
+    }
 
     &:hover {
-      color: var(--colorDivider-darker);
-      border-color: var(--colorDivider-darker);
+      color: var(--colorText);
+      border-color: var(--colorText);
+    }
+
+    &.-outline {
+      border-color: var(--colorText-light);
     }
   }
 
   &.-primary {
     color: var(--colorPrimary);
 
-
-    &.-raized:not(&.outline) {
+    &.-raised {
       color: var(--colorText-inverse);
       background-color: var(--colorPrimary);
       border-color: var(--colorPrimary);
@@ -56,7 +62,7 @@
     color: var(--colorSecondary);
 
 
-    &.-raized {
+    &.-raised {
       color: var(--colorText-inverse);
       background-color: var(--colorSecondary);
       border-color: var(--colorSecondary);
@@ -81,6 +87,11 @@
   &.-xl {
     font-size: 1.3em;
     padding: 9px 18px;
+  }
+
+  &.-sm {
+    font-size: .8em;
+    padding: 5px 11px;
   }
 
   &.-rounded {
