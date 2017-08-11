@@ -63,9 +63,9 @@ History.init = () => {
       element: containerEl,
       data: dataVisits,
       xkey: 'x',
-      ykeys: ['visits', 'users'],
+      ykeys: ['users', 'visits'],
       ymin: 'auto 40',
-      labels: ['Visits', 'Users'],
+      labels: ['Users', 'Visits'],
       xLabels: "day",
       hideHover: 'auto',
       yLabelFormat: function (y) {
@@ -79,13 +79,13 @@ History.init = () => {
       },
       resize: true,
       lineColors: [
-        colors['light-blue-300'].string(),
         colors['light-green-400'].string(),
+        colors['light-blue-300'].string(),
 
       ],
       pointFillColors: [
-        colors['light-blue-300'].string(),
         colors['light-green-400'].string(),
+        colors['light-blue-300'].string(),
       ]
     });
   }
