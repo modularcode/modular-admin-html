@@ -90,10 +90,10 @@
 
   .LogoLink {
     margin-left: 5px;
-    margin-right: 10px;
+    margin-right: 12px;
 
     .-rtl & {
-      margin-left: 10px;
+      margin-left: 12px;
       margin-right: 5px;
     }
   }
@@ -107,35 +107,36 @@
     white-space: nowrap;
     // top: -1px;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-  }
 
-  .Link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    //padding: 10px 0;
-  }
-
-  .Version {
-    color: $colorText-muted;
-  }
-
-  .Platform {
-    position: absolute;
-    display: block;
-    text-decoration: none;
-    top: 100%;
-    margin-top: 2px;
-    right: 0;
-    font-size: 9px;
-    font-weight: bold;
-    color: var(--colorPrimary);
-    transition: color .3s ease;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-
-    &:hover {
-      color: #fff;
+    .Link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
     }
+
+    .Version {
+      color: $colorText-muted;
+      margin-left: 5px;
+    }
+
+    .Platform {
+      position: absolute;
+      display: block;
+      text-decoration: none;
+      top: 100%;
+      margin-top: 2px;
+      right: 0;
+      font-size: 9px;
+      font-weight: bold;
+      color: $colorText-muted;
+      transition: color .3s ease;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
   }
 
   /*----------  Sidebar Content  ----------*/

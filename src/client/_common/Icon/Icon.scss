@@ -1,16 +1,15 @@
 // Font Awesome Icons
 
-$fa-font-path: "~font-awesome/fonts";
+$fa-font-path: '~font-awesome/fonts';
 
 @import 'font-awesome/scss/font-awesome.scss';
 
 // Pe 7s icons
-$pe-7s-font-path: "~pixeden-stroke-7-icon/pe-icon-7-stroke/fonts";
+$pe-7s-font-path: '~pixeden-stroke-7-icon/pe-icon-7-stroke/fonts';
 
 @import 'pixeden-stroke-7-icon/pe-icon-7-stroke/scss/pe-icon-7-stroke.scss';
 
 .Icon {
-
   .-x1point5 {
     font-size: 1.5em;
   }
@@ -34,5 +33,4 @@ $pe-7s-font-path: "~pixeden-stroke-7-icon/pe-icon-7-stroke/fonts";
   &.-x6 {
     font-size: 6em;
   }
-
 }

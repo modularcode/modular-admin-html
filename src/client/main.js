@@ -2,9 +2,6 @@
 import 'bootstrap/scss/_normalize.scss';
 import 'bootstrap/scss/_print.scss';
 
-// $fa-font-path: "~font-awesome/fonts";
-import 'font-awesome/scss/font-awesome.scss';
-
 // Internal deps
 import './main.scss';
 
