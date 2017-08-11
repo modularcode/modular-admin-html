@@ -13,8 +13,10 @@ let variables = {
   /*----------  Context Colors  ----------*/
 
   'colorPrimary':          Color('#8BC34A'),
-  'colorPrimary-dark':     Color('#689F38'),
-  'colorPrimary-light':    Color('#DCEDC8'),
+  'colorPrimary-dark':     () => variables['colorPrimary'].darken(0.1),
+  'colorPrimary-darker':   () => variables['colorPrimary'].darken(0.15),
+  'colorPrimary-light':    () => variables['colorPrimary'].lighten(0.1),
+  'colorPrimary-lighter':  () => variables['colorPrimary'].lighten(0.15),
   'colorSecondary':        Color('#536DFE'),
 
   'colorText':             Color('#4f5f6f'),
@@ -126,7 +128,7 @@ variables = Object.assign(variables, {
 
 
   // Card
-  'CardColorBg':            'rgba(255,255,255)',
+  'CardColorBg':            '#fff',
   'CardShadow':             '1px 1px 5px rgba(126, 142, 159, 0.1)',
   'CardMarginBottom':       '15px',
   'CardMarginBottom-sm':    '15px',

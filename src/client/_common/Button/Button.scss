@@ -19,7 +19,7 @@
   }
 
   &:hover {
-    background-color: #f5f5f5;
+    background-color: #f6f6f6;
   }
 
   &:focus {
@@ -27,20 +27,20 @@
   }
 
   &.-default {
-    color: var(--colorText-light);
+    color: var(--colorText);
 
     &.-raised:not(&.outline) {
-      background-color: var(--colorText-light);
+      background-color: var(--colorText-lighter);
 
     }
 
     &:hover {
-      color: var(--colorText);
+      color: var(--colorText-dark);
       border-color: var(--colorText);
     }
 
     &.-outline {
-      border-color: var(--colorText-light);
+      border-color: var(--colorText-lighter);
     }
   }
 
@@ -51,10 +51,21 @@
       color: var(--colorText-inverse);
       background-color: var(--colorPrimary);
       border-color: var(--colorPrimary);
+
+      &:hover {
+        background-color: var(--colorPrimary-dark);
+        border-color: var(--colorPrimary-dark);
+      }
     }
 
     &.-outline {
+      color: var(--colorPrimary);
       border-color: var(--colorPrimary);
+
+      &:hover {
+        color: var(--colorPrimary-dark);
+        border-color: var(--colorPrimary-dark);
+      }
     }
   }
 
