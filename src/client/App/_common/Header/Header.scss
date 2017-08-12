@@ -26,9 +26,13 @@
   }
 
   .ControlButton {
-    padding: 10px 14px;
+    padding: 9px 12px;
     font-size: 1.3em;
     margin-right: 5px;
+
+    .Icon {
+      display: block;
+    }
 
     .-rtl & {
       margin-right: 0;
