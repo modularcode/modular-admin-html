@@ -1,5 +1,15 @@
-import './Header';
-import './Sidebar';
-import './Footer';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
 
-export default {};
+const Common = {};
+
+Common.init = () => {
+  Header.init();
+};
+
+export {
+  Common, Header, Sidebar, Footer
+};
+
+export default Common;

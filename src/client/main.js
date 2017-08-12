@@ -6,8 +6,18 @@ import 'bootstrap/scss/_print.scss';
 import './main.scss';
 
 // Common modules
-import './_common';
+import Common from './_common';
 
 // Components
-import './App';
-import './Auth';
+import App from './App';
+import Auth from './Auth';
+
+
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    Common.init();
+
+    App.init();
+    Auth.init();
+  }, 500);
+});

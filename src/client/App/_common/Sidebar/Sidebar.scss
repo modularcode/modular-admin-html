@@ -15,8 +15,17 @@
 
   @include media-down(md) {
     box-shadow: none;
+
+    .-sidebar-open-mobile & {
+      box-shadow: var(--SidebarShadow);
+    }
   }
 
+  @include media-up(lg) {
+    .-sidebar-closed-desktop & {
+      box-shadow: none;
+    }
+  }
 
 
   // Sidebar background image

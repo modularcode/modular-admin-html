@@ -1,5 +1,9 @@
-export default () => {
+const Auth = {};
 
-  // alert('hello!');
+
+Auth.init = function () {
 
 };
+
+
+export default Auth;

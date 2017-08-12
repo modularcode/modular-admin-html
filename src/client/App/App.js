@@ -1,7 +1,23 @@
-import './_common';
+// Components
+import Common from './_common';
+import Sidebar from './_common/Sidebar';
+import Dashboard from './Dashboard';
 
-export default () => {
+const App = {};
 
-  // alert('hello!');
+App.init = () => {
 
+  const $App = $('#App');
+
+  if (!$App.length) {
+    return false;
+  }
+
+  Common.init();
+  Dashboard.init();
+
+  $('#SidebarOverlay').on('click', Sidebar.close);
 };
+
+
+export default App;

@@ -1,11 +1,6 @@
 import './SalesBreakdown.scss';
 
-
 import SalesBreakdown from './SalesBreakdown.js';
 
+export default SalesBreakdown;
 
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    SalesBreakdown.init();
-  }, 500);
-})

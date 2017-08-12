@@ -86,7 +86,7 @@ variables = Object.assign(variables, {
   'AppSidebarWidth':              '240px',
   'AppSidebarWidth-collapsed':    '70px',
   'AppFooterHeight':              '46px',
-  'AppLayoutTransitionDuration':  '.3s',
+  'AppLayoutTransitionDuration':  '0.3s',
 
   // Header
   'HeaderColorBg':          Color('#fff'),

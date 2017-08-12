@@ -19,15 +19,6 @@
     @include media-down(md) {
       left: 0;
     }
-
-    .-rtl & {
-      left: 0;
-      right: var(--AppSidebarWidth);
-
-      @include media-down(md) {
-        right: 0;
-      }
-    }
   }
 
   .SidebarContainer {
@@ -60,7 +51,7 @@
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
     z-index: 35;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   .FooterContainer {
@@ -140,91 +131,61 @@
     }
   }
 
-
-  &.-sidebar-closed {
-    .HeaderContainer {
-      left: 0;
-    }
-
-    .SidebarContainer {
-      left: calc(-1 * var(--AppSidebarWidth));
-    }
-
-    .ContentContainer {
-      margin-left: 0;
-    }
-
-    .FooterContainer {
-      left: 0;
-    }
-  }
-
-  // This rule is more powerfull than .-sidebar-closed
-  &.-sidebar-open {
-    .HeaderContainer {
-      left: var(--AppSidebarWidth);
-
-      @include media-down(md) {
+  // By default on desktops the sidebar is open
+  // Add this class to close the sidebar
+  &.-sidebar-closed-desktop {
+    @include media-up(lg) {
+      .HeaderContainer {
         left: 0;
       }
-    }
 
-    .SidebarContainer {
-      left: 0;
-    }
+      .SidebarContainer {
+        left: calc(-1 * var(--AppSidebarWidth));
+      }
 
-    .SidebarOverlay {
-      left: 0;
-      opacity: 1;
-    }
+      .FooterContainer {
+        left: 0;
+      }
 
-    .ContentContainer {
-      margin-left: var(--AppSidebarWidth);
-
-      @include media-down(md) {
+      .ContentContainer {
         margin-left: 0;
       }
     }
+  }
 
-    .FooterContainer {
-      left: var(--AppSidebarWidth);
-
-      @include media-down(md) {
+  // By default on mobiles and tablets the sidebar is closed
+  // Add this class to open the sidebar
+  &.-sidebar-open-mobile {
+    @include media-down(md) {
+      .SidebarContainer {
         left: 0;
       }
+
+      .SidebarOverlay {
+        left: 0;
+        opacity: 1;
+      }
+
+      // Blur out the content
+      .HeaderContainer,
+      .ContentContainer,
+      .FooterContainer {
+        filter: blur(2px);
+      }
     }
-
-    // Blur out content
-    .HeaderContainer,
-    .ContentContainer,
-    .FooterContainer {
-      filter: blur(5px);
-    }
-  }
-
-  // Background variations
-  &.-bg-fixed .ContentBackground {
-    background-attachment: fixed;
-  }
-
-  &.-bg1 .ContentBackground {
-    opacity: 0.4;
-    background-size: 100%;
-    background-image: url(/assets/page-bg-1.svg);
-    background-repeat: no-repeat;
-  }
-
-  &.-bg2 .ContentBackground {
-    opacity: 0.4;
-    background-size: cover;
-    background-image: url(/assets/page-bg-2.svg);
-    background-repeat: no-repeat;
   }
 
   // RTL variation
-
   .-rtl & {
 
+    .HeaderContainer {
+      left: 0;
+      right: var(--AppSidebarWidth);
+
+      @include media-down(md) {
+        right: 0;
+      }
+    }
 
     .SidebarContainer {
       left: auto;
@@ -251,6 +212,38 @@
       margin-right: var(--AppSidebarWidth);
       @include media-down(md) {
         margin-right: 0;
+      }
+    }
+
+    &.-sidebar-closed-desktop {
+      @include media-up(lg) {
+        .HeaderContainer {
+          right: 0;
+        }
+
+        .SidebarContainer {
+          right: calc(-1 * var(--AppSidebarWidth));
+        }
+
+        .FooterContainer {
+          right: 0;
+        }
+
+        .ContentContainer {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.-sidebar-open-mobile {
+      @include media-down(md) {
+        .SidebarContainer {
+          right: 0;
+        }
+
+        .SidebarOverlay {
+          right: 0;
+        }
       }
     }
   }
