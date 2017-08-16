@@ -118,7 +118,7 @@
     }
   }
 
-  @include media(xl) {
+  @include media-up(xl) {
     margin-bottom: 0;
   }
 }

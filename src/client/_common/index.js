@@ -21,8 +21,10 @@ import Util from './Util';
 const Common = {};
 
 
+
 Common.init = () => {
   Button.init();
+  Dropdown.init();
 };
 
 

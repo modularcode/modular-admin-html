@@ -1,5 +1,7 @@
 .Dropdown {
 
+  position: relative;
+
   .DropdownToggle {
     &:after {
       display: inline-block;
@@ -17,5 +19,9 @@
 
   .DropdownContent {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
   }
 }

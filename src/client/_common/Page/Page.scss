@@ -2,7 +2,7 @@
 
   padding: $PagePaddingVertical-lg $PagePaddingHorizontal-lg;
 
-  @include media(xs) {
+  @include media-down(xs) {
     padding: $PagePaddingVertical-xs $PagePaddingHorizontal-xs;
   }
 
@@ -18,7 +18,7 @@
     padding: $PagePaddingVertical-lg $PagePaddingHorizontal-lg;
   }
 
-  @include media(xl) {
+  @include media-up(xl) {
     padding: $PagePaddingVertical-xl $PagePaddingHorizontal-xl;
   }
 

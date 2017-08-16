@@ -9,6 +9,7 @@
   display: inline-block;
   vertical-align: middle;
   outline: none;
+  line-height: 1.4em;
 
   &.-raized {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 6px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
@@ -23,6 +24,7 @@
   }
 
   &:focus {
+    outline: none;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 8px, rgba(0, 0, 0, 0.09) 0px 1px 6px;
   }
 

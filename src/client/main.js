@@ -1,5 +1,5 @@
 // External modules
-import 'bootstrap/scss/_normalize.scss';
+import 'bootstrap/scss/_reboot.scss';
 import 'bootstrap/scss/_print.scss';
 
 // Internal deps

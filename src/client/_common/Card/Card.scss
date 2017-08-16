@@ -18,7 +18,7 @@
     margin-bottom: var(--CardMarginBottom-lg);
   }
 
-  @include media (xl) {
+  @include media-up (xl) {
     margin-bottom: var(--CardMarginBottom-xl);
   }
 
@@ -75,7 +75,7 @@
       padding: 0 $CardBlockPaddingHorizontal-sm;
     }
 
-    @include media(xl) {
+    @include media-up(xl) {
       padding: 0 $CardBlockPaddingHorizontal-xl;
     }
 

@@ -47,7 +47,7 @@
 
     }
 
-    @include media(xl) {
+    @include media-up(xl) {
       width: 50px;
     }
 

@@ -84,7 +84,7 @@ function toSCSS() {
         .replace(/}/g, ")");
     }
 
-    sassRule = `$${varName}: ${varValue} !default;`;
+    sassRule = `$${varName}: ${varValue};`;
 
     SCSS = SCSS + sassRule;
   });

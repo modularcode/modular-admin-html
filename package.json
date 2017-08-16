@@ -13,7 +13,8 @@
   },
   "homepage": "https://github.com/modularcode/modular-admin-html",
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6",
+    "animate.css": "^3.5.2",
+    "bootstrap": "4.0.0-beta",
     "chart.js": "^2.6.0",
     "color": "^2.0.0",
     "color-convert": "^1.9.0",
@@ -27,6 +28,7 @@
     "morris.js": "^0.5.0",
     "opencollective": "^1.0.3",
     "pixeden-stroke-7-icon": "^1.2.3",
+    "popper.js": "^1.12.2",
     "raphael": "^2.2.7"
   },
   "devDependencies": {
