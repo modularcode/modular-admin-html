@@ -14,5 +14,24 @@ $(function () {
 	$("#sidebar-overlay").on('click', function() {
 		$("#app").removeClass("sidebar-open");
 	});
+
+	if ($.browser.mobile) {
+		var $appContainer = $('.app ');
+
+		$appContainer.swipe({
+			swipeLeft: function() {
+				if($appContainer.hasClass("sidebar-open")) {
+					$appContainer.removeClass("sidebar-open");	
+				}
+			},
+			swipeRight: function() {
+				if(!$appContainer.hasClass("sidebar-open")) {
+					$appContainer.addClass("sidebar-open");
+				}
+			},
+			excludedElements: "button, input, select, textarea, .noSwipe, table", 
+			triggerOnTouchEnd: false
+		});
+	}
 	
 });

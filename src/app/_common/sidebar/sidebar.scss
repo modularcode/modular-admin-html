@@ -136,7 +136,7 @@
 		}
 
 		// Second level items
-		& > li > ul > li {
+		& > li > .nav> li {
 
 			// Second level and deeper items links
 			// Have bit darker background and more padding 
@@ -153,6 +153,19 @@
 			&.active a {
 				color: $sidebar-color-text-active;
 			}
+
+			// Third level items	
+			& > .nav > li {
+				a {
+					padding-left: 60px;
+				}
+
+				& > .nav > li {
+					a {
+						padding-left: 70px;
+					}
+				}
+			}		
 		}
 	}
 
