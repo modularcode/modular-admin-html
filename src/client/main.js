@@ -1,6 +1,7 @@
 // External modules
 import 'bootstrap/scss/_reboot.scss';
 import 'bootstrap/scss/_print.scss';
+import 'bootstrap/scss/_type.scss';
 
 // Internal deps
 import './main.scss';
@@ -19,5 +20,5 @@ window.addEventListener('load', function() {
 
     App.init();
     Auth.init();
-  }, 500);
+  }, 200);
 });

@@ -144,6 +144,9 @@ variables = Object.assign(variables, {
   'CardBlockPaddingHorizontal-xl':  '20px',
   'CardBlockPaddingHorizontal-sm':  '10px',
 
+  // Dropdown
+  'DropdownColorBg':        '#fff'
+
 });
 
 module.exports = variables;
