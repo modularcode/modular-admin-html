@@ -63,7 +63,10 @@ module.exports.task = function(gulp, plugins, paths) {
 		}))
 
 		// Output
-		.pipe(gulp.dest(config.destDir));
+		.pipe(gulp.dest(config.destDir))
+
+		//Live-Reload
+		.pipe(plugins.connect.reload()); 
 	
 };
 
