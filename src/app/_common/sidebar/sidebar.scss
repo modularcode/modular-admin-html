@@ -199,3 +199,17 @@
 		}
 	}
 }
+
+.sidebar-mobile-menu-handle {
+	display: none;
+	position: absolute;
+	top: $header-height-xs;
+	background-color: transparent;
+	width: 30px;
+	bottom: 0;
+	z-index: 10;
+
+	@include media-down(md) {
+		display: block;
+	}
+}
