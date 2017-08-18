@@ -2,29 +2,49 @@
 	background-image: none;
 	border-radius: 0;
 	margin-bottom: 5px;
+	line-height: 1.2;
+
+	&,
+	&:hover {
+		color: $color-text-inverse;
+	}
+
 
 	&.btn-primary {
-		@include button-variant( $btn-primary-color-text, $color-primary, $color-primary);
+		@include button-variant( $color-primary, $color-primary);
+
+		&,
+		&:hover {
+			color: $btn-primary-color-text;
+		}
 	}
 
 	&.btn-secondary {
-		@include button-variant( $color-text, #fff, $color-divider );	
+		@include button-variant( #fff, $color-divider );	
+		&,
+		&:hover {
+			color: $color-text;
+		}
 	}
 
 	&.btn-success {
-		@include button-variant( $color-text-inverse, $color-success, $color-success);
+		@include button-variant( $color-success, $color-success);
+		// color: $color-text-inverse;
 	}
 
 	&.btn-info {
-		@include button-variant( $color-text-inverse, $color-info, $color-info);
+		@include button-variant( $color-info, $color-info);
+		// color: $color-text-inverse;
 	}
 
 	&.btn-warning {
-		@include button-variant( $color-text-inverse, $color-warning, $color-warning);
+		@include button-variant( $color-warning, $color-warning);
+		// color: $color-text-inverse;
 	}
 
 	&.btn-danger {
-		@include button-variant( $color-text-inverse, $color-danger, $color-danger);
+		@include button-variant( $color-danger, $color-danger);
+		// color: $color-text-inverse;
 	}
 
 	// Remove all backgrounds

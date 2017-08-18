@@ -1,4 +1,4 @@
-input, 
+input,
 textarea {
 	outline: none;
 }
@@ -60,7 +60,13 @@ textarea {
 		padding-left: 5px;
 	}
 
-	span.input-group-addon { 
+	.input-group-btn {
+		.btn {
+			margin-bottom: 0;
+		}
+	}
+
+	span.input-group-addon {
 		font-style: italic;
 		border: none;
 		border-radius: 0;
@@ -75,10 +81,10 @@ textarea {
 	}
 }
 
-label, 
+label,
 .control-label {
 	font-weight: 600;
-}	
+}
 
 .form-control.underlined {
 	padding-left: 0;
@@ -121,7 +127,7 @@ label,
 .form-control.boxed {
     border-radius: 0;
     box-shadow: none;
-    
+
     &:focus {
     	border: 1px solid $color-primary;
     }
@@ -141,7 +147,7 @@ label,
 		font-size: 21px;
 		display: inline-block;
 		vertical-align: middle;
-		letter-spacing: 10px; 
+		letter-spacing: 10px;
 		color: darken($color-divider, 5%);
 	}
 
@@ -220,7 +226,7 @@ label,
 		color: $color-divider;
 	}
 
-	&:-ms-input-placeholder {  
+	&:-ms-input-placeholder {
 		font-style: italic;
 		color: $color-divider;
 	}

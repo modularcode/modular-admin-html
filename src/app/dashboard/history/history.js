@@ -11,11 +11,11 @@ $(function() {
     var item = 'visits';
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-       
+
        el = e.target;
        item = $(el).attr('href').replace('#', '');
        switchHistoryCharts(item);
-       
+
     });
 
     $(document).on("themechange", function(){
@@ -47,7 +47,7 @@ $(function() {
             { x: '2015-09-04', y: 75 },
             { x: '2015-09-05', y: 50 },
             { x: '2015-09-06', y: 75 },
-            { x: '2015-09-07', y: 86 } 
+            { x: '2015-09-07', y: 86 }
         ];
 
 
@@ -82,46 +82,46 @@ $(function() {
     function drawDownloadsChart(){
 
         var dataDownloads = [
-            { 
+            {
                 year: '2006',
                 downloads: 1300
             },
-            { 
-                year: '2007', 
+            {
+                year: '2007',
                 downloads: 1526
             },
-            { 
-                year: '2008', 
+            {
+                year: '2008',
                 downloads: 2000
             },
-            { 
-                year: '2009', 
+            {
+                year: '2009',
                 downloads: 1800
             },
-            { 
-                year: '2010', 
+            {
+                year: '2010',
                 downloads: 1650
-            },    
-            { 
-                year: '2011', 
+            },
+            {
+                year: '2011',
                 downloads: 620
             },
-            { 
-                year: '2012', 
+            {
+                year: '2012',
                 downloads: 1000
             },
-            { 
-                year: '2013', 
+            {
+                year: '2013',
                 downloads: 1896
             },
-            { 
-                year: '2014', 
+            {
+                year: '2014',
                 downloads: 850
             },
-            { 
-                year: '2015', 
+            {
+                year: '2015',
                 downloads: 1500
-            }  
+            }
         ];
 
 

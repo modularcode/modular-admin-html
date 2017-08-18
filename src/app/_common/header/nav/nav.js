@@ -1,10 +1,14 @@
-$(function() {
-	$('.nav-profile > li > a').on('click', function() {
-		var $el = $(this).next();
+// Animating dropdowns is temporary disabled
+// Please feel free to send a pull request :)
 
-		animate({
-			name: 'flipInX',
-			selector: $el
-		});
-	});
-})
+// $(function() {
+// 	$('.nav-profile > li > a').on('click', function() {
+// 		var $el = $(this).next();
+
+
+// 		animate({
+// 			name: 'flipInX',
+// 			selector: $el
+// 		});
+// 	});
+// })
