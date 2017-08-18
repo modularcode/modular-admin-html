@@ -18,7 +18,7 @@
 		padding: $header-height + $padding-y $padding-x $footer-height + $padding-y $padding-x;
 		min-height: 100vh;	
 
-		@include media(xl) {
+		@include media-up(xl) {
 			$padding-x: $content-padding-x-xl;
 			$padding-y: $content-padding-y-xl;
 

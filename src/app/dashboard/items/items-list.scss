@@ -11,7 +11,7 @@
 			text-align: right;	
 		}
 
-		@include media(xl) {
+		@include media-up(xl) {
 			.item-col-date {
 				flex-grow: $item-list-col-grow + 1;	
 			}

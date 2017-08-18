@@ -38,9 +38,12 @@
 		}
 	}
 
-	.nav {
+	#sidebar-menu {
 
 		font-size: 14px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 
 		// Common styles
 		li {
@@ -71,6 +74,7 @@
 		li a {
 			color: $sidebar-color-text;
 			text-decoration: none;
+			display: block;
 		}
 
 		// All links which are not active
@@ -136,7 +140,7 @@
 		}
 
 		// Second level items
-		& > li > .nav> li {
+		& > li > .sidebar-nav> li {
 
 			// Second level and deeper items links
 			// Have bit darker background and more padding 
@@ -155,12 +159,12 @@
 			}
 
 			// Third level items	
-			& > .nav > li {
+			& > .sidebar-nav > li {
 				a {
 					padding-left: 60px;
 				}
 
-				& > .nav > li {
+				& > .sidebar-nav > li {
 					a {
 						padding-left: 70px;
 					}

@@ -7,6 +7,7 @@
 
 	@include media-down(sm) {
 		padding-left: $content-padding-x-xs;
+		display: none;
 	}
 
 	@include media(md) {
@@ -17,7 +18,7 @@
 		padding-left: $content-padding-x-md;
 	}
 
-	@include media(xl) {
+	@include media-up(xl) {
 		padding-left:  $content-padding-x-lg;
 	}
 

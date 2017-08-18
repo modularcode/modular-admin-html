@@ -32,7 +32,7 @@
 	.stat-chart {
 		margin-right: 5px;
 
-		@include media(xl) {
+		@include media-up(xl) {
 			margin-right: 0.6vw;
 			// margin-right: 10px;
 			// width: 3vw;
@@ -46,12 +46,12 @@
 		vertical-align: middle;
 		.value {
 
-			@include media(xl) {
+			@include media-up(xl) {
 				font-size: 1.3vw;
 			}
 		}
 		.name {
-			@include media(xl) {
+			@include media-up(xl) {
 				font-size: 0.9vw;
 			}
 		}
@@ -61,20 +61,10 @@
 		height: 2px;
 		margin: 5px 0;
 		color: $color-primary;
+		background-color: #dddddd;
 
-		&[value]::-webkit-progress-bar {
-			//progress bar color
-			background-color: #dddddd;
-		}
-
-		&[value]::-webkit-progress-value {
-			//progress bar value color
-  			background-color: $color-primary;
-		}
-
-		&[value]::-moz-progress-bar {
-		    //progress bar color
-		    background-color: #dddddd;
+		.progress-bar {
+			background-color: $color-primary;
 		}
 	}
 }
