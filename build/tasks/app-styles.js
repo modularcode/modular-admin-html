@@ -16,5 +16,6 @@ module.exports.task = function(gulp, plugins, paths) {
 			.on('error', plugins.sass.logError)
 		)
 		.pipe(plugins.autoprefixer())
-		.pipe(gulp.dest(config.destDir + '/css'));
+		.pipe(gulp.dest(config.destDir + '/css'))
+		.pipe(plugins.connect.reload()).on( 'error', plugins.sass.logError );
 };
