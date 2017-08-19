@@ -14,6 +14,13 @@
 
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
 
+### Heads up for the ModularAdmin v2!
+We're working hard on version 2, which is a complete rewrite. 
+**Please consider [supporting us](#support-us) to make this happen!**
+<a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 code</a> | <a href="https://modularcode.io/modular-admin-html-demo/" target="_blank">V2 preview</a>
+<i>(in development)</i>
+
+
 
 ## Getting Started
 
@@ -235,7 +242,14 @@ Launch the container
 docker-compose up
 ```
 
-## Get in touch
+
+## Support us!
+
+### Contribute
+
+Be part of our team! Feel free to open new issues/pull-requests.
+
+### Get in touch
 
 You can get in touch with us in gitter chat [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) or in the [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
 Feel free to contact us with any questions, sugestions, remarks and potential feature requests that you might have.
@@ -244,13 +258,9 @@ Feel free to contact us with any questions, sugestions, remarks and potential fe
 * Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
 * David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
 
-## Hire Us?
-
-Do you have a great project? Need theme customization or intagration with back-end? Want to create something awesome?
-We may be available for hire. Just drop a message to gevharut[at]gmail.com and let's talk.
 
 
-## Backers
+### Backers
 
 Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/modular-admin-html#backer)]
 
