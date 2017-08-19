@@ -8,79 +8,40 @@
 
 <p align="center">
   <strong>
-    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.2.0/modular-admin-html-1.2.0.zip" target="_blank">Download ZIP</a>
+    <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">Download ZIP</a>
   </strong>
 </p>
 
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
 
 
+## Getting Started
 
-## Download
+### 1. Download
 
-You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.2.0/modular-admin-html-1.2.0.zip" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
+You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
 
-#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/download/v1.2.0/modular-admin-html-1.2.0.zip)
+#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases)
 
-The downloaded zip file will contain ```dist/``` folder which is compiled version of the project (with all scripts are merged together, processed styles and templates). You can use it as final result, but for development you should use aplication sources locaed in ```src/``` folder and rebuild the project. See [development](#development).
-
-**Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
 
 #### Git clone
 
 Clone repository to the local `modular-admin-html` folder
 ```
 git clone https://github.com/modularcode/modular-admin-html.git
+
 ```
+### 2. Build the project
 
-The cloned repository desn't contain prebuilt version of the project and you need to build it, See [development](#development).
+The cloned/downloaded repository desn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
 
-## Other versions
-
-This is the HTML version, which is great for enhancing and integrating it into other platforms and environments. 
-AngularJS, Angular2, React and Meteor versions are coming soon.
-
-### Table of contents
-
-  * [Browser support](#browser-support)
-  * [Development](#development)
-  * [Docker](#docker)
-  * [Folder structure](#folder-structure)
-  * [File types](#file-types)
-  * [Build tasks](#build-tasks)
-  * [Get in touch](#get-in-touch)
-
--------
-
-## Browser support
-
-* Last 2 Versions FF, Chrome, IE 10+, Safari Mac
-* IE 10+
-* Android 4.4+, Chrome for Android 44+
-* iOS Safari 7+
-
-Some of the components use the new Flexbox Layout module which is available in most modern browsers. Bootstrap4 is used as main framework. Please make sure that it's suitable for you: [Flexbox browser support](http://caniuse.com/#feat=flexbox).
-
-<br>
-
-
-## Development
-
-For building the application, you need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
-
-After [downloading](#download) run the following commands from the project folder:
-
-Install bower globally
-```
-npm install -g bower
-```
 
 Install npm dependencies 
 ```
 npm install
 ```
 
-Install front-end bower dependencies 
+Install bower dependencies 
 ```
 bower install
 ```
@@ -92,7 +53,14 @@ npm start
 
 Open the project [http://localhost:4000](http://localhost:4000).
 
-> The project is built by Gulp. You can read more info in [Build Tasks](#build-tasks) section
+> The project is built by Gulp.
+
+
+**Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
+
+
+-------
+
 
 ## Running in Docker
 
@@ -108,6 +76,8 @@ Launch the container
 ```
 docker-compose up
 ```
+
+-------
 
 <br>
 
@@ -276,10 +246,6 @@ If you need more advanced layouting with multiple content blocks at the same tim
 #### Vendor files
 
 In addition to application files, there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all the script and style files accordingly to ```dist/js/vendor.js``` and ```dist/css/vendor.css```. It also will copy all assets to the ```dist/assets/``` folder.
-
-<br>
-
-## Build Tasks
 
 <br>
 
