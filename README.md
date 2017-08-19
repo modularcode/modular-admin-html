@@ -17,19 +17,10 @@
 
 ## Getting Started
 
-### 1. Download
+### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases) or Git Clone
 
-You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
-
-#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases)
-
-
-#### Git clone
-
-Clone repository to the local `modular-admin-html` folder
 ```
 git clone https://github.com/modularcode/modular-admin-html.git
-
 ```
 ### 2. Build the project
 
@@ -53,31 +44,12 @@ npm start
 
 Open the project [http://localhost:4000](http://localhost:4000).
 
-> The project is built by Gulp.
-
 
 **Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
 
+<br>
 
--------
-
-
-## Running in Docker
-
-To build the container, you need to install docker and docker-compose than launch the docker daemon.
-After launching the daemon run the following commands from the project folder:
-
-Build the image
-```
-docker-compose build
-```
-
-Launch the container
-```
-docker-compose up
-```
-
--------
+You can also [run the project in docker](#running-in-docker)
 
 <br>
 
@@ -248,6 +220,20 @@ If you need more advanced layouting with multiple content blocks at the same tim
 In addition to application files, there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all the script and style files accordingly to ```dist/js/vendor.js``` and ```dist/css/vendor.css```. It also will copy all assets to the ```dist/assets/``` folder.
 
 <br>
+
+## Running in Docker
+
+You can run the project in docker. To build the container, you need to install docker and docker-compose than launch the docker daemon. After launching the daemon run the following commands from the project folder:
+
+Build the image
+```
+docker-compose build
+```
+
+Launch the container
+```
+docker-compose up
+```
 
 ## Get in touch
 
