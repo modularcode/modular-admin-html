@@ -14,13 +14,13 @@
 
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
 
-### Heads up for the ModularAdmin v2!
-We're working hard on version 2, which is a complete rewrite. 
-<a href="https://modularcode.io/modular-admin-html-demo/" target="_blank">V2 demo</a> | <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 code</a>
 
+#### Heads up for the ModularAdmin v2!
+We're working hard on version 2, which is a complete rewrite. 
+<a href="https://modularcode.io/modular-admin-html-demo/" target="_blank">V2 demo</a> | <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 code</a> <br>
 **Please consider [supporting us](#support-us) to make this happen!**
 
-
+---
 
 
 ## Getting Started
