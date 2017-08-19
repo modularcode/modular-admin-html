@@ -14,22 +14,21 @@
 
 [ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
 
+### Heads up for the ModularAdmin v2!
+We're working hard on version 2, which is a complete rewrite. 
+<a href="https://modularcode.io/modular-admin-html-demo/" target="_blank">V2 demo</a> | <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 code</a>
+
+**Please consider [supporting us](#support-us) to make this happen!**
+
+
+
 
 ## Getting Started
 
-### 1. Download
+### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases) or Git Clone
 
-You can download this project in 2 different ways: <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">download zip</a> or ```git clone https://github.com/modularcode/modular-admin-html.git ```.
-
-#### [Download ZIP](https://github.com/modularcode/modular-admin-html/releases)
-
-
-#### Git clone
-
-Clone repository to the local `modular-admin-html` folder
 ```
 git clone https://github.com/modularcode/modular-admin-html.git
-
 ```
 ### 2. Build the project
 
@@ -53,31 +52,12 @@ npm start
 
 Open the project [http://localhost:4000](http://localhost:4000).
 
-> The project is built by Gulp.
-
 
 **Warning!** all changes made in ```dist/``` folder would be overwriten on application build.
 
+<br>
 
--------
-
-
-## Running in Docker
-
-To build the container, you need to install docker and docker-compose than launch the docker daemon.
-After launching the daemon run the following commands from the project folder:
-
-Build the image
-```
-docker-compose build
-```
-
-Launch the container
-```
-docker-compose up
-```
-
--------
+You can also <strong>[run the project in docker](#running-in-docker)</strong> thanks to @japrogramer
 
 <br>
 
@@ -249,7 +229,28 @@ In addition to application files, there are also third party plugin files (e.g. 
 
 <br>
 
-## Get in touch
+## Running in Docker
+
+You can run the project in docker. To build the container, you need to install docker and docker-compose than launch the docker daemon. After launching the daemon run the following commands from the project folder:
+
+Build the image
+```
+docker-compose build
+```
+
+Launch the container
+```
+docker-compose up
+```
+
+
+## Support us!
+
+### Contribute
+
+Be part of our team! Feel free to open new issues/pull-requests.
+
+### Get in touch
 
 You can get in touch with us in gitter chat [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) or in the [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
 Feel free to contact us with any questions, sugestions, remarks and potential feature requests that you might have.
@@ -258,13 +259,9 @@ Feel free to contact us with any questions, sugestions, remarks and potential fe
 * Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
 * David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
 
-## Hire Us?
-
-Do you have a great project? Need theme customization or intagration with back-end? Want to create something awesome?
-We may be available for hire. Just drop a message to gevharut[at]gmail.com and let's talk.
 
 
-## Backers
+### Backers
 
 Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/modular-admin-html#backer)]
 
