@@ -17,7 +17,7 @@
 ### Heads up for the ModularAdmin v2!
 We're working hard on version 2, which is a complete rewrite. 
 <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 code</a> | <a href="https://modularcode.io/modular-admin-html-demo/" target="_blank">V2 preview</a>
-<i>(in development)</i> 
+
 **Please consider [supporting us](#support-us) to make this happen!**
 
 
