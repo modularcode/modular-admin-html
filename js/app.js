@@ -310,65 +310,6 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
-$(function() {
-
-	$(".wyswyg").each(function() {
-
-		var $toolbar = $(this).find(".toolbar");
-		var $editor = $(this).find(".editor");
-
-
-		var editor = new Quill($editor.get(0), {
-			theme: 'snow'
-		});
-
-		editor.addModule('toolbar', {
-			container: $toolbar.get(0)     // Selector for toolbar container
-		});
-
-
-
-	});
-	
-});
-$(function () {
-
-	$('#sidebar-menu, #customize-menu').metisMenu({
-		activeClass: 'open'
-	});
-
-
-	$('#sidebar-collapse-btn').on('click', function(event){
-		event.preventDefault();
-		
-		$("#app").toggleClass("sidebar-open");
-	});
-
-	$("#sidebar-overlay").on('click', function() {
-		$("#app").removeClass("sidebar-open");
-	});
-
-	if ($.browser.mobile) {
-		var $appContainer = $('#app ');
-		var $mobileHandle = $('#sidebar-mobile-menu-handle ');
-
-		$mobileHandle.swipe({
-			swipeLeft: function() {
-				if($appContainer.hasClass("sidebar-open")) {
-					$appContainer.removeClass("sidebar-open");	
-				}
-			},
-			swipeRight: function() {
-				if(!$appContainer.hasClass("sidebar-open")) {
-					$appContainer.addClass("sidebar-open");
-				}
-			},
-			// excludedElements: "button, input, select, textarea, .noSwipe, table", 
-			triggerOnTouchEnd: false
-		});
-	}
-	
-});
 //Flot Bar Chart
 $(function() {
 
@@ -700,6 +641,27 @@ $(function() {
 
 });
 $(function() {
+
+	$(".wyswyg").each(function() {
+
+		var $toolbar = $(this).find(".toolbar");
+		var $editor = $(this).find(".editor");
+
+
+		var editor = new Quill($editor.get(0), {
+			theme: 'snow'
+		});
+
+		editor.addModule('toolbar', {
+			container: $toolbar.get(0)     // Selector for toolbar container
+		});
+
+
+
+	});
+	
+});
+$(function() {
     
     if (!$('#morris-one-line-chart').length) {
         return false;
@@ -823,6 +785,44 @@ $(function() {
     $(document).on("themechange", function(){
         drawMorrisCharts();
     });
+});
+$(function () {
+
+	$('#sidebar-menu, #customize-menu').metisMenu({
+		activeClass: 'open'
+	});
+
+
+	$('#sidebar-collapse-btn').on('click', function(event){
+		event.preventDefault();
+		
+		$("#app").toggleClass("sidebar-open");
+	});
+
+	$("#sidebar-overlay").on('click', function() {
+		$("#app").removeClass("sidebar-open");
+	});
+
+	if ($.browser.mobile) {
+		var $appContainer = $('#app ');
+		var $mobileHandle = $('#sidebar-mobile-menu-handle ');
+
+		$mobileHandle.swipe({
+			swipeLeft: function() {
+				if($appContainer.hasClass("sidebar-open")) {
+					$appContainer.removeClass("sidebar-open");	
+				}
+			},
+			swipeRight: function() {
+				if(!$appContainer.hasClass("sidebar-open")) {
+					$appContainer.addClass("sidebar-open");
+				}
+			},
+			// excludedElements: "button, input, select, textarea, .noSwipe, table", 
+			triggerOnTouchEnd: false
+		});
+	}
+	
 });
 $(function() {
 
@@ -1013,6 +1013,43 @@ $(function() {
 });
 $(function() {
 
+    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
+
+    if (!$dashboardSalesBreakdownChart.length) {
+        return false;
+    } 
+
+    function drawSalesChart(){
+
+    $dashboardSalesBreakdownChart.empty();
+
+        Morris.Donut({
+            element: 'dashboard-sales-breakdown-chart',
+            data: [{ label: "Download Sales", value: 12 },
+                { label: "In-Store Sales", value: 30 },
+                { label: "Mail-Order Sales", value: 20 } ],
+            resize: true,
+            colors: [
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
+                config.chart.colorPrimary.toString()
+            ],
+        });
+
+        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
+
+        setSameHeights($sameheightContainer);
+    }
+
+    drawSalesChart();
+
+    $(document).on("themechange", function(){
+       drawSalesChart();
+    });
+    
+})
+$(function() {
+
     var $dashboardSalesMap = $('#dashboard-sales-map');
 
     if (!$dashboardSalesMap.length) {
@@ -1061,43 +1098,6 @@ $(function() {
        drawSalesMap();
     });
 });
-$(function() {
-
-    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
-
-    if (!$dashboardSalesBreakdownChart.length) {
-        return false;
-    } 
-
-    function drawSalesChart(){
-
-    $dashboardSalesBreakdownChart.empty();
-
-        Morris.Donut({
-            element: 'dashboard-sales-breakdown-chart',
-            data: [{ label: "Download Sales", value: 12 },
-                { label: "In-Store Sales", value: 30 },
-                { label: "Mail-Order Sales", value: 20 } ],
-            resize: true,
-            colors: [
-                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
-                config.chart.colorPrimary.toString()
-            ],
-        });
-
-        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
-
-        setSameHeights($sameheightContainer);
-    }
-
-    drawSalesChart();
-
-    $(document).on("themechange", function(){
-       drawSalesChart();
-    });
-    
-})
 $(function() {
 
 	$('.actions-list > li').on('click', '.check', function(e){
