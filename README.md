@@ -56,7 +56,7 @@ Open the project [http://localhost:4000](http://localhost:4000).
 
 <br>
 
-You can also [run the project in docker](#running-in-docker)
+You can also <strong>[run the project in docker](#running-in-docker)</strong> thanks to @japrogramer
 
 <br>
 
