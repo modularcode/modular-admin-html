@@ -42,7 +42,7 @@
 	margin-bottom: $content-padding-y-md - $card-margin-bottom;
 
 
-	@include media(xl) {
+	@include media-up(xl) {
 		margin-bottom: $content-padding-y-xl - $card-margin-bottom;
 	}
 

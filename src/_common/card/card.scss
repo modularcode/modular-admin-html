@@ -5,7 +5,7 @@
 	.card {
 		box-shadow: none;
 	}
-	
+
 	margin-bottom: $card-margin-bottom;
 	border-radius: 0;
 	border: none;
@@ -43,7 +43,7 @@
 			padding: 0.5rem $card-padding-x;;
 
 
-			@include media(xl) {
+			@include media-up(xl) {
 				padding: 0.5rem $card-padding-x-xl;
 			}
 

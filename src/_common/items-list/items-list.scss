@@ -14,7 +14,7 @@ $item-list-col-shrink: 3 !default;
 	margin: 0;
 	margin-bottom: 0;
 	line-height: $item-list-line-height;
-	
+
 	@include media(lg) {
 		font-size: 1rem;
 	}
@@ -149,7 +149,7 @@ $item-list-col-shrink: 3 !default;
 		font-size: 0.9rem;
 		display: none;
 		color: #666;
-		font-weight: 700;	
+		font-weight: 700;
 		padding-right: $item-list-padding-x;
 
 		@include media-down(sm) {
@@ -378,7 +378,7 @@ $item-list-col-shrink: 3 !default;
 .card > .item-list .item > .item-row {
 	padding: 0 $card-padding-x;
 
-	@include media(xl) {
+	@include media-up(xl) {
 		padding: 0 $card-padding-x-xl;
 	}
 
