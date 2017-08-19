@@ -1,7 +1,5 @@
 // External modules
-import 'bootstrap/scss/_reboot.scss';
-import 'bootstrap/scss/_print.scss';
-import 'bootstrap/scss/_type.scss';
+import 'bootstrap/scss/bootstrap-reboot.scss';
 
 // Internal deps
 import './main.scss';

@@ -111,6 +111,9 @@ webpackConfigBase.module.rules = [
         loader: 'sass-resources-loader',
         options: {
           resources: [
+            config.NPM_DIR + '/bootstrap/scss/_functions.scss',
+            config.NPM_DIR + '/bootstrap/scss/_variables.scss',
+            config.NPM_DIR + '/bootstrap/scss/_mixins.scss',
             config.CLIENT_DIR + '/_theme/variables.scss',
             config.CLIENT_DIR + '/_common/Util/Mixins.scss',
           ]
