@@ -28,12 +28,12 @@
         <div class="main-wrapper">
             <div class="app" id="app">
                 <header class="header">
-                    <div class="header-block header-block-collapse hidden-lg-up">
+                    <div class="header-block header-block-collapse d-lg-none d-xl-none">
                         <button class="collapse-btn" id="sidebar-collapse-btn">
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
-                    <div class="header-block header-block-search hidden-sm-down">
+                    <div class="header-block header-block-search">
                         <form role="search">
                             <div class="input-container">
                                 <i class="fa fa-search"></i>
@@ -51,7 +51,7 @@
                             <i class="fa fa-star"></i>
                             <span>Star Us</span>
                         </a>
-                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.1.1/modular-admin-html-1.1.1.zip" class="btn btn-sm header-btn">
+                        <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.2.0/modular-admin-html-1.2.0.zip" class="btn btn-sm header-btn">
                             <i class="fa fa-cloud-download"></i>
                             <span>Download .zip</span>
                         </a>
@@ -147,7 +147,7 @@
                                 </div> Modular Admin </div>
                         </div>
                         <nav class="menu">
-                            <ul class="nav metismenu" id="sidebar-menu">
+                            <ul class="sidebar-menu metismenu" id="sidebar-menu">
                                 <li>
                                     <a href="index.html">
                                         <i class="fa fa-home"></i> Dashboard </a>
@@ -157,7 +157,7 @@
                                         <i class="fa fa-th-large"></i> Items Manager
                                         <i class="fa arrow"></i>
                                     </a>
-                                    <ul>
+                                    <ul class="sidebar-nav">
                                         <li class="active">
                                             <a href="items-list.html"> Items List </a>
                                         </li>
@@ -171,7 +171,7 @@
                                         <i class="fa fa-bar-chart"></i> Charts
                                         <i class="fa arrow"></i>
                                     </a>
-                                    <ul>
+                                    <ul class="sidebar-nav">
                                         <li>
                                             <a href="charts-flot.html"> Flot Charts </a>
                                         </li>
@@ -185,7 +185,7 @@
                                         <i class="fa fa-table"></i> Tables
                                         <i class="fa arrow"></i>
                                     </a>
-                                    <ul>
+                                    <ul class="sidebar-nav">
                                         <li>
                                             <a href="static-tables.html"> Static Tables </a>
                                         </li>
@@ -203,7 +203,7 @@
                                         <i class="fa fa-desktop"></i> UI Elements
                                         <i class="fa arrow"></i>
                                     </a>
-                                    <ul>
+                                    <ul class="sidebar-nav">
                                         <li>
                                             <a href="buttons.html"> Buttons </a>
                                         </li>
@@ -226,7 +226,7 @@
                                         <i class="fa fa-file-text-o"></i> Pages
                                         <i class="fa arrow"></i>
                                     </a>
-                                    <ul>
+                                    <ul class="sidebar-nav">
                                         <li>
                                             <a href="login.html"> Login </a>
                                         </li>
@@ -251,6 +251,56 @@
                                     </ul>
                                 </li>
                                 <li>
+                                    <a href="">
+                                        <i class="fa fa-sitemap"></i> Menu Levels
+                                        <i class="fa arrow"></i>
+                                    </a>
+                                    <ul class="sidebar-nav">
+                                        <li>
+                                            <a href="#"> Second Level Item
+                                                <i class="fa arrow"></i>
+                                            </a>
+                                            <ul class="sidebar-nav">
+                                                <li>
+                                                    <a href="#"> Third Level Item </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"> Third Level Item </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"> Second Level Item </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> Second Level Item
+                                                <i class="fa arrow"></i>
+                                            </a>
+                                            <ul class="sidebar-nav">
+                                                <li>
+                                                    <a href="#"> Third Level Item </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"> Third Level Item </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"> Third Level Item
+                                                        <i class="fa arrow"></i>
+                                                    </a>
+                                                    <ul class="sidebar-nav">
+                                                        <li>
+                                                            <a href="#"> Fourth Level Item </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"> Fourth Level Item </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
                                     <a href="https://github.com/modularcode/modular-admin-html">
                                         <i class="fa fa-github-alt"></i> Theme Docs </a>
                                 </li>
@@ -258,31 +308,31 @@
                         </nav>
                     </div>
                     <footer class="sidebar-footer">
-                        <ul class="nav metismenu" id="customize-menu">
+                        <ul class="sidebar-menu metismenu" id="customize-menu">
                             <li>
                                 <ul>
                                     <li class="customize">
                                         <div class="customize-item">
                                             <div class="row customize-header">
-                                                <div class="col-xs-4"> </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4"> </div>
+                                                <div class="col-4">
                                                     <label class="title">fixed</label>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label class="title">static</label>
                                                 </div>
                                             </div>
                                             <div class="row hidden-md-down">
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label class="title">Sidebar:</label>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label>
                                                         <input class="radio" type="radio" name="sidebarPosition" value="sidebar-fixed">
                                                         <span></span>
                                                     </label>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label>
                                                         <input class="radio" type="radio" name="sidebarPosition" value="">
                                                         <span></span>
@@ -290,16 +340,16 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label class="title">Header:</label>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label>
                                                         <input class="radio" type="radio" name="headerPosition" value="header-fixed">
                                                         <span></span>
                                                     </label>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label>
                                                         <input class="radio" type="radio" name="headerPosition" value="">
                                                         <span></span>
@@ -307,16 +357,16 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label class="title">Footer:</label>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label>
                                                         <input class="radio" type="radio" name="footerPosition" value="footer-fixed">
                                                         <span></span>
                                                     </label>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-4">
                                                     <label>
                                                         <input class="radio" type="radio" name="footerPosition" value="">
                                                         <span></span>
@@ -355,6 +405,8 @@
                     </footer>
                 </aside>
                 <div class="sidebar-overlay" id="sidebar-overlay"></div>
+                <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
+                <div class="mobile-menu-handle"></div>
                 <article class="content items-list-page">
                     <div class="title-search-block">
                         <div class="title-block">
@@ -891,7 +943,7 @@
                             </li>
                         </ul>
                     </div>
-                    <nav class="text-xs-right">
+                    <nav class="text-right">
                         <ul class="pagination">
                             <li class="page-item">
                                 <a class="page-link" href=""> Prev </a>
@@ -936,11 +988,11 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
+                                <h4 class="modal-title">Media Library</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     <span class="sr-only">Close</span>
                                 </button>
-                                <h4 class="modal-title">Media Library</h4>
                             </div>
                             <div class="modal-body modal-tab-container">
                                 <ul class="nav nav-tabs modal-tabs" role="tablist">
@@ -984,11 +1036,11 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
+                                <h4 class="modal-title">
+                                    <i class="fa fa-warning"></i> Alert</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                <h4 class="modal-title">
-                                    <i class="fa fa-warning"></i> Alert</h4>
                             </div>
                             <div class="modal-body">
                                 <p>Are you sure want to do this?</p>
@@ -1027,7 +1079,7 @@
                 a.src = g;
                 m.parentNode.insertBefore(a, m)
             })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-80463319-2', 'auto');
+            ga('create', 'UA-80463319-4', 'auto');
             ga('send', 'pageview');
         </script>
         <script src="js/vendor.js"></script>

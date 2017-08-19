@@ -191,6 +191,37 @@ $(function() {
 
     $('#login-form').validate(loginValidationSettings);
 })
+//ResetForm validation
+$(function() {
+	if (!$('#reset-form').length) {
+        return false;
+    }
+
+    var resetValidationSettings = {
+	    rules: {
+	        email1: {
+	            required: true,
+	            email: true
+	        }
+	    },
+	    messages: {
+	        email1: {
+	            required: "Please enter email address",
+	            email: "Please enter a valid email address"
+	        }
+	    },
+	    invalidHandler: function() {
+			animate({
+				name: 'shake',
+				selector: '.auth-container > .card'
+			});
+		}
+	}
+
+	$.extend(resetValidationSettings, config.validations);
+
+    $('#reset-form').validate(resetValidationSettings);
+})
 //SignupForm validation
 $(function() {
 	if (!$('#signup-form').length) {
@@ -279,37 +310,6 @@ $(function() {
 
     $('#signup-form').validate(signupValidationSettings);
 });
-//ResetForm validation
-$(function() {
-	if (!$('#reset-form').length) {
-        return false;
-    }
-
-    var resetValidationSettings = {
-	    rules: {
-	        email1: {
-	            required: true,
-	            email: true
-	        }
-	    },
-	    messages: {
-	        email1: {
-	            required: "Please enter email address",
-	            email: "Please enter a valid email address"
-	        }
-	    },
-	    invalidHandler: function() {
-			animate({
-				name: 'shake',
-				selector: '.auth-container > .card'
-			});
-		}
-	}
-
-	$.extend(resetValidationSettings, config.validations);
-
-    $('#reset-form').validate(resetValidationSettings);
-})
 $(function() {
 
 	$(".wyswyg").each(function() {
@@ -347,6 +347,26 @@ $(function () {
 	$("#sidebar-overlay").on('click', function() {
 		$("#app").removeClass("sidebar-open");
 	});
+
+	if ($.browser.mobile) {
+		var $appContainer = $('#app ');
+		var $mobileHandle = $('#sidebar-mobile-menu-handle ');
+
+		$mobileHandle.swipe({
+			swipeLeft: function() {
+				if($appContainer.hasClass("sidebar-open")) {
+					$appContainer.removeClass("sidebar-open");	
+				}
+			},
+			swipeRight: function() {
+				if(!$appContainer.hasClass("sidebar-open")) {
+					$appContainer.addClass("sidebar-open");
+				}
+			},
+			// excludedElements: "button, input, select, textarea, .noSwipe, table", 
+			triggerOnTouchEnd: false
+		});
+	}
 	
 });
 //Flot Bar Chart
@@ -804,20 +824,6 @@ $(function() {
         drawMorrisCharts();
     });
 });
-//LoginForm validation
-$(function() {
-	if (!$('.form-control').length) {
-        return false;
-    }
-
-    $('.form-control').focus(function() {
-		$(this).siblings('.input-group-addon').addClass('focus');
-	});
-
-	$('.form-control').blur(function() {
-		$(this).siblings('.input-group-addon').removeClass('focus');
-	});
-});
 $(function() {
 
     if (!$('#dashboard-visits-chart').length) {
@@ -831,11 +837,11 @@ $(function() {
     var item = 'visits';
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-       
+
        el = e.target;
        item = $(el).attr('href').replace('#', '');
        switchHistoryCharts(item);
-       
+
     });
 
     $(document).on("themechange", function(){
@@ -867,7 +873,7 @@ $(function() {
             { x: '2015-09-04', y: 75 },
             { x: '2015-09-05', y: 50 },
             { x: '2015-09-06', y: 75 },
-            { x: '2015-09-07', y: 86 } 
+            { x: '2015-09-07', y: 86 }
         ];
 
 
@@ -902,46 +908,46 @@ $(function() {
     function drawDownloadsChart(){
 
         var dataDownloads = [
-            { 
+            {
                 year: '2006',
                 downloads: 1300
             },
-            { 
-                year: '2007', 
+            {
+                year: '2007',
                 downloads: 1526
             },
-            { 
-                year: '2008', 
+            {
+                year: '2008',
                 downloads: 2000
             },
-            { 
-                year: '2009', 
+            {
+                year: '2009',
                 downloads: 1800
             },
-            { 
-                year: '2010', 
+            {
+                year: '2010',
                 downloads: 1650
-            },    
-            { 
-                year: '2011', 
+            },
+            {
+                year: '2011',
                 downloads: 620
             },
-            { 
-                year: '2012', 
+            {
+                year: '2012',
                 downloads: 1000
             },
-            { 
-                year: '2013', 
+            {
+                year: '2013',
                 downloads: 1896
             },
-            { 
-                year: '2014', 
+            {
+                year: '2014',
                 downloads: 850
             },
-            { 
-                year: '2015', 
+            {
+                year: '2015',
                 downloads: 1500
-            }  
+            }
         ];
 
 
@@ -1007,43 +1013,6 @@ $(function() {
 });
 $(function() {
 
-    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
-
-    if (!$dashboardSalesBreakdownChart.length) {
-        return false;
-    } 
-
-    function drawSalesChart(){
-
-    $dashboardSalesBreakdownChart.empty();
-
-        Morris.Donut({
-            element: 'dashboard-sales-breakdown-chart',
-            data: [{ label: "Download Sales", value: 12 },
-                { label: "In-Store Sales", value: 30 },
-                { label: "Mail-Order Sales", value: 20 } ],
-            resize: true,
-            colors: [
-                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
-                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
-                config.chart.colorPrimary.toString()
-            ],
-        });
-
-        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
-
-        setSameHeights($sameheightContainer);
-    }
-
-    drawSalesChart();
-
-    $(document).on("themechange", function(){
-       drawSalesChart();
-    });
-    
-})
-$(function() {
-
     var $dashboardSalesMap = $('#dashboard-sales-map');
 
     if (!$dashboardSalesMap.length) {
@@ -1094,6 +1063,43 @@ $(function() {
 });
 $(function() {
 
+    var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
+
+    if (!$dashboardSalesBreakdownChart.length) {
+        return false;
+    } 
+
+    function drawSalesChart(){
+
+    $dashboardSalesBreakdownChart.empty();
+
+        Morris.Donut({
+            element: 'dashboard-sales-breakdown-chart',
+            data: [{ label: "Download Sales", value: 12 },
+                { label: "In-Store Sales", value: 30 },
+                { label: "Mail-Order Sales", value: 20 } ],
+            resize: true,
+            colors: [
+                tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
+                tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
+                config.chart.colorPrimary.toString()
+            ],
+        });
+
+        var $sameheightContainer = $dashboardSalesBreakdownChart.closest(".sameheight-container");
+
+        setSameHeights($sameheightContainer);
+    }
+
+    drawSalesChart();
+
+    $(document).on("themechange", function(){
+       drawSalesChart();
+    });
+    
+})
+$(function() {
+
 	$('.actions-list > li').on('click', '.check', function(e){
 		e.preventDefault();
 
@@ -1104,6 +1110,20 @@ $(function() {
 		removeActionList();
 	});
 
+});
+//LoginForm validation
+$(function() {
+	if (!$('.form-control').length) {
+        return false;
+    }
+
+    $('.form-control').focus(function() {
+		$(this).siblings('.input-group-addon').addClass('focus');
+	});
+
+	$('.form-control').blur(function() {
+		$(this).siblings('.input-group-addon').removeClass('focus');
+	});
 });
 $(function(){
 
@@ -1183,16 +1203,44 @@ $(function() {
     });
 
 });
-$(function() {
-	$('.nav-profile > li > a').on('click', function() {
-		var $el = $(this).next();
+// Animating dropdowns is temporary disabled
+// Please feel free to send a pull request :)
 
-		animate({
-			name: 'flipInX',
-			selector: $el
-		});
-	});
-})
+// $(function() {
+// 	$('.nav-profile > li > a').on('click', function() {
+// 		var $el = $(this).next();
+
+
+// 		animate({
+// 			name: 'flipInX',
+// 			selector: $el
+// 		});
+// 	});
+// })
+
+var modalMedia = {
+	$el: $("#modal-media"),
+	result: {},
+	options: {},
+	open: function(options) {
+		options = options || {};
+		this.options = options;
+
+
+		this.$el.modal('show');
+	},
+	close: function() {
+		if ($.isFunction(this.options.beforeClose)) {
+			this.options.beforeClose(this.result);
+		}
+
+		this.$el.modal('hide');
+
+		if ($.isFunction(this.options.afterClose)) {
+			this.options.beforeClose(this.result);
+		}
+	}
+};
 $(function () {
 
 	// Local storage settings
@@ -1348,29 +1396,6 @@ $(function () {
 	}
 
 });
-var modalMedia = {
-	$el: $("#modal-media"),
-	result: {},
-	options: {},
-	open: function(options) {
-		options = options || {};
-		this.options = options;
-
-
-		this.$el.modal('show');
-	},
-	close: function() {
-		if ($.isFunction(this.options.beforeClose)) {
-			this.options.beforeClose(this.result);
-		}
-
-		this.$el.modal('hide');
-
-		if ($.isFunction(this.options.afterClose)) {
-			this.options.beforeClose(this.result);
-		}
-	}
-};
 $(function() {
 
 	$("body").addClass("loaded");
