@@ -61,6 +61,12 @@
   }
 
 
+  .StatContent {
+    margin-left: auto;
+    text-align: right;
+  }
+
+
 
   .StatValue {
     font-size: 20px;
@@ -72,6 +78,11 @@
 
     @include media(lg) {
       font-size: 18px;
+    }
+
+    @include media-up(xl) {
+      font-size: 22px;
+      line-height: 26px;
     }
   }
 
