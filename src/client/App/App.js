@@ -2,6 +2,8 @@
 import Common from './_common';
 import Sidebar from './_common/Sidebar';
 import Dashboard from './Dashboard';
+import ItemsList from './Items/List';
+// import ItemsEditor from './Items/Editor';
 
 const App = {};
 

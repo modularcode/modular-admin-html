@@ -13,13 +13,13 @@ const webpackConfigBase = {
   output: {
     path: config.DIST_DIR,
     filename: 'bundle.js',
+    publicPath: process.env.PUBLIC_PATH || "/"
   },
   resolve: {
     extensions: ['.js'],
     modules: [config.NPM_DIR, config.CLIENT_DIR],
     alias: {
       jquery: "jquery/src/jquery",
-      // 'morris.js': 'morris.js/morris.js'
     }
   },
   devtool: 'source-map',
@@ -57,7 +57,8 @@ webpackConfigBase.module.rules = [
       {
         loader: 'style-loader',
         options: {
-          sourceMap: true
+          sourceMap: true,
+          // convertToAbsoluteUrls: true
         }
       },
       {
@@ -65,7 +66,7 @@ webpackConfigBase.module.rules = [
         options: {
           // modules: true,  // This option activates css modules
           importLoaders: 1,
-          sourceMap: true
+          sourceMap: true,
         }
       },
       {
@@ -129,7 +130,8 @@ webpackConfigBase.module.rules = [
       {
         loader: 'style-loader',
         options: {
-          sourceMap: true
+          sourceMap: true,
+          convertToAbsoluteUrls: true
         }
       },
       {

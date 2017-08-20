@@ -7,7 +7,6 @@ const fs    = require('fs-extra');
 const through = require('through2');
 const File = require('vinyl');
 const StringDecoder = require('string_decoder').StringDecoder;
-const extend  = require('util')._extend;
 const dotenv = require('dotenv');
 
 const frontMatter = require('front-matter');
@@ -19,7 +18,6 @@ const paths = require('./_paths');
 const partials = {};
 
 module.exports = function() {
-
 
   // Register handlebars engine helpers and partials
   handlebarsRegistrar(handlebars, {
@@ -40,11 +38,33 @@ module.exports = function() {
     bustCache: true,
   });
 
+  // Template file contexts
+  const contexts = {};
 
   return gulp.src(paths.pages)
     // Render pages
     .pipe(through.obj(function (file, enc, cb) {
-      file.contents = new Buffer(renderTemplate(file));
+
+      const context = getTemplateContext(file);
+      const contextKey = path.relative(config.CLIENT_DIR, file.path);
+
+      contexts[contextKey] = context;
+
+      // console.log('--------------');
+      // console.log(path.relative(config.CLIENT_DIR, file.path));
+      // console.log(file.cwd);
+      // console.log(file.base);
+      // console.log(file.path);
+
+      // Cache the context
+
+      // console.log(context);
+      // console.log(file.path);
+      // console.log(file.ChartJS);
+
+      file.contents = new Buffer(
+        renderTemplate(file, context)
+      );
 
       this.push(file);
       cb();
@@ -52,24 +72,35 @@ module.exports = function() {
     // Handle errors
     .on('error', plugins.util.log)
 
-    // Rename .page.hbs to .html
-    // Rename main page to index
-    .pipe(plugins.rename(function (path) {
-      path.basename = path.basename.replace(".page", "");
-      path.basename = path.basename.replace(
-        new RegExp(`^${paths.mainPage}$`),
-        "index"
-      );
-
-      path.extname = ".html"
-    }))
-
-    // Flatten structure
-    .pipe(plugins.flatten())
-
     // pretify html structure
     .pipe(plugins.prettify({
       indent_size: 2
+    }))
+
+    // Rename .page.hbs to .html
+    // Rename main page to index
+    // Apply output path parameters
+    .pipe(plugins.rename(function (path) {
+
+      const context = contexts[
+        `${path.dirname}/${path.basename}${path.extname}`
+      ];
+
+      // Replace .page
+      path.basename = path.basename.replace(".page", "");
+
+      // Flattent directory
+      path.dirname = '';
+
+      // Replace extension
+      path.extname = ".html"
+
+      // Use custom filename if needed
+      path.basename = context.filename || path.basename;
+
+      // Use custom dirname if needed
+      path.dirname = context.dirname || path.dirname;
+
     }))
 
     // Output
@@ -77,36 +108,18 @@ module.exports = function() {
 
 };
 
-
-/********************************************
-*       Utils
-*********************************************/
-
-function renderTemplate(file, options) {
-
-  options = options || {};
-
-  // Set file frontMatter
-  file = setFrontMatter(file);
-
-  // Get context from _context.js files and frontmatter
-  const contextExternal = getPageContextExternal(file);
-
-  // Frontmatter context
-  const contextTemplate = file.frontMatter || {};
-
-  // Inherited context from child
-  const contextInherited = options.contextInherited || {};
-
-  // Result context
-  const context = Object.assign({}, contextExternal, contextTemplate, contextInherited);
-
+function renderTemplate(file, context) {
   // Page render result
   let pageRes = "";
 
-  // Compile template
-  const template = handlebars.compile(String(file.contents));
-  const templateRes = template(context);
+  // New instance of template context
+  const templateContext = context ? Object.assign({}, context) : {};
+
+  // Compile template without yaml headers
+  const template = handlebars.compile(
+    String(file.contents).replace(/---(.|\n)*---/, '')
+  );
+  const templateRes = template(templateContext);
 
   // Layout processing
   const layout = context.layout || null;
@@ -114,24 +127,20 @@ function renderTemplate(file, options) {
   // If the layout exists, render it with template inside
   if (layout && partials[layout] && handlebars.partials[layout]) {
 
-    // New instance of context
-    let layoutData = Object.assign({}, context);
+    // New vinyl file based on partail vinyl
+    const layoutFile = new File(partials[layout]);
+    const layoutContext = getTemplateContext(layoutFile);
+
+    // Remove layout parameter from template context
+    delete templateContext.layout;
 
     // Add body to context
-    layoutData = Object.assign(layoutData, {
+    Object.assign(layoutContext, templateContext, {
       body: templateRes
     });
 
-    // Remove layout parameter from inhereted context
-    delete layoutData.layout;
-
-    // New vinyl file based on partail vinyl
-    const layoutFile = new File(partials[layout]);
-
     // Call recursively render template again
-    pageRes = renderTemplate(layoutFile, {
-      contextInherited: layoutData
-    });
+    pageRes = renderTemplate(layoutFile, layoutContext);
   }
   // Return rendered template
   else {
@@ -141,44 +150,45 @@ function renderTemplate(file, options) {
   return pageRes;
 }
 
+function getTemplateContext(file) {
 
-/*
-  Frontmatter file
-*/
-function setFrontMatter(file) {
-  // Read content from front matter
-  const content = frontMatter(file.contents.toString('utf8'));
+  // Get context from _context.js, .env, process.env, frontmatter and parent files
+  const contextExternal = getTemplateContextExternal(file);
 
-  // var res = new Buffer(content.body);
-  file.contents = new Buffer(content.body);
-  file.frontMatter = content.attributes;
+  // Frontmatter context
+  const contextInternal = getTemplateContextInternal(file);
 
-  return file;
+  // Result context
+  const context = Object.assign({}, contextExternal, contextInternal);
+
+
+  return context;
 }
 
 
-/*
-  This function returns context of current page
-  which is root context extended by all contexts untill
-  current level context
+function getTemplateContextInternal(file) {
+  // Read content from front matter
+  const content = frontMatter(file.contents.toString('utf8'));
 
-  You may also use .env file in root folder
-*/
+  return content.attributes || {};
+}
 
-
-function getPageContextExternal(file) {
+function getTemplateContextExternal(file) {
 
   // Initial context
-  let context = {};
+  const context = {};
 
-  // Environmental variables
-  env = dotenv.config({
+  // Environment
+  const envContext = process.env;
+
+  // .env
+  const dotEnvContext = dotenv.config({
     silent: true,
     path: path.resolve(config.ROOT_DIR, '.env')
   });
 
   //
-  Object.assign(context, env);
+  Object.assign(context, envContext, dotEnvContext);
 
   // Package data
   context.pkg = require('../package.json');
@@ -206,9 +216,9 @@ function getPageContextExternal(file) {
 
     var localContext = require(filePath);
 
-    extend(context, localContext);
+    Object.assign(context, localContext);
   });
 
 
   return context;
-};
+}

@@ -1,3 +1,6 @@
+const ENV = typeof window === undefined ? window.ENV || {} : process.env;
+const PUBLIC_PATH = ENV.PUBLIC_PATH || '/';
+
 const Color = require('color');
 const MaterialColors = require('material-colors');
 
@@ -101,7 +104,7 @@ variables = Object.assign(variables, {
   'SidebarColorBg':         Color('#3b4c5d'),
   'SidebarColorText':       () => variables['colorText-inverse'].fade(0.2),
   // 'SidebarBgImage':         'none',
-  'SidebarBgImage':         'url(\'~_assets/sidebar-bg-1.jpg\')',
+  'SidebarBgImage':         `url('~${PUBLIC_PATH}sidebar-bg-1.jpg')`,
   'SidebarBgImageOpacity':  1,
   'SidebarShadow':          '0px 0px 30px rgba(72, 72, 72, 0.72)',
 
