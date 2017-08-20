@@ -28,5 +28,9 @@
   #DashboardHistoryDownloadsChart {
     height: 220px;
     overflow: hidden;
+
+    @include media-up(xl) {
+      height: 260px;
+    }
   }
 }

@@ -112,6 +112,8 @@ webpackConfigBase.module.rules = [
         loader: 'sass-resources-loader',
         options: {
           resources: [
+            config.NPM_DIR + '/font-awesome/scss/_variables.scss',
+            config.NPM_DIR + '/font-awesome/scss/_mixins.scss',
             config.NPM_DIR + '/bootstrap/scss/_functions.scss',
             config.NPM_DIR + '/bootstrap/scss/_variables.scss',
             config.NPM_DIR + '/bootstrap/scss/_mixins.scss',

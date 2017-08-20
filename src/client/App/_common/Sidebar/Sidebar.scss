@@ -245,9 +245,9 @@
       cursor: pointer;
       padding: 0 $SidebarPaddingHorizontal 0 $item-padding-base;
       font-weight: normal;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 
-      &.-active,
-      &.-open {
+      &.-active {
         color: var(--SidebarNavColorText-active);
       }
 
@@ -267,22 +267,58 @@
       }
     }
 
-    // Nested items
-    .NavGroup nav {
-      overflow-x: visible;
-      overflow-y: hidden;
-      height: 0;
+    .NavGroup.-open > a {
+      // color: var(--SidebarNavColorText-open);
 
-      a {
-        font-size: 0.9em;
-        height: $item-height-nested;
+      &:after {
+        color: var(--SidebarNavColorText-active);
       }
 
-      // .icon {
-      //   font-size: $icon-font-size-nested;
-      //   height: $item-height-nested;
-      //   width: $icon-box-width-nested;
+      // &:hover {
+      //   color: var(--SidebarNavColorText-active);
       // }
+    }
+
+    // Nested items
+    .NavGroup {
+
+      & > a:after {
+        @include fa-icon();
+        display: block;
+        content: "\f054";
+        font-size: .8em;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: 2px;
+        transition: transform .3s ease;
+        transform: translate(0, -50%);
+
+        .-rtl & {
+          right: auto;
+          left: 10px;
+        }
+      }
+
+      .NavGroup > a:after {
+        right: 12px;
+      }
+
+      nav {
+        overflow-x: visible;
+        overflow-y: hidden;
+        // height: 0;
+        display: none;
+
+        a {
+          font-size: 0.9em;
+          height: $item-height-nested;
+        }
+      }
+
+      &.-open > a:after {
+        transform: translate(0, -50%) rotate(90deg);
+      }
     }
 
     // Nested items padding
@@ -293,12 +329,6 @@
       $padding-base:  $icon-box-width + $SidebarPaddingHorizontal;
       $sel: if($i == 1, 'nav', selector-nest($sel, 'nav')); //selector-nest($sel, "nav")) !global;;
 
-      // $padding-base +
-      // $sel: if($i == 1, "nav", selector-nest($sel, "nav")) !global;
-
-      // #{$sel} {
-      //     padding-left:  10px * $i;
-      // }
 
       #{$sel} a {
         padding-left: $item-padding-base + $sumbenu-padding * $i;

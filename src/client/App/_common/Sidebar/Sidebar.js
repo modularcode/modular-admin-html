@@ -5,6 +5,28 @@ const Sidebar = {};
 
 Sidebar.init = () => {
 
+  const $navGroups = $('#SidebarNav .NavGroup');
+  const $navs = $('#SidebarNav nav');
+
+
+  $('.NavGroup > a').on('click', function(e) {
+    e.preventDefault();
+
+    const $navGroup = $(this).closest('.NavGroup');
+    const $navGroupParents = $(this).parents('.NavGroup');
+
+    const $nav = $navGroup.find('> nav');
+    const $navParemts = $nav.parents('nav');
+
+    $navGroups.not($navGroup).not($navGroupParents).removeClass('-open');
+    $navGroup.toggleClass('-open');
+
+    $navs.not($nav).not($navParemts).slideUp('fast');
+    $nav.slideToggle('fast');
+
+  });
+
+
 };
 
 Sidebar.toggle = () => {
