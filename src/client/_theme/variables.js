@@ -101,12 +101,13 @@ variables = Object.assign(variables, {
   'FooterShadow':           'none',
 
   // Sidebar
-  'SidebarColorBg':         Color('#3b4c5d'),
-  'SidebarColorText':       () => variables['colorText-inverse'].fade(0.2),
-  // 'SidebarBgImage':         'none',
-  'SidebarBgImage':         `url('~${PUBLIC_PATH}sidebar-bg-1.jpg')`,
-  'SidebarBgImageOpacity':  1,
-  'SidebarShadow':          '0px 0px 30px rgba(72, 72, 72, 0.72)',
+  'SidebarColorBg':           Color('#3b4c5d'),
+  'SidebarColorText':         () => variables['colorText-inverse'].fade(0.2),
+  // 'SidebarBgImage':        'none',
+  'SidebarBgImage':           `url('~${PUBLIC_PATH}sidebar-bg-1.jpg')`,
+  'SidebarBgImageOpacity':    1,
+  'SidebarShadow':            '0px 0px 30px rgba(72, 72, 72, 0.72)',
+  'SidebarPaddingHorizontal': '20px',
 
   // Sidebar Nav
   'SidebarNavColorText':        () => variables.colors.white.fade(0.4),

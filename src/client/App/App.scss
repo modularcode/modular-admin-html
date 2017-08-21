@@ -57,7 +57,8 @@
     -webkit-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
     z-index: 35;
-    background-color: rgba(255, 255, 255, 0.3);
+    // background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   .FooterContainer {
@@ -200,9 +201,28 @@
 
   // By default on mobiles and tablets the sidebar is closed
   // Add this class to open the sidebar
-  &.-sidebar-open-mobile,
-  &.-sidebar-compact.-sidebar-nav-open {
+  &.-sidebar-open-mobile {
     @include media-down(md) {
+      .SidebarContainer {
+        left: 0;
+      }
+
+      .SidebarOverlay {
+        left: 0;
+        opacity: 1;
+      }
+
+      // Blur out the content
+      .HeaderContainer,
+      .ContentContainer,
+      .FooterContainer {
+        filter: blur(2px);
+      }
+    }
+  }
+
+  &.-sidebar-compact.-sidebar-nav-open {
+    @include media-up(md) {
       .SidebarContainer {
         left: 0;
       }

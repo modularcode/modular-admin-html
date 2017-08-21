@@ -59,7 +59,18 @@ Sidebar.init = () => {
     }
   });
 
-  // Collapse
+  $SidebarNav.find('.DismissBtn').on('click', function(e) {
+
+    e.preventDefault();
+
+    if ($App.hasClass('-sidebar-compact')) {
+      $Navs.filter(':visible').fadeOut('fast');
+      $NavGroups.removeClass('-open');
+      $App.removeClass('-sidebar-nav-open');
+    }
+  });
+
+  // Toggle Compact
 
   $('#SidebarToggleCompactLink').on('click', Sidebar.toggleCompact);
 
@@ -137,6 +148,10 @@ Sidebar.toggleCompact = (e) => {
   }
 
   notifyLayoutUpdate();
+};
+
+Sidebar.closeNestedNavs = (e) => {
+
 };
 
 
