@@ -1,30 +1,38 @@
 import theme from '_theme';
+import Util from '_common/Util';
 
 const Sidebar = {};
 
 
 Sidebar.init = () => {
 
-  const $navGroups = $('#SidebarNav .NavGroup');
-  const $navs = $('#SidebarNav nav');
+
+  // Navigation
+
+  const $NavGroups = $('#SidebarNav .NavGroup');
+  const $Navs = $('#SidebarNav nav');
 
 
   $('.NavGroup > a').on('click', function(e) {
     e.preventDefault();
 
-    const $navGroup = $(this).closest('.NavGroup');
-    const $navGroupParents = $(this).parents('.NavGroup');
+    const $NavGroup = $(this).closest('.NavGroup');
+    const $NavGroupParents = $(this).parents('.NavGroup');
 
-    const $nav = $navGroup.find('> nav');
-    const $navParemts = $nav.parents('nav');
+    const $Nav = $NavGroup.find('> nav');
+    const $NavParemts = $Nav.parents('nav');
 
-    $navGroups.not($navGroup).not($navGroupParents).removeClass('-open');
-    $navGroup.toggleClass('-open');
+    $NavGroups.not($NavGroup).not($NavGroupParents).removeClass('-open');
+    $NavGroup.toggleClass('-open');
 
-    $navs.not($nav).not($navParemts).slideUp('fast');
-    $nav.slideToggle('fast');
+    $Navs.not($Nav).not($NavParemts).slideUp('fast');
+    $Nav.slideToggle('fast');
 
   });
+
+  // Collapse
+
+  $('#SidebarToggleCompactLink').on('click', Sidebar.toggleCompact);
 
 
 };
@@ -32,7 +40,7 @@ Sidebar.init = () => {
 Sidebar.toggle = () => {
   const $App = $('#App');
 
-  const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  const viewportWidth = Util.getViewportWidth();
 
   // Current viewport is desktop
   if (viewportWidth > 991) {
@@ -49,7 +57,7 @@ Sidebar.toggle = () => {
 Sidebar.close = () => {
   const $App = $('#App');
 
-  const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  const viewportWidth = Util.getViewportWidth();
 
   // Current viewport is desktop
   if (viewportWidth > 991) {
@@ -66,11 +74,11 @@ Sidebar.close = () => {
 Sidebar.open = () => {
   const $App = $('#App');
 
-  const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  const viewportWidth = Util.getViewportWidth();
 
   // Current viewport is desktop
   if (viewportWidth > 991) {
-    $App.removelass('-sidebar-closed-desktop');
+    $App.removeClass('-sidebar-closed-desktop');
   }
   // Current viewport is mobile
   else {
@@ -80,8 +88,26 @@ Sidebar.open = () => {
   notifyLayoutUpdate();
 };
 
-Sidebar.toggleCollapse = () => {
+Sidebar.toggleCompact = (e) => {
 
+  e.preventDefault();
+
+  const $App = $('#App');
+
+  $App.toggleClass('-sidebar-compact');
+  $App.addClass('-sidebar-open-mobile');
+  $App.removeClass('-sidebar-closed-desktop');
+
+  const viewportWidth = Util.getViewportWidth();
+
+  if (viewportWidth > 767 && $App.hasClass('-sidebar-compact')) {
+    $App.removeClass('-sidebar-open-mobile');
+  }
+  else {
+    $App.addClass('-sidebar-open-mobile');
+  }
+
+  notifyLayoutUpdate();
 };
 
 

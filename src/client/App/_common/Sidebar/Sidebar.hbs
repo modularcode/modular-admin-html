@@ -39,13 +39,17 @@
 
       <a href="/" class="-active">
         <i class="fa fa-home Icon"></i>
-        Dashboard
+        <span>
+          Dashboard
+        </span>
       </a>
 
       <div class="NavGroup">
         <a href="">
           <i class="fa fa-th-large Icon"></i>
-          Items Manager
+          <span>
+            Items Manager
+          </span>
         </a>
         <nav>
           <a href="" >
@@ -119,7 +123,9 @@
 
       <a href="/">
         <i class="fa fa-file-text-o Icon"></i>
-        Other Pages
+        <span>
+          Other Pages
+        </span>
       </a>
 
       <div class="Divider"></div>
@@ -127,11 +133,15 @@
       <div class="NavGroup">
         <a href="">
           <i class="fa fa-edit Icon"></i>
-          Forms
+          <span>
+            Forms
+          </span>
         </a>
         <nav>
           <a href="" >
-            Basic Forms
+            <span>
+              Basic Forms
+            </span>
           </a>
         </nav>
       </div>
@@ -139,24 +149,31 @@
       <div class="NavGroup">
         <a href="">
           <i class="fa fa-table Icon"></i>
-          Tables
+          <span>
+            Tables
+          </span>
         </a>
         <nav>
           <a href="" >
-            Basic Tables
+            <span>
+              Basic Tables
+            </span>
           </a>
         </nav>
       </div>
 
       <div class="NavGroup">
         <a href="">
-
           <i class="fa fa-area-chart Icon" ></i>
-          Charts
+          <span>
+            Charts
+          </span>
         </a>
         <nav>
           <a href="" >
-            Basic Tables
+            <span>
+              Basic Tables
+            </span>
           </a>
         </nav>
       </div>
@@ -166,10 +183,11 @@
 
         <a href="/">
           <i class="fa fa-desktop Icon"></i>
-          UI components
+          <span>
+            UI components
+          </span>
         </a>
         <nav>
-
           <a href="https://www.materialpalette.com">
             Color Palette
           </a>
@@ -185,16 +203,15 @@
           <a href="">
             Cards
           </a>
-
-
-
         </nav>
       </div>
 
       <div class="NavGroup">
         <a href="">
           <i class="fa fa-sitemap Icon"></i>
-          Menu Level Menu
+          <span>
+            Menu Level Menu
+          </span>
         </a>
         <nav>
           <div class="NavGroup">
@@ -235,12 +252,16 @@
 
       <a href="/">
         <i class="fa fa-github-alt Icon"></i>
-        Theme Docs
+        <span>
+          Theme Docs
+        </span>
       </a>
 
       <a href="">
         <i class="fa fa-code Icon"></i>
-        Other Versions
+        <span>
+          Other Versions
+        </span>
       </a>
 
     </nav>
@@ -249,11 +270,14 @@
   </div>
   <footer class="SidebarFooter">
     <nav class="SidebarFooterNav">
-      <a href="#" class="LinkCustomize">
+      {{!-- <a href="#" class="LinkCustomize">
         <i class="fa fa-cog Icon" aria-hidden="true"></i>
         <span>Customize</span>
-      </a>
-      <a href="" class="LinkCollapse">
+      </a> --}}
+      <a
+        href=""
+        class="LinkToggleCompact"
+        id="SidebarToggleCompactLink">
         <i class="fa fa-chevron-left Icon" aria-hidden="true"></i>
       </a>
     </nav>

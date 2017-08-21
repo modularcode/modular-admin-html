@@ -87,7 +87,7 @@ variables = Object.assign(variables, {
   'AppHeaderHeight':              '60px',
   'AppHeaderHeight-xs':           '50px',
   'AppSidebarWidth':              '240px',
-  'AppSidebarWidth-collapsed':    '70px',
+  'AppSidebarWidth-compact':      '70px',
   'AppFooterHeight':              '46px',
   'AppLayoutTransitionDuration':  '0.3s',
 
@@ -109,8 +109,8 @@ variables = Object.assign(variables, {
   'SidebarShadow':          '0px 0px 30px rgba(72, 72, 72, 0.72)',
 
   // Sidebar Nav
-  'SidebarNavColorText':        () => variables.colors.white.fade(0.45),
-  'SidebarNavColorText-open':   () => variables.colors.white.fade(0.15),
+  'SidebarNavColorText':        () => variables.colors.white.fade(0.4),
+  'SidebarNavColorText-open':   () => variables.colors.white.fade(0.4),
   'SidebarNavColorText-active': () => variables.colors.white,
 
   // Page

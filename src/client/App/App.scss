@@ -31,7 +31,7 @@
     //align-items: 'stretch';
     z-index: 40;
 
-    transition-property: left;
+    transition-property: left width;
     transition-timing-function: ease;
     transition-duration: var(--AppLayoutTransitionDuration);
 
@@ -128,6 +128,45 @@
   &.-footer-fixed {
     .FooterContainer {
       position: fixed;
+    }
+  }
+
+
+  &.-sidebar-compact {
+    .HeaderContainer {
+      @include media-up(md) {
+        left: var(--AppSidebarWidth-compact);
+      }
+    }
+
+    .SidebarContainer {
+      @include media-up(md) {
+        width: var(--AppSidebarWidth-compact);
+      }
+
+      // In compact mode sidebar becomes closed after sm
+      @include media(md) {
+        left: 0;
+      }
+    }
+
+    .FooterContainer {
+      @include media-up(md) {
+        left: var(--AppSidebarWidth-compact);
+      }
+    }
+    .ContentContainer {
+      @include media-up(md) {
+        margin-left: var(--AppSidebarWidth-compact);
+      }
+    }
+
+    &.-sidebar-closed-desktop {
+      @include media-up(lg) {
+        .SidebarContainer {
+          left: calc(-1 * var(--AppSidebarWidth-compact));
+        }
+      }
     }
   }
 

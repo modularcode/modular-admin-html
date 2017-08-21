@@ -21,6 +21,12 @@
     }
   }
 
+  @include media(md) {
+    .-sidebar-compact & {
+      box-shadow: var(--SidebarShadow);
+    }
+  }
+
   @include media-up(lg) {
     .-sidebar-closed-desktop & {
       box-shadow: none;
@@ -56,10 +62,16 @@
     flex-shrink: 0;
     height: var(--AppHeaderHeight);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    // font-family: 'Montserrat', sans-serif;
+    transition: all .3s ease;
 
     .-rtl & {
       flex-direction: row-reverse;
+    }
+
+    .-sidebar-compact & {
+      @include media-up(md) {
+        padding-left: 11px;
+      }
     }
   }
 
@@ -115,6 +127,9 @@
     position: relative;
     white-space: nowrap;
     // top: -1px;
+    overflow: hidden;
+    opacity: 1;
+    transition: all .3s ease;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 
     .Link {
@@ -146,6 +161,11 @@
       }
     }
 
+    .-sidebar-compact & {
+      @include media-up(md) {
+        opacity: 0;
+      }
+    }
   }
 
   /*----------  Sidebar Content  ----------*/
@@ -245,7 +265,9 @@
       cursor: pointer;
       padding: 0 $SidebarPaddingHorizontal 0 $item-padding-base;
       font-weight: normal;
-      text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+      white-space: nowrap;
+      text-overflow: ellipsis;
 
       &.-active {
         color: var(--SidebarNavColorText-active);
@@ -267,20 +289,49 @@
       }
     }
 
+    // First level links
+    & > a,
+    & > .NavGroup > a {
+
+      span {
+        opacity: 1;
+        transition: opacity .3s ease;
+      }
+
+
+      .-sidebar-compact & {
+        @include media-up(md) {
+          padding-right: 5px;
+          overflow: hidden;
+
+          &:after {
+            right: 7px;
+          }
+
+          span {
+            opacity: 0;
+            // display: none;
+          }
+        }
+      }
+    }
+
     .NavGroup.-open > a {
-      // color: var(--SidebarNavColorText-open);
+      color: var(--SidebarNavColorText-open);
 
       &:after {
         color: var(--SidebarNavColorText-active);
       }
 
-      // &:hover {
-      //   color: var(--SidebarNavColorText-active);
-      // }
+      &:hover {
+        color: var(--SidebarNavColorText-active);
+      }
     }
 
     // Nested items
     .NavGroup {
+
+      position: relative;
 
       & > a:after {
         @include fa-icon();
@@ -362,7 +413,6 @@
     display: flex;
     width: 100%;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.09);
     position: relative;
 
     .SidebarFooterNav {
@@ -381,6 +431,7 @@
         text-decoration: none;
         transition: background-color .3s ease, color .3s ease;
         color: var(--SidebarNavColorText);
+        background-color: rgba(255, 255, 255, 0.09);
 
 
         &:hover {
@@ -392,45 +443,62 @@
       .-rtl & {
         flex-direction: row-reverse;
       }
-    }
 
-    .LinkCustomize {
-      flex: 1;
+      .LinkCustomize {
+        flex: 1;
 
-      justify-content: flex-start;
-      padding: 0 $SidebarPaddingHorizontal 0 $SidebarPaddingHorizontal + 31px;
-      border-right: 1px solid rgba(255, 255, 255, 0.1);
-      flex-grow: 3.5;
-
-      .Icon {
-        position: absolute;
-        font-size: 20px;
-        width: 26px;
-        height: $height;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        left: $SidebarPaddingHorizontal;
-        top: 0;
-      }
-
-
-      .-rtl & {
-        border-right: none;
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        justify-content: flex-start;
+        padding: 0 $SidebarPaddingHorizontal 0 $SidebarPaddingHorizontal + 31px;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        flex-grow: 3.5;
 
         .Icon {
-          left: auto;
-          right: $SidebarPaddingHorizontal;
+          position: absolute;
+          font-size: 20px;
+          width: 26px;
+          height: $height;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          left: $SidebarPaddingHorizontal;
+          top: 0;
+        }
+
+
+        .-rtl & {
+          border-right: none;
+          border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+          .Icon {
+            left: auto;
+            right: $SidebarPaddingHorizontal;
+          }
         }
       }
+
+      .LinkToggleCompact {
+        justify-content: center;
+        flex-grow: 1;
+
+        //
+        @include media-down(sm) {
+          display: none;
+          background-color: red;
+        }
+
+        .-sidebar-compact & {
+          @include media-up(md) {
+            .Icon {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
     }
 
-    .LinkCollapse {
-      justify-content: center;
-      flex-grow: 1;
-    }
   }
 
+  // End of Sidebar Footer
 
 }

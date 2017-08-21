@@ -7,7 +7,6 @@ Header.init = () => {
 
   $('#HeaderSidebarToggleButton').on('click', Sidebar.toggle);
 
-
 };
 
 
