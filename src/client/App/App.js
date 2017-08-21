@@ -17,8 +17,6 @@ App.init = () => {
 
   Common.init();
   Dashboard.init();
-
-  $('#SidebarOverlay').on('click', Sidebar.close);
 };
 
 

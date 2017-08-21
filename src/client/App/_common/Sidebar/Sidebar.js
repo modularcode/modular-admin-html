@@ -6,11 +6,18 @@ const Sidebar = {};
 
 Sidebar.init = () => {
 
+  const $App = $('#App');
+
+  // Close sidebar on overlay click
+
+  $('#SidebarOverlay').on('click', Sidebar.close);
+
 
   // Navigation
 
-  const $NavGroups = $('#SidebarNav .NavGroup');
-  const $Navs = $('#SidebarNav nav');
+  const $SidebarNav = $('#SidebarNav');
+  const $NavGroups = $SidebarNav.find('.NavGroup');
+  const $Navs = $SidebarNav.find('nav');
 
 
   $('.NavGroup > a').on('click', function(e) {
@@ -25,9 +32,31 @@ Sidebar.init = () => {
     $NavGroups.not($NavGroup).not($NavGroupParents).removeClass('-open');
     $NavGroup.toggleClass('-open');
 
-    $Navs.not($Nav).not($NavParemts).slideUp('fast');
-    $Nav.slideToggle('fast');
+    if ($App.hasClass('-sidebar-compact')) {
+      $Navs.not($Nav).not($NavParemts).fadeOut('fast');
+      $Nav.fadeToggle('fast');
+    }
+    else {
+      $Navs.not($Nav).not($NavParemts).slideUp('fast');
+      $Nav.slideToggle('fast');
+    }
 
+    // Check if sidebar has at least one open NavGroup
+    if ($SidebarNav.find('> .NavGroup.-open').length) {
+      $App.addClass('-sidebar-nav-open');
+    }
+    else {
+      $App.removeClass('-sidebar-nav-open');
+    }
+
+  });
+
+  $('#SidebarOverlay').on('click', function() {
+    if ($App.hasClass('-sidebar-compact')) {
+      $Navs.filter(':visible').fadeOut('fast');
+      $NavGroups.removeClass('-open');
+      $App.removeClass('-sidebar-nav-open');
+    }
   });
 
   // Collapse

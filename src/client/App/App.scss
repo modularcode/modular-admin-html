@@ -38,6 +38,12 @@
     @include media-down(md) {
       left: calc(-1 * var(--AppSidebarWidth));
     }
+
+    .-sidebar-compact & {
+      // @include media-up(md) {
+        position: absolute;
+      // }
+    }
   }
 
   .SidebarOverlay {
@@ -194,7 +200,8 @@
 
   // By default on mobiles and tablets the sidebar is closed
   // Add this class to open the sidebar
-  &.-sidebar-open-mobile {
+  &.-sidebar-open-mobile,
+  &.-sidebar-compact.-sidebar-nav-open {
     @include media-down(md) {
       .SidebarContainer {
         left: 0;

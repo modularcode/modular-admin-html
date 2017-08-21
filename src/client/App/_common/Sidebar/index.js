@@ -1,4 +1,5 @@
 import './Sidebar.scss';
+import './SidebarNav.scss';
 
 import Sidebar from './Sidebar';
 
