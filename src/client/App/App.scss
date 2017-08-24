@@ -249,9 +249,14 @@
     }
   }
 
-  &.-sidebar-compact-tablet.-sidebar-nav-open,
+  &.-sidebar-compact-tablet.-sidebar-nav-open {
+    @include media(md) {
+      @include sidebar-open-overlay();
+    }
+  }
+
   &.-sidebar-compact-desktop.-sidebar-nav-open {
-    @include media-up(md) {
+    @include media-up(lg) {
       @include sidebar-open-overlay();
     }
   }
