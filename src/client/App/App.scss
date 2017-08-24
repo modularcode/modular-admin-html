@@ -269,7 +269,6 @@
     }
   }
 
-
   &.-sidebar-fixed {
     .SidebarContainer {
       position: fixed;
@@ -285,6 +284,14 @@
   &.-footer-fixed {
     .FooterContainer {
       position: fixed;
+    }
+  }
+
+  &.-header-fixed-mobile {
+    @include media-down(sm) {
+      .HeaderContainer {
+        position: fixed;
+      }
     }
   }
 

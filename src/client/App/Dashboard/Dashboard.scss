@@ -4,7 +4,7 @@
     margin-bottom: 40px;
     padding: 0 40px;
 
-    @include media(xs) {
+    @include media-down(sm) {
       display: none;
       padding: 10px;
     }

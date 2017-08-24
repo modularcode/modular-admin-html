@@ -1,7 +1,4 @@
 .Header {
-
-  $HeaderPaddingHorizontal: 20px;
-
   width: 100%;
   display: flex;
   align-items: center;
@@ -9,7 +6,11 @@
   background-color: var(--HeaderColorBg);
   box-shadow: var(--HeaderShadow);
   border-bottom: var(--HeaderBorderBottom);
-  padding: 0 $HeaderPaddingHorizontal;
+  padding: 0 20px;
+
+  @include media-down(sm) {
+    padding: 0 10px;
+  }
 
   .-rtl & {
     flex-direction: row-reverse;
