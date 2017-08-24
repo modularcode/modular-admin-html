@@ -4,6 +4,26 @@ Util.getViewportWidth = function() {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 };
 
+Util.getViewportName = function() {
+  var viewportWidth = Util.getViewportWidth();
+
+  if (viewportWidth < 576) {
+    return 'xs';
+  }
+  else if (viewportWidth >= 576 &&  viewportWidth < 768) {
+    return 'sm';
+  }
+  else if (viewportWidth >= 768 &&  viewportWidth < 992) {
+    return 'md';
+  }
+  else if (viewportWidth >= 992 &&  viewportWidth < 1200) {
+    return 'lg';
+  }
+  else {
+    return 'xl';
+  }
+};
+
 Util.randomScalingFactor = function() {
   return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
 };

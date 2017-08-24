@@ -40,14 +40,6 @@
     }
   }
 
-  #HeaderSidebarToggleButton {
-    .-sidebar-compact & {
-      @include media-up(md) {
-        display: none;
-      }
-    }
-  }
-
   .ProjectNav {
     display: flex;
     flex-direction: row;

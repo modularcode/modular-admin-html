@@ -1,24 +1,28 @@
 import theme from '_theme';
 import Util from '_common/Util';
 
-const Sidebar = {};
+const Sidebar = {
+  refs: {
+    $App: null,
+    $SidebarNav: null,
+    $NavGroups: null,
+    $Navs: null
+  }
+};
 
 
-Sidebar.init = () => {
+Sidebar.init = function () {
 
-  const $App = $('#App');
+  const vm = Sidebar;
 
-  // Close sidebar on overlay click
+  // Ref elements
 
-  $('#SidebarOverlay').on('click', Sidebar.close);
-
+  vm.refs.$App = $('#App');
+  vm.refs.$SidebarNav = $('#SidebarNav');
+  vm.refs.$NavGroups = vm.refs.$SidebarNav.find('.NavGroup');
+  vm.refs.$Navs = vm.refs.$SidebarNav.find('nav');
 
   // Navigation
-
-  const $SidebarNav = $('#SidebarNav');
-  const $NavGroups = $SidebarNav.find('.NavGroup');
-  const $Navs = $SidebarNav.find('nav');
-
 
   $('.NavGroup > a').on('click', function(e) {
     e.preventDefault();
@@ -29,128 +33,155 @@ Sidebar.init = () => {
     const $Nav = $NavGroup.find('> nav');
     const $NavParemts = $Nav.parents('nav');
 
-    $NavGroups.not($NavGroup).not($NavGroupParents).removeClass('-open');
+    vm.refs.$NavGroups.not($NavGroup).not($NavGroupParents).removeClass('-open');
+
     $NavGroup.toggleClass('-open');
 
-    if ($App.hasClass('-sidebar-compact')) {
-      $Navs.not($Nav).not($NavParemts).fadeOut('fast');
+    if (Sidebar.isCompact()) {
+      vm.refs.$Navs.not($Nav).not($NavParemts).fadeOut('fast');
       $Nav.fadeToggle('fast');
     }
     else {
-      $Navs.not($Nav).not($NavParemts).slideUp('fast');
+      vm.refs.$Navs.not($Nav).not($NavParemts).slideUp('fast');
       $Nav.slideToggle('fast');
     }
 
     // Check if sidebar has at least one open NavGroup
-    if ($SidebarNav.find('> .NavGroup.-open').length) {
-      $App.addClass('-sidebar-nav-open');
+    if (vm.refs.$SidebarNav.find('> .NavGroup.-open').length) {
+      vm.refs.$App.addClass('-sidebar-nav-open');
     }
     else {
-      $App.removeClass('-sidebar-nav-open');
+      vm.refs.$App.removeClass('-sidebar-nav-open');
     }
 
   });
+
+
+  // Sidebar overlay click handler
 
   $('#SidebarOverlay').on('click', function() {
-    if ($App.hasClass('-sidebar-compact')) {
-      $Navs.filter(':visible').fadeOut('fast');
-      $NavGroups.removeClass('-open');
-      $App.removeClass('-sidebar-nav-open');
+
+    if (Sidebar.isCompact()) {
+      vm.refs.$Navs.filter(':visible').fadeOut('fast');
+      vm.refs.$NavGroups.removeClass('-open');
+      vm.refs.$App.removeClass('-sidebar-nav-open');
     }
+    else {
+      Sidebar.close();
+    }
+
   });
 
-  $SidebarNav.find('.DismissBtn').on('click', function(e) {
+  // Dismiss button click
+
+  vm.refs.$SidebarNav.find('.DismissBtn').on('click', function(e) {
 
     e.preventDefault();
 
-    if ($App.hasClass('-sidebar-compact')) {
-      $Navs.filter(':visible').fadeOut('fast');
-      $NavGroups.removeClass('-open');
-      $App.removeClass('-sidebar-nav-open');
+    if (Sidebar.isCompact()) {
+      vm.refs.$Navs.filter(':visible').fadeOut('fast');
+      vm.refs.$NavGroups.removeClass('-open');
+      vm.refs.$App.removeClass('-sidebar-nav-open');
     }
   });
 
-  // Toggle Compact
-
+  // Toggle compact click
   $('#SidebarToggleCompactLink').on('click', Sidebar.toggleCompact);
 
-
 };
 
-Sidebar.toggle = () => {
-  const $App = $('#App');
+Sidebar.isCompact = function() {
+  const vm = Sidebar;
 
-  const viewportWidth = Util.getViewportWidth();
+  const viewportName = Util.getViewportName();
 
-  // Current viewport is desktop
-  if (viewportWidth > 991) {
-    $App.toggleClass('-sidebar-closed-desktop');
+  return (
+    viewportName === 'md' ||
+    viewportName === 'lg' ||
+    viewportName === 'xl'
+  ) &&
+  (
+    vm.refs.$App.hasClass('-sidebar-compact-tablet') ||
+    vm.refs.$App.hasClass('-sidebar-compact-desktop')
+  );
+};
+
+Sidebar.toggle = function() {
+  const vm = Sidebar;
+
+  const viewportName = Util.getViewportName();
+
+  if (viewportName === 'xs' || viewportName === 'sm') {
+    vm.refs.$App.toggleClass('-sidebar-open-mobile');
   }
-  // Current viewport is mobile
-  else {
-    $App.toggleClass('-sidebar-open-mobile');
+  else if (viewportName === 'md') {
+    vm.refs.$App.toggleClass('-sidebar-open-tablet');
+  }
+  else if (viewportName === 'lg' || viewportName === 'xl') {
+    vm.refs.$App.toggleClass('-sidebar-closed-desktop');
   }
 
   notifyLayoutUpdate();
 };
 
-Sidebar.close = () => {
-  const $App = $('#App');
+Sidebar.close = function() {
+  const vm = Sidebar;
 
-  const viewportWidth = Util.getViewportWidth();
+  const viewportName = Util.getViewportName();
 
-  // Current viewport is desktop
-  if (viewportWidth > 991) {
-    $App.addClass('-sidebar-closed-desktop');
+  if (viewportName === 'xs' || viewportName === 'sm') {
+    vm.refs.$App.removeClass('-sidebar-open-mobile');
   }
-  // Current viewport is mobile
-  else {
-    $App.removeClass('-sidebar-open-mobile');
+  else if (viewportName === 'md') {
+    vm.refs.$App.removeClass('-sidebar-open-tablet');
   }
-
-  notifyLayoutUpdate();
-};
-
-Sidebar.open = () => {
-  const $App = $('#App');
-
-  const viewportWidth = Util.getViewportWidth();
-
-  // Current viewport is desktop
-  if (viewportWidth > 991) {
-    $App.removeClass('-sidebar-closed-desktop');
-  }
-  // Current viewport is mobile
-  else {
-    $App.addClass('-sidebar-open-mobile');
+  else if (viewportName === 'lg' || viewportName === 'xl') {
+    vm.refs.$App.removeClass('-sidebar-closed-desktop');
   }
 
   notifyLayoutUpdate();
 };
 
-Sidebar.toggleCompact = (e) => {
+Sidebar.open = function() {
+  const vm = Sidebar;
 
+  const viewportName = Util.getViewportName();
+
+  if (viewportName === 'xs' || viewportName === 'sm') {
+    vm.refs.$App.addClass('-sidebar-open-mobile');
+  }
+  else if (viewportName === 'md') {
+    vm.refs.$App.addClass('-sidebar-open-tablet');
+  }
+  else if (viewportName === 'lg' || viewportName === 'xl') {
+    vm.refs.$App.addClass('-sidebar-closed-desktop');
+  }
+
+  notifyLayoutUpdate();
+};
+
+Sidebar.toggleCompact = function(e) {
   e.preventDefault();
 
-  const $App = $('#App');
+  const vm = Sidebar;
 
-  $App.toggleClass('-sidebar-compact');
-  $App.addClass('-sidebar-open-mobile');
-  $App.removeClass('-sidebar-closed-desktop');
+  const viewportName = Util.getViewportName();
 
-  const viewportWidth = Util.getViewportWidth();
 
-  if (viewportWidth > 767 && $App.hasClass('-sidebar-compact')) {
-    $App.removeClass('-sidebar-open-mobile');
+  if (viewportName === 'xs' || viewportName === 'sm') {
+    return;
   }
-  else {
-    $App.addClass('-sidebar-open-mobile');
+  else if (viewportName === 'md') {
+    vm.refs.$App.toggleClass('-sidebar-compact-tablet');
+  }
+  else if (viewportName === 'lg' || viewportName === 'xl') {
+    vm.refs.$App.toggleClass('-sidebar-compact-desktop');
   }
 
   notifyLayoutUpdate();
 };
 
-Sidebar.closeNestedNavs = (e) => {
+Sidebar.closeNestedNavs = function(e) {
 
 };
 

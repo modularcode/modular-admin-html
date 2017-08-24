@@ -1,162 +1,138 @@
 $roundness: 4px;
 $item-height: 40px;
 
-.App.-sidebar-compact {
-  .SidebarContent {
-    overflow: visible;
+@mixin SidebarNavCompact() {
+  .CompactNavGroupName {
+    display: block;
   }
-}
 
-.App.-sidebar-compact .SidebarNav {
-  @include media-up(md) {
-  // Sidebar compact styles aren't affecting on xs and sm viewports
+  // First level groups
+  & > .NavGroup {
+    width: var(--AppSidebarWidth-compact);
 
-    .CompactNavGroupName {
-      display: block;
-    }
-
-    // First level groups
-    & > .NavGroup {
-      width: var(--AppSidebarWidth-compact);
-
-      & > .NavLink {
-        &:after {
-          transform: translate(0, -50%) !important;
-        }
-      }
-
-      & > .Nav {
-
-        position: fixed;
-        left: var(--AppSidebarWidth-compact);
-        margin-left: 5px;
-        bottom: 5px;
-        top: 5px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        background-color: rgba(255, 255, 255, 0.97);
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-        width: var(--AppSidebarWidth);
-        border-radius: 0 6px 6px 0;
-
-        .NavLink {
-          text-shadow: none;
-          padding: 0 $SidebarPaddingHorizontal;
-          color: var(--colorPrimary);
-          height: $item-height;
-
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.03);
-          }
-        }
-
-      }
-
-      &:before {
-        content: " ";
-        display: block;
-        width: 10px;
-        height: 30px;
-        position: absolute;
-        top: 8px;
-        right: -11px;
-        z-index: 999;
-        border: 15px solid transparent;
-        border-right-color: #fff;
-        opacity: 0;
-        transition: opacity .3s ease;
-      }
-
-      &.-open {
-        &:before {
-          opacity: 1;
-        }
-      }
-
-      &.-open > .NavLink:not(.-active) {
-        color: var(--colorPrimary);
-
-        &:after {
-          color: inherit;
-        }
-
-        // &:hover {
-        //   color: var(--SidebarNavColorText-active);
-        // }
-      }
-
-    }
-
-    // First level links
-    & > .NavLink,
-    & > .NavGroup > .NavLink {
-      padding-right: 5px;
-      overflow: hidden;
-
+    & > .NavLink {
       &:after {
-        right: 7px;
-      }
-
-      span {
-        opacity: 0;
-        // display: none;
+        transform: translate(0, -50%) !important;
       }
     }
 
+    & > .Nav {
 
-    .CompactNavGroupName {
+      position: fixed;
+      left: var(--AppSidebarWidth-compact);
+      margin-left: 5px;
+      bottom: 5px;
+      top: 5px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: rgba(255, 255, 255, 0.97);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      width: var(--AppSidebarWidth);
+      border-radius: 0 6px 6px 0;
 
-      $size: 50px;
-
-      display: block;
-      color: var(--colorText);
-      position: relative;
-      font-size: 1.1em;
-      white-space: nowrap;
-      width: 100%;
-      height: $size;
-      line-height: $size;
-      padding-right: $size;
-      padding-left: $SidebarPaddingHorizontal;
-      border-bottom: 1px solid var(--colorDivider);
-      margin-bottom: 0;
-
-      .DismissBtn {
-        padding: 0;
-        width: $size - 14px;
-        height: $size - 14px;
-        line-height: $size - 14px;
-        right: 3px;
-        top: 7px;
-        position: absolute;
-        display: block;
-        margin-left: auto;
-        color: var(--colorDivider);
-        text-align: center;
-        border-radius: $roundness;
-        transition: all .3s ease;
-        font-size: 1.2em;
-
-        .Icon {
-          display: inline-block;
-          position: static;
-          margin: 0;
-        }
+      .NavLink {
+        text-shadow: none;
+        padding: 0 $SidebarPaddingHorizontal;
+        color: var(--colorPrimary);
+        height: $item-height;
 
         &:hover {
-          // background-color: rgba(0, 0, 0, 0.03);
-          color: var(--colorPrimary);
+          background-color: rgba(0, 0, 0, 0.03);
         }
+      }
+
+    }
+
+    &.-open {
+      &:before {
+        opacity: 1;
       }
     }
 
+    &.-open > .NavLink:not(.-active) {
+      color: var(--colorPrimary);
 
+      &:after {
+        color: inherit;
+      }
+    }
 
+  }
 
+  // First level links
+  & > .NavLink,
+  & > .NavGroup > .NavLink {
+    padding-right: 5px;
+    overflow: hidden;
 
+    &:after {
+      right: 7px;
+    }
 
+    span {
+      opacity: 0;
+    }
   }
 }
 
+
+.SidebarNav {
+
+  .CompactNavGroupName {
+    $size: 50px;
+
+    display: none;
+    color: var(--colorText);
+    position: relative;
+    font-size: 1.1em;
+    white-space: nowrap;
+    width: 100%;
+    height: $size;
+    line-height: $size;
+    padding-right: $size;
+    padding-left: $SidebarPaddingHorizontal;
+    border-bottom: 1px solid var(--colorDivider);
+    margin-bottom: 0;
+
+    .DismissBtn {
+      padding: 0;
+      width: $size - 14px;
+      height: $size - 14px;
+      line-height: $size - 14px;
+      right: 3px;
+      top: 7px;
+      position: absolute;
+      display: block;
+      margin-left: auto;
+      color: var(--colorDivider);
+      text-align: center;
+      border-radius: $roundness;
+      transition: all .3s ease;
+      font-size: 1.2em;
+
+      .Icon {
+        display: inline-block;
+        position: static;
+        margin: 0;
+      }
+
+      &:hover {
+        color: var(--colorPrimary);
+      }
+    }
+  }
+
+  @include media(md) {
+    .-sidebar-compact-tablet & {
+      @include SidebarNavCompact();
+    }
+  }
+
+  @include media-up(lg) {
+    .-sidebar-compact-desktop & {
+      @include SidebarNavCompact();
+    }
+  }
+}
 
 

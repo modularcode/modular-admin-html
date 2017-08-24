@@ -13,7 +13,7 @@
   transition: background-color .3s ease;
 
 
-  @include media-down(md) {
+  @include media-down(sm) {
     box-shadow: none;
 
     .-sidebar-open-mobile & {
@@ -22,7 +22,9 @@
   }
 
   @include media(md) {
-    .-sidebar-compact & {
+    box-shadow: none;
+
+    .-sidebar-open-tablet & {
       box-shadow: var(--SidebarShadow);
     }
   }
@@ -32,7 +34,6 @@
       box-shadow: none;
     }
   }
-
 
   // Sidebar background image
   &:before {
@@ -68,8 +69,14 @@
       flex-direction: row-reverse;
     }
 
-    .-sidebar-compact & {
-      @include media-up(md) {
+    @include media(md) {
+      .-sidebar-compact-tablet & {
+        padding-left: 11px;
+      }
+    }
+
+    @include media-up(lg) {
+      .-sidebar-compact-desktop & {
         padding-left: 11px;
       }
     }
@@ -122,11 +129,9 @@
   .Title {
     margin: 0;
     font-size: 1rem;
-    // font-weight: bold;
     color: #fff;
     position: relative;
     white-space: nowrap;
-    // top: -1px;
     overflow: hidden;
     opacity: 1;
     transition: all .3s ease;
@@ -161,8 +166,14 @@
       }
     }
 
-    .-sidebar-compact & {
-      @include media-up(md) {
+    @include media(md) {
+      .-sidebar-compact-tablet & {
+          opacity: 0;
+      }
+    }
+
+    @include media-up(lg) {
+      .-sidebar-compact-desktop & {
         opacity: 0;
       }
     }
@@ -195,7 +206,13 @@
 
     &:hover {
       &::-webkit-scrollbar-thumb {
-        // background-color: rgba(0, 0, 0, 0.35);
+        background-color: var(--colorPrimary);
+        -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    @include media-down(md) {
+      &::-webkit-scrollbar-thumb {
         background-color: var(--colorPrimary);
         -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
       }
@@ -281,19 +298,26 @@
         justify-content: center;
         flex-grow: 1;
 
-        //
         @include media-down(sm) {
           display: none;
-          background-color: red;
         }
 
-        .-sidebar-compact & {
-          @include media-up(md) {
+        @include media(md) {
+          .-sidebar-compact-tablet:not(.-rtl) & {
             .Icon {
               transform: rotate(180deg);
             }
           }
         }
+
+        @include media-up(lg) {
+          .-sidebar-compact-desktop:not(.-rtl) & {
+            .Icon {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
       }
 
     }
