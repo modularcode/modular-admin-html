@@ -3,10 +3,6 @@
 
   height: $height;
 
-  @include media-down(sm) {
-    display: none;
-  }
-
   @include media(md) {
     .-sidebar-compact-tablet & {
       height: auto;
@@ -69,8 +65,18 @@
     }
   }
 
+  .LinkToggleHelp {
+    @include media-down(sm) {
+      display: none;
+    }
+  }
+
   .LinkToggleCompact {
     font-size: 42px;
+
+    @include media-down(sm) {
+      display: none;
+    }
 
     @include media(md) {
       .-sidebar-compact-tablet:not(.-rtl) & {

@@ -106,6 +106,7 @@
   }
 
   &.-customize-open {
+
     left: var(--AppCustomizeWidth);
     overflow: hidden;
 
@@ -305,6 +306,13 @@
         right: calc(-1 * var(--AppCustomizeWidth));
       }
 
+      @include media-down(sm) {
+        .HeaderContainer {
+          left: 0;
+          right: 0;
+        }
+      }
+
       @include media(md) {
         .HeaderContainer {
           left: var(--AppCustomizeWidth);
@@ -342,6 +350,13 @@
       .FooterContainer {
         left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth));
         right: calc(-1 * var(--AppCustomizeWidth));
+      }
+
+      @include media-down(sm) {
+        .FooterContainer {
+          left: 0;
+          right: 0;
+        }
       }
 
       @include media(md) {
