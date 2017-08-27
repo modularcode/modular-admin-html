@@ -21,6 +21,11 @@ Sidebar.init = function () {
   vm.refs.$SidebarNav = $('#SidebarNav');
   vm.refs.$NavGroups = vm.refs.$SidebarNav.find('.NavGroup');
   vm.refs.$Navs = vm.refs.$SidebarNav.find('nav');
+  vm.refs.$NavLinksWithTooltip = vm.refs.$SidebarNav.find('> .NavLink, > .NavGroup > .NavLink');
+
+  // Tooltips
+
+  Sidebar.initNavTooltips();
 
   // Navigation
 
@@ -188,6 +193,58 @@ Sidebar.toggleCompact = function() {
   }
 
   notifyLayoutUpdate();
+};
+
+Sidebar.initNavTooltips = function() {
+  const vm = Sidebar;
+
+  const isRTL = $('#main').hasClass('-rtl');
+
+  vm.refs.$NavLinksWithTooltip.each(function() {
+
+    const $el = $(this);
+    const title = $el.find('> span').text();
+
+    if (!title) {
+      return;
+    }
+
+    $el.tooltip({
+      placement: isRTL ? 'left' : 'right',
+      title: title,
+      trigger: 'manual'
+    });
+
+    $el.hover(function() {
+
+      if (!Sidebar.isCompact()) {
+        return;
+      }
+
+      $el.tooltip('show');
+    }, function() {
+      $el.tooltip('hide');
+    });
+
+    $el.on('focus', function() {
+      if (!Sidebar.isCompact()) {
+        return;
+      }
+
+      $el.tooltip('show');
+    });
+
+
+    $el.on('click blur', function() {
+      $el.tooltip('hide');
+    });
+  });
+};
+
+Sidebar.destroyNavTooltips = function() {
+  vm.refs.$NavLinksWithTooltip.each(function() {
+    $(this).tooltip('destroy');
+  });
 };
 
 Sidebar.closeNestedNavs = function(e) {

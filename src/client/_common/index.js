@@ -14,6 +14,7 @@ import Progress from './Progress';
 import ScrollBar from './ScrollBar';
 import Tab from './Tab';
 import Table from './Table';
+import Tooltip from './Tooltip';
 import Typography from './Typography';
 import Util from './Util';
 
@@ -25,6 +26,7 @@ const Common = {};
 Common.init = () => {
   Button.init();
   Dropdown.init();
+  Tooltip.init();
 };
 
 
