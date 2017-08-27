@@ -95,7 +95,7 @@ variables = Object.assign(variables, {
   'AppHeaderHeight-xs':           '50px',
   'AppSidebarWidth':              '240px',
   'AppSidebarWidth-compact':      '70px',
-  'AppFooterHeight':              '46px',
+  'AppFooterHeight':              '50px',
   'AppLayoutTransitionDuration':  '0.3s',
 
   // Header

@@ -86,6 +86,30 @@
     z-index: -1;
   }
 
+  .CustomizeContainer {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    z-index: 20;
+  }
+
+  &.-customize {
+
+    .ContentContainer,
+    .SidebarContainer,
+    .FooterContainer {
+      bottom: 300px;
+    }
+
+    .CustomizeContainer {
+      background-color: red;
+      display: block;
+    }
+  }
+
 
   @include media-down(sm) {
 
