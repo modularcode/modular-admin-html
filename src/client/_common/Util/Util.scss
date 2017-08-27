@@ -165,30 +165,42 @@
 
 
 
+@mixin colorUtils($colorName, $colorValue: null) {
+
+  @if type-of($colorValue) != color {
+    $colorValue: unquote("var(--#{$colorValue})");
+  }
+
+  .-color-#{$colorName} {
+    color: $colorValue !important;
+  }
+
+  .-bg-#{$colorName} {
+    background-color: $colorValue !important;
+  }
+
+  .-border-#{$colorName} {
+    border-color: $colorValue !important;
+  }
+
+  .-stroke-#{$colorName} {
+    stroke: $colorValue !important;
+  }
+
+  .-fill-#{$colorName} {
+    fill: $colorValue !important;
+  }
+}
 
 
 // Color utils definitions
+@include colorUtils("primary", "colorPrimary");
+@include colorUtils("primary-light", "colorPrimary-light");
+@include colorUtils("primary-dark", "colorPrimary-dark");
+@include colorUtils("secondary", "colorSecondary");
+@include colorUtils("divider", "colorDivider");
 
-@each $colorName, $color in $colors {
-
-  .-color-#{$colorName}.-color-#{$colorName} {
-    color: $color !important;
-  }
-
-  .-bg-#{$colorName}.-bg-#{$colorName} {
-    background-color: $color !important;
-  }
-
-  .-border-#{$colorName}.-border-#{$colorName} {
-    border-color: $color !important;
-  }
-
-  .-stroke-#{$colorName}.-stroke-#{$colorName} {
-    stroke: $color !important;
-  }
-
-  .-fill-#{$colorName}.-fill-#{$colorName} {
-    fill: $color !important;
-  }
-
+// Palletter colors
+@each $colorName, $color in $colorsPaletteFull {
+  @include colorUtils($colorName, $color);
 }

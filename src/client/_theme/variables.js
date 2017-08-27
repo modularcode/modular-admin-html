@@ -41,27 +41,34 @@ let variables = {
 
 };
 
+variables.colorsTheme = {
+  'primary':              variables['colorPrimary'],
+  'primary-light':        variables['colorPrimary-light'],
+  'primary-dark':         variables['colorPrimary-dark'],
+  'secondary':            variables['colorSecondary'],
+  'text':                 variables['colorText'],
+  'text-light':           variables['colorText-light'],
+  'text-muted':           variables['colorText-muted'],
+  'text-inverse':         variables['colorText-inverse'],
+  'text-passive':         variables['colorText-passive'],
+  'textSecondary':        variables['colorTextSecondary'],
+  'divider':              variables['colorDivider'],
+};
+
+variables.colorsPaletteFull = MaterialColorsAll;
+
+variables.colorsPalette = MaterialColorsPalette;
+
+
 /*----------  All Colors  ----------*/
 
 variables.colors = Object.assign(
   {},
-  MaterialColorsAll,
-  {
-    'primary':              variables['colorPrimary'],
-    'primary-light':        variables['colorPrimary-light'],
-    'primary-dark':         variables['colorPrimary-dark'],
-    'secondary':            variables['colorSecondary'],
-    'text':                 variables['colorText'],
-    'text-light':           variables['colorText-light'],
-    'text-muted':           variables['colorText-muted'],
-    'text-inverse':         variables['colorText-inverse'],
-    'text-passive':         variables['colorText-passive'],
-    'textSecondary':        variables['colorTextSecondary'],
-    'divider':              variables['colorDivider'],
-  }
+  variables.colorsPaletteFull,
+  variables.colorsTheme
 );
 
-variables.palette = MaterialColorsPalette;
+
 
 
 /*----------  Options  ----------*/
@@ -130,8 +137,6 @@ variables = Object.assign(variables, {
   'PagePaddingVertical-xl':     '35px',
   'PagePaddingHorizontal-xl':   '40px',
 
-
-
   // Card
   'CardColorBg':            '#fff',
   'CardShadow':             '1px 1px 5px rgba(126, 142, 159, 0.1)',
@@ -150,7 +155,10 @@ variables = Object.assign(variables, {
   'CardBlockPaddingHorizontal-sm':  '10px',
 
   // Dropdown
-  'DropdownColorBg':        '#fff'
+  'DropdownColorBg':        '#fff',
+
+  // Progress
+  'ProgressColorBg':        '#dddddd'
 
 });
 
