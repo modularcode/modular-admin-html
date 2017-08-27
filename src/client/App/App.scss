@@ -18,7 +18,7 @@
     align-items: 'stretch';
     z-index: 30;
 
-    transition-property: left;
+    transition-property: left right;
     transition-timing-function: ease;
     transition-duration: var(--AppLayoutTransitionDuration);
   }
@@ -94,11 +94,10 @@
 
   .CustomizeContainer {
     position: fixed;
-    left: calc(-1 * var(--AppSidebarWidth));
+    left: calc(-1 * var(--AppCustomizeWidth));
     top: 0;
-    width: var(--AppSidebarWidth);
+    width: var(--AppCustomizeWidth);
     bottom: 0;
-    background-color: #fff;
     z-index: 50;
 
     transition-property: left;
@@ -107,11 +106,11 @@
   }
 
   &.-customize-open {
-    left: var(--AppSidebarWidth);
+    left: var(--AppCustomizeWidth);
     overflow: hidden;
 
     .SidebarContainer {
-      margin-left: var(--AppSidebarWidth);
+      margin-left: var(--AppCustomizeWidth);
     }
 
     .CustomizeContainer {
@@ -302,20 +301,35 @@
 
     &.-customize-open {
       .HeaderContainer {
-        left: calc(2 * var(--AppSidebarWidth));
+        left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth));
+        right: calc(-1 * var(--AppCustomizeWidth));
       }
 
-      &.-sidebar-compact-desktop {
+      @include media(md) {
         .HeaderContainer {
-          left: calc(var(--AppSidebarWidth) + var(--AppSidebarWidth-compact));
+          left: var(--AppCustomizeWidth);
+        }
+        &.-sidebar-compact-tablet.-sidebar-open-tablet {
+          .HeaderContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
         }
       }
 
-      &.-sidebar-closed-desktop {
-        .HeaderContainer {
-          left: var(--AppSidebarWidth);
+      @include media-up(lg) {
+        &.-sidebar-compact-desktop:not(.-sidebar-closed-desktop) {
+          .HeaderContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
+        }
+
+        &.-sidebar-closed-desktop {
+          .HeaderContainer {
+            left: var(--AppCustomizeWidth);
+          }
         }
       }
+
     }
   }
 
@@ -326,20 +340,35 @@
 
     &.-customize-open {
       .FooterContainer {
-        left: calc(2 * var(--AppSidebarWidth));
+        left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth));
+        right: calc(-1 * var(--AppCustomizeWidth));
       }
 
-      &.-sidebar-compact-desktop {
+      @include media(md) {
         .FooterContainer {
-          left: calc(var(--AppSidebarWidth) + var(--AppSidebarWidth-compact));
+          left: var(--AppCustomizeWidth);
+        }
+        &.-sidebar-compact-tablet.-sidebar-open-tablet {
+          .FooterContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
         }
       }
 
-      &.-sidebar-closed-desktop {
-        .FooterContainer {
-          left: var(--AppSidebarWidth);
+      @include media-up(lg) {
+        &.-sidebar-compact-desktop:not(.-sidebar-closed-desktop) {
+          .FooterContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
+        }
+
+        &.-sidebar-closed-desktop {
+          .FooterContainer {
+            left: var(--AppCustomizeWidth);
+          }
         }
       }
+
     }
   }
 

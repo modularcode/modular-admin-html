@@ -17,15 +17,19 @@ Sidebar.init = function () {
 
   // Ref elements
 
+  vm.refs.$Main = $("#Main");
   vm.refs.$App = $('#App');
   vm.refs.$SidebarNav = $('#SidebarNav');
+  vm.refs.$SidebarFooter = $('#SidebarFooter');
   vm.refs.$NavGroups = vm.refs.$SidebarNav.find('.NavGroup');
   vm.refs.$Navs = vm.refs.$SidebarNav.find('nav');
   vm.refs.$NavLinksWithTooltip = vm.refs.$SidebarNav.find('> .NavLink, > .NavGroup > .NavLink');
+  vm.refs.$FooterNavLinks = vm.refs.$SidebarFooter.find('.NavLink');
 
   // Tooltips
 
   Sidebar.initNavTooltips();
+  Sidebar.initFooterTooltips();
 
   // Navigation
 
@@ -199,13 +203,18 @@ Sidebar.toggleCompact = function() {
     vm.refs.$App.toggleClass('-sidebar-compact-desktop');
   }
 
+  // Sidebar.destroyFooterTooltips();
+  // Sidebar.initFooterTooltips();
+
   notifyLayoutUpdate();
 };
 
 Sidebar.initNavTooltips = function() {
   const vm = Sidebar;
 
-  const isRTL = $('#main').hasClass('-rtl');
+  const isRTL = vm.refs.$Main.hasClass('-rtl');
+
+  // vm.refs.$NavLinksWithTooltip.off('mouseenter mouseleave focus click blur');
 
   vm.refs.$NavLinksWithTooltip.each(function() {
 
@@ -246,23 +255,69 @@ Sidebar.initNavTooltips = function() {
       $el.tooltip('hide');
     });
   });
+
+
 };
 
 Sidebar.destroyNavTooltips = function() {
   vm.refs.$NavLinksWithTooltip.each(function() {
-    $(this).tooltip('destroy');
+    $(this).tooltip('dispose');
   });
 };
 
-Sidebar.closeNestedNavs = function(e) {
 
+Sidebar.initFooterTooltips = function() {
+  const vm = Sidebar;
+
+  const isRTL = vm.refs.$Main.hasClass('-rtl');
+
+  let placement = 'top';
+
+  if (Sidebar.isCompact()) {
+    placement = isRTL ? 'left' : 'right';
+  }
+
+  vm.refs.$FooterNavLinks.each(function() {
+
+
+    const $el = $(this);
+    const title = $el.attr('title');
+
+    $el.tooltip({
+      placement: placement,
+      title: title,
+      trigger: 'manual'
+    });
+
+    $el.hover(function() {
+      $el.tooltip('show');
+    }, function() {
+      $el.tooltip('hide');
+    });
+
+    $el.on('focus', function() {
+      $el.tooltip('show');
+    });
+
+
+    $el.on('click blur', function() {
+      $el.tooltip('hide');
+    });
+  });
+};
+
+Sidebar.destroyFooterTooltips = function() {
+  const vm = Sidebar;
+
+  vm.refs.$FooterNavLinks.each(function() {
+    $(this).tooltip('dispose');
+  });
 };
 
 
 function notifyLayoutUpdate () {
   const variables = theme.get();
   const timeout = 1000 * parseFloat(variables.AppLayoutTransitionDuration) || 500;
-
 
   setTimeout(() => {
     window.dispatchEvent(new Event('resize'));

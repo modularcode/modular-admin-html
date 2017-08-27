@@ -1,3 +1,5 @@
+$CustomizePaddingHorizontal: 20px;
+
 .Customize {
   position: absolute;
   width: 100%;
@@ -6,8 +8,37 @@
   top: 0;
   background-color: #fff;
   border-top: 1px solid var(--colorDivider);
+  display: flex;
+  flex-direction: column;
+
 
   .-customize-open & {
     box-shadow: var(--SidebarShadow);
+  }
+
+  .CustomizeHeader {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 $CustomizePaddingHorizontal;
+    height: var(--AppHeaderHeight);
+    border-bottom: 1px solid var(--colorDivider);
+
+    .Title {
+      color: var(--colorDivider);
+      font-size: 18px;
+    }
+  }
+
+  .CustomizeContent {
+    flex: 1;
+    // margin-right: 2px;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    // border-right: 2px dashed var(--colorPrimary);
   }
 }

@@ -75,6 +75,15 @@ $item-height: 40px;
   }
 }
 
+@mixin SidebarNavCompactCustomizeOpen() {
+  // First level groups
+  & > .NavGroup {
+    & > .Nav {
+      left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+    }
+  }
+}
+
 
 .SidebarNav {
 
@@ -126,11 +135,19 @@ $item-height: 40px;
     .-sidebar-compact-tablet & {
       @include SidebarNavCompact();
     }
+
+    .-sidebar-compact-tablet.-customize-open & {
+      @include SidebarNavCompactCustomizeOpen()
+    }
   }
 
   @include media-up(lg) {
     .-sidebar-compact-desktop & {
       @include SidebarNavCompact();
+    }
+
+    .-sidebar-compact-desktop.-customize-open & {
+      @include SidebarNavCompactCustomizeOpen()
     }
   }
 }
