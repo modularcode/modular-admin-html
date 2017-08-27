@@ -101,7 +101,7 @@ variables = Object.assign(variables, {
 
   // Header
   'HeaderColorBg':          Color('#fff'),
-  'HeaderShadow':           '0px 0 20px rgba(72, 72, 72, 0.09)',
+  'HeaderShadow':           '0px 0px 20px rgba(0, 0, 0, 0.3)',
   'HeaderBorderBottom':     '1px solid #e0e0e0',
 
   // Footer
@@ -114,7 +114,7 @@ variables = Object.assign(variables, {
   // 'SidebarBgImage':        'none',
   'SidebarBgImage':           `url('~${PUBLIC_PATH}sidebar-bg-1.jpg')`,
   'SidebarBgImageOpacity':    1,
-  'SidebarShadow':            '0px 0px 30px rgba(72, 72, 72, 0.72)',
+  'SidebarShadow':            '0px 0px 30px rgba(0, 0, 0, 0.5)',
   'SidebarPaddingHorizontal': '20px',
 
   // Sidebar Nav
@@ -140,7 +140,8 @@ variables = Object.assign(variables, {
 
   // Card
   'CardColorBg':            '#fff',
-  'CardShadow':             '1px 1px 5px rgba(126, 142, 159, 0.1)',
+  // 'CardShadow':             '1px 1px 5px rgba(126, 142, 159, 0.1)',
+  'CardShadow':             '1px 1px 5px rgba(0, 0, 0, 0.03)',
   'CardMarginBottom':       '15px',
   'CardMarginBottom-sm':    '15px',
   'CardMarginBottom-md':    '20px',
