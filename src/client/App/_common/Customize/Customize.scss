@@ -1,0 +1,13 @@
+.Customize {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  border-top: 1px solid var(--colorDivider);
+
+  .-customize-open & {
+    box-shadow: var(--SidebarShadow);
+  }
+}

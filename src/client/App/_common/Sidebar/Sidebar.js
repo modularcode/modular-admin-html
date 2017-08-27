@@ -103,6 +103,13 @@ Sidebar.init = function () {
 
   });
 
+  // Toggle customize click
+  $('#SidebarToggleCustomize').on('click', function(e) {
+    e.preventDefault();;
+
+    vm.refs.$App.toggleClass('-customize-open');
+  })
+
 };
 
 Sidebar.isCompact = function() {

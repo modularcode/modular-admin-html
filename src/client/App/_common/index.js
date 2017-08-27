@@ -1,12 +1,14 @@
 import Header from './Header';
+import Search from './Search';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
-import Customize from './Footer';
+import Customize from './Customize';
 
 const Common = {};
 
 Common.init = () => {
   Header.init();
+  Customize.init();
 };
 
 export {

@@ -1,6 +1,12 @@
 .App {
   overflow-x: hidden;
   background-color: var(--AppColorBg);
+  position: relative;
+  left: 0;
+
+  transition-property: left;
+  transition-timing-function: ease;
+  transition-duration: var(--AppLayoutTransitionDuration);
 
   .HeaderContainer {
     position: absolute;
@@ -26,7 +32,7 @@
     display: flex;
     z-index: 40;
 
-    transition-property: left width;
+    transition-property: left width bottom margin-left;
     transition-timing-function: ease;
     transition-duration: var(--AppLayoutTransitionDuration);
   }
@@ -54,7 +60,7 @@
     align-items: 'stretch';
     z-index: 20;
 
-    transition-property: left;
+    transition-property: left bottom;
     transition-timing-function: ease;
     transition-duration: var(--AppLayoutTransitionDuration);
   }
@@ -69,7 +75,7 @@
     align-items: stretch;
     z-index: 10;
 
-    transition-property: margin-left;
+    transition-property: margin-left padding-bottom;
     transition-timing-function: ease;
     transition-duration: var(--AppLayoutTransitionDuration);
   }
@@ -87,26 +93,29 @@
   }
 
   .CustomizeContainer {
-    display: none;
     position: fixed;
-    left: 0;
+    left: calc(-1 * var(--AppSidebarWidth));
+    top: 0;
+    width: var(--AppSidebarWidth);
     bottom: 0;
-    height: 300px;
-    width: 100%;
-    z-index: 20;
+    background-color: #fff;
+    z-index: 50;
+
+    transition-property: left;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
   }
 
-  &.-customize {
+  &.-customize-open {
+    left: var(--AppSidebarWidth);
+    overflow: hidden;
 
-    .ContentContainer,
-    .SidebarContainer,
-    .FooterContainer {
-      bottom: 300px;
+    .SidebarContainer {
+      margin-left: var(--AppSidebarWidth);
     }
 
     .CustomizeContainer {
-      background-color: red;
-      display: block;
+      left: 0;
     }
   }
 
@@ -129,7 +138,6 @@
     .FooterContainer {
       left: calc(-1 * var(--AppSidebarWidth));
     }
-
 
     // Variations
     &.-sidebar-open-mobile {
@@ -291,23 +299,47 @@
     .HeaderContainer {
       position: fixed;
     }
-  }
 
-  &.-sidebar-fixed {
-    .SidebarContainer {
-      position: fixed;
-    }
-  }
+    &.-customize-open {
+      .HeaderContainer {
+        left: calc(2 * var(--AppSidebarWidth));
+      }
 
-  &.-sidebar-static {
-    .SidebarContainer {
-      position: absolute;
+      &.-sidebar-compact-desktop {
+        .HeaderContainer {
+          left: calc(var(--AppSidebarWidth) + var(--AppSidebarWidth-compact));
+        }
+      }
+
+      &.-sidebar-closed-desktop {
+        .HeaderContainer {
+          left: var(--AppSidebarWidth);
+        }
+      }
     }
   }
 
   &.-footer-fixed {
     .FooterContainer {
       position: fixed;
+    }
+
+    &.-customize-open {
+      .FooterContainer {
+        left: calc(2 * var(--AppSidebarWidth));
+      }
+
+      &.-sidebar-compact-desktop {
+        .FooterContainer {
+          left: calc(var(--AppSidebarWidth) + var(--AppSidebarWidth-compact));
+        }
+      }
+
+      &.-sidebar-closed-desktop {
+        .FooterContainer {
+          left: var(--AppSidebarWidth);
+        }
+      }
     }
   }
 

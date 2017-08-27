@@ -3,6 +3,10 @@
 
   height: $height;
 
+  @include media-down(sm) {
+    display: none;
+  }
+
   @include media(md) {
     .-sidebar-compact-tablet & {
       height: auto;
@@ -59,17 +63,14 @@
   }
 
   .LinkCustomize {
-    .Icon {
-      // font-size: 32px;
+    .-customize & {
+      background-color: #fff;
+      color: var(--colorPrimary);
     }
   }
 
   .LinkToggleCompact {
     font-size: 42px;
-
-    @include media-down(sm) {
-      display: none;
-    }
 
     @include media(md) {
       .-sidebar-compact-tablet:not(.-rtl) & {
