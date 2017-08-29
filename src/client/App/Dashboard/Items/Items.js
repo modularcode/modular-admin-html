@@ -1,7 +1,6 @@
 import { Sparkline } from '_common/Chart';
 
 import theme from '_theme';
-import Util from '_common/Util';
 
 
 const colors = theme.get().colors;
@@ -20,7 +19,7 @@ Items.init = () => {
   drawChart();
 
   function drawChart() {
-    $("#DashboardItems .Stats").each(function() {
+    $('#DashboardItems .Stats').each(function() {
 
       let type = $(this).data('type');
 
@@ -28,8 +27,8 @@ Items.init = () => {
 
       if ($(this).data('data')) {
         data = $(this).data('data').split(',').map(function(item) {
-          if (item.indexOf(":") > 0) {
-            return item.split(":");
+          if (item.indexOf(':') > 0) {
+            return item.split(':');
           }
           else {
             return item;

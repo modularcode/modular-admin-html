@@ -93,8 +93,8 @@
     "html:prod": "cross-env NODE_ENV=production gulp html --gulpfile tools/gulpfile.js",
     "bundle:dev": "cross-env NODE_ENV=development webpack-dev-server --config tools/webpack.config.dev.js",
     "bundle:prod": "cross-env NODE_ENV=production webpack --config tools/webpack.config.prod.js",
-    "lint": "eslint --config .eslintrc src/**/*.js",
-    "lint:fix": "eslint --config .eslintrc src/**/*.js --fix",
+    "lint": "eslint --config .eslintrc \"src/**/*.js\"",
+    "lint:fix": "eslint --config .eslintrc \"src/**/*.js\" --fix",
     "clean": "rimraf dist",
     "prebuild": "npm run clean # clear dist directory",
     "postinstall": "opencollective postinstall"

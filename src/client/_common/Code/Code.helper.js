@@ -1,7 +1,7 @@
 module.exports.register = function (handlebars) {
   handlebars.registerHelper('Code', function(options) {
 
-    var className = options.hash.lang || "";
+    var className = options.hash.lang || '';
 
     // Input html
     var input = options.fn(this);
@@ -10,7 +10,7 @@ module.exports.register = function (handlebars) {
     input = handlebars.Utils.escapeExpression(input);
 
     // Break by lines
-    var lines = input.split("\n");
+    var lines = input.split('\n');
 
     // Get number of tabs before first line
     var numTabs = getNumFrontTabs(lines[0]);
@@ -21,7 +21,7 @@ module.exports.register = function (handlebars) {
     });
 
     // Rejoin the lines
-    return "<pre><code class='" + className + "'>" + lines.join("\n") + "</code></pre>";
+    return '<pre><code class=\'' + className + '\'>' + lines.join('\n') + '</code></pre>';
   });
 };
 
@@ -29,7 +29,7 @@ module.exports.register = function (handlebars) {
 function getNumFrontTabs(line) {
   var count = 0;
   var index = 0;
-  while (line.charAt(index++) === "\t") {
+  while (line.charAt(index++) === '\t') {
     count++;
   }
   return count;

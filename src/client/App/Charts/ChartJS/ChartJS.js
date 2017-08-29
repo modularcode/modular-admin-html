@@ -1,15 +1,15 @@
-function drawVisitsChart() {
+/*function drawVisitsChart() {
 
-  var ctx = document.getElementById("DashboardHistoryVisitsChart").getContext("2d");
+  var ctx = document.getElementById('DashboardHistoryVisitsChart').getContext('2d');
 
-  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   var config = {
     type: 'line',
     data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [{
-        label: "Users",
+        label: 'Users',
         backgroundColor: theme.get().colors.yellow.string(),
         borderColor: theme.get().colors.yellow.string(),
         data: [
@@ -23,7 +23,7 @@ function drawVisitsChart() {
         ],
         fill: false,
       }, {
-        label: "Visits",
+        label: 'Visits',
         fill: false,
         backgroundColor: theme.get().colors.green.string(),
         borderColor: theme.get().colors.green.string(),
@@ -87,3 +87,4 @@ function drawVisitsChart() {
   var myLine = new ChartJS(ctx, config);
 
 }
+*/

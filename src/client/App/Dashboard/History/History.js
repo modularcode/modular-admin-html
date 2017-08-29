@@ -22,7 +22,7 @@ History.init = () => {
   // drawing visits chart
   drawChart();
 
-  Util.addEventListener(document, 'tab.select', (e) => {
+  Util.addEventListener(document, 'tab.select', () => {
 
     drawChart();
 
@@ -66,12 +66,12 @@ History.init = () => {
       ykeys: ['users', 'visits'],
       ymin: 'auto 40',
       labels: ['Users', 'Visits'],
-      xLabels: "day",
+      xLabels: 'day',
       hideHover: 'auto',
       yLabelFormat: function (y) {
         // Only integers
         if (y === parseInt(y, 10)) {
-            return y;
+          return y;
         }
         else {
           return '';
@@ -98,44 +98,44 @@ History.init = () => {
 
     const dataDownloads = [
       {
-          year: '2006',
-          downloads: 1300
+        year: '2006',
+        downloads: 1300
       },
       {
-          year: '2007',
-          downloads: 1526
+        year: '2007',
+        downloads: 1526
       },
       {
-          year: '2008',
-          downloads: 2000
+        year: '2008',
+        downloads: 2000
       },
       {
-          year: '2009',
-          downloads: 1800
+        year: '2009',
+        downloads: 1800
       },
       {
-          year: '2010',
-          downloads: 1650
+        year: '2010',
+        downloads: 1650
       },
       {
-          year: '2011',
-          downloads: 620
+        year: '2011',
+        downloads: 620
       },
       {
-          year: '2012',
-          downloads: 1000
+        year: '2012',
+        downloads: 1000
       },
       {
-          year: '2013',
-          downloads: 1896
+        year: '2013',
+        downloads: 1896
       },
       {
-          year: '2014',
-          downloads: 850
+        year: '2014',
+        downloads: 850
       },
       {
-          year: '2015',
-          downloads: 1500
+        year: '2015',
+        downloads: 1500
       }
     ];
 

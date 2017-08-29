@@ -2,8 +2,8 @@ $roundness: 4px;
 $item-height: 40px;
 
 @mixin SidebarNavCompact() {
-  .CompactNavGroupName {
-    display: block;
+  .CompactNavGroupHeader {
+    display: flex;
   }
 
   // First level groups
@@ -87,48 +87,33 @@ $item-height: 40px;
 
 .SidebarNav {
 
-  .CompactNavGroupName {
-    $size: 50px;
+  .CompactNavGroupHeader {
 
+    $size: 55px;
+
+    font-size: 1rem;
     display: none;
     color: var(--colorText);
     position: relative;
-    font-size: 1.1em;
-    white-space: nowrap;
     width: 100%;
     height: $size;
-    line-height: $size;
-    padding-right: $size;
-    padding-left: $SidebarPaddingHorizontal;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $SidebarPaddingHorizontal;
     border-bottom: 1px solid var(--colorDivider);
-    margin-bottom: 0;
 
-    .DismissBtn {
-      padding: 0;
-      width: $size - 14px;
-      height: $size - 14px;
-      line-height: $size - 14px;
-      right: 3px;
-      top: 7px;
-      position: absolute;
-      display: block;
-      margin-left: auto;
-      color: var(--colorDivider);
-      text-align: center;
-      border-radius: $roundness;
-      transition: all .3s ease;
-      font-size: 1.2em;
-
-      .Icon {
-        display: inline-block;
-        position: static;
-        margin: 0;
-      }
-
-      &:hover {
-        color: var(--colorPrimary);
-      }
+    .NavTitle {
+      white-space: nowrap;
+      margin-bottom: 0;
+      color: var(--colorText-light);
+      font-size: 1rem;
     }
+
+  }
+
+  .CompactNavGroupName {
+
+
   }
 
   @include media(md) {

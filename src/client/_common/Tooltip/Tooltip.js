@@ -1,4 +1,4 @@
-import TooltipBS from 'bootstrap/js/src/tooltip';
+import 'bootstrap/js/src/tooltip';
 
 const Tooltip = {};
 
@@ -6,7 +6,7 @@ const Tooltip = {};
 Tooltip.init = function () {
 
   $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
   });
 
 };

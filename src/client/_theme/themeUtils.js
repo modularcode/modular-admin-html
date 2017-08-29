@@ -38,7 +38,7 @@ function getVariableValue(value) {
 function getColors(colorsObj, excludeShades) {
   let res = {};
 
-  Object.keys(colorsObj).map(function(key, index) {
+  Object.keys(colorsObj).map(function(key) {
 
     let val = colorsObj[key];
     let keyKebab = toKebabCase(key);
@@ -53,7 +53,7 @@ function getColors(colorsObj, excludeShades) {
         return;
       }
 
-      Object.keys(val).map(function(shadeKey, index) {
+      Object.keys(val).map(function(shadeKey) {
 
         let shadeKeyKebab = toKebabCase(shadeKey);
 
@@ -65,11 +65,11 @@ function getColors(colorsObj, excludeShades) {
   });
 
   return res;
-};
+}
 
 
 function toKebabCase(myStr) {
-  return !myStr ? null : myStr.replace(/([A-Z])/g, function (g) { return '-' + g[0].toLowerCase() });
+  return !myStr ? null : myStr.replace(/([A-Z])/g, function (g) { return '-' + g[0].toLowerCase(); });
 }
 
 

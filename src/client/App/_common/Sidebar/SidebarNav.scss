@@ -139,7 +139,7 @@ $submenu-levels: 4;
       }
     }
 
-    .NavGroup > a:after {
+    .NavGroup > .NavLink:after {
       right: 11px;
     }
 
@@ -149,13 +149,13 @@ $submenu-levels: 4;
       // height: 0;
       display: none;
 
-      a {
+      .NavLink {
         font-size: 0.9em;
         height: $item-height-nested;
       }
     }
 
-    &.-open > a:after {
+    &.-open > .NavLink:after {
       transform: translate(0, -50%) rotate(90deg);
     }
   }

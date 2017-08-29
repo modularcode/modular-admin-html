@@ -54,7 +54,7 @@ function toCSS() {
     let cssRule;
 
     if (typeof varValue === 'object') {
-      cssRule = ``;
+      cssRule = '';
     }
     else {
       cssRule = `--${varName}: ${varValue};`;
@@ -79,9 +79,9 @@ function toSCSS() {
     // Use sass map
     if (typeof varValue === 'object') {
       varValue = JSON.stringify(varValue)
-        .replace(/\"/g, "")
-        .replace(/{/g, "(")
-        .replace(/}/g, ")");
+        .replace(/"/g, '')
+        .replace(/{/g, '(')
+        .replace(/}/g, ')');
     }
 
     sassRule = `$${varName}: ${varValue};`;

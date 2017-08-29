@@ -1,5 +1,6 @@
 import theme from '_theme';
 import Util from '_common/Util';
+import Customize from '../Customize';
 
 const Sidebar = {
   refs: {
@@ -17,7 +18,7 @@ Sidebar.init = function () {
 
   // Ref elements
 
-  vm.refs.$Main = $("#Main");
+  vm.refs.$Main = $('#Main');
   vm.refs.$App = $('#App');
   vm.refs.$SidebarNav = $('#SidebarNav');
   vm.refs.$SidebarFooter = $('#SidebarFooter');
@@ -109,10 +110,10 @@ Sidebar.init = function () {
 
   // Toggle customize click
   $('#SidebarToggleCustomize').on('click', function(e) {
-    e.preventDefault();;
+    e.preventDefault();
 
-    vm.refs.$App.toggleClass('-customize-open');
-  })
+    Customize.toggle();
+  });
 
 };
 
@@ -259,6 +260,8 @@ Sidebar.initNavTooltips = function() {
 };
 
 Sidebar.destroyNavTooltips = function() {
+  const vm = Sidebar;
+
   vm.refs.$NavLinksWithTooltip.each(function() {
     $(this).tooltip('dispose');
   });

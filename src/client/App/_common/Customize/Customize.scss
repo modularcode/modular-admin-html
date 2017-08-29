@@ -36,11 +36,17 @@ $CustomizePaddingHorizontal: 20px;
     padding: 0 $CustomizePaddingHorizontal;
     height: var(--AppHeaderHeight);
     border-bottom: 1px solid var(--colorDivider);
+    position: relative;
+    font-size: 1rem;
 
     .Title {
       color: var(--colorText-light);
       font-size: 16px;
       font-weight: 300;
+    }
+
+    .CustomizeDismissButton {
+      right: 7px;
     }
   }
 

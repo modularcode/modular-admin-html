@@ -1,5 +1,5 @@
 import Header from './Header';
-import Search from './Search';
+import './Search';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import Customize from './Customize';

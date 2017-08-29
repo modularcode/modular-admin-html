@@ -1,1 +1,1 @@
-import './Table.scss'
+import './Table.scss';

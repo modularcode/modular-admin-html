@@ -1,15 +1,37 @@
 .Button {
   background-color: transparent;
-  padding: 7px 14px;
+  // padding: 7px 14px;
   border-radius: 0;
   border: 1px solid transparent;
   box-shadow: none;
   cursor: pointer;
   transition: all .2s ease;
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+  height: 2em;
+  padding: 0 .5em;
+  // vertical-align: middle;
+  align-items: center;
+  justify-content: center;
   outline: none;
   line-height: 1.4em;
+
+  &.-dismiss {
+    color: var(--colorDivider);
+    display: inline-flex;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25em;
+    right: 5px;
+    position: absolute;
+
+    &:hover {
+      color: var(--colorPrimary);
+    }
+  }
 
   &.-raized {
     box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 6px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
@@ -19,11 +41,11 @@
     background-color: #fff;
   }
 
-  &:hover {
+  &:hover:not(.-dismiss) {
     background-color: #f6f6f6;
   }
 
-  &:focus {
+  &:focus:not(.-dismiss) {
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 8px, rgba(0, 0, 0, 0.09) 0px 1px 6px;
   }
