@@ -1,19 +1,22 @@
 .Button {
   background-color: transparent;
-  // padding: 7px 14px;
   border-radius: 0;
   border: 1px solid transparent;
   box-shadow: none;
   cursor: pointer;
   transition: all .2s ease;
-  display: inline-flex;
-  height: 2em;
-  padding: 0 .5em;
-  // vertical-align: middle;
+  display: inline-block;
+  height: 2.2em;
+  line-height: 2.2em;
+  padding: 0 1em;
+  vertical-align: middle;
   align-items: center;
   justify-content: center;
   outline: none;
-  line-height: 1.4em;
+
+  .Icon {
+    vertical-align: inherit;
+  }
 
   &.-dismiss {
     color: var(--colorDivider);
@@ -116,17 +119,17 @@
 
   &.-lg {
     font-size: 1.16em;
-    padding: 8px 16px;
+    // padding: 8px 16px;
   }
 
   &.-xl {
     font-size: 1.3em;
-    padding: 9px 18px;
+    // padding: 9px 18px;
   }
 
   &.-sm {
     font-size: .8em;
-    padding: 5px 11px;
+    // padding: 5px 11px;
   }
 
   &.-rounded {
