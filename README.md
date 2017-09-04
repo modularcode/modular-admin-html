@@ -25,6 +25,8 @@ We're working hard on version 2, which is a complete rewrite.
 
 ## Getting Started
 
+> **Note:** If you don't want to re-build the project, you may just clone this branch directly  ```https://github.com/modularcode/modular-admin-html/tree/gh-pages```
+
 ### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases) or Git Clone
 
 ```
