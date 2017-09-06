@@ -30,7 +30,7 @@
 		}
 	}
 
-	
+
 	.items-search {
 		position: absolute;
 		margin-bottom: 15px;
@@ -40,7 +40,7 @@
 		@include media-down(sm) {
 			position: static;
 		}
-		
+
 		.search-button {
 			margin: 0;
 		}
@@ -103,7 +103,7 @@
 
 			&.item-col-date {
 				text-align: right;
-			}			
+			}
 		}
 	}
 
@@ -199,7 +199,7 @@
 
 
 				&.item-col-actions {
-					
+
 				}
 
 				&.item-col-img {
@@ -231,7 +231,7 @@
 					flex-basis: 100px;
 					flex-basis: 0;
 					flex-grow: $item-list-col-grow;
-				}		
+				}
 			}
 
 		}
@@ -239,7 +239,7 @@
 
 	// Small Mobile view
 
-	@include media(xs) {
+	@include media-down(xs) {
 
 		.item-list .item {
 			border: none;
@@ -255,7 +255,7 @@
 				padding-left: $item-list-padding-x;
 
 				&[class^=item-col] {
-					flex-basis: 100%;	
+					flex-basis: 100%;
 				}
 
 
@@ -311,7 +311,7 @@
 					text-align: left;
 				}
 
-				
+
 			}
 
 
