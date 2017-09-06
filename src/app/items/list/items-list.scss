@@ -143,6 +143,10 @@
 	@include media(sm) {
 		.item-list {
 
+			.item-list-header {
+				display: none;
+			}
+
 			.item {
 				background-color: #fff;
 				margin-bottom: 10px;
@@ -240,6 +244,10 @@
 	// Small Mobile view
 
 	@include media-down(xs) {
+
+		.item-list-header {
+			display: none;
+		}
 
 		.item-list .item {
 			border: none;

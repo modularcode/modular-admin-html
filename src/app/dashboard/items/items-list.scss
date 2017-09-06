@@ -4,16 +4,16 @@
 		// Common case styles
 
 		.item-col-title {
-			flex-grow: 3 * $item-list-col-grow;	
+			flex-grow: 3 * $item-list-col-grow;
 		}
 
 		.item-col-date {
-			text-align: right;	
+			text-align: right;
 		}
 
 		@include media-up(xl) {
 			.item-col-date {
-				flex-grow: $item-list-col-grow + 1;	
+				flex-grow: $item-list-col-grow + 1;
 			}
 		}
 
@@ -21,6 +21,11 @@
 		// Large mobile view
 
 		@include media-down(sm) {
+
+			.item-list-header {
+				display: none;
+			}
+
 			.item-row {
 				padding: 0;
 			}
