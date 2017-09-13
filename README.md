@@ -1,4 +1,4 @@
-# Modular Admin: Free Bootstrap 4 Dashboard Theme | HTML version
+# ModularAdmin: Free Bootstrap 4 Dashboard Theme <br> HTML version
 
 [![Backers on Open Collective](https://opencollective.com/modular-admin-html/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/modular-admin-html/sponsors/badge.svg)](#sponsors) [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
