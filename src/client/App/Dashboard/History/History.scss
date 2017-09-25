@@ -1,0 +1,34 @@
+.DashboardHistory {
+
+  .CardHeader .Icon {
+    margin-right: 6px;
+    font-size: 1.7em;
+  }
+
+  .TabNav {
+    margin-left: auto;
+  }
+
+  .-rtl & {
+    .CardHeader .Icon {
+      margin-right: 0;
+      margin-left: 6px;
+      transform: scaleX(-1);
+    }
+
+    .TabNav {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  #DashboardHistoryAudienceChart,
+  #DashboardHistoryDownloadsChart {
+    height: 220px;
+    overflow: hidden;
+
+    @include media-up(xl) {
+      height: 260px;
+    }
+  }
+}

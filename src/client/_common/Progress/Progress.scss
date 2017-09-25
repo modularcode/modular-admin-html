@@ -1,0 +1,33 @@
+.Progress {
+  height: 6px;
+  margin: 5px 0;
+  position: relative;
+  border-radius: 2px;
+  background-color: #dddddd;
+  overflow: hidden;
+
+  .Bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 2px;
+  }
+
+  &.-sm {
+    height: 3px;
+    border-radius: 1px;
+
+    .Bar {
+      border-radius: 1px;
+    }
+  }
+
+  &.-square {
+    border-radius: 0;
+
+    .Bar {
+      border-radius: 0;
+    }
+  }
+}

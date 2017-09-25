@@ -1,0 +1,45 @@
+.Dashboard {
+  .Intro {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 40px;
+
+    @include media-down(sm) {
+      display: none;
+      padding: 10px;
+    }
+
+    @include media(sm) {
+      margin-bottom: 25px;
+    }
+
+    a {
+      font-weight: normal;
+      font-size: .9em;
+    }
+
+    .Title {
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+
+      @include media-down(sm) {
+        font-size: 1.5em;
+        margin-bottom: 8px;
+      }
+    }
+
+    .Description {
+      margin: 0;
+      font-weight: 300;
+      line-height: 1.5em;
+
+      @include media-down(sm) {
+        font-size: .88em;
+        line-height: 1.4em;
+      }
+    }
+
+  }
+}

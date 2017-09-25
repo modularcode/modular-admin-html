@@ -1,0 +1,138 @@
+.Button {
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid transparent;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all .2s ease;
+  display: inline-block;
+  height: 2.2em;
+  line-height: 2.2em;
+  padding: 0 1em;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+
+  .Icon {
+    vertical-align: inherit;
+  }
+
+  &.-dismiss {
+    color: var(--colorDivider);
+    display: inline-flex;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25em;
+    right: 5px;
+    position: absolute;
+
+    &:hover {
+      color: var(--colorPrimary);
+    }
+  }
+
+  &.-raized {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 6px, rgba(0, 0, 0, 0.08) 0px 1px 4px;
+  }
+
+  &.-outline {
+    background-color: #fff;
+  }
+
+  &:hover:not(.-dismiss) {
+    background-color: #f6f6f6;
+  }
+
+  &:focus:not(.-dismiss) {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 8px, rgba(0, 0, 0, 0.09) 0px 1px 6px;
+  }
+
+  &.-default {
+    color: var(--colorText-light);
+
+    &.-raised:not(&.outline) {
+      background-color: var(--colorText-lighter);
+
+    }
+
+    &:hover {
+      color: var(--colorText-dark);
+      border-color: var(--colorText);
+    }
+
+    &.-outline {
+      border-color: var(--colorText-lighter);
+    }
+  }
+
+  &.-primary {
+    color: var(--colorPrimary);
+
+    &.-raised {
+      color: var(--colorText-inverse);
+      background-color: var(--colorPrimary);
+      border-color: var(--colorPrimary);
+
+      &:hover {
+        background-color: var(--colorPrimary-dark);
+        border-color: var(--colorPrimary-dark);
+      }
+    }
+
+    &.-outline {
+      color: var(--colorPrimary);
+      border-color: var(--colorPrimary);
+
+      &:hover {
+        color: var(--colorPrimary-dark);
+        border-color: var(--colorPrimary-dark);
+      }
+    }
+  }
+
+  &.-secondary {
+    color: var(--colorSecondary);
+
+
+    &.-raised {
+      color: var(--colorText-inverse);
+      background-color: var(--colorSecondary);
+      border-color: var(--colorSecondary);
+    }
+
+
+    &.-outline {
+      border-color: var(--colorSecondary);
+    }
+  }
+
+
+
+
+
+
+  &.-lg {
+    font-size: 1.16em;
+    // padding: 8px 16px;
+  }
+
+  &.-xl {
+    font-size: 1.3em;
+    // padding: 9px 18px;
+  }
+
+  &.-sm {
+    font-size: .8em;
+    // padding: 5px 11px;
+  }
+
+  &.-rounded {
+    border-radius: .3em;
+  }
+}

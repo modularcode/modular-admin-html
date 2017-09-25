@@ -1,0 +1,198 @@
+$font-size: 15px;
+
+$icon-font-size: 20px;
+$icon-font-size-nested: 15px;
+
+$icon-box-width: 26px;
+$icon-box-width-nested: 22px;
+
+$icon-spacing: 5px;
+
+$badge-font-size: 25px;
+$badge-font-nested: 25px;
+
+$item-height: 44px;
+$item-height-nested: 36px;
+$item-padding-base: $SidebarPaddingHorizontal + $icon-box-width + $icon-spacing;
+
+$sumbenu-padding: 6px;
+$submenu-levels: 4;
+
+.SidebarNav {
+
+  font-size: $font-size;
+  padding-bottom: 15px;
+  overflow: hidden;
+
+
+  .Divider {
+    display: block;
+    // width: 100%;
+    height: 1px;
+    margin: 3px $SidebarPaddingHorizontal;
+    background-color: rgba(255, 255, 255, 0.13);
+  }
+
+  .NavIcon {
+    position: absolute;
+    font-size: $icon-font-size;
+    width: $icon-box-width;
+    height: $item-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: $SidebarPaddingHorizontal;
+    top: 0;
+
+    .-rtl & {
+      left: auto;
+      right: $SidebarPaddingHorizontal;
+    }
+  }
+
+  .CompactNavGroupName {
+    display: none;
+  }
+
+  // General styles for items
+  .NavLink {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: $item-height;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    transition: color .3s ease, background .3s ease;
+    color: var(--SidebarNavColorText);
+    cursor: pointer;
+    padding: 0 $SidebarPaddingHorizontal 0 $item-padding-base;
+    font-weight: normal;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &.-active {
+      color: var(--SidebarNavColorText-active);
+    }
+
+    &:hover {
+      color: var(--SidebarNavColorText-active);
+    }
+
+    &.-accented {
+      & > .Icon {
+        color: var(--colorPrimary);
+      }
+    }
+
+    .-rtl & {
+      justify-content: flex-end;
+      padding: 0 $item-padding-base 0 $SidebarPaddingHorizontal;
+    }
+  }
+
+
+
+
+  // First level links
+  & > .NavLink,
+  & > .NavGroup > .NavLink {
+    span {
+      opacity: 1;
+      transition: opacity .3s ease;
+    }
+  }
+
+  .NavGroup.-open > .NavLink {
+    color: var(--SidebarNavColorText-open);
+
+    &:after {
+      color: var(--SidebarNavColorText-active);
+    }
+
+    &:hover {
+      color: var(--SidebarNavColorText-active);
+    }
+  }
+
+  // Nested items
+  .NavGroup {
+
+    position: relative;
+
+    & > .NavLink:after {
+      @include fa-icon();
+      display: block;
+      content: "\f054";
+      font-size: .8em;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: 2px;
+      transition: transform .3s ease;
+      transform: translate(0, -50%);
+
+      .-rtl & {
+        right: auto;
+        left: 10px;
+      }
+    }
+
+    .NavGroup > .NavLink:after {
+      right: 11px;
+    }
+
+    .Nav {
+      overflow-x: visible;
+      overflow-y: hidden;
+      // height: 0;
+      display: none;
+
+      .NavLink {
+        font-size: 0.9em;
+        height: $item-height-nested;
+      }
+    }
+
+    &.-open > .NavLink:after {
+      transform: translate(0, -50%) rotate(90deg);
+    }
+  }
+
+
+}
+
+.App:not(.-sidebar-compact) .SidebarNav {
+
+
+
+  // Nested items padding
+  $sel: '';
+
+  @for $i from 1 through $submenu-levels {
+
+    $padding-base:  $icon-box-width + $SidebarPaddingHorizontal;
+    $sel: if($i == 1, 'nav', selector-nest($sel, 'nav')); //selector-nest($sel, "nav")) !global;;
+
+
+    #{$sel} .NavLink {
+      padding-left: $item-padding-base + $sumbenu-padding * $i;
+
+      .Icon {
+        left: $SidebarPaddingHorizontal + $sumbenu-padding * $i;
+      }
+
+      .-rtl & {
+        padding-left: 0;
+        padding-right: $item-padding-base + $sumbenu-padding * $i;
+
+        .Icon {
+          left: auto;
+          right: $SidebarPaddingHorizontal + $sumbenu-padding * $i;
+        }
+      }
+    }
+  }
+
+}

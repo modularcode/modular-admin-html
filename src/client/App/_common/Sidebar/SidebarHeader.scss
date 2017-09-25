@@ -1,0 +1,127 @@
+$SidebarPaddingHorizontal: 20px;
+
+.SidebarHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 $SidebarPaddingHorizontal;
+  flex-shrink: 0;
+  height: var(--AppHeaderHeight);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all .3s ease;
+
+  .-rtl & {
+    flex-direction: row-reverse;
+  }
+
+  @include media(md) {
+    .-sidebar-compact-tablet & {
+      padding-left: 11px;
+    }
+  }
+
+  @include media-up(lg) {
+    .-sidebar-compact-desktop & {
+      padding-left: 11px;
+    }
+  }
+
+
+  .Logo {
+    width: 38px;
+    height: 38px;
+    display: block;
+
+    // https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
+    // https://github.com/Schepp/CSS-Filters-Polyfill
+    -webkit-filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.3) );
+            filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.3) );
+
+    .path {
+      transition: all .3s ease;
+    }
+
+    .outline {
+      fill: var(--colorPrimary);
+    }
+
+    .letter {
+      fill: #fff;
+      opacity: .75;
+    }
+
+    &:hover {
+      .outline {
+
+      }
+
+      .letter {
+        opacity: 1;
+      }
+    }
+  }
+
+  .LogoLink {
+    margin-left: 5px;
+    margin-right: 12px;
+
+    .-rtl & {
+      margin-left: 12px;
+      margin-right: 5px;
+    }
+  }
+
+  .Title {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 1;
+    transition: all .3s ease;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+
+    .Link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+    }
+
+    .Version {
+      color: $colorText-muted;
+      margin-left: 5px;
+    }
+
+    .Platform {
+      position: absolute;
+      display: block;
+      text-decoration: none;
+      top: 100%;
+      margin-top: 2px;
+      right: 0;
+      font-size: 9px;
+      font-weight: bold;
+      color: $colorText-muted;
+      transition: color .3s ease;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    @include media(md) {
+      .-sidebar-compact-tablet & {
+          opacity: 0;
+      }
+    }
+
+    @include media-up(lg) {
+      .-sidebar-compact-desktop & {
+        opacity: 0;
+      }
+    }
+  }
+}

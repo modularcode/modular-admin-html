@@ -1,0 +1,17 @@
+.Footer {
+
+  $FooterPaddingHorizontal: 35px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $FooterPaddingHorizontal;
+
+  background-color: var(--FooterColorBg);
+  box-shadow: var(--FooterShadow);
+
+  .-rtl & {
+    flex-direction: row-reverse;
+  }
+}

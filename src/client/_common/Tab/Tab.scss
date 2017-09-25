@@ -1,0 +1,89 @@
+@import "bootstrap/scss/_nav.scss";
+
+.TabNav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-self: stretch;
+  position: relative;
+
+
+  .TabNavItem {
+    display: flex;
+    align-self: stretch;
+
+
+    a {
+      display: flex;
+      align-self: stretch;
+      align-items: center;
+      color: var(--colorPrimary-dark);
+      text-decoration: none;
+      padding: 0 10px;
+      font-size: 13px;
+      border: 1px solid transparent;
+      border-top-width: 2px;
+      border-bottom-width: 2px;
+      transition: color .2s ease, border-color .2s ease;
+      font-weight: 600;
+
+
+      html.-rounded & {
+        border-radius: 5px 5px 0 0;
+      }
+
+      &:hover {
+        color: var(--colorPrimary-dark);
+      }
+
+      .-rtl & {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &.-active a {
+      color: var(--colorText);
+
+      border-top: 2px solid var(--colorPrimary);
+      border-left: 1px solid var(--colorDivider);
+      border-right: 1px solid var(--colorDivider);
+      border-bottom: 2px solid var(--CardColorBg);
+    }
+
+    &.-disabled {
+      color: var(--colorText-muted);
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+}
+
+.CardHeader .TabNav {
+  top: 2px;
+  padding: 0 3px;
+}
+
+
+.TabContent {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-self: stretch;
+
+
+  .TabPane {
+    flex: 1;
+    align-self: stretch;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    &.-active {
+      display: flex;
+    }
+  }
+}

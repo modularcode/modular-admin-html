@@ -1,0 +1,71 @@
+---
+filename: index # output file name
+layout: App/App.layout
+titleSeparator: ''
+items:
+  - title: LG Stylo 3 - Prepaid - Carrier Locked - Virgin Mobile
+    img: https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg
+    author: Meadow Katheryne
+    category: Software
+    date: 21 SEP 10:45
+    sales: 4958
+  - title: DJI Spark Palm launch, Intelligent Portable Mini Drone, Alpine White
+    img: https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg
+    author: Alexander Sargssyan
+    category: Software
+    date: 21 SEP 10:40
+    sales: 192
+  - title: Simple Mobile Alcatel Pixi Glory 4G LTE Prepaid
+    img: https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg
+    author: Angela Blaine
+    category: Software
+    date: 20 SEP 18:14
+    sales: 2143
+  - title: Samsung Electronics UN55MU7600 Curved 55-Inch 4K
+    img: https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg
+    author: Marcus Ulupus
+    category: Software
+    date: 20 SEP 15:37
+    sales: 124
+  - title: LG B7A Series 65" OLED 4K HDR Smart TV 2017 Model
+    img: https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg
+    author: Grdon Mrdon
+    category: Software
+    date: 20 SEP 13:42
+    sales: 10214
+  - title: Hard EVA Travel Black Case for DJI Spark Palm launch Intelligent Portable Mini Drone
+    img: https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg
+    author: Tiko Charbaxo
+    category: Software
+    date: 20 SEP 09:10
+    sales: 3217
+---
+<article class="Page Dashboard">
+  <div class="Intro">
+    <h1 class="Title">
+      Welcome to ModularAdmin 2!
+    </h1>
+    <p class="Description">
+      ModularAdmin is an open source dashboard theme built with modular components.
+      <a href=""><i class="fa fa-book"></i> Read The Docs</a>.
+
+    </p>
+  </div>
+  <div class="row -row-compact-sm -row-compact-md -row-compact-lg">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5 -sameheight">
+      {{> App/Dashboard/Stats/Stats}}
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-7 -sameheight">
+      {{> App/Dashboard/History/History}}
+    </div>
+
+    <div class="col-xl-8 -sameheight">
+      {{> App/Dashboard/Items/Items}}
+    </div>
+
+    <div class="col-xl-4 -sameheight">
+      {{> App/Dashboard/SalesBreakdown/SalesBreakdown}}
+    </div>
+  </div>
+</article>

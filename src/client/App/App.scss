@@ -1,0 +1,472 @@
+.App {
+  overflow-x: hidden;
+  background-color: var(--AppColorBg);
+  position: relative;
+  left: 0;
+
+  transition-property: left;
+  transition-timing-function: ease;
+  transition-duration: var(--AppLayoutTransitionDuration);
+
+  .HeaderContainer {
+    position: absolute;
+    top: 0;
+    left: var(--AppSidebarWidth);
+    right: 0;
+    height: var(--AppHeaderHeight);
+    display: flex;
+    align-items: 'stretch';
+    z-index: 30;
+
+    transition-property: left right;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+  }
+
+  .SidebarContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--AppSidebarWidth);
+    display: flex;
+    z-index: 40;
+
+    transition-property: left width bottom margin-left;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+  }
+
+  .SidebarOverlay {
+    position: absolute;
+    left: 200vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    z-index: 35;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .FooterContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: var(--AppSidebarWidth);
+    height: var(--AppFooterHeight);
+    display: flex;
+    align-items: 'stretch';
+    z-index: 20;
+
+    transition-property: left bottom;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+  }
+
+  .ContentContainer {
+    display: flex;
+    position: relative;
+    padding-top: var(--AppHeaderHeight);
+    padding-bottom: var(--AppFooterHeight);
+    margin-left: var(--AppSidebarWidth);
+    min-height: 100vh;
+    align-items: stretch;
+    z-index: 10;
+
+    transition-property: margin-left padding-bottom;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+  }
+
+  .Content {
+    width: 100%;
+  }
+
+  .ContentBackground {
+    position: absolute;
+    width: 100%;
+    top: var(--AppHeaderHeight);
+    bottom: var(--AppFooterHeight);
+    z-index: -1;
+  }
+
+  .CustomizeContainer {
+    position: fixed;
+    left: calc(-1 * var(--AppCustomizeWidth));
+    top: 0;
+    width: var(--AppCustomizeWidth);
+    bottom: 0;
+    z-index: 50;
+
+    transition-property: left;
+    transition-timing-function: ease;
+    transition-duration: var(--AppLayoutTransitionDuration);
+  }
+
+  &.-customize-open {
+
+    left: var(--AppCustomizeWidth);
+    overflow: hidden;
+
+    .SidebarContainer {
+      margin-left: var(--AppCustomizeWidth);
+    }
+
+    .CustomizeContainer {
+      left: 0;
+    }
+  }
+
+
+  @include media-down(sm) {
+
+    // Defaults for mobile
+    .HeaderContainer {
+      left: 0;
+    }
+
+    .SidebarContainer {
+      left: calc(-1 * var(--AppSidebarWidth));
+    }
+
+    .ContentContainer {
+      margin-left: 0;
+    }
+
+    .FooterContainer {
+      left: calc(-1 * var(--AppSidebarWidth));
+    }
+
+    // Variations
+    &.-sidebar-open-mobile {
+      .SidebarContainer {
+        left: 0;
+      }
+    }
+  }
+
+  @include media(md) {
+
+    // Defaults for tablet
+    .HeaderContainer {
+      left: 0;
+    }
+
+    .SidebarContainer {
+      left: calc(-1 * var(--AppSidebarWidth));
+    }
+
+    .ContentContainer {
+      margin-left: 0;
+    }
+
+    .FooterContainer {
+      left: calc(-1 * var(--AppSidebarWidth));
+    }
+
+
+    // Variations for tablets
+    &.-sidebar-compact-tablet {
+      .SidebarContainer {
+        left: calc(-1 * var(--AppSidebarWidth-compact));
+        width: var(--AppSidebarWidth-compact);
+      }
+    }
+
+    &.-sidebar-open-tablet {
+      .SidebarContainer {
+        left: 0;
+      }
+    }
+
+    &.-sidebar-open-tablet.-sidebar-compact-tablet {
+      .HeaderContainer {
+        left: var(--AppSidebarWidth-compact);
+      }
+
+      .SidebarContainer {
+        left: 0;
+      }
+
+      .ContentContainer {
+        margin-left: var(--AppSidebarWidth-compact);
+      }
+
+      .FooterContainer {
+        left: var(--AppSidebarWidth-compact);
+      }
+    }
+  }
+
+  @include media-up(lg) {
+    // Defaults for desktops
+
+
+    // Variations for desktops
+    &.-sidebar-compact-desktop {
+      .HeaderContainer {
+        left: var(--AppSidebarWidth-compact);
+      }
+
+      .SidebarContainer {
+        width: var(--AppSidebarWidth-compact);
+      }
+
+      .ContentContainer {
+        margin-left: var(--AppSidebarWidth-compact);
+      }
+
+      .FooterContainer {
+        left: var(--AppSidebarWidth-compact);
+      }
+    }
+
+
+    &.-sidebar-closed-desktop {
+      .HeaderContainer {
+        left: 0;
+      }
+
+      .SidebarContainer {
+        left: calc(-1 * var(--AppSidebarWidth));
+      }
+
+      .ContentContainer {
+        margin-left: 0;
+      }
+
+      .FooterContainer {
+        left: 0;
+      }
+    }
+
+
+    &.-sidebar-closed-desktop.-sidebar-compact-desktop {
+      .SidebarContainer {
+        left: calc(-1 * var(--AppSidebarWidth-compact));
+      }
+    }
+  }
+
+
+
+  // Sidebar overlay
+  @mixin sidebar-open-overlay() {
+    .SidebarOverlay {
+      left: 0;
+      opacity: 1;
+    }
+
+    // Blur out the content
+    .HeaderContainer,
+    .ContentContainer,
+    .FooterContainer {
+      filter: blur(2px);
+    }
+  }
+
+  // By default on mobiles and tablets the sidebar is closed
+  // Add this class to open the sidebar
+  &.-sidebar-open-mobile {
+    @include media-down(sm) {
+      @include sidebar-open-overlay();
+    }
+  }
+
+  &.-sidebar-open-tablet:not(.-sidebar-compact-tablet) {
+    @include media(md) {
+      @include sidebar-open-overlay();
+    }
+  }
+
+  &.-sidebar-compact-tablet.-sidebar-nav-open {
+    @include media(md) {
+      @include sidebar-open-overlay();
+    }
+  }
+
+  &.-sidebar-compact-desktop.-sidebar-nav-open {
+    @include media-up(lg) {
+      @include sidebar-open-overlay();
+    }
+  }
+
+
+  // Generic Layout variations
+  &.-header-fixed {
+    .HeaderContainer {
+      position: fixed;
+    }
+
+    &.-customize-open {
+      .HeaderContainer {
+        left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth));
+        right: calc(-1 * var(--AppCustomizeWidth));
+      }
+
+      @include media-down(sm) {
+        .HeaderContainer {
+          left: 0;
+          right: 0;
+        }
+      }
+
+      @include media(md) {
+        .HeaderContainer {
+          left: var(--AppCustomizeWidth);
+        }
+        &.-sidebar-compact-tablet.-sidebar-open-tablet {
+          .HeaderContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
+        }
+      }
+
+      @include media-up(lg) {
+        &.-sidebar-compact-desktop:not(.-sidebar-closed-desktop) {
+          .HeaderContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
+        }
+
+        &.-sidebar-closed-desktop {
+          .HeaderContainer {
+            left: var(--AppCustomizeWidth);
+          }
+        }
+      }
+
+    }
+  }
+
+  &.-footer-fixed {
+    .FooterContainer {
+      position: fixed;
+    }
+
+    &.-customize-open {
+      .FooterContainer {
+        left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth));
+        right: calc(-1 * var(--AppCustomizeWidth));
+      }
+
+      @include media-down(sm) {
+        .FooterContainer {
+          left: 0;
+          right: 0;
+        }
+      }
+
+      @include media(md) {
+        .FooterContainer {
+          left: var(--AppCustomizeWidth);
+        }
+        &.-sidebar-compact-tablet.-sidebar-open-tablet {
+          .FooterContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
+        }
+      }
+
+      @include media-up(lg) {
+        &.-sidebar-compact-desktop:not(.-sidebar-closed-desktop) {
+          .FooterContainer {
+            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+          }
+        }
+
+        &.-sidebar-closed-desktop {
+          .FooterContainer {
+            left: var(--AppCustomizeWidth);
+          }
+        }
+      }
+
+    }
+  }
+
+  &.-header-fixed-mobile {
+    @include media-down(sm) {
+      .HeaderContainer {
+        position: fixed;
+      }
+    }
+  }
+
+
+  // RTL variation
+  // .-rtl & {
+
+  //   .HeaderContainer {
+  //     left: 0;
+  //     right: var(--AppSidebarWidth);
+
+  //     @include media-down(md) {
+  //       right: 0;
+  //     }
+  //   }
+
+  //   .SidebarContainer {
+  //     left: auto;
+  //     right: 0;
+
+  //     @include media-down(md) {
+  //       left: auto;
+  //       right: calc(-1 * var(--AppSidebarWidth));
+  //     }
+  //   }
+
+
+  //   .FooterContainer {
+  //     left: 0;
+  //     right: var(--AppSidebarWidth);
+
+  //     @include media-down(md) {
+  //       right: 0;
+  //     }
+  //   }
+
+  //   .ContentContainer {
+  //     margin-left: 0;
+  //     margin-right: var(--AppSidebarWidth);
+  //     @include media-down(md) {
+  //       margin-right: 0;
+  //     }
+  //   }
+
+  //   &.-sidebar-closed-desktop {
+  //     @include media-up(lg) {
+  //       .HeaderContainer {
+  //         right: 0;
+  //       }
+
+  //       .SidebarContainer {
+  //         right: calc(-1 * var(--AppSidebarWidth));
+  //       }
+
+  //       .FooterContainer {
+  //         right: 0;
+  //       }
+
+  //       .ContentContainer {
+  //         margin-right: 0;
+  //       }
+  //     }
+  //   }
+
+  //   &.-sidebar-open-mobile {
+  //     @include media-down(md) {
+  //       .SidebarContainer {
+  //         right: 0;
+  //       }
+
+  //       .SidebarOverlay {
+  //         right: 0;
+  //       }
+  //     }
+  //   }
+  // }
+
+}

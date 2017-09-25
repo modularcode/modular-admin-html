@@ -1,0 +1,65 @@
+.Dropdown {
+
+  position: relative;
+
+  .DropdownToggle {
+    &:after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 0.3em;
+      vertical-align: middle;
+      content: "";
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-left: 0.3em solid transparent;
+    }
+  }
+
+
+  .DropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    background-color: var(--DropdownColorBg);
+    box-shadow: 1px 1px 7px rgba(126, 142, 159, 0.2);
+    border: 1px solid rgba(126, 142, 159, 0.1);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    min-width: 10rem;
+
+    &.-end {
+      left: auto;
+      right: 0;
+
+      .-rtl & {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  .Nav {
+    a {
+      display: block;
+      padding: 8px 14px;
+    }
+
+    .Divider {
+      height: 1px;
+      background-color: var(--colorDivider);
+    }
+
+    &.-bordered {
+      a {
+        border-bottom: 1px solid rgba(126, 142, 159, 0.1);
+      }
+    }
+
+    .Icon {
+      margin-right: .3em;
+    }
+  }
+}

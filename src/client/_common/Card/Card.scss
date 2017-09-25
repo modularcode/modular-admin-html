@@ -1,0 +1,125 @@
+.Card {
+  background-color: var(--CardColorBg);
+  box-shadow: var(--CardShadow);
+  width: 100%;
+  margin-bottom: var(--CardMarginBottom);
+  display: flex;
+  flex-direction: column;
+
+  @include media-down (sm) {
+    margin-bottom: var(--CardMarginBottom-sm);
+  }
+
+  @include media (md) {
+    margin-bottom: var(--CardMarginBottom-md);
+  }
+
+  @include media (lg) {
+    margin-bottom: var(--CardMarginBottom-lg);
+  }
+
+  @include media-up (xl) {
+    margin-bottom: var(--CardMarginBottom-xl);
+  }
+
+  // Rrounded
+  .-rounded,
+  .-rounded & {
+    border-radius: 7px;
+
+    .CardHeader {
+      border-radius: 7px 7px 0 0;
+    }
+  }
+
+  .CardHeader {
+    background-image: none;
+    background-color: #ffffff;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border-radius: 0;
+    min-height: 45px;
+    border: none;
+
+    &.-bordered {
+      border-bottom: 1px solid var(--colorDivider);
+    }
+
+    &.-sm {
+      min-height: 40px;
+    }
+
+    &.-lg {
+      min-height: 50px;
+    }
+
+    // RTL support
+
+    .-rtl & {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .HeaderBlock {
+
+    display: flex;
+    padding: 0 $CardBlockPaddingHorizontal;
+    align-self: stretch;
+    align-items: center;
+
+
+
+    @include media-down(sm) {
+      padding: 0 $CardBlockPaddingHorizontal-sm;
+    }
+
+    @include media-up(xl) {
+      padding: 0 $CardBlockPaddingHorizontal-xl;
+    }
+
+    .Title {
+      margin: 0;
+    }
+  }
+
+  .CardBlock {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: $CardBlockPaddingVertical $CardBlockPaddingHorizontal;
+
+    @include media-down(sm) {
+      padding: $CardBlockPaddingVertical-sm $CardBlockPaddingHorizontal-sm;
+    }
+
+    @include media-up(xl) {
+      padding: $CardBlockPaddingVertical-xl $CardBlockPaddingHorizontal-xl;
+    }
+  }
+
+  .Title {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+
+  .TitleDescription {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #7e8e9f;
+  }
+
+  .TitleBlock {
+    margin-bottom: 20px;
+
+    & > .Title {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// Fonts are loaded in main.layout.hbs
+
+:root {
+  // This line will be replaced by computed value of
+  // CSS exported string value of '_theme/theme.js'
+  // Do not remove this line
+  <--themeCSS-->
+}
+
+// Main styles
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+  color: var(--colorText);
+  overflow-x: hidden;
+  background: var(--BodyColorBg);
+  font-family: 'Open Sans', sans-serif;
+
+  &.-rtl {
+    text-align: right;
+  }
+
+  &.-rounded {
+    border-radius: 0;
+  }
+}
+
+a {
+  color: var(--LinkColor);
+  text-decoration: var(--LinkTextDecoration);
+  font-weight: var(--LinkFontWeight);
+
+
+  &:hover {
+    color: var(--LinkColor-hover);
+    text-decoration: var(--LinkTextDecoration-hover);
+  }
+}

@@ -1,0 +1,61 @@
+$CustomizePaddingHorizontal: 20px;
+
+.Customize {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  border-top: 1px solid var(--colorDivider);
+  display: flex;
+  flex-direction: column;
+
+  // &:after {
+  //   position: absolute;
+  //   right: 2px;
+  //   top: 0;
+  //   bottom: 0;
+  //   border-right: 2px dashed var(--colorPrimary);
+  //   display: block;
+  //   content: " ";
+  // }
+
+
+  .-customize-open & {
+    box-shadow: var(--SidebarShadow);
+  }
+
+  .CustomizeHeader {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 $CustomizePaddingHorizontal;
+    height: var(--AppHeaderHeight);
+    border-bottom: 1px solid var(--colorDivider);
+    position: relative;
+    font-size: 1rem;
+
+    .Title {
+      color: var(--colorText-light);
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    .CustomizeDismissButton {
+      right: 7px;
+    }
+  }
+
+  .CustomizeContent {
+    flex: 1;
+    // margin-right: 2px;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    // border-right: 2px dashed var(--colorPrimary);
+  }
+}

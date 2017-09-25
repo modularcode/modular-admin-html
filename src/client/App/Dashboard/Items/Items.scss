@@ -1,0 +1,124 @@
+.Dashboard .Items {
+
+  .ItemList {
+    font-size: .9em;
+  }
+
+  .ListHeader {
+
+    font-size: .85em;
+
+    // Hide element, but keep the place
+    .Img {
+      visibility: none;
+      box-shadow: none;
+    }
+  }
+
+  .ColTitle {
+    a {
+      font-weight: normal;
+    }
+  }
+
+  .ColStats {
+    justify-content: center;
+
+  }
+
+  .ColDate {
+
+    text-align: right;
+    justify-content: flex-end;
+
+
+    .Value {
+      justify-content: flex-end;
+      font-size: .9em;
+      color: var(--colorText-light);
+    }
+  }
+
+  .ColSales {
+    font-size: .9em;
+    font-weight: bold;
+  }
+
+  .ColStats {
+    justify-content: center;
+
+    .Value {
+      justify-content: center;
+      height: 26px;
+      display: flex;
+    }
+  }
+
+  .Value {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .Img {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10%;
+    box-shadow: 0 0 1px 0px #d2d2d2;
+  }
+
+  @include media(xs) {
+
+    .ColStats,
+    .ColDate {
+      align-items: flex-end;
+      text-align: left;
+
+      .Value {
+        justify-content: flex-start;
+      }
+    }
+
+    .Label {
+      display: flex;
+    }
+  }
+
+  @include media(sm) {
+    .ColSales,
+    .ColStats,
+    .ColDate {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ColSales {
+      align-items: flex-start;
+    }
+
+    .ColStats {
+      align-items: center;
+    }
+
+    .ColDate {
+      align-items: flex-end;
+    }
+
+
+    .Img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .Label {
+      display: flex;
+    }
+  }
+
+  @include media-up(xl) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,30 @@
+$input-border-focus: $colorPrimary;
+
+
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/custom-forms';
+@import 'bootstrap/scss/input-group';
+
+
+.FormControl {
+  @extend .form-control;
+
+  &.-sm {
+    @extend .form-control-sm;
+  }
+
+  &.-lg {
+    @extend .form-control-sm;
+  }
+
+  &:focus {
+    border-color: var(--colorPrimary);
+  }
+}
+
+.FormGroup {
+  @extend .form-group;
+}

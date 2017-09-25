@@ -1,0 +1,206 @@
+.-sameheight {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+
+
+@mixin responsiveUtils ($viewportSize:null) {
+
+  $suffix: '';
+
+  @if $viewportSize {
+    $suffix: '-' + $viewportSize;
+  }
+
+  .-flex#{$suffix} {
+    display: flex;
+  }
+
+  .-size-auto#{$suffix} {
+    flex: 0 0 auto;
+  }
+
+  @for $i from 1 to 13 {
+
+    $name: $suffix + '-' + $i;
+
+    // Percent size
+    &.-size#{$name} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+    }
+
+    // Relative size
+    &.-rel-size#{$name} {
+      flex: $i;
+    }
+  }
+
+  @for $i from -17 to 17 {
+    &.-order#{$suffix}-#{$i} {
+      order: $i;
+    }
+  }
+
+  .-direction-row#{$suffix} {
+    flex-direction: row;
+  }
+
+  .-direction-column#{$suffix} {
+    flex-direction: column;
+  }
+
+  .-justify-start#{$suffix} {
+    justify-content: flex-start;
+  }
+
+  .-justify-end#{$suffix} {
+    justify-content: flex-end;
+  }
+
+  .-justify-center#{$suffix} {
+    justify-content: center;
+  }
+
+  .-justify-space-around#{$suffix} {
+    justify-content: space-around;
+  }
+
+  .-justify-space-between#{$suffix} {
+    justify-content: space-between;
+  }
+
+  .-align-start#{$suffix} {
+    align-items: flex-start;
+  }
+
+  .-align-end#{$suffix} {
+    align-items: flex-end;
+  }
+
+  .-align-center#{$suffix} {
+    align-items: center;
+  }
+
+  .-pull-right#{$suffix} {
+    margin-left: auto;
+  }
+
+  .-pull-left#{$suffix} {
+    margin-right: auto;
+  }
+
+  .-hidden#{$suffix} {
+    display: none !important;
+  }
+
+  .-visible#{$suffix} {
+    display: flex !important;
+  }
+
+  .-visible-block#{$suffix} {
+    display: block !important;
+  }
+
+  .-text-left#{$suffix} {
+    text-align: left;
+  }
+
+  .-text-center#{$suffix} {
+    text-align: center;
+  }
+
+  .-text-right#{$suffix} {
+    text-align: right;
+  }
+
+  .-text-no-wrap#{$suffix} {
+    white-space: nowrap;
+  }
+
+  .-row-compact#{$suffix} {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    [class^='col'] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .-row-minimal#{$suffix} {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    [class^='col'] {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+
+
+@mixin executeResponsiveUtils ($viewportSize:null) {
+  // Make the utils set work only on specified viewport
+  @if $viewportSize {
+    @include media($viewportSize) {
+      @include responsiveUtils($viewportSize);
+    }
+  }
+  // Work globally
+  @else {
+    @include responsiveUtils($viewportSize);
+  }
+}
+
+// Global responsive utils
+@include executeResponsiveUtils();
+
+// Media responsive utils
+@each $breakpointName, $size in $grid-breakpoints {
+  @include executeResponsiveUtils($breakpointName);
+}
+
+
+
+@mixin colorUtils($colorName, $colorValue: null) {
+
+  @if type-of($colorValue) != color {
+    $colorValue: unquote("var(--#{$colorValue})");
+  }
+
+  .-color-#{$colorName} {
+    color: $colorValue !important;
+  }
+
+  .-bg-#{$colorName} {
+    background-color: $colorValue !important;
+  }
+
+  .-border-#{$colorName} {
+    border-color: $colorValue !important;
+  }
+
+  .-stroke-#{$colorName} {
+    stroke: $colorValue !important;
+  }
+
+  .-fill-#{$colorName} {
+    fill: $colorValue !important;
+  }
+}
+
+
+// Color utils definitions
+@include colorUtils("primary", "colorPrimary");
+@include colorUtils("primary-light", "colorPrimary-light");
+@include colorUtils("primary-dark", "colorPrimary-dark");
+@include colorUtils("secondary", "colorSecondary");
+@include colorUtils("divider", "colorDivider");
+
+// Palletter colors
+@each $colorName, $color in $colorsPaletteFull {
+  @include colorUtils($colorName, $color);
+}

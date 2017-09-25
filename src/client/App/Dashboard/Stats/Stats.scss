@@ -1,0 +1,98 @@
+.DashboardStats {
+
+  line-height: 18.4px;
+
+  .CardBlock {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .StatsRow {
+    flex: 1;
+  }
+
+  .StatCol {
+    display: flex;
+    align-items: center;
+  }
+
+  .StatGroup {
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .Stat {
+    display: flex;
+    flex-direction: row;
+
+    .-rtl & {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .Icon {
+    color: #6d6d6d;
+    display: inline-block;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+    margin-right: 5px;
+
+    @include media-down(sm) {
+      width: 60px;
+    }
+
+    @include media(lg) {
+
+    }
+
+    @include media-up(xl) {
+      width: 50px;
+    }
+
+    .-rtl & {
+      margin-left: 6px;
+      margin-right: 0;
+      transform: scaleX(-1);
+    }
+  }
+
+
+  .StatContent {
+    margin-left: auto;
+    text-align: right;
+  }
+
+
+
+  .StatValue {
+    font-size: 20px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    color: var(--colorText-light);
+
+    @include media(lg) {
+      font-size: 18px;
+    }
+
+    @include media-up(xl) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  .StatName {
+    font-size: 14px;
+    color: $colorText-light;
+
+    @include media(lg) {
+      font-size: 12px;
+    }
+  }
+
+}

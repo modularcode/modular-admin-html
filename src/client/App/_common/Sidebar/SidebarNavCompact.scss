@@ -1,0 +1,140 @@
+$roundness: 4px;
+$item-height: 40px;
+
+@mixin SidebarNavCompact() {
+  .CompactNavGroupHeader {
+    display: flex;
+  }
+
+  // First level groups
+  & > .NavGroup {
+    width: var(--AppSidebarWidth-compact);
+
+    & > .NavLink {
+      &:after {
+        transform: translate(0, -50%) !important;
+      }
+    }
+
+    & > .Nav {
+
+      position: fixed;
+      left: var(--AppSidebarWidth-compact);
+      margin-left: 5px;
+      bottom: 5px;
+      top: 5px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: rgba(255, 255, 255, 0.97);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      width: var(--AppSidebarWidth);
+      border-radius: 0 6px 6px 0;
+
+      .NavLink {
+        text-shadow: none;
+        padding: 0 $SidebarPaddingHorizontal;
+        color: var(--colorPrimary);
+        height: $item-height;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.03);
+        }
+      }
+
+    }
+
+    &.-open {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &.-open > .NavLink:not(.-active) {
+      color: var(--colorPrimary);
+
+      &:after {
+        color: inherit;
+      }
+    }
+
+  }
+
+  // First level links
+  & > .NavLink,
+  & > .NavGroup > .NavLink {
+    padding-right: 5px;
+    overflow: hidden;
+
+    &:after {
+      right: 7px;
+    }
+
+    span {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin SidebarNavCompactCustomizeOpen() {
+  // First level groups
+  & > .NavGroup {
+    & > .Nav {
+      left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+    }
+  }
+}
+
+
+.SidebarNav {
+
+  .CompactNavGroupHeader {
+
+    $size: 55px;
+
+    font-size: 1rem;
+    display: none;
+    color: var(--colorText);
+    position: relative;
+    width: 100%;
+    height: $size;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $SidebarPaddingHorizontal;
+    border-bottom: 1px solid var(--colorDivider);
+
+    .NavTitle {
+      white-space: nowrap;
+      margin-bottom: 0;
+      color: var(--colorText-light);
+      font-size: 1rem;
+    }
+
+  }
+
+  .CompactNavGroupName {
+
+
+  }
+
+  @include media(md) {
+    .-sidebar-compact-tablet & {
+      @include SidebarNavCompact();
+    }
+
+    .-sidebar-compact-tablet.-customize-open & {
+      @include SidebarNavCompactCustomizeOpen()
+    }
+  }
+
+  @include media-up(lg) {
+    .-sidebar-compact-desktop & {
+      @include SidebarNavCompact();
+    }
+
+    .-sidebar-compact-desktop.-customize-open & {
+      @include SidebarNavCompactCustomizeOpen()
+    }
+  }
+}
+
+
