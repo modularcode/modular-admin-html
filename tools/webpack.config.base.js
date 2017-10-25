@@ -5,11 +5,11 @@ const postcssImport = require('postcss-import');
 const customProperties = require('postcss-custom-properties');
 
 const config = require('../config');
-const theme = require(config.CLIENT_DIR + '/_theme/theme');
+const theme = require(config.SRC_DIR + '/_theme/theme');
 
 // Basic properties
 const webpackConfigBase = {
-  entry: path.resolve(config.CLIENT_DIR, 'main.js'),
+  entry: path.resolve(config.SRC_DIR, 'main.js'),
   output: {
     path: config.DIST_DIR,
     filename: 'bundle.js',
@@ -17,7 +17,7 @@ const webpackConfigBase = {
   },
   resolve: {
     extensions: ['.js'],
-    modules: [config.NPM_DIR, config.CLIENT_DIR],
+    modules: [config.NPM_DIR, config.SRC_DIR],
     alias: {
       jquery: "jquery/src/jquery",
     }
@@ -90,7 +90,7 @@ webpackConfigBase.module.rules = [
           sourceMap: true,
           includePaths: [
             config.NPM_DIR,
-            config.CLIENT_DIR
+            config.SRC_DIR
           ]
         }
       },
@@ -118,8 +118,8 @@ webpackConfigBase.module.rules = [
             config.NPM_DIR + '/bootstrap/scss/_functions.scss',
             config.NPM_DIR + '/bootstrap/scss/_variables.scss',
             config.NPM_DIR + '/bootstrap/scss/_mixins.scss',
-            config.CLIENT_DIR + '/_theme/variables.scss',
-            config.CLIENT_DIR + '/_common/Util/Mixins.scss',
+            config.SRC_DIR + '/_theme/variables.scss',
+            config.SRC_DIR + '/_common/Util/Mixins.scss',
           ]
         },
       }

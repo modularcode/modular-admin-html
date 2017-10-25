@@ -46,12 +46,12 @@ module.exports = function() {
     .pipe(through.obj(function (file, enc, cb) {
 
       const context = getTemplateContext(file);
-      const contextKey = path.relative(config.CLIENT_DIR, file.path);
+      const contextKey = path.relative(config.SRC_DIR, file.path);
 
       contexts[contextKey] = context;
 
       // console.log('--------------');
-      // console.log(path.relative(config.CLIENT_DIR, file.path));
+      // console.log(path.relative(config.SRC_DIR, file.path));
       // console.log(file.cwd);
       // console.log(file.base);
       // console.log(file.path);
@@ -193,7 +193,7 @@ function getTemplateContextExternal(file) {
   // Package data
   context.pkg = require('../package.json');
 
-  var rootDir = path.resolve(config.CLIENT_DIR);
+  var rootDir = path.resolve(config.SRC_DIR);
   var pageDir = path.dirname(file.path);
 
   var contextPaths = [];

@@ -1,26 +1,26 @@
 const config = require('../config');
 
 exports.assets = [
-  config.CLIENT_DIR + "/_assets/**/*",
+  config.SRC_DIR + "/_assets/**/*",
   config.NPM_DIR + "/bootstrap/fonts/**.*"
 ];
 
 exports.styles = {
-  all: config.CLIENT_DIR + "/**/*.scss",
-  main: config.CLIENT_DIR + "/main.scss",
+  all: config.SRC_DIR + "/**/*.scss",
+  main: config.SRC_DIR + "/main.scss",
 };
 
 exports.scripts = {
-  all: config.CLIENT_DIR + "/**/!(_context|*.helper)*.js",
-  main: config.CLIENT_DIR + "/main.js",
+  all: config.SRC_DIR + "/**/!(_context|*.helper)*.js",
+  main: config.SRC_DIR + "/main.js",
 };
 
 // Handlebars paths
 
-exports.helpers = config.CLIENT_DIR + "/**/*.helper.js";
+exports.helpers = config.SRC_DIR + "/**/*.helper.js";
 
-exports.pages = config.CLIENT_DIR + "/**/*.page.hbs";
+exports.pages = config.SRC_DIR + "/**/*.page.hbs";
 
-exports.partials = config.CLIENT_DIR + "/**/*.hbs";
+exports.partials = config.SRC_DIR + "/**/*.hbs";
 
 exports.mainPage = "Dashboard";
