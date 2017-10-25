@@ -23,7 +23,7 @@ Sidebar.init = function () {
   vm.refs.$SidebarNav = $('#SidebarNav');
   vm.refs.$SidebarFooter = $('#SidebarFooter');
   vm.refs.$NavGroups = vm.refs.$SidebarNav.find('.NavGroup');
-  vm.refs.$Navs = vm.refs.$SidebarNav.find('nav');
+  vm.refs.$Navs = vm.refs.$SidebarNav.find('.Nav');
   vm.refs.$NavLinksWithTooltip = vm.refs.$SidebarNav.find('> .NavLink, > .NavGroup > .NavLink');
   vm.refs.$FooterNavLinks = vm.refs.$SidebarFooter.find('.NavLink');
 
@@ -33,6 +33,9 @@ Sidebar.init = function () {
   Sidebar.initFooterTooltips();
 
   // Navigation
+
+  // Show initially open nav groups
+  vm.refs.$NavGroups.filter('.-open').find('> .Nav').show();
 
   $('.NavGroup > a').on('click', function(e) {
     e.preventDefault();
