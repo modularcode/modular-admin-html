@@ -176,7 +176,9 @@ function getTemplateContextInternal(file) {
 function getTemplateContextExternal(file) {
 
   // Initial context
-  const context = {};
+  const context = {
+
+  };
 
   // Environment
   const envContext = process.env;

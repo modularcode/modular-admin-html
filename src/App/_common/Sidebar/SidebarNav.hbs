@@ -1,14 +1,19 @@
 <nav class="SidebarNav" id="SidebarNav">
 
-  <a href="/" class="NavLink -active">
+  <a
+    href="/"
+    class="NavLink {{#is pagename "===" "Dashboard"}}-active{{/is}}">
     <i class="fa fa-home NavIcon"></i>
     <span>
       Dashboard
     </span>
   </a>
 
-  <div class="NavGroup">
-    <a href="" class="NavLink">
+  <div
+    class="NavGroup {{#is pagename "in" "Items/List,Items/Editor"}}-open{{/is}}">
+    <a
+      href=""
+      class="NavLink">
       <i class="fa fa-th-large NavIcon"></i>
       <span>
         Items Manager
@@ -23,11 +28,15 @@
           <i class="fa fa-times Icon"></i>
         </a>
       </div>
-      <a href="" class="NavLink" >
+      <a
+        href="/Items/List.html"
+        class="NavLink {{#is pagename "===" "Items/List"}}-active{{/is}}" >
         Items List
       </a>
 
-      <a href="" class="NavLink">
+      <a
+        href="/Items/Editor.html"
+        class="NavLink {{#is pagename "===" "Items/Editor"}}-active{{/is}}">
         Items Editor
       </a>
     </nav>
@@ -115,7 +124,9 @@
           <i class="fa fa-times Icon"></i>
         </a>
       </h4>
-      <a href="" class="NavLink" >
+      <a
+        href="Forms.html"
+        class="NavLink {{#is pagename "===" "Forms"}}-active{{/is}}" >
         <span>
           Basic Forms
         </span>
@@ -145,8 +156,8 @@
     </nav>
   </div>
 
-  <div class="NavGroup">
-    <a href="" class="NavLink">
+  <div class="NavGroup {{#is pagename "in" "Charts/ChartJS,Charts/Morris"}}-open{{/is}}">
+    <a href="" class="NavLink {{#is pagename "in" "aCharts/ChartJS,aCharts/Morris"}}-active{{/is}}">
       <i class="fa fa-area-chart NavIcon" ></i>
       <span>
         Charts
@@ -159,9 +170,18 @@
           <i class="fa fa-times Icon"></i>
         </a>
       </h4>
-      <a href="" class="NavLink" >
+      <a
+        href="Charts/ChartJS.html"
+        class="NavLink {{#is pagename "===" "Charts/ChartJS"}}-active{{/is}}" >
         <span>
-          Basic Tables
+          ChartJS
+        </span>
+      </a>
+      <a
+        href="Charts/Morris.html"
+        class="NavLink {{#is pagename "===" "Charts/Morris"}}-active{{/is}}" >
+        <span>
+          Morris
         </span>
       </a>
     </nav>

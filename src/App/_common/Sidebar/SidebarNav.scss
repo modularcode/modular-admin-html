@@ -146,7 +146,6 @@ $submenu-levels: 4;
     .Nav {
       overflow-x: visible;
       overflow-y: hidden;
-      // height: 0;
       display: none;
 
       .NavLink {
@@ -157,6 +156,12 @@ $submenu-levels: 4;
 
     &.-open > .NavLink:after {
       transform: translate(0, -50%) rotate(90deg);
+    }
+  }
+
+  .NavGroup.-open {
+    .Nav {
+      // display: block;
     }
   }
 

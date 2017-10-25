@@ -53,7 +53,12 @@ Sidebar.init = function () {
     }
     else {
       vm.refs.$Navs.not($Nav).not($NavParemts).slideUp('fast');
-      $Nav.slideToggle('fast');
+
+      console.log($NavGroup.hasClass('-open'));
+
+      $NavGroup.hasClass('-open') ?
+        $Nav.slideDown('fast') :
+        $Nav.slideUp('fast');
     }
 
     // Check if sidebar has at least one open NavGroup
