@@ -34,7 +34,7 @@ git clone https://github.com/modularcode/modular-admin-html.git
 ```
 ### 2. Build the project
 
-The cloned/downloaded repository desn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
+The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
 
 
 Install npm dependencies 
