@@ -46,7 +46,10 @@ module.exports = function() {
     .pipe(through.obj(function (file, enc, cb) {
 
       const context = getTemplateContext(file);
-      const contextKey = path.relative(config.SRC_DIR, file.path);
+      const contextKey = path
+        .relative(config.SRC_DIR, file.path)
+        .split(path.sep)
+        .join('/');
 
       contexts[contextKey] = context;
 
@@ -80,26 +83,28 @@ module.exports = function() {
     // Rename .page.hbs to .html
     // Rename main page to index
     // Apply output path parameters
-    .pipe(plugins.rename(function (path) {
+    .pipe(plugins.rename(function (filePath) {
 
-      const context = contexts[
-        `${path.dirname}/${path.basename}${path.extname}`
-      ];
+      const contextKey = `${filePath.dirname}/${filePath.basename}${filePath.extname}`
+        .split(path.sep)
+        .join('/');
+
+      const context = contexts[contextKey];
 
       // Replace .page
-      path.basename = path.basename.replace(".page", "");
+      filePath.basename = filePath.basename.replace(".page", "");
 
       // Flattent directory
-      path.dirname = '';
+      filePath.dirname = '';
 
       // Replace extension
-      path.extname = ".html"
+      filePath.extname = ".html"
 
       // Use custom filename if needed
-      path.basename = context.filename || path.basename;
+      filePath.basename = context.filename || filePath.basename;
 
       // Use custom dirname if needed
-      path.dirname = context.dirname || path.dirname;
+      filePath.dirname = context.dirname || filePath.dirname;
 
     }))
 
@@ -114,9 +119,13 @@ function renderTemplate(file, context) {
 
   // New instance of template context
   const templateContext = context ? Object.assign({}, context) : {};
+  // const templateBody = frontMatter(file.contents.toString('utf8')).body;
+
+  // console.log(templateBody);
 
   // Compile template without yaml headers
   const template = handlebars.compile(
+    // templateBody
     String(file.contents).replace(/---(.|\n)*---/, '')
   );
   const templateRes = template(templateContext);
@@ -169,6 +178,8 @@ function getTemplateContext(file) {
 function getTemplateContextInternal(file) {
   // Read content from front matter
   const content = frontMatter(file.contents.toString('utf8'));
+
+  // console.log(content);
 
   return content.attributes || {};
 }
