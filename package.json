@@ -28,7 +28,7 @@
     "morris.js": "^0.5.0",
     "opencollective": "^1.0.3",
     "pixeden-stroke-7-icon": "^1.2.3",
-    "popper.js": "^1.12.9",
+    "popper.js": "1.12.3",
     "raphael": "^2.2.7"
   },
   "devDependencies": {

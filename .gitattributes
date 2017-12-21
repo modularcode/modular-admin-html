@@ -1,0 +1,5 @@
+* text=auto
+*.js text eol=lf
+*.html text eol=lf
+*.scss text eol=lf
+*.hbs text eol=lf
