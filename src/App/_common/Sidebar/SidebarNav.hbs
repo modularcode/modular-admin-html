@@ -9,6 +9,8 @@
     </span>
   </a>
 
+
+
   <div
     class="NavGroup {{#is pagename "in" "Items/List,Items/Editor"}}-open{{/is}}">
     <a
@@ -42,71 +44,80 @@
     </nav>
   </div>
 
-  {{!-- <a href="/">
-    <i class="fa fa-bar-chart-o NavIcon"></i>
-    Metrics
-  </a>
-
-  <div class="NavGroup">
-    <a href="">
-      <i class="fa fa-envelope NavIcon"></i>
-      Email
-    </a>
-    <nav>
-      <a href="" >
-        Inbox
-      </a>
-
-      <a href="" >
-        Single Mail
-      </a>
-
-      <a href="" >
-        Compose
-      </a>
-
-      <a href="" >
-        Email Templates
-      </a>
-    </nav>
-  </div>
-
-  <div class="NavGroup">
-    <a href="">
-      <i class="fa fa-university NavIcon"></i>
-      Forum
-    </a>
-    <nav>
-      <a href="" >
-        Main
-      </a>
-
-      <a href="" >
-        Thread
-      </a>
-
-      <a href="" >
-        Post
-      </a>
-    </nav>
-  </div>
-
-  <a href="">
-    <i class="fa fa-comments NavIcon"></i>
-    Chat
-  </a>
-
-  <a href="">
-    <i class="fa fa-plane fa-flip-vertical NavIcon"></i>
-    Landing Page
-  </a> --}}
-
-  <a href="/" class="NavLink">
-    <i class="fa fa-file-text-o NavIcon"></i>
+  <a
+    href="/"
+    class="NavLink {{#is pagename "===" "Metrics"}}-active{{/is}}">
+    <i class="fa fa-pie-chart NavIcon"></i>
     <span>
-      Other Pages
+      Metrics
     </span>
   </a>
+
+  <div
+    class="NavGroup {{#is pagename "in" "Items/List,Items/Editor"}}-open{{/is}}">
+    <a href="/" class="NavLink">
+      <i class="fa fa-file-text-o NavIcon"></i>
+      <span>
+        Other Pages
+      </span>
+    </a>
+    <nav class="Nav">
+      <div class="CompactNavGroupHeader">
+        <h4 class="NavTitle">
+          Other Pages
+        </h4>
+        <a href="" class="Button -dismiss DismissBtn">
+          <i class="fa fa-times Icon"></i>
+        </a>
+      </div>
+
+      <a
+        href="/PAges/Profile.html"
+        class="NavLink" >
+        Profile
+      </a>
+
+      <a
+        href="/Pages/Settings.html"
+        class="NavLink" >
+        Settings
+      </a>
+
+
+      <a
+        href="/Pages/Search.html"
+        class="NavLink {{#is pagename "===" "Pages/Search"}}-active{{/is}}">
+        Search Results
+      </a>
+
+      <a
+        href="/Pages/Error.html"
+        class="NavLink {{#is pagename "===" "Pages/Error"}}-active{{/is}}">
+        Error Page
+      </a>
+
+      <a
+        href="/Auth/Login.html"
+        class="NavLink" >
+        Login
+      </a>
+
+      <a
+        href="/Auth/Signup.html"
+        class="NavLink" >
+        Signup
+      </a>
+
+      <a
+        href="/Auth/Recover.html"
+        class="NavLink" >
+        Password Recover
+      </a>
+
+
+    </nav>
+  </div>
+
 
   <div class="Divider"></div>
 
@@ -136,9 +147,9 @@
 
   <div class="NavGroup">
     <a href="" class="NavLink">
-      <i class="fa fa-table NavIcon"></i>
+      <i class="fa fa-list-ul NavIcon"></i>
       <span>
-        Tables
+        Tables and Lists
       </span>
     </a>
     <nav class="Nav">
@@ -151,6 +162,16 @@
       <a href="" class="NavLink" >
         <span>
           Basic Tables
+        </span>
+      </a>
+      <a href="" class="NavLink" >
+        <span>
+          Responsive Tables
+        </span>
+      </a>
+      <a href="" class="NavLink" >
+        <span>
+          Responsive Lists
         </span>
       </a>
     </nav>
@@ -212,68 +233,85 @@
       </a>
 
       <a href="" class="NavLink">
-        Buttons
+        Grid
       </a>
 
       <a href="" class="NavLink">
-        Tables
+        Dropdowns
+      </a>
+
+      <a href="" class="NavLink">
+        Modals
+      </a>
+
+      <a href="" class="NavLink">
+        Buttons
       </a>
 
       <a href="" class="NavLink">
         Cards
       </a>
-    </nav>
-  </div>
 
-  <div class="NavGroup">
-    <a href="" class="NavLink">
-      <i class="fa fa-sitemap NavIcon"></i>
-      <span>
-        Multi Level Menu
-      </span>
-    </a>
-    <nav class="Nav">
-      <h4 class="CompactNavGroupName">
-        Multi Level Menu
-        <a href="" class="Button ButtonDismiss DismissBtn">
-          <i class="fa fa-times Icon"></i>
-        </a>
-      </h4>
-
-      <a href="" class="NavLink" >
-        Level Two
+      <a
+        href="/UIComponents/Utils.html"
+        class="NavLink {{#is pagename "===" "UIComponents/Utils"}}-active{{/is}}">
+        <span>
+          Utils
+        </span>
       </a>
 
       <div class="NavGroup">
         <a href="" class="NavLink">
-          Level Two
+          {{!-- <i class="fa fa-sitemap NavIcon"></i> --}}
+          <span>
+            Multi Level Menu
+          </span>
         </a>
-
         <nav class="Nav">
+          <h4 class="CompactNavGroupName">
+            Multi Level Menu
+            <a href="" class="Button ButtonDismiss DismissBtn">
+              <i class="fa fa-times Icon"></i>
+            </a>
+          </h4>
+
+          <a href="" class="NavLink" >
+            Level Two
+          </a>
+
           <div class="NavGroup">
             <a href="" class="NavLink">
-              Level Three
+              Level Two
             </a>
 
             <nav class="Nav">
-              <a href="" class="NavLink">
-                Level Four
-              </a>
+              <div class="NavGroup">
+                <a href="" class="NavLink">
+                  Level Three
+                </a>
+
+                <nav class="Nav">
+                  <a href="" class="NavLink">
+                    Level Four
+                  </a>
+
+                  <a href="" class="NavLink">
+                    Level Four
+                  </a>
+                </nav>
+              </div>
 
               <a href="" class="NavLink">
-                Level Four
+                Level Three
               </a>
             </nav>
           </div>
 
-          <a href="" class="NavLink">
-            Level Three
-          </a>
         </nav>
       </div>
-      
     </nav>
   </div>
+
 
   <div class="Divider"></div>
 
