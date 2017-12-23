@@ -12,6 +12,23 @@
     "url": "https://github.com/modularcode/modular-admin-html/issues"
   },
   "homepage": "https://github.com/modularcode/modular-admin-html",
+  "scripts": {
+    "dev": "npm run clean && (npm run assets:dev | npm run html:dev | npm run bundle:dev)",
+    "start": "npm run build",
+    "build": "npm run clean && (npm run assets:prod | npm run html:prod | npm run bundle:prod)",
+    "deploy": "cross-env PUBLIC_PATH='/modular-admin-html-demo/' npm run build && gh-pages -d dist --repo git@github.com:modularcode/modular-admin-html-demo.git --branch master",
+    "assets:dev": "cpx \"src/_assets/**/*\" dist  --watch",
+    "assets:prod": "cpx \"src/_assets/**/*\" dist ",
+    "html:dev": "cross-env NODE_ENV=development gulp html:watch --gulpfile tools/gulpfile.js",
+    "html:prod": "cross-env NODE_ENV=production gulp html --gulpfile tools/gulpfile.js",
+    "bundle:dev": "cross-env NODE_ENV=development webpack-dev-server --config tools/webpack.config.dev.js",
+    "bundle:prod": "cross-env NODE_ENV=production webpack --config tools/webpack.config.prod.js",
+    "lint": "eslint --config .eslintrc \"src/**/*.js\"",
+    "lint:fix": "eslint --config .eslintrc \"src/**/*.js\" --fix",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean # clear dist directory",
+    "postinstall": "opencollective postinstall"
+  },
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "4.0.0-beta.2",
@@ -78,23 +95,6 @@
     "vinyl": "^2.1.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
-  },
-  "scripts": {
-    "dev": "npm run clean && (npm run assets:dev | npm run html:dev | npm run bundle:dev)",
-    "start": "npm run build",
-    "build": "npm run clean && (npm run assets:prod | npm run html:prod | npm run bundle:prod)",
-    "deploy": "cross-env PUBLIC_PATH='/modular-admin-html-demo/' npm run build && gh-pages -d dist --repo git@github.com:modularcode/modular-admin-html-demo.git --branch master",
-    "assets:dev": "cpx \"src/_assets/**/*\" dist  --watch",
-    "assets:prod": "cpx \"src/_assets/**/*\" dist ",
-    "html:dev": "cross-env NODE_ENV=development gulp html:watch --gulpfile tools/gulpfile.js",
-    "html:prod": "cross-env NODE_ENV=production gulp html --gulpfile tools/gulpfile.js",
-    "bundle:dev": "cross-env NODE_ENV=development webpack-dev-server --config tools/webpack.config.dev.js",
-    "bundle:prod": "cross-env NODE_ENV=production webpack --config tools/webpack.config.prod.js",
-    "lint": "eslint --config .eslintrc \"src/**/*.js\"",
-    "lint:fix": "eslint --config .eslintrc \"src/**/*.js\" --fix",
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean # clear dist directory",
-    "postinstall": "opencollective postinstall"
   },
   "collective": {
     "type": "opencollective",

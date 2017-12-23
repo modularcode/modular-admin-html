@@ -5,10 +5,10 @@
   box-shadow: none;
   cursor: pointer;
   transition: all .2s ease;
-  display: inline-block;
-  height: 2.2em;
-  line-height: 2.2em;
-  padding: 0 1em;
+  display: inline-flex;
+  height: 2.2rem;
+  // line-height: 2.2rem;
+  padding: 0 1rem;
   vertical-align: middle;
   align-items: center;
   justify-content: center;
@@ -118,21 +118,23 @@
 
 
   &.-lg {
-    font-size: 1.16em;
+    font-size: 1.16rem;
     // padding: 8px 16px;
   }
 
   &.-xl {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     // padding: 9px 18px;
   }
 
   &.-sm {
-    font-size: .8em;
+    font-size: .8rem;
+    height: 1.8rem;
+    padding: 0 .6rem;
     // padding: 5px 11px;
   }
 
   &.-rounded {
-    border-radius: .3em;
+    border-radius: .3rem;
   }
 }

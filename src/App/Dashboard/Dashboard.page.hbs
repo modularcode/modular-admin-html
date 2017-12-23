@@ -42,31 +42,33 @@ items:
     sales: 3217
 ---
 <article class="Page Dashboard">
-  <div class="Intro">
-    <h1 class="Title">
-      Welcome to ModularAdmin 2!
-    </h1>
-    <p class="Description">
-      ModularAdmin is an open source dashboard theme built with modular components.
-      <a href=""><i class="fa fa-book"></i> Read The Docs</a>.
+  <div class="PageContainer">
+    <div class="Intro">
+      <h1 class="Title">
+        Welcome to ModularAdmin 2!
+      </h1>
+      <p class="Description">
+        ModularAdmin is an open source dashboard theme built with modular components.
+        <a href=""><i class="fa fa-book"></i> Read The Docs</a>.
 
-    </p>
-  </div>
-  <div class="row -row-compact-sm -row-compact-md -row-compact-lg">
-    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5 -sameheight">
-      {{> App/Dashboard/Stats/Stats}}
+      </p>
     </div>
+    <div class="row -row-compact-sm -row-compact-md -row-compact-lg">
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5 -sameheight">
+        {{> App/Dashboard/Stats/Stats}}
+      </div>
 
-    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-7 -sameheight">
-      {{> App/Dashboard/History/History}}
-    </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-7 -sameheight">
+        {{> App/Dashboard/History/History}}
+      </div>
 
-    <div class="col-xl-8 -sameheight">
-      {{> App/Dashboard/Items/Items}}
-    </div>
+      <div class="col-xl-8 -sameheight">
+        {{> App/Dashboard/Items/Items}}
+      </div>
 
-    <div class="col-xl-4 -sameheight">
-      {{> App/Dashboard/SalesBreakdown/SalesBreakdown}}
+      <div class="col-xl-4 -sameheight">
+        {{> App/Dashboard/SalesBreakdown/SalesBreakdown}}
+      </div>
     </div>
   </div>
 </article>

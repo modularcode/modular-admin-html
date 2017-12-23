@@ -25,27 +25,27 @@ titleName: 'ModularAdmin | HTML version'
   " >
 
   <div class="HeaderContainer">
-    {{> App/_common/Header/Header}}
+    {{> App/_common/AppHeader/AppHeader}}
   </div>
   <div class="SidebarContainer">
-    {{> App/_common/Sidebar/Sidebar}}
+    {{> App/_common/AppSidebar/AppSidebar}}
   </div>
   <div class="SidebarOverlay" id="SidebarOverlay"></div>
   <div class="ContentContainer {{pagename}}">
-    <div class="ContentBackground"></div>
+    {{!-- <div class="ContentBackground"></div> --}}
     <div class="Content">
       {{{body}}}
     </div>
   </div>
 
   <div class="FooterContainer" >
-    {{> App/_common/Footer/Footer}}
+    {{> App/_common/AppFooter/AppFooter}}
   </div>
 
-  {{> App/_common/Search/Search}}
+  {{> App/_common/AppSearch/AppSearch}}
 
   <div class="CustomizeContainer">
-    {{> App/_common/Customize/Customize}}
+    {{> App/_common/AppCustomize/AppCustomize}}
   </div>
 
 </div>

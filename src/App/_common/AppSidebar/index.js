@@ -1,17 +1,17 @@
-import './Sidebar.scss';
+import './AppSidebar.scss';
 import './SidebarHeader.scss';
 import './SidebarNav.scss';
 import './SidebarNavCompact.scss';
 import './SidebarFooter.scss';
 
-import Sidebar from './Sidebar';
+import AppSidebar from './AppSidebar';
 
 
 window.addEventListener('load', function() {
   setTimeout(function() {
-    Sidebar.init();
+    AppSidebar.init();
   });
 });
 
 
-export default Sidebar;
+export default AppSidebar;

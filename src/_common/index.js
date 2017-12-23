@@ -11,6 +11,7 @@ import './Layout';
 import './Modal';
 import './Page';
 import './Progress';
+import './ResponsiveList';
 import './ScrollBar';
 import './Tab';
 import './Table';

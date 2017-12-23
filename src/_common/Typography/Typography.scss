@@ -1,39 +1,5 @@
 @import 'bootstrap/scss/type.scss';
 
-.Title {
-  font-size: 1.45rem;
-  font-weight: 600;
-  margin-bottom: 0;
-  color: var(--colorText);
-
-  // Large
-  &.-lg {
-    font-size: 1.6rem;
-  }
-
-  // Small
-  &.-sm {
-    font-size: 1.4rem;
-  }
-}
-
-.TitleDescription {
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: normal;
-  color: var(--colorText-light);
-
-  // Small
-  &.-sm {
-    font-size: 0.8rem;
-  }
-}
-
-.Subtitle {
-  font-size: 1.2rem;
-  margin: 0;
-  color: var(--colorText-light);
-}
 
 .Text-primary {
   color: var(--colorText);

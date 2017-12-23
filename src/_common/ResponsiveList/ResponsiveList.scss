@@ -1,0 +1,132 @@
+$ItemListColPaddingVertical: 10px;
+$ItemListColPaddingHorizontal: 5px;
+
+.ResponsiveList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .ListHeader {
+    color: $colorText-light;
+    font-weight: bold;
+
+    &.-sm {
+      font-weight: bold;
+      font-size: .9em;
+      color: $colorText-light;
+    }
+  }
+
+  .ListHeader,
+  .ListFooter,
+  .ListContent,
+  .Item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .-rtl & {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+
+
+  .ItemCol {
+    display: flex;
+    padding: $ItemListColPaddingVertical $ItemListColPaddingHorizontal;
+    width: auto;
+    max-width: none;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .Label {
+    flex: 1;
+    display: none;
+    font-weight: bold;
+  }
+
+  .Value {
+    flex: 1;
+    display: block;
+  }
+
+  .Divider {
+    position: relative;
+    display: none;
+    min-width: 100%;
+    height: 1px;
+    &:after {
+      position: absolute;
+      content: " ";
+      display: block;
+      top: 0;
+      left: - $ItemListColPaddingHorizontal;
+      right: - $ItemListColPaddingHorizontal;
+      bottom: 0;
+    }
+  }
+
+
+  // Items list modifiers
+  &.-bordered {
+    .ListHeader,
+    .Item {
+      border-bottom: 1px solid lighten($colorDivider, 6);
+      .Divider:after {
+        background-color: var(--colorDivider);
+      }
+    }
+  }
+
+  &.-striped {
+    .Item:nth-child(2n + 1) {
+      background-color: #f9f9f9;
+    }
+  }
+}
+
+
+.Card .ResponsiveList {
+
+  .ListHeader,
+  .ListFooter,
+  .Item {
+
+    $spacing: $CardBlockPaddingHorizontal - $ItemListColPaddingHorizontal;
+    padding: 0 $spacing;
+
+    .Divider:after {
+      left: - $spacing;
+      right: - $spacing;
+    }
+
+    @include media-down(sm) {
+
+      $spacing: $CardBlockPaddingHorizontal-sm - $ItemListColPaddingHorizontal;
+
+      padding: 0 $spacing;
+
+      .Divider:after {
+        left: - $spacing;
+        right: - $spacing;
+      }
+    }
+
+    @include media(xl) {
+
+      $spacing: $CardBlockPaddingHorizontal-xl - $ItemListColPaddingHorizontal;
+
+      padding: 0 $spacing;
+
+      .Divider:after {
+        left: - $spacing;
+        right: - $spacing;
+      }
+    }
+  }
+
+}

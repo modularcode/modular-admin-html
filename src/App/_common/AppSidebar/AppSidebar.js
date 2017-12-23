@@ -1,6 +1,6 @@
 import theme from '_theme';
 import Util from '_common/Util';
-import Customize from '../Customize';
+import AppCustomize from '../AppCustomize';
 
 const Sidebar = {
   refs: {
@@ -56,8 +56,6 @@ Sidebar.init = function () {
     }
     else {
       vm.refs.$Navs.not($Nav).not($NavParemts).slideUp('fast');
-
-      console.log($NavGroup.hasClass('-open'));
 
       $NavGroup.hasClass('-open') ?
         $Nav.slideDown('fast') :
@@ -120,7 +118,7 @@ Sidebar.init = function () {
   $('#SidebarToggleCustomize').on('click', function(e) {
     e.preventDefault();
 
-    Customize.toggle();
+    AppCustomize.toggle();
   });
 
 };

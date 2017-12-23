@@ -1,18 +1,18 @@
-import Header from './Header';
-import './Search';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-import Customize from './Customize';
+import AppHeader from './AppHeader';
+import './AppSearch';
+import AppSidebar from './AppSidebar';
+import AppFooter from './AppFooter';
+import AppCustomize from './AppCustomize';
 
-const Common = {};
+const AppCommon = {};
 
-Common.init = () => {
-  Header.init();
-  Customize.init();
+AppCommon.init = () => {
+  AppHeader.init();
+  AppCustomize.init();
 };
 
 export {
-  Common, Header, Sidebar, Footer, Customize
+  AppCommon, AppHeader, AppSidebar, AppFooter, AppCustomize
 };
 
-export default Common;
+export default AppCommon;

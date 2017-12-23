@@ -1,29 +1,74 @@
 .Page {
 
-  padding: $PagePaddingVertical-lg $PagePaddingHorizontal-lg;
+  .PageContainer {
+    margin: 0 auto;
 
-  @include media-down(xs) {
-    padding: $PagePaddingVertical-xs $PagePaddingHorizontal-xs;
-  }
-
-  @include media(sm) {
-    padding: $PagePaddingVertical-sm $PagePaddingHorizontal-sm;
-  }
-
-  @include media(md) {
-    padding: $PagePaddingVertical-md $PagePaddingHorizontal-md;
-  }
-
-  @include media(lg) {
     padding: $PagePaddingVertical-lg $PagePaddingHorizontal-lg;
+
+    @include media-down(xs) {
+      padding: $PagePaddingVertical-xs $PagePaddingHorizontal-xs;
+    }
+
+    @include media(sm) {
+      padding: $PagePaddingVertical-sm $PagePaddingHorizontal-sm;
+    }
+
+    @include media(md) {
+      padding: $PagePaddingVertical-md $PagePaddingHorizontal-md;
+    }
+
+    @include media(lg) {
+      padding: $PagePaddingVertical-lg $PagePaddingHorizontal-lg;
+    }
+
+    @include media-up(xl) {
+      padding: $PagePaddingVertical-xl $PagePaddingHorizontal-xl;
+    }
   }
 
-  @include media-up(xl) {
-    padding: $PagePaddingVertical-xl $PagePaddingHorizontal-xl;
+  .PageHeader {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--colorDivider);
   }
 
-  .Section {
+  .PageSection {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .PageTitle {
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--colorText);
+
+    // Large
+    &.-lg {
+      font-size: 1.6rem;
+    }
+
+    // Small
+    &.-sm {
+      font-size: 1.4rem;
+    }
+  }
+
+  .PageDescription {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--colorText-light);
+
+    // Small
+    &.-sm {
+      font-size: 0.8rem;
+    }
+  }
+
+  .PageSubtitle {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--colorText-light);
   }
 }
