@@ -34,8 +34,10 @@ Sidebar.init = function () {
 
   // Navigation
 
-  // Show initially open nav groups
-  vm.refs.$NavGroups.filter('.-open').find('> .Nav').show();
+  // Show initially open nav groups, if the sidebar isn't compact
+  if (!Sidebar.isCompact()) {
+    vm.refs.$NavGroups.filter('.-open').find('> .Nav').show();
+  }
 
   $('.NavGroup > a').on('click', function(e) {
     e.preventDefault();

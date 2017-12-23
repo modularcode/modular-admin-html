@@ -20,7 +20,7 @@ $ItemListColPaddingHorizontal: 5px;
   .ListHeader,
   .ListFooter,
   .ListContent,
-  .Item {
+  .ListItem {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -43,13 +43,13 @@ $ItemListColPaddingHorizontal: 5px;
     overflow: hidden;
   }
 
-  .Label {
+  .ItemLabel {
     flex: 1;
     display: none;
     font-weight: bold;
   }
 
-  .Value {
+  .ItemValue {
     flex: 1;
     display: block;
   }
@@ -94,7 +94,7 @@ $ItemListColPaddingHorizontal: 5px;
 
   .ListHeader,
   .ListFooter,
-  .Item {
+  .ListItem {
 
     $spacing: $CardBlockPaddingHorizontal - $ItemListColPaddingHorizontal;
     padding: 0 $spacing;

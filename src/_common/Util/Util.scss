@@ -4,6 +4,10 @@
   align-items: stretch;
 }
 
+.-rounded {
+  border-radius: 10%;
+}
+
 
 
 @mixin responsiveUtils ($viewportSize:null) {

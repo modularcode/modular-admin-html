@@ -57,154 +57,104 @@ items:
     </header>
 
     <div class="Card Items">
-      <div class="ItemList -striped">
+      <div class="ResponsiveList -striped">
         <div class="ListHeader -hidden-xs -hidden-sm">
-          <div
-            class="
-              ItemCol
-              -size-auto
-
-              ColImg
-            ">
-            {{!-- Just for size reference --}}
+          <div class="ItemCol ColImg -size-auto">
             <div class="Img"></div>
           </div>
-          <div
-            class="
-              ItemCol
-              -rel-size-6
-
-              ColTitle
-            ">
+          <div class="ItemCol ColTitle -rel-size-6">
             Name
           </div>
-          <div
-            class="
-              ItemCol
-              -rel-size-2
-              -size-xs-12
-              -rel-size-xs-12
-
-              ColSales
-            ">
+          <div class="ItemCol -rel-size-2 -size-xs-12 -rel-size-xs-12 ColSales">
             Sales
           </div>
-          <div
-            class="
-              ItemCol
-              -rel-size-2
-              -size-xs-12
-
-              ColStats
-            ">
+          <div class="ItemCol ColStats -rel-size-2 -size-xs-12">
             Stats
           </div>
-          <div
-            class="
-              ItemCol
-              -rel-size-2
-              -size-xs-12
-
-              ColDate
-            ">
+          <div class="ItemCol ColStats -rel-size-2 -size-xs-12">
+            Category
+          </div>
+          <div class="ItemCol ColStats -rel-size-2 -size-xs-12">
+            Author
+          </div>
+          <div class="ItemCol ColDate -rel-size-2 -size-xs-12">
             Published
           </div>
         </div>
         <div class="ListContent">
           {{#each items}}
-            <div class="Item">
+            <div class="ListItem">
 
-              <div
-                class="
-                  ItemCol
-                  -size-auto
-
-                  ColImg
-                ">
-                <div class="Img" style="background-image: url({{this.img}})">
-
-                </div>
+              <div class="ItemCol ColImg -size-auto">
+                <a href="/Items/Editor.html">
+                  <div class="Img -rounded" style="background-image: url({{this.img}})"></div>
+                </a>
               </div>
 
-              <div
-                class="
-                  ItemCol
-                  -rel-size-6
-                  -order-sm--2
-
-                  ColTitle
-                ">
-                <div class="Value">
+              <div class="ItemCol -rel-size-6 -order-sm--2 ColTitle">
+                <div class="ItemValue">
                   <a href="">
                     {{this.title}}
                   </a>
                 </div>
               </div>
 
-              <div
-                class="
-                  Divider
-                  -visible-xs
-                  -visible-sm
-                  -order-sm--1
-                ">
+              <div class="Divider -visible-xs -visible-sm -order-sm--1">
               </div>
 
-              <div
-                class="
-                  ItemCol
-                  -rel-size-2
-
-                  ColSales
-                ">
-                <div class="Label -visible-xs">
+              <div class="ItemCol -rel-size-2 ColSales">
+                <div class="ItemLabel -visible-xs">
                   Sales
                 </div>
-                <div class="Value">
+                <div class="ItemValue">
                   {{this.sales}}
                 </div>
               </div>
 
-              <div
-                class="
-                  Divider
-                  -visible-xs
-                ">
+              <div class="Divider -visible-xs">
               </div>
 
-              <div
-                class="
-                  ItemCol
-                  -rel-size-2
-
-                  ColStats
-                ">
-                <div class="Label -visible-xs">
+              <div class="ItemCol -rel-size-2 ColStats">
+                <div class="ItemLabel -visible-xs">
                   Stats
                 </div>
-                <div class="Value Stats" data-type="bar">
+                <div class="ItemValue Stats" data-type="bar">
 
                 </div>
               </div>
 
-              <div
-                class="
-                  Divider
-                  -visible-xs
-                ">
+              <div class="Divider -visible-xs">
               </div>
 
-              <div
-                class="
-                  ItemCol
-                  -rel-size-2
+              <div class="ItemCol -rel-size-2 ColCategory">
+                <div class="ItemLabel -visible-xs">
+                  Category
+                </div>
+                <div class="ItemValue Category">
+                  {{this.category}}
+                </div>
+              </div>
 
-                  ColDate
-                ">
-                <div class="Label -visible-xs">
+              <div class="Divider -visible-xs">
+              </div>
+
+              <div class="ItemCol -rel-size-2 ColAuthor">
+                <div class="ItemLabel -visible-xs">
+                  Author
+                </div>
+                <div class="ItemValue Author">
+                  {{this.author}}
+                </div>
+              </div>
+
+              <div class="Divider -visible-xs">
+              </div>
+
+              <div class="ItemCol -rel-size-2 ColDate">
+                <div class="ItemLabel -visible-xs">
                   Date
                 </div>
-                <div class="Value">
+                <div class="ItemValue">
                   {{this.date}}
                 </div>
               </div>
