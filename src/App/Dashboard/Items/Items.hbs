@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="ItemList -striped">
+  <div class="ResponsiveList -striped">
     <div class="ListHeader -hidden-xs -hidden-sm">
       <div
         class="
@@ -62,7 +62,7 @@
     </div>
     <div class="ListContent">
       {{#each items}}
-        <div class="Item">
+        <div class="ListItem">
 
           <div
             class="
@@ -84,7 +84,7 @@
 
               ColTitle
             ">
-            <div class="Value">
+            <div class="ItemValue">
               <a href="">
                 {{this.title}}
               </a>
@@ -107,10 +107,10 @@
 
               ColSales
             ">
-            <div class="Label -visible-xs">
+            <div class="ItemLabel -visible-xs">
               Sales
             </div>
-            <div class="Value">
+            <div class="ItemValue">
               {{this.sales}}
             </div>
           </div>
@@ -129,10 +129,10 @@
 
               ColStats
             ">
-            <div class="Label -visible-xs">
+            <div class="ItemLabel -visible-xs">
               Stats
             </div>
-            <div class="Value Stats" data-type="bar">
+            <div class="ItemValue Stats" data-type="bar">
 
             </div>
           </div>
@@ -151,10 +151,10 @@
 
               ColDate
             ">
-            <div class="Label -visible-xs">
+            <div class="ItemLabel -visible-xs">
               Date
             </div>
-            <div class="Value">
+            <div class="ItemValue">
               {{this.date}}
             </div>
           </div>

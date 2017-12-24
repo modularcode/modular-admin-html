@@ -28,3 +28,74 @@ $input-border-focus: $colorPrimary;
 .FormGroup {
   @extend .form-group;
 }
+
+.Radio,
+.Checkbox {
+	display: none;
+
+	& + span {
+		padding: 0;
+		padding-right: 10px;
+	}
+
+	& + span:before {
+		font-family: FontAwesome;
+		font-size: 21px;
+		display: inline-block;
+		vertical-align: middle;
+		color: var(--colorDivider);
+	}
+
+	&:checked + span:before {
+		color: var(--colorPrimary);
+	}
+
+	&:disabled + span:before {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&:checked:disabled  + span:before {
+		color: var(--colorDivider);
+	}
+}
+
+.Checkbox {
+
+	& + span:before {
+		content: "\f0c8";
+	}
+
+	&:checked + span:before {
+		content: "\f14a";
+	}
+
+	&.-rounded {
+		& + span:before {
+			content: "\f111";
+		}
+
+		&:checked + span:before {
+			content: "\f058";
+		}
+	}
+}
+
+.Radio {
+	& + span:before {
+		content: "\f111";
+	}
+
+	&:checked + span:before {
+		content: "\f192";
+	}
+
+	&.-squared {
+		& + span:before {
+			content: "\f0c8";
+		}
+		&:checked + span:before {
+			content: "\f14a";
+		}
+	}
+}

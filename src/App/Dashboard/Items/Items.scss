@@ -1,6 +1,6 @@
 .Dashboard .Items {
 
-  .ItemList {
+  .ResponsiveList {
     font-size: .9em;
   }
 
@@ -32,7 +32,7 @@
     justify-content: flex-end;
 
 
-    .Value {
+    .ItemValue {
       justify-content: flex-end;
       font-size: .9em;
       color: var(--colorText-light);
@@ -47,14 +47,14 @@
   .ColStats {
     justify-content: center;
 
-    .Value {
+    .ItemValue {
       justify-content: center;
       height: 26px;
       display: flex;
     }
   }
 
-  .Value {
+  .ItemValue {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -77,12 +77,12 @@
       align-items: flex-end;
       text-align: left;
 
-      .Value {
+      .ItemValue {
         justify-content: flex-start;
       }
     }
 
-    .Label {
+    .ItemLabel {
       display: flex;
     }
   }
@@ -113,7 +113,7 @@
       height: 50px;
     }
 
-    .Label {
+    .ItemLabel {
       display: flex;
     }
   }

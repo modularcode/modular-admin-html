@@ -74,7 +74,7 @@ $ItemListColPaddingHorizontal: 5px;
   // Items list modifiers
   &.-bordered {
     .ListHeader,
-    .Item {
+    .ListItem {
       border-bottom: 1px solid lighten($colorDivider, 6);
       .Divider:after {
         background-color: var(--colorDivider);
@@ -83,8 +83,8 @@ $ItemListColPaddingHorizontal: 5px;
   }
 
   &.-striped {
-    .Item:nth-child(2n + 1) {
-      background-color: #f9f9f9;
+    .ListItem:nth-child(2n + 1) {
+      background-color: #f6f6f6;
     }
   }
 }

@@ -5,8 +5,8 @@
   box-shadow: none;
   cursor: pointer;
   transition: all .2s ease;
-  display: inline-flex;
-  height: 2.2rem;
+  display: inline-block;
+  line-height: 2.2rem;
   // line-height: 2.2rem;
   padding: 0 1rem;
   vertical-align: middle;
@@ -129,7 +129,7 @@
 
   &.-sm {
     font-size: .8rem;
-    height: 1.8rem;
+    line-height: 1.8rem;
     padding: 0 .6rem;
     // padding: 5px 11px;
   }

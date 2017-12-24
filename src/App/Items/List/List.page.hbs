@@ -59,8 +59,16 @@ items:
     <div class="Card Items">
       <div class="ResponsiveList -striped">
         <div class="ListHeader -hidden-xs -hidden-sm">
+          <div class="ItemCol ColCheck -size-auto">
+            <label class="ItemCheck" id="SelectAllItemsCheckbox">
+              <input type="checkbox" class="Checkbox">
+              <span></span>
+            </label>
+          </div>
           <div class="ItemCol ColImg -size-auto">
-            <div class="Img"></div>
+            <div class="Img -size-holder"></div>
+            <div>Media</div>
+            <div class="Img -size-holder"></div>
           </div>
           <div class="ItemCol ColTitle -rel-size-6">
             Name
@@ -84,7 +92,12 @@ items:
         <div class="ListContent">
           {{#each items}}
             <div class="ListItem">
-
+              <div class="ItemCol ColCheck -size-auto">
+                <label class="ItemCheck">
+                  <input type="checkbox" class="Checkbox">
+                  <span></span>
+                </label>
+              </div>
               <div class="ItemCol ColImg -size-auto">
                 <a href="/Items/Editor.html">
                   <div class="Img -rounded" style="background-image: url({{this.img}})"></div>

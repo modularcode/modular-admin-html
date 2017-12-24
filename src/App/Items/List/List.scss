@@ -1,4 +1,31 @@
 .Page.ItemsList {
+
+  .ListHeader {
+    color: var(--colorText-light);
+    font-size: .8em;
+    font-weight: 700;
+
+    .ColImg {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .Img.-size-holder {
+      height: 1px;
+      padding-bottom: 0;
+      visibility: hidden;
+    }
+  }
+
+  .ItemCheck {
+    margin-bottom: 0;
+
+    span {
+      padding-right: 0;
+    }
+  }
+
+
   .Img {
     width: 60px;
     padding-bottom: 100%;
