@@ -1,5 +1,5 @@
 import theme from '_theme';
-import Util from '_common/Util';
+import utils from '_common/_utils';
 import AppCustomize from '../AppCustomize';
 
 const Sidebar = {
@@ -128,7 +128,7 @@ Sidebar.init = function () {
 Sidebar.isCompact = function() {
   const vm = Sidebar;
 
-  const viewportName = Util.getViewportName();
+  const viewportName = utils.getViewportName();
 
   return (
     viewportName === 'md' &&
@@ -144,7 +144,7 @@ Sidebar.isCompact = function() {
 Sidebar.toggle = function() {
   const vm = Sidebar;
 
-  const viewportName = Util.getViewportName();
+  const viewportName = utils.getViewportName();
 
   if (viewportName === 'xs' || viewportName === 'sm') {
     vm.refs.$App.toggleClass('-sidebar-open-mobile');
@@ -162,7 +162,7 @@ Sidebar.toggle = function() {
 Sidebar.close = function() {
   const vm = Sidebar;
 
-  const viewportName = Util.getViewportName();
+  const viewportName = utils.getViewportName();
 
   if (viewportName === 'xs' || viewportName === 'sm') {
     vm.refs.$App.removeClass('-sidebar-open-mobile');
@@ -180,7 +180,7 @@ Sidebar.close = function() {
 Sidebar.open = function() {
   const vm = Sidebar;
 
-  const viewportName = Util.getViewportName();
+  const viewportName = utils.getViewportName();
 
   if (viewportName === 'xs' || viewportName === 'sm') {
     vm.refs.$App.addClass('-sidebar-open-mobile');
@@ -199,7 +199,7 @@ Sidebar.toggleCompact = function() {
 
   const vm = Sidebar;
 
-  const viewportName = Util.getViewportName();
+  const viewportName = utils.getViewportName();
 
 
   if (viewportName === 'xs' || viewportName === 'sm') {

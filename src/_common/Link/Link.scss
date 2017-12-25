@@ -1,0 +1,12 @@
+a,
+.Link {
+  color: var(--LinkColor);
+  text-decoration: var(--LinkTextDecoration);
+  font-weight: var(--LinkFontWeight);
+  transition: var(--LinkTransition);
+
+  &:hover {
+    color: var(--LinkColor-hover);
+    text-decoration: var(--LinkTextDecoration-hover);
+  }
+}

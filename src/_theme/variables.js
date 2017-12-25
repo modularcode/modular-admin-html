@@ -4,11 +4,11 @@ const PUBLIC_PATH = ENV.PUBLIC_PATH || '/';
 const Color = require('color');
 const MaterialColors = require('material-colors');
 
-const themeUtils = require('./themeUtils');
+const utils = require('./utils');
 
 
-const MaterialColorsAll = themeUtils.getColors(MaterialColors);
-const MaterialColorsPalette = themeUtils.getColors(MaterialColors, true);
+const MaterialColorsAll = utils.getColors(MaterialColors);
+const MaterialColorsPalette = utils.getColors(MaterialColors, true);
 
 
 let variables = {
@@ -18,8 +18,10 @@ let variables = {
   'colorPrimary':          Color('#8BC34A'),
   'colorPrimary-dark':     () => variables['colorPrimary'].darken(0.1),
   'colorPrimary-darker':   () => variables['colorPrimary'].darken(0.15),
+  'colorPrimary-darkest':  () => variables['colorPrimary'].darken(0.2),
   'colorPrimary-light':    () => variables['colorPrimary'].lighten(0.1),
   'colorPrimary-lighter':  () => variables['colorPrimary'].lighten(0.15),
+  'colorPrimary-lightest': () => variables['colorPrimary'].lighten(0.2),
   'colorSecondary':        Color('#536DFE'),
 
   'colorText':             Color('#4f5f6f'),
@@ -83,9 +85,10 @@ variables = Object.assign(variables, {
   'BodyColorBg':                  Color('#f0f3f6'),
 
   // Link
-  'LinkColor':                    () => variables['colorText-dark'],
-  'LinkColor-hover':              () => variables['colorPrimary-dark'],
+  'LinkColor':                    () => variables['colorPrimary'],
+  'LinkColor-hover':              () => variables['colorPrimary-darkest'],
   'LinkFontWeight':               '600',
+  'LinkTransition':               'ease .15s',
   'LinkTextDecoration':           'none',
   'LinkTextDecoration-hover':     'none',
 

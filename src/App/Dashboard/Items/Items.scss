@@ -5,19 +5,31 @@
   }
 
   .ListHeader {
-
     font-size: .85em;
 
     // Hide element, but keep the place
     .Img {
+      height: 1px;
+      padding-bottom: 0;
       visibility: none;
       box-shadow: none;
     }
   }
 
-  .ColTitle {
-    a {
-      font-weight: normal;
+  .ColName {
+
+  }
+
+  .Name {
+    display: block;
+    padding: 3px 0;
+    color: var(--colorText);
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &:hover {
+      color: var(--colorPrimary);
     }
   }
 
@@ -27,7 +39,6 @@
   }
 
   .ColDate {
-
     text-align: right;
     justify-content: flex-end;
 

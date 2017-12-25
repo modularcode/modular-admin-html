@@ -2,7 +2,7 @@ import { Morris } from '_common/Chart';
 
 
 import theme from '_theme';
-import Util from '_common/Util';
+import utils from '_common/_utils';
 
 
 const colors = theme.get().colors;
@@ -22,7 +22,7 @@ History.init = () => {
   // drawing visits chart
   drawChart();
 
-  Util.addEventListener(document, 'tab.select', () => {
+  utils.addEventListener(document, 'tab.select', () => {
 
     drawChart();
 
@@ -33,10 +33,10 @@ History.init = () => {
     const AudienceTabEl = document.querySelector('#DashboardHistoryAudienceTab');
     const DownloadsTabEl = document.querySelector('#DashboardHistoryDownloadsTab');
 
-    if (Util.isVisible(AudienceTabEl)) {
+    if (utils.isVisible(AudienceTabEl)) {
       drawAudienceChart();
     }
-    else if (Util.isVisible(DownloadsTabEl)) {
+    else if (utils.isVisible(DownloadsTabEl)) {
       drawDownloadsChart();
     }
   }
@@ -46,7 +46,7 @@ History.init = () => {
 
     const containerEl = document.querySelector('#DashboardHistoryAudienceChart');
 
-    Util.empty(containerEl);
+    utils.empty(containerEl);
 
     const dataVisits = [
       { x: '2015-09-01', visits: 70, users: 36 },
@@ -94,7 +94,7 @@ History.init = () => {
 
     const containerEl = document.querySelector('#DashboardHistoryDownloadsChart');
 
-    Util.empty(containerEl);
+    utils.empty(containerEl);
 
     const dataDownloads = [
       {

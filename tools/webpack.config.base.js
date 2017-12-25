@@ -119,7 +119,7 @@ webpackConfigBase.module.rules = [
             config.NPM_DIR + '/bootstrap/scss/_variables.scss',
             config.NPM_DIR + '/bootstrap/scss/_mixins.scss',
             config.SRC_DIR + '/_theme/variables.scss',
-            config.SRC_DIR + '/_common/Util/Mixins.scss',
+            config.SRC_DIR + '/_common/_mixins/mixins.scss',
           ]
         },
       }

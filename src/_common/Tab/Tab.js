@@ -1,4 +1,4 @@
-import Util from '_common/Util';
+import utils from '_common/_utils';
 
 const Tab = {};
 
@@ -38,7 +38,7 @@ Tab.init = () => {
     $navItem.addClass('-active');
 
     // Fire event on DOM element
-    Util.triggerEvent(document, 'tab.select', {
+    utils.triggerEvent(document, 'tab.select', {
       detail: {
         el: targetEl
       }

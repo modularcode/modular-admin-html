@@ -1,4 +1,4 @@
-const themeUtils = require('./themeUtils');
+const themeUtils = require('./utils');
 
 let variables = require('./variables');
 

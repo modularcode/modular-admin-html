@@ -2,8 +2,8 @@
 import Common from './_common';
 
 // Pages
-import './Items/List';
 import Dashboard from './Dashboard';
+import ItemsList from './Items/List';
 // import ItemsEditor from './Items/Editor';
 
 const App = {};
@@ -18,6 +18,7 @@ App.init = () => {
 
   Common.init();
   Dashboard.init();
+  ItemsList.init();
 };
 
 

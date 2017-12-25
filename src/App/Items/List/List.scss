@@ -19,12 +19,10 @@
 
   .ItemCheck {
     margin-bottom: 0;
-
     span {
       padding-right: 0;
     }
   }
-
 
   .Img {
     width: 60px;
@@ -32,5 +30,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .Name {
+    display: block;
+    padding: 3px 0;
+    color: var(--colorText);
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &:hover {
+      color: var(--colorPrimary);
+    }
   }
 }

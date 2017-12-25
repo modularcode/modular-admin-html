@@ -3,44 +3,44 @@ dirname: Items # output dirname
 pagename: ItemsList
 layout: App/App.layout
 items:
-  - title: LG Stylo 3 - Prepaid - Carrier Locked - Virgin Mobile
-    img: https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg
+    name: LG Stylo 3 - Prepaid - Carrier Locked - Virgin Mobile
     author: Meadow Katheryne
     category: Software
     date: 21 SEP 10:45
     sales: 4958
-  - title: DJI Spark Palm launch, Intelligent Portable Mini Drone, Alpine White
-    img: https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg
+    name: DJI Spark Palm launch, Intelligent Portable Mini Drone, Alpine White
     author: Alexander Sargssyan
     category: Software
     date: 21 SEP 10:40
     sales: 192
-  - title: Simple Mobile Alcatel Pixi Glory 4G LTE Prepaid
-    img: https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg
+    name: Simple Mobile Alcatel Pixi Glory 4G LTE Prepaid
     author: Angela Blaine
     category: Software
     date: 20 SEP 18:14
     sales: 2143
-  - title: Samsung Electronics UN55MU7600 Curved 55-Inch 4K
-    img: https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg
+    name: Samsung Electronics UN55MU7600 Curved 55-Inch 4K
     author: Marcus Ulupus
     category: Software
     date: 20 SEP 15:37
     sales: 124
-  - title: LG B7A Series 65" OLED 4K HDR Smart TV 2017 Model
-    img: https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg
+    name: LG B7A Series 65" OLED 4K HDR Smart TV 2017 Model
     author: Grdon Mrdon
     category: Software
     date: 20 SEP 13:42
     sales: 10214
-  - title: Hard EVA Travel Black Case for DJI Spark Palm launch Intelligent Portable Mini Drone
-    img: https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg
+    name: Hard EVA Travel Black Case for DJI Spark Palm launch Intelligent Portable Mini Drone
     author: Tiko Charbaxo
     category: Software
     date: 20 SEP 09:10
     sales: 3217
 ---
-<article class="Page ItemsList">
+<article class="Page ItemsList" id="ItemsListPage">
   <div class="PageContainer">
 
     <header class="PageHeader">
@@ -60,8 +60,8 @@ items:
       <div class="ResponsiveList -striped">
         <div class="ListHeader -hidden-xs -hidden-sm">
           <div class="ItemCol ColCheck -size-auto">
-            <label class="ItemCheck" id="SelectAllItemsCheckbox">
-              <input type="checkbox" class="Checkbox">
+            <label class="InputCheckbox ItemCheck" id="SelectAllItemsCheckbox">
+              <input type="checkbox">
               <span></span>
             </label>
           </div>
@@ -93,8 +93,8 @@ items:
           {{#each items}}
             <div class="ListItem">
               <div class="ItemCol ColCheck -size-auto">
-                <label class="ItemCheck">
-                  <input type="checkbox" class="Checkbox">
+                <label class="InputCheckbox ItemCheck">
+                  <input type="checkbox">
                   <span></span>
                 </label>
               </div>
@@ -104,10 +104,10 @@ items:
                 </a>
               </div>
 
-              <div class="ItemCol -rel-size-6 -order-sm--2 ColTitle">
+              <div class="ItemCol ColName -rel-size-6 -order-sm--2">
                 <div class="ItemValue">
-                  <a href="">
-                    {{this.title}}
+                  <a href="" class="Name">
+                    {{this.name}}
                   </a>
                 </div>
               </div>
@@ -115,7 +115,7 @@ items:
               <div class="Divider -visible-xs -visible-sm -order-sm--1">
               </div>
 
-              <div class="ItemCol -rel-size-2 ColSales">
+              <div class="ItemCol ColSales -rel-size-2">
                 <div class="ItemLabel -visible-xs">
                   Sales
                 </div>
@@ -127,7 +127,7 @@ items:
               <div class="Divider -visible-xs">
               </div>
 
-              <div class="ItemCol -rel-size-2 ColStats">
+              <div class="ItemCol ColStats -rel-size-2">
                 <div class="ItemLabel -visible-xs">
                   Stats
                 </div>
@@ -139,31 +139,31 @@ items:
               <div class="Divider -visible-xs">
               </div>
 
-              <div class="ItemCol -rel-size-2 ColCategory">
+              <div class="ItemCol ColCategory -rel-size-2">
                 <div class="ItemLabel -visible-xs">
                   Category
                 </div>
                 <div class="ItemValue Category">
-                  {{this.category}}
+                  <a href="">{{this.category}}</a>
                 </div>
               </div>
 
               <div class="Divider -visible-xs">
               </div>
 
-              <div class="ItemCol -rel-size-2 ColAuthor">
+              <div class="ItemCol ColAuthor -rel-size-2">
                 <div class="ItemLabel -visible-xs">
                   Author
                 </div>
                 <div class="ItemValue Author">
-                  {{this.author}}
+                  <a href="">{{this.author}}</a>
                 </div>
               </div>
 
               <div class="Divider -visible-xs">
               </div>
 
-              <div class="ItemCol -rel-size-2 ColDate">
+              <div class="ItemCol ColDate -rel-size-2">
                 <div class="ItemLabel -visible-xs">
                   Date
                 </div>

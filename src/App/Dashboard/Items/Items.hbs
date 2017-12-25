@@ -9,54 +9,20 @@
 
   <div class="ResponsiveList -striped">
     <div class="ListHeader -hidden-xs -hidden-sm">
-      <div
-        class="
-          ItemCol
-          -size-auto
-
-          ColImg
-        ">
+      <div class="ItemCol ColImg -size-auto">
         {{!-- Just for size reference --}}
         <div class="Img"></div>
       </div>
-      <div
-        class="
-          ItemCol
-          -rel-size-6
-
-          ColTitle
-        ">
+      <div class="ItemCol ColName -rel-size-6 ColTitle">
         Name
       </div>
-      <div
-        class="
-          ItemCol
-          -rel-size-2
-          -size-xs-12
-          -rel-size-xs-12
-
-          ColSales
-        ">
+      <div class="ItemCol ColSales -rel-size-2 -size-xs-12 -rel-size-xs-12">
         Sales
       </div>
-      <div
-        class="
-          ItemCol
-          -rel-size-2
-          -size-xs-12
-
-          ColStats
-        ">
+      <div class="ItemCol ColStats -rel-size-2 -size-xs-12 ColStats">
         Stats
       </div>
-      <div
-        class="
-          ItemCol
-          -rel-size-2
-          -size-xs-12
-
-          ColDate
-        ">
+      <div class="ItemCol ColDate -rel-size-2 -size-xs-12 ColDate">
         Published
       </div>
     </div>
@@ -64,49 +30,23 @@
       {{#each items}}
         <div class="ListItem">
 
-          <div
-            class="
-              ItemCol
-              -size-auto
-
-              ColImg
-            ">
+          <div class="ItemCol ColImg -size-auto">
             <div class="Img" style="background-image: url({{this.img}})">
-
             </div>
           </div>
 
-          <div
-            class="
-              ItemCol
-              -rel-size-6
-              -order-sm--2
-
-              ColTitle
-            ">
+          <div class="ItemCol ColName -rel-size-6 -order-sm--2">
             <div class="ItemValue">
-              <a href="">
-                {{this.title}}
+              <a href="" class="Name">
+                {{this.name}}
               </a>
             </div>
           </div>
 
-          <div
-            class="
-              Divider
-              -visible-xs
-              -visible-sm
-              -order-sm--1
-            ">
+          <div class="Divider -visible-xs -visible-sm -order-sm--1">
           </div>
 
-          <div
-            class="
-              ItemCol
-              -rel-size-2
-
-              ColSales
-            ">
+          <div class="ItemCol ColSales -rel-size-2">
             <div class="ItemLabel -visible-xs">
               Sales
             </div>
@@ -115,42 +55,21 @@
             </div>
           </div>
 
-          <div
-            class="
-              Divider
-              -visible-xs
-            ">
+          <div class="Divider -visible-xs">
           </div>
 
-          <div
-            class="
-              ItemCol
-              -rel-size-2
-
-              ColStats
-            ">
+          <div class="ItemCol ColStats -rel-size-2">
             <div class="ItemLabel -visible-xs">
               Stats
             </div>
             <div class="ItemValue Stats" data-type="bar">
-
             </div>
           </div>
 
-          <div
-            class="
-              Divider
-              -visible-xs
-            ">
+          <div class="Divider -visible-xs">
           </div>
 
-          <div
-            class="
-              ItemCol
-              -rel-size-2
-
-              ColDate
-            ">
+          <div class="ItemCol ColDate -rel-size-2">
             <div class="ItemLabel -visible-xs">
               Date
             </div>

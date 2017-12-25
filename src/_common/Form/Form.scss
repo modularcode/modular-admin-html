@@ -1,6 +1,5 @@
 $input-border-focus: $colorPrimary;
 
-
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
@@ -8,8 +7,12 @@ $input-border-focus: $colorPrimary;
 @import 'bootstrap/scss/custom-forms';
 @import 'bootstrap/scss/input-group';
 
+.Field {
+  @extend .form-group;
+}
 
-.FormControl {
+
+.Input {
   @extend .form-control;
 
   &.-sm {
@@ -25,20 +28,19 @@ $input-border-focus: $colorPrimary;
   }
 }
 
-.FormGroup {
-  @extend .form-group;
-}
+.InputRadio,
+.InputCheckbox {
 
-.Radio,
-.Checkbox {
-	display: none;
+  input {
+    display: none;
+  }
 
-	& + span {
+	span {
 		padding: 0;
 		padding-right: 10px;
 	}
 
-	& + span:before {
+	span:before {
 		font-family: FontAwesome;
 		font-size: 21px;
 		display: inline-block;
@@ -46,55 +48,55 @@ $input-border-focus: $colorPrimary;
 		color: var(--colorDivider);
 	}
 
-	&:checked + span:before {
+	input:checked + span:before {
 		color: var(--colorPrimary);
 	}
 
-	&:disabled + span:before {
+	input:disabled + span:before {
 		opacity: 0.5;
 		cursor: not-allowed;
 	}
 
-	&:checked:disabled  + span:before {
+	input:checked:disabled  + span:before {
 		color: var(--colorDivider);
 	}
 }
 
-.Checkbox {
+.InputCheckbox {
 
-	& + span:before {
+	span:before {
 		content: "\f0c8";
 	}
 
-	&:checked + span:before {
+	input:checked + span:before {
 		content: "\f14a";
 	}
 
 	&.-rounded {
-		& + span:before {
+		input + span:before {
 			content: "\f111";
 		}
 
-		&:checked + span:before {
+		input:checked + span:before {
 			content: "\f058";
 		}
 	}
 }
 
-.Radio {
-	& + span:before {
+.InputRadio {
+	span:before {
 		content: "\f111";
 	}
 
-	&:checked + span:before {
+	input:checked + span:before {
 		content: "\f192";
 	}
 
 	&.-squared {
-		& + span:before {
+		input + span:before {
 			content: "\f0c8";
 		}
-		&:checked + span:before {
+		input:checked + span:before {
 			content: "\f14a";
 		}
 	}

@@ -2,7 +2,7 @@ import { Morris } from '_common/Chart';
 
 
 import theme from '_theme';
-import Util from '_common/Util';
+import utils from '_common/_utils';
 
 
 const colors = theme.get().colors;
@@ -22,7 +22,7 @@ SalesBreakdown.init = () => {
 
   function drawChart() {
 
-    Util.empty(containerEl);
+    utils.empty(containerEl);
 
 
     Morris.Donut({

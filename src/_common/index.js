@@ -1,3 +1,5 @@
+import './_utils';
+
 import Button from './Button';
 import './Card';
 import './Chart';
@@ -7,6 +9,7 @@ import './Form';
 import './Grid';
 import './Icon';
 import './Layout';
+import './Link';
 import './Modal';
 import './Page';
 import './Progress';
@@ -16,7 +19,6 @@ import './Tab';
 import './Table';
 import Tooltip from './Tooltip';
 import './Typography';
-import './Util';
 
 
 const Common = {};

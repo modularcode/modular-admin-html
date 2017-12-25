@@ -1,11 +1,11 @@
-const Util = {};
+const utils = {};
 
-Util.getViewportWidth = function() {
+utils.getViewportWidth = function() {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 };
 
-Util.getViewportName = function() {
-  var viewportWidth = Util.getViewportWidth();
+utils.getViewportName = function() {
+  var viewportWidth = utils.getViewportWidth();
 
   if (viewportWidth < 576) {
     return 'xs';
@@ -24,12 +24,12 @@ Util.getViewportName = function() {
   }
 };
 
-Util.randomScalingFactor = function() {
+utils.randomScalingFactor = function() {
   return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
 };
 
 
-Util.addEventListener = function (el, eventName, handler) {
+utils.addEventListener = function (el, eventName, handler) {
   if (el.addEventListener) {
     el.addEventListener(eventName, handler);
   } else {
@@ -39,7 +39,7 @@ Util.addEventListener = function (el, eventName, handler) {
   }
 };
 
-Util.triggerEvent = function (el, eventName, options) {
+utils.triggerEvent = function (el, eventName, options) {
   var event;
   if (window.CustomEvent) {
     event = new CustomEvent(eventName, options);
@@ -51,7 +51,7 @@ Util.triggerEvent = function (el, eventName, options) {
 };
 
 
-Util.empty = function (el) {
+utils.empty = function (el) {
 
   if (!el) return;
 
@@ -61,15 +61,15 @@ Util.empty = function (el) {
 };
 
 
-Util.isHidden = function (el) {
+utils.isHidden = function (el) {
   var style = window.getComputedStyle(el);
   return (style.display === 'none');
 };
 
-Util.isVisible = function(el) {
-  return !Util.isHidden(el);
+utils.isVisible = function(el) {
+  return !utils.isHidden(el);
 };
 
 
 
-export default Util;
+export default utils;

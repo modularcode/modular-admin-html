@@ -28,15 +28,3 @@ body {
     border-radius: 0;
   }
 }
-
-a {
-  color: var(--LinkColor);
-  text-decoration: var(--LinkTextDecoration);
-  font-weight: var(--LinkFontWeight);
-
-
-  &:hover {
-    color: var(--LinkColor-hover);
-    text-decoration: var(--LinkTextDecoration-hover);
-  }
-}
