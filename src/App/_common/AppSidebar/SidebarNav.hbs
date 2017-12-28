@@ -215,7 +215,7 @@
   </div>
 
 
-  <div class="NavGroup">
+  <div class="NavGroup {{#is pagename "in" "UIComponentsTypography"}}-open{{/is}}">
 
     <a href="/" class="NavLink">
       <i class="fa fa-desktop NavIcon"></i>
@@ -236,7 +236,9 @@
         Color Palette
       </a>
 
-      <a href="" class="NavLink">
+      <a
+        href="/UIComponents/Typography.html"
+        class="NavLink {{#is pagename "===" "UIComponentsTypography"}}-active{{/is}}">
         Typography
       </a>
 

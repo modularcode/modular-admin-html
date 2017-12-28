@@ -4,6 +4,7 @@ import Common from './_common';
 // Pages
 import Dashboard from './Dashboard';
 import ItemsList from './Items/List';
+import UIComponents from './UIComponents';
 // import ItemsEditor from './Items/Editor';
 
 const App = {};
