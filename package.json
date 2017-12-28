@@ -16,7 +16,7 @@
     "dev": "npm run clean && (npm run assets:dev | npm run html:dev | npm run bundle:dev)",
     "start": "npm run build",
     "build": "npm run clean && (npm run assets:prod | npm run html:prod | npm run bundle:prod)",
-    "deploy": "cross-env PUBLIC_PATH='/modular-admin-html-demo/' npm run build && gh-pages -d dist --repo git@github.com:modularcode/modular-admin-html-demo.git --branch master",
+    "deploy": "cross-env PUBLIC_PATH='/' npm run build && echo modular-admin-html.modularcode.io > ./dist/CNAME  && gh-pages -d dist --repo git@github.com:modularcode/modular-admin-html-demo.git --branch master",
     "assets:dev": "cpx \"src/_assets/**/*\" dist  --watch",
     "assets:prod": "cpx \"src/_assets/**/*\" dist ",
     "html:dev": "cross-env NODE_ENV=development gulp html:watch --gulpfile tools/gulpfile.js",
