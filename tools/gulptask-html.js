@@ -14,7 +14,7 @@ const handlebars = require('handlebars');
 const handlebarsRegistrar = require('handlebars-registrar');
 
 const config  = require('../config');
-const paths = require('./_paths');
+const paths = config.paths;
 const partials = {};
 
 module.exports = function() {

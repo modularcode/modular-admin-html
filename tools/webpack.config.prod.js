@@ -7,7 +7,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 const webpackConfigBase = require('./webpack.config.base');
-const webpackConfigProduction = {};
+const webpackConfigProduction = {
+  devtool: 'source-map',
+};
 
 // Result config
 const webpackConfig = Object.assign({}, webpackConfigBase, webpackConfigProduction);

@@ -10,7 +10,7 @@ const plugins = require('gulp-load-plugins')();
 *********************************************/
 
 const config = require('../config');
-const paths = require('./_paths');
+const paths = config.paths;
 
 /********************************************
 *                  Tasks

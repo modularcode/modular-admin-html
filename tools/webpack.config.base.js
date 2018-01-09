@@ -22,7 +22,7 @@ const webpackConfigBase = {
       jquery: "jquery/src/jquery",
     }
   },
-  devtool: 'source-map',
+
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',

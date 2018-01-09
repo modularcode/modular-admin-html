@@ -1,6 +1,7 @@
 .tmp
 .publish
 .deploy
+.vscode
 node_modules
 releases
 
