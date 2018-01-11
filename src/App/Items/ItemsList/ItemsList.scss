@@ -1,0 +1,68 @@
+.Page.ItemsList {
+
+  .ListHeader {
+    color: var(--colorText-light);
+    font-size: .8em;
+    font-weight: 700;
+
+    .ColImg {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .Img.-size-holder {
+      height: 1px;
+      padding-bottom: 0;
+      visibility: hidden;
+    }
+  }
+
+  .ItemCheck {
+    margin-bottom: 0;
+    span {
+      padding-right: 0;
+    }
+  }
+
+  .Img {
+    width: 60px;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Name {
+    display: block;
+    padding: 5px 0;
+    color: var(--colorText);
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &:hover {
+      color: var(--colorPrimary-dark);
+    }
+  }
+
+  .ColSales {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .Sales {
+    font-weight: 600;
+    font-size: .9em;
+  }
+
+  .ColStats {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ColDate {
+    font-size: .9em;
+    justify-content: flex-end;
+    text-align: right;
+  }
+}

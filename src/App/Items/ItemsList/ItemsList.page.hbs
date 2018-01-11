@@ -1,0 +1,183 @@
+---
+dirname: Items # output dirname
+pagename: ItemsList
+layout: App/App.layout
+items:
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg
+    name: LG Stylo 3 - Prepaid - Carrier Locked - Virgin Mobile
+    author: Meadow Katheryne
+    category: Software
+    date: 21 SEP 10:45
+    sales: 4958
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg
+    name: DJI Spark Palm launch, Intelligent Portable Mini Drone, Alpine White
+    author: Alexander Sargssyan
+    category: Software
+    date: 21 SEP 10:40
+    sales: 192
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg
+    name: Simple Mobile Alcatel Pixi Glory 4G LTE Prepaid
+    author: Angela Blaine
+    category: Software
+    date: 20 SEP 18:14
+    sales: 2143
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/why_this/128.jpg
+    name: Samsung Electronics UN55MU7600 Curved 55-Inch 4K
+    author: Marcus Ulupus
+    category: Software
+    date: 20 SEP 15:37
+    sales: 124
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/w7download/128.jpg
+    name: LG B7A Series 65" OLED 4K HDR Smart TV 2017 Model
+    author: Grdon Mrdon
+    category: Software
+    date: 20 SEP 13:42
+    sales: 10214
+  - img: https://s3.amazonaws.com/uifaces/faces/twitter/pankogut/128.jpg
+    name: Hard EVA Travel Black Case for DJI Spark Palm launch Intelligent Portable Mini Drone
+    author: Tiko Charbaxo
+    category: Software
+    date: 20 SEP 09:10
+    sales: 3217
+---
+<article class="Page ItemsList" id="ItemsListPage">
+  <div class="PageContainer">
+
+    <header class="PageHeader">
+      <h1 class="PageTitle">
+        Items
+
+        <a href="" class="Button -primary -raised -sm">
+          Add New
+        </a>
+      </h1>
+      <p class="PageDescription">
+         List of sample items - e.g. books, movies, events, etc...
+      </p>
+    </header>
+
+    <div class="Card Items">
+      <div class="ResponsiveList -striped">
+        <div class="ListHeader -hidden-xs -hidden-sm">
+          <div class="ItemCol ColCheck -size-auto">
+            <label class="InputCheckbox ItemCheck" >
+              <input type="checkbox" id="SelectAllItemsCheckbox">
+              <span></span>
+            </label>
+          </div>
+          <div class="ItemCol ColImg -size-auto">
+            <div class="Img -size-holder"></div>
+            <div>Media</div>
+            <div class="Img -size-holder"></div>
+          </div>
+          <div class="ItemCol ColTitle -rel-size-6">
+            Name
+          </div>
+          <div class="ItemCol ColSales -rel-size-2 -size-xs-12 -rel-size-xs-12 ColSales">
+            Sales
+          </div>
+          <div class="ItemCol ColStats -rel-size-2 -size-xs-12">
+            Stats
+          </div>
+          <div class="ItemCol ColCategory -rel-size-2 -size-xs-12">
+            Category
+          </div>
+          <div class="ItemCol ColAuthor -rel-size-2 -size-xs-12">
+            Author
+          </div>
+          <div class="ItemCol ColDate -rel-size-2 -size-xs-12">
+            Published
+          </div>
+        </div>
+        <div class="ListContent">
+          {{#each items}}
+            <div class="ListItem">
+              <div class="ItemCol ColCheck -size-auto">
+                <label class="InputCheckbox ItemCheck">
+                  <input type="checkbox">
+                  <span></span>
+                </label>
+              </div>
+              <div class="ItemCol ColImg -size-auto">
+                <a href="/Items/Editor.html">
+                  <div class="Img -rounded" style="background-image: url({{this.img}})"></div>
+                </a>
+              </div>
+
+              <div class="ItemCol ColName -rel-size-6 -order-sm--2">
+                <div class="ItemValue">
+                  <a href="" class="Name">
+                    {{this.name}}
+                  </a>
+                </div>
+              </div>
+
+              <div class="Divider -visible-xs -visible-sm -order-sm--1">
+              </div>
+
+              <div class="ItemCol ColSales -rel-size-2">
+                <div class="ItemLabel -visible-xs">
+                  Sales
+                </div>
+                <div class="ItemValue Sales">
+                  {{this.sales}}
+                </div>
+              </div>
+
+              <div class="Divider -visible-xs">
+              </div>
+
+              <div class="ItemCol ColStats -rel-size-2">
+                <div class="ItemLabel -visible-xs">
+                  Stats
+                </div>
+                <div class="ItemValue Stats" data-type="bar">
+
+                </div>
+              </div>
+
+              <div class="Divider -visible-xs">
+              </div>
+
+              <div class="ItemCol ColCategory -rel-size-2">
+                <div class="ItemLabel -visible-xs">
+                  Category
+                </div>
+                <div class="ItemValue Category">
+                  <a href="">{{this.category}}</a>
+                </div>
+              </div>
+
+              <div class="Divider -visible-xs">
+              </div>
+
+              <div class="ItemCol ColAuthor -rel-size-2">
+                <div class="ItemLabel -visible-xs">
+                  Author
+                </div>
+                <div class="ItemValue Author">
+                  <a href="">{{this.author}}</a>
+                </div>
+              </div>
+
+              <div class="Divider -visible-xs">
+              </div>
+
+              <div class="ItemCol ColDate -rel-size-2">
+                <div class="ItemLabel -visible-xs">
+                  Date
+                </div>
+                <div class="ItemValue">
+                  {{this.date}}
+                </div>
+              </div>
+            </div>
+          {{/each}}
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</article>
