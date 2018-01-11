@@ -1,4 +1,5 @@
 import './Typography';
+import './Grid';
 
 const UIComponents = {};
 
