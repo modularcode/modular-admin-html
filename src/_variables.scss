@@ -8,8 +8,8 @@
 **************************************************************/
 
 $color-primary: #85CE36 !default;
-$color-primary-light: lighten($color-primary, 10%) !default; 
-$color-primary-lighter: lighten($color-primary-light, 6%) !default; 
+$color-primary-light: lighten($color-primary, 10%) !default;
+$color-primary-lighter: lighten($color-primary-light, 6%) !default;
 $color-primary-dark: darken($color-primary, 10%) !default;
 $color-primary-darker: darken($color-primary-dark, 6%) !default;
 
@@ -53,7 +53,7 @@ $header-height: 70px !default;
 $header-height-xs: 50px !default;
 
 // Sidebar
-$sidebar-width: 230px !default;
+$sidebar-width: 240px !default;
 
 // Footer
 $footer-height: 50px !default;

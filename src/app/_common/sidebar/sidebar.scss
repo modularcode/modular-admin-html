@@ -38,6 +38,21 @@
 		}
 	}
 
+	.label {
+		font-size: .75em;
+		display: inline-block;
+		border-radius: .2em;
+		padding: 2px 5px;
+		background-color: #ccc;
+		color: #000;
+		margin: 0 3px;
+	}
+
+	.label-screenful {
+		color: #fff;
+		background-color: #6769d4;
+	}
+
 	.sidebar-menu {
 
 		font-size: 14px;

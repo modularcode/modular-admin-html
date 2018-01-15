@@ -1,0 +1,27 @@
+.screenful-page {
+
+	.section {
+		text-align: center;
+	}
+
+	.card-block {
+		padding: 40px 100px;
+		text-align: center;
+	}
+
+	.subtitle {
+		margin-bottom: 30px;
+	}
+
+	.screenful-logo {
+		width: 300px;
+		height: 160px;
+		border-radius: 10px;
+		background-size: cover;
+		background-position: center;
+		background-image: url('https://static1.squarespace.com/static/5303cdc2e4b01fb736d82734/t/594145b02e69cf344247228a/1497449932063/?format=500w');
+		background-repeat: no-repeat;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+}
