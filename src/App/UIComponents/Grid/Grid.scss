@@ -1,0 +1,24 @@
+.UIComponentsGrid {
+
+  .Section {
+    text-align: center;
+  }
+
+  .SubTitle {
+    font-size: 1.2rem;
+    color: rgb(126, 142, 159);
+    margin-bottom: 30px;
+  }
+
+  .BootstrapLogo {
+		width: 300px;
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+		background-image: url(https://getbootstrap.com/assets/img/bootstrap-stack.png);
+		background-repeat: no-repeat;
+    display: inline-block;
+    margin-bottom: 20px;
+	}
+
+}
