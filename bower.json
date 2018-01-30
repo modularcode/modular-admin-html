@@ -23,7 +23,7 @@
     "jquery-touchswipe": "^1.6.18",
     "jquery.browser": "^0.1.0",
     "popper.js": "^1.12.3",
-    "bootstrap": "v4.0.0-beta"
+    "bootstrap": "v4.0.0"
   },
   "overrides": {
     "bootstrap": {
