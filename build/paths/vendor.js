@@ -12,15 +12,15 @@ var bowerDir 		= config.bowerDir;
 /*******************************************************************************
 
 	...Few words about vendor files
-	
+
 	For not including all scripts manually we use plugin
-	called main-bower-files. 
+	called main-bower-files.
 
 	It returns glob of files based on "main" field in vendor packages "bower.json".
 	Orders of files will be as per our bower.json, so if you have some libraries
 	that should be loaded on first, just move them upwards in project "bower.json".
 
-	If any of files that you want to access is not listed in vendor package, you can 
+	If any of files that you want to access is not listed in vendor package, you can
 	define files for that package manually in bower.json "overrides" field.
 
 	For more docs visit.
@@ -29,7 +29,7 @@ var bowerDir 		= config.bowerDir;
 	If for any reasons you don't like this approach, and want list your files
 	manually, you can just pass manual glob string or array to "src" option
 
-	eg. 
+	eg.
 
 	export.scripts: [
 		bowerDir + "jquery/dist/jquery.js",
@@ -43,15 +43,31 @@ var bowerDir 		= config.bowerDir;
 /***********************************************
 *		Vendor script files
 ************************************************/
-	
 
-	exports.scripts = mainBowerFiles({
+	var npmScripts = [
+		config.npmDir + '/jquery/dist/jquery.js',
+		config.npmDir + '/jquery-flot/jquery.flot.js',
+		config.npmDir + '/jquery-flot/jquery.flot.resize.js',
+		config.npmDir + '/jquery-flot/jquery.flot.pie.js',
+		config.npmDir + '/jquery-flot/jquery.flot.time.js',
+		config.npmDir + '/jquery.flot.tooltip/js/jquery.flot.tooltip.js',
+	];
+
+	var bowerScripts = mainBowerFiles({
 		filter: [
 			'**/*.js',
 			'!**/*.min.js'
 		],
 		paths: rootDir
 	});
+
+	bowerScripts.splice(0, npmScripts.length);
+
+	var scripts = [].concat(npmScripts, bowerScripts);
+
+	console.log(scripts);
+
+	exports.scripts = scripts;
 
 
 /***********************************************
@@ -83,7 +99,7 @@ var bowerDir 		= config.bowerDir;
 			'!**/*.less',
 
 			// Ingore fonts
-			
+
 			'!**/*.otf',
 			'!**/*.eot',
 			'!**/*.ttf',
