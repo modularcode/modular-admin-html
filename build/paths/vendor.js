@@ -51,6 +51,13 @@ var bowerDir 		= config.bowerDir;
 		config.npmDir + '/jquery-flot/jquery.flot.pie.js',
 		config.npmDir + '/jquery-flot/jquery.flot.time.js',
 		config.npmDir + '/jquery.flot.tooltip/js/jquery.flot.tooltip.js',
+		config.npmDir + '/jquery-validation/dist/jquery.validate.js',
+		config.npmDir + '/jquery-sparkline/jquery.sparkline.js',
+		config.npmDir + '/jqvmap/dist/jquery.vmap.js',
+		config.npmDir + '/jqvmap/dist/maps/jquery.vmap.world.js',
+		config.npmDir + '/metismenu/dist/metisMenu.js',
+		config.npmDir + '/nprogress/nprogress.js',
+		config.npmDir + '/quill/dist/quill.js',
 	];
 
 	var bowerScripts = mainBowerFiles({
@@ -61,7 +68,7 @@ var bowerDir 		= config.bowerDir;
 		paths: rootDir
 	});
 
-	bowerScripts.splice(0, npmScripts.length);
+	bowerScripts.splice(0, npmScripts.length + 2);
 
 	var scripts = [].concat(npmScripts, bowerScripts);
 
@@ -74,13 +81,31 @@ var bowerDir 		= config.bowerDir;
 *		Vendor style files
 ************************************************/
 
-	exports.styles = mainBowerFiles({
+	var npmStyles = [
+		config.npmDir + '/quill/dist/quill.core.css',
+		config.npmDir + '/quill/dist/quill.snow.css',
+	];
+
+	var bowerStyles = mainBowerFiles({
 		filter: [
 			'**/*.css',
 			'!**/*.min.css'
 		],
 		paths: rootDir
 	});
+
+	bowerStyles = bowerStyles.filter((item) => {
+		return !item.includes('quill.');
+	});
+
+	// bowerStyles.splice(0, npmStyles.length);
+
+	var styles = [].concat(npmStyles, bowerStyles);
+
+
+	console.log(styles);
+
+	exports.styles = styles;
 
 
 /***********************************************
