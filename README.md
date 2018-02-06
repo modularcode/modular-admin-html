@@ -34,7 +34,7 @@ git clone https://github.com/modularcode/modular-admin-html.git
 ```
 ### 2. Build the project
 
-The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm.
+The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) (v4+) with npm (v2.15+) installed.
 
 
 Install npm dependencies 
