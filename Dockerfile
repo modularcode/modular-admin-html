@@ -8,7 +8,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apk update \
 && apk upgrade \
 && apk add --no-cache bash git openssh \
-&& npm install -g bower \
 && npm install \
 && chown -R node:node /app \
 && npm rebuild node-sass \
@@ -16,7 +15,6 @@ RUN apk update \
 
 USER node
 WORKDIR /app
-RUN bower install
 
 EXPOSE 4000
 
