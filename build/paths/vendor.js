@@ -9,37 +9,6 @@ var bowerDir 		= config.bowerDir;
 
 
 
-/*******************************************************************************
-
-	...Few words about vendor files
-
-	For not including all scripts manually we use plugin
-	called main-bower-files.
-
-	It returns glob of files based on "main" field in vendor packages "bower.json".
-	Orders of files will be as per our bower.json, so if you have some libraries
-	that should be loaded on first, just move them upwards in project "bower.json".
-
-	If any of files that you want to access is not listed in vendor package, you can
-	define files for that package manually in bower.json "overrides" field.
-
-	For more docs visit.
-	https://github.com/ck86/main-bower-files#main-bower-files
-
-	If for any reasons you don't like this approach, and want list your files
-	manually, you can just pass manual glob string or array to "src" option
-
-	eg.
-
-	export.scripts: [
-		bowerDir + "jquery/dist/jquery.js",
-		bowerDir + "angular/jquery.js",
-	]
-
-********************************************************************************/
-
-
-
 /***********************************************
 *		Vendor script files
 ************************************************/
@@ -79,30 +48,19 @@ var bowerDir 		= config.bowerDir;
 ************************************************/
 
 	var npmStyles = [
+		config.npmDir + '/animate.css/animate.css',
+		config.npmDir + '/font-awesome/css/font-awesome.css',
+		config.npmDir + '/jqvmap/dist/jqvmap.css',
+		config.npmDir + '/metismenu/dist/metisMenu.css',
+		config.npmDir + '/nprogress/nprogress.css',
+		config.npmDir + '/dropzone/dist/dropzone.css',
 		config.npmDir + '/quill/dist/quill.core.css',
 		config.npmDir + '/quill/dist/quill.snow.css',
+		config.npmDir + '/morris.js/morris.css',
+		config.npmDir + '/bootstrap/dist/css/bootstrap.css',
 	];
 
-	var bowerStyles = mainBowerFiles({
-		filter: [
-			'**/*.css',
-			'!**/*.min.css'
-		],
-		paths: rootDir
-	});
-
-	bowerStyles = bowerStyles.filter((item) => {
-		return !item.includes('quill.');
-	});
-
-	// bowerStyles.splice(0, npmStyles.length);
-
-	var styles = [].concat(npmStyles, bowerStyles);
-
-
-	console.log(styles);
-
-	exports.styles = styles;
+	exports.styles = npmStyles;
 
 
 /***********************************************
