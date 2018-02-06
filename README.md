@@ -4,7 +4,7 @@
 
 [![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)](http://modularcode.github.io/modular-admin-html/)
 
-[![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png)](http://modularcode.github.io/modular-admin-html/)
+[![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Npm](http://modularcode.github.io/modular-admin-html/assets/features.png)](http://modularcode.github.io/modular-admin-html/)
 
 <p align="center">
   <strong>
@@ -34,17 +34,12 @@ git clone https://github.com/modularcode/modular-admin-html.git
 ```
 ### 2. Build the project
 
-The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
+The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm.
 
 
 Install npm dependencies 
 ```
 npm install
-```
-
-Install bower dependencies 
-```
-bower install
 ```
 
 Build the project and start local web server
@@ -66,12 +61,10 @@ You can also <strong>[run the project in docker](#running-in-docker)</strong> th
 ## Folder Structure
 
 ```
-├── bower_components/       # vendor libraries installed by bower
 ├── build/                  # app build tasks and tools
 ├── node_modules/           # node dependencies        
 ├── dist/                   # compiled result
 ├── src/                    # source files
-│── bower.json              # bower configuration file
 └── package.json            # npm configuration file
 ```
 
@@ -224,10 +217,6 @@ Layouts can also have contexts and parent layouts.
 
 
 If you need more advanced layouting with multiple content blocks at the same time you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
-
-#### Vendor files
-
-In addition to application files, there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all the script and style files accordingly to ```dist/js/vendor.js``` and ```dist/css/vendor.css```. It also will copy all assets to the ```dist/assets/``` folder.
 
 <br>
 
