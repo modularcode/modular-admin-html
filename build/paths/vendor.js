@@ -58,23 +58,20 @@ var bowerDir 		= config.bowerDir;
 		config.npmDir + '/metismenu/dist/metisMenu.js',
 		config.npmDir + '/nprogress/nprogress.js',
 		config.npmDir + '/quill/dist/quill.js',
+		config.npmDir + '/responsive-toolkit/dist/bootstrap-toolkit.js',
+		config.npmDir + '/sortablejs/Sortable.js',
+		config.npmDir + '/tether/dist/js/tether.js',
+		config.npmDir + '/tinycolor2/tinycolor.js',
+		config.npmDir + '/dropzone/dist/dropzone.js',
+		config.npmDir + '/jquery-touchswipe/jquery.touchSwipe.js',
+		config.npmDir + '/jquery.browser/dist/jquery.browser.js',
+		config.npmDir + '/popper.js/dist/umd/popper.js',
+		config.npmDir + '/bootstrap/dist/js/bootstrap.js',
+		config.npmDir + '/raphael/raphael.js',
+		config.npmDir + '/morris.js/morris.js',
 	];
 
-	var bowerScripts = mainBowerFiles({
-		filter: [
-			'**/*.js',
-			'!**/*.min.js'
-		],
-		paths: rootDir
-	});
-
-	bowerScripts.splice(0, npmScripts.length + 2);
-
-	var scripts = [].concat(npmScripts, bowerScripts);
-
-	console.log(scripts);
-
-	exports.scripts = scripts;
+	exports.scripts = npmScripts;
 
 
 /***********************************************

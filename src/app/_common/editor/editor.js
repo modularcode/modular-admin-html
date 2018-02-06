@@ -5,8 +5,6 @@ $(function() {
 		var $editor = $(this).find(".editor");
 		var $toolbar = $(this).find(".toolbar");
 
-		console.log("toolbar", $toolbar.get(0));
-
 		var editor = new Quill($editor.get(0), {
 			theme: 'snow',
 			// modules: {

@@ -1,7 +1,7 @@
 $(function(){
 
 	// set sortable options
-	$('.images-container').sortable({
+	var sortable = new Sortable($('.images-container').get(0), {
 		animation: 150,
 		handle: ".control-btn.move",
 		draggable: ".image-container",
