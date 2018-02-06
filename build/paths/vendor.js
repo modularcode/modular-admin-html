@@ -2,10 +2,10 @@ var mainBowerFiles 	= require('main-bower-files');
 
 var config = require('../config');
 
-var rootDir 		= config.rootDir;
+var rootDir 	= config.rootDir;
 var srcDir 		= config.srcDir;
-var destDir 		= config.destDir;
-var bowerDir 		= config.bowerDir;
+var destDir 	= config.destDir;
+var bowerDir 	= config.bowerDir;
 
 
 
@@ -64,44 +64,17 @@ var bowerDir 		= config.bowerDir;
 
 
 /***********************************************
-*		Vendor assets files
+*		Vendor asset files
 ************************************************/
 
-	/*
-		All files which are not .js, .css, .less and fonts
-	*/
-
-	exports.assets = mainBowerFiles({
-		filter: [
-			'**/*',
-			'!**/*.js',
-			'!**/*.css',
-			'!**/*.less',
-
-			// Ingore fonts
-
-			'!**/*.otf',
-			'!**/*.eot',
-			'!**/*.ttf',
-			'!**/*.woff',
-			'!**/*.woff2'
-		],
-		paths: rootDir
-	});
+	exports.assets = [];
 
 /***********************************************
 *		Vendor font files
 ************************************************/
 
+	var npmFonts = [
+		config.npmDir + '/font-awesome/fonts/*'
+	];
 
-	exports.fonts = mainBowerFiles({
-		filter: [
-			'**/*.otf',
-			'**/*.eot',
-			'**/*.ttf',
-			'**/*.woff',
-			'**/*.woff2',
-			'**/*.svg'
-		],
-		paths: rootDir
-	});
+	exports.fonts = npmFonts;
