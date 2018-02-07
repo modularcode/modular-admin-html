@@ -4,15 +4,13 @@
 
 [![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)](http://modularcode.github.io/modular-admin-html/)
 
-[![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Npm](http://modularcode.github.io/modular-admin-html/assets/features.png)](http://modularcode.github.io/modular-admin-html/)
-
 <p align="center">
   <strong>
     <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">Download ZIP</a>
   </strong>
 </p>
 
-[ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
+**[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain. This project is proudly supported by <a href="https://screenful.com/" target="_blank">Agile Metrics by Screenful</a> (*instant visual <a href="https://screenful.com/dashboard-for-trello/" target="_blank">dashboards for Trello</a> | <a href="https://screenful.com/dashboard-for-jira/" target="_blank">Jira</a> | <a href="https://screenful.com/dashboard-for-asana/" target="_blank">Asana</a> | <a href="https://screenful.com/dashboard-for-pivotal-tracker/" target="_blank">Pivotal Tracker</a> | <a href="https://screenful.com/dashboard-for-github/" target="_blank">Github</a>*)
 
 
 #### Heads up for the ModularAdmin v2!
