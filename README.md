@@ -1,10 +1,8 @@
 # ModularAdmin: Free Bootstrap 4 Dashboard Theme <br> HTML version
 
-[![Backers on Open Collective](https://opencollective.com/modular-admin-html/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/modular-admin-html/sponsors/badge.svg)](#sponsors) [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Backers on Open Collective](https://opencollective.com/modular-admin/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/modular-admin/sponsors/badge.svg)](#sponsors) [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)](http://modularcode.github.io/modular-admin-html/)
-
-[![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png)](http://modularcode.github.io/modular-admin-html/)
 
 <p align="center">
   <strong>
@@ -12,7 +10,7 @@
   </strong>
 </p>
 
-[ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
+**[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain. This project is proudly supported by <a href="https://screenful.com/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Agile Metrics by Screenful</a> (*instant visual <a href="https://screenful.com/dashboard-for-trello/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">dashboards for Trello</a> | <a href="https://screenful.com/dashboard-for-jira/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Jira</a> | <a href="https://screenful.com/dashboard-for-asana/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Asana</a> | <a href="https://screenful.com/dashboard-for-pivotal-tracker/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Pivotal Tracker</a> | <a href="https://screenful.com/dashboard-for-github/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Github</a>*)
 
 
 #### Heads up for the ModularAdmin v2!
@@ -34,17 +32,12 @@ git clone https://github.com/modularcode/modular-admin-html.git
 ```
 ### 2. Build the project
 
-The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
+The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) (v4+) with npm (v2.15+) installed.
 
 
 Install npm dependencies 
 ```
 npm install
-```
-
-Install bower dependencies 
-```
-bower install
 ```
 
 Build the project and start local web server
@@ -66,12 +59,10 @@ You can also <strong>[run the project in docker](#running-in-docker)</strong> th
 ## Folder Structure
 
 ```
-├── bower_components/       # vendor libraries installed by bower
 ├── build/                  # app build tasks and tools
 ├── node_modules/           # node dependencies        
 ├── dist/                   # compiled result
 ├── src/                    # source files
-│── bower.json              # bower configuration file
 └── package.json            # npm configuration file
 ```
 
@@ -225,10 +216,6 @@ Layouts can also have contexts and parent layouts.
 
 If you need more advanced layouting with multiple content blocks at the same time you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
 
-#### Vendor files
-
-In addition to application files, there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all the script and style files accordingly to ```dist/js/vendor.js``` and ```dist/css/vendor.css```. It also will copy all assets to the ```dist/assets/``` folder.
-
 <br>
 
 ## Running in Docker
@@ -265,53 +252,53 @@ Feel free to contact us with any questions, sugestions, remarks and potential fe
 
 ### Backers
 
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/modular-admin-html#backer)]
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/modular-admin#backer)]
 
-<a href="https://opencollective.com/modular-admin-html/backer/0/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/0/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/1/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/1/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/2/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/2/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/3/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/3/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/4/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/4/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/5/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/5/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/6/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/6/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/7/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/7/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/8/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/8/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/9/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/9/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/10/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/10/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/11/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/11/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/12/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/12/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/13/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/13/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/14/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/14/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/15/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/15/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/16/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/16/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/17/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/17/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/18/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/18/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/19/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/19/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/20/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/20/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/21/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/21/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/22/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/22/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/23/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/23/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/24/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/24/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/25/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/25/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/26/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/26/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/27/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/27/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/28/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/28/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/backer/29/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/backer/29/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/0/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/0/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/1/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/1/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/2/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/2/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/3/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/3/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/4/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/4/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/5/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/5/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/6/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/6/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/7/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/7/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/8/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/8/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/9/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/9/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/10/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/10/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/11/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/11/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/12/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/12/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/13/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/13/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/14/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/14/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/15/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/15/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/16/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/16/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/17/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/17/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/18/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/18/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/19/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/19/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/20/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/20/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/21/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/21/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/22/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/22/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/23/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/23/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/24/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/24/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/25/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/25/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/26/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/26/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/27/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/27/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/28/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/28/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/backer/29/website" target="_blank"><img src="https://opencollective.com/modular-admin/backer/29/avatar.svg"></a>
 
 
 ## Sponsors
 
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/modular-admin-html#sponsor)]
+Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/modular-admin#sponsor)]
 
-<a href="https://opencollective.com/modular-admin-html/sponsor/0/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/1/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/2/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/3/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/4/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/5/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/6/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/7/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/8/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/modular-admin-html/sponsor/9/website" target="_blank"><img src="https://opencollective.com/modular-admin-html/sponsor/9/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/0/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/1/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/2/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/3/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/4/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/5/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/6/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/7/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/8/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/modular-admin/sponsor/9/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/9/avatar.svg"></a>
 
 

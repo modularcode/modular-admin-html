@@ -2,110 +2,79 @@ var mainBowerFiles 	= require('main-bower-files');
 
 var config = require('../config');
 
-var rootDir 		= config.rootDir;
+var rootDir 	= config.rootDir;
 var srcDir 		= config.srcDir;
-var destDir 		= config.destDir;
-var bowerDir 		= config.bowerDir;
-
-
-
-/*******************************************************************************
-
-	...Few words about vendor files
-	
-	For not including all scripts manually we use plugin
-	called main-bower-files. 
-
-	It returns glob of files based on "main" field in vendor packages "bower.json".
-	Orders of files will be as per our bower.json, so if you have some libraries
-	that should be loaded on first, just move them upwards in project "bower.json".
-
-	If any of files that you want to access is not listed in vendor package, you can 
-	define files for that package manually in bower.json "overrides" field.
-
-	For more docs visit.
-	https://github.com/ck86/main-bower-files#main-bower-files
-
-	If for any reasons you don't like this approach, and want list your files
-	manually, you can just pass manual glob string or array to "src" option
-
-	eg. 
-
-	export.scripts: [
-		bowerDir + "jquery/dist/jquery.js",
-		bowerDir + "angular/jquery.js",
-	]
-
-********************************************************************************/
+var destDir 	= config.destDir;
+var bowerDir 	= config.bowerDir;
 
 
 
 /***********************************************
 *		Vendor script files
 ************************************************/
-	
 
-	exports.scripts = mainBowerFiles({
-		filter: [
-			'**/*.js',
-			'!**/*.min.js'
-		],
-		paths: rootDir
-	});
+	var npmScripts = [
+		config.npmDir + '/jquery/dist/jquery.js',
+		config.npmDir + '/jquery-flot/jquery.flot.js',
+		config.npmDir + '/jquery-flot/jquery.flot.resize.js',
+		config.npmDir + '/jquery-flot/jquery.flot.pie.js',
+		config.npmDir + '/jquery-flot/jquery.flot.time.js',
+		config.npmDir + '/jquery.flot.tooltip/js/jquery.flot.tooltip.js',
+		config.npmDir + '/jquery-validation/dist/jquery.validate.js',
+		config.npmDir + '/jquery-sparkline/jquery.sparkline.js',
+		config.npmDir + '/jqvmap/dist/jquery.vmap.js',
+		config.npmDir + '/jqvmap/dist/maps/jquery.vmap.world.js',
+		config.npmDir + '/metismenu/dist/metisMenu.js',
+		config.npmDir + '/nprogress/nprogress.js',
+		config.npmDir + '/quill/dist/quill.js',
+		config.npmDir + '/responsive-toolkit/dist/bootstrap-toolkit.js',
+		config.npmDir + '/sortablejs/Sortable.js',
+		config.npmDir + '/tether/dist/js/tether.js',
+		config.npmDir + '/tinycolor2/tinycolor.js',
+		config.npmDir + '/dropzone/dist/dropzone.js',
+		config.npmDir + '/jquery-touchswipe/jquery.touchSwipe.js',
+		config.npmDir + '/jquery.browser/dist/jquery.browser.js',
+		config.npmDir + '/popper.js/dist/umd/popper.js',
+		config.npmDir + '/bootstrap/dist/js/bootstrap.js',
+		config.npmDir + '/raphael/raphael.js',
+		config.npmDir + '/morris.js/morris.js',
+	];
+
+	exports.scripts = npmScripts;
 
 
 /***********************************************
 *		Vendor style files
 ************************************************/
 
-	exports.styles = mainBowerFiles({
-		filter: [
-			'**/*.css',
-			'!**/*.min.css'
-		],
-		paths: rootDir
-	});
+	var npmStyles = [
+		config.npmDir + '/animate.css/animate.css',
+		config.npmDir + '/font-awesome/css/font-awesome.css',
+		config.npmDir + '/jqvmap/dist/jqvmap.css',
+		config.npmDir + '/metismenu/dist/metisMenu.css',
+		config.npmDir + '/nprogress/nprogress.css',
+		config.npmDir + '/dropzone/dist/dropzone.css',
+		config.npmDir + '/quill/dist/quill.core.css',
+		config.npmDir + '/quill/dist/quill.snow.css',
+		config.npmDir + '/morris.js/morris.css',
+		config.npmDir + '/bootstrap/dist/css/bootstrap.css',
+	];
+
+	exports.styles = npmStyles;
 
 
 /***********************************************
-*		Vendor assets files
+*		Vendor asset files
 ************************************************/
 
-	/*
-		All files which are not .js, .css, .less and fonts
-	*/
-
-	exports.assets = mainBowerFiles({
-		filter: [
-			'**/*',
-			'!**/*.js',
-			'!**/*.css',
-			'!**/*.less',
-
-			// Ingore fonts
-			
-			'!**/*.otf',
-			'!**/*.eot',
-			'!**/*.ttf',
-			'!**/*.woff',
-			'!**/*.woff2'
-		],
-		paths: rootDir
-	});
+	exports.assets = [];
 
 /***********************************************
 *		Vendor font files
 ************************************************/
 
+	var npmFonts = [
+		config.npmDir + '/font-awesome/fonts/*'
+	];
 
-	exports.fonts = mainBowerFiles({
-		filter: [
-			'**/*.otf',
-			'**/*.eot',
-			'**/*.ttf',
-			'**/*.woff',
-			'**/*.woff2',
-			'**/*.svg'
-		],
-		paths: rootDir
-	});
+	exports.fonts = npmFonts;
