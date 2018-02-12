@@ -18,10 +18,31 @@
 		border-radius: 10px;
 		background-size: cover;
 		background-position: center;
-		background-image: url('https://static1.squarespace.com/static/5303cdc2e4b01fb736d82734/t/594145b02e69cf344247228a/1497449932063/?format=500w');
+		background-image: url('/assets/screenful/logo.png');
 		background-repeat: no-repeat;
 		display: inline-block;
 		margin-bottom: 20px;
+	}
+
+	.integrations {
+
+
+	}
+
+	.integrations-tools {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.integrations-title {
+		margin-bottom: 40px;
+	}
+
+	.integration-item {
+		margin: 0 1%;
+		margin-bottom: 30px;
 	}
 
 	.integration-logo {
@@ -30,16 +51,13 @@
 		border: 1px solid #fff;
 		border-radius: 10px;
 		transition: all .25s ease;
-		margin-bottom: 30px;
 	}
 
 	.integration-logo:hover {
 		border: 1px solid #6769d4;
 	}
 
-	.integration-title {
-		margin-bottom: 40px;
-	}
+
 
 	.benefits-title {
 		margin-bottom: 70px;
@@ -74,7 +92,7 @@
 		width: 100%;
 	}
 
-	.separator {
+	.divider {
 		background-color: #fff;
 		padding-bottom: 1px;
 		margin-bottom: 50px;
