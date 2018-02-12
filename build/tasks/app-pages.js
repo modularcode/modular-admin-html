@@ -175,6 +175,9 @@ function getPageContextExternal(file) {
 
 	//
 	extend(context, env.parsed);
+	extend(context, process.env)
+
+	context.BASE_URL = context.BASE_URL || '/';
 
 	// Package data
 	context.pkg = require('../../package.json');
