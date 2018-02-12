@@ -156,6 +156,37 @@ $(function() {
 		$el.addClass('visible');
 	}, 1000);
 })
+//ResetForm validation
+$(function() {
+	if (!$('#reset-form').length) {
+        return false;
+    }
+
+    var resetValidationSettings = {
+	    rules: {
+	        email1: {
+	            required: true,
+	            email: true
+	        }
+	    },
+	    messages: {
+	        email1: {
+	            required: "Please enter email address",
+	            email: "Please enter a valid email address"
+	        }
+	    },
+	    invalidHandler: function() {
+			animate({
+				name: 'shake',
+				selector: '.auth-container > .card'
+			});
+		}
+	}
+
+	$.extend(resetValidationSettings, config.validations);
+
+    $('#reset-form').validate(resetValidationSettings);
+})
 //LoginForm validation
 $(function() {
 	if (!$('#login-form').length) {
@@ -190,37 +221,6 @@ $(function() {
 	$.extend(loginValidationSettings, config.validations);
 
     $('#login-form').validate(loginValidationSettings);
-})
-//ResetForm validation
-$(function() {
-	if (!$('#reset-form').length) {
-        return false;
-    }
-
-    var resetValidationSettings = {
-	    rules: {
-	        email1: {
-	            required: true,
-	            email: true
-	        }
-	    },
-	    messages: {
-	        email1: {
-	            required: "Please enter email address",
-	            email: "Please enter a valid email address"
-	        }
-	    },
-	    invalidHandler: function() {
-			animate({
-				name: 'shake',
-				selector: '.auth-container > .card'
-			});
-		}
-	}
-
-	$.extend(resetValidationSettings, config.validations);
-
-    $('#reset-form').validate(resetValidationSettings);
 })
 //SignupForm validation
 $(function() {
@@ -985,6 +985,47 @@ $(function() {
 
 
 $(function() {
+	
+
+	function drawDashboardItemsListSparklines(){
+		$(".dashboard-page .items .sparkline").each(function() {
+			var type = $(this).data('type');
+
+			// There is predefined data
+			if ($(this).data('data')) {
+				var data = $(this).data('data').split(',').map(function(item) {
+					if (item.indexOf(":") > 0) {
+						return item.split(":");
+					}
+					else {
+						return item;
+					}
+				});
+			}
+			// Generate random data
+			else {
+				var data = [];
+				for (var i = 0; i < 17; i++) {
+					data.push(Math.round(100 * Math.random()));
+				}
+			}
+
+
+			$(this).sparkline(data, {
+				barColor: config.chart.colorPrimary.toString(),
+				height: $(this).height(),
+				type: type
+			});
+		});
+	}
+
+	drawDashboardItemsListSparklines();
+
+	$(document).on("themechange", function(){
+        drawDashboardItemsListSparklines();
+    });
+});
+$(function() {
 
     var $dashboardSalesBreakdownChart = $('#dashboard-sales-breakdown-chart');
 
@@ -1069,47 +1110,6 @@ $(function() {
 
     $(document).on("themechange", function(){
        drawSalesMap();
-    });
-});
-$(function() {
-	
-
-	function drawDashboardItemsListSparklines(){
-		$(".dashboard-page .items .sparkline").each(function() {
-			var type = $(this).data('type');
-
-			// There is predefined data
-			if ($(this).data('data')) {
-				var data = $(this).data('data').split(',').map(function(item) {
-					if (item.indexOf(":") > 0) {
-						return item.split(":");
-					}
-					else {
-						return item;
-					}
-				});
-			}
-			// Generate random data
-			else {
-				var data = [];
-				for (var i = 0; i < 17; i++) {
-					data.push(Math.round(100 * Math.random()));
-				}
-			}
-
-
-			$(this).sparkline(data, {
-				barColor: config.chart.colorPrimary.toString(),
-				height: $(this).height(),
-				type: type
-			});
-		});
-	}
-
-	drawDashboardItemsListSparklines();
-
-	$(document).on("themechange", function(){
-        drawDashboardItemsListSparklines();
     });
 });
 $(function() {
@@ -1218,21 +1218,6 @@ $(function() {
 		$(this).siblings('.input-group-addon').removeClass('focus');
 	});
 });
-// Animating dropdowns is temporary disabled
-// Please feel free to send a pull request :)
-
-// $(function() {
-// 	$('.nav-profile > li > a').on('click', function() {
-// 		var $el = $(this).next();
-
-
-// 		animate({
-// 			name: 'flipInX',
-// 			selector: $el
-// 		});
-// 	});
-// })
-
 var modalMedia = {
 	$el: $("#modal-media"),
 	result: {},
@@ -1256,6 +1241,21 @@ var modalMedia = {
 		}
 	}
 };
+// Animating dropdowns is temporary disabled
+// Please feel free to send a pull request :)
+
+// $(function() {
+// 	$('.nav-profile > li > a').on('click', function() {
+// 		var $el = $(this).next();
+
+
+// 		animate({
+// 			name: 'flipInX',
+// 			selector: $el
+// 		});
+// 	});
+// })
+
 $(function () {
 
 	// Local storage settings
