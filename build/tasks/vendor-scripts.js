@@ -1,4 +1,4 @@
-var config = require('../config');
+var config = require('../../config/');
 
 module.exports.task = function(gulp, plugins, paths) {
 	gulp.src(paths.vendor.scripts)

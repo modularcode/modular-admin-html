@@ -4,15 +4,13 @@
 
 [![demo](http://modularcode.github.io/modular-admin-html/assets/demo.png)](http://modularcode.github.io/modular-admin-html/)
 
-[![HTML5 jQuery Bootstrap4 SASS Handlebars Gulp Bower](http://modularcode.github.io/modular-admin-html/assets/features.png)](http://modularcode.github.io/modular-admin-html/)
-
 <p align="center">
   <strong>
     <a href="http://modularcode.github.io/modular-admin-html/" target="_blank">View Demo</a> | <a href="https://github.com/modularcode/modular-admin-html/releases" target="_blank">Download ZIP</a>
   </strong>
 </p>
 
-[ModularAdmin](http://modularcode.github.io/modular-admin-html/) is an open source dashboard theme built in a modular way. That makes it extremely easy to scale, modify and maintain.
+**[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain. This project is proudly supported by <a href="https://screenful.com/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Agile Metrics by Screenful</a> (*instant visual <a href="https://screenful.com/dashboard-for-trello/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">dashboards for Trello</a> | <a href="https://screenful.com/dashboard-for-jira/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Jira</a> | <a href="https://screenful.com/dashboard-for-asana/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Asana</a> | <a href="https://screenful.com/dashboard-for-pivotal-tracker/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Pivotal Tracker</a> | <a href="https://screenful.com/dashboard-for-github/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Github</a>*)
 
 
 #### Heads up for the ModularAdmin v2!
@@ -27,24 +25,19 @@ We're working hard on version 2, which is a complete rewrite.
 
 > **Note:** If you don't want to re-build the project, you may just clone this branch directly  ```https://github.com/modularcode/modular-admin-html/tree/gh-pages```
 
-### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases) or Git Clone
+### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/latest) or Git Clone
 
 ```
 git clone https://github.com/modularcode/modular-admin-html.git
 ```
 ### 2. Build the project
 
-The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) with npm. You also need to have [Bower](http://bower.io/) installed globally. 
+The cloned/downloaded repository doesn't contain prebuilt version of the project and you need to build it. You need to have [NodeJs](https://nodejs.org/en/) (v4+) with npm (v2.15+) installed.
 
 
 Install npm dependencies 
 ```
 npm install
-```
-
-Install bower dependencies 
-```
-bower install
 ```
 
 Build the project and start local web server
@@ -66,14 +59,31 @@ You can also <strong>[run the project in docker](#running-in-docker)</strong> th
 ## Folder Structure
 
 ```
-├── bower_components/       # vendor libraries installed by bower
-├── build/                  # app build tasks and tools
-├── node_modules/           # node dependencies        
-├── dist/                   # compiled result
-├── src/                    # source files
-│── bower.json              # bower configuration file
-└── package.json            # npm configuration file
+├── build/               # app build tasks and tools
+├── config/              # build configs and paths definitions
+├── dist/                # compiled result
+├── node_modules/        # node dependencies        
+├── src/                 # source files
+└── package.json         # npm configuration file
 ```
+
+#### ```config/``` folder
+
+This folder contains application build configurations and paths definitions.
+For **adding/removing NPM dependencies** you need to **manually define the paths** in `config/index.js` file after the module installation.
+
+#### ```build/``` folder
+
+This folder contains files related to our application compilation. That can be styles preprocessing (LESS,SASS,PostCSS) and template engine compilation, script file concatenation and minification and other related tasks.
+
+```
+├── tasks/                           # tasks folder
+|   └── {different tasks}            # each file represents a single build task
+├── utils/                           # some utils
+└── gulpfile.js                      # main build file for gulp build system
+
+```
+
 
 #### ```src/``` folder
 
@@ -116,21 +126,7 @@ This file structuring makes our app file organization very semantic and scalable
 
 ```
 
-#### ```build/``` folder
 
-This folder contains files related to our application compilation. That can be styles preprocessing (LESS,SASS,PostCSS) and template engine compilation, script file concatenation and minification and other related tasks.
-
-```
-├── paths/                           # application file paths
-|   ├── app.js                       # application file paths
-|   └── vendor.js                    # 3-rd party plugins paths
-├── tasks/                           # tasks folder
-|   └── {different tasks}            # each file represents a single build task
-├── utils/                           # some utils
-├── config.js                        # build configs
-└── gulpfile.js                      # main build file for gulp build system
-
-```
 
 #### ```dist/``` folder
 
@@ -224,10 +220,6 @@ Layouts can also have contexts and parent layouts.
 
 
 If you need more advanced layouting with multiple content blocks at the same time you can use [handlebar-layouts](https://www.npmjs.com/package/handlebars-layouts) helper approach, which is also available out of the box.
-
-#### Vendor files
-
-In addition to application files, there are also third party plugin files (e.g. Bootstrap). They are managed by using [Bower](http://bower.io/). Usually vendor libraries consist from scripts, styles and assets (images, fonts). The build system will concatenate and copy all the script and style files accordingly to ```dist/js/vendor.js``` and ```dist/css/vendor.css```. It also will copy all assets to the ```dist/assets/``` folder.
 
 <br>
 

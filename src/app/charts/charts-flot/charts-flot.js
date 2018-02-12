@@ -299,16 +299,15 @@ $(function() {
                     borderWidth:0,
                     hoverable: true //IMPORTANT! this is needed for tooltip to work,
 
-                },
-                tooltip: true,
-                tooltipOpts: {
-                    content: "%s for %x was %y",
+				},
+				tooltip: {
+					show: true,
+					content: "%s for %x was %y",
                     xDateFormat: "%y-%m-%d",
-
                     onHover: function(flotItem, $tooltipEl) {
                         // console.log(flotItem, $tooltipEl);
                     }
-                }
+				}
 
             });
         }

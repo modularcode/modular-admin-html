@@ -1,0 +1,101 @@
+.screenful-page {
+
+	.section {
+		text-align: center;
+	}
+
+	.subtitle {
+		margin-bottom: 30px;
+	}
+
+	.description {
+		margin-bottom: 50px;
+	}
+
+	.screenful-logo {
+		width: 300px;
+		height: 160px;
+		border-radius: 10px;
+		background-size: cover;
+		background-position: center;
+		background-image: url('../assets/screenful/logo.png');
+		background-repeat: no-repeat;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
+	.integrations {
+
+
+	}
+
+	.integrations-tools {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.integrations-title {
+		margin-bottom: 40px;
+	}
+
+	.integration-item {
+		margin: 0 1%;
+		margin-bottom: 30px;
+	}
+
+	.integration-logo {
+		width: 190px;
+		height: 90px;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		transition: all .25s ease;
+	}
+
+	.integration-logo:hover {
+		border: 1px solid #6769d4;
+	}
+
+
+
+	.benefits-title {
+		margin-bottom: 70px;
+	}
+
+	.screen-colum {
+		display: flex;
+		justify-content: center;
+	}
+
+	.screen-item {
+		max-width: 500px;
+	}
+
+	.ex-pic {
+		width: 100%;
+		border-radius: 10px;
+		background-size: cover;
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	ul {
+		display: inline-block;
+		text-align: left;
+		width: 100%;
+	}
+
+	.divider {
+		background-color: #fff;
+		padding-bottom: 1px;
+		margin-bottom: 50px;
+	}
+
+}

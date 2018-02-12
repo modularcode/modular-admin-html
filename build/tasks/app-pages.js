@@ -11,7 +11,7 @@ var frontMatter = require('front-matter');
 var handlebars = require('handlebars');
 var handlebarsRegistrar = require('handlebars-registrar');
 
-var config 	= require('../config');
+var config 	= require('../../config');
 var partials = {};
 
 module.exports.task = function(gulp, plugins, paths) {
@@ -53,7 +53,7 @@ module.exports.task = function(gulp, plugins, paths) {
 			path.basename = path.basename.replace("-page", "");
 			path.extname = ".html"
 		}))
-		
+
 		// Flatten structure
 		.pipe(plugins.flatten())
 
@@ -66,8 +66,8 @@ module.exports.task = function(gulp, plugins, paths) {
 		.pipe(gulp.dest(config.destDir))
 
 		//Live-Reload
-		.pipe(plugins.connect.reload()); 
-	
+		.pipe(plugins.connect.reload());
+
 };
 
 
@@ -153,7 +153,7 @@ function setFrontMatter(file) {
 
 
 /*
-	This function returns context of current page 
+	This function returns context of current page
 	which is root context extended by all contexts untill
 	current level context
 
@@ -173,8 +173,11 @@ function getPageContextExternal(file) {
 
 	env.parsed = env.parsed || {};
 
-	// 
+	//
 	extend(context, env.parsed);
+	extend(context, process.env)
+
+	context.BASE_URL = context.BASE_URL || '/';
 
 	// Package data
 	context.pkg = require('../../package.json');
