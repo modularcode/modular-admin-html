@@ -1,5 +1,5 @@
 var path = require('path');
-var config = require('../config');
+var config = require('../../config/');
 
 module.exports.task = function(gulp, plugins, paths) {
 
@@ -10,7 +10,6 @@ module.exports.task = function(gulp, plugins, paths) {
 				includePaths: [
 					path.resolve( config.srcDir ),
 					path.resolve( config.npmDir ),
-					path.resolve( config.bowerDir ),
 				]
 			})
 			.on('error', plugins.sass.logError)

@@ -10,12 +10,8 @@ var utils = require('./utils/utils');
 *			Configs And Paths
 *********************************************/
 
-var config = require('./config');
-
-var paths = {
-	app: 	require('./paths/app'),
-	vendor: require('./paths/vendor')
-};
+var config = require('../config/');
+var paths = config.paths;
 
 
 /********************************************
@@ -86,7 +82,7 @@ gulp.task('deploy', ['build'], function() {
 // // Run this task for development
 gulp.task('develop', [
 	'build',
-	'watch', 
+	'watch',
 	'connect'
 ]);
 

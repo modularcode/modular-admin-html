@@ -1,5 +1,5 @@
 var path = require('path');
-var config = require('../config');
+var config = require('../../config/');
 var glob = require('glob');
 
 module.exports.task = function(gulp, plugins, paths) {
@@ -11,7 +11,7 @@ module.exports.task = function(gulp, plugins, paths) {
 		var src = [].concat(paths.app.styles);
 			src.unshift(filePath);
 
-		// Theme name 
+		// Theme name
 		var name = "app-" + path.basename(filePath, '.js').replace("-theme", "");
 
 		gulp.src(src)
@@ -21,7 +21,6 @@ module.exports.task = function(gulp, plugins, paths) {
 					includePaths: [
 						path.resolve( config.srcDir ),
 						path.resolve( config.npmDir ),
-						path.resolve( config.bowerDir ),
 					]
 				})
 				.on('error', plugins.sass.logError)

@@ -25,7 +25,7 @@ We're working hard on version 2, which is a complete rewrite.
 
 > **Note:** If you don't want to re-build the project, you may just clone this branch directly  ```https://github.com/modularcode/modular-admin-html/tree/gh-pages```
 
-### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases) or Git Clone
+### 1. [Download ZIP](https://github.com/modularcode/modular-admin-html/releases/latest) or Git Clone
 
 ```
 git clone https://github.com/modularcode/modular-admin-html.git
@@ -59,12 +59,31 @@ You can also <strong>[run the project in docker](#running-in-docker)</strong> th
 ## Folder Structure
 
 ```
-├── build/                  # app build tasks and tools
-├── node_modules/           # node dependencies        
-├── dist/                   # compiled result
-├── src/                    # source files
-└── package.json            # npm configuration file
+├── build/               # app build tasks and tools
+├── config/              # build configs and paths definitions
+├── dist/                # compiled result
+├── node_modules/        # node dependencies        
+├── src/                 # source files
+└── package.json         # npm configuration file
 ```
+
+#### ```config/``` folder
+
+This folder contains application build configurations and paths definitions.
+For **adding/removing NPM dependencies** you need to **manually define the paths** in `config/index.js` file after the module installation.
+
+#### ```build/``` folder
+
+This folder contains files related to our application compilation. That can be styles preprocessing (LESS,SASS,PostCSS) and template engine compilation, script file concatenation and minification and other related tasks.
+
+```
+├── tasks/                           # tasks folder
+|   └── {different tasks}            # each file represents a single build task
+├── utils/                           # some utils
+└── gulpfile.js                      # main build file for gulp build system
+
+```
+
 
 #### ```src/``` folder
 
@@ -107,21 +126,7 @@ This file structuring makes our app file organization very semantic and scalable
 
 ```
 
-#### ```build/``` folder
 
-This folder contains files related to our application compilation. That can be styles preprocessing (LESS,SASS,PostCSS) and template engine compilation, script file concatenation and minification and other related tasks.
-
-```
-├── paths/                           # application file paths
-|   ├── app.js                       # application file paths
-|   └── vendor.js                    # 3-rd party plugins paths
-├── tasks/                           # tasks folder
-|   └── {different tasks}            # each file represents a single build task
-├── utils/                           # some utils
-├── config.js                        # build configs
-└── gulpfile.js                      # main build file for gulp build system
-
-```
 
 #### ```dist/``` folder
 
