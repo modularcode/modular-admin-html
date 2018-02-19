@@ -8,15 +8,15 @@ import './main.scss';
 import Common from './_common';
 
 // Components
-import App from './App';
 import Auth from './Auth';
+import Dashboard from './Dashboard';
 
 
 window.addEventListener('load', function() {
   setTimeout(function() {
     Common.init();
 
-    App.init();
     Auth.init();
+    Dashboard.init();
   }, 200);
 });

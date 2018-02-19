@@ -1,6 +1,6 @@
 ---
 filename: index # output file name
-layout: App/App.layout
+layout: Dashboard/Dashboard.layout
 pagename: Dashboard
 titleSeparator: ''
 items:
@@ -55,19 +55,19 @@ items:
     </div>
     <div class="row -row-compact-sm -row-compact-md -row-compact-lg">
       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-5 -sameheight">
-        {{> App/Dashboard/Stats/Stats}}
+        {{> Dashboard/Main/Stats/Stats}}
       </div>
 
       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-7 -sameheight">
-        {{> App/Dashboard/History/History}}
+        {{> Dashboard/Main/History/History}}
       </div>
 
       <div class="col-xl-8 -sameheight">
-        {{> App/Dashboard/Items/Items}}
+        {{> Dashboard/Main/Items/Items}}
       </div>
 
       <div class="col-xl-4 -sameheight">
-        {{> App/Dashboard/SalesBreakdown/SalesBreakdown}}
+        {{> Dashboard/Main/SalesBreakdown/SalesBreakdown}}
       </div>
     </div>
   </div>

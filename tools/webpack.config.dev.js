@@ -8,7 +8,7 @@ const webpackConfigDevelopment = {
   devServer: {
     contentBase: config.DIST_DIR,
     setup: function(app) {
-      app.get('/bundle.css', function(req, res) {
+      app.get('/bundle/bundle.css', function(req, res) {
         res.send('');
       });
     },

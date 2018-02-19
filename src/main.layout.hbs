@@ -4,8 +4,8 @@ titleName: ModularAdmin - Free Dashboard Theme | HTML Version
 <!doctype html>
 <html class="no-js" lang="en" id="Main">
   <head>
-    {{#if PUBLIC_PATH}}
-      <base href="{{PUBLIC_PATH}}" >
+    {{#if BASE_URL}}
+      <base href="{{BASE_URL}}" >
     {{else}}
       <base href="/" >
     {{/if}}
@@ -18,10 +18,10 @@ titleName: ModularAdmin - Free Dashboard Theme | HTML Version
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" >
-    <link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="bundle/bundle.css">
   </head>
   <body>
     {{{body}}}
-    <script src="bundle.js"></script>
+    <script src="bundle/bundle.js"></script>
   </body>
 </html>

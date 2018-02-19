@@ -11,9 +11,9 @@ const theme = require(config.SRC_DIR + '/_theme/theme');
 const webpackConfigBase = {
   entry: path.resolve(config.SRC_DIR, 'main.js'),
   output: {
-    path: config.DIST_DIR,
+    path: config.DIST_DIR + "/bundle",
     filename: 'bundle.js',
-    publicPath: process.env.PUBLIC_PATH || "/"
+    publicPath: process.env.PUBLIC_PATH || "/bundle/"
   },
   resolve: {
     extensions: ['.js'],

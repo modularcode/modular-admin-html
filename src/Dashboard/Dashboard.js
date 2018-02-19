@@ -2,7 +2,7 @@
 import Common from './_common';
 
 // Pages
-import Dashboard from './Dashboard';
+import Main from './Main';
 import ItemsList from './Items/ItemsList';
 import UIComponents from './UIComponents';
 // import ItemsEditor from './Items/Editor';
@@ -11,6 +11,8 @@ const App = {};
 
 App.init = () => {
 
+  console.log("init app!");
+
   const $App = $('#App');
 
   if (!$App.length) {
@@ -18,7 +20,7 @@ App.init = () => {
   }
 
   Common.init();
-  Dashboard.init();
+  Main.init();
   ItemsList.init();
 };
 
