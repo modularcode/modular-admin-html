@@ -1,11 +1,11 @@
-.AppHeader {
+.DashboardHeader {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--HeaderColorBg);
-  box-shadow: var(--HeaderShadow);
-  border-bottom: var(--HeaderBorderBottom);
+  background-color: var(--DashboardHeaderColorBg);
+  box-shadow: var(--DashboardHeaderShadow);
+  border-bottom: var(--DashboardHeaderBorderBottom);
   padding: 0 20px;
 
   @include media-down(sm) {

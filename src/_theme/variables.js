@@ -80,9 +80,46 @@ variables.colors = Object.assign(
 
 variables = Object.assign(variables, {
 
-
   // Body
-  'BodyColorBg':                  Color('#f0f3f6'),
+  'BodyColorBg':                        Color('#f0f3f6'),
+
+  // Auth
+
+  // Dashboard
+  'DashboardColorBg':                   Color('#f0f3f6'),
+  'DashboardHeaderHeight':              '60px',
+  'DashboardHeaderHeight-xs':           '50px',
+  'DashboardSidebarWidth':              '240px',
+  'DashboardSidebarWidth-compact':      '70px',
+  'DashboardFooterHeight':              '50px',
+  'DashboardCustomizeWidth':            '280px',
+  'DashboardLayoutTransitionDuration':  '0.3s',
+
+  // Dashboard Header
+  'DashboardHeaderColorBg':          Color('#fff'),
+  'DashboardHeaderShadow':           '0px 0px 20px rgba(0, 0, 0, 0.3)',
+  'DashboardHeaderBorderBottom':     '1px solid #e0e0e0',
+
+  // Dashboard Footer
+  'DashboardFooterColorBg':          Color('#fff'),
+  'DashboardFooterShadow':           'none',
+
+  // Dashboard Sidebar
+  'DashboardSidebarColorBg':           Color('#3b4c5d'),
+  'DashboardSidebarColorText':         () => variables['colorText-inverse'].fade(0.2),
+  // 'SidebarBgImage':        'none',
+  'DashboardSidebarBgImage':           `url('~${PUBLIC_PATH}bundle/sidebar-bg-1.jpg')`,
+  'DashboardSidebarBgImageOpacity':    1,
+  'DashboardSidebarShadow':            '0px 0px 30px rgba(0, 0, 0, 0.5)',
+  'DashboardSidebarPaddingHorizontal': '20px',
+
+  // Dashboard Sidebar Nav
+  'DashboardSidebarNavColorText':        () => variables.colors.white.fade(0.4),
+  'DashboardSidebarNavColorText-open':   () => variables.colors.white.fade(0.4),
+  'DashboardSidebarNavColorText-active': () => variables.colors.white,
+
+
+  // Core components
 
   // Link
   'LinkColor':                    () => variables['colorPrimary'],
@@ -91,55 +128,6 @@ variables = Object.assign(variables, {
   'LinkTransition':               'ease .15s',
   'LinkTextDecoration':           'none',
   'LinkTextDecoration-hover':     'none',
-
-  // App
-  'AppColorBg':                   Color('#f0f3f6'),
-  'AppHeaderHeight':              '60px',
-  'AppHeaderHeight-xs':           '50px',
-  'AppSidebarWidth':              '240px',
-  'AppSidebarWidth-compact':      '70px',
-  'AppFooterHeight':              '50px',
-  'AppCustomizeWidth':            '280px',
-  'AppLayoutTransitionDuration':  '0.3s',
-
-  // Header
-  'HeaderColorBg':          Color('#fff'),
-  'HeaderShadow':           '0px 0px 20px rgba(0, 0, 0, 0.3)',
-  'HeaderBorderBottom':     '1px solid #e0e0e0',
-
-  // Footer
-  'FooterColorBg':          Color('#fff'),
-  'FooterShadow':           'none',
-
-  // Sidebar
-  'SidebarColorBg':           Color('#3b4c5d'),
-  'SidebarColorText':         () => variables['colorText-inverse'].fade(0.2),
-  // 'SidebarBgImage':        'none',
-  'SidebarBgImage':           `url('~${PUBLIC_PATH}bundle/sidebar-bg-1.jpg')`,
-  'SidebarBgImageOpacity':    1,
-  'SidebarShadow':            '0px 0px 30px rgba(0, 0, 0, 0.5)',
-  'SidebarPaddingHorizontal': '20px',
-
-  // Sidebar Nav
-  'SidebarNavColorText':        () => variables.colors.white.fade(0.4),
-  'SidebarNavColorText-open':   () => variables.colors.white.fade(0.4),
-  'SidebarNavColorText-active': () => variables.colors.white,
-
-  // Page
-  'PagePaddingVertical-xs':     '15px',
-  'PagePaddingHorizontal-xs':   '10px',
-
-  'PagePaddingVertical-sm':     '20px',
-  'PagePaddingHorizontal-sm':   '20px',
-
-  'PagePaddingVertical-md':     '25px',
-  'PagePaddingHorizontal-md':   '20px',
-
-  'PagePaddingVertical-lg':     '25px',
-  'PagePaddingHorizontal-lg':   '20px',
-
-  'PagePaddingVertical-xl':     '35px',
-  'PagePaddingHorizontal-xl':   '40px',
 
   // Card
   'CardColorBg':            '#fff',
@@ -163,7 +151,23 @@ variables = Object.assign(variables, {
   'DropdownColorBg':        '#fff',
 
   // Progress
-  'ProgressColorBg':        '#dddddd'
+  'ProgressColorBg':        '#dddddd',
+
+  // Page
+  'PagePaddingVertical-xs':     '15px',
+  'PagePaddingHorizontal-xs':   '10px',
+
+  'PagePaddingVertical-sm':     '20px',
+  'PagePaddingHorizontal-sm':   '20px',
+
+  'PagePaddingVertical-md':     '25px',
+  'PagePaddingHorizontal-md':   '20px',
+
+  'PagePaddingVertical-lg':     '25px',
+  'PagePaddingHorizontal-lg':   '20px',
+
+  'PagePaddingVertical-xl':     '35px',
+  'PagePaddingHorizontal-xl':   '40px',
 
 });
 

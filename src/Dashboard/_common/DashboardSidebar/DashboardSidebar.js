@@ -1,10 +1,10 @@
 import theme from '_theme';
 import utils from '_common/_utils';
-import AppCustomize from '../AppCustomize';
+import DashboardCustomize from '../DashboardCustomize';
 
 const Sidebar = {
   refs: {
-    $App: null,
+    $Dashboard: null,
     $SidebarNav: null,
     $NavGroups: null,
     $Navs: null
@@ -19,7 +19,7 @@ Sidebar.init = function () {
   // Ref elements
 
   vm.refs.$Main = $('#Main');
-  vm.refs.$App = $('#App');
+  vm.refs.$Dashboard = $('#Dashboard');
   vm.refs.$SidebarNav = $('#SidebarNav');
   vm.refs.$SidebarFooter = $('#SidebarFooter');
   vm.refs.$NavGroups = vm.refs.$SidebarNav.find('.NavGroup');
@@ -66,10 +66,10 @@ Sidebar.init = function () {
 
     // Check if sidebar has at least one open NavGroup
     if (vm.refs.$SidebarNav.find('> .NavGroup.-open').length) {
-      vm.refs.$App.addClass('-sidebar-nav-open');
+      vm.refs.$Dashboard.addClass('-sidebar-nav-open');
     }
     else {
-      vm.refs.$App.removeClass('-sidebar-nav-open');
+      vm.refs.$Dashboard.removeClass('-sidebar-nav-open');
     }
 
   });
@@ -82,7 +82,7 @@ Sidebar.init = function () {
     if (Sidebar.isCompact()) {
       vm.refs.$Navs.filter(':visible').fadeOut('fast');
       vm.refs.$NavGroups.removeClass('-open');
-      vm.refs.$App.removeClass('-sidebar-nav-open');
+      vm.refs.$Dashboard.removeClass('-sidebar-nav-open');
     }
     else {
       Sidebar.close();
@@ -99,7 +99,7 @@ Sidebar.init = function () {
     if (Sidebar.isCompact()) {
       vm.refs.$Navs.filter(':visible').fadeOut('fast');
       vm.refs.$NavGroups.removeClass('-open');
-      vm.refs.$App.removeClass('-sidebar-nav-open');
+      vm.refs.$Dashboard.removeClass('-sidebar-nav-open');
     }
   });
 
@@ -110,7 +110,7 @@ Sidebar.init = function () {
 
     vm.refs.$Navs.filter(':visible').hide();
     vm.refs.$NavGroups.removeClass('-open');
-    vm.refs.$App.removeClass('-sidebar-nav-open');
+    vm.refs.$Dashboard.removeClass('-sidebar-nav-open');
 
     Sidebar.toggleCompact(e);
 
@@ -120,7 +120,7 @@ Sidebar.init = function () {
   $('#SidebarToggleCustomize').on('click', function(e) {
     e.preventDefault();
 
-    AppCustomize.toggle();
+    DashboardCustomize.toggle();
   });
 
 };
@@ -132,12 +132,12 @@ Sidebar.isCompact = function() {
 
   return (
     viewportName === 'md' &&
-    vm.refs.$App.hasClass('-sidebar-compact-tablet')
+    vm.refs.$Dashboard.hasClass('-sidebar-compact-tablet')
   )
   ||
   (
     (viewportName === 'lg' || viewportName === 'xl') &&
-    vm.refs.$App.hasClass('-sidebar-compact-desktop')
+    vm.refs.$Dashboard.hasClass('-sidebar-compact-desktop')
   );
 };
 
@@ -147,13 +147,13 @@ Sidebar.toggle = function() {
   const viewportName = utils.getViewportName();
 
   if (viewportName === 'xs' || viewportName === 'sm') {
-    vm.refs.$App.toggleClass('-sidebar-open-mobile');
+    vm.refs.$Dashboard.toggleClass('-sidebar-open-mobile');
   }
   else if (viewportName === 'md') {
-    vm.refs.$App.toggleClass('-sidebar-open-tablet');
+    vm.refs.$Dashboard.toggleClass('-sidebar-open-tablet');
   }
   else if (viewportName === 'lg' || viewportName === 'xl') {
-    vm.refs.$App.toggleClass('-sidebar-closed-desktop');
+    vm.refs.$Dashboard.toggleClass('-sidebar-closed-desktop');
   }
 
   notifyLayoutUpdate();
@@ -165,13 +165,13 @@ Sidebar.close = function() {
   const viewportName = utils.getViewportName();
 
   if (viewportName === 'xs' || viewportName === 'sm') {
-    vm.refs.$App.removeClass('-sidebar-open-mobile');
+    vm.refs.$Dashboard.removeClass('-sidebar-open-mobile');
   }
   else if (viewportName === 'md') {
-    vm.refs.$App.removeClass('-sidebar-open-tablet');
+    vm.refs.$Dashboard.removeClass('-sidebar-open-tablet');
   }
   else if (viewportName === 'lg' || viewportName === 'xl') {
-    vm.refs.$App.removeClass('-sidebar-closed-desktop');
+    vm.refs.$Dashboard.removeClass('-sidebar-closed-desktop');
   }
 
   notifyLayoutUpdate();
@@ -183,13 +183,13 @@ Sidebar.open = function() {
   const viewportName = utils.getViewportName();
 
   if (viewportName === 'xs' || viewportName === 'sm') {
-    vm.refs.$App.addClass('-sidebar-open-mobile');
+    vm.refs.$Dashboard.addClass('-sidebar-open-mobile');
   }
   else if (viewportName === 'md') {
-    vm.refs.$App.addClass('-sidebar-open-tablet');
+    vm.refs.$Dashboard.addClass('-sidebar-open-tablet');
   }
   else if (viewportName === 'lg' || viewportName === 'xl') {
-    vm.refs.$App.addClass('-sidebar-closed-desktop');
+    vm.refs.$Dashboard.addClass('-sidebar-closed-desktop');
   }
 
   notifyLayoutUpdate();
@@ -206,10 +206,10 @@ Sidebar.toggleCompact = function() {
     return;
   }
   else if (viewportName === 'md') {
-    vm.refs.$App.toggleClass('-sidebar-compact-tablet');
+    vm.refs.$Dashboard.toggleClass('-sidebar-compact-tablet');
   }
   else if (viewportName === 'lg' || viewportName === 'xl') {
-    vm.refs.$App.toggleClass('-sidebar-compact-desktop');
+    vm.refs.$Dashboard.toggleClass('-sidebar-compact-desktop');
   }
 
   Sidebar.updateFooterTooltipsPlacement();

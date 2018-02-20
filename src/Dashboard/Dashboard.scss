@@ -1,26 +1,26 @@
-.App {
+.Dashboard {
   overflow-x: hidden;
-  background-color: var(--AppColorBg);
+  background-color: var(--DashboardColorBg);
   position: relative;
   left: 0;
 
   transition-property: left;
   transition-timing-function: ease;
-  transition-duration: var(--AppLayoutTransitionDuration);
+  transition-duration: var(--DashboardLayoutTransitionDuration);
 
   .HeaderContainer {
     position: absolute;
     top: 0;
-    left: var(--AppSidebarWidth);
+    left: var(--DashboardSidebarWidth);
     right: 0;
-    height: var(--AppHeaderHeight);
+    height: var(--DashboardHeaderHeight);
     display: flex;
     align-items: 'stretch';
     z-index: 30;
 
     transition-property: left right;
     transition-timing-function: ease;
-    transition-duration: var(--AppLayoutTransitionDuration);
+    transition-duration: var(--DashboardLayoutTransitionDuration);
   }
 
   .SidebarContainer {
@@ -28,13 +28,13 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: var(--AppSidebarWidth);
+    width: var(--DashboardSidebarWidth);
     display: flex;
     z-index: 40;
 
     transition-property: left width bottom margin-left;
     transition-timing-function: ease;
-    transition-duration: var(--AppLayoutTransitionDuration);
+    transition-duration: var(--DashboardLayoutTransitionDuration);
   }
 
   .SidebarOverlay {
@@ -54,30 +54,30 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    left: var(--AppSidebarWidth);
-    height: var(--AppFooterHeight);
+    left: var(--DashboardSidebarWidth);
+    height: var(--DashboardFooterHeight);
     display: flex;
     align-items: 'stretch';
     z-index: 20;
 
     transition-property: left bottom;
     transition-timing-function: ease;
-    transition-duration: var(--AppLayoutTransitionDuration);
+    transition-duration: var(--DashboardLayoutTransitionDuration);
   }
 
   .ContentContainer {
     display: flex;
     position: relative;
-    padding-top: var(--AppHeaderHeight);
-    padding-bottom: var(--AppFooterHeight);
-    margin-left: var(--AppSidebarWidth);
+    padding-top: var(--DashboardHeaderHeight);
+    padding-bottom: var(--DashboardFooterHeight);
+    margin-left: var(--DashboardSidebarWidth);
     min-height: 100vh;
     align-items: stretch;
     z-index: 10;
 
     transition-property: margin-left padding-bottom;
     transition-timing-function: ease;
-    transition-duration: var(--AppLayoutTransitionDuration);
+    transition-duration: var(--DashboardLayoutTransitionDuration);
   }
 
   .Content {
@@ -87,31 +87,31 @@
   .ContentBackground {
     position: absolute;
     width: 100%;
-    top: var(--AppHeaderHeight);
-    bottom: var(--AppFooterHeight);
+    top: var(--DashboardHeaderHeight);
+    bottom: var(--DashboardFooterHeight);
     z-index: -1;
   }
 
   .CustomizeContainer {
     position: fixed;
-    left: calc(-1 * var(--AppCustomizeWidth));
+    left: calc(-1 * var(--DashboardCustomizeWidth));
     top: 0;
-    width: var(--AppCustomizeWidth);
+    width: var(--DashboardCustomizeWidth);
     bottom: 0;
     z-index: 50;
 
     transition-property: left;
     transition-timing-function: ease;
-    transition-duration: var(--AppLayoutTransitionDuration);
+    transition-duration: var(--DashboardLayoutTransitionDuration);
   }
 
   &.-customize-open {
 
-    left: var(--AppCustomizeWidth);
+    left: var(--DashboardCustomizeWidth);
     overflow: hidden;
 
     .SidebarContainer {
-      margin-left: var(--AppCustomizeWidth);
+      margin-left: var(--DashboardCustomizeWidth);
     }
 
     .CustomizeContainer {
@@ -128,7 +128,7 @@
     }
 
     .SidebarContainer {
-      left: calc(-1 * var(--AppSidebarWidth));
+      left: calc(-1 * var(--DashboardSidebarWidth));
     }
 
     .ContentContainer {
@@ -136,7 +136,7 @@
     }
 
     .FooterContainer {
-      left: calc(-1 * var(--AppSidebarWidth));
+      left: calc(-1 * var(--DashboardSidebarWidth));
     }
 
     // Variations
@@ -155,7 +155,7 @@
     }
 
     .SidebarContainer {
-      left: calc(-1 * var(--AppSidebarWidth));
+      left: calc(-1 * var(--DashboardSidebarWidth));
     }
 
     .ContentContainer {
@@ -163,15 +163,15 @@
     }
 
     .FooterContainer {
-      left: calc(-1 * var(--AppSidebarWidth));
+      left: calc(-1 * var(--DashboardSidebarWidth));
     }
 
 
     // Variations for tablets
     &.-sidebar-compact-tablet {
       .SidebarContainer {
-        left: calc(-1 * var(--AppSidebarWidth-compact));
-        width: var(--AppSidebarWidth-compact);
+        left: calc(-1 * var(--DashboardSidebarWidth-compact));
+        width: var(--DashboardSidebarWidth-compact);
       }
     }
 
@@ -183,7 +183,7 @@
 
     &.-sidebar-open-tablet.-sidebar-compact-tablet {
       .HeaderContainer {
-        left: var(--AppSidebarWidth-compact);
+        left: var(--DashboardSidebarWidth-compact);
       }
 
       .SidebarContainer {
@@ -191,11 +191,11 @@
       }
 
       .ContentContainer {
-        margin-left: var(--AppSidebarWidth-compact);
+        margin-left: var(--DashboardSidebarWidth-compact);
       }
 
       .FooterContainer {
-        left: var(--AppSidebarWidth-compact);
+        left: var(--DashboardSidebarWidth-compact);
       }
     }
   }
@@ -207,19 +207,19 @@
     // Variations for desktops
     &.-sidebar-compact-desktop {
       .HeaderContainer {
-        left: var(--AppSidebarWidth-compact);
+        left: var(--DashboardSidebarWidth-compact);
       }
 
       .SidebarContainer {
-        width: var(--AppSidebarWidth-compact);
+        width: var(--DashboardSidebarWidth-compact);
       }
 
       .ContentContainer {
-        margin-left: var(--AppSidebarWidth-compact);
+        margin-left: var(--DashboardSidebarWidth-compact);
       }
 
       .FooterContainer {
-        left: var(--AppSidebarWidth-compact);
+        left: var(--DashboardSidebarWidth-compact);
       }
     }
 
@@ -230,7 +230,7 @@
       }
 
       .SidebarContainer {
-        left: calc(-1 * var(--AppSidebarWidth));
+        left: calc(-1 * var(--DashboardSidebarWidth));
       }
 
       .ContentContainer {
@@ -245,7 +245,7 @@
 
     &.-sidebar-closed-desktop.-sidebar-compact-desktop {
       .SidebarContainer {
-        left: calc(-1 * var(--AppSidebarWidth-compact));
+        left: calc(-1 * var(--DashboardSidebarWidth-compact));
       }
     }
   }
@@ -302,8 +302,8 @@
 
     &.-customize-open {
       .HeaderContainer {
-        left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth));
-        right: calc(-1 * var(--AppCustomizeWidth));
+        left: calc(var(--DashboardCustomizeWidth) + var(--DashboardSidebarWidth));
+        right: calc(-1 * var(--DashboardCustomizeWidth));
       }
 
       @include media-down(sm) {
@@ -315,11 +315,11 @@
 
       @include media(md) {
         .HeaderContainer {
-          left: var(--AppCustomizeWidth);
+          left: var(--DashboardCustomizeWidth);
         }
         &.-sidebar-compact-tablet.-sidebar-open-tablet {
           .HeaderContainer {
-            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+            left: calc(var(--DashboardCustomizeWidth) + var(--DashboardSidebarWidth-compact));
           }
         }
       }
@@ -327,13 +327,13 @@
       @include media-up(lg) {
         &.-sidebar-compact-desktop:not(.-sidebar-closed-desktop) {
           .HeaderContainer {
-            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+            left: calc(var(--DashboardCustomizeWidth) + var(--DashboardSidebarWidth-compact));
           }
         }
 
         &.-sidebar-closed-desktop {
           .HeaderContainer {
-            left: var(--AppCustomizeWidth);
+            left: var(--DashboardCustomizeWidth);
           }
         }
       }
@@ -348,8 +348,8 @@
 
     &.-customize-open {
       .FooterContainer {
-        left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth));
-        right: calc(-1 * var(--AppCustomizeWidth));
+        left: calc(var(--DashboardCustomizeWidth) + var(--DashboardSidebarWidth));
+        right: calc(-1 * var(--DashboardCustomizeWidth));
       }
 
       @include media-down(sm) {
@@ -361,11 +361,11 @@
 
       @include media(md) {
         .FooterContainer {
-          left: var(--AppCustomizeWidth);
+          left: var(--DashboardCustomizeWidth);
         }
         &.-sidebar-compact-tablet.-sidebar-open-tablet {
           .FooterContainer {
-            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+            left: calc(var(--DashboardCustomizeWidth) + var(--DashboardSidebarWidth-compact));
           }
         }
       }
@@ -373,13 +373,13 @@
       @include media-up(lg) {
         &.-sidebar-compact-desktop:not(.-sidebar-closed-desktop) {
           .FooterContainer {
-            left: calc(var(--AppCustomizeWidth) + var(--AppSidebarWidth-compact));
+            left: calc(var(--DashboardCustomizeWidth) + var(--DashboardSidebarWidth-compact));
           }
         }
 
         &.-sidebar-closed-desktop {
           .FooterContainer {
-            left: var(--AppCustomizeWidth);
+            left: var(--DashboardCustomizeWidth);
           }
         }
       }
@@ -401,7 +401,7 @@
 
   //   .HeaderContainer {
   //     left: 0;
-  //     right: var(--AppSidebarWidth);
+  //     right: var(--DashboardSidebarWidth);
 
   //     @include media-down(md) {
   //       right: 0;
@@ -414,14 +414,14 @@
 
   //     @include media-down(md) {
   //       left: auto;
-  //       right: calc(-1 * var(--AppSidebarWidth));
+  //       right: calc(-1 * var(--DashboardSidebarWidth));
   //     }
   //   }
 
 
   //   .FooterContainer {
   //     left: 0;
-  //     right: var(--AppSidebarWidth);
+  //     right: var(--DashboardSidebarWidth);
 
   //     @include media-down(md) {
   //       right: 0;
@@ -430,7 +430,7 @@
 
   //   .ContentContainer {
   //     margin-left: 0;
-  //     margin-right: var(--AppSidebarWidth);
+  //     margin-right: var(--DashboardSidebarWidth);
   //     @include media-down(md) {
   //       margin-right: 0;
   //     }
@@ -443,7 +443,7 @@
   //       }
 
   //       .SidebarContainer {
-  //         right: calc(-1 * var(--AppSidebarWidth));
+  //         right: calc(-1 * var(--DashboardSidebarWidth));
   //       }
 
   //       .FooterContainer {

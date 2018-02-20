@@ -1,4 +1,4 @@
-import './Dashboard.scss';
-import Dashboard from './Dashboard.js';
+import './Main.scss';
+import Main from './Main.js';
 
-export default Dashboard;
+export default Main;

@@ -1,18 +1,18 @@
-import AppHeader from './AppHeader';
-import './AppSearch';
-import AppSidebar from './AppSidebar';
-import AppFooter from './AppFooter';
-import AppCustomize from './AppCustomize';
+import DashboardHeader from './DashboardHeader';
+import './DashboardSearch';
+import DashboardSidebar from './DashboardSidebar';
+import DashboardFooter from './DashboardFooter';
+import DashboardCustomize from './DashboardCustomize';
 
-const AppCommon = {};
+const DashboardCommon = {};
 
-AppCommon.init = () => {
-  AppHeader.init();
-  AppCustomize.init();
+DashboardCommon.init = () => {
+  DashboardHeader.init();
+  DashboardCustomize.init();
 };
 
 export {
-  AppCommon, AppHeader, AppSidebar, AppFooter, AppCustomize
+  DashboardCommon, DashboardHeader, DashboardSidebar, DashboardFooter, DashboardCustomize
 };
 
-export default AppCommon;
+export default DashboardCommon;

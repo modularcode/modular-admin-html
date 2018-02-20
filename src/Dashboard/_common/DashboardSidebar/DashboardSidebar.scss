@@ -1,12 +1,12 @@
-.AppSidebar {
+.DashboardSidebar {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   z-index: 1;
-  color: var(--SidebarColorText);
-  background-color: var(--SidebarColorBg);
-  box-shadow: var(--SidebarShadow);
+  color: var(--DashboardSidebarColorText);
+  background-color: var(--DashboardSidebarColorBg);
+  box-shadow: var(--DashboardSidebarShadow);
   transition: background-color .3s ease;
 
 
@@ -14,7 +14,7 @@
     box-shadow: none;
 
     .-sidebar-open-mobile & {
-      box-shadow: var(--SidebarShadow);
+      box-shadow: var(--DashboardSidebarShadow);
     }
   }
 
@@ -22,7 +22,7 @@
     box-shadow: none;
 
     .-sidebar-open-tablet & {
-      box-shadow: var(--SidebarShadow);
+      box-shadow: var(--DashboardSidebarShadow);
     }
   }
 
@@ -44,8 +44,8 @@
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-    background-image: var(--SidebarBgImage);
-    opacity: var(--SidebarBgImageOpacity);
+    background-image: var(--DashboardSidebarBgImage);
+    opacity: var(--DashboardSidebarBgImageOpacity);
     z-index: -1;
   }
 

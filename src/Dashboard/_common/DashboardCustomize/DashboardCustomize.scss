@@ -1,4 +1,4 @@
-$CustomizePaddingHorizontal: 20px;
+$DashboardCustomizePaddingHorizontal: 20px;
 
 .AppCustomize {
   position: absolute;
@@ -23,7 +23,7 @@ $CustomizePaddingHorizontal: 20px;
 
 
   .-customize-open & {
-    box-shadow: var(--SidebarShadow);
+    box-shadow: var(--DashboardSidebarShadow);
   }
 
   .CustomizeHeader {
@@ -33,8 +33,8 @@ $CustomizePaddingHorizontal: 20px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 $CustomizePaddingHorizontal;
-    height: var(--AppHeaderHeight);
+    padding: 0 $DashboardCustomizePaddingHorizontal;
+    height: var(--DashboardHeaderHeight);
     border-bottom: 1px solid var(--colorDivider);
     position: relative;
     font-size: 1rem;

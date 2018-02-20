@@ -13,7 +13,7 @@ $badge-font-nested: 25px;
 
 $item-height: 44px;
 $item-height-nested: 36px;
-$item-padding-base: $SidebarPaddingHorizontal + $icon-box-width + $icon-spacing;
+$item-padding-base: $DashboardSidebarPaddingHorizontal + $icon-box-width + $icon-spacing;
 
 $sumbenu-padding: 6px;
 $submenu-levels: 4;
@@ -29,7 +29,7 @@ $submenu-levels: 4;
     display: block;
     // width: 100%;
     height: 1px;
-    margin: 3px $SidebarPaddingHorizontal;
+    margin: 3px $DashboardSidebarPaddingHorizontal;
     background-color: rgba(255, 255, 255, 0.13);
   }
 
@@ -41,12 +41,12 @@ $submenu-levels: 4;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: $SidebarPaddingHorizontal;
+    left: $DashboardSidebarPaddingHorizontal;
     top: 0;
 
     .-rtl & {
       left: auto;
-      right: $SidebarPaddingHorizontal;
+      right: $DashboardSidebarPaddingHorizontal;
     }
   }
 
@@ -64,20 +64,20 @@ $submenu-levels: 4;
     justify-content: flex-start;
     text-decoration: none;
     transition: color .3s ease, background .3s ease;
-    color: var(--SidebarNavColorText);
+    color: var(--DashboardSidebarNavColorText);
     cursor: pointer;
-    padding: 0 $SidebarPaddingHorizontal 0 $item-padding-base;
+    padding: 0 $DashboardSidebarPaddingHorizontal 0 $item-padding-base;
     font-weight: normal;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
     white-space: nowrap;
     text-overflow: ellipsis;
 
     &.-active {
-      color: var(--SidebarNavColorText-active);
+      color: var(--DashboardSidebarNavColorText-active);
     }
 
     &:hover {
-      color: var(--SidebarNavColorText-active);
+      color: var(--DashboardSidebarNavColorText-active);
     }
 
     &.-accented {
@@ -88,7 +88,7 @@ $submenu-levels: 4;
 
     .-rtl & {
       justify-content: flex-end;
-      padding: 0 $item-padding-base 0 $SidebarPaddingHorizontal;
+      padding: 0 $item-padding-base 0 $DashboardSidebarPaddingHorizontal;
     }
   }
 
@@ -105,14 +105,14 @@ $submenu-levels: 4;
   }
 
   .NavGroup.-open > .NavLink {
-    color: var(--SidebarNavColorText-open);
+    color: var(--DashboardSidebarNavColorText-open);
 
     &:after {
-      color: var(--SidebarNavColorText-active);
+      color: var(--DashboardSidebarNavColorText-active);
     }
 
     &:hover {
-      color: var(--SidebarNavColorText-active);
+      color: var(--DashboardSidebarNavColorText-active);
     }
   }
 
@@ -177,7 +177,7 @@ $submenu-levels: 4;
 
   @for $i from 1 through $submenu-levels {
 
-    $padding-base:  $icon-box-width + $SidebarPaddingHorizontal;
+    $padding-base:  $icon-box-width + $DashboardSidebarPaddingHorizontal;
     $sel: if($i == 1, 'nav', selector-nest($sel, 'nav')); //selector-nest($sel, "nav")) !global;;
 
 
@@ -185,7 +185,7 @@ $submenu-levels: 4;
       padding-left: $item-padding-base + $sumbenu-padding * $i;
 
       .Icon {
-        left: $SidebarPaddingHorizontal + $sumbenu-padding * $i;
+        left: $DashboardSidebarPaddingHorizontal + $sumbenu-padding * $i;
       }
 
       .-rtl & {
@@ -194,7 +194,7 @@ $submenu-levels: 4;
 
         .Icon {
           left: auto;
-          right: $SidebarPaddingHorizontal + $sumbenu-padding * $i;
+          right: $DashboardSidebarPaddingHorizontal + $sumbenu-padding * $i;
         }
       }
     }

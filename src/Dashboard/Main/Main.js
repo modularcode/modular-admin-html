@@ -5,7 +5,7 @@ import Items from './Items';
 import SalesBreakdown from './SalesBreakdown';
 
 
-const Dashboard = {
+const Main = {
   init: () => {
     History.init();
     Items.init();
@@ -13,4 +13,4 @@ const Dashboard = {
   },
 };
 
-export default Dashboard;
+export default Main;

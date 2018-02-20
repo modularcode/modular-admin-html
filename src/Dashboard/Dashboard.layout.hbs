@@ -5,7 +5,7 @@ titleName: 'ModularAdmin | HTML version'
 ---
 
 <!--
-  You may use the following felper classes on the .App element
+  You may use the following felper classes on the .Dashboard element
 
   -dafault                    Default layout options
 
@@ -17,16 +17,16 @@ titleName: 'ModularAdmin | HTML version'
   -customize-open             Open customize menu panel
 -->
 <div
-  id="App"
+  id="Dashboard"
   class="
-    App
+    Dashboard
   " >
 
   <div class="HeaderContainer">
-    {{> Dashboard/_common/AppHeader/AppHeader}}
+    {{> Dashboard/_common/DashboardHeader/DashboardHeader}}
   </div>
   <div class="SidebarContainer">
-    {{> Dashboard/_common/AppSidebar/AppSidebar}}
+    {{> Dashboard/_common/DashboardSidebar/DashboardSidebar}}
   </div>
   <div class="SidebarOverlay" id="SidebarOverlay"></div>
   <div class="ContentContainer {{pagename}}">
@@ -37,13 +37,13 @@ titleName: 'ModularAdmin | HTML version'
   </div>
 
   <div class="FooterContainer" >
-    {{> Dashboard/_common/AppFooter/AppFooter}}
+    {{> Dashboard/_common/DashboardFooter/DashboardFooter}}
   </div>
 
-  {{> Dashboard/_common/AppSearch/AppSearch}}
+  {{> Dashboard/_common/DashboardSearch/DashboardSearch}}
 
   <div class="CustomizeContainer">
-    {{> Dashboard/_common/AppCustomize/AppCustomize}}
+    {{> Dashboard/_common/DashboardCustomize/DashboardCustomize}}
   </div>
 
 </div>

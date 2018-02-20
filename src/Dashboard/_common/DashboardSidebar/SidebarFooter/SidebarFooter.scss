@@ -1,5 +1,5 @@
 .SidebarFooter {
-  $height: $AppFooterHeight;
+  $height: $DashboardFooterHeight;
 
   height: $height;
 
@@ -46,14 +46,14 @@
     text-decoration: none;
     justify-content: center;
     transition: background-color .3s ease, color .3s ease;
-    color: var(--SidebarNavColorText);
+    color: var(--DashboardSidebarNavColorText);
     // background-color: rgba(255, 255, 255, 0.09);
     padding: 0;
     flex: 1;
     font-size: 30px;
 
     &:hover {
-      color: var(--SidebarNavColorText-active);
+      color: var(--DashboardSidebarNavColorText-active);
       // background-color: rgba(255, 255, 255, 0.05);
     }
   }

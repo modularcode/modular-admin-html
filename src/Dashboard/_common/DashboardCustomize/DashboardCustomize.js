@@ -1,6 +1,6 @@
 const Customize = {
   refs: {
-    $App: null,
+    $Dashboard: null,
     $DismissButton: null,
   }
 };
@@ -8,7 +8,7 @@ const Customize = {
 Customize.init = function() {
   const vm = Customize;
 
-  vm.refs.$App = $('#App');
+  vm.refs.$Dashboard = $('#Dashboard');
   vm.refs.$DismissButton = $('#CustomizeDismissButton');
 
   vm.refs.$DismissButton.on('click', function(e) {
@@ -21,7 +21,7 @@ Customize.init = function() {
 Customize.toggle = function()  {
   const vm = Customize;
 
-  vm.refs.$App.toggleClass('-customize-open');
+  vm.refs.$Dashboard.toggleClass('-customize-open');
 };
 
 export default Customize;

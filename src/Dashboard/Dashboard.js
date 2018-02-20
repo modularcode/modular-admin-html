@@ -13,9 +13,9 @@ App.init = () => {
 
   console.log("init app!");
 
-  const $App = $('#App');
+  const $Dashboard = $('#Dashboard');
 
-  if (!$App.length) {
+  if (!$Dashboard.length) {
     return false;
   }
 
