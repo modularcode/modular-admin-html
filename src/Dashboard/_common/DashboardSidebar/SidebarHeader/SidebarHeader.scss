@@ -27,41 +27,6 @@ $SidebarPaddingHorizontal: 20px;
     }
   }
 
-
-  .Logo {
-    width: 38px;
-    height: 38px;
-    display: block;
-
-    // https://stackoverflow.com/questions/6088409/svg-drop-shadow-using-css3
-    // https://github.com/Schepp/CSS-Filters-Polyfill
-    -webkit-filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.3) );
-            filter: drop-shadow( 0 0 3px rgba(0, 0, 0, 0.3) );
-
-    .path {
-      transition: all .3s ease;
-    }
-
-    .outline {
-      fill: var(--colorPrimary);
-    }
-
-    .letter {
-      fill: #fff;
-      opacity: .75;
-    }
-
-    &:hover {
-      .outline {
-
-      }
-
-      .letter {
-        opacity: 1;
-      }
-    }
-  }
-
   .LogoLink {
     margin-left: 5px;
     margin-right: 12px;

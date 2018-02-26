@@ -10,6 +10,7 @@ import './Grid';
 import './Icon';
 import './Layout';
 import './Link';
+import './Logo';
 import './Modal';
 import './Page';
 import './Progress';
