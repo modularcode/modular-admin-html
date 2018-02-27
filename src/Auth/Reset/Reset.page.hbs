@@ -1,0 +1,49 @@
+---
+layout: main.layout
+dirname: Auth
+titleSeparator: '-'
+titleName: 'ModularAdmin | HTML version'
+---
+
+<div class="Auth">
+  <div class="AuthCard">
+
+    <div class="AuthHeader">
+      <h1 class="AuthTitle">
+        {{> _common/Logo/Logo}}ModularAdmin
+      </h1>
+    </div>
+
+    <div class="AuthContent">
+      <p class="Description">Reset password</p>
+
+      {{!-- <form id="LoginForm"  action="/index.html" method="GET" novalidate=""> --}}
+
+        <div class="FormGroup">
+					<label for="password">Password</label>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <input type="password" class="form-control underlined" name="password" id="password" placeholder="New password" required="">
+            </div>
+            <div class="col-sm-6">
+              <input type="password" class="form-control underlined" name="retype_password" id="retype_password" placeholder="Confirm password" required="">
+            </div>
+          </div>
+
+				</div>
+
+				<div class="FormGroup">
+					<button type="submit" class="AuthButton">Reset</button>
+				</div>
+
+			{{!-- </form> --}}
+    </div>
+
+  </div>
+  <div class="BackButton">
+		<a href="/" class="ButtonSecondary">
+			<i class="fa fa-arrow-left"></i> Back to dashboard
+		</a>
+	</div>
+</div>
