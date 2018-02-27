@@ -15,9 +15,9 @@ titleName: 'ModularAdmin | HTML version'
     </div>
 
     <div class="AuthContent">
-      <p class="TextCentr">LOGIN TO CONTINUE</p>
+      <p class="Description">LOGIN TO CONTINUE</p>
 
-      <form id="LoginForm"  action="/index.html" method="GET" novalidate="">
+      {{!-- <form id="LoginForm"  action="/index.html" method="GET" novalidate=""> --}}
 
 				<div class="FormGroup">
 					<label for="username">Username</label>
@@ -34,18 +34,18 @@ titleName: 'ModularAdmin | HTML version'
 						<input class="checkbox" id="remember" type="checkbox">
 						<span>Remember me</span>
 					</label>
-					<a href="reset.html" class="forgot-btn pull-right">Forgot password?</a>
+					<a href="/Auth/Recover.html" class="forgot-btn pull-right">Forgot password?</a>
 				</div>
 
 				<div class="FormGroup">
-					<button type="submit" class="Button-Login">Login</button>
+					<button type="submit" class="AuthButton">Login</button>
 				</div>
 
 				<div class="FormGroup">
-					<p class="text-muted text-center">Do not have an account? <a href="signup.html">Sign Up!</a></p>
+					<p class="text-muted text-center">Do not have an account? <a href="/Auth/SignUp.html">Sign Up!</a></p>
 				</div>
 
-			</form>
+			{{!-- </form> --}}
     </div>
 
 

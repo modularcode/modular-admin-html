@@ -1,0 +1,46 @@
+---
+layout: main.layout
+dirname: Auth
+titleSeparator: '-'
+titleName: 'ModularAdmin | HTML version'
+---
+
+<div class="Auth">
+  <div class="AuthCard">
+
+    <div class="AuthHeader">
+      <h1 class="AuthTitle">
+        {{> _common/Logo/Logo}}ModularAdmin
+      </h1>
+    </div>
+
+    <div class="AuthContent">
+      <p class="Description">PASSWORD RECOVER</p>
+      <h6 class="DescriptionTitle">Enter your email address to recover your password.</h6>
+
+      {{!-- <form id="LoginForm"  action="/index.html" method="GET" novalidate=""></form> --}}
+
+        <div class="FormGroup">
+          <label for="email">Email</label>
+          <input type="text" class="form-control underlined" name="email" id="email" placeholder="Your email address" required="">
+        </div>
+
+        <div class="FormGroup">
+          <button type="submit" class="AuthButton">Recover</button>
+        </div>
+
+        <div class="form-group RecoverBottom">
+          <a class="PullLeft" href="/Auth/Login.html">Return to Login</a>
+          <a class="PullRight" href="/Auth/SignUp.html">Sign Up!</a>
+        </div>
+
+      {{!-- </form> --}}
+    </div>
+  </div>
+
+  <div class="BackButton">
+		<a href="/" class="ButtonSecondary">
+			<i class="fa fa-arrow-left"></i> Back to dashboard
+		</a>
+	</div>
+</div>
