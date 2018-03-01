@@ -12,6 +12,21 @@
   box-shadow: var(--DashboardFooterShadow);
 
   .-rtl & {
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
   }
+
+  @include media-down(sm) {
+
+    justify-content: center;
+    flex-direction: row-reverse;
+
+    .FooterGithubBtn {
+      padding-left: 15px;
+    }
+
+    .-author {
+      display: none;
+    }
+  }
+
 }
