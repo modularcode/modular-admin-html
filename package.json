@@ -46,6 +46,7 @@
     "opencollective": "^1.0.3",
     "pixeden-stroke-7-icon": "^1.2.3",
     "popper.js": "1.12.3",
+    "quill": "^1.3.5",
     "raphael": "^2.2.7"
   },
   "devDependencies": {
