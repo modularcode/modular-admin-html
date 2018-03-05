@@ -11,25 +11,52 @@ layout: Dashboard/Dashboard.layout
     </header>
 
     <div class="Card">
+      <div class="ItemsEditorContent">
 
-      <div class="FormGroup row">
-        <label class="col-md-2">
-          Name:
-        </label>
-        <div class="col-md-10">
-          <input type="text" class="form-control" placeholder="">
+        <div class="FormGroup row">
+          <label class="col-md-2">
+            Name:
+          </label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" placeholder="">
+          </div>
         </div>
-      </div>
 
-      <div class="FormGroup row">
-        <label class="col-md-2">
-          Content:
-        </label>
-        <div class="col-md-10">
-
+        <div class="FormGroup row">
+          <label class="col-md-2">
+            Content:
+          </label>
+          <div class="col-md-10">
+            <div class="EditorContainer">
+              <div id="Editor" class="Editor"> </div>
+            </div>
+          </div>
         </div>
-      </div>
 
+        <div class="FormGroup row">
+          <label class="col-md-2">
+            Category:
+          </label>
+          <div class="col-md-10">
+            <select class="form-control">
+              <option selected>Select Category</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="FormGroup row">
+          <label class="col-md-2">
+            Image:
+          </label>
+          <div class="col-md-10">
+
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </div>
