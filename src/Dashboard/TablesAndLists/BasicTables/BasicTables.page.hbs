@@ -1,0 +1,357 @@
+---
+dirname: TablesAndLists # output dirname
+pagename: ItemsEditor
+layout: Dashboard/Dashboard.layout
+---
+
+<article class="Page BasicTables">
+  <div class="PageContainer">
+
+    <header class="PageHeader">
+      <h1 class="PageTitle">
+        Basic Tables
+      </h1>
+      <p class="TitleDescription>">When blocks aren't enough</p>
+    </header>
+
+    {{!-- Section 1 --}}
+    <div class="row">
+
+      {{!-- Basic example column --}}
+
+      <div class="col-md-6 Table">
+        <div class="Card">
+
+            <div class="CardHeader">
+              <div class="HeaderBlock">
+                <h6 class="Title">Basic example</h6>
+              </div>
+            </div>
+
+            <div class="CardBlock">
+              <section class="example">
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </section>
+            </div>
+
+        </div>
+      </div>
+
+      {{!-- Striped table column --}}
+
+      <div class="col-md-6 Table">
+        <div class="Card">
+
+            <div class="CardHeader">
+              <div class="HeaderBlock">
+                <h6 class="Title">Striped rows</h6>
+              </div>
+            </div>
+
+            <div class="CardBlock">
+              <section class="example">
+
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              </section>
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- Section 2 --}}
+
+    <div class="row">
+
+      {{!-- Bordered table column --}}
+
+      <div class="col-md-6 Table">
+        <div class="Card">
+
+          <div class="CardHeader">
+            <div class="HeaderBlock">
+              <h6 class="Title">Bordered</h6>
+            </div>
+          </div>
+
+          <div class="CardBlock">
+            <section class="example">
+
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </section>
+          </div>
+
+        </div>
+      </div>
+
+      {{!-- Hover rows column --}}
+
+      <div class="col-md-6 Table">
+        <div class="Card">
+
+          <div class="CardHeader">
+            <div class="HeaderBlock">
+              <h6 class="Title">Hover rows</h6>
+            </div>
+          </div>
+
+          <div class="CardBlock">
+            <section class="example">
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </section>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- Section 3 --}}
+
+    <div class="row">
+
+      {{!-- Inverse  table column --}}
+
+      <div class="col-md-6 Table">
+        <div class="Card">
+
+          <div class="CardHeader">
+            <div class="HeaderBlock">
+              <h6 class="Title">Inverse table</h6>
+            </div>
+          </div>
+
+          <div class="CardBlock">
+            <section class="example">
+
+              <table class="table table-inverse">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </section>
+          </div>
+
+        </div>
+      </div>
+
+      {{!-- Hover rows column --}}
+
+      <div class="col-md-6 Table">
+        <div class="Card">
+
+          <div class="CardHeader">
+            <div class="HeaderBlock">
+              <h6 class="Title">Small tables & Thead options</h6>
+            </div>
+          </div>
+
+          <div class="CardBlock">
+            <section class="example">
+              <p class="TableTitle">Default thead</p>
+              <table class="table table-sm">
+                <thead class="thead-default">
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p></p>
+              <p></p>
+
+              <p class="TableTitle">Inverse thead</p>
+              <table class="table table-sm">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</article>

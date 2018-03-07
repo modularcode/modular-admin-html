@@ -1,0 +1,16 @@
+.table {
+	label {
+		margin-bottom: 0;
+	}
+
+	.checkbox + span {
+		margin-bottom: 0;
+		&:before {
+			line-height: 20px;
+		}
+	}
+}
+
+.TableTitle {
+  font-style: italic;
+}

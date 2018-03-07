@@ -46,6 +46,7 @@
     min-height: 45px;
     border: none;
 
+
     &.-bordered {
       border-bottom: 1px solid var(--colorDivider);
     }
@@ -84,6 +85,7 @@
 
     .Title {
       margin: 0;
+      font-weight: bold;
     }
   }
 

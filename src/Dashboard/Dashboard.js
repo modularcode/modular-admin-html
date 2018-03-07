@@ -7,6 +7,7 @@ import ItemsList from './Items/ItemsList';
 import UIComponents from './UIComponents';
 // import ItemsEditor from './Items/Editor';
 import ItemsEditor from './Items/ItemsEditor';
+import TablesAndLists from './TablesAndLists';
 
 const App = {};
 
