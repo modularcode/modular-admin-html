@@ -1,7 +1,7 @@
 import './TablesAndLists.scss';
 import TablesAndLists from './TablesAndLists';
 import './BasicTables';
-// import './ResponisiveTables';
+import './ResponsiveTables';
 // import './ResponisiveLists';
 
 export default TablesAndLists;
