@@ -1,10 +1,6 @@
-var glob = require('glob');
-var path = require('path');
 
 var gulp 	= require('gulp');
 var plugins = require('gulp-load-plugins')();
-
-var utils = require('./utils/utils');
 
 /********************************************
 *			Configs And Paths
@@ -13,77 +9,79 @@ var utils = require('./utils/utils');
 var config = require('../config/');
 var paths = config.paths;
 
-
 /********************************************
 *   		Load Build Tasks
 *********************************************/
 
-var buildTasks = utils.loadTasks(gulp, plugins, paths);
+// Dynamic Tasks with Gulp 4
+// https://cobwwweb.com/dynamic-tasks-gulp-4
+// With Gulp 4, it's not so simple.
 
-gulp.task('build', buildTasks);
+//var buildTasks = utils.loadTasks(gulp, plugins, paths);
+//gulp.task('build', buildTasks);
+
+const app_assets = require('./tasks/app-assets').task(gulp, plugins, paths);
+const app_pages = require('./tasks/app-pages').task(gulp, plugins, paths);
+const app_scripts = require('./tasks/app-scripts').task(gulp, plugins, paths);
+const app_styles = require('./tasks/app-styles').task(gulp, plugins, paths);
+const app_themes = require('./tasks/app-themes').task(gulp, plugins, paths);
+
+const vendor_assets = require('./tasks/vendor-assets').task(gulp, plugins, paths);
+const vendor_scripts = require('./tasks/vendor-scripts').task(gulp, plugins, paths);
+const vendor_styles = require('./tasks/vendor-styles').task(gulp, plugins, paths);
+
+const clean = (done) => {
+	// Error: Cannot delete files/directories outside the current 
+	// working directory. Can be overridden with the `force` option.
+	return require('del')([config.destDir], {force: true});
+};
+
+const build = gulp.parallel(
+	gulp.parallel(app_assets, app_scripts, app_pages, gulp.series(app_styles, app_themes)),
+	gulp.parallel(vendor_assets, vendor_scripts, vendor_styles)
+);
 
 /*********************************************
 *				 Other Tasks
 **********************************************/
 
 // Local server pointing on build folder
-gulp.task('connect', function() {
-	plugins.connect.server({
-		root: config.destDir,
-		port: config.port || 3333,
-		livereload: true
-	});
-});
+const connect = () => {
+ 	return plugins.connect.server({
+ 		root: config.destDir,
+ 		port: config.port || 3333,
+ 		livereload: true
+ 	});
+};
 
-
-// Rerun the task when a file changes
-gulp.task('watch', function() {
-	// When template changes recompile .html pages
-	plugins.watch(paths.app.templates, function() {
-	    gulp.start('app-pages');
-	});
-
+const watch = (done) => {
+ 	// When template changes recompile .html pages
+	gulp.watch(paths.app.templates, app_pages);
 	// When context file changes recompile .html pages
-	plugins.watch(config.srcDir + "/**/.context.js", function() {
-	    gulp.start('app-pages');
-	});
-
+	gulp.watch(config.srcDir + "/**/.context.js", app_pages);
 	// When script changes recompile scripts
-	plugins.watch(paths.app.scripts, function() {
-	    gulp.start('app-scripts');
-	});
-
+	gulp.watch(paths.app.scripts, app_scripts);
 	// When style changes recompile styles
-	plugins.watch(paths.app.styles, function() {
-	    gulp.start('app-styles');
-	});
-
+	gulp.watch(paths.app.styles, app_styles);
 	// When theme changes recompile themes
-	plugins.watch(paths.app.themes, function() {
-	    gulp.start('app-themes');
-	});
-});
+	gulp.watch(paths.app.themes, app_themes);
+
+	done();
+};
 
 // Builds and deploys to github pages
-gulp.task('deploy', ['build'], function() {
-	return gulp.src('../dist/**/*')
+const deploy = () => gulp.series(build, () => 
+	gulp.src('../dist/**/*')
 		.pipe(plugins.ghPages({
 			cacheDir: '../.deploy'
-		}));
-});
+		}))
+	);
 
-
+module.exports.deploy = deploy;
 
 /********************************************
 *				Main Tasks
 *********************************************/
 
-
-// // Run this task for development
-gulp.task('develop', [
-	'build',
-	'watch',
-	'connect'
-]);
-
-gulp.task('default', ['develop']);
+// Run this task for development
+module.exports.default = gulp.series(clean, build, gulp.parallel(watch, connect));
