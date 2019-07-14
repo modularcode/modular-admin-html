@@ -16,57 +16,59 @@ var partials = {};
 
 module.exports.task = function(gulp, plugins, paths) {
 
+	return function app_pages() {
 
-	// Register handlebars engine helpers and partials
-	handlebarsRegistrar(handlebars, {
-		helpers: paths.app.helpers,
-		partials: paths.app.templates,
-		parsePartialName: function (partial) {
+		// Register handlebars engine helpers and partials
+		handlebarsRegistrar(handlebars, {
+			helpers: paths.app.helpers,
+			partials: paths.app.templates,
+			parsePartialName: function (partial) {
 
-			// Save in partials vinyl registry
-			partials[partial.shortPath] = new File({
-				cwd: partial.cwd,
-				path: partial.path,
-				base: path.basename(partial.path),
-				contents: fs.readFileSync(partial.path)
-			});
+				// Save in partials vinyl registry
+				partials[partial.shortPath] = new File({
+					cwd: partial.cwd,
+					path: partial.path,
+					base: path.basename(partial.path),
+					contents: fs.readFileSync(partial.path)
+				});
 
-			return partial.shortPath;
-		},
-		bustCache: true,
-	});
+				return partial.shortPath;
+			},
+			bustCache: true,
+		});
 
 
-	gulp.src(paths.app.pages)
-		// Render pages
-		.pipe(through.obj(function (file, enc, cb) {
-			file.contents = new Buffer(renderTemplate(file));
+		return gulp.src(paths.app.pages)
+			// Render pages
+			.pipe(through.obj(function (file, enc, cb) {
+				file.contents = Buffer.from(renderTemplate(file));
 
-			this.push(file);
-			cb();
-		}))
-		// Handle errors
-		.on('error', plugins.util.log)
+				this.push(file);
+				cb();
+			}))
+			// Handle errors
+			.on('error', plugins.util.log)
 
-		// Rename .page.hbs to .html
-		.pipe(plugins.rename(function (path) {
-			path.basename = path.basename.replace("-page", "");
-			path.extname = ".html"
-		}))
+			// Rename .page.hbs to .html
+			.pipe(plugins.rename(function (path) {
+				path.basename = path.basename.replace("-page", "");
+				path.extname = ".html"
+			}))
 
-		// Flatten structure
-		.pipe(plugins.flatten())
+			// Flatten structure
+			.pipe(plugins.flatten())
 
-		// pretify html structure
-		.pipe(plugins.prettify({
-			indent_size: 4
-		}))
+			// pretify html structure
+			.pipe(plugins.prettify({
+				indent_size: 4
+			}))
 
-		// Output
-		.pipe(gulp.dest(config.destDir))
+			// Output
+			.pipe(gulp.dest(config.destDir))
 
-		//Live-Reload
-		.pipe(plugins.connect.reload());
+			//Live-Reload
+			.pipe(plugins.connect.reload());
+	};
 
 };
 
@@ -145,7 +147,7 @@ function setFrontMatter(file) {
 	var content = frontMatter(file.contents.toString('utf8'));
 
 	// var res = new Buffer(content.body);
-	file.contents = new Buffer(content.body);
+	file.contents = Buffer.from(content.body);
 	file.frontMatter = content.attributes;
 
 	return file;

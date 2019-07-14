@@ -1,3 +1,4 @@
+/*
 var glob = require('glob');
 var path = require('path');
 
@@ -21,5 +22,5 @@ function loadTasks(gulp, plugins, paths) {
 	return taskNames;
 }
 
-
 module.exports.loadTasks = loadTasks;
+*/
