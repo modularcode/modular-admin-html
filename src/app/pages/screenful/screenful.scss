@@ -16,7 +16,7 @@
 		width: 300px;
 		height: 160px;
 		border-radius: 10px;
-		background-size: cover;
+		background-size: contain;
 		background-position: center;
 		background-image: url('../assets/screenful/logo.png');
 		background-repeat: no-repeat;
@@ -46,8 +46,8 @@
 	}
 
 	.integration-logo {
-		width: 190px;
-		height: 90px;
+		width: 150px;
+		height: 80px;
 		border: 1px solid #fff;
 		border-radius: 10px;
 		transition: all .25s ease;
