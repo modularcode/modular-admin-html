@@ -1,5 +1,5 @@
 
-var gulp 	= require('gulp');
+var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 /********************************************
@@ -31,9 +31,9 @@ const vendor_scripts = require('./tasks/vendor-scripts').task(gulp, plugins, pat
 const vendor_styles = require('./tasks/vendor-styles').task(gulp, plugins, paths);
 
 const clean = (done) => {
-	// Error: Cannot delete files/directories outside the current 
+	// Error: Cannot delete files/directories outside the current
 	// working directory. Can be overridden with the `force` option.
-	return require('del')([config.destDir], {force: true});
+	return require('del')([config.destDir], { force: true });
 };
 
 const build = gulp.parallel(
@@ -47,15 +47,15 @@ const build = gulp.parallel(
 
 // Local server pointing on build folder
 const connect = () => {
- 	return plugins.connect.server({
- 		root: config.destDir,
- 		port: config.port || 3333,
- 		livereload: true
- 	});
+	return plugins.connect.server({
+		root: config.destDir,
+		port: config.port || 3333,
+		livereload: true
+	});
 };
 
 const watch = (done) => {
- 	// When template changes recompile .html pages
+	// When template changes recompile .html pages
 	gulp.watch(paths.app.templates, app_pages);
 	// When context file changes recompile .html pages
 	gulp.watch(config.srcDir + "/**/.context.js", app_pages);
@@ -70,12 +70,12 @@ const watch = (done) => {
 };
 
 // Builds and deploys to github pages
-const deploy = () => gulp.series(build, () => 
+const deploy = () => gulp.series(build, () =>
 	gulp.src('../dist/**/*')
 		.pipe(plugins.ghPages({
 			cacheDir: '../.deploy'
 		}))
-	);
+);
 
 module.exports.deploy = deploy;
 
@@ -84,4 +84,5 @@ module.exports.deploy = deploy;
 *********************************************/
 
 // Run this task for development
+module.exports.build = build;
 module.exports.default = gulp.series(clean, build, gulp.parallel(watch, connect));
