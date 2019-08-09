@@ -13,10 +13,13 @@
 **[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain. This project is proudly supported by <a href="https://screenful.com/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Agile Metrics by Screenful</a> (*instant visual <a href="https://screenful.com/dashboard-for-trello/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">dashboards for Trello</a> | <a href="https://screenful.com/dashboard-for-jira/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Jira</a> | <a href="https://screenful.com/dashboard-for-asana/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Asana</a> | <a href="https://screenful.com/dashboard-for-pivotal-tracker/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Pivotal Tracker</a> | <a href="https://screenful.com/dashboard-for-github/?utm_source=modularadmin&utm_campaign=modularadmin" target="_blank">Github</a>*)
 
 
-#### Heads up for the ModularAdmin v2!
-We're working hard on version 2, which is a complete rewrite. 
-<a href="https://modular-admin-html.modularcode.io/" target="_blank">V2 demo</a> | <a href="https://github.com/modularcode/modular-admin-html/tree/v2-dev" >V2 code</a> <br>
-**Please consider [supporting us](#support-us) to make this happen!**
+#### Heads up for the Modular Material Admin + React
+
+Currently I'm working on <a href="https://github.com/modularcode/modular-material-admin-react" target="_blank">Modular Material Admin ReactJS</a> version, which uses **React**,  **MaterialUI**, **Redux** and **TypeScript**.
+
+[Star](https://github.com/modularcode/modular-material-admin-react/stargazers)/[Watch](https://github.com/modularcode/modular-material-admin-react/watchers) the project or [follow me on Twitter](https://twitter.com/modularcoder) to stay up to date!
+
+**Please consider [supportting me on pateron](https://www.patreon.com/modularcoder) to make this happen!**
 
 ---
 
@@ -238,7 +241,13 @@ docker-compose up
 ```
 
 
-## Support us!
+## Support me!
+
+### [Support me on Patreon](https://www.patreon.com/modularcoder)
+
+Creating a good quality project takes a lot's of time, so any help is really appreciated!
+
+[https://www.patreon.com/modularcoder](https://www.patreon.com/modularcoder)
 
 ### Contribute
 
@@ -250,8 +259,6 @@ You can get in touch with us in gitter chat [![Join the chat at https://gitter.i
 Feel free to contact us with any questions, sugestions, remarks and potential feature requests that you might have.
 
 * Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | gevharut[at]gmail.com
-* Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
-* David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
 
 
 
@@ -306,4 +313,8 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 <a href="https://opencollective.com/modular-admin/sponsor/8/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/modular-admin/sponsor/9/website" target="_blank"><img src="https://opencollective.com/modular-admin/sponsor/9/avatar.svg"></a>
 
+### Credits
 
+* Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | gevharut[at]gmail.com
+* Aram Manukyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAABCehqwBm7aTR7IohpOidW1sVIHMo33U46o)
+* David Tigranyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAkAAAk1QJIB86I-V65l3qtgpTvfrMozBNc4p_8)
