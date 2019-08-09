@@ -10,7 +10,7 @@
   </strong>
 </p>
 
-**[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain.
+ModularAdmin is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain.
 
 
 ### 📣 Heads up for the Modular Material Admin + React! 
