@@ -13,11 +13,9 @@
 **[ModularAdmin](http://modularcode.github.io/modular-admin-html/)** is an open source **dashboard theme** built in a modular way. That makes it easy to scale, modify and maintain.
 
 
-#### Heads up for the Modular Material Admin + React
+### 📣 Heads up for the Modular Material Admin + React! 
 
-Currently I'm working on <a href="https://github.com/modularcode/modular-material-admin-react" target="_blank">Modular Material Admin ReactJS</a> version, which uses **React**,  **MaterialUI**, **Redux** and **TypeScript**.
-
-[Star](https://github.com/modularcode/modular-material-admin-react/stargazers)/[Watch](https://github.com/modularcode/modular-material-admin-react/watchers) the project or [follow me on Twitter](https://twitter.com/modularcoder) to stay up to date!
+Currently I'm working on <a href="https://github.com/modularcode/modular-material-admin-react" target="_blank">Modular Material Admin ReactJS</a> version, which uses **React**,  **MaterialUI**, **Redux** and **TypeScript**.[**Star**](https://github.com/modularcode/modular-material-admin-react/stargazers)/[**Watch**](https://github.com/modularcode/modular-material-admin-react/watchers) the project or [**follow me on Twitter**](https://twitter.com/modularcoder) to stay up to date!
 
 **Please consider [supportting me on pateron](https://www.patreon.com/modularcoder) to make this happen!**
 
