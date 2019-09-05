@@ -12,14 +12,14 @@ $(function() {
 
         Morris.Donut({
             element: 'dashboard-sales-breakdown-chart',
-            data: [{ label: "Download Sales", value: 12 },
-                { label: "In-Store Sales", value: 30 },
-                { label: "Mail-Order Sales", value: 20 } ],
+            data: [{ label: "Ajallaan", value: 12 },
+                { label: "Aktiivisena", value: 30 },
+                { label: "Myöhästyneet", value: 20 } ],
             resize: true,
             colors: [
                 tinycolor(config.chart.colorPrimary.toString()).lighten(10).toString(),
                 tinycolor(config.chart.colorPrimary.toString()).darken(8).toString(),
-                config.chart.colorPrimary.toString()
+                "#FE7A0E",
             ],
         });
 
