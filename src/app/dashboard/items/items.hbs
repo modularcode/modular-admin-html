@@ -16,64 +16,170 @@
 					<div class="item-col item-col-header fixed item-col-img xs"></div>
 					<div class="item-col item-col-header item-col-title">
 						<div>
-							<span>Tyyppi</span>
-						</div>
-					</div>
-					<div class="item-col item-col-header item-col-sales">
-						<div>
-							<span>Arvo</span>
-						</div>
-					</div>
-					<div class="item-col item-col-header item-col-stats">
-						<div class="no-overflow">
-							<span>Vastuuhenkilö</span>
-						</div>
-					</div>
-					<div class="item-col item-col-header item-col-date">
-						<div>
-							<span>Aloitettu</span>
+							<span>Luotu</span>
 						</div>
 					</div>
 				</div>
-			</li>
-			{{#each items}}
-				<li class="item">
-					<div class="item-row">
-						<div class="item-col fixed item-col-img xs">
-							<a href="">
-								<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
-							</a>
-						</div>
-						<div class="item-col item-col-title no-overflow">
-							<div>
-								<a href="" class="">
-									<h4 class="item-title no-wrap">
-										{{this.category}}
-									</h4>
-								</a>
+				{{#each items}}
+					{{#is this.state "===" "Created"}}
+						<div class="item-row">
+							<div class="item-col item-col-title no-overflow">
+								{{this.title}}
 							</div>
-						</div>
-						<div class="item-col item-col-sales">
-							<div class="item-heading">Sales</div>
-							<div>
-								{{this.sales}}
-							</div>
-						</div>
-						<div class="item-col item-col-stats">
-							<div class="item-heading">Stats</div>
-							<div>
+							<div class="item-col item-col-stats no-overflow">
 								{{this.author}}
 							</div>
 						</div>
-						<div class="item-col item-col-date">
-							<div class="item-heading">Published</div>
-							<div>
-								{{this.date}}
-							</div>
+					{{/is}}
+				{{/each}}
+				<div class="item-row">
+					<div class="item-col item-col-header fixed item-col-img xs"></div>
+					<div class="item-col item-col-header item-col-title">
+						<div>
+							<span>Aktiivinen</span>
 						</div>
 					</div>
-				</li>
-			{{/each}}
+				</div>
+				{{#each items}}
+					{{#is this.state "===" "Active"}}
+						<div class="item-row">
+							<div class="item-col item-col-title no-overflow">
+								{{this.title}}
+							</div>
+							<div class="item-col item-col-stats no-overflow">
+								{{this.author}}
+							</div>
+						</div>
+					{{/is}}
+				{{/each}}
+					<div class="item-row">
+					<div class="item-col item-col-header fixed item-col-img xs"></div>
+					<div class="item-col item-col-header item-col-title">
+						<div>
+							<span>Valmis</span>
+						</div>
+					</div>
+				</div>
+				{{#each items}}
+					{{#is this.state "===" "Done"}}
+						<div class="item-row">
+							<div class="item-col item-col-title no-overflow">
+								{{this.title}}
+							</div>
+							<div class="item-col item-col-stats no-overflow">
+								{{this.author}}
+							</div>
+						</div>
+					{{/is}}
+				{{/each}}
+			</li>
+
 		</ul>
 	</div>
 {{/each}}
+<div class="card-header bordered">
+	...Tai toisenlainen näkymä
+</div>
+<div class="card sameheight-item items" data-exclude="xs,sm,lg">
+	<div class="card-header bordered">
+		<div class="header-block">
+			<h3 class="title">
+				Kaikki hankkeet tyypin mukaan
+			</h3>
+		</div>
+	</div>
+	<ul class="item-list striped">
+		<li class="item item-list-header">
+			<div class="item-row">
+				<div class="item-col item-col-header fixed item-col-img xs"></div>
+				<div class="item-col item-col-header item-col-title">
+					<div>
+						<span>Tate</span>
+					</div>
+				</div>
+			</div>
+			{{#each urakat}}
+			{{#each items}}
+				{{#is this.category "===" "Tate"}}
+					<div class="item-row">
+						<div class="item-col item-col-title no-overflow">
+							{{this.title}}
+						</div>
+						<div class="item-col item-col-stats no-overflow">
+							{{this.author}}
+						</div>
+					</div>
+				{{/is}}
+			{{/each}}
+			{{/each}}
+			<div class="item-row">
+				<div class="item-col item-col-header fixed item-col-img xs"></div>
+				<div class="item-col item-col-header item-col-title">
+					<div>
+						<span>Maarakennus</span>
+					</div>
+				</div>
+			</div>
+			{{#each urakat}}
+			{{#each items}}
+				{{#is this.category "===" "Maarakenne"}}
+					<div class="item-row">
+						<div class="item-col item-col-title no-overflow">
+							{{this.title}}
+						</div>
+						<div class="item-col item-col-stats no-overflow">
+							{{this.author}}
+						</div>
+					</div>
+				{{/is}}
+			{{/each}}
+			{{/each}}
+				<div class="item-row">
+				<div class="item-col item-col-header fixed item-col-img xs"></div>
+				<div class="item-col item-col-header item-col-title">
+					<div>
+						<span>Elementit</span>
+					</div>
+				</div>
+			</div>
+			{{#each urakat}}
+			{{#each items}}
+				{{#is this.category "===" "Elementit"}}
+					<div class="item-row">
+						<div class="item-col item-col-title no-overflow">
+							{{this.title}}
+						</div>
+						<div class="item-col item-col-stats no-overflow">
+							{{this.author}}
+						</div>
+					</div>
+				{{/is}}
+			{{/each}}
+			{{/each}}
+			<div class="item-row">
+				<div class="item-col item-col-header fixed item-col-img xs"></div>
+				<div class="item-col item-col-header item-col-title">
+					<div>
+						<span>Ilmiö</span>
+					</div>
+				</div>
+			</div>
+			{{#each urakat}}
+			{{#each items}}
+				{{#is this.category "===" "Ilmiö"}}
+					<div class="item-row">
+						<div class="item-col item-col-title no-overflow">
+							{{this.title}}
+						</div>
+						<div class="item-col item-col-stats no-overflow">
+							{{this.author}}
+						</div>
+					</div>
+				{{/is}}
+			{{/each}}
+			{{/each}}
+		</li>
+	</ul>
+</div>
+
+
