@@ -57,7 +57,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^5.0.1",
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.3.0",
     "handlebars-layouts": "^3.1.0",
     "handlebars-registrar": "^1.5.2",
     "main-bower-files": "^2.9.0",
