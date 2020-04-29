@@ -18,7 +18,7 @@
     "del": "^5.0.0",
     "dropzone": "^5.3.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-flot": "^0.8.3",
     "jquery-sparkline": "^2.4.0",
     "jquery-touchswipe": "^1.6.18",
