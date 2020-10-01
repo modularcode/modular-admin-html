@@ -255,7 +255,7 @@ Be part of our team! Feel free to open new issues/pull-requests.
 ### Get in touch
 
 You can get in touch with us in gitter chat [![Join the chat at https://gitter.im/modularcode/modular-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/modularcode/modular-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) or in the [ModularCode Facebook Group](https://www.facebook.com/groups/710770032358423/). 
-Feel free to contact us with any questions, sugestions, remarks and potential feature requests that you might have.
+Feel free to contact us with any questions, suggestions, remarks and potential feature requests that you might have.
 
 * Gevorg Harutyunyan | [LinkedIn](https://www.linkedin.com/profile/view?id=AAMAAA7ne4gBF-IVNsoiBaeOeDTd5YGSTVN2eBs) |  [Facebook](https://www.facebook.com/madextreme) | [Twitter](https://twitter.com/mad4extreme) | gevharut[at]gmail.com
 
