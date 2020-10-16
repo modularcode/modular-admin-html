@@ -229,7 +229,7 @@ If you need more advanced layouting with multiple content blocks at the same tim
 
 You can run the project in docker. To build the container, you need to install docker and docker-compose than launch the docker daemon. After launching the daemon run the following commands from the project folder:
 
-Build the image
+Build the image.
 ```
 docker-compose build
 ```
