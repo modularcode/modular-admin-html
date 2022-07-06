@@ -22,7 +22,7 @@
     "jquery-flot": "^0.8.3",
     "jquery-sparkline": "^2.4.0",
     "jquery-touchswipe": "^1.6.18",
-    "jquery-validation": "^1.17.0",
+    "jquery-validation": "^1.19.5",
     "jquery.browser": "^0.1.0",
     "jquery.flot.tooltip": "^0.9.0",
     "jqvmap": "^1.5.1",
